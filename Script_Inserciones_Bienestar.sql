@@ -1248,6 +1248,12 @@ INSERT INTO evaluacionfisica (citID, evaPeso, evaEstatura, evaRitmoCardiaco, eva
 	(199, 65, 1.9, 98, 1.06),
 	(200, 117, 2.2, 67, 0.60);
 
+DELETE FROM perfilriesgointegral;
+INSERT INTO perfilriesgointegral VALUES 
+	(10, '2020-10-06', 8, 5),
+    (12, '2021-11-04', 2, 2),
+    (15, '2022-12-08', 10, 9);
+
 #------------------------------------------------------------------
 # Cultura
 #------------------------------------------------------------------

@@ -153,6 +153,19 @@ GRANT SELECT ON ordenmedica TO 'estudiante'@'localhost';
 GRANT SELECT ON medicamentos TO 'estudiante'@'localhost';
 GRANT SELECT, UPDATE ON citamedica TO 'estudiante'@'localhost';
 
+GRANT EXECUTE ON PROCEDURE pas_citas_disponibles TO 'estudiante'@'localhost';
+GRANT EXECUTE ON PROCEDURE pas_citas_agendadas TO 'estudiante'@'localhost';
+GRANT EXECUTE ON PROCEDURE pas_delete_cita_medica TO 'estudiante'@'localhost';
+GRANT EXECUTE ON PROCEDURE pas_add_cita_medica TO 'estudiante'@'localhost';
+GRANT EXECUTE ON PROCEDURE pas_check_resultados TO 'estudiante'@'localhost';
+GRANT EXECUTE ON PROCEDURE pas_view_incapacidad TO 'estudiante'@'localhost';
+GRANT EXECUTE ON PROCEDURE pas_add_incapacidad TO 'estudiante'@'localhost';
+GRANT EXECUTE ON PROCEDURE pas_edit_incapacidad TO 'estudiante'@'localhost';
+GRANT EXECUTE ON PROCEDURE pas_view_atencionsalud TO 'estudiante'@'localhost';
+GRANT EXECUTE ON PROCEDURE pas_add_atencionsalud TO 'estudiante'@'localhost';
+GRANT EXECUTE ON PROCEDURE pas_edit_atencionsalud TO 'estudiante'@'localhost';
+GRANT EXECUTE ON PROCEDURE pas_view_perfilriesgo TO 'estudiante'@'localhost';
+
 GRANT SELECT, UPDATE ON vw_citamedica_disponible TO 'estudiante'@'localhost';
 GRANT SELECT ON vw_doctor_procedimiento TO 'estudiante'@'localhost';
 # -----------------------------------------------------------------------------
@@ -163,6 +176,19 @@ GRANT SELECT ON personalsalud TO 'no_estudiante'@'localhost';
 GRANT SELECT ON ordenmedica TO 'no_estudiante'@'localhost';
 GRANT SELECT ON medicamentos TO 'no_estudiante'@'localhost';
 GRANT SELECT, UPDATE ON citamedica TO 'no_estudiante'@'localhost';
+
+GRANT EXECUTE ON PROCEDURE pas_citas_disponibles TO 'no_estudiante'@'localhost';
+GRANT EXECUTE ON PROCEDURE pas_citas_agendadas TO 'no_estudiante'@'localhost';
+GRANT EXECUTE ON PROCEDURE pas_delete_cita_medica TO 'no_estudiante'@'localhost';
+GRANT EXECUTE ON PROCEDURE pas_add_cita_medica TO 'no_estudiante'@'localhost';
+GRANT EXECUTE ON PROCEDURE pas_check_resultados TO 'no_estudiante'@'localhost';
+GRANT EXECUTE ON PROCEDURE pas_view_incapacidad TO 'no_estudiante'@'localhost';
+GRANT EXECUTE ON PROCEDURE pas_add_incapacidad TO 'no_estudiante'@'localhost';
+GRANT EXECUTE ON PROCEDURE pas_edit_incapacidad TO 'no_estudiante'@'localhost';
+GRANT EXECUTE ON PROCEDURE pas_view_atencionsalud TO 'no_estudiante'@'localhost';
+GRANT EXECUTE ON PROCEDURE pas_add_atencionsalud TO 'no_estudiante'@'localhost';
+GRANT EXECUTE ON PROCEDURE pas_edit_atencionsalud TO 'no_estudiante'@'localhost';
+GRANT EXECUTE ON PROCEDURE pas_view_perfilriesgo TO 'no_estudiante'@'localhost';
 
 GRANT SELECT, UPDATE ON vw_citamedica_disponible TO 'no_estudiante'@'localhost';
 GRANT SELECT ON vw_doctor_procedimiento TO 'no_estudiante'@'localhost';
@@ -180,6 +206,13 @@ GRANT SELECT, INSERT, UPDATE ON medicamentos TO 'secretaria'@'localhost';
 GRANT SELECT, INSERT, UPDATE ON evaluacionfisica TO 'secretaria'@'localhost';
 GRANT SELECT, INSERT, UPDATE ON urgencia TO 'secretaria'@'localhost';
 GRANT SELECT, UPDATE ON ambulancia TO 'secretaria'@'localhost';
+
+GRANT EXECUTE ON PROCEDURE pas_create_citamedica TO 'secretaria'@'localhost';
+GRANT EXECUTE ON PROCEDURE pas_remove_citamedica TO 'secretaria'@'localhost';
+GRANT EXECUTE ON PROCEDURE pas_approve_incapacidad TO 'secretaria'@'localhost';
+GRANT EXECUTE ON PROCEDURE pas_approve_atencionsalud TO 'secretaria'@'localhost';
+GRANT EXECUTE ON PROCEDURE pas_update_resultados TO 'secretaria'@'localhost';
+GRANT EXECUTE ON PROCEDURE pas_edit_perfilintegral TO 'secretaria'@'localhost';
 
 GRANT ALL ON vw_citamedica_disponible TO 'secretaria'@'localhost';
 GRANT SELECT ON vw_medicamentos_solicitados TO 'secretaria'@'localhost';
@@ -216,6 +249,13 @@ GRANT ALL ON Medicamentos TO 'direccion_salud'@'localhost';
 GRANT ALL ON EvaluacionFisica TO 'direccion_salud'@'localhost';
 GRANT ALL ON Urgencia TO 'direccion_salud'@'localhost';
 GRANT ALL ON Ambulancia TO 'direccion_salud'@'localhost';
+
+GRANT EXECUTE ON PROCEDURE pas_create_citamedica TO 'direccion_salud'@'localhost';
+GRANT EXECUTE ON PROCEDURE pas_remove_citamedica TO 'direccion_salud'@'localhost';
+GRANT EXECUTE ON PROCEDURE pas_approve_incapacidad TO 'direccion_salud'@'localhost';
+GRANT EXECUTE ON PROCEDURE pas_approve_atencionsalud TO 'direccion_salud'@'localhost';
+GRANT EXECUTE ON PROCEDURE pas_update_resultados TO 'direccion_salud'@'localhost';
+GRANT EXECUTE ON PROCEDURE pas_edit_perfilintegral TO 'direccion_salud'@'localhost';
 
 GRANT ALL ON vw_citamedica_disponible TO 'direccion_salud'@'localhost';
 GRANT ALL ON vw_medicamentos_solicitados TO 'direccion_salud'@'localhost';
