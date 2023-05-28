@@ -1,23 +1,16 @@
 use bienestar;
 
-drop role if exists 'estudiante'@'localhost';
-drop role if exists 'no_estudiante'@'localhost';
-drop role if exists 'secretaria'@'localhost';
-drop role if exists 'direccion_economica'@'localhost';
-drop role if exists 'direccion_salud'@'localhost';
-drop role if exists 'direccion_deporte'@'localhost';
-drop role if exists 'direccion_cultural'@'localhost';
-CREATE ROLE 'estudiante'@'localhost';
-CREATE ROLE 'no_estudiante'@'localhost';
-CREATE ROLE 'secretaria'@'localhost';
-CREATE ROLE 'direccion_economica'@'localhost';
-CREATE ROLE 'direccion_salud'@'localhost';
-CREATE ROLE 'direccion_deporte'@'localhost';
-CREATE ROLE 'direccion_cultural'@'localhost';
+CREATE ROLE IF NOT EXISTS 'estudiante'@'localhost';
+CREATE ROLE IF NOT EXISTS 'no_estudiante'@'localhost';
+CREATE ROLE IF NOT EXISTS 'secretaria'@'localhost';
+CREATE ROLE IF NOT EXISTS 'direccion_economica'@'localhost';
+CREATE ROLE IF NOT EXISTS 'direccion_salud'@'localhost';
+CREATE ROLE IF NOT EXISTS 'direccion_deporte'@'localhost';
+CREATE ROLE IF NOT EXISTS 'direccion_cultural'@'localhost';
 
-#-------------------------------------------------------------------
-#Javier
-#--------------------------------------------------------------------
+#-------------------------------------------------------------------------------------------------------
+#														Javier
+#--------------------------------------------------------------------------------------------------------
 
 grant update on bienestar.persona to 'estudiante'@'localhost';
 grant update on bienestar.estudiante to 'estudiante'@'localhost';
@@ -148,35 +141,90 @@ grant all on bienestar.vw_info_estudiante to 'direccion_economica'@'localhost';
 grant all on bienestar.vw_info_convocatoria_estudiante to 'direccion_economica'@'localhost';
 grant all on bienestar.vw_info_factura to 'direccion_economica'@'localhost';
 
-#--------------------------------------------------------------------
 
-#-------------------------------------------------------------------
-#Valeria
-#--------------------------------------------------------------------
+#-------------------------------------------------------------------------------------------------------
+#													Valeria
+#--------------------------------------------------------------------------------------------------------
 
-grant all on bienestar.Persona to 'direccion_salud'@'localhost';
-grant all on bienestar.persona_cargo to 'direccion_salud'@'localhost';
-grant all on bienestar.Cargo to 'direccion_salud'@'localhost';
-grant all on bienestar.Estudiante to 'direccion_salud'@'localhost';
-grant all on bienestar.Carrera to 'direccion_salud'@'localhost';
-grant all on bienestar.Area to 'direccion_salud'@'localhost';
-grant all on bienestar.Programa to 'direccion_salud'@'localhost';
-grant all on bienestar.Programa_tiene_EventoTaller to 'direccion_salud'@'localhost';
-grant all on bienestar.EventoTaller to 'direccion_salud'@'localhost';
-grant all on bienestar.Programa_tiene_proyecto to 'direccion_salud'@'localhost';
-grant all on bienestar.Proyecto to 'direccion_salud'@'localhost';
-grant all on bienestar.Convocatoria to 'direccion_salud'@'localhost';
-grant all on bienestar.Estudiante_toma_convocatoria to 'direccion_salud'@'localhost';
+GRANT SELECT, UPDATE ON perfilriesgointegral TO 'estudiante'@'localhost';
+GRANT SELECT ON enfermedad TO 'estudiante'@'localhost';
+GRANT SELECT ON personalsalud TO 'estudiante'@'localhost';
+GRANT SELECT ON ordenmedica TO 'estudiante'@'localhost';
+GRANT SELECT ON medicamentos TO 'estudiante'@'localhost';
+GRANT SELECT, UPDATE ON citamedica TO 'estudiante'@'localhost';
 
-grant all on bienestar.vw_info_estudiante to 'direccion_salud'@'localhost';
-grant all on bienestar.vw_info_convocatoria_estudiante to 'direccion_salud'@'localhost';
+GRANT SELECT, UPDATE ON vw_citamedica_disponible TO 'estudiante'@'localhost';
+GRANT SELECT ON vw_doctor_procedimiento TO 'estudiante'@'localhost';
+# -----------------------------------------------------------------------------
 
-#--------------------------------------------------------------------
+GRANT SELECT, UPDATE ON perfilriesgointegral TO 'no_estudiante'@'localhost';
+GRANT SELECT ON enfermedad TO 'no_estudiante'@'localhost';
+GRANT SELECT ON personalsalud TO 'no_estudiante'@'localhost';
+GRANT SELECT ON ordenmedica TO 'no_estudiante'@'localhost';
+GRANT SELECT ON medicamentos TO 'no_estudiante'@'localhost';
+GRANT SELECT, UPDATE ON citamedica TO 'no_estudiante'@'localhost';
+
+GRANT SELECT, UPDATE ON vw_citamedica_disponible TO 'no_estudiante'@'localhost';
+GRANT SELECT ON vw_doctor_procedimiento TO 'no_estudiante'@'localhost';
+# -----------------------------------------------------------------------------
+
+GRANT SELECT, UPDATE ON discapacidad TO 'secretaria'@'localhost';
+GRANT SELECT, UPDATE ON incapacidad TO 'secretaria'@'localhost';
+GRANT SELECT, UPDATE ON atencionensalud TO 'secretaria'@'localhost';
+GRANT SELECT, UPDATE ON perfilriesgointegral TO 'secretaria'@'localhost';
+GRANT ALL ON enfermedad TO 'secretaria'@'localhost';
+GRANT SELECT, UPDATE ON personalsalud TO 'secretaria'@'localhost';
+GRANT ALL ON citamedica TO 'secretaria'@'localhost';
+GRANT SELECT, INSERT, UPDATE ON ordenmedica TO 'secretaria'@'localhost';
+GRANT SELECT, INSERT, UPDATE ON medicamentos TO 'secretaria'@'localhost';
+GRANT SELECT, INSERT, UPDATE ON evaluacionfisica TO 'secretaria'@'localhost';
+GRANT SELECT, INSERT, UPDATE ON urgencia TO 'secretaria'@'localhost';
+GRANT SELECT, UPDATE ON ambulancia TO 'secretaria'@'localhost';
+
+GRANT ALL ON vw_citamedica_disponible TO 'secretaria'@'localhost';
+GRANT SELECT ON vw_medicamentos_solicitados TO 'secretaria'@'localhost';
+GRANT SELECT, UPDATE ON vw_doctor_procedimiento TO 'secretaria'@'localhost';
+
+# -----------------------------------------------------------------------------
+
+grant all on Persona to 'direccion_salud'@'localhost';
+grant all on persona_cargo to 'direccion_salud'@'localhost';
+grant all on Cargo to 'direccion_salud'@'localhost';
+grant all on Estudiante to 'direccion_salud'@'localhost';
+grant all on Carrera to 'direccion_salud'@'localhost';
+grant all on Area to 'direccion_salud'@'localhost';
+grant all on Programa to 'direccion_salud'@'localhost';
+grant all on Programa_tiene_EventoTaller to 'direccion_salud'@'localhost';
+grant all on EventoTaller to 'direccion_salud'@'localhost';
+grant all on Programa_tiene_proyecto to 'direccion_salud'@'localhost';
+grant all on Proyecto to 'direccion_salud'@'localhost';
+grant all on Convocatoria to 'direccion_salud'@'localhost';
+grant all on Estudiante_toma_convocatoria to 'direccion_salud'@'localhost';
+
+grant all on vw_info_estudiante to 'direccion_salud'@'localhost';
+grant all on vw_info_convocatoria_estudiante to 'direccion_salud'@'localhost';
+
+GRANT ALL ON Discapacidad TO 'direccion_salud'@'localhost';
+GRANT ALL ON Incapacidad TO 'direccion_salud'@'localhost';
+GRANT ALL ON AtencionEnSalud TO 'direccion_salud'@'localhost';
+GRANT ALL ON PerfilRiesgoIntegral TO 'direccion_salud'@'localhost';
+GRANT ALL ON Enfermedad TO 'direccion_salud'@'localhost';
+GRANT ALL ON PersonalSalud TO 'direccion_salud'@'localhost';
+GRANT ALL ON CitaMedica TO 'direccion_salud'@'localhost';
+GRANT ALL ON OrdenMedica TO 'direccion_salud'@'localhost';
+GRANT ALL ON Medicamentos TO 'direccion_salud'@'localhost';
+GRANT ALL ON EvaluacionFisica TO 'direccion_salud'@'localhost';
+GRANT ALL ON Urgencia TO 'direccion_salud'@'localhost';
+GRANT ALL ON Ambulancia TO 'direccion_salud'@'localhost';
+
+GRANT ALL ON vw_citamedica_disponible TO 'direccion_salud'@'localhost';
+GRANT ALL ON vw_medicamentos_solicitados TO 'direccion_salud'@'localhost';
+GRANT ALL ON vw_doctor_procedimiento TO 'direccion_salud'@'localhost';
 
 
-#-------------------------------------------------------------------
-#Carlos
-#--------------------------------------------------------------------
+#-------------------------------------------------------------------------------------------------------
+#													Carlos
+#--------------------------------------------------------------------------------------------------------
 
 grant all on bienestar.Persona to 'direccion_deporte'@'localhost';
 grant all on bienestar.persona_cargo to 'direccion_deporte'@'localhost';
@@ -212,44 +260,5 @@ grant all on bienestar.Estudiante_toma_convocatoria to 'direccion_cultural'@'loc
 grant all on bienestar.vw_info_estudiante to 'direccion_cultural'@'localhost';
 grant all on bienestar.vw_info_convocatoria_estudiante to 'direccion_cultural'@'localhost';
 
-#--------------------------------------------------------------------
-
-FLUSH PRIVILEGES;
-
-
-drop user if exists 'juanEstudiante'@'localhost';
-create user 'juanEstudiante'@'localhost' identified by 'root@1234';
-grant 'estudiante'@'localhost' to 'juanEstudiante'@'localhost';
-set default role 'estudiante'@'localhost' to 'juanEstudiante'@'localhost';
-#set role  default to user
-
-
-SHOW GRANTS FOR 'juanEstudiante'@'localhost';
-
-drop user if exists 'mariaPersona'@'localhost';
-create user 'mariaPersona'@'localhost' identified by 'root@1234';
-grant 'no_estudiante'@'localhost' to 'mariaPersona'@'localhost';
-
-SHOW GRANTS FOR 'mariaPersona'@'localhost';
-
-drop user if exists 'jeisonSecretario'@'localhost';
-create user 'jeisonSecretario'@'localhost' identified by 'root@1234';
-grant 'secretaria'@'localhost' to 'jeisonSecretario'@'localhost';
-
-drop user if exists 'elizabethGodDirEco'@'localhost';
-create user 'elizabethGodDirEco'@'localhost' identified by 'root@1234';
-grant 'direccion_economica'@'localhost' to 'elizabethGodDirEco'@'localhost';
-
-drop user if exists 'juanaDirSalud'@'localhost';
-create user 'juanaDirSalud'@'localhost' identified by 'root@1234';
-grant 'direccion_salud'@'localhost' to 'juanaDirSalud'@'localhost';
-
-drop user if exists 'estebanDirDeporte'@'localhost';
-create user 'estebanDirDeporte'@'localhost' identified by 'root@1234';
-grant 'direccion_deporte'@'localhost' to 'estebanDirDeporte'@'localhost';
-
-drop user if exists 'sabrinaDirCultural'@'localhost';
-create user 'sabrinaDirCultural'@'localhost' identified by 'root@1234';
-grant 'direccion_cultural'@'localhost' to 'sabrinaDirCultural'@'localhost';
 
 FLUSH PRIVILEGES;

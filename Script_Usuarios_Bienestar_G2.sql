@@ -1,20 +1,35 @@
 use bienestar;
 
-drop user if exists 'estudiante'@'localhost';
-drop user if exists 'no_estudiante'@'localhost';
-drop user if exists 'secretaria'@'localhost';
-drop user if exists 'direccion_economica'@'localhost';
-drop user if exists 'direccion_salud'@'localhost';
-drop user if exists 'direccion_deporte'@'localhost';
-drop user if exists 'direccion_cultural'@'localhost';
-CREATE user 'estudiante'@'localhost' identified by 'root';
-CREATE user 'no_estudiante'@'localhost' identified by 'root';
-CREATE user 'secretaria'@'localhost' identified by 'root';
-CREATE user 'direccion_economica'@'localhost' identified by 'root';
-CREATE user 'direccion_salud'@'localhost' identified by 'root';
-CREATE user 'direccion_deporte'@'localhost' identified by 'root';
-CREATE user 'direccion_cultural'@'localhost' identified by 'root';
+drop user if exists 'juanEstudiante'@'localhost';
+create user 'juanEstudiante'@'localhost' 	
+	identified by 'root@1234' default role 'estudiante'@'localhost';
 
+drop user if exists 'mariaPersona'@'localhost';
+create user 'mariaPersona'@'localhost' 
+	identified by 'root@1234' default role 'no_estudiante'@'localhost';
+
+drop user if exists 'jeisonSecretario'@'localhost';
+create user 'jeisonSecretario'@'localhost' 
+	identified by 'root@1234' default role 'secretaria'@'localhost';
+
+drop user if exists 'elizabethGodDirEco'@'localhost';
+create user 'elizabethGodDirEco'@'localhost'
+	identified by 'root@1234' default role 'direccion_economica'@'localhost';
+
+drop user if exists 'juanaDirSalud'@'localhost';
+create user 'juanaDirSalud'@'localhost' 
+	identified by 'root@1234' default role 'direccion_salud'@'localhost';
+
+drop user if exists 'estebanDirDeporte'@'localhost';
+create user 'estebanDirDeporte'@'localhost'
+	identified by 'root@1234' default role 'direccion_deporte'@'localhost';
+
+drop user if exists 'sabrinaDirCultural'@'localhost';
+create user 'sabrinaDirCultural'@'localhost'
+	identified by 'root@1234' default role 'direccion_cultural'@'localhost';
+
+
+/*
 #-------------------------------------------------------------------
 #Javier
 #--------------------------------------------------------------------
@@ -151,92 +166,6 @@ grant all on bienestar.vw_info_factura to 'direccion_economica'@'localhost';
 #--------------------------------------------------------------------
 
 #-------------------------------------------------------------------
-#Valeria
-#--------------------------------------------------------------------
-
-GRANT SELECT, UPDATE ON perfilriesgointegral TO 'estudiante';
-GRANT SELECT ON historiaclinica TO 'estudiante';
-GRANT SELECT ON personalsalud TO 'estudiante';
-GRANT SELECT ON ordenmedica TO 'estudiante';
-GRANT SELECT ON medicamentos TO 'estudiante';
-GRANT SELECT, UPDATE ON citamedica TO 'estudiante';
-
-GRANT SELECT, UPDATE ON vw_citamedica_disponible TO 'estudiante';
-GRANT SELECT ON vw_doctor_procedimiento TO 'estudiante';
-# -----------------------------------------------------------------------------
-
-GRANT SELECT, UPDATE ON perfilriesgointegral TO 'no_estudiante';
-GRANT SELECT ON historiaclinica TO 'no_estudiante';
-GRANT SELECT ON personalsalud TO 'no_estudiante';
-GRANT SELECT ON ordenmedica TO 'no_estudiante';
-GRANT SELECT ON medicamentos TO 'no_estudiante';
-GRANT SELECT, UPDATE ON citamedica TO 'no_estudiante';
-
-GRANT SELECT, UPDATE ON vw_citamedica_disponible TO 'no_estudiante';
-GRANT SELECT ON vw_doctor_procedimiento TO 'no_estudiante';
-# -----------------------------------------------------------------------------
-
-GRANT SELECT, UPDATE ON discapacidad TO 'secretaria';
-GRANT SELECT, UPDATE ON incapacidad TO 'secretaria';
-GRANT SELECT, UPDATE ON atencionensalud TO 'secretaria';
-GRANT SELECT, UPDATE ON perfilriesgointegral TO 'secretaria';
-GRANT SELECT, INSERT, UPDATE ON historiaclinica TO 'secretaria';
-GRANT ALL ON enfermedad TO 'secretaria';
-GRANT SELECT, UPDATE ON personalsalud TO 'secretaria';
-GRANT ALL ON citamedica TO 'secretaria';
-GRANT SELECT, INSERT, UPDATE ON ordenmedica TO 'secretaria';
-GRANT SELECT, INSERT, UPDATE ON medicamentos TO 'secretaria';
-GRANT SELECT, INSERT, UPDATE ON evaluacionfisica TO 'secretaria';
-GRANT SELECT, INSERT, UPDATE ON urgencia TO 'secretaria';
-GRANT SELECT, UPDATE ON ambulancia TO 'secretaria';
-
-GRANT ALL ON vw_citamedica_disponible TO 'secretaria';
-GRANT SELECT ON vw_medicamentos_solicitados TO 'secretaria';
-GRANT SELECT, UPDATE ON vw_doctor_procedimiento TO 'secretaria';
-
-# -----------------------------------------------------------------------------
-
-grant all on Persona to 'direccion_salud';
-grant all on persona_cargo to 'direccion_salud';
-grant all on Cargo to 'direccion_salud';
-grant all on Estudiante to 'direccion_salud';
-grant all on Carrera to 'direccion_salud';
-grant all on Area to 'direccion_salud';
-grant all on Programa to 'direccion_salud';
-grant all on Programa_tiene_EventoTaller to 'direccion_salud';
-grant all on EventoTaller to 'direccion_salud';
-grant all on Programa_tiene_proyecto to 'direccion_salud';
-grant all on Proyecto to 'direccion_salud';
-grant all on Convocatoria to 'direccion_salud';
-grant all on Estudiante_toma_convocatoria to 'direccion_salud';
-
-GRANT ALL ON Discapacidad TO 'direccion_salud';
-GRANT ALL ON Incapacidad TO 'direccion_salud';
-GRANT ALL ON AtencionEnSalud TO 'direccion_salud';
-GRANT ALL ON PerfilRiesgoIntegral TO 'direccion_salud';
-GRANT ALL ON HistoriaClinica TO 'direccion_salud';
-GRANT ALL ON Enfermedad TO 'direccion_salud';
-GRANT ALL ON PersonalSalud TO 'direccion_salud';
-GRANT ALL ON CitaMedica TO 'direccion_salud';
-GRANT ALL ON OrdenMedica TO 'direccion_salud';
-GRANT ALL ON Medicamentos TO 'direccion_salud';
-GRANT ALL ON EvaluacionFisica TO 'direccion_salud';
-GRANT ALL ON Urgencia TO 'direccion_salud';
-GRANT ALL ON Ambulancia TO 'direccion_salud';
-
-grant all on vw_info_estudiante to 'direccion_salud';
-grant all on vw_info_convocatoria_estudiante to 'direccion_salud';
-
-#--------------------------------------------------------------------
-
-GRANT ALL ON vw_citamedica_disponible TO 'direccion_salud';
-GRANT ALL ON vw_medicamentos_solicitados TO 'direccion_salud';
-GRANT ALL ON vw_doctor_procedimiento TO 'direccion_salud';
-
-#--------------------------------------------------------------------
-
-
-#-------------------------------------------------------------------
 #Carlos
 #--------------------------------------------------------------------
 
@@ -302,12 +231,13 @@ vw_info_gai_convocatoria
 vw_info_seleccion_convocatoria
 */
 
+/*
 #-------------------------------------------------------------------
 #Permisos para la direccion de bienestar salud
 
 -- no tiene permisos sobre las siguientes tablas.
 
-/*
+
 TorneoInterno,
 ConvocatoriaCursoLibre,
 GrupoArtisticoInstitucional,
@@ -319,6 +249,7 @@ vw_info_gai_convocatoria
 vw_info_seleccion_convocatoria
 */
 
+/*
 #-------------------------------------------------------------------
 #Permisos para la direccion de bienstar deporte
 grant all on Bienestar.TorneoInterno to 'direccion_deporte'@'localhost';
@@ -336,15 +267,4 @@ grant all on Bienestar.ConvocatoriaGAI to 'direccion_cultural'@'localhost';
 grant all on Bienestar.grupoartisticoinstitucional to 'direccion_cultural'@'localhost';
 
 grant all on vw_info_gai_convocatoria to 'direccion_cultural'@'localhost';
-
-
-
-FLUSH PRIVILEGES;
-
-show grants for 'estudiante'@'localhost';
-show grants for 'no_estudiante'@'localhost';
-show grants for 'secretaria'@'localhost';
-show grants for 'direccion_economica'@'localhost';
-show grants for 'direccion_salud'@'localhost';
-show grants for 'direccion_deporte'@'localhost';
-show grants for 'direccion_cultural'@'localhost';
+*/

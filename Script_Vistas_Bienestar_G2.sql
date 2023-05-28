@@ -37,15 +37,15 @@ select * from vw_info_factura;
 #								Valeria
 #------------------------------------------------------------------
 
-# Ver que la especializacion de los medicos que le han recetado cada procedimiento a un usuario
+# Ver la especializacion de los medicos que le han recetado cada procedimiento a un usuario
 DROP VIEW IF EXISTS vw_doctor_procedimiento;
 
-SELECT idCitaMedica AS cita, pacienteID AS paciente, salEspecializacion AS especializacion, ordExamen AS procedimiento
-	FROM citamedica JOIN personalsalud ON (doctorID = perID) LEFT JOIN ordenmedica ON (CitaMedica_id=idCitaMedica);
+SELECT citID AS cita, pacienteID AS paciente, salEspecializacion AS especializacion, ordExamen AS procedimiento
+	FROM citamedica JOIN personalsalud ON (doctorID = perID) JOIN ordenmedica USING (citID);
 
 CREATE VIEW vw_doctor_procedimiento AS
-	SELECT idCitaMedica AS cita, pacienteID AS paciente, salEspecializacion AS especializacion, ordExamen AS procedimiento
-	FROM citamedica JOIN personalsalud ON (doctorID = perID) LEFT JOIN ordenmedica ON (CitaMedica_id=idCitaMedica);
+	SELECT citID AS cita, pacienteID AS paciente, salEspecializacion AS especializacion, ordExamen AS procedimiento
+	FROM citamedica JOIN personalsalud ON (doctorID = perID) JOIN ordenmedica USING (citID);
 
 
 # Ver las citas medicas disponibles
@@ -66,14 +66,14 @@ DROP VIEW IF EXISTS vw_medicamentos_solicitados;
 
 SELECT perNombre AS doctor, perID AS id, COUNT(medNombre) AS cantidad, SUM(medCantidad) AS cantidad_pastillas
 	FROM citamedica JOIN personalsalud ON (perID=doctorID)
-    JOIN medicamentos ON (CitaMedica_id=idCitaMedica)
+    JOIN medicamentos USING (citID)
     NATURAL JOIN persona
     GROUP BY (perID);
 
 CREATE VIEW vw_medicamentos_solicitados AS
 	SELECT perNombre AS doctor, perID AS id, COUNT(medNombre) AS cantidad, SUM(medCantidad) AS cantidad_pastillas
 	FROM citamedica JOIN personalsalud ON (perID=doctorID)
-    JOIN medicamentos ON (CitaMedica_id=idCitaMedica)
+    JOIN medicamentos USING (citID)
     NATURAL JOIN persona
     GROUP BY (perID);
 
