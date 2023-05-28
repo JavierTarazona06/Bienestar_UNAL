@@ -1,4 +1,5 @@
 use Bienestar;
+SET FOREIGN_KEY_CHECKS=0;
 
 #Javier
 #------------------------------------------------------------------
@@ -1446,3 +1447,5 @@ INSERT INTO Bienestar.ConvocatoriaSeleccion (Convocatoria_conv_id, convDeporte, 
 DELETE FROM estudiante_toma_convocatoria;
 insert into estudiante_toma_convocatoria values (9,210);
 insert into estudiante_toma_convocatoria values (13,217);
+
+SET FOREIGN_KEY_CHECKS=1;
