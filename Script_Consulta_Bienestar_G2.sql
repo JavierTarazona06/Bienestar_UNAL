@@ -141,7 +141,7 @@ select count(estID)
 #----------------------------------------------------------------------
 
 # 8. Consultar cuales fueron los incapacidades dadas durante la pandemia, cuantas ser dieron por cada una y la duración promedio de cada una.
-SELECT incEnfermedad AS tipo_incapacidad, COUNT(incEnfermedad) AS cantidad, SUM(incDias) AS promedio_dias 
+SELECT incEnfermedad AS tipo_incapacidad, COUNT(incEnfermedad) AS cantidad, ROUND(SUM(incDias) / COUNT(incEnfermedad)) AS promedio_dias 
 	FROM incapacidad WHERE '2019-12-30' < incFecha AND incFecha > '2021-12-30' GROUP BY incEnfermedad ORDER BY promedio_dias DESC;
 
 # 9. Consultar cual es la enfermedad más común y para dicha enfermedad ver cuales son las citas médicas más solicitadas.
@@ -149,14 +149,14 @@ SELECT enfNombre AS enfermedad, COUNT(enfNombre) AS cantidad FROM enfermedad GRO
 
 SELECT citEspecialidad AS tipo_cita, COUNT(citEspecialidad) AS cantidad_citas
 	FROM citamedica JOIN 
-	(SELECT perID FROM historiaclinica JOIN enfermedad ON perID=HistoriaClinicaID JOIN (
+    (SELECT perID FROM enfermedad JOIN (
 	SELECT COUNT(enfNombre) AS cantidad, enfNombre FROM enfermedad GROUP BY enfNombre ORDER BY cantidad DESC LIMIT 1) 
 	AS max_enfermedad ON max_enfermedad.enfNombre = enfermedad.enfNombre) 
 	AS enfermos ON pacienteID=perID
 	GROUP BY (citEspecialidad);
 
 # 10. Para las personas con alguna discapacidad ver cuantos días de incapacidad han tenido y la cantidad de citas que han requerido, eso agrupado por el tipo de incapacidad.
-SELECT disNombre AS discapacidad, SUM(incDias) AS numero_dias_incapacitado, COUNT(idCitaMedica) AS cantidad_citas_medicas
+SELECT disNombre AS discapacidad, SUM(incDias) AS numero_dias_incapacitado, COUNT(citID) AS cantidad_citas_medicas
 	FROM discapacidad NATURAL JOIN incapacidad JOIN citamedica ON pacienteID=perID GROUP BY (disNombre);
 
 
