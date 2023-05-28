@@ -44,6 +44,10 @@ CREATE VIEW vw_citamedica_disponible AS
 	FROM citamedica JOIN personalsalud ON (perID=doctorID) NATURAL JOIN persona
 	WHERE pacienteID IS NULL;
     
+SELECT citFecha AS fecha, citEspecialidad AS especialidad, perNombre AS doctor, pacienteID AS paciente 
+	FROM citamedica JOIN personalsalud ON (perID=doctorID) NATURAL JOIN persona
+	WHERE pacienteID IS NULL;
+    
     
 # Ver las citas medicas agendadas y que son proximas a pasar
 DROP VIEW IF EXISTS vw_citamedica_agendada;
@@ -66,7 +70,6 @@ CREATE VIEW vw_resultado_citamedica AS
 
 # Ver los tramites (atenciones en salud, incapacidades y discapacidades)
 DROP VIEW IF EXISTS vw_tramites;
-CREATE VIEW vw_tramites AS SELECT * FROM tramites;
 
 SELECT * FROM atencionensalud;
 
