@@ -493,7 +493,7 @@ insert into factura_producto values (1,7);
 # Salud
 #------------------------------------------------------------------
 DELETE FROM incapacidad;
-INSERT INTO incapacidad (perID, incFecha, incEnfermedad, incDias, incConvalidada) VALUES
+INSERT INTO incapacidad (perID, incFecha, incEnfermedad, incDias, incVerificada) VALUES
 	(65, '2022-03-23', 'psicologica', 10, 1),
 	(40, '2022-08-07', 'psicologica', 29, 1),
 	(138, '2020-06-19', 'covid', 17, 1),
