@@ -67,9 +67,23 @@ CREATE VIEW vw_resultado_citamedica AS
 # Ver las incapacidades y sus detalles
 DROP VIEW IF EXISTS vw_incapacidad;
 CREATE VIEW vw_incapacidad AS 
-	SELECT incID AS id, perID AS persona, incFecha AS fecha, incEnfermedad AS razon, incDias AS dias, incVerificado AS verificado 
-    FROM incapacidad;
+	SELECT incID AS id, perID AS persona, incFecha AS fecha, incEnfermedad AS razon, incDias AS dias, 
+    incVerificado AS verificado, incAprobado AS aprobado FROM incapacidad ORDER BY fecha DESC;
+    
 
+# Ver las atenciones en salud y sus detalles
+DROP VIEW IF EXISTS vw_atencionsalud;
+CREATE VIEW vw_atencionsalud AS
+    SELECT antID AS id, perID AS persona, ateFecha AS fecha, ateTipo AS tipo, 
+    ateVerificado AS verificado, ateAprobado AS aprobado FROM atencionensalud ORDER BY fecha DESC;
+
+
+# Ver el resultado del perfil de riesgo integral
+DROP VIEW IF EXISTS vw_perfil_integral;
+CREATE VIEW vw_perfil_integral AS 
+	SELECT perID AS persona, perFecha AS fecha, perSaludFisica AS puntaje_fisico, 
+    perSaludPsicologica AS puntaje_psicologico FROM perfilriesgointegral;
+    
 
 # Ver la cantidad de medicamentos diferentes que ha dado cada medico y la cantidad total de ellos
 DROP VIEW IF EXISTS vw_medicamentos_solicitados;

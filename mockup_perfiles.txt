@@ -26,8 +26,8 @@ que le hayan enviado). Por ello tendra los siguientes procedimientos:
 # 5. Ver los resultados de cada cita medica
     pas_check_resultados(IN usuarioID INT)
 
-Ademas, entre los diferentes tramites que puede tener esta el de pasar incapacidades medicas para que sean
-verificadas por el ara de salud.
+Ademas, entre los diferentes tramites que puede tener esta el de pasar incapacidades medicas o atenciones en
+salud para que sean verificadas por el ara de salud.
 
 # 6. Ver el estado de las incapacidades
     pas_view_incapacidad(IN usuarioID INT)
@@ -38,7 +38,18 @@ verificadas por el ara de salud.
 # 8. Modificar una incapacidad de un usuario
     pas_edit_incapacidad(incapacidadID INT, fecha DATETIME, enfermedad VARCHAR(45), dias TINYINT)
 
-Ademas,
+# 9. Ver el estado de las atenciones en salud de un usuario
+    pas_view_atencionsalud(usuarioID INT)
+
+# 10. Añadir una atencion en salud de un usuario
+    pas_add_atencionsalud(usuarioID INT, fecha DATETIME, tipo VARCHAR(45))
+
+# 11. Modificar una atencion en salud de un usuario
+    pas_edit_atencionsalud(atencionsaludID INT, fecha DATETIME, tipo VARCHAR(45))
+
+# 12. Ver perfil de riesgo integral de un usuario
+    pas_view_perfilriesgo(usuarioID INT)
+
 #----------------------------------------------------------------------------------------------------------------------
 #	    									Actividad Fisica y Deporte
 #----------------------------------------------------------------------------------------------------------------------

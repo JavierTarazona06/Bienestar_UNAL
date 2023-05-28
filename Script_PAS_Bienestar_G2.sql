@@ -109,11 +109,10 @@ DELIMITER ;
 DROP PROCEDURE IF EXISTS pas_add_incapacidad;
 DELIMITER $$
 CREATE PROCEDURE pas_add_incapacidad(
-	IN usuarioID INT, IN fecha DATETIME, IN enfermedad VARCHAR(45), IN dias TINYINT
-    )
+	IN usuarioID INT, IN fecha DATETIME, IN enfermedad VARCHAR(45), IN dias TINYINT)
 	BEGIN
-		INSERT INTO incapacidad (perID, incFecha, incEnfermedad, incDias, incVerificada) 
-			VALUES (usuarioID, fecha, enfermedad, dias, 0);
+		INSERT INTO incapacidad (perID, incFecha, incEnfermedad, incDias, incVerificado, incAprobado) 
+			VALUES (usuarioID, fecha, enfermedad, dias, 0, 0);
     END $$
 DELIMITER ;
 
@@ -142,15 +141,148 @@ DELIMITER ;
 DROP PROCEDURE IF EXISTS pas_edit_incapacidad;
 DELIMITER $$
 CREATE PROCEDURE pas_edit_incapacidad(
-	IN incapacidadID INT, IN fecha DATETIME, IN enfermedad VARCHAR(45), IN dias TINYINT
-    )
+	IN incapacidadID INT, IN fecha DATETIME, IN enfermedad VARCHAR(45), IN dias TINYINT)
 	BEGIN
 		UPDATE incapacidad SET incFecha = fecha, incEnfermedad = enfermedad, incDias = dias
 			WHERE incID = incapacidadID;
     END $$
 DELIMITER ;
 
-# 9. ---------------------------------------------  --------------------------------------------------
+# 9. -------------------------------------- Ver el estado de las atenciones en salud de un usuario -----------------------------------------
+DROP PROCEDURE IF EXISTS pas_view_atencionsalud;
+DELIMITER $$
+CREATE PROCEDURE pas_view_atencionsalud(IN usuarioID INT)
+	BEGIN
+		SELECT * FROM vw_atencionsalud WHERE persona = usuarioID;
+    END $$
+DELIMITER ;
+
+# 10. --------------------------------------------- Añadir una atencion en salud de un usuario ---------------------------------------------
+
+# Verificar que la atencion en salud no ha sido ya añadida
+DROP TRIGGER IF EXISTS tr_check_duplicates_atsalud;
+DELIMITER $$
+CREATE TRIGGER tr_check_duplicates_atsalud BEFORE INSERT ON atencionensalud
+	FOR EACH ROW
+	BEGIN
+		DECLARE duplicated INT;
+        DECLARE msg VARCHAR(200);
+		SELECT EXISTS (SELECT antID FROM atencionensalud
+            WHERE perID = NEW.perID AND ateTipo = NEW.ateTipo
+            AND ateFecha = NEW.ateFecha) INTO duplicated;
+        
+        IF duplicated THEN
+			SET msg = CONCAT('La atencion en salud ya existe');
+            SIGNAL sqlstate '15000' SET message_text = msg;
+		END IF;
+    END $$
+DELIMITER ;
+
+# Añadir una atencion en salud
+DROP PROCEDURE IF EXISTS pas_add_atencionsalud;
+DELIMITER $$
+CREATE PROCEDURE pas_add_atencionsalud(
+	IN usuarioID INT, IN fecha DATETIME, IN tipo VARCHAR(45))
+	BEGIN
+		INSERT INTO atencionensalud (perID, ateFecha, ateTipo, ateVerificado, ateAprobado) 
+			VALUES (usuarioID, fecha, tipo, 0, 0);
+    END $$
+DELIMITER ;
+
+# 11. --------------------------------------------- Modificar una atencion en salud de un usuario ------------------------------------------
+
+# Verificar que la incapacidad no haya sido ya verificada
+DROP TRIGGER IF EXISTS tr_check_verification_atsalud;
+DELIMITER $$
+CREATE TRIGGER tr_check_verification_atsalud BEFORE UPDATE ON atencionensalud
+	FOR EACH ROW
+	BEGIN
+		DECLARE verificated BOOL;
+        DECLARE msg VARCHAR(200);
+		SELECT ateVerificado INTO verificated FROM atencionensalud
+            WHERE perID = OLD.perID AND ateTipo = OLD.ateTipo
+            AND ateFecha = OLD.ateFecha;
+        
+        IF verificated THEN
+			SET msg = CONCAT('La atencion en salud ya ha sido verificada, no se puede modificar');
+            SIGNAL sqlstate '15000' SET message_text = msg;
+		END IF;
+    END $$
+DELIMITER ;
+
+# Añadir una incapacidad
+DROP PROCEDURE IF EXISTS pas_edit_atencionsalud;
+DELIMITER $$
+CREATE PROCEDURE pas_edit_atencionsalud(
+	IN atencionsaludID INT, IN fecha DATETIME, IN tipo VARCHAR(45))
+	BEGIN
+		UPDATE atencionensalud SET ateFecha = fecha, ateTipo = tipo
+			WHERE antID = atencionsaludID;
+    END $$
+DELIMITER ;
+
+# 12. --------------------------------------------- Ver perfil de riesgo integral de un usuario --------------------------------------------
+DROP PROCEDURE IF EXISTS pas_view_perfilriesgo;
+DELIMITER $$
+CREATE PROCEDURE pas_view_perfilriesgo(IN usuarioID INT)
+	BEGIN
+		SELECT * FROM vw_perfil_integral WHERE persona = usuarioID;
+    END $$
+DELIMITER ;
+
+# 13. ----------------------------------------------------- Crear una cita medica -----------------------------------------------------------
+DROP PROCEDURE IF EXISTS pas_create_citamedica;
+DELIMITER $$
+CREATE PROCEDURE pas_create_citamedica()
+	BEGIN 
+    
+    END $$
+DELIMITER ;
+
+# 14. ----------------------------------------------------- Eliminar una cita medica --------------------------------------------------------
+DROP PROCEDURE IF EXISTS pas_remove_citamedica;
+DELIMITER $$
+CREATE PROCEDURE pas_remove_citamedica()
+	BEGIN 
+    
+    END $$
+DELIMITER ;
+
+# 15. ----------------------------------------------- Aprobar o rechazar una incapacidad ----------------------------------------------------
+DROP PROCEDURE IF EXISTS pas_approve_incapacidad;
+DELIMITER $$
+CREATE PROCEDURE pas_approve_incapacidad()
+	BEGIN 
+    
+    END $$
+DELIMITER ;
+
+# 16. -------------------------------------------- Aprobar o rechazar una atencion en salud -------------------------------------------------
+DROP PROCEDURE IF EXISTS pas_approve_atencionsalud;
+DELIMITER $$
+CREATE PROCEDURE pas_approve_atencionsalud()
+	BEGIN 
+    
+    END $$
+DELIMITER ;
+
+# 17. ------------------------------------------- Agregar los resultados de una cita medica -------------------------------------------------
+DROP PROCEDURE IF EXISTS pas_update_resultados;
+DELIMITER $$
+CREATE PROCEDURE pas_update_resultados()
+	BEGIN 
+    
+    END $$
+DELIMITER ;
+
+# 18. -------------------------------------- Modificar el perfil de riesgo integral de un usuario -------------------------------------------
+DROP PROCEDURE IF EXISTS pas_edit_perfilintegral;
+DELIMITER $$
+CREATE PROCEDURE pas_edit_perfilintegral()
+	BEGIN 
+    
+    END $$
+DELIMITER ;
 
 #--------------------------------------------------------------------------------------------------------------------------------------------
 #																	Carlos
