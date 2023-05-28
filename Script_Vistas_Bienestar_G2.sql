@@ -42,11 +42,7 @@ DROP VIEW IF EXISTS vw_citamedica_disponible;
 CREATE VIEW vw_citamedica_disponible AS
 	SELECT citFecha AS fecha, citEspecialidad AS especialidad, perNombre AS doctor, pacienteID AS paciente 
 	FROM citamedica JOIN personalsalud ON (perID=doctorID) NATURAL JOIN persona
-	WHERE pacienteID IS NULL;
-    
-SELECT citFecha AS fecha, citEspecialidad AS especialidad, perNombre AS doctor, pacienteID AS paciente 
-	FROM citamedica JOIN personalsalud ON (perID=doctorID) NATURAL JOIN persona
-	WHERE pacienteID IS NULL;
+	WHERE pacienteID IS NULL AND citFecha > CURRENT_DATE();
     
     
 # Ver las citas medicas agendadas y que son proximas a pasar
@@ -54,7 +50,7 @@ DROP VIEW IF EXISTS vw_citamedica_agendada;
 CREATE VIEW vw_citamedica_agendada AS
 	SELECT citFecha AS fecha, citEspecialidad AS especialidad, perNombre AS doctor, pacienteID AS paciente 
 	FROM citamedica JOIN personalsalud ON (perID=doctorID) NATURAL JOIN persona
-    WHERE citFecha > CURRENT_DATE();
+    WHERE pacienteID IS NOT NULL AND citFecha > CURRENT_DATE();
     
     
 # Ver los medicamentos, ordenes medicas y examen medico por cada cita medica
@@ -65,13 +61,14 @@ CREATE VIEW vw_resultado_citamedica AS
     medNombre AS medicamento, medCantidad AS cantidad, medIntervalos AS intervalos, ordExamen AS examen, pacienteID AS paciente
 	FROM citamedica JOIN evaluacionfisica USING (citID) 
     LEFT JOIN medicamentos USING (citID) 
-    LEFT JOIN ordenmedica USING (citID);
+    LEFT JOIN ordenmedica USING (citID);    
 
 
-# Ver los tramites (atenciones en salud, incapacidades y discapacidades)
-DROP VIEW IF EXISTS vw_tramites;
-
-SELECT * FROM atencionensalud;
+# Ver las incapacidades y sus detalles
+DROP VIEW IF EXISTS vw_incapacidad;
+CREATE VIEW vw_incapacidad AS 
+	SELECT incID AS id, perID AS persona, incFecha AS fecha, incEnfermedad AS razon, incDias AS dias, incVerificado AS verificado 
+    FROM incapacidad;
 
 
 # Ver la cantidad de medicamentos diferentes que ha dado cada medico y la cantidad total de ellos
