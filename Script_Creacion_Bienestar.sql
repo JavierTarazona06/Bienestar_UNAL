@@ -125,7 +125,8 @@ CREATE TABLE IF NOT EXISTS Bienestar.Incapacidad (
   incFecha DATE NOT NULL,
   incEnfermedad VARCHAR(45) NOT NULL,
   incDias TINYINT NOT NULL,
-  incVerificada BIT NOT NULL,
+  incVerificado BIT NOT NULL,
+  incAprobado BIT NOT NULL,
   PRIMARY KEY (incID, perID),
   CONSTRAINT fk_Incapacidad_Persona
     FOREIGN KEY (perID)
@@ -164,6 +165,7 @@ CREATE TABLE IF NOT EXISTS Bienestar.Discapacidad (
   perID INT UNSIGNED NOT NULL,
   disNombre VARCHAR(45) NOT NULL,
   disVerificado BIT NOT NULL,
+  disAprobado BIT NOT NULL,
   PRIMARY KEY (disID, perID),
   CONSTRAINT fk_Discapacidad_Persona
     FOREIGN KEY (perID)
@@ -525,7 +527,9 @@ CREATE TABLE IF NOT EXISTS Bienestar.AtencionEnSalud (
   antID INT UNSIGNED NOT NULL AUTO_INCREMENT,
   perID INT UNSIGNED NOT NULL,
   ateFecha DATETIME NOT NULL,
+  ateTipo VARCHAR(45) NOT NULL,
   ateVerificado BIT NOT NULL,
+  ateAprobado BIT NOT NULL,
   PRIMARY KEY (antID, perID),
   CONSTRAINT fk_atencionEnSalud_Persona1
     FOREIGN KEY (perID)

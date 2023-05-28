@@ -29,7 +29,7 @@ CREATE INDEX CitaMedica_Fecha_idx ON CitaMedica (citFecha);
 
 # Para ver que incapacidades, discapacidades y atenciones en salud faltan por verificar, es necesario buscar por dicha columna; sin embargo, dicho
 # valor no es unico
-CREATE INDEX Incapacidad_Verificado_idx ON Incapacidad (incVerificada);
+CREATE INDEX Incapacidad_Verificado_idx ON Incapacidad (incVerificado);
 CREATE INDEX Discapacidad_Verificado_idx ON Discapacidad (disVerificado);
 CREATE INDEX AtencionEnSalud_Verificado_idx ON AtencionEnSalud (ateVerificado);
 

@@ -8,8 +8,37 @@ El rol que se usara es el de estudiante, por ende los procedimientos almacenados
 #                                  						Salud
 #----------------------------------------------------------------------------------------------------------------------
 
+El estudiante se le permite acceder a citas medicas, cancelarlas y ver la informacion de cada una (como medicamentos
+que le hayan enviado). Por ello tendra los siguientes procedimientos:
 
+# 1. Ver las citas medicas disponibles:
+    pas_citas_disponibles()
 
+# 2. Ver sus citas medicas proximas:
+    pas_citas_agendadas(pacienteID INT)
+
+# 3. Cancelar alguna cita
+    pas_delete_cita_medica(usuarioID INT, fechaCita DATETIME, especialidadCita VARCHAR(45))
+
+# 4.Agendar alguna cita
+    pas_add_cita_medica(usuarioID INT, fechaCita DATETIME, especialidadCita VARCHAR(45))
+
+# 5. Ver los resultados de cada cita medica
+    pas_check_resultados(IN usuarioID INT)
+
+Ademas, entre los diferentes tramites que puede tener esta el de pasar incapacidades medicas para que sean
+verificadas por el ara de salud.
+
+# 6. Ver el estado de las incapacidades
+    pas_view_incapacidad(IN usuarioID INT)
+
+# 7. Añadir una incapacidad
+    pas_add_incapacidad(usuarioID INT, fecha DATETIME, enfermedad VARCHAR(45), dias TINYINT)
+
+# 8. Modificar una incapacidad de un usuario
+    pas_edit_incapacidad(incapacidadID INT, fecha DATETIME, enfermedad VARCHAR(45), dias TINYINT)
+
+Ademas,
 #----------------------------------------------------------------------------------------------------------------------
 #	    									Actividad Fisica y Deporte
 #----------------------------------------------------------------------------------------------------------------------
