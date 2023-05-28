@@ -2,6 +2,7 @@ use Bienestar;
 
 #Javier
 #------------------------------------------------------------------
+DELETE FROM persona;
 insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (1,'Ana José','Ramírez Mendoza','CL 120 s No. 81-31','Guayabal','Barranquilla','Apartaestudio','Otra','ARamírezM@unal.edu.co','Sura EPS','Medicina');
 insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (2,'Gabriela Andrés','Pérez Núñez','KR 125 j No. 43-65','Las Acacias','Barranquilla','Apartaestudio','Engativá','GPérezN@unal.edu.co','Colmedica','Ciencias');
 insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (3,'Ricardo Felipe','Sánchez Gómez','TV 72 h No. 43-30','San Antonio','Cartagena','Finca','Usaquén','RSánchezG@unal.edu.co','Colmedica','Ciencias Veterinarias y de Zootecnia');
@@ -203,6 +204,7 @@ insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiuda
 insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (199,'Ernesto Mario','Romero Gómez','TV 98 g No. 80-70','La Mota','Cartagena','Casa','La Candelaria','ERomeroG@unal.edu.co','SaludTotal','Derecho, Ciencias Políticas y Sociales');
 insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (200,'Raúl Luis','Ortiz Ruiz','CL 126 j No. 80-25','Doce de Octubre','Villavicencio','Casa','Los Mártires','ROrtizR@unal.edu.co','Sanitas','Artes');
 
+DELETE FROM carrera;
 insert into carrera values(1,'Administración de Empresas (SNIES 19 )','149');
 insert into carrera values(2,'Antropología (SNIES 13 )','152');
 insert into carrera values(3,'Arquitectura (SNIES 30 )','172');
@@ -252,6 +254,7 @@ insert into carrera values(46,'Sociología (SNIES 16 )','162');
 insert into carrera values(47,'Trabajo Social (SNIES 15 )','171');
 insert into carrera values(48,'Zootecnia (SNIES 3 )','174');
 
+DELETE FROM estudiante;
 insert into estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado) values (1,'36','17','Ingeniería','73','Regular','0');
 insert into estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado) values (2,'27','27','Artes','50','Regular','0');
 insert into estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado) values (3,'26','21','Ciencias Humanas','76','PEAMA','0');
@@ -283,6 +286,7 @@ insert into estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision
 insert into estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado) values (29,'20','28','Ciencias Veterinarias y de Zootecnia','90','PEAMA','0');
 insert into estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado) values (30,'29','30','Ciencias','96','PEAMA','0');
 
+DELETE FROM area;
 insert into bienestar.area values
 (1, "Salud", 5713165000, "areasalud_bog@unal.edu.co", 21072, "CAN Bloque 3, Edificio 933",
 "El Área de Salud promueve el mejoramiento permanente de las condiciones físicas, psíquicas, mentales, sociales y ambientales en las que se desarrolla la vida universitaria, mediante programas formativos, preventivos y correctivos que incidan en la calidad de vida y hábitos de vida saludable.
@@ -304,7 +308,7 @@ Un equipo humano interdisciplinario que orienta el fortalecimiento del potencial
 (6, "Unidades especiales", 3165000, "obsdiscap_nal@unal.edu.co", 10574, "Unidad Camilo Torres (Calle 44 No. 45 - 67), Bloque B, Módulo 8, Oficina 703",
 "Los programas de Admisión Especial son creados por la Universidad Nacional de Colombia atendiendo a uno de sus fines misionales, el cual es proyectarse al territorio nacional y contribuir con la unidad nacional, la igualdad de oportunidades de acceso a la educación superior y la promoción del desarrollo de la comunidad académica nacional.");
 
-
+DELETE FROM programa;
 insert into programa (progID,progNombre,Area_areID) values (1,'Fomento Económico Estudiantes',5);
 insert into bienestar.programa values
 (2, "Cita medica", 1), 
@@ -312,6 +316,7 @@ insert into bienestar.programa values
 (4, "Grupo artistico institucional", 2),
 (5, "Urgencia",  1);
 
+DELETE FROM convocatoria;
 insert into convocatoria (conv_id,convNombre,convFechaApertura,convFechaCierre,convEstado,Programa_progID) values (1,'Fomento Económico Estudiantes','2023-01-15','2023-02-1',1,1);
 insert into convocatoria (conv_id,convNombre,convFechaApertura,convFechaCierre,convEstado,Programa_progID) values (2,'Fomento Económico Estudiantes Alimentación','2023-01-15','2023-02-1',1,1);
 insert into convocatoria (conv_id,convNombre,convFechaApertura,convFechaCierre,convEstado,Programa_progID) values (3,'Fomento Económico Estudiantes Alimentación','2023-01-15','2023-02-1',1,1);
@@ -329,13 +334,16 @@ insert into convocatoria (conv_id,convNombre,convFechaApertura,convFechaCierre,c
 insert into convocatoria (conv_id,convNombre,convFechaApertura,convFechaCierre,convEstado,Programa_progID) values (15,'Gestión Alojamiento','2023-01-15','2023-02-1',1,1);
 insert into convocatoria (conv_id,convNombre,convFechaApertura,convFechaCierre,convEstado,Programa_progID) values (16,'Fomento Económico Estudiantes','2023-01-15','2023-02-1',1,1);
 
+DELETE FROM convocatoriagestioneconomica;
 insert into convocatoriagestioneconomica values (1,500000);
 insert into convocatoriagestioneconomica values (16,1000000);
 
+DELETE FROM convocatoriagestionalimentaria;
 insert into convocatoriagestionalimentaria values (2,'Desayuno','Comedor central');
 insert into convocatoriagestionalimentaria values (3,'Almuerzo','Matemáticas');
 insert into convocatoriagestionalimentaria values (4,'Cena','Biología');
 
+DELETE FROM convocatoriagestionalojamiento;
 insert into convocatoriagestionalojamiento values (5,'AK 119 t No. 71-39','Usme',1213485.3333333333,'Residencia Universitaria','N.A',3640456);
 insert into convocatoriagestionalojamiento values (6,'KR 71 h No. 87-43','Barrios Unidos',2052035.0,'Habitación','N.A',4104070);
 insert into convocatoriagestionalojamiento values (7,'AK 16 i No. 41-39','Usme',292882.0,'Apartamento','N.A',585764);
@@ -348,6 +356,7 @@ insert into convocatoriagestionalojamiento values (13,'KR 172 m No. 98-27','Chap
 insert into convocatoriagestionalojamiento values (14,'TV 156 k No. 30-17','Fontibón',1948563.0,'Residencia Universitaria','N.A',3897126);
 insert into convocatoriagestionalojamiento values (15,'TV 20 q No. 42-58','Ciudad Bolívar',2479522.0,'Vivienda familiar','N.A',4959044);
 
+DELETE FROM estudiante_toma_convocatoria;
 insert into estudiante_toma_convocatoria values (30,9);
 insert into estudiante_toma_convocatoria values (16,1);
 insert into estudiante_toma_convocatoria values (22,2);
@@ -369,6 +378,7 @@ insert into estudiante_toma_convocatoria values (21,14);
 insert into estudiante_toma_convocatoria values (4,7);
 insert into estudiante_toma_convocatoria values (2,15);
 
+DELETE FROM fallaalimentacion;
 insert into fallaalimentacion (estID,fallAlcgaComida,fallAlLugar,fallAlFecha) values (23,'Almuerzo','Comedor central','2023-05-19');
 insert into fallaalimentacion (estID,fallAlcgaComida,fallAlLugar,fallAlFecha) values (9,'Desayuno','Ciencias Económicas','2023-02-12');
 insert into fallaalimentacion (estID,fallAlcgaComida,fallAlLugar,fallAlFecha) values (9,'Desayuno','Ciencias Económicas','2023-05-12');
@@ -397,6 +407,7 @@ insert into fallaalimentacion (estID,fallAlcgaComida,fallAlLugar,fallAlFecha) va
 insert into fallaalimentacion (estID,fallAlcgaComida,fallAlLugar,fallAlFecha) values (13,'Almuerzo','Odontología','2023-03-18');
 insert into fallaalimentacion (estID,fallAlcgaComida,fallAlLugar,fallAlFecha) values (23,'Almuerzo','Ciencias Humanas','2023-06-17');
 
+DELETE FROM actividadcorresp;
 insert into actividadcorresp (actCorID,estID,actCorActividad,actCorHoras) values (0,18,'comunitaria',3);
 insert into actividadcorresp (actCorID,estID,actCorActividad,actCorHoras) values (1,27,'cultural',8);
 insert into actividadcorresp (actCorID,estID,actCorActividad,actCorHoras) values (2,9,'acompañamiento',6);
@@ -418,9 +429,11 @@ insert into actividadcorresp (actCorID,estID,actCorActividad,actCorHoras) values
 insert into actividadcorresp (actCorID,estID,actCorActividad,actCorHoras) values (18,1,'acompañamiento',3);
 insert into actividadcorresp (actCorID,estID,actCorActividad,actCorHoras) values (19,24,'acompañamiento',7);
 
+DELETE FROM tiendabienestar;
 insert into tiendabienestar values (1,'Bogotá','Ciudad Universitaria','08:00:00','17:00:00',1,2);
 insert into tiendabienestar values (2,'Bogotá','Feria del libro','10:00:00','19:00:00',3,4);
 
+DELETE FROM factura;
 insert into factura values (1,'2023-05-18','13:00:00','N.A',1,29);
 insert into factura values (2,'2023-04-15','13:00:00','N.A',1,3);
 insert into factura values (3,'2023-05-11','15:00:00','N.A',2,11);
@@ -437,6 +450,7 @@ insert into factura values (13,'2023-02-13','17:00:00','N.A',2,27);
 insert into factura values (14,'2023-04-29','13:00:00','N.A',2,10);
 insert into factura values (15,'2023-05-21','17:00:00','N.A',1,7);
 
+DELETE FROM producto;
 insert into producto values (1,83000.0,'Producto1');
 insert into producto values (2,88000.0,'Producto2');
 insert into producto values (3,93000.0,'Producto3');
@@ -453,6 +467,7 @@ insert into producto values (13,143000.0,'Producto13');
 insert into producto values (14,148000.0,'Producto14');
 insert into producto values (15,153000.0,'Producto15');
 
+DELETE FROM factura_producto;
 insert into factura_producto values (4,13);
 insert into factura_producto values (8,1);
 insert into factura_producto values (3,12);
@@ -733,7 +748,6 @@ INSERT INTO discapacidad (perID, disNombre, disVerificado) VALUES
 
 DELETE FROM citamedica;
 INSERT INTO citamedica (citID, doctorID, pacienteID, citFecha, citEspecialidad, citDiagnostico) VALUES
-	(0, 30, 175, '2010-12-24', 'General', 'enfermo'),
 	(1, 70, 159, '2000-08-15', 'Cardiologo', 'muerte'),
 	(2, 50, 169, '2006-05-29', 'Psicologia', 'sano'),
 	(3, 50, 58, '2006-06-01', 'Psicologia', 'sano'),
@@ -934,6 +948,17 @@ INSERT INTO citamedica (citID, doctorID, pacienteID, citFecha, citEspecialidad, 
 	(198, 30, 106, '1999-06-17', 'General', 'empeorando'),
 	(199, 50, 76, '2000-02-29', 'Psicologia', 'enfermo'),
 	(200, 60, 12, '2012-11-10', 'Optometra', 'salvacion');
+
+INSERT INTO citamedica (pacienteID, doctorID, citFecha, citEspecialidad) VALUES
+	(100, 30, '2023-05-28 11:10:10', 'General'),
+    (58, 30, '2024-10-29 11:10:30', 'General'),
+    (32, 30, '2024-09-29 00:11:00', 'General');
+
+INSERT INTO citamedica (doctorID, citFecha, citEspecialidad) VALUES
+	(60, '2024-11-10 00:10:00' , 'Optometra'),
+    (50, '2024-02-29 00:10:00', 'Psicologia'),
+    (30, '2024-06-17 00:10:00', 'General'),
+    (30, '2024-11-29 00:10:00', 'General');
 
 DELETE FROM medicamentos;
 INSERT INTO medicamentos (citID, medNombre, medCantidad, medIntervalos) VALUES 
@@ -1215,6 +1240,7 @@ INSERT INTO evaluacionfisica (citID, evaPeso, evaEstatura, evaRitmoCardiaco, eva
 # Cultura
 #------------------------------------------------------------------
 
+DELETE FROM cursocultural;
 insert into bienestar.cursocultural values
 (1, "Salsa y merengue", "Propiciar un acercamiento a la danza - salsa a través del aprendizaje de una amplia variedad de estilos,
 ritmos y pasos de los subgéneros de la salsa y el merengue. Identificar y diferenciar los pasos para cada uno de los
@@ -1303,6 +1329,7 @@ rudimentos técnicos de la actuación, mediante la auto observación, el acondic
 juegos de improvisación.", "lunes de 4 a 6 p.m. y jueves de 4:30 a 6:30 p.m","Auditorio Colegio IPARM (lunes) y salón 18 del Colegio IPARM (jueves)",20,25,"Artes escénicas", 1,2);
 */
 
+DELETE FROM grupoartisticoinstitucional;
 insert into bienestar.grupoartisticoinstitucional values
 (1, "Mínimo 5 m fondo por 12 m de ancho","Teatro Experimental","Creación Experimental
 y Contemporánea","Mauricio Córdoba", "Amplificación para reproducir pistas, consola de sonido y micrófonos inalámbricos y/o de solapa, consola
@@ -1322,13 +1349,13 @@ en madera con cámara de aire y/o linóleo","Expresión Talentos","Trabajo de in
  
 -- CARLOS:
 -- Insercion area de deportes:
-
+DELETE FROM Area;
 INSERT INTO Bienestar.Area 
 (areID, areNombre, 
 areTelefono, 
 areCorreoElectronico, areExtension, areEdificio, areDescripcion) values (17, "Actividad Fisica & Deporte",  3165000, "divrecd_bog@unal.edu.co", 17207,"No. 103 Polideportivo","Area encargada de la actividad deportiva en la UNAL.");
 
-
+DELETE FROM Programa;
 INSERT INTO Bienestar.Programa (progID, progNombre, Area_areID) values (1701, "Actividad ludico deportiva", 17);
 INSERT INTO Bienestar.Programa (progID, progNombre, Area_areID) values (1702, "Acondicionamiento físico e instruccion", 17);
 INSERT INTO Bienestar.Programa (progID, progNombre, Area_areID) values (1703, "Deporte de competencia", 17);
@@ -1337,6 +1364,7 @@ INSERT INTO Bienestar.Programa (progID, progNombre, Area_areID) values (1705, "P
  
  -- Inserciones torneos internos:
 
+DELETE FROM TorneoInterno;
 INSERT INTO Bienestar.TorneoInterno (toridTorneoInterno, torPeriodo, torSedeFacultad, torDeporte, torNombreTorneo, torEstado, torModalidad, torRama, torNivel, torFechaInicio, torFechaFinalizacion, Programa_progID) VALUES (1011, '2022-1', 'Facultad de Ingeniería', 'Futbol', 'Copa Ingenieria', 1, 'Eliminacion directa', 'Masculino', 'Intermedio', '2022-06-01', '2022-06-30',1701);
 INSERT INTO Bienestar.TorneoInterno (toridTorneoInterno, torPeriodo, torSedeFacultad, torDeporte, torNombreTorneo, torEstado, torModalidad, torRama, torNivel, torFechaInicio, torFechaFinalizacion, Programa_progID) VALUES (1012, '2022-2', 'Facultad de Ciencias Humanas', 'Voleibol', 'Torneo de Voleibol Artes y Humanidades', 1, 'Todos contra todos', 'Femenino', 'Basico', '2022-09-01', '2022-09-30', 1701);
 INSERT INTO Bienestar.TorneoInterno (toridTorneoInterno, torPeriodo, torSedeFacultad, torDeporte, torNombreTorneo, torEstado, torModalidad, torRama, torNivel, torFechaInicio, torFechaFinalizacion, Programa_progID) VALUES (1013, '2022-1', 'Facultad de Ciencias', 'Baloncesto', 'Torneo de Baloncesto Física', 0, 'Eliminación directa', 'Masculino', 'Avanzado', '2022-07-01', '2022-07-31', 1701);
@@ -1351,9 +1379,10 @@ INSERT INTO Bienestar.TorneoInterno VALUES (10110, '2023-1', 'Facultad de Cienci
 
 -- Inserciones convocatorias de area de deportes:
 
-select * from Convocatoria;
+#select * from Convocatoria;
 -- cursos libres
 
+DELETE FROM Convocatoria;
 INSERT INTO Bienestar.Convocatoria (conv_id, convNombre, convFechaApertura, convFechaCierre, convEstado, convPeriodo, Programa_progID)
 VALUES
 (201, 'Convocatoria Deporte 2021-1', '2021-01-01', '2021-01-31', 1, '2021-1', 1702),
@@ -1382,6 +1411,7 @@ INSERT INTO Bienestar.Convocatoria (conv_id, convNombre, convFechaApertura, conv
 
 
 -- Inserciones convocatorias cursos libres:
+DELETE FROM ConvocatoriaCursoLibre;
 INSERT INTO Bienestar.ConvocatoriaCursoLibre (Convocatoria_conv_id, curNombre, curTipoCurso, curCondicion)
 VALUES
   (201, 'Fútbol', 'Deporte', 'Abierto'),
@@ -1396,9 +1426,10 @@ VALUES
   (200, 'Judo', 'Fitness', 'Abierto');
 
 
-select * from Convocatoria;
+#select * from Convocatoria;
 
 -- Inserciones convocatorias selecciones deportivas:
+DELETE FROM ConvocatoriaSeleccion;
 INSERT INTO Bienestar.ConvocatoriaSeleccion (Convocatoria_conv_id, convDeporte, convLugar, convHora) VALUES 
 (210, 'Futbol', 'Estadio', '15:00:00'),
 (211,  'Baloncesto', 'Cancha 2', '10:00:00'),
@@ -1411,5 +1442,6 @@ INSERT INTO Bienestar.ConvocatoriaSeleccion (Convocatoria_conv_id, convDeporte, 
 (218, 'Ciclismo', 'Anillo vial', '20:00:00'),
 (219, 'Atletismo', 'Polideportivo', '09:00:00');
 
+DELETE FROM estudiante_toma_convocatoria;
 insert into estudiante_toma_convocatoria values (9,210);
 insert into estudiante_toma_convocatoria values (13,217);

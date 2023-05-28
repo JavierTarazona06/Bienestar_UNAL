@@ -1,6 +1,6 @@
-#------------------------------------------------------------------
-#								Javier
-#------------------------------------------------------------------
+#--------------------------------------------------------------------------------------------------------------------------------------------
+#                                  									Javier
+#--------------------------------------------------------------------------------------------------------------------------------------------
 
 #Vista de información completa de estudiantes:
 
@@ -33,56 +33,66 @@ select * from vw_info_factura;
 #------------------------------------------------------------------
 #------------------------------------------------------------------
 
-#------------------------------------------------------------------
-#								Valeria
-#------------------------------------------------------------------
-
-# Ver la especializacion de los medicos que le han recetado cada procedimiento a un usuario
-DROP VIEW IF EXISTS vw_doctor_procedimiento;
-
-SELECT citID AS cita, pacienteID AS paciente, salEspecializacion AS especializacion, ordExamen AS procedimiento
-	FROM citamedica JOIN personalsalud ON (doctorID = perID) JOIN ordenmedica USING (citID);
-
-CREATE VIEW vw_doctor_procedimiento AS
-	SELECT citID AS cita, pacienteID AS paciente, salEspecializacion AS especializacion, ordExamen AS procedimiento
-	FROM citamedica JOIN personalsalud ON (doctorID = perID) JOIN ordenmedica USING (citID);
-
+#--------------------------------------------------------------------------------------------------------------------------------------------
+#                                  									Valeria
+#--------------------------------------------------------------------------------------------------------------------------------------------
 
 # Ver las citas medicas disponibles
 DROP VIEW IF EXISTS vw_citamedica_disponible;
-
-SELECT citFecha AS fecha, citEspecialidad AS especialidad, perNombre AS doctor, pacienteID AS paciente 
-	FROM citamedica JOIN personalsalud ON (perID=doctorID) NATURAL JOIN persona
-	WHERE pacienteID IS NULL;
-
 CREATE VIEW vw_citamedica_disponible AS
 	SELECT citFecha AS fecha, citEspecialidad AS especialidad, perNombre AS doctor, pacienteID AS paciente 
 	FROM citamedica JOIN personalsalud ON (perID=doctorID) NATURAL JOIN persona
 	WHERE pacienteID IS NULL;
+    
+    
+# Ver las citas medicas agendadas y que son proximas a pasar
+DROP VIEW IF EXISTS vw_citamedica_agendada;
+CREATE VIEW vw_citamedica_agendada AS
+	SELECT citFecha AS fecha, citEspecialidad AS especialidad, perNombre AS doctor, pacienteID AS paciente 
+	FROM citamedica JOIN personalsalud ON (perID=doctorID) NATURAL JOIN persona
+    WHERE citFecha > CURRENT_DATE();
+    
+    
+# Ver los medicamentos, ordenes medicas y examen medico por cada cita medica
+DROP VIEW IF EXISTS vw_resultado_citamedica;
+CREATE VIEW vw_resultado_citamedica AS
+	SELECT citFecha AS fecha, citEspecialidad AS especialidad, 
+	citDiagnostico AS Diagnostico, evaPeso AS peso, evaEstatura AS estatura, evaRitmoCardiaco AS ritmo_cardiaco, evaVision AS vision,
+    medNombre AS medicamento, medCantidad AS cantidad, medIntervalos AS intervalos, ordExamen AS examen, pacienteID AS paciente
+	FROM citamedica JOIN evaluacionfisica USING (citID) 
+    LEFT JOIN medicamentos USING (citID) 
+    LEFT JOIN ordenmedica USING (citID);
+
+
+# Ver los tramites (atenciones en salud, incapacidades y discapacidades)
+DROP VIEW IF EXISTS vw_tramites;
+CREATE VIEW vw_tramites AS SELECT * FROM tramites;
+
+SELECT * FROM atenciones en salud;
 
 
 # Ver la cantidad de medicamentos diferentes que ha dado cada medico y la cantidad total de ellos
 DROP VIEW IF EXISTS vw_medicamentos_solicitados;
-
-SELECT perNombre AS doctor, perID AS id, COUNT(medNombre) AS cantidad, SUM(medCantidad) AS cantidad_pastillas
-	FROM citamedica JOIN personalsalud ON (perID=doctorID)
-    JOIN medicamentos USING (citID)
-    NATURAL JOIN persona
-    GROUP BY (perID);
-
 CREATE VIEW vw_medicamentos_solicitados AS
 	SELECT perNombre AS doctor, perID AS id, COUNT(medNombre) AS cantidad, SUM(medCantidad) AS cantidad_pastillas
 	FROM citamedica JOIN personalsalud ON (perID=doctorID)
     JOIN medicamentos USING (citID)
     NATURAL JOIN persona
     GROUP BY (perID);
+    
+
+# Ver la especializacion de los medicos que le han recetado cada procedimiento a un usuario
+DROP VIEW IF EXISTS vw_doctor_procedimiento;
+CREATE VIEW vw_doctor_procedimiento AS
+	SELECT citID AS cita, pacienteID AS paciente, salEspecializacion AS especializacion, ordExamen AS procedimiento
+	FROM citamedica JOIN personalsalud ON (doctorID = perID) JOIN ordenmedica USING (citID);
 
 #------------------------------------------------------------------
 #------------------------------------------------------------------
 
-#------------------------------------------------------------------
-#								Carlos
-#------------------------------------------------------------------
+#--------------------------------------------------------------------------------------------------------------------------------------------
+#																	Carlos
+#--------------------------------------------------------------------------------------------------------------------------------------------
 
 
 #Vista de grupos artisticos institucionales y sus convocatorias.

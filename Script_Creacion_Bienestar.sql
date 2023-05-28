@@ -125,7 +125,7 @@ CREATE TABLE IF NOT EXISTS Bienestar.Incapacidad (
   incFecha DATE NOT NULL,
   incEnfermedad VARCHAR(45) NOT NULL,
   incDias TINYINT NOT NULL,
-  incConvalidada BIT NOT NULL,
+  incVerificada BIT NOT NULL,
   PRIMARY KEY (incID, perID),
   CONSTRAINT fk_Incapacidad_Persona1
     FOREIGN KEY (perID)
@@ -193,7 +193,7 @@ CREATE UNIQUE INDEX perID_UNIQUE ON Bienestar.Cargo (carID ASC) VISIBLE;
 DROP TABLE IF EXISTS Bienestar.CitaMedica ;
 
 CREATE TABLE IF NOT EXISTS Bienestar.CitaMedica (
-  citID INT NOT NULL,
+  citID INT UNSIGNED NOT NULL AUTO_INCREMENT,
   doctorID INT UNSIGNED NOT NULL,
   pacienteID INT UNSIGNED NULL,
   citFecha DATETIME NOT NULL,
@@ -223,7 +223,7 @@ CREATE INDEX fk_CitaMedica_PersonalSalud1_idx ON Bienestar.CitaMedica (doctorID 
 DROP TABLE IF EXISTS Bienestar.EvaluacionFisica ;
 
 CREATE TABLE IF NOT EXISTS Bienestar.EvaluacionFisica (
-  citID INT NOT NULL,
+  citID INT UNSIGNED NOT NULL,
   evaPeso TINYINT NOT NULL,
   evaEstatura TINYINT NOT NULL,
   evaRitmoCardiaco TINYINT NOT NULL,
@@ -243,7 +243,7 @@ DROP TABLE IF EXISTS Bienestar.Medicamentos ;
 
 CREATE TABLE IF NOT EXISTS Bienestar.Medicamentos (
   medID INT NOT NULL AUTO_INCREMENT,
-  citID INT NOT NULL,
+  citID INT UNSIGNED NOT NULL,
   medNombre VARCHAR(45) NOT NULL,
   medCantidad TINYINT NOT NULL,
   medIntervalos TINYINT NOT NULL,
@@ -263,7 +263,7 @@ DROP TABLE IF EXISTS Bienestar.OrdenMedica ;
 
 CREATE TABLE IF NOT EXISTS Bienestar.OrdenMedica (
   ordID INT NOT NULL AUTO_INCREMENT,
-  citID INT NOT NULL,
+  citID INT UNSIGNED NOT NULL,
   ordExamen VARCHAR(45) NOT NULL,
   PRIMARY KEY (ordID, citID),
   CONSTRAINT fk_OrdenMedica_CitaMedica1
