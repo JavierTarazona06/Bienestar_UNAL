@@ -68,7 +68,7 @@ CREATE VIEW vw_resultado_citamedica AS
 DROP VIEW IF EXISTS vw_tramites;
 CREATE VIEW vw_tramites AS SELECT * FROM tramites;
 
-SELECT * FROM atenciones en salud;
+SELECT * FROM atencionensalud;
 
 
 # Ver la cantidad de medicamentos diferentes que ha dado cada medico y la cantidad total de ellos
@@ -86,9 +86,6 @@ DROP VIEW IF EXISTS vw_doctor_procedimiento;
 CREATE VIEW vw_doctor_procedimiento AS
 	SELECT citID AS cita, pacienteID AS paciente, salEspecializacion AS especializacion, ordExamen AS procedimiento
 	FROM citamedica JOIN personalsalud ON (doctorID = perID) JOIN ordenmedica USING (citID);
-
-#------------------------------------------------------------------
-#------------------------------------------------------------------
 
 #--------------------------------------------------------------------------------------------------------------------------------------------
 #																	Carlos
