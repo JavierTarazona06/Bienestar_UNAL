@@ -319,6 +319,7 @@ insert into bienestar.programa values
 
 DELETE FROM convocatoria;
 insert into convocatoria (conv_id,convNombre,convFechaApertura,convFechaCierre,convEstado,Programa_progID) values (1,'Fomento Económico Estudiantes','2023-01-15','2023-02-1',1,1);
+insert into convocatoria (conv_id,convNombre,convFechaApertura,convFechaCierre,convEstado,Programa_progID) values (15,'Gestión Alojamiento','2023-01-15','2023-02-1',1,1);
 insert into convocatoria (conv_id,convNombre,convFechaApertura,convFechaCierre,convEstado,Programa_progID) values (2,'Fomento Económico Estudiantes Alimentación','2023-01-15','2023-02-1',1,1);
 insert into convocatoria (conv_id,convNombre,convFechaApertura,convFechaCierre,convEstado,Programa_progID) values (3,'Fomento Económico Estudiantes Alimentación','2023-01-15','2023-02-1',1,1);
 insert into convocatoria (conv_id,convNombre,convFechaApertura,convFechaCierre,convEstado,Programa_progID) values (4,'Fomento Económico Estudiantes Alimentación','2023-01-15','2023-02-1',1,1);
@@ -332,8 +333,13 @@ insert into convocatoria (conv_id,convNombre,convFechaApertura,convFechaCierre,c
 insert into convocatoria (conv_id,convNombre,convFechaApertura,convFechaCierre,convEstado,Programa_progID) values (12,'Gestión Alojamiento','2023-01-15','2023-02-1',1,1);
 insert into convocatoria (conv_id,convNombre,convFechaApertura,convFechaCierre,convEstado,Programa_progID) values (13,'Gestión Alojamiento','2023-01-15','2023-02-1',1,1);
 insert into convocatoria (conv_id,convNombre,convFechaApertura,convFechaCierre,convEstado,Programa_progID) values (14,'Gestión Alojamiento','2023-01-15','2023-02-1',1,1);
-insert into convocatoria (conv_id,convNombre,convFechaApertura,convFechaCierre,convEstado,Programa_progID) values (15,'Gestión Alojamiento','2023-01-15','2023-02-1',1,1);
 insert into convocatoria (conv_id,convNombre,convFechaApertura,convFechaCierre,convEstado,Programa_progID) values (16,'Fomento Económico Estudiantes','2023-01-15','2023-02-1',1,1);
+insert into convocatoria (conv_id,convNombre,convFechaApertura,convFechaCierre,convEstado,Programa_progID) values (17,'Fomento Emprendimiento Estudiantes','2023-01-15','2023-02-1',1,1);
+insert into convocatoria (conv_id,convNombre,convFechaApertura,convFechaCierre,convEstado,Programa_progID) values (18,'Fomento Emprendimiento Estudiantes','2023-01-15','2023-02-1',1,1);
+insert into convocatoria (conv_id,convNombre,convFechaApertura,convFechaCierre,convEstado,Programa_progID) values (19,'Fomento Emprendimiento Estudiantes','2023-01-15','2023-02-1',1,1);
+insert into convocatoria (conv_id,convNombre,convFechaApertura,convFechaCierre,convEstado,Programa_progID) values (20,'Gestión Transporte','2023-01-15','2023-02-1',1,1);
+insert into convocatoria (conv_id,convNombre,convFechaApertura,convFechaCierre,convEstado,Programa_progID) values (21,'Gestión Transporte','2023-01-15','2023-02-1',1,1);
+insert into convocatoria (conv_id,convNombre,convFechaApertura,convFechaCierre,convEstado,Programa_progID) values (22,'Gestión Transporte','2023-01-15','2023-02-1',1,1);
 
 DELETE FROM convocatoriagestioneconomica;
 insert into convocatoriagestioneconomica values (1,500000);
@@ -357,6 +363,17 @@ insert into convocatoriagestionalojamiento values (13,'KR 172 m No. 98-27','Chap
 insert into convocatoriagestionalojamiento values (14,'TV 156 k No. 30-17','Fontibón',1948563.0,'Residencia Universitaria','N.A',3897126);
 insert into convocatoriagestionalojamiento values (15,'TV 20 q No. 42-58','Ciudad Bolívar',2479522.0,'Vivienda familiar','N.A',4959044);
 
+DELETE FROM convocatoriafomentoemprendimeinto;
+INSERT INTO convocatoriafomentoemprendimeinto VALUES 
+(17, 961842, 'Empresa1', 'Tema1', 'Descripción del emprendimiento'),
+(18, 2248621, 'Empresa2', 'Tema2', 'Descripción del emprendimiento'),
+(19, 1036757, 'Empresa3', 'Tema3', 'Descripción del emprendimiento');
+
+DELETE FROM convocatoriagestiontransporte;
+INSERT INTO convocatoriagestiontransporte VALUES(20,530147,'Transporte público masivo'),
+(21,600147,'Transporte público masivo'),
+(22,430147,'Otro');
+
 DELETE FROM estudiante_toma_convocatoria;
 insert into estudiante_toma_convocatoria values (30,9);
 insert into estudiante_toma_convocatoria values (16,1);
@@ -378,6 +395,14 @@ insert into estudiante_toma_convocatoria values (29,7);
 insert into estudiante_toma_convocatoria values (21,14);
 insert into estudiante_toma_convocatoria values (4,7);
 insert into estudiante_toma_convocatoria values (2,15);
+INSERT INTO estudiante_toma_convocatoria VALUES 
+(12, 16),
+(28, 17),
+(5, 18),
+(19, 19),
+(25, 20),
+(3, 21),
+(10, 22);
 
 DELETE FROM fallaalimentacion;
 insert into fallaalimentacion (estID,fallAlcgaComida,fallAlLugar,fallAlFecha) values (23,'Almuerzo','Comedor central','2023-05-19');
@@ -429,6 +454,23 @@ insert into actividadcorresp (actCorID,estID,actCorActividad,actCorHoras) values
 insert into actividadcorresp (actCorID,estID,actCorActividad,actCorHoras) values (17,25,'comunitaria',4);
 insert into actividadcorresp (actCorID,estID,actCorActividad,actCorHoras) values (18,1,'acompañamiento',3);
 insert into actividadcorresp (actCorID,estID,actCorActividad,actCorHoras) values (19,24,'acompañamiento',7);
+
+INSERT INTO corresponsabilidad VALUES
+(2, 10),
+(4, 12),
+(5, 15),
+(6, 18),
+(8, 20),
+(9, 23),
+(12, 26),
+(14, 28),
+(16, 30),
+(17, 33),
+(21, 36),
+(22, 38),
+(25, 11),
+(27, 14),
+(29, 17);
 
 DELETE FROM tiendabienestar;
 insert into tiendabienestar values (1,'Bogotá','Ciudad Universitaria','08:00:00','17:00:00',1,2);
@@ -1373,7 +1415,7 @@ INSERT INTO Bienestar.Area
 areTelefono, 
 areCorreoElectronico, areExtension, areEdificio, areDescripcion) values (17, "Actividad Fisica & Deporte",  3165000, "divrecd_bog@unal.edu.co", 17207,"No. 103 Polideportivo","Area encargada de la actividad deportiva en la UNAL.");
 
-DELETE FROM Programa;
+
 INSERT INTO Bienestar.Programa (progID, progNombre, Area_areID) values (1701, "Actividad ludico deportiva", 17);
 INSERT INTO Bienestar.Programa (progID, progNombre, Area_areID) values (1702, "Acondicionamiento físico e instruccion", 17);
 INSERT INTO Bienestar.Programa (progID, progNombre, Area_areID) values (1703, "Deporte de competencia", 17);
@@ -1400,7 +1442,7 @@ INSERT INTO Bienestar.TorneoInterno VALUES (10110, '2023-1', 'Facultad de Cienci
 #select * from Convocatoria;
 -- cursos libres
 
-DELETE FROM Convocatoria;
+
 INSERT INTO Bienestar.Convocatoria (conv_id, convNombre, convFechaApertura, convFechaCierre, convEstado, convPeriodo, Programa_progID)
 VALUES
 (201, 'Convocatoria Deporte 2021-1', '2021-01-01', '2021-01-31', 1, '2021-1', 1702),
@@ -1460,7 +1502,7 @@ INSERT INTO Bienestar.ConvocatoriaSeleccion (Convocatoria_conv_id, convDeporte, 
 (218, 'Ciclismo', 'Anillo vial', '20:00:00'),
 (219, 'Atletismo', 'Polideportivo', '09:00:00');
 
-DELETE FROM estudiante_toma_convocatoria;
+
 insert into estudiante_toma_convocatoria values (9,210);
 insert into estudiante_toma_convocatoria values (13,217);
 

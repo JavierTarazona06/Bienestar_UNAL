@@ -10,7 +10,7 @@ drop view if exists vw_info_estudiante;
 create view vw_info_estudiante as select * from estudiante join persona on (estID=perID) join carrera using (carreID);
 
 select estID,perNombre,perApellido,perEmail,estPBM,estFacultad,carreNombre,carreCreditos from vw_info_estudiante;
-
+select * from vw_info_estudiante;
 
 #Vista de estudiantes con sus convocatorias:
 

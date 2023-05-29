@@ -47,11 +47,28 @@ CREATE INDEX AtencionEnSalud_Verificado_idx ON AtencionEnSalud (ateVerificado);
 #                                  									Javier
 #--------------------------------------------------------------------------------------------------------------------------------------------
 
-# 7. 
+/* En la práctica, van a haber muchas convocatorias económicas y cada una va a ser constantemente buscada por los estudiantes.
+Es por este motivo que se crea un indice para que dichas búsquedas sean más eficientes.*/
 
-# 8. 
+CREATE UNIQUE INDEX indice_convocatoriafomentoemprendimeinto ON convocatoriafomentoemprendimeinto(conv_id);
+CREATE UNIQUE INDEX indice_convocatoriagestionalimentaria ON convocatoriagestionalimentaria(conv_id);
+CREATE UNIQUE INDEX indice_convocatoriagestionalojamiento ON convocatoriagestionalojamiento(conv_id);
+CREATE UNIQUE INDEX indice_convocatoriagestioneconomica ON convocatoriagestioneconomica(conv_id);
+CREATE UNIQUE INDEX indice_convocatoriagestiontransporte ON convocatoriagestiontransporte(conv_id);
 
-# 9. 
+/*
+ALTER table convocatoriafomentoemprendimeinto DROP INDEX indice_convocatoriafomentoemprendimeinto;
+ALTER TABLE convocatoriagestionalimentaria DROP INDEX indice_convocatoriagestionalimentaria;
+ALTER TABLE convocatoriagestionalojamiento DROP INDEX indice_convocatoriagestionalojamiento;
+ALTER TABLE convocatoriagestioneconomica DROP INDEX indice_convocatoriagestioneconomica;
+ALTER TABLE convocatoriagestiontransporte DROP INDEX indice_convocatoriagestiontransporte;
+*/
+
+/*  Sobre las falllas de alimentación se pueden hacer muchas consultas con el id de la falla y el id del estudiante*/
+
+CREATE INDEX indice_fallaalimentacion on fallaalimentacion(fallAlID, estID);
 
 
+/*  Sobre las actividades de corresponsabilidad se pueden hacer muchas consultas con el id de la actividad de corresponsabilidad y el id del estudiante*/
 
+CREATE INDEX indice_actividadcorresp on actividadcorresp(actCorID, estID);

@@ -654,7 +654,7 @@ DROP TABLE IF EXISTS Bienestar.Corresponsabilidad ;
 CREATE TABLE IF NOT EXISTS Bienestar.Corresponsabilidad (
   idEst INT UNSIGNED NOT NULL,
   horPendCorresp TINYINT UNSIGNED NOT NULL DEFAULT 0,
-  PRIMARY KEY (idEst),
+  PRIMARY KEY (idEst, horPendCorresp),
   CONSTRAINT fk_Corresponsabilidad_Estudiante_copy11
     FOREIGN KEY (idEst)
     REFERENCES Bienestar.Estudiante (estID)

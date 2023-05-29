@@ -44,6 +44,16 @@ grant select,update on bienestar.vw_info_estudiante to 'estudiante'@'localhost';
 grant select,insert on bienestar.vw_info_convocatoria_estudiante to 'estudiante'@'localhost';
 grant select on bienestar.vw_info_factura to 'estudiante'@'localhost';
 
+GRANT EXECUTE ON PROCEDURE sp_fallaalimentacion_est TO 'estudiante'@'localhost';
+GRANT EXECUTE ON PROCEDURE sp_actividadcorresp_est TO 'estudiante'@'localhost';
+GRANT EXECUTE ON FUNCTION horas_corresponsabilidad_est TO 'estudiante'@'localhost';
+GRANT EXECUTE ON FUNCTION pbm_est TO 'estudiante'@'localhost';
+
+GRANT EXECUTE ON PROCEDURE sp_convocatoriafomentoemprendimeinto_est TO 'estudiante'@'localhost';
+GRANT EXECUTE ON PROCEDURE sp_convocatoriagestionalimentaria_est TO 'estudiante'@'localhost';
+GRANT EXECUTE ON PROCEDURE sp_convocatoriagestionalojamiento_est TO 'estudiante'@'localhost';
+GRANT EXECUTE ON PROCEDURE sp_convocatoriagestioneconomica_est TO 'estudiante'@'localhost';
+GRANT EXECUTE ON PROCEDURE sp_convocatoriagestiontransporte_est TO 'estudiante'@'localhost';
 #---------------
 
 grant update on bienestar.persona to 'no_estudiante'@'localhost';

@@ -3,6 +3,8 @@
     implementando de acuerdo a los perfiles/roles. Se les debe asignar permisos de acuerdo a los roles
 */
 
+set global log_bin_trust_function_creators = 1;
+
 #--------------------------------------------------------------------------------------------------------------------------------------------
 #                                  									Valeria
 #--------------------------------------------------------------------------------------------------------------------------------------------
@@ -294,7 +296,180 @@ DELIMITER ;
 #                                  									Javier
 #--------------------------------------------------------------------------------------------------------------------------------------------
 
+# 1. El estudiante puede consultar sus fallas de alimentación
+
+drop procedure if exists sp_fallaalimentacion_est;
+DELIMITER $$
+CREATE PROCEDURE sp_fallaalimentacion_est(in id int)
+	BEGIN
+		SELECT fallAlID,fallAlcgaComida,fallAlLugar,fallAlFecha from 
+			fallaalimentacion where estID=id;
+	END $$
+DELIMITER ;
+
+#call sp_fallaalimentacion_est(9)
+
+# 2. El estudiante puede consultar sus actividades de corresponsabilidad realizadas
+
+drop procedure if exists sp_actividadcorresp_est;
+DELIMITER $$
+CREATE PROCEDURE sp_actividadcorresp_est(in id int)
+	BEGIN
+		SELECT actCorID,actCorActividad,actCorHoras from 
+			actividadcorresp where estID=id;
+	END $$
+DELIMITER ;
+
+#call sp_actividadcorresp_est(18);
+
+# 3. El estudiante puede consultar la cantidad de horas pendientes de corresponsabilidad
+
+drop function if exists horas_corresponsabilidad_est;
+DELIMITER $$
+CREATE FUNCTION horas_corresponsabilidad_est(id_est int)
+		RETURNS int
+        BEGIN
+			DECLARE horas INT default 0;
+            select horPendCorresp into horas from corresponsabilidad where idEst=id_est;
+		RETURN horas;
+	END $$
+DELIMITER ;
+
+#set @horas =  horas_corresponsabilidad_est(4);
+#select @horas;
+
+
+#4. El estudiante desea conocer su PBM
+
+drop function if exists pbm_est;
+DELIMITER $$
+CREATE FUNCTION pbm_est(id_est int)
+		RETURNS int
+        BEGIN
+			DECLARE pbm INT default 0;
+            select estPBM into pbm from estudiante where estID=id_est;
+		RETURN pbm;
+	END $$
+DELIMITER ;
+
+#set @pbm =  pbm_est(10);
+#select @pbm;
+
+# 5. El estudiante solo desea visualizar las convocatorias a las que podría acceder según su PBM:
+
+#5.1 La convocatoria fomento emprendimeinto la busca según tema
+
+drop procedure if exists sp_convocatoriafomentoemprendimeinto_est;
+DELIMITER $$
+CREATE PROCEDURE sp_convocatoriafomentoemprendimeinto_est(in id_est int, in tema varchar(50))
+	BEGIN
+		select * from convocatoriafomentoemprendimeinto where LOCATE(LOWER(tema), LOWER(cgemTema)) > 0;
+	END $$
+DELIMITER ;
+
+#call sp_convocatoriafomentoemprendimeinto_est(5,'tema2')
+
+
+#5.2 La convocatoria de gestión alimentaria solo se puede acceder con PBM < 25
+
+drop procedure if exists sp_convocatoriagestionalimentaria_est;
+DELIMITER $$
+CREATE PROCEDURE sp_convocatoriagestionalimentaria_est(in id_est int, in comida enum('Desayuno','Almuerzo','Cena'), in lugar enum('Comedor central','Hemeroteca','Odontología','Agronomía','Biología','Ciencias Humanas','Ciencias Económicas','Matemáticas','otro'))
+	BEGIN
+		if pbm_est(id_est)<26 then
+			select * from convocatoriagestionalimentaria where cgaComida=comida and cgaLugar=lugar;
+		else
+			SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'El PBM del estaudiante es mayor que 25: No tiene acceso de convocatorias de gestión alimentaria';
+        end if;
+	END $$
+DELIMITER ;
+
+/*
+set @pbm =  pbm_est(10);
+select @pbm;
+call sp_convocatoriagestionalimentaria_est(10,'Desayuno','Comedor central');
+set @pbm =  pbm_est(5);
+select @pbm;
+call sp_convocatoriagestionalimentaria_est(5,'Desayuno','Comedor central');
+*/
+
+
+#5.3 La convocatoria de gestión alojamiento solo se puede acceder con PBM < 25
+
+drop procedure if exists sp_convocatoriagestionalojamiento_est;
+DELIMITER $$
+CREATE PROCEDURE sp_convocatoriagestionalojamiento_est(in id_est int, in localidad varchar(100), in tipo enum('Hotel','Casa','Apartamento','Vivienda familiar','Residencia Universitaria','Apartaestudio','Habitación','otro'))
+	BEGIN
+		if pbm_est(id_est)<26 then
+			select * from convocatoriagestionalojamiento where LOCATE(LOWER(localidad), LOWER(cgalLocalidadAlojamiento)) > 0 and tipo=cgalTipoVivienda;
+		else
+			SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'El PBM del estaudiante es mayor que 25: No tiene acceso de convocatorias de gestión alojamiento';
+        end if;
+	END $$
+DELIMITER ;
+
+/*
+set @pbm =  pbm_est(10);
+select @pbm;
+call sp_convocatoriagestionalojamiento_est(10,'Usme','Residencia Universitaria');
+set @pbm =  pbm_est(5);
+select @pbm;
+call sp_convocatoriagestionalojamiento_est(5,'Usme','Residencia Universitaria');
+*/
+
+
+#5.4 La convocatoria de gestión economica solo se puede acceder con PBM < 20
+
+drop procedure if exists sp_convocatoriagestioneconomica_est;
+DELIMITER $$
+CREATE PROCEDURE sp_convocatoriagestioneconomica_est(in id_est int)
+	BEGIN
+		if pbm_est(id_est)<21 then
+			select * from convocatoriagestioneconomica order by cgeCobertura;
+		else
+			SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'El PBM del estaudiante es mayor que 20: No tiene acceso de convocatorias de gestión económica';
+        end if;
+	END $$
+DELIMITER ;
+
+/*
+set @pbm =  pbm_est(10);
+select @pbm;
+call sp_convocatoriagestioneconomica_est(10);
+set @pbm =  pbm_est(5);
+select @pbm;
+call sp_convocatoriagestioneconomica_est(5);
+*/
+
+
+#5.5 La convocatoria de gestión transporte solo se puede acceder con PBM < 15
+
+drop procedure if exists sp_convocatoriagestiontransporte_est;
+DELIMITER $$
+CREATE PROCEDURE sp_convocatoriagestiontransporte_est(in id_est int, in tipo enum('Transporte público masivo','otro'))
+	BEGIN
+		if pbm_est(id_est)<16 then
+			select * from convocatoriagestiontransporte where cgtTipoTransporte=tipo order by cgtCobertura;
+		else
+			SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'El PBM del estaudiante es mayor que 20: No tiene acceso de convocatorias de gestión transporte';
+        end if;
+	END $$
+DELIMITER ;
+
+#6. Una persona/estudiante/secretario/director quiere consultar sus facturas en la Tienda de bienestar U.
+
+
+
+#6. Una persona/estudiante/secretario/director quiere consultar los productos en una tienda de bienestar U.
 
 
 
 
+/*
+set @pbm =  pbm_est(10);
+select @pbm;
+call sp_convocatoriagestiontransporte_est(10, 'Transporte público masivo');
+set @pbm =  pbm_est(5);
+select @pbm;
+call sp_convocatoriagestiontransporte_est(5, 'Transporte público masivo');
+*/
