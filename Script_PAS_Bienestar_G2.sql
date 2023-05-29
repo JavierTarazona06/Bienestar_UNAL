@@ -342,7 +342,112 @@ DELIMITER ;
 #																	Carlos
 #--------------------------------------------------------------------------------------------------------------------------------------------
 
+# PAS a ejecutar desde la interfaz:
 
+# Área de deporte: (estudiantes)
+
+# 1. Consultar convocatorias del Área según el programa: (pas de uso general)
+
+drop procedure if exists sp_consultar_convocatorias_programa;
+DELIMITER $$
+create procedure sp_consultar_convocatorias_deporte(in idPrograma int)
+	begin 
+		select * from Convocatoria where Programa_progID = id_Programa;
+	end $$
+DELIMITER ;
+
+#2. Consultar torneos internos:
+
+drop procedure if exists sp_consultar_torneos_internos;
+DELIMITER $$
+create procedure sp_consultar_torneos_internos()
+	begin 
+		select * from TorneoInterno; -- id de áreas a convenir
+	end $$
+DELIMITER ;
+
+#3. Consultar convocatorias a cursos libres:
+
+drop procedure if exists sp_consultar_convocatoria_cursos_libres;
+DELIMITER $$
+create procedure sp_consultar_convocatoria_cursos_libres()
+	begin 
+		select * from ConvocatoriaCursoLibre;
+	end $$
+DELIMITER ;
+
+
+#4. Consultar convocatorias según el Área de bienestar que se desee
+
+drop procedure if exists sp_consultar_convocatorias_deporte;
+DELIMITER $$
+create procedure sp_consultar_programas_de_deportes(in idArea int)
+	begin 
+		select * from vw_info_convocatoria where areID = idArea;
+	end $$
+DELIMITER ;
+
+# 5. Consultar convocatorias en las que participa un estudiante
+
+drop procedure if exists sp_consultar_mis_convocatorias;
+DELIMITER $$
+create procedure sp_consultar_mis_convocatorias (in cedula int)
+	begin
+		select * from vw_info_convocatoria_estudiante where estID = cedula;
+	end $$
+DELIMITER ;
+
+
+
+# Área de gestión y fomento socioeconómico: (estudiantes)
+
+
+#1. consultas de uso general para las distintas convocatorias del área 
+drop procedure if exists sp_consultar_gestion_alimentaria;
+DELIMITER $$
+create procedure sp_consultar_gestion_alimentaria ()
+	begin
+		select * from ConvocatoriaGestionAlimentaria;
+	end $$
+DELIMITER ;
+
+drop procedure if exists sp_consultar_gestion_transporte;
+DELIMITER $$
+create procedure sp_consultar_gestion_transporte ()
+	begin
+		select * from ConvocatoriaGestionTransporte;
+	end $$
+DELIMITER ;
+
+drop procedure if exists sp_consultar_gestion_alojamiento;
+DELIMITER $$
+create procedure sp_consultar_gestion_alojamiento()
+	begin
+		select * from ConvocatoriaGestionAlojamiento;
+	end $$
+DELIMITER ;
+
+drop procedure if exists sp_consultar_gestion_economica;
+DELIMITER $$
+create procedure sp_consultar_gestion_economica ()
+	begin
+		select * from ConvocatoriaGestionEconomica;
+	end $$
+DELIMITER ;
+
+drop procedure if exists sp_consultar_gestion_emprendimiento;
+DELIMITER $$
+create procedure sp_consultar_gestion_emprendimiento ()
+	begin
+		select * from ConvocatoriaFomentoEmprendimeinto;
+	end $$
+DELIMITER ;
+
+
+
+# Área de Salud: (estudiantes)
+
+-- preguntar a Valeria por que se puede implementar.
 
 #--------------------------------------------------------------------------------------------------------------------------------------------
 #                                  									Javier

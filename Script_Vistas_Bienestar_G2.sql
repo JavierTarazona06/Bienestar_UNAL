@@ -129,6 +129,19 @@ drop view if exists vw_info_curso_libre_convocatoria;
 create view vw_info_curso_libre_convocatoria as select progNombre, convNombre, curNombre, curTipoCurso, curCondicion, convFechaApertura, convFechaCierre, convPeriodo from Programa join Convocatoria on (Programa_progID = progID) join ConvocatoriaCursoLibre on (Convocatoria_conv_id = conv_id);
 select * from vw_info_curso_libre_convocatoria;
 
+#Vista de convocatorias, área, y programa al que pertenecen a la que pertenecen
+
+select conv_id, areID,progID, convNombre, progNombre, areNombre  from (Area join Programa on (areID = Area_areID)) join Convocatoria on (progID = Programa_progID);
+drop view if exists vw_info_convocatoria;
+create view vw_info_convocatoria as select conv_id, progID, areID, convNombre, progNombre, areNombre  from (Area join Programa on (areID = Area_areID)) join Convocatoria on (progID = Programa_progID);
+select * from vw_info_convocatoria;
+
+#Vista de estudiantes y sus convocatorias
+
+select conv_id, Programa_progID, convNombre, convFechaApertura, convFechaCierre, estID from (Estudiante join Estudiante_Toma_Convocatoria on (estID = idEst)) join Convocatoria using (conv_id);
+drop view if exists vw_info_convocatoria_estudiante;
+create view vw_info_convocatoria_estudiante as select conv_id, estID,Programa_progID, convNombre, convFechaApertura, convFechaCierre from (Estudiante join Estudiante_Toma_Convocatoria on (estID = idEst)) join Convocatoria using (conv_id);
+select * from vw_info_convocatoria_estudiante;
 
 
 #------------------------------------------------------------------
