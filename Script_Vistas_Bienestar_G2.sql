@@ -1,6 +1,6 @@
-#------------------------------------------------------------------
-#								Javier
-#------------------------------------------------------------------
+#--------------------------------------------------------------------------------------------------------------------------------------------
+#                                  									Javier
+#--------------------------------------------------------------------------------------------------------------------------------------------
 
 #Vista de información completa de estudiantes:
 
@@ -33,56 +33,77 @@ select * from vw_info_factura;
 #------------------------------------------------------------------
 #------------------------------------------------------------------
 
-#------------------------------------------------------------------
-#								Valeria
-#------------------------------------------------------------------
-
-# Ver que la especializacion de los medicos que le han recetado cada procedimiento a un usuario
-DROP VIEW IF EXISTS vw_doctor_procedimiento;
-
-SELECT idCitaMedica AS cita, pacienteID AS paciente, salEspecializacion AS especializacion, ordExamen AS procedimiento
-	FROM citamedica JOIN personalsalud ON (doctorID = perID) LEFT JOIN ordenmedica ON (CitaMedica_id=idCitaMedica);
-
-CREATE VIEW vw_doctor_procedimiento AS
-	SELECT idCitaMedica AS cita, pacienteID AS paciente, salEspecializacion AS especializacion, ordExamen AS procedimiento
-	FROM citamedica JOIN personalsalud ON (doctorID = perID) LEFT JOIN ordenmedica ON (CitaMedica_id=idCitaMedica);
-
+#--------------------------------------------------------------------------------------------------------------------------------------------
+#                                  									Valeria
+#--------------------------------------------------------------------------------------------------------------------------------------------
 
 # Ver las citas medicas disponibles
 DROP VIEW IF EXISTS vw_citamedica_disponible;
-
-SELECT citFecha AS fecha, citEspecialidad AS especialidad, perNombre AS doctor, pacienteID AS paciente 
-	FROM citamedica JOIN personalsalud ON (perID=doctorID) NATURAL JOIN persona
-	WHERE pacienteID IS NULL;
-
 CREATE VIEW vw_citamedica_disponible AS
 	SELECT citFecha AS fecha, citEspecialidad AS especialidad, perNombre AS doctor, pacienteID AS paciente 
 	FROM citamedica JOIN personalsalud ON (perID=doctorID) NATURAL JOIN persona
-	WHERE pacienteID IS NULL;
+	WHERE pacienteID IS NULL AND citFecha > CURRENT_DATE();
+    
+    
+# Ver las citas medicas agendadas y que son proximas a pasar
+DROP VIEW IF EXISTS vw_citamedica_agendada;
+CREATE VIEW vw_citamedica_agendada AS
+	SELECT citFecha AS fecha, citEspecialidad AS especialidad, perNombre AS doctor, pacienteID AS paciente 
+	FROM citamedica JOIN personalsalud ON (perID=doctorID) NATURAL JOIN persona
+    WHERE pacienteID IS NOT NULL AND citFecha > CURRENT_DATE();
+    
+    
+# Ver los medicamentos, ordenes medicas y examen medico por cada cita medica
+DROP VIEW IF EXISTS vw_resultado_citamedica;
+CREATE VIEW vw_resultado_citamedica AS
+	SELECT citFecha AS fecha, citEspecialidad AS especialidad, 
+	citDiagnostico AS Diagnostico, evaPeso AS peso, evaEstatura AS estatura, evaRitmoCardiaco AS ritmo_cardiaco, evaVision AS vision,
+    medNombre AS medicamento, medCantidad AS cantidad, medIntervalos AS intervalos, ordExamen AS examen, pacienteID AS paciente
+	FROM citamedica JOIN evaluacionfisica USING (citID) 
+    LEFT JOIN medicamentos USING (citID) 
+    LEFT JOIN ordenmedica USING (citID);    
 
+
+# Ver las incapacidades y sus detalles
+DROP VIEW IF EXISTS vw_incapacidad;
+CREATE VIEW vw_incapacidad AS 
+	SELECT incID AS id, perID AS persona, incFecha AS fecha, incEnfermedad AS razon, incDias AS dias, 
+    incVerificado AS verificado, incAprobado AS aprobado FROM incapacidad ORDER BY fecha DESC;
+    
+
+# Ver las atenciones en salud y sus detalles
+DROP VIEW IF EXISTS vw_atencionsalud;
+CREATE VIEW vw_atencionsalud AS
+    SELECT antID AS id, perID AS persona, ateFecha AS fecha, ateTipo AS tipo, 
+    ateVerificado AS verificado, ateAprobado AS aprobado FROM atencionensalud ORDER BY fecha DESC;
+
+
+# Ver el resultado del perfil de riesgo integral
+DROP VIEW IF EXISTS vw_perfil_integral;
+CREATE VIEW vw_perfil_integral AS 
+	SELECT perID AS persona, perFecha AS fecha, perSaludFisica AS puntaje_fisico, 
+    perSaludPsicologica AS puntaje_psicologico FROM perfilriesgointegral;
+    
 
 # Ver la cantidad de medicamentos diferentes que ha dado cada medico y la cantidad total de ellos
 DROP VIEW IF EXISTS vw_medicamentos_solicitados;
-
-SELECT perNombre AS doctor, perID AS id, COUNT(medNombre) AS cantidad, SUM(medCantidad) AS cantidad_pastillas
-	FROM citamedica JOIN personalsalud ON (perID=doctorID)
-    JOIN medicamentos ON (CitaMedica_id=idCitaMedica)
-    NATURAL JOIN persona
-    GROUP BY (perID);
-
 CREATE VIEW vw_medicamentos_solicitados AS
 	SELECT perNombre AS doctor, perID AS id, COUNT(medNombre) AS cantidad, SUM(medCantidad) AS cantidad_pastillas
 	FROM citamedica JOIN personalsalud ON (perID=doctorID)
-    JOIN medicamentos ON (CitaMedica_id=idCitaMedica)
+    JOIN medicamentos USING (citID)
     NATURAL JOIN persona
     GROUP BY (perID);
+    
 
-#------------------------------------------------------------------
-#------------------------------------------------------------------
+# Ver la especializacion de los medicos que le han recetado cada procedimiento a un usuario
+DROP VIEW IF EXISTS vw_doctor_procedimiento;
+CREATE VIEW vw_doctor_procedimiento AS
+	SELECT citID AS cita, pacienteID AS paciente, salEspecializacion AS especializacion, ordExamen AS procedimiento
+	FROM citamedica JOIN personalsalud ON (doctorID = perID) JOIN ordenmedica USING (citID);
 
-#------------------------------------------------------------------
-#								Carlos
-#------------------------------------------------------------------
+#--------------------------------------------------------------------------------------------------------------------------------------------
+#																	Carlos
+#--------------------------------------------------------------------------------------------------------------------------------------------
 
 
 #Vista de grupos artisticos institucionales y sus convocatorias.
