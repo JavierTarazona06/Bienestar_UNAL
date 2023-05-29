@@ -7,17 +7,8 @@
 #                                  									Valeria
 #--------------------------------------------------------------------------------------------------------------------------------------------
 
-# 1. ------------------------------- Un usuario que necesita ver las citas medicas disponibles ----------------------------------------------
-DROP PROCEDURE IF EXISTS pas_citas_disponibles;
-DELIMITER $$
-CREATE PROCEDURE pas_citas_disponibles()
-	BEGIN 
-		SELECT * FROM vw_citamedica_disponible;
-    END $$
-DELIMITER ;
 
-
-# 2. ------------------------------- Un usuario que necesita ver sus citas medicas proximas -------------------------------------------------
+# 1. ------------------------------- Un usuario que necesita ver sus citas medicas proximas -------------------------------------------------
 DROP PROCEDURE IF EXISTS pas_citas_agendadas;
 DELIMITER $$
 CREATE PROCEDURE pas_citas_agendadas(IN pacienteID INT)
@@ -27,7 +18,7 @@ CREATE PROCEDURE pas_citas_agendadas(IN pacienteID INT)
 DELIMITER ;
 
 
-# 3. -------------------------------------- Un usuario que necesita cancelar alguna cita ----------------------------------------------------
+# 2. -------------------------------------- Un usuario que necesita cancelar alguna cita ----------------------------------------------------
 
 # Verificar que la cita no sea dentro de menos de las proximas 24 horas, si es asi, enviar un error
 DROP TRIGGER IF EXISTS tr_check_tiempo;
@@ -54,7 +45,7 @@ CREATE PROCEDURE pas_delete_cita_medica(IN usuarioID INT, IN fechaCita DATETIME,
 DELIMITER ;
 
 
-# 4. -------------------------------------- Un usuario que necesita agendar alguna cita ----------------------------------------------------
+# 3. -------------------------------------- Un usuario que necesita agendar alguna cita ----------------------------------------------------
 DROP PROCEDURE IF EXISTS pas_add_cita_medica;
 DELIMITER $$
 CREATE PROCEDURE pas_add_cita_medica(IN usuarioID INT, IN fechaCita DATETIME, IN especialidadCita VARCHAR(45))
@@ -65,7 +56,7 @@ CREATE PROCEDURE pas_add_cita_medica(IN usuarioID INT, IN fechaCita DATETIME, IN
 DELIMITER ;
 
 
-# 5. ---------------------------------- Ver el resultado de cada cita medica de algun usuario -----------------------------------------------
+# 4. ---------------------------------- Ver el resultado de cada cita medica de algun usuario -----------------------------------------------
 DROP PROCEDURE IF EXISTS pas_check_resultados;
 DELIMITER $$
 CREATE PROCEDURE pas_check_resultados(IN usuarioID INT)
@@ -75,16 +66,7 @@ CREATE PROCEDURE pas_check_resultados(IN usuarioID INT)
 DELIMITER ;
 
 
-# 6. -------------------------------------- Ver el estado de las incapacidades de un usuario ------------------------------------------------
-DROP PROCEDURE IF EXISTS pas_view_incapacidad;
-DELIMITER $$
-CREATE PROCEDURE pas_view_incapacidad(IN usuarioID INT)
-	BEGIN
-		SELECT * FROM vw_incapacidad WHERE persona = usuarioID;
-    END $$
-DELIMITER ;
-
-# 7. --------------------------------------------- Añadir una incapacidad de un usuario -----------------------------------------------------
+# 4. --------------------------------------------- Añadir una incapacidad de un usuario -----------------------------------------------------
 
 # Verificar que la incapacidad no ha sido ya añadida
 DROP TRIGGER IF EXISTS tr_check_duplicates;
@@ -116,7 +98,7 @@ CREATE PROCEDURE pas_add_incapacidad(
     END $$
 DELIMITER ;
 
-# 8. --------------------------------------------- Modificar una incapacidad de un usuario --------------------------------------------------
+# 5. --------------------------------------------- Modificar una incapacidad de un usuario --------------------------------------------------
 
 # Verificar que la incapacidad no haya sido ya verificada
 DROP TRIGGER IF EXISTS tr_check_verification;
@@ -148,7 +130,7 @@ CREATE PROCEDURE pas_edit_incapacidad(
     END $$
 DELIMITER ;
 
-# 9. -------------------------------------- Ver el estado de las atenciones en salud de un usuario -----------------------------------------
+# 6. -------------------------------------- Ver el estado de las atenciones en salud de un usuario -----------------------------------------
 DROP PROCEDURE IF EXISTS pas_view_atencionsalud;
 DELIMITER $$
 CREATE PROCEDURE pas_view_atencionsalud(IN usuarioID INT)
@@ -157,7 +139,7 @@ CREATE PROCEDURE pas_view_atencionsalud(IN usuarioID INT)
     END $$
 DELIMITER ;
 
-# 10. --------------------------------------------- Añadir una atencion en salud de un usuario ---------------------------------------------
+# 7. --------------------------------------------- Añadir una atencion en salud de un usuario ---------------------------------------------
 
 # Verificar que la atencion en salud no ha sido ya añadida
 DROP TRIGGER IF EXISTS tr_check_duplicates_atsalud;
@@ -189,7 +171,7 @@ CREATE PROCEDURE pas_add_atencionsalud(
     END $$
 DELIMITER ;
 
-# 11. --------------------------------------------- Modificar una atencion en salud de un usuario ------------------------------------------
+# 8. --------------------------------------------- Modificar una atencion en salud de un usuario ------------------------------------------
 
 # Verificar que la incapacidad no haya sido ya verificada
 DROP TRIGGER IF EXISTS tr_check_verification_atsalud;
@@ -221,16 +203,9 @@ CREATE PROCEDURE pas_edit_atencionsalud(
     END $$
 DELIMITER ;
 
-# 12. --------------------------------------------- Ver perfil de riesgo integral de un usuario --------------------------------------------
-DROP PROCEDURE IF EXISTS pas_view_perfilriesgo;
-DELIMITER $$
-CREATE PROCEDURE pas_view_perfilriesgo(IN usuarioID INT)
-	BEGIN
-		SELECT * FROM vw_perfil_integral WHERE persona = usuarioID;
-    END $$
-DELIMITER ;
 
-# 13. ----------------------------------------------------- Crear una cita medica -----------------------------------------------------------
+
+# 9. ----------------------------------------------------- Crear una cita medica -----------------------------------------------------------
 
 # Verificar que el doctor seleccionado no tenga ya una cita a esa hora
 DROP TRIGGER IF EXISTS tr_check_doctor;
@@ -261,7 +236,7 @@ CREATE PROCEDURE pas_create_citamedica(IN doctor INT, IN fecha DATETIME)
     END $$
 DELIMITER ;
 
-# 14. ----------------------------------------------------- Eliminar una cita medica --------------------------------------------------------
+# 10. ----------------------------------------------------- Eliminar una cita medica --------------------------------------------------------
 
 # Verificar que no haya algun paciente con dicha cita
 DROP TRIGGER IF EXISTS tr_check_paciente;
@@ -288,7 +263,7 @@ CREATE PROCEDURE pas_remove_citamedica(IN cita INT)
     END $$
 DELIMITER ; 
 
-# 15. ----------------------------------------------- Aprobar o rechazar una incapacidad ----------------------------------------------------
+# 11. ----------------------------------------------- Aprobar o rechazar una incapacidad ----------------------------------------------------
 DROP PROCEDURE IF EXISTS pas_approve_incapacidad;
 DELIMITER $$
 CREATE PROCEDURE pas_approve_incapacidad(
@@ -299,7 +274,7 @@ CREATE PROCEDURE pas_approve_incapacidad(
     END $$
 DELIMITER ;
 
-# 16. -------------------------------------------- Aprobar o rechazar una atencion en salud -------------------------------------------------
+# 12. -------------------------------------------- Aprobar o rechazar una atencion en salud -------------------------------------------------
 DROP PROCEDURE IF EXISTS pas_approve_atencionsalud;
 DELIMITER $$
 CREATE PROCEDURE pas_approve_atencionsalud(
@@ -310,7 +285,7 @@ CREATE PROCEDURE pas_approve_atencionsalud(
     END $$
 DELIMITER ;
 
-# 17. ------------------------------------------- Agregar los resultados de una cita medica -------------------------------------------------
+# 13. ------------------------------------------- Agregar los resultados de una cita medica -------------------------------------------------
 DROP PROCEDURE IF EXISTS pas_update_resultados;
 DELIMITER $$
 CREATE PROCEDURE pas_update_resultados(
@@ -328,7 +303,7 @@ CREATE PROCEDURE pas_update_resultados(
     END $$
 DELIMITER ;
 
-# 18. -------------------------------------- Modificar el perfil de riesgo integral de un usuario -------------------------------------------
+# 14. -------------------------------------- Modificar el perfil de riesgo integral de un usuario -------------------------------------------
 DROP PROCEDURE IF EXISTS pas_edit_perfilintegral;
 DELIMITER $$
 CREATE PROCEDURE pas_edit_perfilintegral(IN persona INT, IN fisico INT, IN psicologico INT)
@@ -344,6 +319,10 @@ DELIMITER ;
 
 
 
+
+
+
+
 #--------------------------------------------------------------------------------------------------------------------------------------------
 #                                  									Javier
 #--------------------------------------------------------------------------------------------------------------------------------------------
@@ -351,4 +330,135 @@ DELIMITER ;
 
 
 
+
+
+
+#--------------------------------------------------------------------------------------------------------------------------------------------
+#																	PAS_interfaz
+#--------------------------------------------------------------------------------------------------------------------------------------------
+
+# Uso General:
+
+# ------------------------------- Un usuario necesita ver todas las convocatorias por área ----------------------------------------------
+drop procedure if exists sp_consultar_convocatorias_area;
+DELIMITER $$
+create procedure sp_consultar_programas_de_deportes(in idArea int)
+	begin 
+		select * from vw_info_convocatoria where areID = idArea;
+	end $$
+DELIMITER ;
+
+
+# ------------------------------- Un estudiante necesita ver las convocatorias por programa de area de bienestar ----------------------------------------------
+drop procedure if exists sp_consultar_convocatorias_programa;
+DELIMITER $$
+create procedure sp_consultar_convocatorias_deporte(in idPrograma int)
+	begin 
+		select * from Convocatoria where Programa_progID = id_Programa;
+	end $$
+DELIMITER ;
+
+# ------------------------------- Un estudiante necesita ver las convocatorias en las que participa ----------------------------------------------
+drop procedure if exists sp_consultar_mis_convocatorias;
+DELIMITER $$
+create procedure sp_consultar_mis_convocatorias (in cedula int)
+	begin
+		select * from vw_info_convocatoria_estudiante where estID = cedula;
+	end $$
+DELIMITER ;
+
+
+# Salud
+
+# --------------------------------------------- Ver perfil de riesgo integral de un usuario --------------------------------------------
+DROP PROCEDURE IF EXISTS pas_view_perfilriesgo;
+DELIMITER $$
+CREATE PROCEDURE pas_view_perfilriesgo(IN usuarioID INT)
+	BEGIN
+		SELECT * FROM vw_perfil_integral WHERE persona = usuarioID;
+    END $$
+DELIMITER ;
+
+# -------------------------------------- Ver el estado de las incapacidades de un usuario ------------------------------------------------
+DROP PROCEDURE IF EXISTS pas_view_incapacidad;
+DELIMITER $$
+CREATE PROCEDURE pas_view_incapacidad(IN usuarioID INT)
+	BEGIN
+		SELECT * FROM vw_incapacidad WHERE persona = usuarioID;
+    END $$
+DELIMITER ;
+
+# ------------------------------- Un usuario que necesita ver las citas medicas disponibles ----------------------------------------------
+DROP PROCEDURE IF EXISTS pas_citas_disponibles;
+DELIMITER $$
+CREATE PROCEDURE pas_citas_disponibles()
+	BEGIN 
+		SELECT * FROM vw_citamedica_disponible;
+    END $$
+DELIMITER ;
+
+
+# Actividad Física y Deporte
+
+# ------------------------------- Un usuario necesita ver los torneos internos disponibles ----------------------------------------------
+drop procedure if exists sp_consultar_torneos_internos;
+DELIMITER $$
+create procedure sp_consultar_torneos_internos()
+	begin 
+		select * from TorneoInterno;
+	end $$
+DELIMITER ;
+
+# ------------------------------- Un usuario necesita ver los cursos libres de deportes disponibles ----------------------------------------------
+drop procedure if exists sp_consultar_convocatoria_cursos_libres;
+DELIMITER $$
+create procedure sp_consultar_convocatoria_cursos_libres()
+	begin 
+		select * from ConvocatoriaCursoLibre;
+	end $$
+DELIMITER ;
+
+
+# Gestión y Fomento Socioeconómico
+
+# ------------------------------- Un usuario necesita ver información detallada de convocatorias de fomento, por tipo de apoyo.-----------------------
+drop procedure if exists sp_consultar_gestion_alimentaria;
+DELIMITER $$
+create procedure sp_consultar_gestion_alimentaria ()
+	begin
+		select * from ConvocatoriaGestionAlimentaria join Convocatoria on (conv_id);
+	end $$
+DELIMITER ;
+
+drop procedure if exists sp_consultar_gestion_transporte;
+DELIMITER $$
+create procedure sp_consultar_gestion_transporte ()
+	begin
+		select * from ConvocatoriaGestionTransporte join Convocatoria on (conv_id);
+	end $$
+DELIMITER ;
+
+drop procedure if exists sp_consultar_gestion_alojamiento;
+DELIMITER $$
+create procedure sp_consultar_gestion_alojamiento()
+	begin
+		select * from ConvocatoriaGestionAlojamiento join Convocatoria on (conv_id);
+	end $$
+DELIMITER ;
+
+drop procedure if exists sp_consultar_gestion_economica;
+DELIMITER $$
+create procedure sp_consultar_gestion_economica ()
+	begin
+		select * from ConvocatoriaGestionEconomica join Convocatoria on (conv_id);
+	end $$
+DELIMITER ;
+
+drop procedure if exists sp_consultar_gestion_emprendimiento;
+DELIMITER $$
+create procedure sp_consultar_gestion_emprendimiento ()
+	begin
+		select * from ConvocatoriaFomentoEmprendimeinto join Convocatoria on (conv_id);
+	end $$
+DELIMITER ;
 
