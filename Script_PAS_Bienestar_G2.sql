@@ -231,56 +231,110 @@ CREATE PROCEDURE pas_view_perfilriesgo(IN usuarioID INT)
 DELIMITER ;
 
 # 13. ----------------------------------------------------- Crear una cita medica -----------------------------------------------------------
+
+# Verificar que el doctor seleccionado no tenga ya una cita a esa hora
+DROP TRIGGER IF EXISTS tr_check_doctor;
+DELIMITER $$
+CREATE TRIGGER tr_check_doctor BEFORE INSERT ON citamedica
+	FOR EACH ROW
+    BEGIN
+		DECLARE has_appointment BOOl;
+        DECLARE msg VARCHAR(200);
+        SELECT EXISTS (SELECT citID FROM citamedica 
+        WHERE doctorID = NEW.doctorID AND citFecha = NEW.citFecha) 
+        INTO has_appointment;
+        IF has_appointment THEN
+			SET msg = CONCAT('El doctor ya tiene una cita a dicha hora');
+				SIGNAL sqlstate '14000' SET message_text = msg;
+		END IF;
+    END $$
+DELIMITER ;
+
+# Añadir la cita medica 
 DROP PROCEDURE IF EXISTS pas_create_citamedica;
 DELIMITER $$
-CREATE PROCEDURE pas_create_citamedica()
+CREATE PROCEDURE pas_create_citamedica(IN doctor INT, IN fecha DATETIME)
 	BEGIN 
-    
+		DECLARE especialidad VARCHAR(52);
+        SELECT salEspecializacion INTO especialidad FROM personalsalud WHERE doctor = perID;
+		INSERT INTO citamedica (doctorID, citFecha, citEspecialidad) VALUES (doctor, fecha, especialidad);
     END $$
 DELIMITER ;
 
 # 14. ----------------------------------------------------- Eliminar una cita medica --------------------------------------------------------
+
+# Verificar que no haya algun paciente con dicha cita
+DROP TRIGGER IF EXISTS tr_check_paciente;
+DELIMITER $$
+CREATE TRIGGER tr_check_paciente BEFORE DELETE ON citamedica FOR EACH ROW
+	BEGIN
+		DECLARE paciente INT;
+		DECLARE msg VARCHAR(200);
+        
+		SELECT OLD.pacienteID INTO paciente FROM citamedica WHERE citID = OLD.citID;
+		IF paciente IS NOT NULL THEN
+			SET msg = CONCAT('Hay un paciente ya con dicha cita');
+			SIGNAL sqlstate '14000' SET message_text = msg;
+		END IF;
+	END $$
+DELIMITER ;
+
+# Eliminar la cita medica 
 DROP PROCEDURE IF EXISTS pas_remove_citamedica;
 DELIMITER $$
-CREATE PROCEDURE pas_remove_citamedica()
+CREATE PROCEDURE pas_remove_citamedica(IN cita INT)
 	BEGIN 
-    
+		DELETE FROM citamedica WHERE citID = cita;
     END $$
-DELIMITER ;
+DELIMITER ; 
 
 # 15. ----------------------------------------------- Aprobar o rechazar una incapacidad ----------------------------------------------------
 DROP PROCEDURE IF EXISTS pas_approve_incapacidad;
 DELIMITER $$
-CREATE PROCEDURE pas_approve_incapacidad()
+CREATE PROCEDURE pas_approve_incapacidad(
+	IN persona INT, IN fecha DATETIME, IN enfermedad VARCHAR(45), IN desicion BOOL)
 	BEGIN 
-    
+		UPDATE incapacidad SET incAprobado = desicion, incVerificado = 1
+        WHERE persona = perID AND incFecha = fecha AND incEnfermedad = enfermedad;
     END $$
 DELIMITER ;
 
 # 16. -------------------------------------------- Aprobar o rechazar una atencion en salud -------------------------------------------------
 DROP PROCEDURE IF EXISTS pas_approve_atencionsalud;
 DELIMITER $$
-CREATE PROCEDURE pas_approve_atencionsalud()
+CREATE PROCEDURE pas_approve_atencionsalud(
+	IN persona INT, IN fecha DATETIME, IN tipo VARCHAR(45), IN desicion BOOL)
 	BEGIN 
-    
+		UPDATE atencionensalud SET ateAprobado = desicion, ateVerificado = 1
+        WHERE persona = perID AND ateFecha = fecha AND ateTipo = tipo;
     END $$
 DELIMITER ;
 
 # 17. ------------------------------------------- Agregar los resultados de una cita medica -------------------------------------------------
 DROP PROCEDURE IF EXISTS pas_update_resultados;
 DELIMITER $$
-CREATE PROCEDURE pas_update_resultados()
+CREATE PROCEDURE pas_update_resultados(
+	IN cita INT, IN diagnostico VARCHAR(80), IN medicamento VARCHAR(45), IN cantidad TINYINT, IN intervalos TINYINT, IN examen VARCHAR(45), 
+    IN peso TINYINT, IN estatura TINYINT, IN corazon TINYINT, IN vision TINYINT)
 	BEGIN 
-    
+		UPDATE citamedica SET citDiagnostico = diagnostico WHERE citID = cita;
+        IF medicamento IS NOT NULL THEN
+			INSERT INTO medicamentos (citID, medNombre, medCantidad, medIntervalos) VALUES (cita, medicamento, cantidad, intervalos);
+		END IF;
+		IF examen IS NOT NULL THEN
+			INSERT INTO ordenmedica (citID, ordExamen) VALUES (cita, examen);
+        END IF;
+        INSERT INTO evaluacionfisica (citID, evaPeso, evaEstatura, evaRitmoCardiaco, evaVision) VALUES (cita, peso, estatura, corazon, vision);
     END $$
 DELIMITER ;
 
 # 18. -------------------------------------- Modificar el perfil de riesgo integral de un usuario -------------------------------------------
 DROP PROCEDURE IF EXISTS pas_edit_perfilintegral;
 DELIMITER $$
-CREATE PROCEDURE pas_edit_perfilintegral()
+CREATE PROCEDURE pas_edit_perfilintegral(IN persona INT, IN fisico INT, IN psicologico INT)
 	BEGIN 
-    
+		UPDATE perfilriesgointegral SET perSaludFisica = fisico, perSaludPsicologica = psicologico
+        WHERE persona = perID;
     END $$
 DELIMITER ;
 
