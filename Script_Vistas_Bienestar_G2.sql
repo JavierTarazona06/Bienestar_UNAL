@@ -29,6 +29,16 @@ drop view if exists vw_info_factura;
 create view vw_info_factura as select factID,factFecha,factHora,factDetalle,prodID,prodPrecio,prodDetalle,clienteID,perNombre,perApellido,perEmail,tieID,tieDireccion,tieCiudad from factura join factura_producto using (factID) join producto using (prodID) join persona on (clienteID=perID) join tiendabienestar using (tieID);
 select * from vw_info_factura;
 
+#Vista de productos con la tienda a la que pertenecen
+
+select Producto.prodID,Producto.prodPrecio,Producto.prodDetalle,tiendabienestar.tieID,tiendabienestar.tieDireccion,tiendabienestar.tieCiudad from producto_tiendaun JOIN Producto ON producto_tiendaun.prodID = Producto.prodID  join tiendabienestar on tiendabienestar.tieID=producto_tiendaun.tieID;
+drop view if exists vw_productos_tienda;
+create view vw_productos_tienda as select 
+	Producto.prodID,Producto.prodPrecio,Producto.prodDetalle,tiendabienestar.tieID,
+    tiendabienestar.tieDireccion,tiendabienestar.tieCiudad 
+    from producto_tiendaun JOIN Producto ON producto_tiendaun.prodID = Producto.prodID 
+    join tiendabienestar on tiendabienestar.tieID=producto_tiendaun.tieID;
+select * from vw_productos_tienda; 
 
 #------------------------------------------------------------------
 #------------------------------------------------------------------

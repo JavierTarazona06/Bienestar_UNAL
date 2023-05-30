@@ -446,24 +446,15 @@ call sp_convocatoriagestioneconomica_est(5);
 
 drop procedure if exists sp_convocatoriagestiontransporte_est;
 DELIMITER $$
-CREATE PROCEDURE sp_convocatoriagestiontransporte_est(in id_est int, in tipo enum('Transporte público masivo','otro'))
+CREATE PROCEDURE sp_convocatoriagestiontransporte_est(in id_est int, in tipo enum('Transporte público masivoTransporte público masivo','otro'))
 	BEGIN
 		if pbm_est(id_est)<16 then
 			select * from convocatoriagestiontransporte where cgtTipoTransporte=tipo order by cgtCobertura;
 		else
-			SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'El PBM del estaudiante es mayor que 20: No tiene acceso de convocatorias de gestión transporte';
+			SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'El PBM del estaudiante es mayor que 15: No tiene acceso de convocatorias de gestión transporte';
         end if;
 	END $$
 DELIMITER ;
-
-#6. Una persona/estudiante/secretario/director quiere consultar sus facturas en la Tienda de bienestar U.
-
-
-
-#6. Una persona/estudiante/secretario/director quiere consultar los productos en una tienda de bienestar U.
-
-
-
 
 /*
 set @pbm =  pbm_est(10);
@@ -473,3 +464,116 @@ set @pbm =  pbm_est(5);
 select @pbm;
 call sp_convocatoriagestiontransporte_est(5, 'Transporte público masivo');
 */
+
+#6. Una persona/estudiante/secretario/director quiere consultar sus facturas con los detalles en la Tienda de bienestar U.
+
+drop procedure if exists sp_info_factura_per;
+DELIMITER $$
+CREATE PROCEDURE sp_info_factura_per(in id_per int, in id_tienda int)
+	BEGIN
+		select * from vw_info_factura where clienteID=id_per and tieID=id_tienda;
+	END $$
+DELIMITER ;
+
+#call sp_info_factura_per(14, 2)
+
+#7. Una persona quiere consultar los productos en una tienda de bienestar U.
+
+drop procedure if exists sp_productos_tienda;
+DELIMITER $$
+CREATE PROCEDURE sp_productos_tienda(in id_tienda int)
+	BEGIN
+		select * from  vw_productos_tienda where tieID=id_tienda;
+	END $$
+DELIMITER ;
+
+#call sp_productos_tienda(1)
+
+# 8. Una persona queire conocer las tiendas donde se encuentra un producto
+
+drop procedure if exists sp_tiendas_ofrece_producto;
+DELIMITER $$
+CREATE PROCEDURE sp_tiendas_ofrece_producto(in id_prod int)
+	BEGIN
+		select tieID,tieDireccion,tieCiudad from vw_productos_tienda where prodID=id_prod;
+	END $$
+DELIMITER ;
+
+/*
+select * from vw_productos_tienda;
+call sp_tiendas_ofrece_producto(9); #1 resultado
+call sp_tiendas_ofrece_producto(11); #2 resultados
+*/
+
+# 9. Si el estudiante inserta una conv. en est_toma_conv, verificar que no ingrese
+#dos veces la misma en el mismo semestre
+
+drop procedure if exists sp_insertar_est_tm_conv_est;
+DELIMITER $$
+CREATE PROCEDURE sp_insertar_est_tm_conv_est(in id_est int, in id_conv int, in fecha DATE)
+	BEGIN
+		declare existe_conv int;
+        declare msg char(250);
+		#Primer semstre
+		if CAST(Month(fecha) as unsigned)>0 and CAST(Month(fecha) as unsigned)<7 then
+			drop table if exists temp_table;
+			CREATE TEMPORARY TABLE temp_table as select conv_id from estudiante_toma_convocatoria 
+				where idEst=id_est and YEAR(fecha_est_tm_conv)=YEAR(fecha) and CAST(MONTH(fecha_est_tm_conv) AS UNSIGNED)>0 
+                and CAST(MONTH(fecha_est_tm_conv) AS UNSIGNED)<7;
+			select conv_id into existe_conv from temp_table where conv_id=id_conv;
+            if existe_conv is null then
+				insert into estudiante_toma_convocatoria values (id_est,id_conv,fecha);
+			else
+                SET msg = CONCAT('El estudiante con id ',id_est, ' ya se encuentra inscrito a la convocatoria ', id_conv, 
+                ' para el periodo ', YEAR(fecha), '-1');
+				SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = msg;
+			end if;
+		else
+			drop table if exists temp_table;
+			CREATE TEMPORARY TABLE temp_table as select conv_id from estudiante_toma_convocatoria 
+				where idEst=id_est and YEAR(fecha_est_tm_conv)=YEAR(fecha) and CAST(MONTH(fecha_est_tm_conv) AS UNSIGNED)>6 
+                and CAST(MONTH(fecha_est_tm_conv) AS UNSIGNED)<13;
+			select conv_id into existe_conv from temp_table where conv_id=id_conv;
+            if existe_conv is null then
+				insert into estudiante_toma_convocatoria values (id_est,id_conv,fecha);
+			else
+                SET msg = CONCAT('El estudiante con id ',id_est, ' ya se encuentra inscrito a la convocatoria ', id_conv, 
+                ' para el periodo ', YEAR(fecha), '-2');
+				SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = msg;
+			end if;
+		end if;
+	END $$
+DELIMITER ;
+
+/*
+call sp_insertar_est_tm_conv_est(9, 210 ,'2023-03-15');
+call sp_insertar_est_tm_conv_est(9, 211 ,'2023-03-15');
+
+call sp_insertar_est_tm_conv_est(13, 1 ,'2023-07-13');
+call sp_insertar_est_tm_conv_est(13, 2 ,'2023-07-13');
+select * from estudiante_toma_convocatoria;
+*/
+
+# 10. Si al insertar una convocatoria de gestión de alojamiento, la cobertura es mayor al costo, no insertarla
+
+# 11. El secretario/dirección quieren conocer las convoctarias de un programa
+
+# 12. La dirección económica quiere eliminar convocatorias económicas, pero para hacerlo 
+#debe eliminar primero el registro de la  tabla de convocarorias
+
+# 13
+
+# 14
+
+# 15
+
+# 16
+
+# 17
+
+# 18
+
+# 19
+
+
+# 20

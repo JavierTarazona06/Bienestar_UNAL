@@ -375,34 +375,34 @@ INSERT INTO convocatoriagestiontransporte VALUES(20,530147,'Transporte público 
 (22,430147,'Otro');
 
 DELETE FROM estudiante_toma_convocatoria;
-insert into estudiante_toma_convocatoria values (30,9);
-insert into estudiante_toma_convocatoria values (16,1);
-insert into estudiante_toma_convocatoria values (22,2);
-insert into estudiante_toma_convocatoria values (26,14);
-insert into estudiante_toma_convocatoria values (24,3);
-insert into estudiante_toma_convocatoria values (27,8);
-insert into estudiante_toma_convocatoria values (2,8);
-insert into estudiante_toma_convocatoria values (14,3);
-insert into estudiante_toma_convocatoria values (9,1);
-insert into estudiante_toma_convocatoria values (13,1);
-insert into estudiante_toma_convocatoria values (27,5);
-insert into estudiante_toma_convocatoria values (6,5);
-insert into estudiante_toma_convocatoria values (27,15);
-insert into estudiante_toma_convocatoria values (24,1);
-insert into estudiante_toma_convocatoria values (7,11);
-insert into estudiante_toma_convocatoria values (24,12);
-insert into estudiante_toma_convocatoria values (29,7);
-insert into estudiante_toma_convocatoria values (21,14);
-insert into estudiante_toma_convocatoria values (4,7);
-insert into estudiante_toma_convocatoria values (2,15);
+insert into estudiante_toma_convocatoria values (30,9,'2023-02-13');
+insert into estudiante_toma_convocatoria values (16,1,'2023-03-13');
+insert into estudiante_toma_convocatoria values (22,2,'2023-04-13');
+insert into estudiante_toma_convocatoria values (26,14,'2023-05-13');
+insert into estudiante_toma_convocatoria values (24,3,'2023-08-13');
+insert into estudiante_toma_convocatoria values (27,8,'2023-09-13');
+insert into estudiante_toma_convocatoria values (2,8,'2023-10-13');
+insert into estudiante_toma_convocatoria values (14,3,'2023-11-13');
+insert into estudiante_toma_convocatoria values (9,1,'2023-12-13');
+insert into estudiante_toma_convocatoria values (13,1,'2023-07-13');
+insert into estudiante_toma_convocatoria values (27,5,'2023-08-13');
+insert into estudiante_toma_convocatoria values (6,5,'2023-03-13');
+insert into estudiante_toma_convocatoria values (27,15,'2023-04-13');
+insert into estudiante_toma_convocatoria values (24,1,'2023-05-13');
+insert into estudiante_toma_convocatoria values (7,11,'2023-06-13');
+insert into estudiante_toma_convocatoria values (24,12,'2023-08-13');
+insert into estudiante_toma_convocatoria values (29,7,'2023-09-13');
+insert into estudiante_toma_convocatoria values (21,14,'2023-10-13');
+insert into estudiante_toma_convocatoria values (4,7,'2023-11-13');
+insert into estudiante_toma_convocatoria values (2,15,'2023-12-13');
 INSERT INTO estudiante_toma_convocatoria VALUES 
-(12, 16),
-(28, 17),
-(5, 18),
-(19, 19),
-(25, 20),
-(3, 21),
-(10, 22);
+(12, 16,'2023-02-13'),
+(28, 17,'2023-03-13'),
+(5, 18,'2023-04-13'),
+(19, 19,'2023-05-13'),
+(25, 20,'2023-07-13'),
+(3, 21,'2023-08-13'),
+(10, 22,'2023-09-13');
 
 DELETE FROM fallaalimentacion;
 insert into fallaalimentacion (estID,fallAlcgaComida,fallAlLugar,fallAlFecha) values (23,'Almuerzo','Comedor central','2023-05-19');
@@ -531,6 +531,24 @@ insert into factura_producto values (13,10);
 insert into factura_producto values (15,10);
 insert into factura_producto values (2,8);
 insert into factura_producto values (1,7);
+
+INSERT INTO producto_tiendaun VALUES 
+(1, 1),
+(1, 2),
+(2, 3),
+(2, 4),
+(2, 5),
+(2, 6),
+(1, 7),
+(1, 8),
+(1, 9),
+(1, 10),
+(2, 11),
+(2, 12),
+(2, 13),
+(2, 14),
+(1, 15);
+INSERT INTO producto_tiendaun VALUES (1, 11);
 
 #------------------------------------------------------------------
 # Salud
@@ -1503,7 +1521,8 @@ INSERT INTO Bienestar.ConvocatoriaSeleccion (Convocatoria_conv_id, convDeporte, 
 (219, 'Atletismo', 'Polideportivo', '09:00:00');
 
 
-insert into estudiante_toma_convocatoria values (9,210);
-insert into estudiante_toma_convocatoria values (13,217);
+insert into estudiante_toma_convocatoria values (9,210,'2023-03-15');
+insert into estudiante_toma_convocatoria values (9,210,'2023-03-15');
+insert into estudiante_toma_convocatoria values (13,217,'2023-04-15');
 
 SET FOREIGN_KEY_CHECKS=1;
