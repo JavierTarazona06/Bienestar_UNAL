@@ -534,6 +534,7 @@ DELIMITER ;
 
 2. asignar permisos a los pas.
 
+3. agregar vistas necesarias en caso tal.
 */ 
 
 # Triggers:
