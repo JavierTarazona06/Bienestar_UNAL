@@ -60,3 +60,12 @@ begin
 		end if;
 end $$
 DELIMITER ;
+
+# No se puede participar en una convocatoria si el PAPA no cumple con el mínimo requerido.
+drop trigger if exists tr_check_PAPA;
+DELIMITER $$
+create trigger tr_check_PAPA before insert on Estudiante_Toma_Convocatoria for each row
+begin #por terminar
+
+end $$
+DELIMITER ;

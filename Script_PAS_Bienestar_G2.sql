@@ -319,8 +319,9 @@ DELIMITER ;
 #																	Carlos
 #--------------------------------------------------------------------------------------------------------------------------------------------
 
-# PAS:
+
 # 1. -------------------------------------- Verificar que un estudiante puede participar de una convocatoria -------------------------------------------
+
 drop procedure if exists pas_estudiante_accede_conv;
 DELIMITER $$
 create procedure pas_estudiante_accede_conv(in estPapa double, in convPapa double )
@@ -335,16 +336,8 @@ begin
 end $$
 DELIMITER ;
 
-# 2. -------------------------------------- Consultar el lugar de un Evento/Taller -------------------------------------------
-drop procedure if exists pas_consultar_lugar_eveta;
-DELIMITER $$
-create procedure pas_consultar_lugar_eveta(in nomEveta varchar (60))
-begin
-	select evetaLugar from EventoTaller where nomEveta = evetaNombre;
-end $$
-DELIMITER ;
 
-# 3. -------------------------------------- Verificar viabilidad de un proyecto de acuerdo a un presupuesto -------------------------------------------
+# 2. -------------------------------------- Verificar viabilidad de un proyecto de acuerdo a un presupuesto -------------------------------------------
 
 drop procedure if exists pas_check_proyecto;
 DELIMITER $$
@@ -361,7 +354,7 @@ begin
 end $$
 DELIMITER ;
 
-# 4. -------------------------------------- Un área quiere consultar cuantos estudiantes se presentan por facultad a sus convocatorias------------------
+# 3. -------------------------------------- Un área quiere consultar cuantos estudiantes se presentan por facultad a sus convocatorias------------------
 
 drop procedure if exists pas_consultar_num_estudiantes;
 DELIMITER $$
@@ -373,7 +366,7 @@ begin
 end $$
 DELIMITER ;
 
-# 5. --------------------------------------- Agregar una nueva convocatoria a cursos libres y selecciones  ------------------
+# 4. --------------------------------------- Agregar una nueva convocatoria a cursos libres y selecciones  ------------------
 
 drop procedure if exists pas_agregar_convocatoria_cur_libre;
 DELIMITER $$
@@ -399,7 +392,7 @@ begin
 end $$
 DELIMITER ;
 
-# 6. --------------------------------------- Actualizar tiempo y lugar de distintas tablas ------------------------------------------
+# 5. --------------------------------------- Actualizar tiempo y lugar de distintas tablas ------------------------------------------
 
 # Torneo Interno:
 drop procedure if exists pas_actualizar_fecha_torneo;
@@ -470,7 +463,7 @@ begin
 end $$
 DELIMITER ;
 
-# 7. --------------------------------------- Actualizar ejecucion de un proyecto ------------------------------------------
+# 6. --------------------------------------- Actualizar ejecucion de un proyecto ------------------------------------------
 
 drop procedure if exists pas_actualizar_ejecucion_proyecto;
 DELIMITER $$
@@ -480,7 +473,7 @@ begin
 end $$
 DELIMITER ;
 
-# 8. --------------------------------------- Agregar un nuevo torneo interno  ---------------------------------------------
+# 7. --------------------------------------- Agregar un nuevo torneo interno  ---------------------------------------------
 
 drop procedure if exists pas_agregar_nuevo_torneo;
 DELIMITER $$
@@ -494,8 +487,7 @@ begin
 end $$
 DELIMITER ;
 
-# 9. ---------------------------- Un programa quiere agregar nuevos proyectos, eventos, y talleres---------------------------------------
-
+# 8. ---------------------------- Un programa quiere agregar nuevos proyectos, eventos, y talleres---------------------------------------
 
 # Proyecto
 
@@ -528,20 +520,83 @@ end $$
 DELIMITER ;
 
 
-# 10. ---------------------------- Se quiere consultar eventos, talleres y proyectos disponbibles ---------------------------------------
+# 9. ---------------------------- Se quiere consultar información acerca de eventos, talleres y proyectos disponbibles ---------------------------------------
+
+drop procedure if exists pas_consultar_info_eventoTaller;
+DELIMITER $$
+create procedure pas_consultar_info_eventoTaller(in idEveTa int)
+begin
+	select * from vw_info_eventoTaller where evetaidEventoTaller = idEveTa;
+end $$
+DELIMITER ;
+
+drop procedure if exists pas_consultar_info_proyecto;
+DELIMITER $$
+create procedure pas_consultar_info_proyecto(in idProy int)
+begin
+	select * from vw_info_proyecto where proyIdProyecto = idProy;
+end $$
+DELIMITER ;
 
 
+# 10. ---------------------------- Se quiere consultar información acerca de eventos, talleres y proyectos disponbibles por área ó programa-----------------------
+
+# Por programa
+
+drop procedure if exists pas_consultar_eventoTaller_programa;
+DELIMITER $$
+create procedure pas_consultar_eventoTaller_programa (in idPrograma int)
+begin
+	select * from vw_info_eventoTaller where progID = idPrograma;
+end $$
+DELIMITER ;
+
+drop procedure if exists pas_consultar_proyectos_programa;
+DELIMITER $$
+create procedure pas_consultar_proyectos_programa (in idPrograma int)
+begin
+	select * from vw_info_proyecto where progID = idPrograma;
+end $$
+DELIMITER ;
+
+# Por área
+
+drop procedure if exists pas_consultar_proyectos_area;
+DELIMITER $$
+create procedure pas_consultar_proyectos_area (in idArea int)
+begin
+	select * from vw_info_proyecto where areID = idArea;
+end $$
+DELIMITER ;
+
+drop procedure if exists pas_consultar_eventoTaller_area;
+DELIMITER $$
+create procedure pas_consultar_eventoTaller_area (in idArea int)
+begin
+	select * from vw_info_eventoTaller where areID = idArea;
+end $$
+DELIMITER ;
 
 
+# 11. ---------------------------- Un estudiante quiere participar en una convocatoria -----------------------
 
-#Pendientes:
-/*
-1. hacer sección 10.
+drop procedure if exists pas_participar_convocatoria;
+DELIMITER $$
+create procedure pas_participar_convocatoria(in ccEstudiante int, in idConv int, in fechaInscripcion date)
+begin
+	insert into Estudiante_Toma_Convocatoria (idEst, conv_id, fecha_est_tm_conv) values (ccEstudiante, idConv, fechaInscripcion);
+end $$
+DELIMITER ;
 
-2. asignar permisos a los pas.
+# 12. ---------------------------- Un estudiante quiere consultar las convocatorias en las que participa -----------------------
 
-3. agregar vistas necesarias en caso tal. *
-*/ 
+drop procedure if exists sp_consultar_mis_convocatorias;
+DELIMITER $$
+create procedure sp_consultar_mis_convocatorias (in cedula int)
+	begin
+		select * from vw_info_convocatoria_estudiante where estID = cedula;
+	end $$
+DELIMITER ;
 
 
 
@@ -856,15 +911,6 @@ DELIMITER $$
 create procedure sp_consultar_convocatorias_deporte(in idPrograma int)
 	begin 
 		select * from Convocatoria where Programa_progID = id_Programa;
-	end $$
-DELIMITER ;
-
-# ------------------------------- Un estudiante necesita ver las convocatorias en las que participa ----------------------------------------------
-drop procedure if exists sp_consultar_mis_convocatorias;
-DELIMITER $$
-create procedure sp_consultar_mis_convocatorias (in cedula int)
-	begin
-		select * from vw_info_convocatoria_estudiante where estID = cedula;
 	end $$
 DELIMITER ;
 
