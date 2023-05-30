@@ -587,11 +587,11 @@ call sp_insertar_est_tm_conv_est(13, 2 ,'2023-07-13');
 select * from estudiante_toma_convocatoria;
 */
 
-# 10.El secretario/dirección pueden insertar una convocatoria de gestión de alojamiento, pero si la cobertura es mayor al costo, no insertarla
+# 10. El secretario/dirección quieren actualizar las convoctarias de un programa
 
+select * from convocatoria;
+select * from programa;
 
-
-# 11. El secretario/dirección quieren conocer las convoctarias de un programa
 
 # 12. La dirección económica quiere eliminar convocatorias económicas, pero para hacerlo 
 #debe eliminar primero el registro de la  tabla de convocarorias
@@ -612,7 +612,7 @@ select * from estudiante_toma_convocatoria;
 
 # 20
 
-
+/*
 
 #--------------------------------------------------------------------------------------------------------------------------------------------
 #																	PAS_interfaz
@@ -742,3 +742,4 @@ create procedure sp_consultar_gestion_emprendimiento ()
 		select * from ConvocatoriaFomentoEmprendimeinto join Convocatoria on (conv_id);
 	end $$
 DELIMITER ;
+*/
