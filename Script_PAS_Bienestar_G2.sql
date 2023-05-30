@@ -317,9 +317,105 @@ DELIMITER ;
 #																	Carlos
 #--------------------------------------------------------------------------------------------------------------------------------------------
 
+# PAS:
+# 1. -------------------------------------- Verificar que un estudiante puede participar de una convocatoria -------------------------------------------
+drop procedure if exists pas_estudiante_accede_conv;
+DELIMITER $$
+create procedure pas_estudiante_accede_conv(in estPapa double, in convPapa double )
+begin
+	declare msg varchar(100);
+    if (estPapa < convPapa) then
+		set msg = concat('El estudiante no puede participar de la convocatoria.');
+	else 
+		set msg = concat('El estudiante puede participar de la convocatoria.');
+	end if;
+    select msg;
+end $$
+DELIMITER ;
+
+# 2. -------------------------------------- Consultar el lugar de un Evento/Taller -------------------------------------------
+drop procedure if exists pas_consultar_lugar_eveta;
+DELIMITER $$
+create procedure pas_consultar_lugar_eveta(in nomEveta varchar (60))
+begin
+	select evetaLugar from EventoTaller where nomEveta = evetaNombre;
+end $$
+DELIMITER ;
+
+# 3. -------------------------------------- Verificar viabilidad de un proyecto de acuerdo a un presupuesto -------------------------------------------
+
+drop procedure if exists pas_check_proyecto;
+DELIMITER $$
+create procedure pas_check_proyecto(in idProyecto int, in presupuestoDado int)
+begin
+	declare msg varchar (100);
+    declare presProyecto int;
+    select proyPresupuesto into presProyecto from Proyecto where proyidProyecto = idProyecto;
+    if (presProyecto > presupuestoDado) then
+		set msg = concat('Su proyecto no es viable, excede el presupuesto.');
+	else
+		set msg = concat('Su proyecto es viable, puede insertarse en la tabla de proyectos.');
+	end if;
+end $$
+DELIMITER ;
+
+# 4. -------------------------------------- Un área quiere consultar cuantos estudiantes se presentan por facultad a sus convocatorias------------------
+
+drop procedure if exists pas_consultar_num_estudiantes;
+DELIMITER $$
+create procedure pas_consultar_num_estudiantes(in idArea int)
+begin
+	select count(distinct estID) from (Area join Programa on (areID = Area_areID)) join 
+    ((Estudiante join Estudiante_Toma_Convocatoria on (estID = idEst)) join Convocatoria using (conv_id))
+    on (progID = Programa_progID) where idArea = areID group by estFacultad;
+end $$
+DELIMITER ;
+
+# 5. -------- Una dirección de bienestar quiere consultar el promedio del pbm de los estudiantes que se presentan a determinada convocatoria ------------------
 
 
 
+# Triggers:
+# Si una convocatoria tiene estado cerrada no se puede insertar.
+drop trigger if exists tr_check_convocatoria;
+DELIMITER $$
+create trigger tr_check_convocatoria before insert on Convocatoria 
+for each row
+	begin
+		declare msg varchar(225);
+        if (new.convEstado = 0) then
+			set msg = concat('No se puede insertar una convocatoria cerrada: ', new.convEstado);
+            SIGNAL sqlstate '45000' set message_text = msg;
+		end if;
+	end $$
+DELIMITER ;
+
+# Verificar si el programa que inserta nuevos torneos es el de deporte de competenecia, Ningún otro puede crear torneos deportivos
+drop trigger if exists tr_check_torneo;
+DELIMITER $$
+create trigger tr_check_torneo before insert on TorneoInterno for each row
+begin
+	declare msg varchar(225);
+        if (new.Programa_progID != 1) then -- ids de programas a convenir
+			set msg = concat('El programa no tiene permitido crear nuevos torneos');
+            SIGNAL sqlstate '45000' set message_text = msg;
+		end if;
+end $$
+DELIMITER ;
+
+# No se pueden crear convocatorias a selecciones fuera del horario laboral.
+drop trigger if exists tr_check_hora_conv_seleccion;
+DELIMITER $$
+create trigger tr_check_hora_conv_seleccion before insert on ConvocatoriaSeleccion
+for each row
+begin
+	declare msg varchar(225);
+        if (new.convHora < '06:00:00' and new.convHora > '20:00:00') then
+			set msg = concat('No se pueden citar convocatorias fuera del horario laboral.');
+            SIGNAL sqlstate '45000' set message_text = msg;
+		end if;
+end $$
+DELIMITER ;
 
 
 

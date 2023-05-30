@@ -351,6 +351,7 @@ CREATE TABLE IF NOT EXISTS Bienestar.Convocatoria (
   convEstado TINYINT NOT NULL,
   convPeriodo VARCHAR(25) NULL,
   Programa_progID INT UNSIGNED NOT NULL,
+  convPAPA DOUBLE NULL DEFAULT 3.5,
   PRIMARY KEY (conv_id, Programa_progID),
   CONSTRAINT fk_Convocatoria_Programa1
     FOREIGN KEY (Programa_progID)
@@ -568,6 +569,7 @@ CREATE TABLE IF NOT EXISTS Bienestar.Estudiante (
   estTipoAdmision VARCHAR(20) NOT NULL,
   estEsEgresado TINYINT NOT NULL,
   estAnoGraduacion INT NULL,
+  estPAPA DOUBLE NOT NULL,
   PRIMARY KEY (estID),
   CONSTRAINT fk_Estudiante_copy1_Persona_copy11
     FOREIGN KEY (estID)
