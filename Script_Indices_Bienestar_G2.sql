@@ -37,11 +37,29 @@ CREATE INDEX AtencionEnSalud_Verificado_idx ON AtencionEnSalud (ateVerificado);
 #																	Carlos
 #--------------------------------------------------------------------------------------------------------------------------------------------
 
-# 4.
+# Este indice sirve para mejorar las búsquedas sobre que programas existen en el área de bienestar, ya que estos son muchos, indexar su tabla
+# de acuerdo a su nombre puede ser bastante útil. Como todos los programas de bienestar son diferentes, es lógico pensar que no pueden haber 2
+# programas con el mismo nombre.
+CREATE UNIQUE INDEX Programa_Bienestar_idx ON Programa (progNombre);
 
-# 5.
+# Este es uno de los indices más importantes de esta base de datos, debido a que por programa pueden haber muchisimas convocatorias en un solo
+# período del año. Y de igual manera, como se requiere llevar un registro de las convocatorias que han estado disponibles a lo largo del tiempo
+# indexar de acuerdo al periodo es adecuado. También es util indexar de acuerdo al nombre, pues es factible que un usuario quiera buscar convocatorias
+# de acuerdo al nombre que estas puedan tener. y finalmente, resulta útil indexar de acuerdo al id del programa pues de este modo podemos obtener las 
+# convocatorias de un programa en partícular si es lo que se desea. Cabe aclarar que este indice se establece como único, pues no es lógico que hallan
+# dos convocatorias identicas: es decir, con el mismo, nombre, programa, y periodo.
+CREATE UNIQUE INDEX Convocatoria_Bienestar_idx ON Convocatoria (Programa_progID, convNombre, convPeriodo);
 
-# 6.
+# Este indice es útil pues permite consultar todos los torneos que se han realizado en la universidad, y permite conocer de manera detallada información puntual
+# que alguien interesado en participar pueda necesitar. Se escogen estos atributos ya que dentro de la tabla torneo interno existen muchos por los cuales un usuario
+# normalmente no buscaria, por ejemplo el estado.
+CREATE INDEX Torneo_interno_idx ON TorneoInterno(torNombreTorneo, torDeporte, torSedeFacultad, torPeriodo);
+
+# Los siguientes indices permiten realizar consultas eficientes sobre las tablas que derivan de la tabla Convocatoria. Estos son utilies pues permiten buscar 
+# detalles de convocatorias del área de deportes directamente sin necesidad de revisar otros detalles que en el momento no sean necesarios. 
+# Como la fecha de cierre o apertura.
+CREATE INDEX Convocatoria_curso_libre_idx ON ConvocatoriaCursoLibre(curNombre);
+CREATE INDEX Convocatoria_seleccion_idx ON ConvocatoriaSeleccion(convDeporte);
 
 #--------------------------------------------------------------------------------------------------------------------------------------------
 #                                  									Javier
