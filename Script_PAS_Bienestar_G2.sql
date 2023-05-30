@@ -587,7 +587,9 @@ call sp_insertar_est_tm_conv_est(13, 2 ,'2023-07-13');
 select * from estudiante_toma_convocatoria;
 */
 
-# 10. Si al insertar una convocatoria de gestión de alojamiento, la cobertura es mayor al costo, no insertarla
+# 10.El secretario/dirección pueden insertar una convocatoria de gestión de alojamiento, pero si la cobertura es mayor al costo, no insertarla
+
+
 
 # 11. El secretario/dirección quieren conocer las convoctarias de un programa
 
