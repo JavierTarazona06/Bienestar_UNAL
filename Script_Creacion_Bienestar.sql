@@ -654,7 +654,7 @@ DROP TABLE IF EXISTS Bienestar.Corresponsabilidad ;
 CREATE TABLE IF NOT EXISTS Bienestar.Corresponsabilidad (
   idEst INT UNSIGNED NOT NULL,
   horPendCorresp TINYINT UNSIGNED NOT NULL DEFAULT 0,
-  PRIMARY KEY (idEst),
+  PRIMARY KEY (idEst, horPendCorresp),
   CONSTRAINT fk_Corresponsabilidad_Estudiante_copy11
     FOREIGN KEY (idEst)
     REFERENCES Bienestar.Estudiante (estID)
@@ -815,7 +815,8 @@ DROP TABLE IF EXISTS Bienestar.Estudiante_Toma_Convocatoria ;
 CREATE TABLE IF NOT EXISTS Bienestar.Estudiante_Toma_Convocatoria (
   idEst INT UNSIGNED NOT NULL,
   conv_id INT NOT NULL,
-  PRIMARY KEY (idEst, conv_id),
+  fecha_est_tm_conv date not null,
+  PRIMARY KEY (idEst, conv_id, fecha_est_tm_conv),
   CONSTRAINT fk_Estudiante_copy1_has_Convocatoria_Estudiante_copy11
     FOREIGN KEY (idEst)
     REFERENCES Bienestar.Estudiante (estID)

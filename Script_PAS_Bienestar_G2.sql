@@ -3,6 +3,8 @@
     implementando de acuerdo a los perfiles/roles. Se les debe asignar permisos de acuerdo a los roles
 */
 
+set global log_bin_trust_function_creators = 1;
+
 #--------------------------------------------------------------------------------------------------------------------------------------------
 #                                  									Valeria
 #--------------------------------------------------------------------------------------------------------------------------------------------
@@ -327,9 +329,286 @@ DELIMITER ;
 #                                  									Javier
 #--------------------------------------------------------------------------------------------------------------------------------------------
 
+# 1. El estudiante puede consultar sus fallas de alimentación
+
+drop procedure if exists sp_fallaalimentacion_est;
+DELIMITER $$
+CREATE PROCEDURE sp_fallaalimentacion_est(in id int)
+	BEGIN
+		SELECT fallAlID,fallAlcgaComida,fallAlLugar,fallAlFecha from 
+			fallaalimentacion where estID=id;
+	END $$
+DELIMITER ;
+
+#call sp_fallaalimentacion_est(9)
+
+# 2. El estudiante puede consultar sus actividades de corresponsabilidad realizadas
+
+drop procedure if exists sp_actividadcorresp_est;
+DELIMITER $$
+CREATE PROCEDURE sp_actividadcorresp_est(in id int)
+	BEGIN
+		SELECT actCorID,actCorActividad,actCorHoras from 
+			actividadcorresp where estID=id;
+	END $$
+DELIMITER ;
+
+#call sp_actividadcorresp_est(18);
+
+# 3. El estudiante puede consultar la cantidad de horas pendientes de corresponsabilidad
+
+drop function if exists horas_corresponsabilidad_est;
+DELIMITER $$
+CREATE FUNCTION horas_corresponsabilidad_est(id_est int)
+		RETURNS int
+        BEGIN
+			DECLARE horas INT default 0;
+            select horPendCorresp into horas from corresponsabilidad where idEst=id_est;
+		RETURN horas;
+	END $$
+DELIMITER ;
+
+#set @horas =  horas_corresponsabilidad_est(4);
+#select @horas;
 
 
+#4. El estudiante desea conocer su PBM
 
+drop function if exists pbm_est;
+DELIMITER $$
+CREATE FUNCTION pbm_est(id_est int)
+		RETURNS int
+        BEGIN
+			DECLARE pbm INT default 0;
+            select estPBM into pbm from estudiante where estID=id_est;
+		RETURN pbm;
+	END $$
+DELIMITER ;
+
+#set @pbm =  pbm_est(10);
+#select @pbm;
+
+# 5. El estudiante solo desea visualizar las convocatorias a las que podría acceder según su PBM:
+
+#5.1 La convocatoria fomento emprendimeinto la busca según tema
+
+drop procedure if exists sp_convocatoriafomentoemprendimeinto_est;
+DELIMITER $$
+CREATE PROCEDURE sp_convocatoriafomentoemprendimeinto_est(in id_est int, in tema varchar(50))
+	BEGIN
+		select * from convocatoriafomentoemprendimeinto where LOCATE(LOWER(tema), LOWER(cgemTema)) > 0;
+	END $$
+DELIMITER ;
+
+#call sp_convocatoriafomentoemprendimeinto_est(5,'tema2')
+
+
+#5.2 La convocatoria de gestión alimentaria solo se puede acceder con PBM < 25
+
+drop procedure if exists sp_convocatoriagestionalimentaria_est;
+DELIMITER $$
+CREATE PROCEDURE sp_convocatoriagestionalimentaria_est(in id_est int, in comida enum('Desayuno','Almuerzo','Cena'), in lugar enum('Comedor central','Hemeroteca','Odontología','Agronomía','Biología','Ciencias Humanas','Ciencias Económicas','Matemáticas','otro'))
+	BEGIN
+		if pbm_est(id_est)<26 then
+			select * from convocatoriagestionalimentaria where cgaComida=comida and cgaLugar=lugar;
+		else
+			SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'El PBM del estaudiante es mayor que 25: No tiene acceso de convocatorias de gestión alimentaria';
+        end if;
+	END $$
+DELIMITER ;
+
+/*
+set @pbm =  pbm_est(10);
+select @pbm;
+call sp_convocatoriagestionalimentaria_est(10,'Desayuno','Comedor central');
+set @pbm =  pbm_est(5);
+select @pbm;
+call sp_convocatoriagestionalimentaria_est(5,'Desayuno','Comedor central');
+*/
+
+
+#5.3 La convocatoria de gestión alojamiento solo se puede acceder con PBM < 25
+
+drop procedure if exists sp_convocatoriagestionalojamiento_est;
+DELIMITER $$
+CREATE PROCEDURE sp_convocatoriagestionalojamiento_est(in id_est int, in localidad varchar(100), in tipo enum('Hotel','Casa','Apartamento','Vivienda familiar','Residencia Universitaria','Apartaestudio','Habitación','otro'))
+	BEGIN
+		if pbm_est(id_est)<26 then
+			select * from convocatoriagestionalojamiento where LOCATE(LOWER(localidad), LOWER(cgalLocalidadAlojamiento)) > 0 and tipo=cgalTipoVivienda;
+		else
+			SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'El PBM del estaudiante es mayor que 25: No tiene acceso de convocatorias de gestión alojamiento';
+        end if;
+	END $$
+DELIMITER ;
+
+/*
+set @pbm =  pbm_est(10);
+select @pbm;
+call sp_convocatoriagestionalojamiento_est(10,'Usme','Residencia Universitaria');
+set @pbm =  pbm_est(5);
+select @pbm;
+call sp_convocatoriagestionalojamiento_est(5,'Usme','Residencia Universitaria');
+*/
+
+
+#5.4 La convocatoria de gestión economica solo se puede acceder con PBM < 20
+
+drop procedure if exists sp_convocatoriagestioneconomica_est;
+DELIMITER $$
+CREATE PROCEDURE sp_convocatoriagestioneconomica_est(in id_est int)
+	BEGIN
+		if pbm_est(id_est)<21 then
+			select * from convocatoriagestioneconomica order by cgeCobertura;
+		else
+			SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'El PBM del estaudiante es mayor que 20: No tiene acceso de convocatorias de gestión económica';
+        end if;
+	END $$
+DELIMITER ;
+
+/*
+set @pbm =  pbm_est(10);
+select @pbm;
+call sp_convocatoriagestioneconomica_est(10);
+set @pbm =  pbm_est(5);
+select @pbm;
+call sp_convocatoriagestioneconomica_est(5);
+*/
+
+
+#5.5 La convocatoria de gestión transporte solo se puede acceder con PBM < 15
+
+drop procedure if exists sp_convocatoriagestiontransporte_est;
+DELIMITER $$
+CREATE PROCEDURE sp_convocatoriagestiontransporte_est(in id_est int, in tipo enum('Transporte público masivoTransporte público masivo','otro'))
+	BEGIN
+		if pbm_est(id_est)<16 then
+			select * from convocatoriagestiontransporte where cgtTipoTransporte=tipo order by cgtCobertura;
+		else
+			SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'El PBM del estaudiante es mayor que 15: No tiene acceso de convocatorias de gestión transporte';
+        end if;
+	END $$
+DELIMITER ;
+
+/*
+set @pbm =  pbm_est(10);
+select @pbm;
+call sp_convocatoriagestiontransporte_est(10, 'Transporte público masivo');
+set @pbm =  pbm_est(5);
+select @pbm;
+call sp_convocatoriagestiontransporte_est(5, 'Transporte público masivo');
+*/
+
+#6. Una persona/estudiante/secretario/director quiere consultar sus facturas con los detalles en la Tienda de bienestar U.
+
+drop procedure if exists sp_info_factura_per;
+DELIMITER $$
+CREATE PROCEDURE sp_info_factura_per(in id_per int, in id_tienda int)
+	BEGIN
+		select * from vw_info_factura where clienteID=id_per and tieID=id_tienda;
+	END $$
+DELIMITER ;
+
+#call sp_info_factura_per(14, 2)
+
+#7. Una persona quiere consultar los productos en una tienda de bienestar U.
+
+drop procedure if exists sp_productos_tienda;
+DELIMITER $$
+CREATE PROCEDURE sp_productos_tienda(in id_tienda int)
+	BEGIN
+		select * from  vw_productos_tienda where tieID=id_tienda;
+	END $$
+DELIMITER ;
+
+#call sp_productos_tienda(1)
+
+# 8. Una persona queire conocer las tiendas donde se encuentra un producto
+
+drop procedure if exists sp_tiendas_ofrece_producto;
+DELIMITER $$
+CREATE PROCEDURE sp_tiendas_ofrece_producto(in id_prod int)
+	BEGIN
+		select tieID,tieDireccion,tieCiudad from vw_productos_tienda where prodID=id_prod;
+	END $$
+DELIMITER ;
+
+/*
+select * from vw_productos_tienda;
+call sp_tiendas_ofrece_producto(9); #1 resultado
+call sp_tiendas_ofrece_producto(11); #2 resultados
+*/
+
+# 9. Si el estudiante inserta una conv. en est_toma_conv, verificar que no ingrese
+#dos veces la misma en el mismo semestre
+
+drop procedure if exists sp_insertar_est_tm_conv_est;
+DELIMITER $$
+CREATE PROCEDURE sp_insertar_est_tm_conv_est(in id_est int, in id_conv int, in fecha DATE)
+	BEGIN
+		declare existe_conv int;
+        declare msg char(250);
+		#Primer semstre
+		if CAST(Month(fecha) as unsigned)>0 and CAST(Month(fecha) as unsigned)<7 then
+			drop table if exists temp_table;
+			CREATE TEMPORARY TABLE temp_table as select conv_id from estudiante_toma_convocatoria 
+				where idEst=id_est and YEAR(fecha_est_tm_conv)=YEAR(fecha) and CAST(MONTH(fecha_est_tm_conv) AS UNSIGNED)>0 
+                and CAST(MONTH(fecha_est_tm_conv) AS UNSIGNED)<7;
+			select conv_id into existe_conv from temp_table where conv_id=id_conv;
+            if existe_conv is null then
+				insert into estudiante_toma_convocatoria values (id_est,id_conv,fecha);
+			else
+                SET msg = CONCAT('El estudiante con id ',id_est, ' ya se encuentra inscrito a la convocatoria ', id_conv, 
+                ' para el periodo ', YEAR(fecha), '-1');
+				SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = msg;
+			end if;
+		else
+			drop table if exists temp_table;
+			CREATE TEMPORARY TABLE temp_table as select conv_id from estudiante_toma_convocatoria 
+				where idEst=id_est and YEAR(fecha_est_tm_conv)=YEAR(fecha) and CAST(MONTH(fecha_est_tm_conv) AS UNSIGNED)>6 
+                and CAST(MONTH(fecha_est_tm_conv) AS UNSIGNED)<13;
+			select conv_id into existe_conv from temp_table where conv_id=id_conv;
+            if existe_conv is null then
+				insert into estudiante_toma_convocatoria values (id_est,id_conv,fecha);
+			else
+                SET msg = CONCAT('El estudiante con id ',id_est, ' ya se encuentra inscrito a la convocatoria ', id_conv, 
+                ' para el periodo ', YEAR(fecha), '-2');
+				SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = msg;
+			end if;
+		end if;
+	END $$
+DELIMITER ;
+
+/*
+call sp_insertar_est_tm_conv_est(9, 210 ,'2023-03-15');
+call sp_insertar_est_tm_conv_est(9, 211 ,'2023-03-15');
+
+call sp_insertar_est_tm_conv_est(13, 1 ,'2023-07-13');
+call sp_insertar_est_tm_conv_est(13, 2 ,'2023-07-13');
+select * from estudiante_toma_convocatoria;
+*/
+
+# 10. Si al insertar una convocatoria de gestión de alojamiento, la cobertura es mayor al costo, no insertarla
+
+# 11. El secretario/dirección quieren conocer las convoctarias de un programa
+
+# 12. La dirección económica quiere eliminar convocatorias económicas, pero para hacerlo 
+#debe eliminar primero el registro de la  tabla de convocarorias
+
+# 13
+
+# 14
+
+# 15
+
+# 16
+
+# 17
+
+# 18
+
+# 19
+
+# 20
 
 
 
@@ -461,4 +740,3 @@ create procedure sp_consultar_gestion_emprendimiento ()
 		select * from ConvocatoriaFomentoEmprendimeinto join Convocatoria on (conv_id);
 	end $$
 DELIMITER ;
-
