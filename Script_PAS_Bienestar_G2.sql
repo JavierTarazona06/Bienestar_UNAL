@@ -319,9 +319,267 @@ DELIMITER ;
 #																	Carlos
 #--------------------------------------------------------------------------------------------------------------------------------------------
 
+# PAS:
+# 1. -------------------------------------- Verificar que un estudiante puede participar de una convocatoria -------------------------------------------
+drop procedure if exists pas_estudiante_accede_conv;
+DELIMITER $$
+create procedure pas_estudiante_accede_conv(in estPapa double, in convPapa double )
+begin
+	declare msg varchar(100);
+    if (estPapa < convPapa) then
+		set msg = concat('El estudiante no puede participar de la convocatoria.');
+	else 
+		set msg = concat('El estudiante puede participar de la convocatoria.');
+	end if;
+    select msg;
+end $$
+DELIMITER ;
+
+# 2. -------------------------------------- Consultar el lugar de un Evento/Taller -------------------------------------------
+drop procedure if exists pas_consultar_lugar_eveta;
+DELIMITER $$
+create procedure pas_consultar_lugar_eveta(in nomEveta varchar (60))
+begin
+	select evetaLugar from EventoTaller where nomEveta = evetaNombre;
+end $$
+DELIMITER ;
+
+# 3. -------------------------------------- Verificar viabilidad de un proyecto de acuerdo a un presupuesto -------------------------------------------
+
+drop procedure if exists pas_check_proyecto;
+DELIMITER $$
+create procedure pas_check_proyecto(in idProyecto int, in presupuestoDado int)
+begin
+	declare msg varchar (100);
+    declare presProyecto int;
+    select proyPresupuesto into presProyecto from Proyecto where proyidProyecto = idProyecto;
+    if (presProyecto > presupuestoDado) then
+		set msg = concat('Su proyecto no es viable, excede el presupuesto.');
+	else
+		set msg = concat('Su proyecto es viable, puede insertarse en la tabla de proyectos.');
+	end if;
+end $$
+DELIMITER ;
+
+# 4. -------------------------------------- Un área quiere consultar cuantos estudiantes se presentan por facultad a sus convocatorias------------------
+
+drop procedure if exists pas_consultar_num_estudiantes;
+DELIMITER $$
+create procedure pas_consultar_num_estudiantes(in idArea int)
+begin
+	select count(distinct estID) from (Area join Programa on (areID = Area_areID)) join 
+    ((Estudiante join Estudiante_Toma_Convocatoria on (estID = idEst)) join Convocatoria using (conv_id))
+    on (progID = Programa_progID) where idArea = areID group by estFacultad;
+end $$
+DELIMITER ;
+
+# 5. --------------------------------------- Agregar una nueva convocatoria a cursos libres y selecciones  ------------------
+
+drop procedure if exists pas_agregar_convocatoria_cur_libre;
+DELIMITER $$
+create procedure pas_agregar_convocatoria_cur_libre(in idConv int, in nombreConv varchar(70), in fechaA DATE, in fechaC DATE, in edo tinyint, 
+													in idPrograma int, in papaConv double, in tipo VARCHAR(45), in condicion VARCHAR(45))
+begin
+	insert into Convocatoria (conv_id, convNombre, convFechaApertura, convFechaCierre, convEstado, convPeriodo, Programa_progID, convPAPA)
+    values (idConv,nombreConv,fechaA,fechaC,edo,idPrograma,papaConv);
+    
+    insert into ConvocatoriaCursoLibre (Convocatoria_conv_id, curNombre, curTipoCurso, curCondicion) values (idConv, nombreConv, tipo, condicion);
+end $$
+DELIMITER ;
+  
+drop procedure if exists pas_agregar_convocatoria_seleccion;
+DELIMITER $$
+create procedure pas_agregar_convocatoria_cur_libre(in idConv int, in nombreConv varchar(70), in fechaA DATE, in fechaC DATE, in edo tinyint, 
+													in idPrograma int, in papaConv double, in deporte VARCHAR(45), in lugar VARCHAR(45), hora TIME)
+begin
+	insert into Convocatoria (conv_id, convNombre, convFechaApertura, convFechaCierre, convEstado, convPeriodo, Programa_progID, convPAPA)
+    values (idConv,nombreConv,fechaA,fechaC,edo,idPrograma,papaConv);
+    
+    insert into ConvocatoriaCursoLibre (Convocatoria_conv_id, convDeporte, convLugar, convHora) values (idConv, deporte, lugar, hora);
+end $$
+DELIMITER ;
+
+# 6. --------------------------------------- Actualizar tiempo y lugar de distintas tablas ------------------------------------------
+
+# Torneo Interno:
+drop procedure if exists pas_actualizar_fecha_torneo;
+DELIMITER $$
+create procedure pas_actualizar_fecha_torneo (in idTorneo int, in nuevaFechaInicio date, in nuevaFechaFin date)
+begin
+	update TorneoInterno set torFechaInicio = nuevaFechaInicio where idTorneo = toridTorneoInterno;
+    update TorneoInterno set torFechaFinalizacion = nuevaFechaFin where idTorneo = toridTorneoInterno;
+end $$
+DELIMITER ;
 
 
+# ConvocatoriaSeleccion
 
+drop procedure if exists pas_actualizar_hora_convSeleccion;
+DELIMITER $$
+create procedure pas_actualizar_hora_convSeleccion(in idConv int ,in nuevaHora time)
+begin
+	update ConvocatoriaSeleccion set convLugar = nuevaHora where idConv = Convocatoria_convid;
+end $$
+DELIMITER ;
+
+drop procedure if exists pas_actualizar_lugar_convSeleccion;
+DELIMITER $$
+create procedure pas_actualizar_lugar_convSeleccion(in idConv int ,in nuevoLugar varchar(50))
+begin
+	update ConvocatoriaSeleccion set convLugar = nuevoLugar where idConv = Convocatoria_convid;
+end $$
+DELIMITER ;
+
+
+# Evento Taller:
+
+drop procedure if exists pas_actualizar_fecha_eventoTaller;
+DELIMITER $$
+create procedure pas_actualizar_fecha_eventoTaller (in idEveTa int, in nuevaFecha date)
+begin
+	update EventoTaller set evetaFecha = nuevaFecha where evetaidEventoTaller = idEveTa;
+end $$
+DELIMITER ;
+
+drop procedure if exists pas_actualizar_lugar_eventoTaller;
+DELIMITER $$
+create procedure pas_actualizar_lugar_eventoTaller (in idEveTa int, in nuevoLugar date)
+begin
+	update EventoTaller set evetaLugar = nuevoLugar where evetaidEventoTaller = idEveTa;
+end $$
+DELIMITER ;
+
+drop procedure if exists pas_actualizar_hora_eventoTaller;
+DELIMITER $$
+create procedure pas_actualizar_lugar_eventoTaller (in idEveTa int, in nuevaHoraInicio datetime, in nuevaHoraFin datetime)
+begin
+	update EventoTaller set evetaHoraInicio = nuevaHoraInicio where evetaidEventoTaller = idEveTa;
+    update EventoTaller set evetaHoraFin = nuevaHoraFin where evetaidEventoTaller = idEveTa;
+end $$
+DELIMITER ;
+
+
+# Proyecto:
+
+drop procedure if exists pas_actualizar_fechas_proyecto;
+DELIMITER $$
+create procedure pas_actualizar_fechas_proyecto(in idProyecto int, in nuevaFechaInicio date, in nuevaFechaFin date)
+begin
+	update Proyecto set proyFechaInicio = nuevaFechaInicio where idProyecto = proyIdProyecto;
+    update Proyecto set proyFechaFinalizacion = nuevaFechaFin where idProyecto = proyIdProyecto;
+end $$
+DELIMITER ;
+
+# 7. --------------------------------------- Actualizar ejecucion de un proyecto ------------------------------------------
+
+drop procedure if exists pas_actualizar_ejecucion_proyecto;
+DELIMITER $$
+create procedure pas_actualizar_fechas_proyecto(in idProyecto int, in nuevaEjecucion decimal)
+begin
+	update Proyecto set proyEjecucion = nuevaEjecucion where idProyecto = proyIdProyecto;
+end $$
+DELIMITER ;
+
+# 8. --------------------------------------- Agregar un nuevo torneo interno  ---------------------------------------------
+
+drop procedure if exists pas_agregar_nuevo_torneo;
+DELIMITER $$
+create procedure pas_agregar_nuevo_torneo(in idTorneo int, in periodo varchar(10), in sedeFacultad varchar(60), in deporte varchar(35), in nombreTorneo varchar (90),
+										in estado TINYINT, in modalidad VARCHAR(45), in rama VARCHAR(45), in nivel VARCHAR(45), in FechaInicio DATE, in FechaFinalizacion DATE
+										, in idPrograma INT)
+begin
+	insert into TorneoInterno (toridTorneoInterno, torPeriodo, torSedeFacultad, torDeporte, torNombreTorneo, torEstado, torModalidad, torRama, torNivel
+    , torFechaInicio, torFechaFinalizacion, Programa_progID) values (idTorneo, periodo, sedeFacultad, deporte, nombreTorneo, estado, modalidad, rama, nivel, FechaInicio,
+    FechaFinalizacion, idPrograma);
+end $$
+DELIMITER ;
+
+# 9. ---------------------------- Un programa quiere agregar nuevos proyectos, eventos, y talleres---------------------------------------
+
+
+# Proyecto
+
+drop procedure if exists pas_crear_nuevoProyecto;
+DELIMITER $$
+create procedure pas_crear_nuevoProyecto(in IdProyecto INT,in Nombre VARCHAR(60),in Ejecucion DECIMAL,in FechaInicio DATE, in FechaFinalizacion DATE,
+										Presupuesto VARCHAR(1000), in idPrograma int)
+begin
+	insert into Proyecto (proyIdProyecto, proyNombre, proyEjecucion, proyFechaInicio, proyFechaFinalizacion, proyPresupuesto) values (
+    IdProyecto, Nombre,  Ejecucion, FechaInicio, FechaFinalizacion, Presupuesto);
+    insert into Programa_Tiene_Proyecto (Proyecto_proyIdProyecto, progID) values (proyIdProyecto, idPrograma);
+    
+end $$
+DELIMITER ;
+
+
+# EventoTaller
+
+drop procedure if exists pas_agendar_nuevoEventoTaller;
+DELIMITER $$
+create procedure pas_agendar_nuevoEventoTaller(in idEventoTaller1 INT, in Nombre VARCHAR(60), in TipoEventoTaller VARCHAR(45), in Descripcion LONGTEXT,
+					in HoraInicio DATETIME, in HoraFin DATETIME, in Fecha DATE, in Lugar VARCHAR(45), in idPrograma int)
+begin
+	insert into EventoTaller (evetaidEventoTaller, evetaNombre, evetaTipoEventoTaller, eveDescripcion, evetaHoraInicio, evetaHoraFin,
+							  evetaFecha, evetaLugar) values (
+    idEventoTaller1, Nombre,  TipoEventoTaller, Descripcion, HoraInicio, HoraFin, Fecha, Lugar);
+    insert into Programa_Tiene_EventoTaller (idEventoTaller, progID) values (idEventoTaller1, idPrograma);
+    
+end $$
+DELIMITER ;
+
+
+# 10. ---------------------------- Se quiere consultar eventos, talleres y proyectos disponbibles ---------------------------------------
+
+#Pendientes:
+/*
+1. hacer sección 10.
+
+2. asignar permisos a los pas.
+
+3. agregar vistas necesarias en caso tal.
+*/ 
+
+# Triggers:
+# Si una convocatoria tiene estado cerrada no se puede insertar.
+drop trigger if exists tr_check_convocatoria;
+DELIMITER $$
+create trigger tr_check_convocatoria before insert on Convocatoria 
+for each row
+	begin
+		declare msg varchar(225);
+        if (new.convEstado = 0) then
+			set msg = concat('No se puede insertar una convocatoria cerrada: ', new.convEstado);
+            SIGNAL sqlstate '45000' set message_text = msg;
+		end if;
+	end $$
+DELIMITER ;
+
+# Verificar si el programa que inserta nuevos torneos es el programa de deporte de competenecia, Ningún otro puede crear torneos deportivos
+drop trigger if exists tr_check_torneo;
+DELIMITER $$
+create trigger tr_check_torneo before insert on TorneoInterno for each row
+begin
+	declare msg varchar(225);
+        if (new.Programa_progID != 1) then -- ids de programas a convenir
+			set msg = concat('El programa no tiene permitido crear nuevos torneos');
+            SIGNAL sqlstate '45000' set message_text = msg;
+		end if;
+end $$
+DELIMITER ;
+
+# No se pueden crear convocatorias a selecciones fuera del horario laboral.
+drop trigger if exists tr_check_hora_conv_seleccion;
+DELIMITER $$
+create trigger tr_check_hora_conv_seleccion before insert on ConvocatoriaSeleccion
+for each row
+begin
+	declare msg varchar(225);
+        if (new.convHora < '06:00:00' and new.convHora > '20:00:00') then
+			set msg = concat('No se pueden citar convocatorias fuera del horario laboral.');
+            SIGNAL sqlstate '45000' set message_text = msg;
+		end if;
+end $$
+DELIMITER ;
 
 
 

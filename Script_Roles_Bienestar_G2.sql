@@ -290,39 +290,40 @@ GRANT ALL ON vw_doctor_procedimiento TO 'direccion_salud'@'localhost';
 #													Carlos
 #--------------------------------------------------------------------------------------------------------
 
-grant all on bienestar.Persona to 'direccion_deporte'@'localhost';
-grant all on bienestar.persona_cargo to 'direccion_deporte'@'localhost';
-grant all on bienestar.Cargo to 'direccion_deporte'@'localhost';
-grant all on bienestar.Estudiante to 'direccion_deporte'@'localhost';
-grant all on bienestar.Carrera to 'direccion_deporte'@'localhost';
-grant all on bienestar.Area to 'direccion_deporte'@'localhost';
-grant all on bienestar.Programa to 'direccion_deporte'@'localhost';
-grant all on bienestar.Programa_tiene_EventoTaller to 'direccion_deporte'@'localhost';
-grant all on bienestar.EventoTaller to 'direccion_deporte'@'localhost';
-grant all on bienestar.Programa_tiene_proyecto to 'direccion_deporte'@'localhost';
-grant all on bienestar.Proyecto to 'direccion_deporte'@'localhost';
-grant all on bienestar.Convocatoria to 'direccion_deporte'@'localhost';
-grant all on bienestar.Estudiante_toma_convocatoria to 'direccion_deporte'@'localhost';
+#permisos para estudiantes
+grant select on Bienestar.TorneoInterno to 'estudiante'@'localhost';
+grant select on Bienestar.ConvocatoriaCursoLibre to 'estudiante'@'localhost';
+grant select on Bienestar.ConvocatoriaSeleccion to 'estudiante'@'localhost';
 
-grant all on bienestar.vw_info_estudiante to 'direccion_deporte'@'localhost';
-grant all on bienestar.vw_info_convocatoria_estudiante to 'direccion_deporte'@'localhost';
+grant select on vw_info_curso_libre_convocatoria to 'estudiante'@'localhost';
+grant select on vw_info_seleccion_convocatoria to 'estudiante'@'localhost';
+grant select on vw_info_convocatoria_estudiante to 'estudiante'@'localhost';
 
-grant all on bienestar.Persona to 'direccion_cultural'@'localhost';
-grant all on bienestar.persona_cargo to 'direccion_cultural'@'localhost';
-grant all on bienestar.Cargo to 'direccion_cultural'@'localhost';
-grant all on bienestar.Estudiante to 'direccion_cultural'@'localhost';
-grant all on bienestar.Carrera to 'direccion_cultural'@'localhost';
-grant all on bienestar.Area to 'direccion_cultural'@'localhost';
-grant all on bienestar.Programa to 'direccion_cultural'@'localhost';
-grant all on bienestar.Programa_tiene_EventoTaller to 'direccion_cultural'@'localhost';
-grant all on bienestar.EventoTaller to 'direccion_cultural'@'localhost';
-grant all on bienestar.Programa_tiene_proyecto to 'direccion_cultural'@'localhost';
-grant all on bienestar.Proyecto to 'direccion_cultural'@'localhost';
-grant all on bienestar.Convocatoria to 'direccion_cultural'@'localhost';
-grant all on bienestar.Estudiante_toma_convocatoria to 'direccion_cultural'@'localhost';
+#Permisos para no estudiantes
+grant select on Bienestar.TorneoInterno to 'no_estudiante'@'localhost';
+grant select on Bienestar.ConvocatoriaCursoLibre to 'no_estudiante'@'localhost';
+grant select on Bienestar.ConvocatoriaSeleccion to 'no_estudiante'@'localhost';
 
-grant all on bienestar.vw_info_estudiante to 'direccion_cultural'@'localhost';
-grant all on bienestar.vw_info_convocatoria_estudiante to 'direccion_cultural'@'localhost';
+grant select on vw_info_curso_libre_convocatoria to 'no_estudiante'@'localhost';
+grant select on vw_info_seleccion_convocatoria to 'no_estudiante'@'localhost';
+
+#Permisos para la secretaria de bienestar
+grant all on Bienestar.TorneoInterno to 'secretaria'@'localhost';
+grant select, insert, update on Bienestar.ConvocatoriaCursoLibre to 'secretaria'@'localhost';
+grant select, insert, update on Bienestar.ConvocatoriaSeleccion to 'secretaria'@'localhost';
+
+grant select, insert, update on vw_info_curso_libre_convocatoria to 'secretaria'@'localhost';
+grant select, insert, update on vw_info_seleccion_convocatoria to 'secretaria'@'localhost';
+grant all on vw_info_convocatoria_estudiante to 'secretaria'@'localhost';
+
+#Permisos para la dirección de deporte
+grant all on Bienestar.TorneoInterno to 'direccion_deporte'@'localhost';
+grant all on Bienestar.ConvocatoriaCursoLibre to 'direccion_deporte'@'localhost';
+grant all on Bienestar.ConvocatoriaSeleccion to 'direccion_deporte'@'localhost';
+
+grant all on vw_info_curso_libre_convocatoria to 'direccion_deporte'@'localhost';
+grant all on vw_info_seleccion_convocatoriao to 'direccion_deporte'@'localhost';
+grant all on vw_info_convocatoria_estudiante to 'direccion_deporte'@'localhost';
 
 
 FLUSH PRIVILEGES;
