@@ -153,6 +153,28 @@ drop view if exists vw_info_convocatoria_estudiante;
 create view vw_info_convocatoria_estudiante as select conv_id, estID,Programa_progID, convNombre, convFechaApertura, convFechaCierre from (Estudiante join Estudiante_Toma_Convocatoria on (estID = idEst)) join Convocatoria using (conv_id);
 select * from vw_info_convocatoria_estudiante;
 
+#Vista de proyectos y sus detalles
+
+select proyIdProyecto, progID,proyNombre, proyEjecucion, proyPresupuesto, areID  from ((Proyecto join Programa_Tiene_Proyecto on 
+								(proyIdProyecto = Proyecto_proyIdProyecto)) join Programa using (progID)) join Area on (areID = Area_areID);
+drop view if exists vw_info_proyecto;
+create view vw_info_proyecto as select proyIdProyecto, progID,proyNombre, proyEjecucion, proyPresupuesto, areID  from ((Proyecto join Programa_Tiene_Proyecto on 
+								(proyIdProyecto = Proyecto_proyIdProyecto)) join Programa using (progID)) join Area on (areID = Area_areID);
+select * from vw_info_proyecto;
+
+#Vista de eventos y sus detalles.
+select evetaidEventoTaller, progID,evetaNombre,
+	eveDescripcion, evetaHoraInicio, evetaHoraFin,
+    evetaFecha, evetaLugar, areID from ((EventoTaller join Programa_Tiene_EventoTaller on 
+								(evetaidEventoTaller = idEventoTaller)) join Programa using (progID)) join Area on (areID = Area_areID);
+drop view if exists vw_info_eventoTaller;
+create view vw_info_eventoTaller as select evetaidEventoTaller, progID,evetaNombre,
+	eveDescripcion, evetaHoraInicio, evetaHoraFin,
+    evetaFecha, evetaLugar, areID from ((EventoTaller join Programa_Tiene_EventoTaller on 
+								(evetaidEventoTaller = idEventoTaller)) join Programa using (progID)) join Area on (areID = Area_areID);
+
+select * from vw_info_eventoTaller;
+
 
 #------------------------------------------------------------------
 #------------------------------------------------------------------

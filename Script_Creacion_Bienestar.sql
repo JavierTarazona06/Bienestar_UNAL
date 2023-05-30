@@ -325,6 +325,11 @@ CREATE TABLE IF NOT EXISTS Bienestar.Programa (
   progID INT UNSIGNED NOT NULL AUTO_INCREMENT,
   progNombre VARCHAR(45) NOT NULL,
   Area_areID INT UNSIGNED NOT NULL,
+  progExtension INT NULL,
+  progCorreoElectronico VARCHAR(60) NULL,
+  progTelefono INT NULL,
+  progEdificio VARCHAR(50) NULL,
+  progOficina VARCHAR(10) NULL,
   PRIMARY KEY (progID),
   CONSTRAINT fk_Programa_Area1
     FOREIGN KEY (Area_areID)
