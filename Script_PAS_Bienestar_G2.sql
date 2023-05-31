@@ -1035,7 +1035,7 @@ select factID from factura where CAST(MONTH(factFecha) as unsigned)=4 and CAST(Y
 select * from factura_producto where factID in (select factID from factura where CAST(MONTH(factFecha) as unsigned)=4 and CAST(YEAR(factFecha) as unsigned)=2023);
 */
 
-#17. Secretaria inserta fallas de alimentación con la fecha actual
+#17. Secretaría inserta fallas de alimentación con la fecha actual
 
 drop procedure if exists insertar_falla_alimentacion_sec;
 DELIMITER $$

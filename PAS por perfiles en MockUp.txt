@@ -1,0 +1,115 @@
+/*
+	Indicar cuales procedimientos almacenados se deberán ejecutar desde la interfaz para uno de los perfiles.
+*/
+
+El rol que se usará es el de estudiante, por ende los procedimientos almacenados estaran enfocados a él.
+Puede consultar el archivo "Script_PAS_Bienestar_G2.sql" donde conocerá el detalle de cada P.A.S enunciado en
+el presente archivo.
+Cabe aclarar que en el archivo se encuentran otros P.A.S y funciones para los otros roles (no estudiante, secretaría
+y dirección)propuestos en la segunda entrega.
+
+#----------------------------------------------------------------------------------------------------------------------
+#                                  						Salud
+#----------------------------------------------------------------------------------------------------------------------
+
+El estudiante se le permite acceder a citas medicas, cancelarlas y ver la informacion de cada una (como medicamentos
+que le hayan enviado). Por ello tendra los siguientes procedimientos:
+
+# 1. Ver las citas medicas disponibles:
+    pas_citas_disponibles()
+
+# 2. Ver sus citas medicas proximas:
+    pas_citas_agendadas(pacienteID INT)
+
+# 3. Cancelar alguna cita
+    pas_delete_cita_medica(usuarioID INT, fechaCita DATETIME, especialidadCita VARCHAR(45))
+
+# 4.Agendar alguna cita
+    pas_add_cita_medica(usuarioID INT, fechaCita DATETIME, especialidadCita VARCHAR(45))
+
+# 5. Ver los resultados de cada cita medica
+    pas_check_resultados(IN usuarioID INT)
+
+Ademas, entre los diferentes tramites que puede tener esta el de pasar incapacidades medicas o atenciones en
+salud para que sean verificadas por el ara de salud.
+
+# 6. Ver el estado de las incapacidades
+    pas_view_incapacidad(IN usuarioID INT)
+
+# 7. Añadir una incapacidad
+    pas_add_incapacidad(usuarioID INT, fecha DATETIME, enfermedad VARCHAR(45), dias TINYINT)
+
+# 8. Modificar una incapacidad de un usuario
+    pas_edit_incapacidad(incapacidadID INT, fecha DATETIME, enfermedad VARCHAR(45), dias TINYINT)
+
+# 9. Ver el estado de las atenciones en salud de un usuario
+    pas_view_atencionsalud(usuarioID INT)
+
+# 10. Añadir una atencion en salud de un usuario
+    pas_add_atencionsalud(usuarioID INT, fecha DATETIME, tipo VARCHAR(45))
+
+# 11. Modificar una atencion en salud de un usuario
+    pas_edit_atencionsalud(atencionsaludID INT, fecha DATETIME, tipo VARCHAR(45))
+
+# 12. Ver perfil de riesgo integral de un usuario
+    pas_view_perfilriesgo(usuarioID INT)
+
+#----------------------------------------------------------------------------------------------------------------------
+#	    									Actividad Fisica y Deporte
+#----------------------------------------------------------------------------------------------------------------------
+
+
+
+#----------------------------------------------------------------------------------------------------------------------
+#                                			Gestion y Fomento Socioeconomico
+#----------------------------------------------------------------------------------------------------------------------
+
+
+En esta área el estudiante podrá tener acceso a información de las convocatorias económicas, actividades de 
+corresponsabilidad y su relación con la tienda de binestar universitario.
+De esta manera, los P.A.S implementados son los siguientes:
+
+# 1. El estudiante puede consultar sus fallas de alimentación
+	sp_fallaalimentacion_est(in id int)
+
+# 2. El estudiante puede consultar sus actividades de corresponsabilidad realizadas
+	sp_actividadcorresp_est(in id int)
+
+# 3. El estudiante puede consultar la cantidad de horas pendientes de corresponsabilidad
+	function horas_corresponsabilidad_est(id_est int)
+
+#4. El estudiante desea conocer su PBM
+	function pbm_est(id_est int)
+
+# 5. El estudiante solo desea visualizar las convocatorias a las que podría acceder según su PBM
+
+	#5.1 La convocatoria fomento emprendimeinto la busca según tema
+		sp_convocatoriafomentoemprendimeinto_est(in id_est int, in tema varchar(50))
+
+	#5.2 La convocatoria de gestión alimentaria solo se puede acceder con PBM < 25
+		sp_convocatoriagestionalimentaria_est(in id_est int, in comida enum('Desayuno','Almuerzo','Cena'), in lugar enum('Comedor central','Hemeroteca','Odontología','Agronomía','Biología','Ciencias Humanas','Ciencias Económicas','Matemáticas','otro'))
+
+	#5.3 La convocatoria de gestión alojamiento solo se puede acceder con PBM < 25
+		sp_convocatoriagestionalojamiento_est(in id_est int, in localidad varchar(100), in tipo enum('Hotel','Casa','Apartamento','Vivienda familiar','Residencia Universitaria','Apartaestudio','Habitación','otro'))
+
+	#5.4 La convocatoria de gestión economica solo se puede acceder con PBM < 20
+		sp_convocatoriagestioneconomica_est(in id_est int)
+
+	#5.5 La convocatoria de gestión transporte solo se puede acceder con PBM < 15
+		sp_convocatoriagestiontransporte_est(in id_est int, in tipo enum('Transporte público masivoTransporte público masivo','otro'))
+
+#6. Una persona/estudiante/secretario/director quiere consultar sus facturas con los detalles en la Tienda de bienestar U
+	sp_info_factura_per(in id_per int, in id_tienda int)
+
+#7. Una persona quiere consultar los productos en una tienda de bienestar U.
+	sp_productos_tienda(in id_tienda int)
+
+# 8. Una persona queire conocer las tiendas donde se encuentra un producto
+	sp_tiendas_ofrece_producto(in id_prod int)
+
+# 9. Si el estudiante inserta una conv. en est_toma_conv, verificar que no ingrese
+#dos veces la misma en el mismo semestre
+	sp_insertar_est_tm_conv_est(in id_est int, in id_conv int, in fecha DATE)
+
+# 11. El estudiante/secretario quiere conocer el programa y área de una convocatoria
+	programa_area_convocatoria(in id_conv int)

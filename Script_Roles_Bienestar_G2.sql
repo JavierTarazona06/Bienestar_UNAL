@@ -59,6 +59,8 @@ GRANT EXECUTE ON PROCEDURE sp_convocatoriagestioneconomica_est TO 'estudiante'@'
 GRANT EXECUTE ON PROCEDURE sp_convocatoriagestiontransporte_est TO 'estudiante'@'localhost';
 
 GRANT EXECUTE ON PROCEDURE sp_info_factura_per TO 'estudiante'@'localhost';
+GRANT EXECUTE ON PROCEDURE sp_productos_tienda TO 'estudiante'@'localhost';
+GRANT EXECUTE ON PROCEDURE sp_tiendas_ofrece_producto TO 'estudiante'@'localhost';
 #---------------
 
 grant update on bienestar.persona to 'no_estudiante'@'localhost';
@@ -134,6 +136,8 @@ GRANT EXECUTE ON PROCEDURE insertar_empl_tienda_un TO 'secretaria'@'localhost';
 GRANT EXECUTE ON PROCEDURE sp_info_factura_per TO 'secretaria'@'localhost';
 GRANT EXECUTE ON PROCEDURE insertar_prod_tienda_un TO 'secretaria'@'localhost';
 GRANT EXECUTE ON PROCEDURE insertar_factura TO 'secretaria'@'localhost';
+GRANT EXECUTE ON PROCEDURE sp_productos_tienda TO 'secretaria'@'localhost';
+GRANT EXECUTE ON PROCEDURE sp_tiendas_ofrece_producto TO 'secretaria'@'localhost';
 
 GRANT EXECUTE ON PROCEDURE insertar_falla_alimentacion_sec TO 'secretaria'@'localhost';
 GRANT EXECUTE ON PROCEDURE insertar_act_corresponsabilidad TO 'secretaria'@'localhost';
@@ -188,6 +192,8 @@ GRANT EXECUTE ON PROCEDURE borrar_empl_tienda_un TO 'direccion_economica'@'local
 GRANT EXECUTE ON PROCEDURE insertar_prod_tienda_un TO 'direccion_economica'@'localhost';
 GRANT EXECUTE ON PROCEDURE borrar_prod_tienda_un TO 'direccion_economica'@'localhost';
 GRANT EXECUTE ON PROCEDURE eliminar_factura_tiempo TO 'direccion_economica'@'localhost';
+GRANT EXECUTE ON PROCEDURE sp_productos_tienda TO 'direccion_economica'@'localhost';
+GRANT EXECUTE ON PROCEDURE sp_tiendas_ofrece_producto TO 'direccion_economica'@'localhost';
 
 GRANT EXECUTE ON PROCEDURE insertar_act_corresponsabilidad TO 'direccion_economica'@'localhost';
 GRANT EXECUTE ON PROCEDURE insertar_conv_alimento TO 'direccion_economica'@'localhost';
