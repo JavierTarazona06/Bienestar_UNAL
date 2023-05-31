@@ -50,6 +50,7 @@ GRANT EXECUTE ON FUNCTION horas_corresponsabilidad_est TO 'estudiante'@'localhos
 GRANT EXECUTE ON FUNCTION pbm_est TO 'estudiante'@'localhost';
 
 GRANT EXECUTE ON PROCEDURE sp_insertar_est_tm_conv_est TO 'estudiante'@'localhost';
+GRANT EXECUTE ON PROCEDURE programa_area_convocatoria TO 'estudiante'@'localhost';
 
 GRANT EXECUTE ON PROCEDURE sp_convocatoriafomentoemprendimeinto_est TO 'estudiante'@'localhost';
 GRANT EXECUTE ON PROCEDURE sp_convocatoriagestionalimentaria_est TO 'estudiante'@'localhost';
@@ -125,8 +126,23 @@ grant select, update on bienestar.vw_info_convocatoria_estudiante to 'secretaria
 grant select, insert, update on bienestar.vw_info_factura to 'secretaria'@'localhost';
 
 GRANT EXECUTE ON PROCEDURE sp_insertar_est_tm_conv_est TO 'secretaria'@'localhost';
+GRANT EXECUTE ON PROCEDURE nombre_convocatorias_up TO 'secretaria'@'localhost';
+GRANT EXECUTE ON PROCEDURE programa_area_convocatoria TO 'secretaria'@'localhost';
+GRANT EXECUTE ON PROCEDURE insertar_conv_en_curso TO 'secretaria'@'localhost';
 
+GRANT EXECUTE ON PROCEDURE insertar_empl_tienda_un TO 'secretaria'@'localhost';
 GRANT EXECUTE ON PROCEDURE sp_info_factura_per TO 'secretaria'@'localhost';
+GRANT EXECUTE ON PROCEDURE insertar_prod_tienda_un TO 'secretaria'@'localhost';
+GRANT EXECUTE ON PROCEDURE insertar_factura TO 'secretaria'@'localhost';
+
+GRANT EXECUTE ON PROCEDURE insertar_falla_alimentacion_sec TO 'secretaria'@'localhost';
+GRANT EXECUTE ON PROCEDURE insertar_act_corresponsabilidad TO 'secretaria'@'localhost';
+GRANT EXECUTE ON PROCEDURE insertar_conv_alimento TO 'secretaria'@'localhost';
+GRANT EXECUTE ON PROCEDURE insertar_conv_emprendimiento TO 'secretaria'@'localhost';
+GRANT EXECUTE ON PROCEDURE insertar_conv_alojamiento TO 'secretaria'@'localhost';
+GRANT EXECUTE ON PROCEDURE insertar_conv_economica TO 'secretaria'@'localhost';
+GRANT EXECUTE ON PROCEDURE insertar_conv_transporte TO 'secretaria'@'localhost';
+
 #-----------------
 
 grant all on bienestar.Persona to 'direccion_economica'@'localhost';
@@ -163,8 +179,27 @@ grant all on bienestar.vw_info_convocatoria_estudiante to 'direccion_economica'@
 grant all on bienestar.vw_info_factura to 'direccion_economica'@'localhost';
 
 GRANT EXECUTE ON PROCEDURE sp_insertar_est_tm_conv_est TO 'direccion_economica'@'localhost';
+GRANT EXECUTE ON PROCEDURE nombre_convocatorias_up TO 'direccion_economica'@'localhost';
+GRANT EXECUTE ON PROCEDURE insertar_conv_en_curso TO 'direccion_economica'@'localhost';
 
+GRANT EXECUTE ON PROCEDURE insertar_empl_tienda_un TO 'direccion_economica'@'localhost';
 GRANT EXECUTE ON PROCEDURE sp_info_factura_per TO 'direccion_economica'@'localhost';
+GRANT EXECUTE ON PROCEDURE borrar_empl_tienda_un TO 'direccion_economica'@'localhost';
+GRANT EXECUTE ON PROCEDURE insertar_prod_tienda_un TO 'direccion_economica'@'localhost';
+GRANT EXECUTE ON PROCEDURE borrar_prod_tienda_un TO 'direccion_economica'@'localhost';
+GRANT EXECUTE ON PROCEDURE eliminar_factura_tiempo TO 'direccion_economica'@'localhost';
+
+GRANT EXECUTE ON PROCEDURE insertar_act_corresponsabilidad TO 'direccion_economica'@'localhost';
+GRANT EXECUTE ON PROCEDURE insertar_conv_alimento TO 'direccion_economica'@'localhost';
+GRANT EXECUTE ON PROCEDURE eliminar_conv_alimento TO 'direccion_economica'@'localhost';
+GRANT EXECUTE ON PROCEDURE insertar_conv_emprendimiento TO 'direccion_economica'@'localhost';
+GRANT EXECUTE ON PROCEDURE eliminar_conv_emprendimiento TO 'direccion_economica'@'localhost';
+GRANT EXECUTE ON PROCEDURE insertar_conv_alojamiento TO 'direccion_economica'@'localhost';
+GRANT EXECUTE ON PROCEDURE eliminar_conv_alojamiento TO 'direccion_economica'@'localhost';
+GRANT EXECUTE ON PROCEDURE insertar_conv_economica TO 'direccion_economica'@'localhost';
+GRANT EXECUTE ON PROCEDURE eliminar_conv_economica TO 'direccion_economica'@'localhost';
+GRANT EXECUTE ON PROCEDURE insertar_conv_transporte TO 'direccion_economica'@'localhost';
+GRANT EXECUTE ON PROCEDURE eliminar_conv_transporte TO 'direccion_economica'@'localhost';
 
 #-------------------------------------------------------------------------------------------------------
 #													Valeria
