@@ -316,30 +316,31 @@ insert into bienestar.programa values
 (3, "CursoCultural", 2),
 (4, "Grupo artistico institucional", 2),
 (5, "Urgencia",  1);
-
+select * from convocatoria;
 DELETE FROM convocatoria;
-insert into convocatoria (conv_id,convNombre,convFechaApertura,convFechaCierre,convEstado,Programa_progID) values (1,'Fomento Económico Estudiantes','2023-01-15','2023-02-1',1,1);
-insert into convocatoria (conv_id,convNombre,convFechaApertura,convFechaCierre,convEstado,Programa_progID) values (15,'Gestión Alojamiento','2023-01-15','2023-02-1',1,1);
-insert into convocatoria (conv_id,convNombre,convFechaApertura,convFechaCierre,convEstado,Programa_progID) values (2,'Fomento Económico Estudiantes Alimentación','2023-01-15','2023-02-1',1,1);
-insert into convocatoria (conv_id,convNombre,convFechaApertura,convFechaCierre,convEstado,Programa_progID) values (3,'Fomento Económico Estudiantes Alimentación','2023-01-15','2023-02-1',1,1);
-insert into convocatoria (conv_id,convNombre,convFechaApertura,convFechaCierre,convEstado,Programa_progID) values (4,'Fomento Económico Estudiantes Alimentación','2023-01-15','2023-02-1',1,1);
-insert into convocatoria (conv_id,convNombre,convFechaApertura,convFechaCierre,convEstado,Programa_progID) values (5,'Gestión Alojamiento','2023-01-15','2023-02-1',1,1);
-insert into convocatoria (conv_id,convNombre,convFechaApertura,convFechaCierre,convEstado,Programa_progID) values (6,'Gestión Alojamiento','2023-01-15','2023-02-1',1,1);
-insert into convocatoria (conv_id,convNombre,convFechaApertura,convFechaCierre,convEstado,Programa_progID) values (7,'Gestión Alojamiento','2023-01-15','2023-02-1',1,1);
-insert into convocatoria (conv_id,convNombre,convFechaApertura,convFechaCierre,convEstado,Programa_progID) values (8,'Gestión Alojamiento','2023-01-15','2023-02-1',1,1);
-insert into convocatoria (conv_id,convNombre,convFechaApertura,convFechaCierre,convEstado,Programa_progID) values (9,'Gestión Alojamiento','2023-01-15','2023-02-1',1,1);
-insert into convocatoria (conv_id,convNombre,convFechaApertura,convFechaCierre,convEstado,Programa_progID) values (10,'Gestión Alojamiento','2023-01-15','2023-02-1',1,1);
-insert into convocatoria (conv_id,convNombre,convFechaApertura,convFechaCierre,convEstado,Programa_progID) values (11,'Gestión Alojamiento','2023-01-15','2023-02-1',1,1);
-insert into convocatoria (conv_id,convNombre,convFechaApertura,convFechaCierre,convEstado,Programa_progID) values (12,'Gestión Alojamiento','2023-01-15','2023-02-1',1,1);
-insert into convocatoria (conv_id,convNombre,convFechaApertura,convFechaCierre,convEstado,Programa_progID) values (13,'Gestión Alojamiento','2023-01-15','2023-02-1',1,1);
-insert into convocatoria (conv_id,convNombre,convFechaApertura,convFechaCierre,convEstado,Programa_progID) values (14,'Gestión Alojamiento','2023-01-15','2023-02-1',1,1);
-insert into convocatoria (conv_id,convNombre,convFechaApertura,convFechaCierre,convEstado,Programa_progID) values (16,'Fomento Económico Estudiantes','2023-01-15','2023-02-1',1,1);
-insert into convocatoria (conv_id,convNombre,convFechaApertura,convFechaCierre,convEstado,Programa_progID) values (17,'Fomento Emprendimiento Estudiantes','2023-01-15','2023-02-1',1,1);
-insert into convocatoria (conv_id,convNombre,convFechaApertura,convFechaCierre,convEstado,Programa_progID) values (18,'Fomento Emprendimiento Estudiantes','2023-01-15','2023-02-1',1,1);
-insert into convocatoria (conv_id,convNombre,convFechaApertura,convFechaCierre,convEstado,Programa_progID) values (19,'Fomento Emprendimiento Estudiantes','2023-01-15','2023-02-1',1,1);
-insert into convocatoria (conv_id,convNombre,convFechaApertura,convFechaCierre,convEstado,Programa_progID) values (20,'Gestión Transporte','2023-01-15','2023-02-1',1,1);
-insert into convocatoria (conv_id,convNombre,convFechaApertura,convFechaCierre,convEstado,Programa_progID) values (21,'Gestión Transporte','2023-01-15','2023-02-1',1,1);
-insert into convocatoria (conv_id,convNombre,convFechaApertura,convFechaCierre,convEstado,Programa_progID) values (22,'Gestión Transporte','2023-01-15','2023-02-1',1,1);
+insert into convocatoria values 
+(1,'Fomento Económico Estudiantes','2023-01-15','2023-02-1',1,'2023-1',1),
+(15,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1),
+(2,'Fomento Económico Estudiantes Alimentación','2023-01-15','2023-02-1',1,'2023-1',1),
+(3,'Fomento Económico Estudiantes Alimentación','2023-01-15','2023-02-1',1,'2023-1',1),
+(4,'Fomento Económico Estudiantes Alimentación','2023-01-15','2023-02-1',1,'2023-1',1),
+(5,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1),
+(6,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1),
+(7,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1),
+(8,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1),
+(9,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1),
+(10,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1),
+(11,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1),
+(12,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1),
+(13,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1),
+(14,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1),
+(16,'Fomento Económico Estudiantes','2023-01-15','2023-02-1',1,'2023-1',1),
+(17,'Fomento Emprendimiento Estudiantes','2023-01-15','2023-02-1',1,'2023-1',1),
+(18,'Fomento Emprendimiento Estudiantes','2023-01-15','2023-02-1',1,'2023-1',1),
+(19,'Fomento Emprendimiento Estudiantes','2023-01-15','2023-02-1',1,'2023-1',1),
+(20,'Gestión Transporte','2023-01-15','2023-02-1',1,'2023-1',1),
+(21,'Gestión Transporte','2023-01-15','2023-02-1',1,'2023-1',1),
+(22,'Gestión Transporte','2023-01-15','2023-02-1',1,'2023-1',1);
 
 DELETE FROM convocatoriagestioneconomica;
 insert into convocatoriagestioneconomica values (1,500000);
@@ -434,26 +435,27 @@ insert into fallaalimentacion (estID,fallAlcgaComida,fallAlLugar,fallAlFecha) va
 insert into fallaalimentacion (estID,fallAlcgaComida,fallAlLugar,fallAlFecha) values (23,'Almuerzo','Ciencias Humanas','2023-06-17');
 
 DELETE FROM actividadcorresp;
-insert into actividadcorresp (actCorID,estID,actCorActividad,actCorHoras) values (0,18,'comunitaria',3);
-insert into actividadcorresp (actCorID,estID,actCorActividad,actCorHoras) values (1,27,'cultural',8);
-insert into actividadcorresp (actCorID,estID,actCorActividad,actCorHoras) values (2,9,'acompañamiento',6);
-insert into actividadcorresp (actCorID,estID,actCorActividad,actCorHoras) values (3,24,'académica',6);
-insert into actividadcorresp (actCorID,estID,actCorActividad,actCorHoras) values (4,23,'académica',5);
-insert into actividadcorresp (actCorID,estID,actCorActividad,actCorHoras) values (5,23,'cultural',3);
-insert into actividadcorresp (actCorID,estID,actCorActividad,actCorHoras) values (6,5,'académica',2);
-insert into actividadcorresp (actCorID,estID,actCorActividad,actCorHoras) values (7,7,'acompañamiento',5);
-insert into actividadcorresp (actCorID,estID,actCorActividad,actCorHoras) values (8,26,'otra',7);
-insert into actividadcorresp (actCorID,estID,actCorActividad,actCorHoras) values (9,5,'otra',3);
-insert into actividadcorresp (actCorID,estID,actCorActividad,actCorHoras) values (10,5,'comunitaria',2);
-insert into actividadcorresp (actCorID,estID,actCorActividad,actCorHoras) values (11,30,'desarrollo institucional',8);
-insert into actividadcorresp (actCorID,estID,actCorActividad,actCorHoras) values (12,17,'otra',3);
-insert into actividadcorresp (actCorID,estID,actCorActividad,actCorHoras) values (13,2,'desarrollo institucional',3);
-insert into actividadcorresp (actCorID,estID,actCorActividad,actCorHoras) values (14,30,'académica',6);
-insert into actividadcorresp (actCorID,estID,actCorActividad,actCorHoras) values (15,13,'comunitaria',3);
-insert into actividadcorresp (actCorID,estID,actCorActividad,actCorHoras) values (16,26,'deportiva',2);
-insert into actividadcorresp (actCorID,estID,actCorActividad,actCorHoras) values (17,25,'comunitaria',4);
-insert into actividadcorresp (actCorID,estID,actCorActividad,actCorHoras) values (18,1,'acompañamiento',3);
-insert into actividadcorresp (actCorID,estID,actCorActividad,actCorHoras) values (19,24,'acompañamiento',7);
+insert into actividadcorresp values 
+(0,18,'comunitaria',3,'2023-02-01'),
+(1,27,'cultural',8,'2023-03-01'),
+(2,9,'acompañamiento',6,'2023-04-01'),
+(3,24,'académica',6,'2023-05-01'),
+(4,23,'académica',5,'2023-06-01'),
+(5,23,'cultural',3,'2023-07-01'),
+(6,5,'académica',2,'2023-08-01'),
+(7,7,'acompañamiento',5,'2023-09-01'),
+(8,26,'otra',7,'2023-10-01'),
+(9,5,'otra',3,'2023-11-01'),
+(10,5,'comunitaria',2,'2023-02-01'),
+(11,30,'desarrollo institucional',8,'2023-03-01'),
+(12,17,'otra',3,'2023-04-01'),
+(13,2,'desarrollo institucional',3,'2023-05-01'),
+(14,30,'académica',6,'2023-06-01'),
+(15,13,'comunitaria',3,'2023-07-01'),
+(16,26,'deportiva',2,'2023-08-01'),
+(17,25,'comunitaria',4,'2023-09-01'),
+(18,1,'acompañamiento',3,'2023-10-01'),
+(19,24,'acompañamiento',7,'2023-11-01');
 
 INSERT INTO corresponsabilidad VALUES
 (2, 10),

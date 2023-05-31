@@ -682,6 +682,7 @@ CREATE TABLE IF NOT EXISTS Bienestar.ActividadCorresp (
   estID INT UNSIGNED NOT NULL,
   actCorActividad ENUM('académica', 'deportiva', 'cultural', 'comunitaria', 'acompañamiento', 'desarrollo institucional', 'otra') NOT NULL DEFAULT 'académica',
   actCorHoras TINYINT NOT NULL,
+  actCorFecha DATE NOT NULL,
   PRIMARY KEY (actCorID),
   CONSTRAINT fk_ActividadCorresp_Estudiante1
     FOREIGN KEY (estID)
