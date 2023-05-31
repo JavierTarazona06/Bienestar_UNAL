@@ -325,6 +325,11 @@ CREATE TABLE IF NOT EXISTS Bienestar.Programa (
   progID INT UNSIGNED NOT NULL AUTO_INCREMENT,
   progNombre VARCHAR(45) NOT NULL,
   Area_areID INT UNSIGNED NOT NULL,
+  progExtension INT NULL,
+  progCorreoElectronico VARCHAR(60) NULL,
+  progTelefono INT NULL,
+  progEdificio VARCHAR(50) NULL,
+  progOficina VARCHAR(10) NULL,
   PRIMARY KEY (progID),
   CONSTRAINT fk_Programa_Area1
     FOREIGN KEY (Area_areID)
@@ -351,6 +356,7 @@ CREATE TABLE IF NOT EXISTS Bienestar.Convocatoria (
   convEstado TINYINT NOT NULL,
   convPeriodo VARCHAR(25) NULL,
   Programa_progID INT UNSIGNED NOT NULL,
+  convPAPA DOUBLE NULL DEFAULT 3.5,
   PRIMARY KEY (conv_id, Programa_progID),
   CONSTRAINT fk_Convocatoria_Programa1
     FOREIGN KEY (Programa_progID)
@@ -568,6 +574,7 @@ CREATE TABLE IF NOT EXISTS Bienestar.Estudiante (
   estTipoAdmision VARCHAR(20) NOT NULL,
   estEsEgresado TINYINT NOT NULL,
   estAnoGraduacion INT NULL,
+  estPAPA DOUBLE NOT NULL,
   PRIMARY KEY (estID),
   CONSTRAINT fk_Estudiante_copy1_Persona_copy11
     FOREIGN KEY (estID)

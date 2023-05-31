@@ -325,39 +325,108 @@ GRANT ALL ON vw_doctor_procedimiento TO 'direccion_salud'@'localhost';
 #													Carlos
 #--------------------------------------------------------------------------------------------------------
 
-grant all on bienestar.Persona to 'direccion_deporte'@'localhost';
-grant all on bienestar.persona_cargo to 'direccion_deporte'@'localhost';
-grant all on bienestar.Cargo to 'direccion_deporte'@'localhost';
-grant all on bienestar.Estudiante to 'direccion_deporte'@'localhost';
-grant all on bienestar.Carrera to 'direccion_deporte'@'localhost';
-grant all on bienestar.Area to 'direccion_deporte'@'localhost';
-grant all on bienestar.Programa to 'direccion_deporte'@'localhost';
-grant all on bienestar.Programa_tiene_EventoTaller to 'direccion_deporte'@'localhost';
-grant all on bienestar.EventoTaller to 'direccion_deporte'@'localhost';
-grant all on bienestar.Programa_tiene_proyecto to 'direccion_deporte'@'localhost';
-grant all on bienestar.Proyecto to 'direccion_deporte'@'localhost';
-grant all on bienestar.Convocatoria to 'direccion_deporte'@'localhost';
-grant all on bienestar.Estudiante_toma_convocatoria to 'direccion_deporte'@'localhost';
+#--------------------------------------------Permisos para estudiantes--------------------------------------------------------------
+grant select on Bienestar.TorneoInterno to 'estudiante'@'localhost';
+grant select on Bienestar.ConvocatoriaCursoLibre to 'estudiante'@'localhost';
+grant select on Bienestar.ConvocatoriaSeleccion to 'estudiante'@'localhost';
 
-grant all on bienestar.vw_info_estudiante to 'direccion_deporte'@'localhost';
-grant all on bienestar.vw_info_convocatoria_estudiante to 'direccion_deporte'@'localhost';
+grant select on vw_info_curso_libre_convocatoria to 'estudiante'@'localhost';
+grant select on vw_info_seleccion_convocatoria to 'estudiante'@'localhost';
+grant select on vw_info_convocatoria_estudiante to 'estudiante'@'localhost';
 
-grant all on bienestar.Persona to 'direccion_cultural'@'localhost';
-grant all on bienestar.persona_cargo to 'direccion_cultural'@'localhost';
-grant all on bienestar.Cargo to 'direccion_cultural'@'localhost';
-grant all on bienestar.Estudiante to 'direccion_cultural'@'localhost';
-grant all on bienestar.Carrera to 'direccion_cultural'@'localhost';
-grant all on bienestar.Area to 'direccion_cultural'@'localhost';
-grant all on bienestar.Programa to 'direccion_cultural'@'localhost';
-grant all on bienestar.Programa_tiene_EventoTaller to 'direccion_cultural'@'localhost';
-grant all on bienestar.EventoTaller to 'direccion_cultural'@'localhost';
-grant all on bienestar.Programa_tiene_proyecto to 'direccion_cultural'@'localhost';
-grant all on bienestar.Proyecto to 'direccion_cultural'@'localhost';
-grant all on bienestar.Convocatoria to 'direccion_cultural'@'localhost';
-grant all on bienestar.Estudiante_toma_convocatoria to 'direccion_cultural'@'localhost';
+grant execute on procedure sp_consultar_mis_convocatorias to 'estudiante'@'localhost';
+grant execute on procedure pas_participar_convocatoria to 'estudiante'@'localhost';
+grant execute on procedure pas_consultar_eventoTaller_programa to 'estudiante'@'localhost';
+grant execute on procedure pas_consultar_proyectos_programa to 'estudiante'@'localhost';
+grant execute on procedure pas_consultar_proyectos_area to 'estudiante'@'localhost';
+grant execute on procedure pas_consultar_eventoTaller_area to 'estudiante'@'localhost';
+grant execute on procedure pas_consultar_info_eventoTaller to 'estudiante'@'localhost';
+grant execute on procedure pas_consultar_info_proyecto to 'estudiante'@'localhost';
+grant execute on procedure pas_estudiante_accede_conv to 'estudiante'@'localhost';
 
-grant all on bienestar.vw_info_estudiante to 'direccion_cultural'@'localhost';
-grant all on bienestar.vw_info_convocatoria_estudiante to 'direccion_cultural'@'localhost';
+
+#------------------------------------------Permisos para no estudiantes-------------------------------------------------------------
+grant select on Bienestar.TorneoInterno to 'no_estudiante'@'localhost';
+grant select on Bienestar.ConvocatoriaCursoLibre to 'no_estudiante'@'localhost';
+grant select on Bienestar.ConvocatoriaSeleccion to 'no_estudiante'@'localhost';
+
+grant select on vw_info_curso_libre_convocatoria to 'no_estudiante'@'localhost';
+grant select on vw_info_seleccion_convocatoria to 'no_estudiante'@'localhost';
+
+grant execute on procedure pas_consultar_eventoTaller_programa to 'no_estudiante'@'localhost';
+grant execute on procedure pas_consultar_proyectos_programa to 'no_estudiante'@'localhost';
+grant execute on procedure pas_consultar_proyectos_area to 'no_estudiante'@'localhost';
+grant execute on procedure pas_consultar_eventoTaller_area to 'no_estudiante'@'localhost';
+grant execute on procedure pas_consultar_info_eventoTaller to 'no_estudiante'@'localhost';
+grant execute on procedure pas_consultar_info_proyecto to 'no_estudiante'@'localhost';
+
+
+#-----------------------------------------Permisos para la secretaria de bienestar----------------------------------------------------
+grant all on Bienestar.TorneoInterno to 'secretaria'@'localhost';
+grant select, insert, update on Bienestar.ConvocatoriaCursoLibre to 'secretaria'@'localhost';
+grant select, insert, update on Bienestar.ConvocatoriaSeleccion to 'secretaria'@'localhost';
+
+grant select, insert, update on vw_info_curso_libre_convocatoria to 'secretaria'@'localhost';
+grant select, insert, update on vw_info_seleccion_convocatoria to 'secretaria'@'localhost';
+grant all on vw_info_convocatoria_estudiante to 'secretaria'@'localhost';
+
+grant execute on procedure pas_participar_convocatoria to 'secretaria'@'localhost';
+grant execute on procedure pas_consultar_eventoTaller_programa to 'secretaria'@'localhost';
+grant execute on procedure pas_consultar_proyectos_programa to 'secretaria'@'localhost';
+grant execute on procedure pas_consultar_proyectos_area to 'secretaria'@'localhost';
+grant execute on procedure pas_consultar_eventoTaller_area to 'secretaria'@'localhost';
+grant execute on procedure pas_consultar_info_eventoTaller to 'secretaria'@'localhost';
+grant execute on procedure pas_consultar_info_proyecto to 'secretaria'@'localhost';
+grant execute on procedure pas_crear_nuevoProyecto to 'secretaria'@'localhost';
+grant execute on procedure pas_agendar_nuevoEventoTaller to 'secretaria'@'localhost';
+grant execute on procedure pas_agregar_nuevo_torneo to 'secretaria'@'localhost';
+grant execute on procedure pas_actualizar_ejecucion_proyecto to 'secretaria'@'localhost';
+grant execute on procedure pas_actualizar_fecha_torneo to 'secretaria'@'localhost';
+grant execute on procedure pas_actualizar_hora_convSeleccion to 'secretaria'@'localhost';
+grant execute on procedure pas_actualizar_lugar_convSeleccion to 'secretaria'@'localhost';
+grant execute on procedure pas_actualizar_fecha_eventoTaller to 'secretaria'@'localhost';
+grant execute on procedure pas_actualizar_lugar_eventoTaller to 'secretaria'@'localhost';
+grant execute on procedure pas_actualizar_hora_eventoTaller to 'secretaria'@'localhost';
+grant execute on procedure pas_actualizar_fechas_proyecto to 'secretaria'@'localhost';
+grant execute on procedure pas_agregar_convocatoria_cur_libre to 'secretaria'@'localhost';
+grant execute on procedure pas_agregar_convocatoria_seleccion to 'secretaria'@'localhost';
+grant execute on procedure pas_consultar_num_estudiantes to 'secretaria'@'localhost';
+grant execute on procedure pas_check_proyecto to 'secretaria'@'localhost';
+grant execute on procedure pas_estudiante_accede_conv to 'secretaria'@'localhost';
+
+
+#------------------------------Permisos para la dirección de deporte-----------------------------------------
+grant all on Bienestar.TorneoInterno to 'direccion_deporte'@'localhost';
+grant all on Bienestar.ConvocatoriaCursoLibre to 'direccion_deporte'@'localhost';
+grant all on Bienestar.ConvocatoriaSeleccion to 'direccion_deporte'@'localhost';
+
+grant all on vw_info_curso_libre_convocatoria to 'direccion_deporte'@'localhost';
+grant all on vw_info_seleccion_convocatoriao to 'direccion_deporte'@'localhost';
+grant all on vw_info_convocatoria_estudiante to 'direccion_deporte'@'localhost';
+
+grant execute on procedure pas_participar_convocatoria to 'direccion_deporte'@'localhost';
+grant execute on procedure pas_consultar_eventoTaller_programa to 'direccion_deporte'@'localhost';
+grant execute on procedure pas_consultar_proyectos_programa to 'direccion_deporte'@'localhost';
+grant execute on procedure pas_consultar_proyectos_area to 'direccion_deporte'@'localhost';
+grant execute on procedure pas_consultar_eventoTaller_area to 'direccion_deporte'@'localhost';
+grant execute on procedure pas_consultar_info_eventoTaller to 'direccion_deporte'@'localhost';
+grant execute on procedure pas_consultar_info_proyecto to 'direccion_deporte'@'localhost';
+grant execute on procedure pas_crear_nuevoProyecto to 'direccion_deporte'@'localhost';
+grant execute on procedure pas_agendar_nuevoEventoTaller to 'direccion_deporte'@'localhost';
+grant execute on procedure pas_agregar_nuevo_torneo to 'direccion_deporte'@'localhost';
+grant execute on procedure pas_actualizar_ejecucion_proyecto to 'direccion_deporte'@'localhost';
+grant execute on procedure pas_actualizar_fecha_torneo to 'direccion_deporte'@'localhost';
+grant execute on procedure pas_actualizar_hora_convSeleccion to 'direccion_deporte'@'localhost';
+grant execute on procedure pas_actualizar_lugar_convSeleccion to 'direccion_deporte'@'localhost';
+grant execute on procedure pas_actualizar_fecha_eventoTaller to 'direccion_deporte'@'localhost';
+grant execute on procedure pas_actualizar_lugar_eventoTaller to 'direccion_deporte'@'localhost';
+grant execute on procedure pas_actualizar_hora_eventoTaller to 'direccion_deporte'@'localhost';
+grant execute on procedure pas_actualizar_fechas_proyecto to 'direccion_deporte'@'localhost';
+grant execute on procedure pas_agregar_convocatoria_cur_libre to 'direccion_deporte'@'localhost'; 
+grant execute on procedure pas_agregar_convocatoria_seleccion to 'direccion_deporte'@'localhost';
+grant execute on procedure pas_consultar_num_estudiantes to 'direccion_deporte'@'localhost';
+grant execute on procedure pas_check_proyecto to 'direccion_deporte'@'localhost';
+grant execute on procedure pas_estudiante_accede_conv to 'direccion_deporte'@'localhost';
 
 
 FLUSH PRIVILEGES;
