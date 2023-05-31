@@ -754,7 +754,7 @@ call sp_convocatoriagestioneconomica_est(5);
 
 drop procedure if exists sp_convocatoriagestiontransporte_est;
 DELIMITER $$
-CREATE PROCEDURE sp_convocatoriagestiontransporte_est(in id_est int, in tipo enum('Transporte público masivoTransporte público masivo','otro'))
+CREATE PROCEDURE sp_convocatoriagestiontransporte_est(in id_est int, in tipo enum('Transporte público masivo','otro'))
 	BEGIN
 		if pbm_est(id_est)<16 then
 			select * from convocatoriagestiontransporte where cgtTipoTransporte=tipo order by cgtCobertura;
