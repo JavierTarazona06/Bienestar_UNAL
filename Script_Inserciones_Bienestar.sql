@@ -316,7 +316,7 @@ insert into bienestar.programa values
 (3, "CursoCultural", 2),
 (4, "Grupo artistico institucional", 2),
 (5, "Urgencia",  1);
-select * from convocatoria;
+
 DELETE FROM convocatoria;
 insert into convocatoria values 
 (1,'Fomento Económico Estudiantes','2023-01-15','2023-02-1',1,'2023-1',1),
