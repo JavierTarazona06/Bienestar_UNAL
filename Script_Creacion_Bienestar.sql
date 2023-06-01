@@ -19,22 +19,22 @@ CREATE SCHEMA IF NOT EXISTS Bienestar DEFAULT CHARACTER SET utf8 ;
 USE Bienestar ;
 
 -- -----------------------------------------------------
--- Table Bienestar.Ambulancia
+-- Table Bienestar.ambulancia
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS Bienestar.Ambulancia ;
+DROP TABLE IF EXISTS Bienestar.ambulancia ;
 
-CREATE TABLE IF NOT EXISTS Bienestar.Ambulancia (
+CREATE TABLE IF NOT EXISTS Bienestar.ambulancia (
   ambID VARCHAR(6) NOT NULL,
   PRIMARY KEY (ambID))
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table Bienestar.Persona
+-- Table Bienestar.persona
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS Bienestar.Persona ;
+DROP TABLE IF EXISTS Bienestar.persona ;
 
-CREATE TABLE IF NOT EXISTS Bienestar.Persona (
+CREATE TABLE IF NOT EXISTS Bienestar.persona (
   perID INT UNSIGNED NOT NULL,
   perNombre VARCHAR(45) NOT NULL,
   perApellido VARCHAR(45) NOT NULL,
@@ -51,15 +51,15 @@ CREATE TABLE IF NOT EXISTS Bienestar.Persona (
   PRIMARY KEY (perID))
 ENGINE = InnoDB;
 
-#CREATE UNIQUE INDEX perID_UNIQUE ON Bienestar.Persona (perID ASC) VISIBLE;
+#CREATE UNIQUE INDEX perID_UNIQUE ON Bienestar.persona (perID ASC) VISIBLE;
 
 
 -- -----------------------------------------------------
--- Table Bienestar.PersonalSalud
+-- Table Bienestar.personalsalud
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS Bienestar.PersonalSalud ;
+DROP TABLE IF EXISTS Bienestar.personalsalud ;
 
-CREATE TABLE IF NOT EXISTS Bienestar.PersonalSalud (
+CREATE TABLE IF NOT EXISTS Bienestar.personalsalud (
   perID INT UNSIGNED NOT NULL,
   ambulanciaID VARCHAR(6) NULL,
   salProfesion VARCHAR(45) NOT NULL,
@@ -77,15 +77,15 @@ CREATE TABLE IF NOT EXISTS Bienestar.PersonalSalud (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-#CREATE INDEX fk_PersonalSalud_Ambulancia_idx ON Bienestar.PersonalSalud (ambulanciaID ASC) VISIBLE;
+#CREATE INDEX fk_PersonalSalud_Ambulancia_idx ON Bienestar.personalsalud (ambulanciaID ASC) VISIBLE;
 
 
 -- -----------------------------------------------------
--- Table Bienestar.Urgencia
+-- Table Bienestar.urgencia
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS Bienestar.Urgencia ;
+DROP TABLE IF EXISTS Bienestar.urgencia ;
 
-CREATE TABLE IF NOT EXISTS Bienestar.Urgencia (
+CREATE TABLE IF NOT EXISTS Bienestar.urgencia (
   urgID INT NOT NULL AUTO_INCREMENT,
   perID INT UNSIGNED NOT NULL,
   ambulanciaID VARCHAR(6) NOT NULL,
@@ -109,17 +109,17 @@ CREATE TABLE IF NOT EXISTS Bienestar.Urgencia (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-#CREATE INDEX fk_Urgencia_Ambulancia_idx ON Bienestar.Urgencia (Ambulancia ASC) VISIBLE;
+#CREATE INDEX fk_Urgencia_Ambulancia_idx ON Bienestar.urgencia (Ambulancia ASC) VISIBLE;
 
-#CREATE INDEX fk_Urgencia_Persona_idx ON Bienestar.Urgencia (perID ASC) VISIBLE;
+#CREATE INDEX fk_Urgencia_Persona_idx ON Bienestar.urgencia (perID ASC) VISIBLE;
 
 
 -- -----------------------------------------------------
--- Table Bienestar.Incapacidad
+-- Table Bienestar.incapacidad
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS Bienestar.Incapacidad ;
+DROP TABLE IF EXISTS Bienestar.incapacidad ;
 
-CREATE TABLE IF NOT EXISTS Bienestar.Incapacidad (
+CREATE TABLE IF NOT EXISTS Bienestar.incapacidad (
   incID INT UNSIGNED NOT NULL AUTO_INCREMENT,
   perID INT UNSIGNED NOT NULL,
   incFecha DATE NOT NULL,
@@ -137,11 +137,11 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table Bienestar.PerfilRiesgoIntegral
+-- Table Bienestar.perfilriesgointegral
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS Bienestar.PerfilRiesgoIntegral ;
+DROP TABLE IF EXISTS Bienestar.perfilriesgointegral;
 
-CREATE TABLE IF NOT EXISTS Bienestar.PerfilRiesgoIntegral (
+CREATE TABLE IF NOT EXISTS Bienestar.perfilriesgointegral (
   perID INT UNSIGNED NOT NULL,
   perFecha DATE NOT NULL,
   perSaludFisica INT NOT NULL,
@@ -156,11 +156,11 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table Bienestar.Discapacidad
+-- Table Bienestar.discapacidad
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS Bienestar.Discapacidad ;
+DROP TABLE IF EXISTS Bienestar.discapacidad ;
 
-CREATE TABLE IF NOT EXISTS Bienestar.Discapacidad (
+CREATE TABLE IF NOT EXISTS Bienestar.discapacidad (
   disID INT UNSIGNED NOT NULL AUTO_INCREMENT,
   perID INT UNSIGNED NOT NULL,
   disNombre VARCHAR(45) NOT NULL,
@@ -176,25 +176,25 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table Bienestar.Cargo
+-- Table Bienestar.cargo
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS Bienestar.Cargo ;
+DROP TABLE IF EXISTS Bienestar.cargo ;
 
-CREATE TABLE IF NOT EXISTS Bienestar.Cargo (
+CREATE TABLE IF NOT EXISTS Bienestar.cargo (
   carID INT UNSIGNED NOT NULL,
   carNombre ENUM('Profesor', 'Estudiante', 'Rector', 'Directivo', 'Jefe', 'Empleado', 'Ninguno', 'Otro', 'Vicerrector') NOT NULL DEFAULT 'Profesor',
   PRIMARY KEY (carID))
 ENGINE = InnoDB;
 
-CREATE UNIQUE INDEX perID_UNIQUE ON Bienestar.Cargo (carID ASC) VISIBLE;
+CREATE UNIQUE INDEX perID_UNIQUE ON Bienestar.cargo (carID ASC) VISIBLE;
 
 
 -- -----------------------------------------------------
--- Table Bienestar.CitaMedica
+-- Table Bienestar.citamedica
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS Bienestar.CitaMedica ;
+DROP TABLE IF EXISTS Bienestar.citamedica ;
 
-CREATE TABLE IF NOT EXISTS Bienestar.CitaMedica (
+CREATE TABLE IF NOT EXISTS Bienestar.citamedica (
   citID INT UNSIGNED NOT NULL AUTO_INCREMENT,
   doctorID INT UNSIGNED NOT NULL,
   pacienteID INT UNSIGNED NULL,
@@ -214,17 +214,17 @@ CREATE TABLE IF NOT EXISTS Bienestar.CitaMedica (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-#CREATE INDEX fk_CitaMedica_Persona_idx ON Bienestar.CitaMedica (pacienteID ASC) VISIBLE;
+#CREATE INDEX fk_CitaMedica_Persona_idx ON Bienestar.citamedica (pacienteID ASC) VISIBLE;
 
-#CREATE INDEX fk_CitaMedica_PersonalSalud_idx ON Bienestar.CitaMedica (doctorID ASC) VISIBLE;
+#CREATE INDEX fk_CitaMedica_PersonalSalud_idx ON Bienestar.citamedica (doctorID ASC) VISIBLE;
 
 
 -- -----------------------------------------------------
--- Table Bienestar.EvaluacionFisica
+-- Table Bienestar.evaluacionfisica
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS Bienestar.EvaluacionFisica ;
+DROP TABLE IF EXISTS Bienestar.evaluacionfisica ;
 
-CREATE TABLE IF NOT EXISTS Bienestar.EvaluacionFisica (
+CREATE TABLE IF NOT EXISTS Bienestar.evaluacionfisica (
   citID INT UNSIGNED NOT NULL,
   evaPeso TINYINT NOT NULL,
   evaEstatura TINYINT NOT NULL,
@@ -239,11 +239,11 @@ CREATE TABLE IF NOT EXISTS Bienestar.EvaluacionFisica (
 ENGINE = InnoDB;
 
 -- -----------------------------------------------------
--- Table Bienestar.Medicamentos
+-- Table Bienestar.medicamentos
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS Bienestar.Medicamentos ;
+DROP TABLE IF EXISTS Bienestar.medicamentos ;
 
-CREATE TABLE IF NOT EXISTS Bienestar.Medicamentos (
+CREATE TABLE IF NOT EXISTS Bienestar.medicamentos (
   medID INT NOT NULL AUTO_INCREMENT,
   citID INT UNSIGNED NOT NULL,
   medNombre VARCHAR(45) NOT NULL,
@@ -259,11 +259,11 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table Bienestar.OrdenMedica
+-- Table Bienestar.ordenmedica
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS Bienestar.OrdenMedica ;
+DROP TABLE IF EXISTS Bienestar.ordenmedica ;
 
-CREATE TABLE IF NOT EXISTS Bienestar.OrdenMedica (
+CREATE TABLE IF NOT EXISTS Bienestar.ordenmedica (
   ordID INT NOT NULL AUTO_INCREMENT,
   citID INT UNSIGNED NOT NULL,
   ordExamen VARCHAR(45) NOT NULL,
@@ -277,11 +277,11 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table Bienestar.Enfermedad
+-- Table Bienestar.enfermedad
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS Bienestar.Enfermedad ;
+DROP TABLE IF EXISTS Bienestar.enfermedad ;
 
-CREATE TABLE IF NOT EXISTS Bienestar.Enfermedad (
+CREATE TABLE IF NOT EXISTS Bienestar.enfermedad (
   enfID INT UNSIGNED NOT NULL AUTO_INCREMENT,
   perID INT UNSIGNED NOT NULL,
   enfNombre VARCHAR(45) NOT NULL,
@@ -294,15 +294,15 @@ CREATE TABLE IF NOT EXISTS Bienestar.Enfermedad (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-#CREATE INDEX fk_Enfermedad_Persona_idx ON Bienestar.Enfermedad (perID ASC) VISIBLE;
+#CREATE INDEX fk_Enfermedad_Persona_idx ON Bienestar.enfermedad (perID ASC) VISIBLE;
 
 
 -- -----------------------------------------------------
--- Table Bienestar.Area
+-- Table Bienestar.area
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS Bienestar.Area ;
+DROP TABLE IF EXISTS Bienestar.area ;
 
-CREATE TABLE IF NOT EXISTS Bienestar.Area (
+CREATE TABLE IF NOT EXISTS Bienestar.area (
   areID INT UNSIGNED NOT NULL AUTO_INCREMENT,
   areNombre VARCHAR(45) NOT NULL,
   areTelefono bigint NOT NULL,
@@ -313,15 +313,15 @@ CREATE TABLE IF NOT EXISTS Bienestar.Area (
   PRIMARY KEY (areID))
 ENGINE = InnoDB;
 
-CREATE UNIQUE INDEX areID_UNIQUE ON Bienestar.Area (areID ASC) VISIBLE;
+CREATE UNIQUE INDEX areID_UNIQUE ON Bienestar.area (areID ASC) VISIBLE;
 
 
 -- -----------------------------------------------------
--- Table Bienestar.Programa
+-- Table Bienestar.programa
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS Bienestar.Programa ;
+DROP TABLE IF EXISTS Bienestar.programa ;
 
-CREATE TABLE IF NOT EXISTS Bienestar.Programa (
+CREATE TABLE IF NOT EXISTS Bienestar.programa (
   progID INT UNSIGNED NOT NULL AUTO_INCREMENT,
   progNombre VARCHAR(45) NOT NULL,
   Area_areID INT UNSIGNED NOT NULL,
@@ -338,17 +338,17 @@ CREATE TABLE IF NOT EXISTS Bienestar.Programa (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-CREATE UNIQUE INDEX progID_UNIQUE ON Bienestar.Programa (progID ASC) VISIBLE;
+CREATE UNIQUE INDEX progID_UNIQUE ON Bienestar.programa (progID ASC) VISIBLE;
 
-CREATE INDEX fk_Programa_Area1_idx ON Bienestar.Programa (Area_areID ASC) VISIBLE;
+CREATE INDEX fk_Programa_Area1_idx ON Bienestar.programa (Area_areID ASC) VISIBLE;
 
 
 -- -----------------------------------------------------
--- Table Bienestar.Convocatoria
+-- Table Bienestar.convocatoria
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS Bienestar.Convocatoria ;
+DROP TABLE IF EXISTS Bienestar.convocatoria ;
 
-CREATE TABLE IF NOT EXISTS Bienestar.Convocatoria (
+CREATE TABLE IF NOT EXISTS Bienestar.convocatoria (
   conv_id INT NOT NULL,
   convNombre VARCHAR(70) NOT NULL,
   convFechaApertura DATE NOT NULL,
@@ -365,15 +365,15 @@ CREATE TABLE IF NOT EXISTS Bienestar.Convocatoria (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-CREATE INDEX fk_Convocatoria_Programa1_idx ON Bienestar.Convocatoria (Programa_progID ASC) VISIBLE;
+CREATE INDEX fk_Convocatoria_Programa1_idx ON Bienestar.convocatoria (Programa_progID ASC) VISIBLE;
 
 
 -- -----------------------------------------------------
--- Table Bienestar.GrupoArtisticoInstitucional
+-- Table Bienestar.grupoartisticoinstitucional
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS Bienestar.GrupoArtisticoInstitucional ;
+DROP TABLE IF EXISTS Bienestar.grupoartisticoinstitucional ;
 
-CREATE TABLE IF NOT EXISTS Bienestar.GrupoArtisticoInstitucional (
+CREATE TABLE IF NOT EXISTS Bienestar.grupoartisticoinstitucional (
   GAI_id INT NOT NULL,
   gaiRequerimientoEspacio VARCHAR(50) NOT NULL,
   gaiNombre VARCHAR(45) NOT NULL,
@@ -391,15 +391,15 @@ CREATE TABLE IF NOT EXISTS Bienestar.GrupoArtisticoInstitucional (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-CREATE INDEX fk_GrupoArtisticoInstitucional_Programa1_idx ON Bienestar.GrupoArtisticoInstitucional (progID ASC) VISIBLE;
+CREATE INDEX fk_GrupoArtisticoInstitucional_Programa1_idx ON Bienestar.grupoartisticoinstitucional (progID ASC) VISIBLE;
 
 
 -- -----------------------------------------------------
--- Table Bienestar.ConvocatoriaGAI
+-- Table Bienestar.convocatoriagai
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS Bienestar.ConvocatoriaGAI ;
+DROP TABLE IF EXISTS Bienestar.convocatoriagai ;
 
-CREATE TABLE IF NOT EXISTS Bienestar.ConvocatoriaGAI (
+CREATE TABLE IF NOT EXISTS Bienestar.convocatoriagai (
   Convocatoria_conv_id INT NOT NULL,
   GrupoArtisticoInstitucional_GAI_id INT NOT NULL,
   convGaiNombre VARCHAR(50) NOT NULL,
@@ -418,17 +418,17 @@ CREATE TABLE IF NOT EXISTS Bienestar.ConvocatoriaGAI (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-CREATE INDEX fk_ConvGAI_Convocatoria1_idx ON Bienestar.ConvocatoriaGAI (Convocatoria_conv_id ASC) VISIBLE;
+CREATE INDEX fk_ConvGAI_Convocatoria1_idx ON Bienestar.convocatoriagai (Convocatoria_conv_id ASC) VISIBLE;
 
-CREATE INDEX fk_ConvocatoriaGAI_GrupoArtisticoInstitucional1_idx ON Bienestar.ConvocatoriaGAI (GrupoArtisticoInstitucional_GAI_id ASC) VISIBLE;
+CREATE INDEX fk_ConvocatoriaGAI_GrupoArtisticoInstitucional1_idx ON Bienestar.convocatoriagai (GrupoArtisticoInstitucional_GAI_id ASC) VISIBLE;
 
 
 -- -----------------------------------------------------
--- Table Bienestar.TorneoInterno
+-- Table Bienestar.torneointerno
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS Bienestar.TorneoInterno ;
+DROP TABLE IF EXISTS Bienestar.torneointerno ;
 
-CREATE TABLE IF NOT EXISTS Bienestar.TorneoInterno (
+CREATE TABLE IF NOT EXISTS Bienestar.torneointerno (
   toridTorneoInterno INT NOT NULL,
   torPeriodo VARCHAR(10) NOT NULL,
   torSedeFacultad VARCHAR(60) NOT NULL,
@@ -449,15 +449,15 @@ CREATE TABLE IF NOT EXISTS Bienestar.TorneoInterno (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-CREATE INDEX fk_TorneoInterno_Programa1_idx ON Bienestar.TorneoInterno (Programa_progID ASC) VISIBLE;
+CREATE INDEX fk_TorneoInterno_Programa1_idx ON Bienestar.torneointerno (Programa_progID ASC) VISIBLE;
 
 
 -- -----------------------------------------------------
--- Table Bienestar.ConvocatoriaCursoLibre
+-- Table Bienestar.convocatoriacursolibre
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS Bienestar.ConvocatoriaCursoLibre ;
+DROP TABLE IF EXISTS Bienestar.convocatoriacursolibre ;
 
-CREATE TABLE IF NOT EXISTS Bienestar.ConvocatoriaCursoLibre (
+CREATE TABLE IF NOT EXISTS Bienestar.convocatoriacursolibre (
   Convocatoria_conv_id INT NOT NULL,
   curNombre VARCHAR(45) NOT NULL,
   curTipoCurso VARCHAR(45) NOT NULL,
@@ -472,11 +472,11 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table Bienestar.ConvocatoriaSeleccion
+-- Table Bienestar.convocatoriaseleccion
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS Bienestar.ConvocatoriaSeleccion ;
+DROP TABLE IF EXISTS Bienestar.convocatoriaseleccion ;
 
-CREATE TABLE IF NOT EXISTS Bienestar.ConvocatoriaSeleccion (
+CREATE TABLE IF NOT EXISTS Bienestar.convocatoriaseleccion (
   Convocatoria_conv_id INT NOT NULL,
   convDeporte VARCHAR(45) NOT NULL,
   convLugar VARCHAR(50) NOT NULL,
@@ -491,11 +491,11 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table Bienestar.EventoTaller
+-- Table Bienestar.eventotaller
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS Bienestar.EventoTaller ;
+DROP TABLE IF EXISTS Bienestar.eventotaller ;
 
-CREATE TABLE IF NOT EXISTS Bienestar.EventoTaller (
+CREATE TABLE IF NOT EXISTS Bienestar.eventotaller (
   evetaidEventoTaller INT NOT NULL,
   evetaNombre VARCHAR(60) NOT NULL,
   evetaTipoEventoTaller VARCHAR(45) NOT NULL,
@@ -509,11 +509,11 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table Bienestar.Proyecto
+-- Table Bienestar.proyecto
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS Bienestar.Proyecto ;
+DROP TABLE IF EXISTS Bienestar.proyecto ;
 
-CREATE TABLE IF NOT EXISTS Bienestar.Proyecto (
+CREATE TABLE IF NOT EXISTS Bienestar.proyecto (
   proyIdProyecto INT NOT NULL,
   proyNombre VARCHAR(60) NOT NULL,
   proyEjecucion DECIMAL NOT NULL,
@@ -525,11 +525,11 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table Bienestar.AtencionEnSalud
+-- Table Bienestar.atencionensalud
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS Bienestar.AtencionEnSalud ;
+DROP TABLE IF EXISTS Bienestar.atencionensalud ;
 
-CREATE TABLE IF NOT EXISTS Bienestar.AtencionEnSalud (
+CREATE TABLE IF NOT EXISTS Bienestar.atencionensalud (
   antID INT UNSIGNED NOT NULL AUTO_INCREMENT,
   perID INT UNSIGNED NOT NULL,
   ateFecha DATETIME NOT NULL,
@@ -546,26 +546,26 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table Bienestar.Carrera
+-- Table Bienestar.carrera
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS Bienestar.Carrera ;
+DROP TABLE IF EXISTS Bienestar.carrera ;
 
-CREATE TABLE IF NOT EXISTS Bienestar.Carrera (
+CREATE TABLE IF NOT EXISTS Bienestar.carrera (
   carreID INT UNSIGNED NOT NULL AUTO_INCREMENT,
   carreNombre VARCHAR(45) NOT NULL,
   carreCreditos INT NOT NULL DEFAULT 0,
   PRIMARY KEY (carreID))
 ENGINE = InnoDB;
 
-CREATE UNIQUE INDEX carID_UNIQUE ON Bienestar.Carrera (carreID ASC) VISIBLE;
+CREATE UNIQUE INDEX carID_UNIQUE ON Bienestar.carrera (carreID ASC) VISIBLE;
 
 
 -- -----------------------------------------------------
--- Table Bienestar.Estudiante
+-- Table Bienestar.estudiante
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS Bienestar.Estudiante ;
+DROP TABLE IF EXISTS Bienestar.estudiante ;
 
-CREATE TABLE IF NOT EXISTS Bienestar.Estudiante (
+CREATE TABLE IF NOT EXISTS Bienestar.estudiante (
   estID INT UNSIGNED NOT NULL,
   carreID INT UNSIGNED NOT NULL,
   estEdad TINYINT UNSIGNED NOT NULL,
@@ -588,17 +588,17 @@ CREATE TABLE IF NOT EXISTS Bienestar.Estudiante (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-CREATE INDEX fk_Estudiante_copy1_Persona_copy11_idx ON Bienestar.Estudiante (estID ASC) VISIBLE;
+CREATE INDEX fk_Estudiante_copy1_Persona_copy11_idx ON Bienestar.estudiante (estID ASC) VISIBLE;
 
-CREATE INDEX fk_Estudiante_copy1_Carrera1_idx ON Bienestar.Estudiante (carreID ASC) VISIBLE;
+CREATE INDEX fk_Estudiante_copy1_Carrera1_idx ON Bienestar.estudiante (carreID ASC) VISIBLE;
 
 
 -- -----------------------------------------------------
--- Table Bienestar.ConvocatoriaGestionAlojamiento
+-- Table Bienestar.convocatoriagestionalojamiento
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS Bienestar.ConvocatoriaGestionAlojamiento ;
+DROP TABLE IF EXISTS Bienestar.convocatoriagestionalojamiento ;
 
-CREATE TABLE IF NOT EXISTS Bienestar.ConvocatoriaGestionAlojamiento (
+CREATE TABLE IF NOT EXISTS Bienestar.convocatoriagestionalojamiento (
   conv_id INT NOT NULL,
   cgalDireccionAlojamiento VARCHAR(100) NOT NULL DEFAULT 'Bogota',
   cgalLocalidadAlojamiento VARCHAR(100) NOT NULL DEFAULT 'Teusaquillo',
@@ -614,15 +614,15 @@ CREATE TABLE IF NOT EXISTS Bienestar.ConvocatoriaGestionAlojamiento (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-#CREATE INDEX fk_CvGesAlojamiento_Convocatoria1_idx ON Bienestar.ConvocatoriaGestionAlojamiento (conv_id ASC) VISIBLE;
+#CREATE INDEX fk_CvGesAlojamiento_Convocatoria1_idx ON Bienestar.convocatoriagestionalojamiento (conv_id ASC) VISIBLE;
 
 
 -- -----------------------------------------------------
--- Table Bienestar.ConvocatoriaGestionTransporte
+-- Table Bienestar.convocatoriagestiontransporte
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS Bienestar.ConvocatoriaGestionTransporte ;
+DROP TABLE IF EXISTS Bienestar.convocatoriagestiontransporte ;
 
-CREATE TABLE IF NOT EXISTS Bienestar.ConvocatoriaGestionTransporte (
+CREATE TABLE IF NOT EXISTS Bienestar.convocatoriagestiontransporte (
   conv_id INT NOT NULL,
   cgtCobertura FLOAT NOT NULL DEFAULT 0,
   cgtTipoTransporte ENUM('Transporte público masivo', 'otro') NOT NULL DEFAULT 'otro',
@@ -636,11 +636,11 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table Bienestar.ConvocatoriaGestionAlimentaria
+-- Table Bienestar.convocatoriagestionalimentaria
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS Bienestar.ConvocatoriaGestionAlimentaria ;
+DROP TABLE IF EXISTS Bienestar.convocatoriagestionalimentaria ;
 
-CREATE TABLE IF NOT EXISTS Bienestar.ConvocatoriaGestionAlimentaria (
+CREATE TABLE IF NOT EXISTS Bienestar.convocatoriagestionalimentaria (
   conv_id INT NOT NULL,
   cgaComida ENUM('Desayuno', 'Almuerzo', 'Cena') NOT NULL DEFAULT 'Almuerzo',
   cgaLugar ENUM('Comedor central', 'Hemeroteca', 'Odontología', 'Agronomía', 'Biología', 'Ciencias Humanas', 'Ciencias Económicas', 'Matemáticas', 'otro') NOT NULL DEFAULT 'Comedor central',
@@ -654,11 +654,11 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table Bienestar.Corresponsabilidad
+-- Table Bienestar.corresponsabilidad
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS Bienestar.Corresponsabilidad ;
+DROP TABLE IF EXISTS Bienestar.corresponsabilidad ;
 
-CREATE TABLE IF NOT EXISTS Bienestar.Corresponsabilidad (
+CREATE TABLE IF NOT EXISTS Bienestar.corresponsabilidad (
   idEst INT UNSIGNED NOT NULL,
   horPendCorresp TINYINT UNSIGNED NOT NULL DEFAULT 0,
   PRIMARY KEY (idEst, horPendCorresp),
@@ -669,15 +669,15 @@ CREATE TABLE IF NOT EXISTS Bienestar.Corresponsabilidad (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-CREATE INDEX fk_Corresponsabilidad_Estudiante_copy11_idx ON Bienestar.Corresponsabilidad (idEst ASC) VISIBLE;
+CREATE INDEX fk_Corresponsabilidad_Estudiante_copy11_idx ON Bienestar.corresponsabilidad (idEst ASC) VISIBLE;
 
 
 -- -----------------------------------------------------
--- Table Bienestar.ActividadCorresp
+-- Table Bienestar.actividadcorresp
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS Bienestar.ActividadCorresp ;
+DROP TABLE IF EXISTS Bienestar.actividadcorresp ;
 
-CREATE TABLE IF NOT EXISTS Bienestar.ActividadCorresp (
+CREATE TABLE IF NOT EXISTS Bienestar.actividadcorresp (
   actCorID INT UNSIGNED NOT NULL,
   estID INT UNSIGNED NOT NULL,
   actCorActividad ENUM('académica', 'deportiva', 'cultural', 'comunitaria', 'acompañamiento', 'desarrollo institucional', 'otra') NOT NULL DEFAULT 'académica',
@@ -691,17 +691,17 @@ CREATE TABLE IF NOT EXISTS Bienestar.ActividadCorresp (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-CREATE UNIQUE INDEX idActividadCorresp_UNIQUE ON Bienestar.ActividadCorresp (actCorID ASC) VISIBLE;
+CREATE UNIQUE INDEX idActividadCorresp_UNIQUE ON Bienestar.actividadcorresp (actCorID ASC) VISIBLE;
 
-CREATE INDEX fk_ActividadCorresp_Estudiante1_idx ON Bienestar.ActividadCorresp (estID ASC) VISIBLE;
+CREATE INDEX fk_ActividadCorresp_Estudiante1_idx ON Bienestar.actividadcorresp (estID ASC) VISIBLE;
 
 
 -- -----------------------------------------------------
--- Table Bienestar.Programa_Tiene_Proyecto
+-- Table Bienestar.programa_tiene_proyecto
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS Bienestar.Programa_Tiene_Proyecto ;
+DROP TABLE IF EXISTS Bienestar.programa_tiene_proyecto ;
 
-CREATE TABLE IF NOT EXISTS Bienestar.Programa_Tiene_Proyecto (
+CREATE TABLE IF NOT EXISTS Bienestar.programa_tiene_proyecto (
   Proyecto_proyIdProyecto INT NOT NULL,
   progID INT UNSIGNED NOT NULL,
   PRIMARY KEY (Proyecto_proyIdProyecto, progID),
@@ -717,17 +717,17 @@ CREATE TABLE IF NOT EXISTS Bienestar.Programa_Tiene_Proyecto (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-CREATE INDEX fk_Programa_has_Proyecto_Proyecto1_idx ON Bienestar.Programa_Tiene_Proyecto (Proyecto_proyIdProyecto ASC) VISIBLE;
+CREATE INDEX fk_Programa_has_Proyecto_Proyecto1_idx ON Bienestar.programa_tiene_proyecto (Proyecto_proyIdProyecto ASC) VISIBLE;
 
-CREATE INDEX fk_Programa_Tiene_Proyecto_Programa1_idx ON Bienestar.Programa_Tiene_Proyecto (progID ASC) VISIBLE;
+CREATE INDEX fk_Programa_Tiene_Proyecto_Programa1_idx ON Bienestar.programa_tiene_proyecto (progID ASC) VISIBLE;
 
 
 -- -----------------------------------------------------
--- Table Bienestar.Programa_Tiene_EventoTaller
+-- Table Bienestar.programa_tiene_eventotaller
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS Bienestar.Programa_Tiene_EventoTaller ;
+DROP TABLE IF EXISTS Bienestar.programa_tiene_eventotaller ;
 
-CREATE TABLE IF NOT EXISTS Bienestar.Programa_Tiene_EventoTaller (
+CREATE TABLE IF NOT EXISTS Bienestar.programa_tiene_eventotaller (
   idEventoTaller INT NOT NULL,
   progID INT UNSIGNED NOT NULL,
   PRIMARY KEY (idEventoTaller, progID),
@@ -743,9 +743,9 @@ CREATE TABLE IF NOT EXISTS Bienestar.Programa_Tiene_EventoTaller (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-CREATE INDEX fk_Programa_has_EventoTaller_EventoTaller1_idx ON Bienestar.Programa_Tiene_EventoTaller (idEventoTaller ASC) VISIBLE;
+CREATE INDEX fk_Programa_has_EventoTaller_EventoTaller1_idx ON Bienestar.programa_tiene_eventotaller (idEventoTaller ASC) VISIBLE;
 
-CREATE INDEX fk_Programa_Tiene_EventoTaller_Programa1_idx ON Bienestar.Programa_Tiene_EventoTaller (progID ASC) VISIBLE;
+CREATE INDEX fk_Programa_Tiene_EventoTaller_Programa1_idx ON Bienestar.programa_tiene_eventotaller (progID ASC) VISIBLE;
 
 
 -- -----------------------------------------------------

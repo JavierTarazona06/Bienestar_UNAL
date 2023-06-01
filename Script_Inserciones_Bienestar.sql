@@ -255,40 +255,41 @@ insert into carrera values(46,'Sociología (SNIES 16 )','162');
 insert into carrera values(47,'Trabajo Social (SNIES 15 )','171');
 insert into carrera values(48,'Zootecnia (SNIES 3 )','174');
 
-DELETE FROM Estudiante;
-insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (1,'36','17','Ingeniería','73','Regular','0', 2015, 4.1);
-insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (2,'27','27','Artes','50','Regular','0' , 2015, 4.5);
-insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (3,'26','21','Ciencias Humanas','76','PEAMA','0' , 2017, 4.4);
-insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (4,'47','18','Ingeniería','19','Regular','0' , 2018, 4.5);
-insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (5,'22','19','Ciencias Económicas','73','PEAMA','0', 2018, 4.5);
-insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (6,'13','28','Ciencias Económicas','30','PEAMA','0', 2002, 4.5);
-insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (7,'13','24','Enfermería','37','PEAMA','0', 2023, 4.5);
-insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (8,'10','25','Enfermería','88','Regular','0', 2001, 4.5);
-insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (9,'38','19','Ciencias Veterinarias y de Zootecnia','64','PEAMA','0', 2001, 4.5);
-insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (10,'16','23','Enfermería','2','Regular','0', 2001, 4.5);
-insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (11,'34','25','Ciencias','24','Regular','0', 2001, 4.5);
-insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (12,'38','21','Derecho, Ciencias Políticas y Sociales','79','PEAMA','0', 1996, 3.9);
-insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (13,'37','24','Ciencias Económicas','43','PEAMA','0', 1996, 3.9);
-insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (14,'32','26','Ingeniería','39','Regular','0', 1989, 3.9);
-insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (15,'23','17','Ciencias','64','PEAMA','0', 1989, 3.9);
-insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (16,'44','26','Enfermería','0','Regular','0', 2010, 4.9);
-insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (17,'25','19','Ciencias Agrarias','48','Regular','0', 2010, 4.9);
-insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (18,'14','24','Ciencias Agrarias','84','Regular','0', 2010, 4.9);
-insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (19,'34','25','Ciencias Económicas','72','Regular','0', 2010, 4.3);
-insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (20,'44','26','Medicina','77','Regular','0', 2009, 4.3);
-insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (21,'4','23','Derecho, Ciencias Políticas y Sociales','19','PEAMA','0', 2009, 4.3);
-insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (22,'27','26','Odontología','25','Regular','0', 2009, 3.5);
-insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (23,'6','22','Psicología','72','Regular','0', 2009, 3.5);
-insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (24,'27','22','Ciencias Humanas','18','PEAMA','0', 2014, 3.5);
-insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (25,'32','24','Ciencias Humanas','22','PEAMA','0', 2014, 3.5);
-insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (26,'33','22','Ingeniería','92','Regular','0', 2014, 3.5);
-insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (27,'24','20','Ciencias Veterinarias y de Zootecnia','74','PEAMA','0', 2014, 2.9);
-insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (28,'40','17','Artes','30','Regular','0', 1999, 2.9);
-insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (29,'20','28','Ciencias Veterinarias y de Zootecnia','90','PEAMA','0', 1999, 2.9);
-insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (30,'29','30','Ciencias','96','PEAMA','0', 1999, 2.9);
+DELETE FROM estudiante;
+insert into estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values
+(1,'36','17','Ingeniería','73','Regular','0', 2015, 4.1),
+(2,'27','27','Artes','50','Regular','0' , 2015, 4.5),
+(3,'26','21','Ciencias Humanas','76','PEAMA','0' , 2017, 4.4),
+(4,'47','18','Ingeniería','19','Regular','0' , 2018, 4.5),
+(5,'22','19','Ciencias Económicas','73','PEAMA','0', 2018, 4.5),
+(6,'13','28','Ciencias Económicas','30','PEAMA','0', 2002, 4.5),
+(7,'13','24','Enfermería','37','PEAMA','0', 2023, 4.5),
+(8,'10','25','Enfermería','88','Regular','0', 2001, 4.5),
+(9,'38','19','Ciencias Veterinarias y de Zootecnia','64','PEAMA','0', 2001, 4.5),
+(10,'16','23','Enfermería','2','Regular','0', 2001, 4.5),
+(11,'34','25','Ciencias','24','Regular','0', 2001, 4.5),
+(12,'38','21','Derecho, Ciencias Políticas y Sociales','79','PEAMA','0', 1996, 3.9),
+(13,'37','24','Ciencias Económicas','43','PEAMA','0', 1996, 3.9),
+(14,'32','26','Ingeniería','39','Regular','0', 1989, 3.9),
+(15,'23','17','Ciencias','64','PEAMA','0', 1989, 3.9),
+(16,'44','26','Enfermería','0','Regular','0', 2010, 4.9),
+(17,'25','19','Ciencias Agrarias','48','Regular','0', 2010, 4.9),
+(18,'14','24','Ciencias Agrarias','84','Regular','0', 2010, 4.9),
+(19,'34','25','Ciencias Económicas','72','Regular','0', 2010, 4.3),
+(20,'44','26','Medicina','77','Regular','0', 2009, 4.3),
+(21,'4','23','Derecho, Ciencias Políticas y Sociales','19','PEAMA','0', 2009, 4.3),
+(22,'27','26','Odontología','25','Regular','0', 2009, 3.5),
+(23,'6','22','Psicología','72','Regular','0', 2009, 3.5),
+(24,'27','22','Ciencias Humanas','18','PEAMA','0', 2014, 3.5),
+(25,'32','24','Ciencias Humanas','22','PEAMA','0', 2014, 3.5),
+(26,'33','22','Ingeniería','92','Regular','0', 2014, 3.5),
+(27,'24','20','Ciencias Veterinarias y de Zootecnia','74','PEAMA','0', 2014, 2.9),
+(28,'40','17','Artes','30','Regular','0', 1999, 2.9),
+(29,'20','28','Ciencias Veterinarias y de Zootecnia','90','PEAMA','0', 1999, 2.9),
+(30,'29','30','Ciencias','96','PEAMA','0', 1999, 2.9);
 
 DELETE FROM area;
-insert into bienestar.area values
+insert into Bienestar.area values
 (1, "Salud", 5713165000, "areasalud_bog@unal.edu.co", 21072, "CAN Bloque 3, Edificio 933",
 "El Área de Salud promueve el mejoramiento permanente de las condiciones físicas, psíquicas, mentales, sociales y ambientales en las que se desarrolla la vida universitaria, mediante programas formativos, preventivos y correctivos que incidan en la calidad de vida y hábitos de vida saludable.
 Protegemos y promocionamos la salud integral de la comunidad universitaria a partir de la caracterización del riesgo individual y grupal, la prevención de la enfermedad, la gestión en salud y la atención de emergencias."),
@@ -310,8 +311,8 @@ Un equipo humano interdisciplinario que orienta el fortalecimiento del potencial
 "Los programas de Admisión Especial son creados por la Universidad Nacional de Colombia atendiendo a uno de sus fines misionales, el cual es proyectarse al territorio nacional y contribuir con la unidad nacional, la igualdad de oportunidades de acceso a la educación superior y la promoción del desarrollo de la comunidad académica nacional.");
 
 DELETE FROM programa;
-insert into programa (progID,progNombre,Area_areID) values (1,'Fomento Económico Estudiantes',5);
-insert into bienestar.programa values
+insert into programa (progID,progNombre,Area_areID) values 
+(1,'Fomento Económico Estudiantes',5),
 (2, "Cita medica", 1), 
 (3, "CursoCultural", 2),
 (4, "Grupo artistico institucional", 2),
@@ -319,28 +320,28 @@ insert into bienestar.programa values
 
 DELETE FROM convocatoria;
 insert into convocatoria values 
-(1,'Fomento Económico Estudiantes','2023-01-15','2023-02-1',1,'2023-1',1),
-(15,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1),
-(2,'Fomento Económico Estudiantes Alimentación','2023-01-15','2023-02-1',1,'2023-1',1),
-(3,'Fomento Económico Estudiantes Alimentación','2023-01-15','2023-02-1',1,'2023-1',1),
-(4,'Fomento Económico Estudiantes Alimentación','2023-01-15','2023-02-1',1,'2023-1',1),
-(5,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1),
-(6,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1),
-(7,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1),
-(8,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1),
-(9,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1),
-(10,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1),
-(11,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1),
-(12,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1),
-(13,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1),
-(14,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1),
-(16,'Fomento Económico Estudiantes','2023-01-15','2023-02-1',1,'2023-1',1),
-(17,'Fomento Emprendimiento Estudiantes','2023-01-15','2023-02-1',1,'2023-1',1),
-(18,'Fomento Emprendimiento Estudiantes','2023-01-15','2023-02-1',1,'2023-1',1),
-(19,'Fomento Emprendimiento Estudiantes','2023-01-15','2023-02-1',1,'2023-1',1),
-(20,'Gestión Transporte','2023-01-15','2023-02-1',1,'2023-1',1),
-(21,'Gestión Transporte','2023-01-15','2023-02-1',1,'2023-1',1),
-(22,'Gestión Transporte','2023-01-15','2023-02-1',1,'2023-1',1);
+(1,'Fomento Económico Estudiantes','2023-01-15','2023-02-1',1,'2023-1',1,35),
+(2,'Fomento Económico Estudiantes Alimentación','2023-01-15','2023-02-1',1,'2023-1',1,35),
+(3,'Fomento Económico Estudiantes Alimentación','2023-01-15','2023-02-1',1,'2023-1',1,35),
+(4,'Fomento Económico Estudiantes Alimentación','2023-01-15','2023-02-1',1,'2023-1',1,35),
+(5,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1,35),
+(6,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1,35),
+(7,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1,35),
+(8,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1,35),
+(9,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1,35),
+(10,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1,35),
+(11,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1,35),
+(12,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1,35),
+(13,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1,35),
+(14,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1,35),
+(15,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1,35),
+(16,'Fomento Económico Estudiantes','2023-01-15','2023-02-1',1,'2023-1',1,35),
+(17,'Fomento Emprendimiento Estudiantes','2023-01-15','2023-02-1',1,'2023-1',1,35),
+(18,'Fomento Emprendimiento Estudiantes','2023-01-15','2023-02-1',1,'2023-1',1,35),
+(19,'Fomento Emprendimiento Estudiantes','2023-01-15','2023-02-1',1,'2023-1',1,35),
+(20,'Gestión Transporte','2023-01-15','2023-02-1',1,'2023-1',1,35),
+(21,'Gestión Transporte','2023-01-15','2023-02-1',1,'2023-1',1,35),
+(22,'Gestión Transporte','2023-01-15','2023-02-1',1,'2023-1',1,35);
 
 DELETE FROM convocatoriagestioneconomica;
 insert into convocatoriagestioneconomica values (1,500000);
@@ -457,6 +458,7 @@ insert into actividadcorresp values
 (18,1,'acompañamiento',3,'2023-10-01'),
 (19,24,'acompañamiento',7,'2023-11-01');
 
+delete from corresponsabilidad;
 INSERT INTO corresponsabilidad VALUES
 (2, 10),
 (4, 12),
@@ -534,6 +536,7 @@ insert into factura_producto values (15,10);
 insert into factura_producto values (2,8);
 insert into factura_producto values (1,7);
 
+delete from producto_tiendaun;
 INSERT INTO producto_tiendaun VALUES 
 (1, 1),
 (1, 2),
@@ -1321,7 +1324,7 @@ INSERT INTO perfilriesgointegral VALUES
 #------------------------------------------------------------------
 
 DELETE FROM cursocultural;
-insert into bienestar.cursocultural values
+insert into Bienestar.cursocultural values
 (1, "Salsa y merengue", "Propiciar un acercamiento a la danza - salsa a través del aprendizaje de una amplia variedad de estilos,
 ritmos y pasos de los subgéneros de la salsa y el merengue. Identificar y diferenciar los pasos para cada uno de los
 ritmos salseros como pachanga, mambo, boogaloo, son y chachachá, entre otros; y brindar herramientas de
@@ -1365,7 +1368,7 @@ rudimentos técnicos de la actuación, mediante la auto observación, el acondic
 juegos de improvisación.", "lunes de 4 a 6 p.m. y jueves de 4:30 a 6:30 p.m","Auditorio Colegio IPARM (lunes) y salón 18 del Colegio IPARM (jueves)",20,25,"Artes escénicas", 1,2);
 
 /*
-insert into bienestar.cursocultural values
+insert into Bienestar.cursocultural values
 (1, "Curso Cultural", "Salsa y merengue", "Propiciar un acercamiento a la danza - salsa a través del aprendizaje de una amplia variedad de estilos,
 ritmos y pasos de los subgéneros de la salsa y el merengue. Identificar y diferenciar los pasos para cada uno de los
 ritmos salseros como pachanga, mambo, boogaloo, son y chachachá, entre otros; y brindar herramientas de
@@ -1410,7 +1413,7 @@ juegos de improvisación.", "lunes de 4 a 6 p.m. y jueves de 4:30 a 6:30 p.m","A
 */
 
 DELETE FROM grupoartisticoinstitucional;
-insert into bienestar.grupoartisticoinstitucional values
+insert into Bienestar.grupoartisticoinstitucional values
 (1, "Mínimo 5 m fondo por 12 m de ancho","Teatro Experimental","Creación Experimental
 y Contemporánea","Mauricio Córdoba", "Amplificación para reproducir pistas, consola de sonido y micrófonos inalámbricos y/o de solapa, consola
 de luces pares y otras (condiciones ideales, según la
@@ -1429,41 +1432,44 @@ en madera con cámara de aire y/o linóleo","Expresión Talentos","Trabajo de in
  
 -- CARLOS:
 -- Insercion area de deportes:
-DELETE FROM Area;
-INSERT INTO Bienestar.Area 
-(areID, areNombre, 
-areTelefono, 
-areCorreoElectronico, areExtension, areEdificio, areDescripcion) values (17, "Actividad Fisica & Deporte",  3165000, "divrecd_bog@unal.edu.co", 17207,"No. 103 Polideportivo","Area encargada de la actividad deportiva en la UNAL.");
+DELETE FROM area;
+INSERT INTO Bienestar.area 
+	(areID, areNombre, areTelefono, areCorreoElectronico, areExtension, areEdificio, areDescripcion) values
+	(17, "Actividad Fisica & Deporte",  3165000, "divrecd_bog@unal.edu.co", 17207,"No. 103 Polideportivo","Area encargada de la actividad deportiva en la UNAL.");
 
 
-INSERT INTO Bienestar.Programa (progID, progNombre, Area_areID) values (1701, "Actividad ludico deportiva", 17);
-INSERT INTO Bienestar.Programa (progID, progNombre, Area_areID) values (1702, "Acondicionamiento físico e instruccion", 17);
-INSERT INTO Bienestar.Programa (progID, progNombre, Area_areID) values (1703, "Deporte de competencia", 17);
-INSERT INTO Bienestar.Programa (progID, progNombre, Area_areID) values (1704, "Deporte de alto rendimiento", 17);
-INSERT INTO Bienestar.Programa (progID, progNombre, Area_areID) values (1705, "Proyectos estratégicos", 17);
+INSERT INTO Bienestar.programa (progID, progNombre, Area_areID) values (1701, "Actividad ludico deportiva", 17);
+INSERT INTO Bienestar.programa (progID, progNombre, Area_areID) values (1702, "Acondicionamiento físico e instruccion", 17);
+INSERT INTO Bienestar.programa (progID, progNombre, Area_areID) values (1703, "Deporte de competencia", 17);
+INSERT INTO Bienestar.programa (progID, progNombre, Area_areID) values (1704, "Deporte de alto rendimiento", 17);
+INSERT INTO Bienestar.programa (progID, progNombre, Area_areID) values (1705, "Proyectos estratégicos", 17);
  
  -- Inserciones torneos internos:
 
-DELETE FROM TorneoInterno;
-INSERT INTO Bienestar.TorneoInterno (toridTorneoInterno, torPeriodo, torSedeFacultad, torDeporte, torNombreTorneo, torEstado, torModalidad, torRama, torNivel, torFechaInicio, torFechaFinalizacion, Programa_progID) VALUES (1011, '2022-1', 'Facultad de Ingeniería', 'Futbol', 'Copa Ingenieria', 1, 'Eliminacion directa', 'Masculino', 'Intermedio', '2022-06-01', '2022-06-30',1701);
-INSERT INTO Bienestar.TorneoInterno (toridTorneoInterno, torPeriodo, torSedeFacultad, torDeporte, torNombreTorneo, torEstado, torModalidad, torRama, torNivel, torFechaInicio, torFechaFinalizacion, Programa_progID) VALUES (1012, '2022-2', 'Facultad de Ciencias Humanas', 'Voleibol', 'Torneo de Voleibol Artes y Humanidades', 1, 'Todos contra todos', 'Femenino', 'Basico', '2022-09-01', '2022-09-30', 1701);
-INSERT INTO Bienestar.TorneoInterno (toridTorneoInterno, torPeriodo, torSedeFacultad, torDeporte, torNombreTorneo, torEstado, torModalidad, torRama, torNivel, torFechaInicio, torFechaFinalizacion, Programa_progID) VALUES (1013, '2022-1', 'Facultad de Ciencias', 'Baloncesto', 'Torneo de Baloncesto Física', 0, 'Eliminación directa', 'Masculino', 'Avanzado', '2022-07-01', '2022-07-31', 1701);
-INSERT INTO Bienestar.TorneoInterno (toridTorneoInterno, torPeriodo, torSedeFacultad, torDeporte, torNombreTorneo, torEstado, torModalidad, torRama, torNivel, torFechaInicio, torFechaFinalizacion, Programa_progID) VALUES (1014, '2023-1', 'Facultad de Salud', 'Futbol Sala', 'Liga de Fútbol Medicina', 1, 'Todos contra todos', 'Masculino', 'Intermedio', '2023-05-01', '2023-05-31', 1701);
-INSERT INTO Bienestar.TorneoInterno (toridTorneoInterno, torPeriodo, torSedeFacultad, torDeporte, torNombreTorneo, torEstado, torModalidad, torRama, torNivel, torFechaInicio, torFechaFinalizacion, Programa_progID) VALUES (1015, '2023-2', 'Facultad de Ciencias Económicas', 'Tenis de Mesa', 'Torneo de Tenis de Mesa Economia', 1, 'Eliminación directa', 'Mixto', 'Basico', '2023-10-01', '2023-10-03', 1701);
+DELETE FROM torneointerno;
+INSERT INTO Bienestar.torneointerno 
+	(toridTorneoInterno, torPeriodo, torSedeFacultad, torDeporte, torNombreTorneo, torEstado, torModalidad, torRama, torNivel, torFechaInicio, torFechaFinalizacion, Programa_progID) 
+	VALUES
+    (1011, '2022-1', 'Facultad de Ingeniería', 'Futbol', 'Copa Ingenieria', 1, 'Eliminacion directa', 'Masculino', 'Intermedio', '2022-06-01', '2022-06-30',1701),
+	(1012, '2022-2', 'Facultad de Ciencias Humanas', 'Voleibol', 'Torneo de Voleibol Artes y Humanidades', 1, 'Todos contra todos', 'Femenino', 'Basico', '2022-09-01', '2022-09-30', 1701),
+	(1013, '2022-1', 'Facultad de Ciencias', 'Baloncesto', 'Torneo de Baloncesto Física', 0, 'Eliminación directa', 'Masculino', 'Avanzado', '2022-07-01', '2022-07-31', 1701),
+	(1014, '2023-1', 'Facultad de Salud', 'Futbol Sala', 'Liga de Fútbol Medicina', 1, 'Todos contra todos', 'Masculino', 'Intermedio', '2023-05-01', '2023-05-31', 1701),
+	(1015, '2023-2', 'Facultad de Ciencias Económicas', 'Tenis de Mesa', 'Torneo de Tenis de Mesa Economia', 1, 'Eliminación directa', 'Mixto', 'Basico', '2023-10-01', '2023-10-03', 1701);
 
-INSERT INTO Bienestar.TorneoInterno VALUES (1016, '2022-1', 'Facultad de Ciencias', 'Fútbol', 'Torneo de Futbol de la Facultad de Ciencias', 1, 'Eliminación Simple', 'Masculino', 'Principiante', '2022-05-10', '2022-06-15', 1701);
-INSERT INTO Bienestar.TorneoInterno VALUES (1017, '2022-1', 'Facultad de Ingenieria', 'Voleibol', 'Torneo de Voleibol de la Facultad de Ingenieria', 1, 'Eliminación Simple', 'Femenino', 'Intermedio', '2022-06-01', '2022-07-10', 1701);
-INSERT INTO Bienestar.TorneoInterno VALUES (1018, '2022-2', 'Facultad de Medicina', 'Baloncesto', 'Torneo de Baloncesto de la Facultad de Medicina', 1, 'Liga', 'Masculino', 'Avanzado', '2022-09-01', '2022-11-10', 1701);
-INSERT INTO Bienestar.TorneoInterno VALUES (1019, '2022-2', 'Facultad de Ciencias Humanas', 'Ajedrez', 'Torneo de integracion ajedrez', 1, 'Eliminación Simple', 'Mixto', 'Principiante', '2022-10-01', '2022-10-15', 1701);
-INSERT INTO Bienestar.TorneoInterno VALUES (10110, '2023-1', 'Facultad de Ciencias', 'Tenis', 'Torneo de Tenis de la Facultad de Derecho', 0, NULL, 'Femenino', 'Intermedio', '2023-03-01', '2023-04-01', 1701);
+INSERT INTO Bienestar.torneointerno VALUES 
+(1016, '2022-1', 'Facultad de Ciencias', 'Fútbol', 'Torneo de Futbol de la Facultad de Ciencias', 1, 'Eliminación Simple', 'Masculino', 'Principiante', '2022-05-10', '2022-06-15', 1701),
+(1017, '2022-1', 'Facultad de Ingenieria', 'Voleibol', 'Torneo de Voleibol de la Facultad de Ingenieria', 1, 'Eliminación Simple', 'Femenino', 'Intermedio', '2022-06-01', '2022-07-10', 1701),
+(1018, '2022-2', 'Facultad de Medicina', 'Baloncesto', 'Torneo de Baloncesto de la Facultad de Medicina', 1, 'Liga', 'Masculino', 'Avanzado', '2022-09-01', '2022-11-10', 1701),
+(1019, '2022-2', 'Facultad de Ciencias Humanas', 'Ajedrez', 'Torneo de integracion ajedrez', 1, 'Eliminación Simple', 'Mixto', 'Principiante', '2022-10-01', '2022-10-15', 1701),
+(10110, '2023-1', 'Facultad de Ciencias', 'Tenis', 'Torneo de Tenis de la Facultad de Derecho', 0, NULL, 'Femenino', 'Intermedio', '2023-03-01', '2023-04-01', 1701);
 
 -- Inserciones convocatorias de area de deportes:
 
-#select * from Convocatoria;
+#select * from convocatoria;
 -- cursos libres
 
 
-INSERT INTO Bienestar.Convocatoria (conv_id, convNombre, convFechaApertura, convFechaCierre, convEstado, convPeriodo, Programa_progID)
+INSERT INTO Bienestar.convocatoria (conv_id, convNombre, convFechaApertura, convFechaCierre, convEstado, convPeriodo, Programa_progID)
 VALUES
 (201, 'Convocatoria Deporte 2021-1', '2021-01-01', '2021-01-31', 1, '2021-1', 1702),
 (202, 'Convocatoria Deporte 2021-2', '2021-06-01', '2021-06-30', 1, '2021-2', 1702),
@@ -1477,7 +1483,7 @@ VALUES
 (200, 'Convocatoria Deporte 2025-2', '2025-06-01', '2025-06-30', 1, '2025-2', 1702);
 
 -- selecciones deportivas
-INSERT INTO Bienestar.Convocatoria (conv_id, convNombre, convFechaApertura, convFechaCierre, convEstado, convPeriodo, Programa_progID) VALUES 
+INSERT INTO Bienestar.convocatoria (conv_id, convNombre, convFechaApertura, convFechaCierre, convEstado, convPeriodo, Programa_progID) VALUES 
 (210, 'Convocatoria Deporte 2022-2', '2022-07-01', '2022-07-31', 1, '2022-2', 1703),
 (211, 'Convocatoria Deporte 2023-1', '2023-01-01', '2023-01-31', 1, '2023-1', 1703),
 (212, 'Convocatoria Deporte 2023-2', '2023-07-01', '2023-07-31', 0, '2023-2', 1703),
@@ -1491,8 +1497,8 @@ INSERT INTO Bienestar.Convocatoria (conv_id, convNombre, convFechaApertura, conv
 
 
 -- Inserciones convocatorias cursos libres:
-DELETE FROM ConvocatoriaCursoLibre;
-INSERT INTO Bienestar.ConvocatoriaCursoLibre (Convocatoria_conv_id, curNombre, curTipoCurso, curCondicion)
+DELETE FROM convocatoriacursolibre;
+INSERT INTO Bienestar.convocatoriacursolibre (Convocatoria_conv_id, curNombre, curTipoCurso, curCondicion)
 VALUES
   (201, 'Fútbol', 'Deporte', 'Abierto'),
   (202, 'Tenis', 'Deporte', 'Abierto'),
@@ -1506,11 +1512,11 @@ VALUES
   (200, 'Judo', 'Fitness', 'Abierto');
 
 
-#select * from Convocatoria;
+#select * from convocatoria;
 
 -- Inserciones convocatorias selecciones deportivas:
-DELETE FROM ConvocatoriaSeleccion;
-INSERT INTO Bienestar.ConvocatoriaSeleccion (Convocatoria_conv_id, convDeporte, convLugar, convHora) VALUES 
+DELETE FROM convocatoriaseleccion;
+INSERT INTO Bienestar.convocatoriaseleccion (Convocatoria_conv_id, convDeporte, convLugar, convHora) VALUES 
 (210, 'Futbol', 'Estadio', '15:00:00'),
 (211,  'Baloncesto', 'Cancha 2', '10:00:00'),
 (212,  'Tenis', 'Cancha de tenis 3', '08:00:00'),
@@ -1523,7 +1529,6 @@ INSERT INTO Bienestar.ConvocatoriaSeleccion (Convocatoria_conv_id, convDeporte, 
 (219, 'Atletismo', 'Polideportivo', '09:00:00');
 
 
-insert into estudiante_toma_convocatoria values (9,210,'2023-03-15');
 insert into estudiante_toma_convocatoria values (9,210,'2023-03-15');
 insert into estudiante_toma_convocatoria values (13,217,'2023-04-15');
 
