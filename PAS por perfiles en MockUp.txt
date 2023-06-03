@@ -60,54 +60,24 @@ salud para que sean verificadas por el ara de salud.
 
 # Uso General:
 
-# ------------------------------- Un usuario necesita ver todas las convocatorias por área -----------------------------
-drop procedure if exists sp_consultar_convocatorias_area;
-DELIMITER $$
-create procedure sp_consultar_programas_de_deportes(in idArea int)
-	begin 
-		select * from vw_info_convocatoria where areID = idArea;
-	end $$
-DELIMITER ;
+# 1. Un usuario necesita ver todas las convocatorias por área.
+	sp_consultar_programas_de_deportes(in idArea int)
 
 
-# ------------------------------- Un estudiante necesita ver las convocatorias por programa de area de bienestar -------
-drop procedure if exists sp_consultar_convocatorias_programa;
-DELIMITER $$
-create procedure sp_consultar_convocatorias_deporte(in idPrograma int)
-	begin 
-		select * from Convocatoria where Programa_progID = id_Programa;
-	end $$
-DELIMITER ;
+# 2. Un estudiante necesita ver las convocatorias por programa de area de bienestar
+	sp_consultar_convocatorias_deporte(in idPrograma int);
 
 
-# Salud
+# 3. Ver perfil de riesgo integral de un usuario
+	pas_view_perfilriesgo(IN usuarioID INT)
 
-# --------------------------------------------- Ver perfil de riesgo integral de un usuario ----------------------------
-DROP PROCEDURE IF EXISTS pas_view_perfilriesgo;
-DELIMITER $$
-CREATE PROCEDURE pas_view_perfilriesgo(IN usuarioID INT)
-	BEGIN
-		SELECT * FROM vw_perfil_integral WHERE persona = usuarioID;
-    END $$
-DELIMITER ;
+# 4. Ver el estado de las incapacidades de un usuario
+	pas_view_incapacidad(IN usuarioID INT)
 
-# -------------------------------------- Ver el estado de las incapacidades de un usuario ------------------------------
-DROP PROCEDURE IF EXISTS pas_view_incapacidad;
-DELIMITER $$
-CREATE PROCEDURE pas_view_incapacidad(IN usuarioID INT)
-	BEGIN
-		SELECT * FROM vw_incapacidad WHERE persona = usuarioID;
-    END $$
-DELIMITER ;
 
-# ------------------------------- Un usuario que necesita ver las citas medicas disponibles ----------------------------
-DROP PROCEDURE IF EXISTS pas_citas_disponibles;
-DELIMITER $$
-CREATE PROCEDURE pas_citas_disponibles()
-	BEGIN 
-		SELECT * FROM vw_citamedica_disponible;
-    END $$
-DELIMITER ;
+# 5. Un usuario que necesita ver las citas medicas disponibles.
+	pas_citas_disponibles()
+
 
 
 # Actividad Física y Deporte
