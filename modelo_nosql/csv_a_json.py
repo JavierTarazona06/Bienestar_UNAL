@@ -49,10 +49,7 @@ class reader:
             json.dump(resultado, archivo_json, ensure_ascii=False, indent=4)
 
         print(resultado)
-
-        
-
     
 
-read = reader("modelo_nosql\Datos_persona.csv")
-read.to_json("modelo_nosql\persona.json")
+read = reader("data\Datos_persona.csv")
+read.to_json("modelo_nosql\general\persona.json")
