@@ -44,8 +44,8 @@ CREATE TABLE IF NOT EXISTS Bienestar.persona (
   perTipoVivienda ENUM("Casa", "Apartamento", "Apartaestudio", "Finca") NOT NULL DEFAULT 'Casa',
   perLocalidad VARCHAR(45) NOT NULL DEFAULT 'Sin Localidad',
   perEmail VARCHAR(150) NULL,
-  perEntidadSalud VARCHAR(45) NOT NULL DEFAULT 'N.E',
-  perProcedencia VARCHAR(45) NOT NULL DEFAULT 'N.E',
+  perEntidadSalud VARCHAR(45) NOT NULL DEFAULT 'N.e',
+  perProcedencia VARCHAR(45) NOT NULL DEFAULT 'N.e',
   perSede VARCHAR(20) NOT NULL DEFAULT 'Bogotá',
   perFacultad VARCHAR(50) NOT NULL DEFAULT 'No tiene',
   PRIMARY KEY (perID))
@@ -67,12 +67,12 @@ CREATE TABLE IF NOT EXISTS Bienestar.personalsalud (
   PRIMARY KEY (perID),
   CONSTRAINT fk_PersonalSalud_Ambulancia
     FOREIGN KEY (ambulanciaID)
-    REFERENCES Bienestar.Ambulancia (ambID)
+    REFERENCES Bienestar.ambulancia (ambID)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT fk_PersonalSalud_Persona
     FOREIGN KEY (perID)
-    REFERENCES Bienestar.Persona (perID)
+    REFERENCES Bienestar.persona (perID)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -99,12 +99,12 @@ CREATE TABLE IF NOT EXISTS Bienestar.urgencia (
   PRIMARY KEY (urgID, perID),
   CONSTRAINT fk_Urgencia_Ambulancia
     FOREIGN KEY (ambulanciaID)
-    REFERENCES Bienestar.Ambulancia (ambID)
+    REFERENCES Bienestar.ambulancia (ambID)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT fk_Urgencia_Persona
     FOREIGN KEY (perID)
-    REFERENCES Bienestar.Persona (perID)
+    REFERENCES Bienestar.persona (perID)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -130,7 +130,7 @@ CREATE TABLE IF NOT EXISTS Bienestar.incapacidad (
   PRIMARY KEY (incID, perID),
   CONSTRAINT fk_Incapacidad_Persona
     FOREIGN KEY (perID)
-    REFERENCES Bienestar.Persona (perID)
+    REFERENCES Bienestar.persona (perID)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -139,6 +139,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table Bienestar.perfilriesgointegral
 -- -----------------------------------------------------
+
 DROP TABLE IF EXISTS Bienestar.perfilriesgointegral;
 
 CREATE TABLE IF NOT EXISTS Bienestar.perfilriesgointegral (
@@ -149,7 +150,7 @@ CREATE TABLE IF NOT EXISTS Bienestar.perfilriesgointegral (
   PRIMARY KEY (perID),
   CONSTRAINT fk_PerfilRiesgoIntegral_Persona
     FOREIGN KEY (perID)
-    REFERENCES Bienestar.Persona (perID)
+    REFERENCES Bienestar.persona (perID)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -169,7 +170,7 @@ CREATE TABLE IF NOT EXISTS Bienestar.discapacidad (
   PRIMARY KEY (disID, perID),
   CONSTRAINT fk_Discapacidad_Persona
     FOREIGN KEY (perID)
-    REFERENCES Bienestar.Persona (perID)
+    REFERENCES Bienestar.persona (perID)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -204,12 +205,12 @@ CREATE TABLE IF NOT EXISTS Bienestar.citamedica (
   PRIMARY KEY (citID),
   CONSTRAINT fk_CitaMedica_Persona
     FOREIGN KEY (pacienteID)
-    REFERENCES Bienestar.Persona (perID)
+    REFERENCES Bienestar.persona (perID)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT fk_CitaMedica_PersonalSalud
     FOREIGN KEY (doctorID)
-    REFERENCES Bienestar.PersonalSalud (perID)
+    REFERENCES Bienestar.personalsalud (perID)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -233,7 +234,7 @@ CREATE TABLE IF NOT EXISTS Bienestar.evaluacionfisica (
   PRIMARY KEY (citID),
   CONSTRAINT fk_EvaluacionFisica_CitaMedica
     FOREIGN KEY (citID)
-    REFERENCES Bienestar.CitaMedica (citID)
+    REFERENCES Bienestar.citamedica (citID)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -252,7 +253,7 @@ CREATE TABLE IF NOT EXISTS Bienestar.medicamentos (
   PRIMARY KEY (medID, citID),
   CONSTRAINT fk_Medicamentos_CitaMedica
     FOREIGN KEY (citID)
-    REFERENCES Bienestar.CitaMedica (citID)
+    REFERENCES Bienestar.citamedica (citID)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -268,9 +269,9 @@ CREATE TABLE IF NOT EXISTS Bienestar.ordenmedica (
   citID INT UNSIGNED NOT NULL,
   ordExamen VARCHAR(45) NOT NULL,
   PRIMARY KEY (ordID, citID),
-  CONSTRAINT fk_OrdenMedica_CitaMedica
+  CONSTRAINT fk_ordenmedica_citamedica
     FOREIGN KEY (citID)
-    REFERENCES Bienestar.CitaMedica (citID)
+    REFERENCES Bienestar.citamedica (citID)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -287,9 +288,9 @@ CREATE TABLE IF NOT EXISTS Bienestar.enfermedad (
   enfNombre VARCHAR(45) NOT NULL,
   enfFechaInicio DATE NOT NULL,
   PRIMARY KEY (enfID, perID),
-  CONSTRAINT fk_Enfermedad_Persona
+  CONSTRAINT fk_enfermedad_persona
     FOREIGN KEY (perID)
-    REFERENCES Bienestar.Persona (perID)
+    REFERENCES Bienestar.persona (perID)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -537,9 +538,9 @@ CREATE TABLE IF NOT EXISTS Bienestar.atencionensalud (
   ateVerificado BIT NOT NULL,
   ateAprobado BIT NOT NULL,
   PRIMARY KEY (antID, perID),
-  CONSTRAINT fk_atencionEnSalud_Persona1
+  CONSTRAINT fk_atencionensalud_persona
     FOREIGN KEY (perID)
-    REFERENCES Bienestar.Persona (perID)
+    REFERENCES Bienestar.persona (perID)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
