@@ -25,12 +25,13 @@ select COUNT(idEst),sum(cgeCobertura),AVG(cgeCobertura)
     join convocatoria using(conv_id)
     join estudiante_toma_convocatoria using (conv_id);
 
-select COUNT(idEst),sum(cgeCobertura),AVG(cgeCobertura),estFacultad 
+select COUNT(idEst),sum(cgeCobertura),AVG(cgeCobertura),perFacultad
 	from convocatoriagestioneconomica 
 	join convocatoria using(conv_id) 
 	join estudiante_toma_convocatoria using (conv_id) 
 	join estudiante on (idEst = estID) 
-	group by estFacultad;
+    join persona on (estID=perID)
+	group by perFacultad;
 
 #2. Calcular los productos vendidos una vez entre el 15 de febrero y 15 de mayo de 2023. ¿Cuál generó más ganancias? ¿Cuál es la suma?
 

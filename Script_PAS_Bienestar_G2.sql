@@ -366,7 +366,9 @@ begin
 		from (area join programa on (areID = Area_areID)) 
         join ((estudiante join estudiante_toma_convocatoria on (estID = idEst)) 
         join convocatoria using (conv_id)) on (progID = Programa_progID) 
-        where idArea = areID group by estFacultad;
+        join persona on (estID=perID)
+        where idArea = areID 
+        group by perFacultad;
 end $$
 DELIMITER ;
 
