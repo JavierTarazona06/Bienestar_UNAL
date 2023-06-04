@@ -255,37 +255,37 @@ insert into carrera values(46,'Sociología (SNIES 16 )','162');
 insert into carrera values(47,'Trabajo Social (SNIES 15 )','171');
 insert into carrera values(48,'Zootecnia (SNIES 3 )','174');
 
-DELETE FROM estudiante;
-insert into estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado) values (1,'36','17','Ingeniería','73','Regular','0');
-insert into estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado) values (2,'27','27','Artes','50','Regular','0');
-insert into estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado) values (3,'26','21','Ciencias Humanas','76','PEAMA','0');
-insert into estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado) values (4,'47','18','Ingeniería','19','Regular','0');
-insert into estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado) values (5,'22','19','Ciencias Económicas','73','PEAMA','0');
-insert into estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado) values (6,'13','28','Ciencias Económicas','30','PEAMA','0');
-insert into estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado) values (7,'13','24','Enfermería','37','PEAMA','0');
-insert into estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado) values (8,'10','25','Enfermería','88','Regular','0');
-insert into estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado) values (9,'38','19','Ciencias Veterinarias y de Zootecnia','64','PEAMA','0');
-insert into estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado) values (10,'16','23','Enfermería','2','Regular','0');
-insert into estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado) values (11,'34','25','Ciencias','24','Regular','0');
-insert into estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado) values (12,'38','21','Derecho, Ciencias Políticas y Sociales','79','PEAMA','0');
-insert into estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado) values (13,'37','24','Ciencias Económicas','43','PEAMA','0');
-insert into estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado) values (14,'32','26','Ingeniería','39','Regular','0');
-insert into estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado) values (15,'23','17','Ciencias','64','PEAMA','0');
-insert into estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado) values (16,'44','26','Enfermería','0','Regular','0');
-insert into estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado) values (17,'25','19','Ciencias Agrarias','48','Regular','0');
-insert into estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado) values (18,'14','24','Ciencias Agrarias','84','Regular','0');
-insert into estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado) values (19,'34','25','Ciencias Económicas','72','Regular','0');
-insert into estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado) values (20,'44','26','Medicina','77','Regular','0');
-insert into estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado) values (21,'4','23','Derecho, Ciencias Políticas y Sociales','19','PEAMA','0');
-insert into estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado) values (22,'27','26','Odontología','25','Regular','0');
-insert into estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado) values (23,'6','22','Psicología','72','Regular','0');
-insert into estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado) values (24,'27','22','Ciencias Humanas','18','PEAMA','0');
-insert into estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado) values (25,'32','24','Ciencias Humanas','22','PEAMA','0');
-insert into estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado) values (26,'33','22','Ingeniería','92','Regular','0');
-insert into estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado) values (27,'24','20','Ciencias Veterinarias y de Zootecnia','74','PEAMA','0');
-insert into estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado) values (28,'40','17','Artes','30','Regular','0');
-insert into estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado) values (29,'20','28','Ciencias Veterinarias y de Zootecnia','90','PEAMA','0');
-insert into estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado) values (30,'29','30','Ciencias','96','PEAMA','0');
+DELETE FROM Estudiante;
+insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (1,'36','17','Ingeniería','73','Regular','0', 2015, 4.1);
+insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (2,'27','27','Artes','50','Regular','0' , 2015, 4.5);
+insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (3,'26','21','Ciencias Humanas','76','PEAMA','0' , 2017, 4.4);
+insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (4,'47','18','Ingeniería','19','Regular','0' , 2018, 4.5);
+insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (5,'22','19','Ciencias Económicas','73','PEAMA','0', 2018, 4.5);
+insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (6,'13','28','Ciencias Económicas','30','PEAMA','0', 2002, 4.5);
+insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (7,'13','24','Enfermería','37','PEAMA','0', 2023, 4.5);
+insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (8,'10','25','Enfermería','88','Regular','0', 2001, 4.5);
+insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (9,'38','19','Ciencias Veterinarias y de Zootecnia','64','PEAMA','0', 2001, 4.5);
+insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (10,'16','23','Enfermería','2','Regular','0', 2001, 4.5);
+insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (11,'34','25','Ciencias','24','Regular','0', 2001, 4.5);
+insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (12,'38','21','Derecho, Ciencias Políticas y Sociales','79','PEAMA','0', 1996, 3.9);
+insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (13,'37','24','Ciencias Económicas','43','PEAMA','0', 1996, 3.9);
+insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (14,'32','26','Ingeniería','39','Regular','0', 1989, 3.9);
+insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (15,'23','17','Ciencias','64','PEAMA','0', 1989, 3.9);
+insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (16,'44','26','Enfermería','0','Regular','0', 2010, 4.9);
+insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (17,'25','19','Ciencias Agrarias','48','Regular','0', 2010, 4.9);
+insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (18,'14','24','Ciencias Agrarias','84','Regular','0', 2010, 4.9);
+insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (19,'34','25','Ciencias Económicas','72','Regular','0', 2010, 4.3);
+insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (20,'44','26','Medicina','77','Regular','0', 2009, 4.3);
+insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (21,'4','23','Derecho, Ciencias Políticas y Sociales','19','PEAMA','0', 2009, 4.3);
+insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (22,'27','26','Odontología','25','Regular','0', 2009, 3.5);
+insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (23,'6','22','Psicología','72','Regular','0', 2009, 3.5);
+insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (24,'27','22','Ciencias Humanas','18','PEAMA','0', 2014, 3.5);
+insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (25,'32','24','Ciencias Humanas','22','PEAMA','0', 2014, 3.5);
+insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (26,'33','22','Ingeniería','92','Regular','0', 2014, 3.5);
+insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (27,'24','20','Ciencias Veterinarias y de Zootecnia','74','PEAMA','0', 2014, 2.9);
+insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (28,'40','17','Artes','30','Regular','0', 1999, 2.9);
+insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (29,'20','28','Ciencias Veterinarias y de Zootecnia','90','PEAMA','0', 1999, 2.9);
+insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (30,'29','30','Ciencias','96','PEAMA','0', 1999, 2.9);
 
 DELETE FROM area;
 insert into bienestar.area values
@@ -318,22 +318,29 @@ insert into bienestar.programa values
 (5, "Urgencia",  1);
 
 DELETE FROM convocatoria;
-insert into convocatoria (conv_id,convNombre,convFechaApertura,convFechaCierre,convEstado,Programa_progID) values (1,'Fomento Económico Estudiantes','2023-01-15','2023-02-1',1,1);
-insert into convocatoria (conv_id,convNombre,convFechaApertura,convFechaCierre,convEstado,Programa_progID) values (2,'Fomento Económico Estudiantes Alimentación','2023-01-15','2023-02-1',1,1);
-insert into convocatoria (conv_id,convNombre,convFechaApertura,convFechaCierre,convEstado,Programa_progID) values (3,'Fomento Económico Estudiantes Alimentación','2023-01-15','2023-02-1',1,1);
-insert into convocatoria (conv_id,convNombre,convFechaApertura,convFechaCierre,convEstado,Programa_progID) values (4,'Fomento Económico Estudiantes Alimentación','2023-01-15','2023-02-1',1,1);
-insert into convocatoria (conv_id,convNombre,convFechaApertura,convFechaCierre,convEstado,Programa_progID) values (5,'Gestión Alojamiento','2023-01-15','2023-02-1',1,1);
-insert into convocatoria (conv_id,convNombre,convFechaApertura,convFechaCierre,convEstado,Programa_progID) values (6,'Gestión Alojamiento','2023-01-15','2023-02-1',1,1);
-insert into convocatoria (conv_id,convNombre,convFechaApertura,convFechaCierre,convEstado,Programa_progID) values (7,'Gestión Alojamiento','2023-01-15','2023-02-1',1,1);
-insert into convocatoria (conv_id,convNombre,convFechaApertura,convFechaCierre,convEstado,Programa_progID) values (8,'Gestión Alojamiento','2023-01-15','2023-02-1',1,1);
-insert into convocatoria (conv_id,convNombre,convFechaApertura,convFechaCierre,convEstado,Programa_progID) values (9,'Gestión Alojamiento','2023-01-15','2023-02-1',1,1);
-insert into convocatoria (conv_id,convNombre,convFechaApertura,convFechaCierre,convEstado,Programa_progID) values (10,'Gestión Alojamiento','2023-01-15','2023-02-1',1,1);
-insert into convocatoria (conv_id,convNombre,convFechaApertura,convFechaCierre,convEstado,Programa_progID) values (11,'Gestión Alojamiento','2023-01-15','2023-02-1',1,1);
-insert into convocatoria (conv_id,convNombre,convFechaApertura,convFechaCierre,convEstado,Programa_progID) values (12,'Gestión Alojamiento','2023-01-15','2023-02-1',1,1);
-insert into convocatoria (conv_id,convNombre,convFechaApertura,convFechaCierre,convEstado,Programa_progID) values (13,'Gestión Alojamiento','2023-01-15','2023-02-1',1,1);
-insert into convocatoria (conv_id,convNombre,convFechaApertura,convFechaCierre,convEstado,Programa_progID) values (14,'Gestión Alojamiento','2023-01-15','2023-02-1',1,1);
-insert into convocatoria (conv_id,convNombre,convFechaApertura,convFechaCierre,convEstado,Programa_progID) values (15,'Gestión Alojamiento','2023-01-15','2023-02-1',1,1);
-insert into convocatoria (conv_id,convNombre,convFechaApertura,convFechaCierre,convEstado,Programa_progID) values (16,'Fomento Económico Estudiantes','2023-01-15','2023-02-1',1,1);
+insert into convocatoria values 
+(1,'Fomento Económico Estudiantes','2023-01-15','2023-02-1',1,'2023-1',1),
+(15,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1),
+(2,'Fomento Económico Estudiantes Alimentación','2023-01-15','2023-02-1',1,'2023-1',1),
+(3,'Fomento Económico Estudiantes Alimentación','2023-01-15','2023-02-1',1,'2023-1',1),
+(4,'Fomento Económico Estudiantes Alimentación','2023-01-15','2023-02-1',1,'2023-1',1),
+(5,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1),
+(6,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1),
+(7,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1),
+(8,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1),
+(9,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1),
+(10,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1),
+(11,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1),
+(12,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1),
+(13,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1),
+(14,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1),
+(16,'Fomento Económico Estudiantes','2023-01-15','2023-02-1',1,'2023-1',1),
+(17,'Fomento Emprendimiento Estudiantes','2023-01-15','2023-02-1',1,'2023-1',1),
+(18,'Fomento Emprendimiento Estudiantes','2023-01-15','2023-02-1',1,'2023-1',1),
+(19,'Fomento Emprendimiento Estudiantes','2023-01-15','2023-02-1',1,'2023-1',1),
+(20,'Gestión Transporte','2023-01-15','2023-02-1',1,'2023-1',1),
+(21,'Gestión Transporte','2023-01-15','2023-02-1',1,'2023-1',1),
+(22,'Gestión Transporte','2023-01-15','2023-02-1',1,'2023-1',1);
 
 DELETE FROM convocatoriagestioneconomica;
 insert into convocatoriagestioneconomica values (1,500000);
@@ -357,27 +364,46 @@ insert into convocatoriagestionalojamiento values (13,'KR 172 m No. 98-27','Chap
 insert into convocatoriagestionalojamiento values (14,'TV 156 k No. 30-17','Fontibón',1948563.0,'Residencia Universitaria','N.A',3897126);
 insert into convocatoriagestionalojamiento values (15,'TV 20 q No. 42-58','Ciudad Bolívar',2479522.0,'Vivienda familiar','N.A',4959044);
 
+DELETE FROM convocatoriafomentoemprendimeinto;
+INSERT INTO convocatoriafomentoemprendimeinto VALUES 
+(17, 961842, 'Empresa1', 'Tema1', 'Descripción del emprendimiento'),
+(18, 2248621, 'Empresa2', 'Tema2', 'Descripción del emprendimiento'),
+(19, 1036757, 'Empresa3', 'Tema3', 'Descripción del emprendimiento');
+
+DELETE FROM convocatoriagestiontransporte;
+INSERT INTO convocatoriagestiontransporte VALUES(20,530147,'Transporte público masivo'),
+(21,600147,'Transporte público masivo'),
+(22,430147,'Otro');
+
 DELETE FROM estudiante_toma_convocatoria;
-insert into estudiante_toma_convocatoria values (30,9);
-insert into estudiante_toma_convocatoria values (16,1);
-insert into estudiante_toma_convocatoria values (22,2);
-insert into estudiante_toma_convocatoria values (26,14);
-insert into estudiante_toma_convocatoria values (24,3);
-insert into estudiante_toma_convocatoria values (27,8);
-insert into estudiante_toma_convocatoria values (2,8);
-insert into estudiante_toma_convocatoria values (14,3);
-insert into estudiante_toma_convocatoria values (9,1);
-insert into estudiante_toma_convocatoria values (13,1);
-insert into estudiante_toma_convocatoria values (27,5);
-insert into estudiante_toma_convocatoria values (6,5);
-insert into estudiante_toma_convocatoria values (27,15);
-insert into estudiante_toma_convocatoria values (24,1);
-insert into estudiante_toma_convocatoria values (7,11);
-insert into estudiante_toma_convocatoria values (24,12);
-insert into estudiante_toma_convocatoria values (29,7);
-insert into estudiante_toma_convocatoria values (21,14);
-insert into estudiante_toma_convocatoria values (4,7);
-insert into estudiante_toma_convocatoria values (2,15);
+insert into estudiante_toma_convocatoria values (30,9,'2023-02-13');
+insert into estudiante_toma_convocatoria values (16,1,'2023-03-13');
+insert into estudiante_toma_convocatoria values (22,2,'2023-04-13');
+insert into estudiante_toma_convocatoria values (26,14,'2023-05-13');
+insert into estudiante_toma_convocatoria values (24,3,'2023-08-13');
+insert into estudiante_toma_convocatoria values (27,8,'2023-09-13');
+insert into estudiante_toma_convocatoria values (2,8,'2023-10-13');
+insert into estudiante_toma_convocatoria values (14,3,'2023-11-13');
+insert into estudiante_toma_convocatoria values (9,1,'2023-12-13');
+insert into estudiante_toma_convocatoria values (13,1,'2023-07-13');
+insert into estudiante_toma_convocatoria values (27,5,'2023-08-13');
+insert into estudiante_toma_convocatoria values (6,5,'2023-03-13');
+insert into estudiante_toma_convocatoria values (27,15,'2023-04-13');
+insert into estudiante_toma_convocatoria values (24,1,'2023-05-13');
+insert into estudiante_toma_convocatoria values (7,11,'2023-06-13');
+insert into estudiante_toma_convocatoria values (24,12,'2023-08-13');
+insert into estudiante_toma_convocatoria values (29,7,'2023-09-13');
+insert into estudiante_toma_convocatoria values (21,14,'2023-10-13');
+insert into estudiante_toma_convocatoria values (4,7,'2023-11-13');
+insert into estudiante_toma_convocatoria values (2,15,'2023-12-13');
+INSERT INTO estudiante_toma_convocatoria VALUES 
+(12, 16,'2023-02-13'),
+(28, 17,'2023-03-13'),
+(5, 18,'2023-04-13'),
+(19, 19,'2023-05-13'),
+(25, 20,'2023-07-13'),
+(3, 21,'2023-08-13'),
+(10, 22,'2023-09-13');
 
 DELETE FROM fallaalimentacion;
 insert into fallaalimentacion (estID,fallAlcgaComida,fallAlLugar,fallAlFecha) values (23,'Almuerzo','Comedor central','2023-05-19');
@@ -409,26 +435,44 @@ insert into fallaalimentacion (estID,fallAlcgaComida,fallAlLugar,fallAlFecha) va
 insert into fallaalimentacion (estID,fallAlcgaComida,fallAlLugar,fallAlFecha) values (23,'Almuerzo','Ciencias Humanas','2023-06-17');
 
 DELETE FROM actividadcorresp;
-insert into actividadcorresp (actCorID,estID,actCorActividad,actCorHoras) values (0,18,'comunitaria',3);
-insert into actividadcorresp (actCorID,estID,actCorActividad,actCorHoras) values (1,27,'cultural',8);
-insert into actividadcorresp (actCorID,estID,actCorActividad,actCorHoras) values (2,9,'acompañamiento',6);
-insert into actividadcorresp (actCorID,estID,actCorActividad,actCorHoras) values (3,24,'académica',6);
-insert into actividadcorresp (actCorID,estID,actCorActividad,actCorHoras) values (4,23,'académica',5);
-insert into actividadcorresp (actCorID,estID,actCorActividad,actCorHoras) values (5,23,'cultural',3);
-insert into actividadcorresp (actCorID,estID,actCorActividad,actCorHoras) values (6,5,'académica',2);
-insert into actividadcorresp (actCorID,estID,actCorActividad,actCorHoras) values (7,7,'acompañamiento',5);
-insert into actividadcorresp (actCorID,estID,actCorActividad,actCorHoras) values (8,26,'otra',7);
-insert into actividadcorresp (actCorID,estID,actCorActividad,actCorHoras) values (9,5,'otra',3);
-insert into actividadcorresp (actCorID,estID,actCorActividad,actCorHoras) values (10,5,'comunitaria',2);
-insert into actividadcorresp (actCorID,estID,actCorActividad,actCorHoras) values (11,30,'desarrollo institucional',8);
-insert into actividadcorresp (actCorID,estID,actCorActividad,actCorHoras) values (12,17,'otra',3);
-insert into actividadcorresp (actCorID,estID,actCorActividad,actCorHoras) values (13,2,'desarrollo institucional',3);
-insert into actividadcorresp (actCorID,estID,actCorActividad,actCorHoras) values (14,30,'académica',6);
-insert into actividadcorresp (actCorID,estID,actCorActividad,actCorHoras) values (15,13,'comunitaria',3);
-insert into actividadcorresp (actCorID,estID,actCorActividad,actCorHoras) values (16,26,'deportiva',2);
-insert into actividadcorresp (actCorID,estID,actCorActividad,actCorHoras) values (17,25,'comunitaria',4);
-insert into actividadcorresp (actCorID,estID,actCorActividad,actCorHoras) values (18,1,'acompañamiento',3);
-insert into actividadcorresp (actCorID,estID,actCorActividad,actCorHoras) values (19,24,'acompañamiento',7);
+insert into actividadcorresp values 
+(0,18,'comunitaria',3,'2023-02-01'),
+(1,27,'cultural',8,'2023-03-01'),
+(2,9,'acompañamiento',6,'2023-04-01'),
+(3,24,'académica',6,'2023-05-01'),
+(4,23,'académica',5,'2023-06-01'),
+(5,23,'cultural',3,'2023-07-01'),
+(6,5,'académica',2,'2023-08-01'),
+(7,7,'acompañamiento',5,'2023-09-01'),
+(8,26,'otra',7,'2023-10-01'),
+(9,5,'otra',3,'2023-11-01'),
+(10,5,'comunitaria',2,'2023-02-01'),
+(11,30,'desarrollo institucional',8,'2023-03-01'),
+(12,17,'otra',3,'2023-04-01'),
+(13,2,'desarrollo institucional',3,'2023-05-01'),
+(14,30,'académica',6,'2023-06-01'),
+(15,13,'comunitaria',3,'2023-07-01'),
+(16,26,'deportiva',2,'2023-08-01'),
+(17,25,'comunitaria',4,'2023-09-01'),
+(18,1,'acompañamiento',3,'2023-10-01'),
+(19,24,'acompañamiento',7,'2023-11-01');
+
+INSERT INTO corresponsabilidad VALUES
+(2, 10),
+(4, 12),
+(5, 15),
+(6, 18),
+(8, 20),
+(9, 23),
+(12, 26),
+(14, 28),
+(16, 30),
+(17, 33),
+(21, 36),
+(22, 38),
+(25, 11),
+(27, 14),
+(29, 17);
 
 DELETE FROM tiendabienestar;
 insert into tiendabienestar values (1,'Bogotá','Ciudad Universitaria','08:00:00','17:00:00',1,2);
@@ -489,6 +533,24 @@ insert into factura_producto values (13,10);
 insert into factura_producto values (15,10);
 insert into factura_producto values (2,8);
 insert into factura_producto values (1,7);
+
+INSERT INTO producto_tiendaun VALUES 
+(1, 1),
+(1, 2),
+(2, 3),
+(2, 4),
+(2, 5),
+(2, 6),
+(1, 7),
+(1, 8),
+(1, 9),
+(1, 10),
+(2, 11),
+(2, 12),
+(2, 13),
+(2, 14),
+(1, 15);
+INSERT INTO producto_tiendaun VALUES (1, 11);
 
 #------------------------------------------------------------------
 # Salud
@@ -1373,7 +1435,7 @@ INSERT INTO Bienestar.Area
 areTelefono, 
 areCorreoElectronico, areExtension, areEdificio, areDescripcion) values (17, "Actividad Fisica & Deporte",  3165000, "divrecd_bog@unal.edu.co", 17207,"No. 103 Polideportivo","Area encargada de la actividad deportiva en la UNAL.");
 
-DELETE FROM Programa;
+
 INSERT INTO Bienestar.Programa (progID, progNombre, Area_areID) values (1701, "Actividad ludico deportiva", 17);
 INSERT INTO Bienestar.Programa (progID, progNombre, Area_areID) values (1702, "Acondicionamiento físico e instruccion", 17);
 INSERT INTO Bienestar.Programa (progID, progNombre, Area_areID) values (1703, "Deporte de competencia", 17);
@@ -1400,7 +1462,7 @@ INSERT INTO Bienestar.TorneoInterno VALUES (10110, '2023-1', 'Facultad de Cienci
 #select * from Convocatoria;
 -- cursos libres
 
-DELETE FROM Convocatoria;
+
 INSERT INTO Bienestar.Convocatoria (conv_id, convNombre, convFechaApertura, convFechaCierre, convEstado, convPeriodo, Programa_progID)
 VALUES
 (201, 'Convocatoria Deporte 2021-1', '2021-01-01', '2021-01-31', 1, '2021-1', 1702),
@@ -1460,8 +1522,9 @@ INSERT INTO Bienestar.ConvocatoriaSeleccion (Convocatoria_conv_id, convDeporte, 
 (218, 'Ciclismo', 'Anillo vial', '20:00:00'),
 (219, 'Atletismo', 'Polideportivo', '09:00:00');
 
-DELETE FROM estudiante_toma_convocatoria;
-insert into estudiante_toma_convocatoria values (9,210);
-insert into estudiante_toma_convocatoria values (13,217);
+
+insert into estudiante_toma_convocatoria values (9,210,'2023-03-15');
+insert into estudiante_toma_convocatoria values (9,210,'2023-03-15');
+insert into estudiante_toma_convocatoria values (13,217,'2023-04-15');
 
 SET FOREIGN_KEY_CHECKS=1;
