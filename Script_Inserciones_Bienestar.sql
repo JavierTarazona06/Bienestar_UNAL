@@ -1,209 +1,211 @@
 use Bienestar;
 SET FOREIGN_KEY_CHECKS=0;
 
+
 #Javier
 #------------------------------------------------------------------
 DELETE FROM persona;
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (1,'Ana José','Ramírez Mendoza','CL 120 s No. 81-31','Guayabal','Barranquilla','Apartaestudio','Otra','ARamírezM@unal.edu.co','Sura EPS','Medicina');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (2,'Gabriela Andrés','Pérez Núñez','KR 125 j No. 43-65','Las Acacias','Barranquilla','Apartaestudio','Engativá','GPérezN@unal.edu.co','Colmedica','Ciencias');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (3,'Ricardo Felipe','Sánchez Gómez','TV 72 h No. 43-30','San Antonio','Cartagena','Finca','Usaquén','RSánchezG@unal.edu.co','Colmedica','Ciencias Veterinarias y de Zootecnia');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (4,'Miguel Juan','García Romero','AK 117 a No. 48-12','Campo Valdés','Ibagué','Finca','Chapinero','MGarcíaR@unal.edu.co','Nueva EPS','Derecho, Ciencias Políticas y Sociales');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (5,'Laura Ricardo','Torres Gómez','CL 20 e No. 82-16','El Rodeo','Ibagué','Casa','Puente Aranda','LTorresG@unal.edu.co','Famisanar','Psicología');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (6,'Santiago Ernesto','Ramírez Fernández','AC 104 i No. 58-59','Loma de Los Bernal','Cali','Casa','Teusaquillo','SRamírezF@unal.edu.co','Nueva EPS','Ciencias Agrarias');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (7,'Jorge Diego','Álvarez Ruiz','TV 48 o No. 75-48','Santa Cruz','Cali','Apartaestudio','Suba','JÁlvarezR@unal.edu.co','Sanitas','Artes');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (8,'Natalia Manuel','Ruiz Jiménez','KR 127 b No. 3-38','El Centro','Cúcuta','Apartaestudio','Teusaquillo','NRuizJ@unal.edu.co','Nueva EPS','Psicología');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (9,'Ricardo Andrés','Suárez Pérez','CL 123 f No. 2-85','Manila','Barranquilla','Apartaestudio','Rafael Uribe Uribe','RSuárezP@unal.edu.co','Cafesalud','Ciencias');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (10,'Andrés Ernesto','Rojas Martínez','KR 20 t No. 46-45','Las Acacias','Villavicencio','Apartaestudio','Teusaquillo','ARojasM@unal.edu.co','Famisanar','Ingeniería');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (11,'Luis Carla','López Díaz','TV 112 b No. 3-81','Envigado','Bucaramanga','Apartaestudio','Bosa','LLópezD@unal.edu.co','Cafesalud','Ciencias Económicas');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (12,'Isabel Pedro','López Morales','AK 172 o No. 41-63','El Lido','Cúcuta','Apartamento','La Candelaria','ILópezM@unal.edu.co','Sura EPS','Ciencias Agrarias');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (13,'Diego Fernando','Romero Díaz','TV 132 q No. 88-99','El Rodeo','Soacha','Finca','Engativá','DRomeroD@unal.edu.co','Aliansalud','Ciencias');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (14,'Manuel Andrea','Silva López','TV 146 t No. 29-4','Barrio Colombia','Cartagena','Casa','Rafael Uribe Uribe','MSilvaL@unal.edu.co','Sanitas','Derecho, Ciencias Políticas y Sociales');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (15,'Mónica María','Fernández Martínez','CL 141 p No. 48-86','La Floresta','Villavicencio','Casa','Bosa','MFernándezM@unal.edu.co','SaludTotal','Odontología');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (16,'Raúl Santiago','Martínez Suárez','KR 36 g No. 5-66','Bello','Medellín','Apartaestudio','Puente Aranda','RMartínezS@unal.edu.co','Colmedica','Odontología');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (17,'Miguel Ricardo','Reyes Martínez','AC 23 i No. 19-80','Itagüí','Cartagena','Apartaestudio','Barrios Unidos','MReyesM@unal.edu.co','Sanitas','Ciencias Agrarias');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (18,'Raúl Andrea','Romero Torres','AC 63 r No. 57-23','Bello','Villavicencio','Casa','San Cristóbal','RRomeroT@unal.edu.co','Famisanar','Ciencias Económicas');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (19,'Ana Alejandro','Romero Ruiz','AK 160 b No. 42-32','Bello','Villavicencio','Apartaestudio','Ciudad Bolívar','ARomeroR@unal.edu.co','Aliansalud','Ciencias Económicas');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (20,'Carlos Pedro','Martínez Flores','TV 167 c No. 10-46','Barrio Colombia','Bogotá','Finca','Engativá','CMartínezF@unal.edu.co','Cafesalud','Psicología');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (21,'Gabriela Andrés','Gómez López','AC 133 s No. 52-4','El Pinal','Barranquilla','Casa','Rafael Uribe Uribe','GGómezL@unal.edu.co','Coomeva EPS','Ingeniería');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (22,'Mónica Andrés','Romero Rodríguez','KR 50 d No. 19-6','Laureano Gómez','Villavicencio','Finca','Rafael Uribe Uribe','MRomeroR@unal.edu.co','Aliansalud','Ciencias Agrarias');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (23,'Jorge Ana','Fernández Núñez','TV 174 s No. 22-36','El Popular','Cali','Apartaestudio','Antonio Nariño','JFernándezN@unal.edu.co','Sura EPS','Medicina');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (24,'José Alejandro','Suárez Ramírez','CL 51 j No. 98-1','El Raizal','Medellín','Apartaestudio','Antonio Nariño','JSuárezR@unal.edu.co','EPS Familiar','Ingeniería');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (25,'Carlos Mario','Rodríguez Hernández','CL 66 r No. 85-76','La Floresta','Soacha','Apartamento','Usme','CRodríguezH@unal.edu.co','Coomeva EPS','Ingeniería');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (26,'Roberto Mario','Ramírez Reyes','KR 71 g No. 13-60','San Diego','Medellín','Finca','La Candelaria','RRamírezR@unal.edu.co','Sura EPS','Ciencias Económicas');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (27,'Isabel Isabel','García Cruz','KR 106 c No. 6-99','Belén','Cali','Casa','Usaquén','IGarcíaC@unal.edu.co','Compensar','Odontología');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (28,'María Roberto','Romero Gómez','AC 54 f No. 84-9','Envigado','Soacha','Apartaestudio','Rafael Uribe Uribe','MRomeroG@unal.edu.co','EPS Familiar','Odontología');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (29,'Carlos Luis','Martínez Cruz','KR 79 l No. 58-2','El Lido','Cúcuta','Apartaestudio','Suba','CMartínezC@unal.edu.co','Cafesalud','Psicología');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (30,'Laura Miguel','Fernández Ramírez','AK 90 g No. 1-65','Bello','Ibagué','Finca','Bosa','LFernándezR@unal.edu.co','Cafesalud','Ciencias Agrarias');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (31,'Lucía Laura','Castro Romero','TV 105 d No. 47-65','Belén','Bucaramanga','Apartaestudio','Antonio Nariño','LCastroR@unal.edu.co','SaludTotal','Odontología');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (32,'Andrés Gabriela','Álvarez González','KR 119 l No. 62-77','San Lucas','Soacha','Apartaestudio','Suba','AÁlvarezG@unal.edu.co','Coomeva EPS','Psicología');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (33,'María Isabel','Ruiz Álvarez','CL 82 s No. 63-2','La Avanzada','Cali','Finca','Bosa','MRuizÁ@unal.edu.co','SaludTotal','Ciencias Agrarias');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (34,'Isabel Luis','Ortiz Jiménez','AK 76 e No. 36-44','El Lido','Bucaramanga','Finca','Tunjuelito','IOrtizJ@unal.edu.co','Aliansalud','Enfermería');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (35,'Ricardo Santiago','López Hernández','TV 35 s No. 49-43','El Raizal','Medellín','Casa','Chapinero','RLópezH@unal.edu.co','Colmedica','Medicina');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (36,'Pedro Gabriela','Gómez Flores','KR 16 h No. 47-16','El Popular','Ibagué','Apartamento','Santa Fe','PGómezF@unal.edu.co','SaludTotal','Psicología');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (37,'Roberto Lucía','Suárez Hernández','TV 171 a No. 78-2','El Rodeo','Bucaramanga','Apartaestudio','Usme','RSuárezH@unal.edu.co','Cafesalud','Psicología');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (38,'Alejandro Felipe','Núñez González','KR 63 f No. 21-9','La Pradera','Soacha','Apartamento','Ciudad Bolívar','ANúñezG@unal.edu.co','Famisanar','Derecho, Ciencias Políticas y Sociales');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (39,'José Luis','Flores Chávez','AC 180 s No. 17-60','El Tesoro','Medellín','Apartamento','Chapinero','JFloresC@unal.edu.co','Famisanar','Odontología');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (40,'Juan Diego','Pérez Mendoza','AK 90 h No. 53-39','La Candelaria','Ibagué','Apartaestudio','La Candelaria','JPérezM@unal.edu.co','Famisanar','Medicina');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (41,'José Manuel','Ortiz Hernández','AK 111 t No. 82-99','Santa Cruz','Ibagué','Apartamento','Barrios Unidos','JOrtizH@unal.edu.co','Sura EPS','Ciencias Agrarias');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (42,'Roberto Alejandro','Vargas Ramírez','KR 160 h No. 98-76','El Poblado','Villavicencio','Apartaestudio','Rafael Uribe Uribe','RVargasR@unal.edu.co','Nueva EPS','Enfermería');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (43,'Raúl Carla','Mendoza Fernández','AC 154 e No. 31-83','San Diego','Cali','Finca','Ciudad Bolívar','RMendozaF@unal.edu.co','Coomeva EPS','Ciencias Veterinarias y de Zootecnia');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (44,'Diego José','Flores Hernández','KR 37 o No. 42-70','San Lucas','Cúcuta','Casa','Chapinero','DFloresH@unal.edu.co','Sura EPS','Ciencias Agrarias');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (45,'Carla Pedro','Castro Suárez','TV 44 r No. 4-43','San Joaquín','Cartagena','Apartamento','Santa Fe','CCastroS@unal.edu.co','Colmedica','Ingeniería');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (46,'Ana Lucía','Vargas García','CL 144 a No. 91-74','La América','Bucaramanga','Finca','Kennedy','AVargasG@unal.edu.co','Sura EPS','Ciencias Humanas');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (47,'Jorge Manuel','Gómez García','TV 180 g No. 81-41','Moravia','Cartagena','Casa','Santa Fe','JGómezG@unal.edu.co','Sura EPS','Ciencias Humanas');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (48,'Andrés Alejandro','Ramírez Silva','CL 4 m No. 98-45','La Castellana','Medellín','Apartamento','Barrios Unidos','ARamírezS@unal.edu.co','Famisanar','Ciencias Veterinarias y de Zootecnia');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (49,'Jorge Luis','Chávez Flores','CL 23 k No. 45-91','Castilla','Cúcuta','Apartaestudio','Engativá','JChávezF@unal.edu.co','Aliansalud','Artes');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (50,'Mónica Mónica','Pérez Morales','AK 171 b No. 40-47','La Mota','Cúcuta','Apartamento','Kennedy','MPérezM@unal.edu.co','Cafesalud','Enfermería');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (51,'Andrea Ricardo','Silva Sánchez','AK 134 q No. 41-49','Aranjuez','Barranquilla','Casa','Fontibón','ASilvaS@unal.edu.co','EPS Familiar','Derecho, Ciencias Políticas y Sociales');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (52,'Diego Gabriela','Sánchez Mendoza','KR 68 l No. 21-70','Belén','Soacha','Apartamento','Teusaquillo','DSánchezM@unal.edu.co','Coomeva EPS','Ciencias Humanas');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (53,'Mario Manuel','González Vargas','CL 132 k No. 45-94','El Rodeo','Soacha','Finca','Usaquén','MGonzálezV@unal.edu.co','Sura EPS','Ciencias Agrarias');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (54,'Luis Raúl','Pérez Silva','TV 130 o No. 59-89','Las Acacias','Ibagué','Finca','Kennedy','LPérezS@unal.edu.co','Sura EPS','Ciencias Humanas');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (55,'Isabel Felipe','García González','KR 118 o No. 23-32','Laureano Gómez','Bogotá','Apartaestudio','Otra','IGarcíaG@unal.edu.co','Colmedica','Ciencias Humanas');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (56,'Mónica Mónica','Jiménez Castro','AK 54 i No. 3-36','Envigado','Cali','Apartamento','Kennedy','MJiménezC@unal.edu.co','Coomeva EPS','Artes');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (57,'Ana Gabriela','Silva Mendoza','AC 145 k No. 77-33','La Castellana','Soacha','Apartamento','Usaquén','ASilvaM@unal.edu.co','Cafesalud','Ciencias Humanas');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (58,'Natalia Mario','Díaz Pérez','AK 15 n No. 76-16','Aranjuez','Ibagué','Finca','Santa Fe','NDíazP@unal.edu.co','Famisanar','Ciencias Económicas');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (59,'Raúl Felipe','Pérez Cruz','AC 67 p No. 89-5','Envigado','Medellín','Finca','Usaquén','RPérezC@unal.edu.co','Famisanar','Medicina');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (60,'Ana Gabriela','Flores López','AC 134 l No. 84-17','El Centro','Cúcuta','Apartaestudio','Rafael Uribe Uribe','AFloresL@unal.edu.co','EPS Familiar','Ciencias Humanas');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (61,'Felipe Mario','González Chávez','KR 178 l No. 6-51','La Castellana','Cartagena','Finca','Usaquén','FGonzálezC@unal.edu.co','Colmedica','Ingeniería');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (62,'Natalia Diego','Rojas Ortiz','AC 118 q No. 41-22','Laureano Gómez','Villavicencio','Finca','San Cristóbal','NRojasO@unal.edu.co','Sura EPS','Ciencias Veterinarias y de Zootecnia');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (63,'Pedro Santiago','Pérez Mendoza','KR 134 k No. 7-2','San Lucas','Medellín','Finca','San Cristóbal','PPérezM@unal.edu.co','Cafesalud','Ciencias Económicas');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (64,'Jorge Ricardo','García Morales','AK 26 q No. 4-32','La América','Villavicencio','Casa','Ciudad Bolívar','JGarcíaM@unal.edu.co','Sura EPS','Ciencias Económicas');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (65,'Roberto Andrés','Suárez Ramírez','AC 111 r No. 18-98','Guayabal','Bucaramanga','Apartaestudio','Chapinero','RSuárezR@unal.edu.co','Nueva EPS','Psicología');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (66,'María Jorge','Ruiz Díaz','CL 25 k No. 52-2','Los Colores','Cali','Apartaestudio','San Cristóbal','MRuizD@unal.edu.co','Sura EPS','Enfermería');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (67,'Jorge Natalia','Rojas Mendoza','AK 130 k No. 49-31','Moravia','Cartagena','Apartaestudio','Suba','JRojasM@unal.edu.co','Sura EPS','Ingeniería');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (68,'Gustavo Manuel','Silva García','AC 86 j No. 2-55','El Pinal','Bogotá','Apartaestudio','Otra','GSilvaG@unal.edu.co','Nueva EPS','Psicología');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (69,'Laura Juan','Vargas Jiménez','AC 143 l No. 25-11','Laureles','Ibagué','Finca','Tunjuelito','LVargasJ@unal.edu.co','Colmedica','Ingeniería');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (70,'Raúl Mónica','Rodríguez Ruiz','AC 128 c No. 8-14','Guayabal','Barranquilla','Casa','La Candelaria','RRodríguezR@unal.edu.co','Coomeva EPS','Ciencias Veterinarias y de Zootecnia');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (71,'Laura Jorge','Díaz Rodríguez','TV 127 l No. 73-83','La Candelaria','Cali','Apartamento','Ciudad Bolívar','LDíazR@unal.edu.co','SaludTotal','Ciencias Económicas');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (72,'Roberto Santiago','Ruiz García','AK 51 i No. 96-57','San Antonio','Cúcuta','Casa','San Cristóbal','RRuizG@unal.edu.co','Colmedica','Medicina');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (73,'Gustavo Felipe','Hernández Vargas','KR 27 l No. 8-60','Cristo Rey','Villavicencio','Apartaestudio','Engativá','GHernándezV@unal.edu.co','SaludTotal','Psicología');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (74,'Luis Carla','López Álvarez','KR 69 d No. 76-32','La Aguacatala','Villavicencio','Casa','Ciudad Bolívar','LLópezÁ@unal.edu.co','Compensar','Medicina');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (75,'Andrea José','García Suárez','CL 126 q No. 7-62','Estadio','Bucaramanga','Apartamento','Los Mártires','AGarcíaS@unal.edu.co','SaludTotal','Psicología');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (76,'Jorge Andrea','Flores Castro','CL 43 s No. 1-67','Aranjuez','Cartagena','Finca','Antonio Nariño','JFloresC@unal.edu.co','EPS Familiar','Ciencias Económicas');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (77,'Jorge Andrea','Morales Fernández','KR 141 b No. 50-77','El Tesoro','Soacha','Finca','Puente Aranda','JMoralesF@unal.edu.co','Sanitas','Ciencias');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (78,'Alejandro Luis','Díaz Morales','AC 22 g No. 47-2','Barrio Colombia','Cúcuta','Apartamento','Suba','ADíazM@unal.edu.co','SaludTotal','Ciencias Agrarias');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (79,'Andrea Natalia','Pérez Jiménez','CL 107 b No. 3-8','El Poblado','Villavicencio','Apartamento','Teusaquillo','APérezJ@unal.edu.co','Compensar','Psicología');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (80,'María María','Rojas Fernández','AK 105 c No. 69-86','La Castellana','Barranquilla','Casa','Suba','MRojasF@unal.edu.co','Famisanar','Ciencias');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (81,'Felipe Gabriela','Sánchez Martínez','TV 180 f No. 92-21','Estadio','Barranquilla','Apartamento','Engativá','FSánchezM@unal.edu.co','SaludTotal','Odontología');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (82,'Alejandro Alejandro','Gómez Jiménez','AC 164 a No. 44-30','La América','Medellín','Casa','Engativá','AGómezJ@unal.edu.co','Nueva EPS','Ciencias Humanas');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (83,'Alejandro Roberto','Hernández Álvarez','KR 174 l No. 91-90','Bello','Medellín','Finca','Usme','AHernándezÁ@unal.edu.co','EPS Familiar','Derecho, Ciencias Políticas y Sociales');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (84,'Laura Carlos','Suárez Ruiz','TV 153 s No. 12-13','La Floresta','Bucaramanga','Apartaestudio','Chapinero','LSuárezR@unal.edu.co','Aliansalud','Ciencias Veterinarias y de Zootecnia');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (85,'Andrés Ana','Núñez Morales','TV 173 k No. 43-69','Campo Valdés','Cartagena','Apartamento','Suba','ANúñezM@unal.edu.co','Aliansalud','Enfermería');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (86,'Mónica Fernando','Hernández Silva','AK 91 o No. 1-86','El Poblado','Bucaramanga','Apartaestudio','Tunjuelito','MHernándezS@unal.edu.co','Coomeva EPS','Ciencias Veterinarias y de Zootecnia');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (87,'Fernando Natalia','Núñez Díaz','TV 67 i No. 38-9','Manrique','Cali','Apartaestudio','Kennedy','FNúñezD@unal.edu.co','Compensar','Derecho, Ciencias Políticas y Sociales');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (88,'Natalia Ricardo','Sánchez Ramírez','AC 1 g No. 97-19','El Chagualo','Soacha','Apartamento','Kennedy','NSánchezR@unal.edu.co','Cafesalud','Ciencias Humanas');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (89,'Miguel Luis','Torres Pérez','TV 121 a No. 56-33','Laureles','Medellín','Apartamento','Usaquén','MTorresP@unal.edu.co','Nueva EPS','Ciencias Agrarias');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (90,'Jorge Manuel','Ruiz Morales','AK 4 i No. 27-19','El Rodeo','Soacha','Apartamento','Otra','JRuizM@unal.edu.co','SaludTotal','Ciencias Agrarias');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (91,'Miguel Roberto','Díaz García','CL 74 i No. 5-78','Laureano Gómez','Ibagué','Casa','Teusaquillo','MDíazG@unal.edu.co','Aliansalud','Enfermería');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (92,'Luis Mario','Fernández Castro','CL 30 l No. 34-5','Itagüí','Bogotá','Apartaestudio','La Candelaria','LFernándezC@unal.edu.co','Compensar','Psicología');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (93,'Miguel Ernesto','Martínez Romero','KR 110 k No. 20-35','La Flora','Barranquilla','Casa','Suba','MMartínezR@unal.edu.co','Cafesalud','Artes');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (94,'Isabel Lucía','Ramírez Castro','AC 104 p No. 92-76','La Pradera','Cúcuta','Apartaestudio','San Cristóbal','IRamírezC@unal.edu.co','Coomeva EPS','Derecho, Ciencias Políticas y Sociales');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (95,'José Ricardo','Álvarez Pérez','KR 81 c No. 33-22','Itagüí','Soacha','Apartamento','Antonio Nariño','JÁlvarezP@unal.edu.co','Sanitas','Ciencias');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (96,'Ana Ernesto','Torres Hernández','CL 176 c No. 44-38','Itagüí','Cúcuta','Casa','Kennedy','ATorresH@unal.edu.co','Nueva EPS','Medicina');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (97,'Laura Alejandro','Álvarez Pérez','KR 114 k No. 30-70','San Lucas','Bogotá','Apartaestudio','Barrios Unidos','LÁlvarezP@unal.edu.co','Sanitas','Ciencias Veterinarias y de Zootecnia');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (98,'Santiago Manuel','Ramírez Sánchez','CL 64 r No. 89-42','San Lucas','Barranquilla','Apartamento','Tunjuelito','SRamírezS@unal.edu.co','Famisanar','Odontología');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (99,'Gustavo Luis','Rojas Suárez','TV 88 r No. 73-81','Estadio','Villavicencio','Finca','Santa Fe','GRojasS@unal.edu.co','Colmedica','Ciencias Veterinarias y de Zootecnia');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (100,'Fernando Laura','Suárez Suárez','AC 110 k No. 60-90','El Pinal','Soacha','Finca','Bosa','FSuárezS@unal.edu.co','Sura EPS','Enfermería');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (101,'Roberto Luis','Sánchez Álvarez','CL 105 t No. 60-70','La Candelaria','Cartagena','Apartamento','Ciudad Bolívar','RSánchezÁ@unal.edu.co','Compensar','Ciencias Agrarias');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (102,'Gabriela Ricardo','Morales Ortiz','CL 160 p No. 21-27','El Popular','Soacha','Apartamento','Rafael Uribe Uribe','GMoralesO@unal.edu.co','Cafesalud','Artes');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (103,'Isabel Juan','Vargas Silva','TV 73 m No. 81-81','Robledo','Bogotá','Apartamento','Fontibón','IVargasS@unal.edu.co','Cafesalud','Odontología');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (104,'María Jorge','Ramírez Rodríguez','TV 41 n No. 50-14','Castilla','Cartagena','Casa','La Candelaria','MRamírezR@unal.edu.co','Coomeva EPS','Ciencias Agrarias');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (105,'Jorge Miguel','Fernández Hernández','AK 161 a No. 65-78','La Avanzada','Barranquilla','Apartamento','Bosa','JFernándezH@unal.edu.co','SaludTotal','Enfermería');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (106,'Manuel María','Álvarez Jiménez','AC 12 j No. 11-32','Manila','Bucaramanga','Casa','Puente Aranda','MÁlvarezJ@unal.edu.co','Aliansalud','Ciencias Humanas');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (107,'Alejandro María','Castro Díaz','CL 61 t No. 68-73','Belén','Bogotá','Apartaestudio','La Candelaria','ACastroD@unal.edu.co','SaludTotal','Ciencias Humanas');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (108,'Gustavo Lucía','Pérez Reyes','CL 49 d No. 3-35','El Raizal','Barranquilla','Casa','Antonio Nariño','GPérezR@unal.edu.co','Colmedica','Ingeniería');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (109,'Alejandro Raúl','García González','AC 87 j No. 89-94','La Flora','Bogotá','Casa','Los Mártires','AGarcíaG@unal.edu.co','Nueva EPS','Ingeniería');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (110,'Raúl Ana','Torres Ramírez','AC 16 c No. 23-48','Doce de Octubre','Ibagué','Apartaestudio','Puente Aranda','RTorresR@unal.edu.co','SaludTotal','Odontología');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (111,'Alejandro Carla','Suárez Núñez','KR 131 a No. 82-19','El Pinal','Cali','Casa','Ciudad Bolívar','ASuárezN@unal.edu.co','SaludTotal','Artes');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (112,'Raúl Luis','Vargas Ramírez','AC 36 n No. 21-80','Manila','Cali','Apartaestudio','Usaquén','RVargasR@unal.edu.co','Compensar','Artes');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (113,'Mario Roberto','Díaz Jiménez','AK 58 j No. 67-73','San Diego','Cúcuta','Apartamento','Ciudad Bolívar','MDíazJ@unal.edu.co','Colmedica','Enfermería');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (114,'Fernando Ernesto','Rojas Silva','KR 148 e No. 2-48','El Chagualo','Bucaramanga','Casa','Usaquén','FRojasS@unal.edu.co','Colmedica','Ciencias Humanas');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (115,'Gustavo Mónica','Martínez Suárez','KR 80 g No. 32-73','El Salado','Bucaramanga','Casa','Antonio Nariño','GMartínezS@unal.edu.co','EPS Familiar','Psicología');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (116,'Ricardo Mario','García Álvarez','AK 123 d No. 27-81','La América','Barranquilla','Apartaestudio','Teusaquillo','RGarcíaÁ@unal.edu.co','Famisanar','Ciencias Humanas');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (117,'Raúl Isabel','Hernández López','KR 61 p No. 10-79','La Castellana','Ibagué','Casa','Los Mártires','RHernándezL@unal.edu.co','SaludTotal','Ciencias Veterinarias y de Zootecnia');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (118,'Carlos Raúl','Gómez Cruz','TV 59 e No. 98-19','Los Colores','Medellín','Apartaestudio','Tunjuelito','CGómezC@unal.edu.co','Colmedica','Ingeniería');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (119,'Alejandro Natalia','Silva Silva','CL 61 s No. 6-4','La Candelaria','Villavicencio','Apartamento','Ciudad Bolívar','ASilvaS@unal.edu.co','Cafesalud','Ciencias');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (120,'Andrea Lucía','Rojas Romero','AC 55 l No. 86-25','Doce de Octubre','Barranquilla','Apartaestudio','Tunjuelito','ARojasR@unal.edu.co','SaludTotal','Ciencias Agrarias');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (121,'Ernesto Ernesto','García Hernández','AC 112 b No. 41-24','Itagüí','Ibagué','Finca','Tunjuelito','EGarcíaH@unal.edu.co','Cafesalud','Ciencias Económicas');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (122,'Alejandro Ricardo','García Ramírez','AK 159 i No. 15-54','La Estrella','Cartagena','Apartamento','Rafael Uribe Uribe','AGarcíaR@unal.edu.co','Nueva EPS','Ciencias');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (123,'Natalia María','Rodríguez Ramírez','TV 132 a No. 73-39','El Tesoro','Villavicencio','Apartaestudio','Ciudad Bolívar','NRodríguezR@unal.edu.co','Famisanar','Derecho, Ciencias Políticas y Sociales');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (124,'Carla Andrea','Flores Chávez','AK 44 e No. 76-81','San Lucas','Bogotá','Casa','Suba','CFloresC@unal.edu.co','Sura EPS','Medicina');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (125,'María Manuel','Pérez Díaz','AC 150 r No. 8-92','San Diego','Ibagué','Casa','Rafael Uribe Uribe','MPérezD@unal.edu.co','Cafesalud','Derecho, Ciencias Políticas y Sociales');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (126,'José Fernando','Cruz Cruz','CL 29 h No. 54-99','Manila','Medellín','Apartamento','Usme','JCruzC@unal.edu.co','Colmedica','Enfermería');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (127,'Ernesto Laura','Silva Romero','CL 61 o No. 66-70','Manila','Villavicencio','Casa','Usme','ESilvaR@unal.edu.co','Sura EPS','Medicina');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (128,'Mónica Ana','Gómez Romero','AK 131 n No. 58-50','Manrique','Ibagué','Casa','Usaquén','MGómezR@unal.edu.co','Cafesalud','Ciencias Agrarias');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (129,'Alejandro Manuel','García Reyes','AK 173 k No. 2-59','Envigado','Medellín','Apartaestudio','Teusaquillo','AGarcíaR@unal.edu.co','Aliansalud','Ciencias Económicas');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (130,'Roberto Miguel','Ortiz Díaz','AK 75 f No. 13-51','San Javier','Ibagué','Finca','Fontibón','ROrtizD@unal.edu.co','EPS Familiar','Odontología');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (131,'Mario Manuel','González Cruz','KR 49 n No. 7-39','San Joaquín','Ibagué','Casa','Los Mártires','MGonzálezC@unal.edu.co','EPS Familiar','Ciencias Económicas');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (132,'Felipe Carla','Flores Ramírez','TV 107 a No. 45-24','La Avanzada','Bucaramanga','Finca','Bosa','FFloresR@unal.edu.co','Sura EPS','Odontología');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (133,'Mónica Ricardo','Ramírez Silva','AK 19 m No. 50-84','Robledo','Barranquilla','Apartamento','Suba','MRamírezS@unal.edu.co','Sanitas','Ciencias Humanas');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (134,'Laura Lucía','Ortiz Cruz','TV 101 b No. 43-54','El Salado','Soacha','Apartaestudio','Santa Fe','LOrtizC@unal.edu.co','Coomeva EPS','Ciencias Humanas');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (135,'Isabel Santiago','Romero Flores','KR 58 e No. 29-49','Doce de Octubre','Cartagena','Apartaestudio','San Cristóbal','IRomeroF@unal.edu.co','Coomeva EPS','Ciencias');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (136,'Fernando Mario','Morales Ortiz','TV 106 f No. 98-85','Envigado','Medellín','Finca','Rafael Uribe Uribe','FMoralesO@unal.edu.co','Aliansalud','Psicología');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (137,'Juan María','Reyes Cruz','CL 163 o No. 85-85','Robledo','Bogotá','Casa','Los Mártires','JReyesC@unal.edu.co','Colmedica','Artes');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (138,'Juan Manuel','Fernández Ramírez','TV 53 h No. 86-50','El Centro','Ibagué','Finca','Rafael Uribe Uribe','JFernándezR@unal.edu.co','Sanitas','Medicina');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (139,'María Raúl','Pérez Flores','AC 106 d No. 1-84','La Aguacatala','Villavicencio','Finca','Usaquén','MPérezF@unal.edu.co','Colmedica','Enfermería');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (140,'Gabriela Miguel','García Rojas','AC 165 q No. 44-5','Santa Cruz','Cali','Apartaestudio','Ciudad Bolívar','GGarcíaR@unal.edu.co','Colmedica','Psicología');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (141,'Andrés Luis','Gómez Mendoza','TV 37 p No. 19-51','El Tesoro','Cali','Finca','San Cristóbal','AGómezM@unal.edu.co','Cafesalud','Ciencias Económicas');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (142,'Diego Alejandro','Castro Martínez','CL 125 m No. 10-3','La Castellana','Cúcuta','Casa','Teusaquillo','DCastroM@unal.edu.co','Nueva EPS','Ciencias Agrarias');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (143,'Juan Pedro','Mendoza Romero','TV 129 s No. 57-3','Laureano Gómez','Cali','Apartaestudio','Antonio Nariño','JMendozaR@unal.edu.co','Coomeva EPS','Odontología');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (144,'Andrés Alejandro','González Sánchez','KR 62 b No. 38-97','El Tesoro','Cartagena','Finca','San Cristóbal','AGonzálezS@unal.edu.co','Nueva EPS','Ciencias Económicas');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (145,'Ana Gabriela','López González','CL 149 s No. 14-93','Guayabal','Villavicencio','Apartaestudio','Santa Fe','ALópezG@unal.edu.co','Nueva EPS','Derecho, Ciencias Políticas y Sociales');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (146,'Andrea Andrea','Martínez Fernández','AC 129 o No. 84-6','Santa Cruz','Cali','Casa','Rafael Uribe Uribe','AMartínezF@unal.edu.co','Nueva EPS','Enfermería');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (147,'Gustavo Natalia','Suárez Núñez','AC 168 a No. 85-4','Itagüí','Barranquilla','Apartaestudio','Rafael Uribe Uribe','GSuárezN@unal.edu.co','Coomeva EPS','Psicología');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (148,'Ricardo Luis','Sánchez Torres','TV 149 r No. 42-56','Castilla','Ibagué','Apartaestudio','Kennedy','RSánchezT@unal.edu.co','SaludTotal','Ciencias Veterinarias y de Zootecnia');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (149,'Andrés Pedro','Mendoza Fernández','KR 137 o No. 87-32','Manila','Medellín','Apartamento','Bosa','AMendozaF@unal.edu.co','Nueva EPS','Enfermería');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (150,'María María','Ramírez Morales','AK 47 l No. 4-7','La Flora','Cúcuta','Casa','Bosa','MRamírezM@unal.edu.co','Coomeva EPS','Medicina');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (151,'José Andrea','Mendoza Díaz','CL 40 e No. 46-58','El Diamante','Cartagena','Apartamento','Usme','JMendozaD@unal.edu.co','Nueva EPS','Ciencias Agrarias');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (152,'Ernesto Alejandro','González Núñez','CL 133 r No. 80-58','Castilla','Bucaramanga','Apartamento','Chapinero','EGonzálezN@unal.edu.co','Sura EPS','Ciencias');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (153,'Alejandro Mónica','García Morales','CL 34 k No. 42-29','San Javier','Soacha','Finca','Puente Aranda','AGarcíaM@unal.edu.co','Cafesalud','Odontología');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (154,'Gustavo Carla','Hernández Rojas','KR 79 l No. 79-58','Laureles','Medellín','Apartamento','Fontibón','GHernándezR@unal.edu.co','Coomeva EPS','Ingeniería');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (155,'Jorge Fernando','Álvarez Morales','AC 161 m No. 54-13','La Candelaria','Medellín','Finca','Tunjuelito','JÁlvarezM@unal.edu.co','Compensar','Psicología');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (156,'Isabel Carlos','Suárez Castro','KR 149 k No. 28-25','Santa Cruz','Medellín','Apartamento','La Candelaria','ISuárezC@unal.edu.co','Famisanar','Derecho, Ciencias Políticas y Sociales');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (157,'Manuel Andrés','Gómez Díaz','AK 157 l No. 49-25','El Pinal','Bucaramanga','Apartamento','Rafael Uribe Uribe','MGómezD@unal.edu.co','Sanitas','Ciencias');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (158,'Ricardo Ernesto','Hernández Ruiz','TV 107 h No. 90-66','El Rodeo','Ibagué','Apartamento','Bosa','RHernándezR@unal.edu.co','EPS Familiar','Ciencias Humanas');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (159,'Mónica Gabriela','Sánchez González','AK 173 r No. 73-15','Manrique','Ibagué','Apartaestudio','Antonio Nariño','MSánchezG@unal.edu.co','Colmedica','Medicina');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (160,'José Gabriela','Gómez Ortiz','TV 88 a No. 12-20','La América','Cali','Apartaestudio','Tunjuelito','JGómezO@unal.edu.co','Colmedica','Ciencias');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (161,'Diego Natalia','González Núñez','KR 72 r No. 7-84','Belén','Villavicencio','Apartaestudio','Puente Aranda','DGonzálezN@unal.edu.co','Sura EPS','Derecho, Ciencias Políticas y Sociales');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (162,'Carla Juan','Rojas Sánchez','AC 37 r No. 92-36','Moravia','Cúcuta','Apartaestudio','Fontibón','CRojasS@unal.edu.co','Coomeva EPS','Psicología');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (163,'Miguel Lucía','Fernández Flores','TV 132 s No. 7-19','Doce de Octubre','Cali','Finca','Otra','MFernándezF@unal.edu.co','Aliansalud','Psicología');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (164,'Alejandro Santiago','Rojas Pérez','AK 164 r No. 56-12','La Mota','Medellín','Finca','Teusaquillo','ARojasP@unal.edu.co','Aliansalud','Ciencias Humanas');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (165,'Gabriela Ernesto','Gómez Rojas','TV 42 t No. 93-1','San Javier','Cúcuta','Casa','Otra','GGómezR@unal.edu.co','Aliansalud','Odontología');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (166,'Alejandro Diego','Vargas Mendoza','AK 116 g No. 73-82','Las Acacias','Bogotá','Apartaestudio','Suba','AVargasM@unal.edu.co','Sanitas','Ingeniería');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (167,'Laura Laura','Romero Ramírez','AK 153 k No. 89-63','Laureano Gómez','Barranquilla','Casa','San Cristóbal','LRomeroR@unal.edu.co','SaludTotal','Psicología');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (168,'Andrea Andrea','Álvarez Pérez','AK 174 e No. 57-42','Laureles','Ibagué','Apartaestudio','Fontibón','AÁlvarezP@unal.edu.co','Nueva EPS','Artes');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (169,'Andrea Raúl','López Rodríguez','AK 166 t No. 15-45','La Avanzada','Soacha','Apartamento','Suba','ALópezR@unal.edu.co','Sanitas','Odontología');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (170,'Gustavo Fernando','López Álvarez','KR 36 q No. 96-65','Las Acacias','Villavicencio','Finca','Barrios Unidos','GLópezÁ@unal.edu.co','Sura EPS','Medicina');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (171,'Isabel Mónica','Romero Sánchez','TV 173 o No. 46-71','La Francia','Soacha','Apartamento','La Candelaria','IRomeroS@unal.edu.co','Nueva EPS','Ciencias Agrarias');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (172,'José Carla','Fernández Romero','TV 178 b No. 95-19','Robledo','Bucaramanga','Casa','Usme','JFernándezR@unal.edu.co','Sura EPS','Ciencias');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (173,'Andrés Miguel','Torres Cruz','AK 49 b No. 25-84','El Raizal','Cartagena','Finca','Chapinero','ATorresC@unal.edu.co','SaludTotal','Enfermería');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (174,'José Natalia','Ruiz Torres','CL 178 n No. 41-49','Santa Cruz','Bucaramanga','Apartaestudio','Teusaquillo','JRuizT@unal.edu.co','SaludTotal','Ingeniería');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (175,'Andrés Miguel','Flores Núñez','CL 5 l No. 33-23','Cristo Rey','Cartagena','Apartaestudio','Chapinero','AFloresN@unal.edu.co','EPS Familiar','Odontología');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (176,'Lucía Manuel','Mendoza Romero','AC 14 e No. 78-52','San Diego','Villavicencio','Finca','Antonio Nariño','LMendozaR@unal.edu.co','Nueva EPS','Ciencias Humanas');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (177,'Ernesto Alejandro','Gómez Rojas','KR 136 b No. 80-94','El Tesoro','Cali','Casa','Antonio Nariño','EGómezR@unal.edu.co','Nueva EPS','Ciencias');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (178,'Ana Fernando','Hernández Ortiz','KR 126 h No. 9-1','San Joaquín','Barranquilla','Casa','Teusaquillo','AHernándezO@unal.edu.co','Sura EPS','Ciencias');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (179,'Ricardo Carlos','Núñez Díaz','CL 68 c No. 67-26','El Centro','Cúcuta','Apartaestudio','Puente Aranda','RNúñezD@unal.edu.co','EPS Familiar','Ciencias');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (180,'Isabel Luis','Pérez Martínez','AC 20 i No. 91-28','Santa Cruz','Cúcuta','Casa','Suba','IPérezM@unal.edu.co','Aliansalud','Ciencias Humanas');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (181,'Andrés Andrea','Vargas García','TV 48 o No. 21-11','Barrio Colombia','Barranquilla','Apartaestudio','Kennedy','AVargasG@unal.edu.co','Sura EPS','Ciencias Veterinarias y de Zootecnia');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (182,'Carla Pedro','Fernández Ortiz','KR 171 m No. 41-97','Doce de Octubre','Bucaramanga','Apartamento','Usme','CFernándezO@unal.edu.co','Compensar','Medicina');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (183,'Santiago Juan','Fernández González','AK 38 o No. 23-58','El Popular','Bucaramanga','Casa','Los Mártires','SFernándezG@unal.edu.co','EPS Familiar','Ciencias');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (184,'Juan Mónica','Ramírez Álvarez','TV 32 e No. 42-75','El Diamante','Bucaramanga','Apartaestudio','Antonio Nariño','JRamírezÁ@unal.edu.co','Coomeva EPS','Ciencias Veterinarias y de Zootecnia');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (185,'José Diego','Torres Hernández','KR 43 q No. 55-2','Moravia','Villavicencio','Finca','Bosa','JTorresH@unal.edu.co','SaludTotal','Odontología');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (186,'Juan Carlos','García Sánchez','AC 85 a No. 47-58','Envigado','Bogotá','Casa','Kennedy','JGarcíaS@unal.edu.co','Famisanar','Artes');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (187,'Andrea Carlos','Cruz Pérez','AK 131 p No. 35-89','El Poblado','Cartagena','Finca','Antonio Nariño','ACruzP@unal.edu.co','Nueva EPS','Ciencias Agrarias');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (188,'Isabel Isabel','Suárez Álvarez','TV 105 i No. 11-97','El Popular','Cartagena','Apartamento','Chapinero','ISuárezÁ@unal.edu.co','Famisanar','Medicina');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (189,'Luis Andrés','Rodríguez Jiménez','AC 108 e No. 47-13','Loma de Los Bernal','Cúcuta','Apartaestudio','Antonio Nariño','LRodríguezJ@unal.edu.co','Sanitas','Ciencias Veterinarias y de Zootecnia');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (190,'Carlos Miguel','Reyes Rodríguez','KR 5 g No. 98-10','El Popular','Cali','Apartaestudio','Usaquén','CReyesR@unal.edu.co','Cafesalud','Artes');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (191,'Santiago Mario','Chávez Vargas','KR 104 c No. 87-13','El Salado','Villavicencio','Apartamento','Usaquén','SChávezV@unal.edu.co','Famisanar','Ciencias Humanas');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (192,'Luis Ricardo','Hernández Martínez','AK 6 l No. 54-37','Aranjuez','Villavicencio','Finca','Bosa','LHernándezM@unal.edu.co','SaludTotal','Derecho, Ciencias Políticas y Sociales');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (193,'Juan Luis','Suárez Núñez','CL 48 m No. 83-19','Itagüí','Cúcuta','Apartamento','Tunjuelito','JSuárezN@unal.edu.co','Nueva EPS','Ciencias');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (194,'Alejandro Fernando','Fernández Núñez','AK 36 p No. 86-93','La Estrella','Cali','Casa','Usme','AFernándezN@unal.edu.co','Compensar','Medicina');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (195,'Gabriela Alejandro','Mendoza Romero','AK 44 k No. 14-1','Laureles','Barranquilla','Apartamento','Usme','GMendozaR@unal.edu.co','Sura EPS','Ciencias Veterinarias y de Zootecnia');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (196,'Alejandro Ernesto','Fernández Reyes','AC 107 n No. 57-25','La Estrella','Cúcuta','Casa','Los Mártires','AFernándezR@unal.edu.co','Compensar','Medicina');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (197,'Ernesto Roberto','Gómez Chávez','AC 136 m No. 45-52','El Salado','Medellín','Casa','Tunjuelito','EGómezC@unal.edu.co','Colmedica','Ciencias Económicas');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (198,'Andrea Carlos','Álvarez González','CL 161 b No. 52-92','Manila','Villavicencio','Apartaestudio','Chapinero','AÁlvarezG@unal.edu.co','Coomeva EPS','Medicina');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (199,'Ernesto Mario','Romero Gómez','TV 98 g No. 80-70','La Mota','Cartagena','Casa','La Candelaria','ERomeroG@unal.edu.co','SaludTotal','Derecho, Ciencias Políticas y Sociales');
-insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values (200,'Raúl Luis','Ortiz Ruiz','CL 126 j No. 80-25','Doce de Octubre','Villavicencio','Casa','Los Mártires','ROrtizR@unal.edu.co','Sanitas','Artes');
+insert into persona (perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perFacultad) values 
+(10101011,'Ana José','Ramírez Mendoza','CL 120 s No. 81-31','Guayabal','Barranquilla','Apartaestudio','Otra','ARamírezM@unal.edu.co','Sura EPS','Medicina'),
+(10101012,'Gabriela Andrés','Pérez Núñez','KR 125 j No. 43-65','Las Acacias','Barranquilla','Apartaestudio','Engativá','GPérezN@unal.edu.co','Colmedica','Ciencias'),
+(10101013,'Ricardo Felipe','Sánchez Gómez','TV 72 h No. 43-30','San Antonio','Cartagena','Finca','Usaquén','RSánchezG@unal.edu.co','Colmedica','Ciencias Veterinarias y de Zootecnia'),
+(10101014,'Miguel Juan','García Romero','AK 117 a No. 48-12','Campo Valdés','Ibagué','Finca','Chapinero','MGarcíaR@unal.edu.co','Nueva EPS','Derecho, Ciencias Políticas y Sociales'),
+(10101015,'Laura Ricardo','Torres Gómez','CL 20 e No. 82-16','El Rodeo','Ibagué','Casa','Puente Aranda','LTorresG@unal.edu.co','Famisanar','Psicología'),
+(10101016,'Santiago Ernesto','Ramírez Fernández','AC 104 i No. 58-59','Loma de Los Bernal','Cali','Casa','Teusaquillo','SRamírezF@unal.edu.co','Nueva EPS','Ciencias Agrarias'),
+(10101017,'Jorge Diego','Álvarez Ruiz','TV 48 o No. 75-48','Santa Cruz','Cali','Apartaestudio','Suba','JÁlvarezR@unal.edu.co','Sanitas','Artes'),
+(10101018,'Natalia Manuel','Ruiz Jiménez','KR 127 b No. 3-38','El Centro','Cúcuta','Apartaestudio','Teusaquillo','NRuizJ@unal.edu.co','Nueva EPS','Psicología'),
+(10101019,'Ricardo Andrés','Suárez Pérez','CL 123 f No. 2-85','Manila','Barranquilla','Apartaestudio','Rafael Uribe Uribe','RSuárezP@unal.edu.co','Cafesalud','Ciencias'),
+(101010110,'Andrés Ernesto','Rojas Martínez','KR 20 t No. 46-45','Las Acacias','Villavicencio','Apartaestudio','Teusaquillo','ARojasM@unal.edu.co','Famisanar','Ingeniería'),
+(101010111,'Luis Carla','López Díaz','TV 112 b No. 3-81','Envigado','Bucaramanga','Apartaestudio','Bosa','LLópezD@unal.edu.co','Cafesalud','Ciencias Económicas'),
+(101010112,'Isabel Pedro','López Morales','AK 172 o No. 41-63','El Lido','Cúcuta','Apartamento','La Candelaria','ILópezM@unal.edu.co','Sura EPS','Ciencias Agrarias'),
+(101010113,'Diego Fernando','Romero Díaz','TV 132 q No. 88-99','El Rodeo','Soacha','Finca','Engativá','DRomeroD@unal.edu.co','Aliansalud','Ciencias'),
+(101010114,'Manuel Andrea','Silva López','TV 146 t No. 29-4','Barrio Colombia','Cartagena','Casa','Rafael Uribe Uribe','MSilvaL@unal.edu.co','Sanitas','Derecho, Ciencias Políticas y Sociales'),        
+(101010115,'Mónica María','Fernández Martínez','CL 141 p No. 48-86','La Floresta','Villavicencio','Casa','Bosa','MFernándezM@unal.edu.co','SaludTotal','Odontología'),
+(101010116,'Raúl Santiago','Martínez Suárez','KR 36 g No. 5-66','Bello','Medellín','Apartaestudio','Puente Aranda','RMartínezS@unal.edu.co','Colmedica','Odontología'),
+(101010117,'Miguel Ricardo','Reyes Martínez','AC 23 i No. 19-80','Itagüí','Cartagena','Apartaestudio','Barrios Unidos','MReyesM@unal.edu.co','Sanitas','Ciencias Agrarias'),
+(101010118,'Raúl Andrea','Romero Torres','AC 63 r No. 57-23','Bello','Villavicencio','Casa','San Cristóbal','RRomeroT@unal.edu.co','Famisanar','Ciencias Económicas'),
+(101010119,'Ana Alejandro','Romero Ruiz','AK 160 b No. 42-32','Bello','Villavicencio','Apartaestudio','Ciudad Bolívar','ARomeroR@unal.edu.co','Aliansalud','Ciencias Económicas'),
+(101010120,'Carlos Pedro','Martínez Flores','TV 167 c No. 10-46','Barrio Colombia','Bogotá','Finca','Engativá','CMartínezF@unal.edu.co','Cafesalud','Psicología'),
+(101010121,'Gabriela Andrés','Gómez López','AC 133 s No. 52-4','El Pinal','Barranquilla','Casa','Rafael Uribe Uribe','GGómezL@unal.edu.co','Coomeva EPS','Ingeniería'),
+(101010122,'Mónica Andrés','Romero Rodríguez','KR 50 d No. 19-6','Laureano Gómez','Villavicencio','Finca','Rafael Uribe Uribe','MRomeroR@unal.edu.co','Aliansalud','Ciencias Agrarias'),
+(101010123,'Jorge Ana','Fernández Núñez','TV 174 s No. 22-36','El Popular','Cali','Apartaestudio','Antonio Nariño','JFernándezN@unal.edu.co','Sura EPS','Medicina'),
+(101010124,'José Alejandro','Suárez Ramírez','CL 51 j No. 98-1','El Raizal','Medellín','Apartaestudio','Antonio Nariño','JSuárezR@unal.edu.co','EPS Familiar','Ingeniería'),
+(101010125,'Carlos Mario','Rodríguez Hernández','CL 66 r No. 85-76','La Floresta','Soacha','Apartamento','Usme','CRodríguezH@unal.edu.co','Coomeva EPS','Ingeniería'),
+(101010126,'Roberto Mario','Ramírez Reyes','KR 71 g No. 13-60','San Diego','Medellín','Finca','La Candelaria','RRamírezR@unal.edu.co','Sura EPS','Ciencias Económicas'),
+(101010127,'Isabel Isabel','García Cruz','KR 106 c No. 6-99','Belén','Cali','Casa','Usaquén','IGarcíaC@unal.edu.co','Compensar','Odontología'),
+(101010128,'María Roberto','Romero Gómez','AC 54 f No. 84-9','Envigado','Soacha','Apartaestudio','Rafael Uribe Uribe','MRomeroG@unal.edu.co','EPS Familiar','Odontología'),
+(101010129,'Carlos Luis','Martínez Cruz','KR 79 l No. 58-2','El Lido','Cúcuta','Apartaestudio','Suba','CMartínezC@unal.edu.co','Cafesalud','Psicología'),
+(101010130,'Laura Miguel','Fernández Ramírez','AK 90 g No. 1-65','Bello','Ibagué','Finca','Bosa','LFernándezR@unal.edu.co','Cafesalud','Ciencias Agrarias'),
+(101010131,'Lucía Laura','Castro Romero','TV 105 d No. 47-65','Belén','Bucaramanga','Apartaestudio','Antonio Nariño','LCastroR@unal.edu.co','SaludTotal','Odontología'),
+(101010132,'Andrés Gabriela','Álvarez González','KR 119 l No. 62-77','San Lucas','Soacha','Apartaestudio','Suba','AÁlvarezG@unal.edu.co','Coomeva EPS','Psicología'),
+(101010133,'María Isabel','Ruiz Álvarez','CL 82 s No. 63-2','La Avanzada','Cali','Finca','Bosa','MRuizÁ@unal.edu.co','SaludTotal','Ciencias Agrarias'),
+(101010134,'Isabel Luis','Ortiz Jiménez','AK 76 e No. 36-44','El Lido','Bucaramanga','Finca','Tunjuelito','IOrtizJ@unal.edu.co','Aliansalud','Enfermería'),
+(101010135,'Ricardo Santiago','López Hernández','TV 35 s No. 49-43','El Raizal','Medellín','Casa','Chapinero','RLópezH@unal.edu.co','Colmedica','Medicina'),
+(101010136,'Pedro Gabriela','Gómez Flores','KR 16 h No. 47-16','El Popular','Ibagué','Apartamento','Santa Fe','PGómezF@unal.edu.co','SaludTotal','Psicología'),
+(101010137,'Roberto Lucía','Suárez Hernández','TV 171 a No. 78-2','El Rodeo','Bucaramanga','Apartaestudio','Usme','RSuárezH@unal.edu.co','Cafesalud','Psicología'),
+(101010138,'Alejandro Felipe','Núñez González','KR 63 f No. 21-9','La Pradera','Soacha','Apartamento','Ciudad Bolívar','ANúñezG@unal.edu.co','Famisanar','Derecho, Ciencias Políticas y Sociales'),      
+(101010139,'José Luis','Flores Chávez','AC 180 s No. 17-60','El Tesoro','Medellín','Apartamento','Chapinero','JFloresC@unal.edu.co','Famisanar','Odontología'),
+(101010140,'Juan Diego','Pérez Mendoza','AK 90 h No. 53-39','La Candelaria','Ibagué','Apartaestudio','La Candelaria','JPérezM@unal.edu.co','Famisanar','Medicina'),
+(101010141,'José Manuel','Ortiz Hernández','AK 111 t No. 82-99','Santa Cruz','Ibagué','Apartamento','Barrios Unidos','JOrtizH@unal.edu.co','Sura EPS','Ciencias Agrarias'),
+(101010142,'Roberto Alejandro','Vargas Ramírez','KR 160 h No. 98-76','El Poblado','Villavicencio','Apartaestudio','Rafael Uribe Uribe','RVargasR@unal.edu.co','Nueva EPS','Enfermería'),
+(101010143,'Raúl Carla','Mendoza Fernández','AC 154 e No. 31-83','San Diego','Cali','Finca','Ciudad Bolívar','RMendozaF@unal.edu.co','Coomeva EPS','Ciencias Veterinarias y de Zootecnia'),
+(101010144,'Diego José','Flores Hernández','KR 37 o No. 42-70','San Lucas','Cúcuta','Casa','Chapinero','DFloresH@unal.edu.co','Sura EPS','Ciencias Agrarias'),
+(101010145,'Carla Pedro','Castro Suárez','TV 44 r No. 4-43','San Joaquín','Cartagena','Apartamento','Santa Fe','CCastroS@unal.edu.co','Colmedica','Ingeniería'),
+(101010146,'Ana Lucía','Vargas García','CL 144 a No. 91-74','La América','Bucaramanga','Finca','Kennedy','AVargasG@unal.edu.co','Sura EPS','Ciencias Humanas'),
+(101010147,'Jorge Manuel','Gómez García','TV 180 g No. 81-41','Moravia','Cartagena','Casa','Santa Fe','JGómezG@unal.edu.co','Sura EPS','Ciencias Humanas'),
+(101010148,'Andrés Alejandro','Ramírez Silva','CL 4 m No. 98-45','La Castellana','Medellín','Apartamento','Barrios Unidos','ARamírezS@unal.edu.co','Famisanar','Ciencias Veterinarias y de Zootecnia'),  
+(101010149,'Jorge Luis','Chávez Flores','CL 23 k No. 45-91','Castilla','Cúcuta','Apartaestudio','Engativá','JChávezF@unal.edu.co','Aliansalud','Artes'),
+(101010150,'Mónica Mónica','Pérez Morales','AK 171 b No. 40-47','La Mota','Cúcuta','Apartamento','Kennedy','MPérezM@unal.edu.co','Cafesalud','Enfermería'),
+(101010151,'Andrea Ricardo','Silva Sánchez','AK 134 q No. 41-49','Aranjuez','Barranquilla','Casa','Fontibón','ASilvaS@unal.edu.co','EPS Familiar','Derecho, Ciencias Políticas y Sociales'),
+(101010152,'Diego Gabriela','Sánchez Mendoza','KR 68 l No. 21-70','Belén','Soacha','Apartamento','Teusaquillo','DSánchezM@unal.edu.co','Coomeva EPS','Ciencias Humanas'),
+(101010153,'Mario Manuel','González Vargas','CL 132 k No. 45-94','El Rodeo','Soacha','Finca','Usaquén','MGonzálezV@unal.edu.co','Sura EPS','Ciencias Agrarias'),
+(101010154,'Luis Raúl','Pérez Silva','TV 130 o No. 59-89','Las Acacias','Ibagué','Finca','Kennedy','LPérezS@unal.edu.co','Sura EPS','Ciencias Humanas'),
+(101010155,'Isabel Felipe','García González','KR 118 o No. 23-32','Laureano Gómez','Bogotá','Apartaestudio','Otra','IGarcíaG@unal.edu.co','Colmedica','Ciencias Humanas'),
+(101010156,'Mónica Mónica','Jiménez Castro','AK 54 i No. 3-36','Envigado','Cali','Apartamento','Kennedy','MJiménezC@unal.edu.co','Coomeva EPS','Artes'),
+(101010157,'Ana Gabriela','Silva Mendoza','AC 145 k No. 77-33','La Castellana','Soacha','Apartamento','Usaquén','ASilvaM@unal.edu.co','Cafesalud','Ciencias Humanas'),
+(101010158,'Natalia Mario','Díaz Pérez','AK 15 n No. 76-16','Aranjuez','Ibagué','Finca','Santa Fe','NDíazP@unal.edu.co','Famisanar','Ciencias Económicas'),
+(101010159,'Raúl Felipe','Pérez Cruz','AC 67 p No. 89-5','Envigado','Medellín','Finca','Usaquén','RPérezC@unal.edu.co','Famisanar','Medicina'),
+(101010160,'Ana Gabriela','Flores López','AC 134 l No. 84-17','El Centro','Cúcuta','Apartaestudio','Rafael Uribe Uribe','AFloresL@unal.edu.co','EPS Familiar','Ciencias Humanas'),
+(101010161,'Felipe Mario','González Chávez','KR 178 l No. 6-51','La Castellana','Cartagena','Finca','Usaquén','FGonzálezC@unal.edu.co','Colmedica','Ingeniería'),
+(101010162,'Natalia Diego','Rojas Ortiz','AC 118 q No. 41-22','Laureano Gómez','Villavicencio','Finca','San Cristóbal','NRojasO@unal.edu.co','Sura EPS','Ciencias Veterinarias y de Zootecnia'),
+(101010163,'Pedro Santiago','Pérez Mendoza','KR 134 k No. 7-2','San Lucas','Medellín','Finca','San Cristóbal','PPérezM@unal.edu.co','Cafesalud','Ciencias Económicas'),
+(101010164,'Jorge Ricardo','García Morales','AK 26 q No. 4-32','La América','Villavicencio','Casa','Ciudad Bolívar','JGarcíaM@unal.edu.co','Sura EPS','Ciencias Económicas'),
+(101010165,'Roberto Andrés','Suárez Ramírez','AC 111 r No. 18-98','Guayabal','Bucaramanga','Apartaestudio','Chapinero','RSuárezR@unal.edu.co','Nueva EPS','Psicología'),
+(101010166,'María Jorge','Ruiz Díaz','CL 25 k No. 52-2','Los Colores','Cali','Apartaestudio','San Cristóbal','MRuizD@unal.edu.co','Sura EPS','Enfermería'),
+(101010167,'Jorge Natalia','Rojas Mendoza','AK 130 k No. 49-31','Moravia','Cartagena','Apartaestudio','Suba','JRojasM@unal.edu.co','Sura EPS','Ingeniería'),
+(101010168,'Gustavo Manuel','Silva García','AC 86 j No. 2-55','El Pinal','Bogotá','Apartaestudio','Otra','GSilvaG@unal.edu.co','Nueva EPS','Psicología'),
+(101010169,'Laura Juan','Vargas Jiménez','AC 143 l No. 25-11','Laureles','Ibagué','Finca','Tunjuelito','LVargasJ@unal.edu.co','Colmedica','Ingeniería'),
+(101010170,'Raúl Mónica','Rodríguez Ruiz','AC 128 c No. 8-14','Guayabal','Barranquilla','Casa','La Candelaria','RRodríguezR@unal.edu.co','Coomeva EPS','Ciencias Veterinarias y de Zootecnia'),
+(101010171,'Laura Jorge','Díaz Rodríguez','TV 127 l No. 73-83','La Candelaria','Cali','Apartamento','Ciudad Bolívar','LDíazR@unal.edu.co','SaludTotal','Ciencias Económicas'),
+(101010172,'Roberto Santiago','Ruiz García','AK 51 i No. 96-57','San Antonio','Cúcuta','Casa','San Cristóbal','RRuizG@unal.edu.co','Colmedica','Medicina'),
+(101010173,'Gustavo Felipe','Hernández Vargas','KR 27 l No. 8-60','Cristo Rey','Villavicencio','Apartaestudio','Engativá','GHernándezV@unal.edu.co','SaludTotal','Psicología'),
+(101010174,'Luis Carla','López Álvarez','KR 69 d No. 76-32','La Aguacatala','Villavicencio','Casa','Ciudad Bolívar','LLópezÁ@unal.edu.co','Compensar','Medicina'),
+(101010175,'Andrea José','García Suárez','CL 126 q No. 7-62','Estadio','Bucaramanga','Apartamento','Los Mártires','AGarcíaS@unal.edu.co','SaludTotal','Psicología'),
+(101010176,'Jorge Andrea','Flores Castro','CL 43 s No. 1-67','Aranjuez','Cartagena','Finca','Antonio Nariño','JFloresC@unal.edu.co','EPS Familiar','Ciencias Económicas'),
+(101010177,'Jorge Andrea','Morales Fernández','KR 141 b No. 50-77','El Tesoro','Soacha','Finca','Puente Aranda','JMoralesF@unal.edu.co','Sanitas','Ciencias'),
+(101010178,'Alejandro Luis','Díaz Morales','AC 22 g No. 47-2','Barrio Colombia','Cúcuta','Apartamento','Suba','ADíazM@unal.edu.co','SaludTotal','Ciencias Agrarias'),
+(101010179,'Andrea Natalia','Pérez Jiménez','CL 107 b No. 3-8','El Poblado','Villavicencio','Apartamento','Teusaquillo','APérezJ@unal.edu.co','Compensar','Psicología'),
+(101010180,'María María','Rojas Fernández','AK 105 c No. 69-86','La Castellana','Barranquilla','Casa','Suba','MRojasF@unal.edu.co','Famisanar','Ciencias'),
+(101010181,'Felipe Gabriela','Sánchez Martínez','TV 180 f No. 92-21','Estadio','Barranquilla','Apartamento','Engativá','FSánchezM@unal.edu.co','SaludTotal','Odontología'),
+(101010182,'Alejandro Alejandro','Gómez Jiménez','AC 164 a No. 44-30','La América','Medellín','Casa','Engativá','AGómezJ@unal.edu.co','Nueva EPS','Ciencias Humanas'),
+(101010183,'Alejandro Roberto','Hernández Álvarez','KR 174 l No. 91-90','Bello','Medellín','Finca','Usme','AHernándezÁ@unal.edu.co','EPS Familiar','Derecho, Ciencias Políticas y Sociales'),
+(101010184,'Laura Carlos','Suárez Ruiz','TV 153 s No. 12-13','La Floresta','Bucaramanga','Apartaestudio','Chapinero','LSuárezR@unal.edu.co','Aliansalud','Ciencias Veterinarias y de Zootecnia'),        
+(101010185,'Andrés Ana','Núñez Morales','TV 173 k No. 43-69','Campo Valdés','Cartagena','Apartamento','Suba','ANúñezM@unal.edu.co','Aliansalud','Enfermería'),
+(101010186,'Mónica Fernando','Hernández Silva','AK 91 o No. 1-86','El Poblado','Bucaramanga','Apartaestudio','Tunjuelito','MHernándezS@unal.edu.co','Coomeva EPS','Ciencias Veterinarias y de Zootecnia'),
+(101010187,'Fernando Natalia','Núñez Díaz','TV 67 i No. 38-9','Manrique','Cali','Apartaestudio','Kennedy','FNúñezD@unal.edu.co','Compensar','Derecho, Ciencias Políticas y Sociales'),
+(101010188,'Natalia Ricardo','Sánchez Ramírez','AC 1 g No. 97-19','El Chagualo','Soacha','Apartamento','Kennedy','NSánchezR@unal.edu.co','Cafesalud','Ciencias Humanas'),
+(101010189,'Miguel Luis','Torres Pérez','TV 121 a No. 56-33','Laureles','Medellín','Apartamento','Usaquén','MTorresP@unal.edu.co','Nueva EPS','Ciencias Agrarias'),
+(101010190,'Jorge Manuel','Ruiz Morales','AK 4 i No. 27-19','El Rodeo','Soacha','Apartamento','Otra','JRuizM@unal.edu.co','SaludTotal','Ciencias Agrarias'),
+(101010191,'Miguel Roberto','Díaz García','CL 74 i No. 5-78','Laureano Gómez','Ibagué','Casa','Teusaquillo','MDíazG@unal.edu.co','Aliansalud','Enfermería'),
+(101010192,'Luis Mario','Fernández Castro','CL 30 l No. 34-5','Itagüí','Bogotá','Apartaestudio','La Candelaria','LFernándezC@unal.edu.co','Compensar','Psicología'),
+(101010193,'Miguel Ernesto','Martínez Romero','KR 110 k No. 20-35','La Flora','Barranquilla','Casa','Suba','MMartínezR@unal.edu.co','Cafesalud','Artes'),
+(101010194,'Isabel Lucía','Ramírez Castro','AC 104 p No. 92-76','La Pradera','Cúcuta','Apartaestudio','San Cristóbal','IRamírezC@unal.edu.co','Coomeva EPS','Derecho, Ciencias Políticas y Sociales'),   
+(101010195,'José Ricardo','Álvarez Pérez','KR 81 c No. 33-22','Itagüí','Soacha','Apartamento','Antonio Nariño','JÁlvarezP@unal.edu.co','Sanitas','Ciencias'),
+(101010196,'Ana Ernesto','Torres Hernández','CL 176 c No. 44-38','Itagüí','Cúcuta','Casa','Kennedy','ATorresH@unal.edu.co','Nueva EPS','Medicina'),
+(101010197,'Laura Alejandro','Álvarez Pérez','KR 114 k No. 30-70','San Lucas','Bogotá','Apartaestudio','Barrios Unidos','LÁlvarezP@unal.edu.co','Sanitas','Ciencias Veterinarias y de Zootecnia'),       
+(101010198,'Santiago Manuel','Ramírez Sánchez','CL 64 r No. 89-42','San Lucas','Barranquilla','Apartamento','Tunjuelito','SRamírezS@unal.edu.co','Famisanar','Odontología'),
+(101010199,'Gustavo Luis','Rojas Suárez','TV 88 r No. 73-81','Estadio','Villavicencio','Finca','Santa Fe','GRojasS@unal.edu.co','Colmedica','Ciencias Veterinarias y de Zootecnia'),
+(1010101100,'Fernando Laura','Suárez Suárez','AC 110 k No. 60-90','El Pinal','Soacha','Finca','Bosa','FSuárezS@unal.edu.co','Sura EPS','Enfermería'),
+(1010101101,'Roberto Luis','Sánchez Álvarez','CL 105 t No. 60-70','La Candelaria','Cartagena','Apartamento','Ciudad Bolívar','RSánchezÁ@unal.edu.co','Compensar','Ciencias Agrarias'),
+(1010101102,'Gabriela Ricardo','Morales Ortiz','CL 160 p No. 21-27','El Popular','Soacha','Apartamento','Rafael Uribe Uribe','GMoralesO@unal.edu.co','Cafesalud','Artes'),
+(1010101103,'Isabel Juan','Vargas Silva','TV 73 m No. 81-81','Robledo','Bogotá','Apartamento','Fontibón','IVargasS@unal.edu.co','Cafesalud','Odontología'),
+(1010101104,'María Jorge','Ramírez Rodríguez','TV 41 n No. 50-14','Castilla','Cartagena','Casa','La Candelaria','MRamírezR@unal.edu.co','Coomeva EPS','Ciencias Agrarias'),
+(1010101105,'Jorge Miguel','Fernández Hernández','AK 161 a No. 65-78','La Avanzada','Barranquilla','Apartamento','Bosa','JFernándezH@unal.edu.co','SaludTotal','Enfermería'),
+(1010101106,'Manuel María','Álvarez Jiménez','AC 12 j No. 11-32','Manila','Bucaramanga','Casa','Puente Aranda','MÁlvarezJ@unal.edu.co','Aliansalud','Ciencias Humanas'),
+(1010101107,'Alejandro María','Castro Díaz','CL 61 t No. 68-73','Belén','Bogotá','Apartaestudio','La Candelaria','ACastroD@unal.edu.co','SaludTotal','Ciencias Humanas'),
+(1010101108,'Gustavo Lucía','Pérez Reyes','CL 49 d No. 3-35','El Raizal','Barranquilla','Casa','Antonio Nariño','GPérezR@unal.edu.co','Colmedica','Ingeniería'),
+(1010101109,'Alejandro Raúl','García González','AC 87 j No. 89-94','La Flora','Bogotá','Casa','Los Mártires','AGarcíaG@unal.edu.co','Nueva EPS','Ingeniería'),
+(1010101110,'Raúl Ana','Torres Ramírez','AC 16 c No. 23-48','Doce de Octubre','Ibagué','Apartaestudio','Puente Aranda','RTorresR@unal.edu.co','SaludTotal','Odontología'),
+(1010101111,'Alejandro Carla','Suárez Núñez','KR 131 a No. 82-19','El Pinal','Cali','Casa','Ciudad Bolívar','ASuárezN@unal.edu.co','SaludTotal','Artes'),
+(1010101112,'Raúl Luis','Vargas Ramírez','AC 36 n No. 21-80','Manila','Cali','Apartaestudio','Usaquén','RVargasR@unal.edu.co','Compensar','Artes'),
+(1010101113,'Mario Roberto','Díaz Jiménez','AK 58 j No. 67-73','San Diego','Cúcuta','Apartamento','Ciudad Bolívar','MDíazJ@unal.edu.co','Colmedica','Enfermería'),
+(1010101114,'Fernando Ernesto','Rojas Silva','KR 148 e No. 2-48','El Chagualo','Bucaramanga','Casa','Usaquén','FRojasS@unal.edu.co','Colmedica','Ciencias Humanas'),
+(1010101115,'Gustavo Mónica','Martínez Suárez','KR 80 g No. 32-73','El Salado','Bucaramanga','Casa','Antonio Nariño','GMartínezS@unal.edu.co','EPS Familiar','Psicología'),
+(1010101116,'Ricardo Mario','García Álvarez','AK 123 d No. 27-81','La América','Barranquilla','Apartaestudio','Teusaquillo','RGarcíaÁ@unal.edu.co','Famisanar','Ciencias Humanas'),
+(1010101117,'Raúl Isabel','Hernández López','KR 61 p No. 10-79','La Castellana','Ibagué','Casa','Los Mártires','RHernándezL@unal.edu.co','SaludTotal','Ciencias Veterinarias y de Zootecnia'),
+(1010101118,'Carlos Raúl','Gómez Cruz','TV 59 e No. 98-19','Los Colores','Medellín','Apartaestudio','Tunjuelito','CGómezC@unal.edu.co','Colmedica','Ingeniería'),
+(1010101119,'Alejandro Natalia','Silva Silva','CL 61 s No. 6-4','La Candelaria','Villavicencio','Apartamento','Ciudad Bolívar','ASilvaS@unal.edu.co','Cafesalud','Ciencias'),
+(1010101120,'Andrea Lucía','Rojas Romero','AC 55 l No. 86-25','Doce de Octubre','Barranquilla','Apartaestudio','Tunjuelito','ARojasR@unal.edu.co','SaludTotal','Ciencias Agrarias'),
+(1010101121,'Ernesto Ernesto','García Hernández','AC 112 b No. 41-24','Itagüí','Ibagué','Finca','Tunjuelito','EGarcíaH@unal.edu.co','Cafesalud','Ciencias Económicas'),
+(1010101122,'Alejandro Ricardo','García Ramírez','AK 159 i No. 15-54','La Estrella','Cartagena','Apartamento','Rafael Uribe Uribe','AGarcíaR@unal.edu.co','Nueva EPS','Ciencias'),
+(1010101123,'Natalia María','Rodríguez Ramírez','TV 132 a No. 73-39','El Tesoro','Villavicencio','Apartaestudio','Ciudad Bolívar','NRodríguezR@unal.edu.co','Famisanar','Derecho, Ciencias Políticas y Sociales'),
+(1010101124,'Carla Andrea','Flores Chávez','AK 44 e No. 76-81','San Lucas','Bogotá','Casa','Suba','CFloresC@unal.edu.co','Sura EPS','Medicina'),
+(1010101125,'María Manuel','Pérez Díaz','AC 150 r No. 8-92','San Diego','Ibagué','Casa','Rafael Uribe Uribe','MPérezD@unal.edu.co','Cafesalud','Derecho, Ciencias Políticas y Sociales'),
+(1010101126,'José Fernando','Cruz Cruz','CL 29 h No. 54-99','Manila','Medellín','Apartamento','Usme','JCruzC@unal.edu.co','Colmedica','Enfermería'),
+(1010101127,'Ernesto Laura','Silva Romero','CL 61 o No. 66-70','Manila','Villavicencio','Casa','Usme','ESilvaR@unal.edu.co','Sura EPS','Medicina'),
+(1010101128,'Mónica Ana','Gómez Romero','AK 131 n No. 58-50','Manrique','Ibagué','Casa','Usaquén','MGómezR@unal.edu.co','Cafesalud','Ciencias Agrarias'),
+(1010101129,'Alejandro Manuel','García Reyes','AK 173 k No. 2-59','Envigado','Medellín','Apartaestudio','Teusaquillo','AGarcíaR@unal.edu.co','Aliansalud','Ciencias Económicas'),
+(1010101130,'Roberto Miguel','Ortiz Díaz','AK 75 f No. 13-51','San Javier','Ibagué','Finca','Fontibón','ROrtizD@unal.edu.co','EPS Familiar','Odontología'),
+(1010101131,'Mario Manuel','González Cruz','KR 49 n No. 7-39','San Joaquín','Ibagué','Casa','Los Mártires','MGonzálezC@unal.edu.co','EPS Familiar','Ciencias Económicas'),
+(1010101132,'Felipe Carla','Flores Ramírez','TV 107 a No. 45-24','La Avanzada','Bucaramanga','Finca','Bosa','FFloresR@unal.edu.co','Sura EPS','Odontología'),
+(1010101133,'Mónica Ricardo','Ramírez Silva','AK 19 m No. 50-84','Robledo','Barranquilla','Apartamento','Suba','MRamírezS@unal.edu.co','Sanitas','Ciencias Humanas'),
+(1010101134,'Laura Lucía','Ortiz Cruz','TV 101 b No. 43-54','El Salado','Soacha','Apartaestudio','Santa Fe','LOrtizC@unal.edu.co','Coomeva EPS','Ciencias Humanas'),
+(1010101135,'Isabel Santiago','Romero Flores','KR 58 e No. 29-49','Doce de Octubre','Cartagena','Apartaestudio','San Cristóbal','IRomeroF@unal.edu.co','Coomeva EPS','Ciencias'),
+(1010101136,'Fernando Mario','Morales Ortiz','TV 106 f No. 98-85','Envigado','Medellín','Finca','Rafael Uribe Uribe','FMoralesO@unal.edu.co','Aliansalud','Psicología'),
+(1010101137,'Juan María','Reyes Cruz','CL 163 o No. 85-85','Robledo','Bogotá','Casa','Los Mártires','JReyesC@unal.edu.co','Colmedica','Artes'),
+(1010101138,'Juan Manuel','Fernández Ramírez','TV 53 h No. 86-50','El Centro','Ibagué','Finca','Rafael Uribe Uribe','JFernándezR@unal.edu.co','Sanitas','Medicina'),
+(1010101139,'María Raúl','Pérez Flores','AC 106 d No. 1-84','La Aguacatala','Villavicencio','Finca','Usaquén','MPérezF@unal.edu.co','Colmedica','Enfermería'),
+(1010101140,'Gabriela Miguel','García Rojas','AC 165 q No. 44-5','Santa Cruz','Cali','Apartaestudio','Ciudad Bolívar','GGarcíaR@unal.edu.co','Colmedica','Psicología'),
+(1010101141,'Andrés Luis','Gómez Mendoza','TV 37 p No. 19-51','El Tesoro','Cali','Finca','San Cristóbal','AGómezM@unal.edu.co','Cafesalud','Ciencias Económicas'),
+(1010101142,'Diego Alejandro','Castro Martínez','CL 125 m No. 10-3','La Castellana','Cúcuta','Casa','Teusaquillo','DCastroM@unal.edu.co','Nueva EPS','Ciencias Agrarias'),
+(1010101143,'Juan Pedro','Mendoza Romero','TV 129 s No. 57-3','Laureano Gómez','Cali','Apartaestudio','Antonio Nariño','JMendozaR@unal.edu.co','Coomeva EPS','Odontología'),
+(1010101144,'Andrés Alejandro','González Sánchez','KR 62 b No. 38-97','El Tesoro','Cartagena','Finca','San Cristóbal','AGonzálezS@unal.edu.co','Nueva EPS','Ciencias Económicas'),
+(1010101145,'Ana Gabriela','López González','CL 149 s No. 14-93','Guayabal','Villavicencio','Apartaestudio','Santa Fe','ALópezG@unal.edu.co','Nueva EPS','Derecho, Ciencias Políticas y Sociales'),      
+(1010101146,'Andrea Andrea','Martínez Fernández','AC 129 o No. 84-6','Santa Cruz','Cali','Casa','Rafael Uribe Uribe','AMartínezF@unal.edu.co','Nueva EPS','Enfermería'),
+(1010101147,'Gustavo Natalia','Suárez Núñez','AC 168 a No. 85-4','Itagüí','Barranquilla','Apartaestudio','Rafael Uribe Uribe','GSuárezN@unal.edu.co','Coomeva EPS','Psicología'),
+(1010101148,'Ricardo Luis','Sánchez Torres','TV 149 r No. 42-56','Castilla','Ibagué','Apartaestudio','Kennedy','RSánchezT@unal.edu.co','SaludTotal','Ciencias Veterinarias y de Zootecnia'),
+(1010101149,'Andrés Pedro','Mendoza Fernández','KR 137 o No. 87-32','Manila','Medellín','Apartamento','Bosa','AMendozaF@unal.edu.co','Nueva EPS','Enfermería'),
+(1010101150,'María María','Ramírez Morales','AK 47 l No. 4-7','La Flora','Cúcuta','Casa','Bosa','MRamírezM@unal.edu.co','Coomeva EPS','Medicina'),
+(1010101151,'José Andrea','Mendoza Díaz','CL 40 e No. 46-58','El Diamante','Cartagena','Apartamento','Usme','JMendozaD@unal.edu.co','Nueva EPS','Ciencias Agrarias'),
+(1010101152,'Ernesto Alejandro','González Núñez','CL 133 r No. 80-58','Castilla','Bucaramanga','Apartamento','Chapinero','EGonzálezN@unal.edu.co','Sura EPS','Ciencias'),
+(1010101153,'Alejandro Mónica','García Morales','CL 34 k No. 42-29','San Javier','Soacha','Finca','Puente Aranda','AGarcíaM@unal.edu.co','Cafesalud','Odontología'),
+(1010101154,'Gustavo Carla','Hernández Rojas','KR 79 l No. 79-58','Laureles','Medellín','Apartamento','Fontibón','GHernándezR@unal.edu.co','Coomeva EPS','Ingeniería'),
+(1010101155,'Jorge Fernando','Álvarez Morales','AC 161 m No. 54-13','La Candelaria','Medellín','Finca','Tunjuelito','JÁlvarezM@unal.edu.co','Compensar','Psicología'),
+(1010101156,'Isabel Carlos','Suárez Castro','KR 149 k No. 28-25','Santa Cruz','Medellín','Apartamento','La Candelaria','ISuárezC@unal.edu.co','Famisanar','Derecho, Ciencias Políticas y Sociales'),     
+(1010101157,'Manuel Andrés','Gómez Díaz','AK 157 l No. 49-25','El Pinal','Bucaramanga','Apartamento','Rafael Uribe Uribe','MGómezD@unal.edu.co','Sanitas','Ciencias'),
+(1010101158,'Ricardo Ernesto','Hernández Ruiz','TV 107 h No. 90-66','El Rodeo','Ibagué','Apartamento','Bosa','RHernándezR@unal.edu.co','EPS Familiar','Ciencias Humanas'),
+(1010101159,'Mónica Gabriela','Sánchez González','AK 173 r No. 73-15','Manrique','Ibagué','Apartaestudio','Antonio Nariño','MSánchezG@unal.edu.co','Colmedica','Medicina'),
+(1010101160,'José Gabriela','Gómez Ortiz','TV 88 a No. 12-20','La América','Cali','Apartaestudio','Tunjuelito','JGómezO@unal.edu.co','Colmedica','Ciencias'),
+(1010101161,'Diego Natalia','González Núñez','KR 72 r No. 7-84','Belén','Villavicencio','Apartaestudio','Puente Aranda','DGonzálezN@unal.edu.co','Sura EPS','Derecho, Ciencias Políticas y Sociales'),   
+(1010101162,'Carla Juan','Rojas Sánchez','AC 37 r No. 92-36','Moravia','Cúcuta','Apartaestudio','Fontibón','CRojasS@unal.edu.co','Coomeva EPS','Psicología'),
+(1010101163,'Miguel Lucía','Fernández Flores','TV 132 s No. 7-19','Doce de Octubre','Cali','Finca','Otra','MFernándezF@unal.edu.co','Aliansalud','Psicología'),
+(1010101164,'Alejandro Santiago','Rojas Pérez','AK 164 r No. 56-12','La Mota','Medellín','Finca','Teusaquillo','ARojasP@unal.edu.co','Aliansalud','Ciencias Humanas'),
+(1010101165,'Gabriela Ernesto','Gómez Rojas','TV 42 t No. 93-1','San Javier','Cúcuta','Casa','Otra','GGómezR@unal.edu.co','Aliansalud','Odontología'),
+(1010101166,'Alejandro Diego','Vargas Mendoza','AK 116 g No. 73-82','Las Acacias','Bogotá','Apartaestudio','Suba','AVargasM@unal.edu.co','Sanitas','Ingeniería'),
+(1010101167,'Laura Laura','Romero Ramírez','AK 153 k No. 89-63','Laureano Gómez','Barranquilla','Casa','San Cristóbal','LRomeroR@unal.edu.co','SaludTotal','Psicología'),
+(1010101168,'Andrea Andrea','Álvarez Pérez','AK 174 e No. 57-42','Laureles','Ibagué','Apartaestudio','Fontibón','AÁlvarezP@unal.edu.co','Nueva EPS','Artes'),
+(1010101169,'Andrea Raúl','López Rodríguez','AK 166 t No. 15-45','La Avanzada','Soacha','Apartamento','Suba','ALópezR@unal.edu.co','Sanitas','Odontología'),
+(1010101170,'Gustavo Fernando','López Álvarez','KR 36 q No. 96-65','Las Acacias','Villavicencio','Finca','Barrios Unidos','GLópezÁ@unal.edu.co','Sura EPS','Medicina'),
+(1010101171,'Isabel Mónica','Romero Sánchez','TV 173 o No. 46-71','La Francia','Soacha','Apartamento','La Candelaria','IRomeroS@unal.edu.co','Nueva EPS','Ciencias Agrarias'),
+(1010101172,'José Carla','Fernández Romero','TV 178 b No. 95-19','Robledo','Bucaramanga','Casa','Usme','JFernándezR@unal.edu.co','Sura EPS','Ciencias'),
+(1010101173,'Andrés Miguel','Torres Cruz','AK 49 b No. 25-84','El Raizal','Cartagena','Finca','Chapinero','ATorresC@unal.edu.co','SaludTotal','Enfermería'),
+(1010101174,'José Natalia','Ruiz Torres','CL 178 n No. 41-49','Santa Cruz','Bucaramanga','Apartaestudio','Teusaquillo','JRuizT@unal.edu.co','SaludTotal','Ingeniería'),
+(1010101175,'Andrés Miguel','Flores Núñez','CL 5 l No. 33-23','Cristo Rey','Cartagena','Apartaestudio','Chapinero','AFloresN@unal.edu.co','EPS Familiar','Odontología'),
+(1010101176,'Lucía Manuel','Mendoza Romero','AC 14 e No. 78-52','San Diego','Villavicencio','Finca','Antonio Nariño','LMendozaR@unal.edu.co','Nueva EPS','Ciencias Humanas'),
+(1010101177,'Ernesto Alejandro','Gómez Rojas','KR 136 b No. 80-94','El Tesoro','Cali','Casa','Antonio Nariño','EGómezR@unal.edu.co','Nueva EPS','Ciencias'),
+(1010101178,'Ana Fernando','Hernández Ortiz','KR 126 h No. 9-1','San Joaquín','Barranquilla','Casa','Teusaquillo','AHernándezO@unal.edu.co','Sura EPS','Ciencias'),
+(1010101179,'Ricardo Carlos','Núñez Díaz','CL 68 c No. 67-26','El Centro','Cúcuta','Apartaestudio','Puente Aranda','RNúñezD@unal.edu.co','EPS Familiar','Ciencias'),
+(1010101180,'Isabel Luis','Pérez Martínez','AC 20 i No. 91-28','Santa Cruz','Cúcuta','Casa','Suba','IPérezM@unal.edu.co','Aliansalud','Ciencias Humanas'),
+(1010101181,'Andrés Andrea','Vargas García','TV 48 o No. 21-11','Barrio Colombia','Barranquilla','Apartaestudio','Kennedy','AVargasG@unal.edu.co','Sura EPS','Ciencias Veterinarias y de Zootecnia'),    
+(1010101182,'Carla Pedro','Fernández Ortiz','KR 171 m No. 41-97','Doce de Octubre','Bucaramanga','Apartamento','Usme','CFernándezO@unal.edu.co','Compensar','Medicina'),
+(1010101183,'Santiago Juan','Fernández González','AK 38 o No. 23-58','El Popular','Bucaramanga','Casa','Los Mártires','SFernándezG@unal.edu.co','EPS Familiar','Ciencias'),
+(1010101184,'Juan Mónica','Ramírez Álvarez','TV 32 e No. 42-75','El Diamante','Bucaramanga','Apartaestudio','Antonio Nariño','JRamírezÁ@unal.edu.co','Coomeva EPS','Ciencias Veterinarias y de Zootecnia'),
+(1010101185,'José Diego','Torres Hernández','KR 43 q No. 55-2','Moravia','Villavicencio','Finca','Bosa','JTorresH@unal.edu.co','SaludTotal','Odontología'),
+(1010101186,'Juan Carlos','García Sánchez','AC 85 a No. 47-58','Envigado','Bogotá','Casa','Kennedy','JGarcíaS@unal.edu.co','Famisanar','Artes'),
+(1010101187,'Andrea Carlos','Cruz Pérez','AK 131 p No. 35-89','El Poblado','Cartagena','Finca','Antonio Nariño','ACruzP@unal.edu.co','Nueva EPS','Ciencias Agrarias'),
+(1010101188,'Isabel Isabel','Suárez Álvarez','TV 105 i No. 11-97','El Popular','Cartagena','Apartamento','Chapinero','ISuárezÁ@unal.edu.co','Famisanar','Medicina'),
+(1010101189,'Luis Andrés','Rodríguez Jiménez','AC 108 e No. 47-13','Loma de Los Bernal','Cúcuta','Apartaestudio','Antonio Nariño','LRodríguezJ@unal.edu.co','Sanitas','Ciencias Veterinarias y de Zootecnia'),
+(1010101190,'Carlos Miguel','Reyes Rodríguez','KR 5 g No. 98-10','El Popular','Cali','Apartaestudio','Usaquén','CReyesR@unal.edu.co','Cafesalud','Artes'),
+(1010101191,'Santiago Mario','Chávez Vargas','KR 104 c No. 87-13','El Salado','Villavicencio','Apartamento','Usaquén','SChávezV@unal.edu.co','Famisanar','Ciencias Humanas'),
+(1010101192,'Luis Ricardo','Hernández Martínez','AK 6 l No. 54-37','Aranjuez','Villavicencio','Finca','Bosa','LHernándezM@unal.edu.co','SaludTotal','Derecho, Ciencias Políticas y Sociales'),
+(1010101193,'Juan Luis','Suárez Núñez','CL 48 m No. 83-19','Itagüí','Cúcuta','Apartamento','Tunjuelito','JSuárezN@unal.edu.co','Nueva EPS','Ciencias'),
+(1010101194,'Alejandro Fernando','Fernández Núñez','AK 36 p No. 86-93','La Estrella','Cali','Casa','Usme','AFernándezN@unal.edu.co','Compensar','Medicina'),
+(1010101195,'Gabriela Alejandro','Mendoza Romero','AK 44 k No. 14-1','Laureles','Barranquilla','Apartamento','Usme','GMendozaR@unal.edu.co','Sura EPS','Ciencias Veterinarias y de Zootecnia'),
+(1010101196,'Alejandro Ernesto','Fernández Reyes','AC 107 n No. 57-25','La Estrella','Cúcuta','Casa','Los Mártires','AFernándezR@unal.edu.co','Compensar','Medicina'),
+(1010101197,'Ernesto Roberto','Gómez Chávez','AC 136 m No. 45-52','El Salado','Medellín','Casa','Tunjuelito','EGómezC@unal.edu.co','Colmedica','Ciencias Económicas'),
+(1010101198,'Andrea Carlos','Álvarez González','CL 161 b No. 52-92','Manila','Villavicencio','Apartaestudio','Chapinero','AÁlvarezG@unal.edu.co','Coomeva EPS','Medicina'),
+(1010101199,'Ernesto Mario','Romero Gómez','TV 98 g No. 80-70','La Mota','Cartagena','Casa','La Candelaria','ERomeroG@unal.edu.co','SaludTotal','Derecho, Ciencias Políticas y Sociales'),
+(1010101200,'Raúl Luis','Ortiz Ruiz','CL 126 j No. 80-25','Doce de Octubre','Villavicencio','Casa','Los Mártires','ROrtizR@unal.edu.co','Sanitas','Artes');
 
 DELETE FROM carrera;
 insert into carrera values(1,'Administración de Empresas (SNIES 19 )','149');
@@ -255,40 +257,41 @@ insert into carrera values(46,'Sociología (SNIES 16 )','162');
 insert into carrera values(47,'Trabajo Social (SNIES 15 )','171');
 insert into carrera values(48,'Zootecnia (SNIES 3 )','174');
 
-DELETE FROM Estudiante;
-insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (1,'36','17','Ingeniería','73','Regular','0', 2015, 4.1);
-insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (2,'27','27','Artes','50','Regular','0' , 2015, 4.5);
-insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (3,'26','21','Ciencias Humanas','76','PEAMA','0' , 2017, 4.4);
-insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (4,'47','18','Ingeniería','19','Regular','0' , 2018, 4.5);
-insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (5,'22','19','Ciencias Económicas','73','PEAMA','0', 2018, 4.5);
-insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (6,'13','28','Ciencias Económicas','30','PEAMA','0', 2002, 4.5);
-insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (7,'13','24','Enfermería','37','PEAMA','0', 2023, 4.5);
-insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (8,'10','25','Enfermería','88','Regular','0', 2001, 4.5);
-insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (9,'38','19','Ciencias Veterinarias y de Zootecnia','64','PEAMA','0', 2001, 4.5);
-insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (10,'16','23','Enfermería','2','Regular','0', 2001, 4.5);
-insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (11,'34','25','Ciencias','24','Regular','0', 2001, 4.5);
-insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (12,'38','21','Derecho, Ciencias Políticas y Sociales','79','PEAMA','0', 1996, 3.9);
-insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (13,'37','24','Ciencias Económicas','43','PEAMA','0', 1996, 3.9);
-insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (14,'32','26','Ingeniería','39','Regular','0', 1989, 3.9);
-insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (15,'23','17','Ciencias','64','PEAMA','0', 1989, 3.9);
-insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (16,'44','26','Enfermería','0','Regular','0', 2010, 4.9);
-insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (17,'25','19','Ciencias Agrarias','48','Regular','0', 2010, 4.9);
-insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (18,'14','24','Ciencias Agrarias','84','Regular','0', 2010, 4.9);
-insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (19,'34','25','Ciencias Económicas','72','Regular','0', 2010, 4.3);
-insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (20,'44','26','Medicina','77','Regular','0', 2009, 4.3);
-insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (21,'4','23','Derecho, Ciencias Políticas y Sociales','19','PEAMA','0', 2009, 4.3);
-insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (22,'27','26','Odontología','25','Regular','0', 2009, 3.5);
-insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (23,'6','22','Psicología','72','Regular','0', 2009, 3.5);
-insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (24,'27','22','Ciencias Humanas','18','PEAMA','0', 2014, 3.5);
-insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (25,'32','24','Ciencias Humanas','22','PEAMA','0', 2014, 3.5);
-insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (26,'33','22','Ingeniería','92','Regular','0', 2014, 3.5);
-insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (27,'24','20','Ciencias Veterinarias y de Zootecnia','74','PEAMA','0', 2014, 2.9);
-insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (28,'40','17','Artes','30','Regular','0', 1999, 2.9);
-insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (29,'20','28','Ciencias Veterinarias y de Zootecnia','90','PEAMA','0', 1999, 2.9);
-insert into Estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values (30,'29','30','Ciencias','96','PEAMA','0', 1999, 2.9);
+DELETE FROM estudiante;
+insert into estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado, estAnoGraduacion, estPAPA) values
+(10101011,'36','17','Ingeniería','73','Regular','0', 2015, 4.1),
+(10101012,'27','27','Artes','50','Regular','0' , 2015, 4.5),
+(10101013,'26','21','Ciencias Humanas','76','PEAMA','0' , 2017, 4.4),
+(10101014,'47','18','Ingeniería','19','Regular','0' , 2018, 4.5),
+(10101015,'22','19','Ciencias Económicas','73','PEAMA','0', 2018, 4.5),
+(10101016,'13','28','Ciencias Económicas','30','PEAMA','0', 2002, 4.5),
+(10101017,'13','24','Enfermería','37','PEAMA','0', 2023, 4.5),
+(10101018,'10','25','Enfermería','88','Regular','0', 2001, 4.5),
+(10101019,'38','19','Ciencias Veterinarias y de Zootecnia','64','PEAMA','0', 2001, 4.5),
+(101010110,'16','23','Enfermería','2','Regular','0', 2001, 4.5),
+(101010111,'34','25','Ciencias','24','Regular','0', 2001, 4.5),
+(101010112,'38','21','Derecho, Ciencias Políticas y Sociales','79','PEAMA','0', 1996, 3.9),
+(101010113,'37','24','Ciencias Económicas','43','PEAMA','0', 1996, 3.9),
+(101010114,'32','26','Ingeniería','39','Regular','0', 1989, 3.9),
+(101010115,'23','17','Ciencias','64','PEAMA','0', 1989, 3.9),
+(101010116,'44','26','Enfermería','0','Regular','0', 2010, 4.9),
+(101010117,'25','19','Ciencias Agrarias','48','Regular','0', 2010, 4.9),
+(101010118,'14','24','Ciencias Agrarias','84','Regular','0', 2010, 4.9),
+(101010119,'34','25','Ciencias Económicas','72','Regular','0', 2010, 4.3),
+(101010120,'44','26','Medicina','77','Regular','0', 2009, 4.3),
+(101010121,'4','23','Derecho, Ciencias Políticas y Sociales','19','PEAMA','0', 2009, 4.3),
+(101010122,'27','26','Odontología','25','Regular','0', 2009, 3.5),
+(101010123,'6','22','Psicología','72','Regular','0', 2009, 3.5),
+(101010124,'27','22','Ciencias Humanas','18','PEAMA','0', 2014, 3.5),
+(101010125,'32','24','Ciencias Humanas','22','PEAMA','0', 2014, 3.5),
+(101010126,'33','22','Ingeniería','92','Regular','0', 2014, 3.5),
+(101010127,'24','20','Ciencias Veterinarias y de Zootecnia','74','PEAMA','0', 2014, 2.9),
+(101010128,'40','17','Artes','30','Regular','0', 1999, 2.9),
+(101010129,'20','28','Ciencias Veterinarias y de Zootecnia','90','PEAMA','0', 1999, 2.9),
+(101010130,'29','30','Ciencias','96','PEAMA','0', 1999, 2.9);
 
 DELETE FROM area;
-insert into bienestar.area values
+insert into Bienestar.area values
 (1, "Salud", 5713165000, "areasalud_bog@unal.edu.co", 21072, "CAN Bloque 3, Edificio 933",
 "El Área de Salud promueve el mejoramiento permanente de las condiciones físicas, psíquicas, mentales, sociales y ambientales en las que se desarrolla la vida universitaria, mediante programas formativos, preventivos y correctivos que incidan en la calidad de vida y hábitos de vida saludable.
 Protegemos y promocionamos la salud integral de la comunidad universitaria a partir de la caracterización del riesgo individual y grupal, la prevención de la enfermedad, la gestión en salud y la atención de emergencias."),
@@ -310,8 +313,8 @@ Un equipo humano interdisciplinario que orienta el fortalecimiento del potencial
 "Los programas de Admisión Especial son creados por la Universidad Nacional de Colombia atendiendo a uno de sus fines misionales, el cual es proyectarse al territorio nacional y contribuir con la unidad nacional, la igualdad de oportunidades de acceso a la educación superior y la promoción del desarrollo de la comunidad académica nacional.");
 
 DELETE FROM programa;
-insert into programa (progID,progNombre,Area_areID) values (1,'Fomento Económico Estudiantes',5);
-insert into bienestar.programa values
+insert into programa (progID,progNombre,Area_areID) values 
+(1,'Fomento Económico Estudiantes',5),
 (2, "Cita medica", 1), 
 (3, "CursoCultural", 2),
 (4, "Grupo artistico institucional", 2),
@@ -319,28 +322,28 @@ insert into bienestar.programa values
 
 DELETE FROM convocatoria;
 insert into convocatoria values 
-(1,'Fomento Económico Estudiantes','2023-01-15','2023-02-1',1,'2023-1',1),
-(15,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1),
-(2,'Fomento Económico Estudiantes Alimentación','2023-01-15','2023-02-1',1,'2023-1',1),
-(3,'Fomento Económico Estudiantes Alimentación','2023-01-15','2023-02-1',1,'2023-1',1),
-(4,'Fomento Económico Estudiantes Alimentación','2023-01-15','2023-02-1',1,'2023-1',1),
-(5,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1),
-(6,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1),
-(7,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1),
-(8,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1),
-(9,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1),
-(10,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1),
-(11,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1),
-(12,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1),
-(13,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1),
-(14,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1),
-(16,'Fomento Económico Estudiantes','2023-01-15','2023-02-1',1,'2023-1',1),
-(17,'Fomento Emprendimiento Estudiantes','2023-01-15','2023-02-1',1,'2023-1',1),
-(18,'Fomento Emprendimiento Estudiantes','2023-01-15','2023-02-1',1,'2023-1',1),
-(19,'Fomento Emprendimiento Estudiantes','2023-01-15','2023-02-1',1,'2023-1',1),
-(20,'Gestión Transporte','2023-01-15','2023-02-1',1,'2023-1',1),
-(21,'Gestión Transporte','2023-01-15','2023-02-1',1,'2023-1',1),
-(22,'Gestión Transporte','2023-01-15','2023-02-1',1,'2023-1',1);
+(1,'Fomento Económico Estudiantes','2023-01-15','2023-02-1',1,'2023-1',1,35),
+(2,'Fomento Económico Estudiantes Alimentación','2023-01-15','2023-02-1',1,'2023-1',1,35),
+(3,'Fomento Económico Estudiantes Alimentación','2023-01-15','2023-02-1',1,'2023-1',1,35),
+(4,'Fomento Económico Estudiantes Alimentación','2023-01-15','2023-02-1',1,'2023-1',1,35),
+(5,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1,35),
+(6,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1,35),
+(7,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1,35),
+(8,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1,35),
+(9,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1,35),
+(10,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1,35),
+(11,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1,35),
+(12,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1,35),
+(13,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1,35),
+(14,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1,35),
+(15,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1,35),
+(16,'Fomento Económico Estudiantes','2023-01-15','2023-02-1',1,'2023-1',1,35),
+(17,'Fomento Emprendimiento Estudiantes','2023-01-15','2023-02-1',1,'2023-1',1,35),
+(18,'Fomento Emprendimiento Estudiantes','2023-01-15','2023-02-1',1,'2023-1',1,35),
+(19,'Fomento Emprendimiento Estudiantes','2023-01-15','2023-02-1',1,'2023-1',1,35),
+(20,'Gestión Transporte','2023-01-15','2023-02-1',1,'2023-1',1,35),
+(21,'Gestión Transporte','2023-01-15','2023-02-1',1,'2023-1',1,35),
+(22,'Gestión Transporte','2023-01-15','2023-02-1',1,'2023-1',1,35);
 
 DELETE FROM convocatoriagestioneconomica;
 insert into convocatoriagestioneconomica values (1,500000);
@@ -376,124 +379,127 @@ INSERT INTO convocatoriagestiontransporte VALUES(20,530147,'Transporte público 
 (22,430147,'Otro');
 
 DELETE FROM estudiante_toma_convocatoria;
-insert into estudiante_toma_convocatoria values (30,9,'2023-02-13');
-insert into estudiante_toma_convocatoria values (16,1,'2023-03-13');
-insert into estudiante_toma_convocatoria values (22,2,'2023-04-13');
-insert into estudiante_toma_convocatoria values (26,14,'2023-05-13');
-insert into estudiante_toma_convocatoria values (24,3,'2023-08-13');
-insert into estudiante_toma_convocatoria values (27,8,'2023-09-13');
-insert into estudiante_toma_convocatoria values (2,8,'2023-10-13');
-insert into estudiante_toma_convocatoria values (14,3,'2023-11-13');
-insert into estudiante_toma_convocatoria values (9,1,'2023-12-13');
-insert into estudiante_toma_convocatoria values (13,1,'2023-07-13');
-insert into estudiante_toma_convocatoria values (27,5,'2023-08-13');
-insert into estudiante_toma_convocatoria values (6,5,'2023-03-13');
-insert into estudiante_toma_convocatoria values (27,15,'2023-04-13');
-insert into estudiante_toma_convocatoria values (24,1,'2023-05-13');
-insert into estudiante_toma_convocatoria values (7,11,'2023-06-13');
-insert into estudiante_toma_convocatoria values (24,12,'2023-08-13');
-insert into estudiante_toma_convocatoria values (29,7,'2023-09-13');
-insert into estudiante_toma_convocatoria values (21,14,'2023-10-13');
-insert into estudiante_toma_convocatoria values (4,7,'2023-11-13');
-insert into estudiante_toma_convocatoria values (2,15,'2023-12-13');
-INSERT INTO estudiante_toma_convocatoria VALUES 
-(12, 16,'2023-02-13'),
-(28, 17,'2023-03-13'),
-(5, 18,'2023-04-13'),
-(19, 19,'2023-05-13'),
-(25, 20,'2023-07-13'),
-(3, 21,'2023-08-13'),
-(10, 22,'2023-09-13');
+insert into estudiante_toma_convocatoria values 
+(101010130,9,'2023-02-13'),
+(101010116,1,'2023-03-13'),
+(101010122,2,'2023-04-13'),
+(101010126,14,'2023-05-13'),
+(101010124,3,'2023-08-13'),
+(101010127,8,'2023-09-13'),
+(10101012,8,'2023-10-13'),
+(101010114,3,'2023-11-13'),
+(10101019,1,'2023-12-13'),
+(101010113,1,'2023-07-13'),
+(101010127,5,'2023-08-13'),
+(10101016,5,'2023-03-13'),
+(101010127,15,'2023-04-13'),
+(101010124,1,'2023-05-13'),
+(10101017,11,'2023-06-13'),
+(101010124,12,'2023-08-13'),
+(101010129,7,'2023-09-13'),
+(101010121,14,'2023-10-13'),
+(10101014,7,'2023-11-13'),
+(10101012,15,'2023-12-13'),
+(101010112, 16,'2023-02-13'),
+(101010128, 17,'2023-03-13'),
+(10101015, 18,'2023-04-13'),
+(101010119, 19,'2023-05-13'),
+(101010125, 20,'2023-07-13'),
+(10101013, 21,'2023-08-13'),
+(101010110, 22,'2023-09-13');
 
 DELETE FROM fallaalimentacion;
-insert into fallaalimentacion (estID,fallAlcgaComida,fallAlLugar,fallAlFecha) values (23,'Almuerzo','Comedor central','2023-05-19');
-insert into fallaalimentacion (estID,fallAlcgaComida,fallAlLugar,fallAlFecha) values (9,'Desayuno','Ciencias Económicas','2023-02-12');
-insert into fallaalimentacion (estID,fallAlcgaComida,fallAlLugar,fallAlFecha) values (9,'Desayuno','Ciencias Económicas','2023-05-12');
-insert into fallaalimentacion (estID,fallAlcgaComida,fallAlLugar,fallAlFecha) values (2,'Almuerzo','Matemáticas','2023-02-25');
-insert into fallaalimentacion (estID,fallAlcgaComida,fallAlLugar,fallAlFecha) values (12,'Almuerzo','Comedor central','2023-02-26');
-insert into fallaalimentacion (estID,fallAlcgaComida,fallAlLugar,fallAlFecha) values (19,'Cena','Ciencias Económicas','2023-05-17');
-insert into fallaalimentacion (estID,fallAlcgaComida,fallAlLugar,fallAlFecha) values (7,'Almuerzo','Biología','2023-03-16');
-insert into fallaalimentacion (estID,fallAlcgaComida,fallAlLugar,fallAlFecha) values (3,'Desayuno','Ciencias Humanas','2023-03-15');
-insert into fallaalimentacion (estID,fallAlcgaComida,fallAlLugar,fallAlFecha) values (3,'Desayuno','Ciencias Humanas','2023-04-15');
-insert into fallaalimentacion (estID,fallAlcgaComida,fallAlLugar,fallAlFecha) values (3,'Desayuno','Ciencias Humanas','2023-03-21');
-insert into fallaalimentacion (estID,fallAlcgaComida,fallAlLugar,fallAlFecha) values (29,'Almuerzo','otro','2023-06-18');
-insert into fallaalimentacion (estID,fallAlcgaComida,fallAlLugar,fallAlFecha) values (23,'Almuerzo','otro','2023-04-9');
-insert into fallaalimentacion (estID,fallAlcgaComida,fallAlLugar,fallAlFecha) values (24,'Desayuno','Comedor central','2023-06-26');
-insert into fallaalimentacion (estID,fallAlcgaComida,fallAlLugar,fallAlFecha) values (28,'Cena','Biología','2023-03-29');
-insert into fallaalimentacion (estID,fallAlcgaComida,fallAlLugar,fallAlFecha) values (28,'Cena','Biología','2023-02-18');
-insert into fallaalimentacion (estID,fallAlcgaComida,fallAlLugar,fallAlFecha) values (28,'Cena','Biología','2023-01-29');
-insert into fallaalimentacion (estID,fallAlcgaComida,fallAlLugar,fallAlFecha) values (28,'Cena','Biología','2023-04-29');
-insert into fallaalimentacion (estID,fallAlcgaComida,fallAlLugar,fallAlFecha) values (28,'Cena','Biología','2023-05-29');
-insert into fallaalimentacion (estID,fallAlcgaComida,fallAlLugar,fallAlFecha) values (3,'Desayuno','Matemáticas','2023-06-2');
-insert into fallaalimentacion (estID,fallAlcgaComida,fallAlLugar,fallAlFecha) values (20,'Cena','Ciencias Humanas','2023-02-14');
-insert into fallaalimentacion (estID,fallAlcgaComida,fallAlLugar,fallAlFecha) values (14,'Almuerzo','Agronomía','2023-06-20');
-insert into fallaalimentacion (estID,fallAlcgaComida,fallAlLugar,fallAlFecha) values (11,'Cena','Odontología','2023-02-27');
-insert into fallaalimentacion (estID,fallAlcgaComida,fallAlLugar,fallAlFecha) values (14,'Almuerzo','Ciencias Económicas','2023-02-28');
-insert into fallaalimentacion (estID,fallAlcgaComida,fallAlLugar,fallAlFecha) values (23,'Desayuno','Hemeroteca','2023-03-19');
-insert into fallaalimentacion (estID,fallAlcgaComida,fallAlLugar,fallAlFecha) values (1,'Desayuno','otro','2023-04-23');
-insert into fallaalimentacion (estID,fallAlcgaComida,fallAlLugar,fallAlFecha) values (13,'Almuerzo','Odontología','2023-03-18');
-insert into fallaalimentacion (estID,fallAlcgaComida,fallAlLugar,fallAlFecha) values (23,'Almuerzo','Ciencias Humanas','2023-06-17');
+insert into fallaalimentacion (estID,fallAlcgaComida,fallAlLugar,fallAlFecha) values
+(101010123,'Almuerzo','Comedor central','2023-05-19'),
+(10101019,'Desayuno','Ciencias Económicas','2023-02-12'),
+(10101019,'Desayuno','Ciencias Económicas','2023-05-12'),
+(10101012,'Almuerzo','Matemáticas','2023-02-25'),
+(101010112,'Almuerzo','Comedor central','2023-02-26'),
+(101010119,'Cena','Ciencias Económicas','2023-05-17'),
+(10101017,'Almuerzo','Biología','2023-03-16'),
+(10101013,'Desayuno','Ciencias Humanas','2023-03-15'),
+(10101013,'Desayuno','Ciencias Humanas','2023-04-15'),
+(10101013,'Desayuno','Ciencias Humanas','2023-03-21'),
+(101010129,'Almuerzo','otro','2023-06-18'),
+(101010123,'Almuerzo','otro','2023-04-9'),
+(101010124,'Desayuno','Comedor central','2023-06-26'),
+(101010128,'Cena','Biología','2023-03-29'),
+(101010128,'Cena','Biología','2023-02-18'),
+(101010128,'Cena','Biología','2023-01-29'),
+(101010128,'Cena','Biología','2023-04-29'),
+(101010128,'Cena','Biología','2023-05-29'),
+(10101013,'Desayuno','Matemáticas','2023-06-2'),
+(101010120,'Cena','Ciencias Humanas','2023-02-14'),
+(101010114,'Almuerzo','Agronomía','2023-06-20'),
+(101010111,'Cena','Odontología','2023-02-27'),
+(101010114,'Almuerzo','Ciencias Económicas','2023-02-28'),
+(101010123,'Desayuno','Hemeroteca','2023-03-19'),
+(10101011,'Desayuno','otro','2023-04-23'),
+(101010113,'Almuerzo','Odontología','2023-03-18'),
+(101010123,'Almuerzo','Ciencias Humanas','2023-06-17');
 
 DELETE FROM actividadcorresp;
 insert into actividadcorresp values 
-(0,18,'comunitaria',3,'2023-02-01'),
-(1,27,'cultural',8,'2023-03-01'),
-(2,9,'acompañamiento',6,'2023-04-01'),
-(3,24,'académica',6,'2023-05-01'),
-(4,23,'académica',5,'2023-06-01'),
-(5,23,'cultural',3,'2023-07-01'),
-(6,5,'académica',2,'2023-08-01'),
-(7,7,'acompañamiento',5,'2023-09-01'),
-(8,26,'otra',7,'2023-10-01'),
-(9,5,'otra',3,'2023-11-01'),
-(10,5,'comunitaria',2,'2023-02-01'),
-(11,30,'desarrollo institucional',8,'2023-03-01'),
-(12,17,'otra',3,'2023-04-01'),
-(13,2,'desarrollo institucional',3,'2023-05-01'),
-(14,30,'académica',6,'2023-06-01'),
-(15,13,'comunitaria',3,'2023-07-01'),
-(16,26,'deportiva',2,'2023-08-01'),
-(17,25,'comunitaria',4,'2023-09-01'),
-(18,1,'acompañamiento',3,'2023-10-01'),
-(19,24,'acompañamiento',7,'2023-11-01');
+(10101010,18,'comunitaria',3,'2023-02-01'),
+(10101011,27,'cultural',8,'2023-03-01'),
+(10101012,9,'acompañamiento',6,'2023-04-01'),
+(10101013,24,'académica',6,'2023-05-01'),
+(10101014,23,'académica',5,'2023-06-01'),
+(10101015,23,'cultural',3,'2023-07-01'),
+(10101016,5,'académica',2,'2023-08-01'),
+(10101017,7,'acompañamiento',5,'2023-09-01'),
+(10101018,26,'otra',7,'2023-10-01'),
+(10101019,5,'otra',3,'2023-11-01'),
+(101010110,5,'comunitaria',2,'2023-02-01'),
+(101010111,30,'desarrollo institucional',8,'2023-03-01'),
+(101010112,17,'otra',3,'2023-04-01'),
+(101010113,2,'desarrollo institucional',3,'2023-05-01'),
+(101010114,30,'académica',6,'2023-06-01'),
+(101010115,13,'comunitaria',3,'2023-07-01'),
+(101010116,26,'deportiva',2,'2023-08-01'),
+(101010117,25,'comunitaria',4,'2023-09-01'),
+(101010118,1,'acompañamiento',3,'2023-10-01'),
+(101010119,24,'acompañamiento',7,'2023-11-01');
 
+delete from corresponsabilidad;
 INSERT INTO corresponsabilidad VALUES
-(2, 10),
-(4, 12),
-(5, 15),
-(6, 18),
-(8, 20),
-(9, 23),
-(12, 26),
-(14, 28),
-(16, 30),
-(17, 33),
-(21, 36),
-(22, 38),
-(25, 11),
-(27, 14),
-(29, 17);
+(10101012, 10),
+(10101014, 12),
+(10101015, 15),
+(10101016, 18),
+(10101018, 20),
+(10101019, 23),
+(101010112, 26),
+(101010114, 28),
+(101010116, 30),
+(101010117, 33),
+(101010121, 36),
+(101010122, 38),
+(101010125, 11),
+(101010127, 14),
+(101010129, 17);
 
 DELETE FROM tiendabienestar;
 insert into tiendabienestar values (1,'Bogotá','Ciudad Universitaria','08:00:00','17:00:00',1,2);
 insert into tiendabienestar values (2,'Bogotá','Feria del libro','10:00:00','19:00:00',3,4);
 
 DELETE FROM factura;
-insert into factura values (1,'2023-05-18','13:00:00','N.A',1,29);
-insert into factura values (2,'2023-04-15','13:00:00','N.A',1,3);
-insert into factura values (3,'2023-05-11','15:00:00','N.A',2,11);
-insert into factura values (4,'2023-05-3','16:00:00','N.A',1,29);
-insert into factura values (5,'2023-03-21','18:00:00','N.A',1,9);
-insert into factura values (6,'2023-01-6','18:00:00','N.A',1,2);
-insert into factura values (7,'2023-06-1','10:00:00','N.A',1,5);
-insert into factura values (8,'2023-02-27','11:00:00','N.A',1,3);
-insert into factura values (9,'2023-04-10','10:00:00','N.A',2,6);
-insert into factura values (10,'2023-02-2','18:00:00','N.A',2,10);
-insert into factura values (11,'2023-02-21','10:00:00','N.A',2,14);
-insert into factura values (12,'2023-03-23','11:00:00','N.A',2,15);
-insert into factura values (13,'2023-02-13','17:00:00','N.A',2,27);
-insert into factura values (14,'2023-04-29','13:00:00','N.A',2,10);
-insert into factura values (15,'2023-05-21','17:00:00','N.A',1,7);
+insert into factura values
+(1,'2023-05-18','13:00:00','N.A',1,101010129),
+(2,'2023-04-15','13:00:00','N.A',1,10101013),
+(3,'2023-05-11','15:00:00','N.A',2,101010111),
+(4,'2023-05-3','16:00:00','N.A',1,101010129),
+(5,'2023-03-21','18:00:00','N.A',1,10101019),
+(6,'2023-01-6','18:00:00','N.A',1,10101012),
+(7,'2023-06-1','10:00:00','N.A',1,10101015),
+(8,'2023-02-27','11:00:00','N.A',1,10101013),
+(9,'2023-04-10','10:00:00','N.A',2,10101016),
+(10,'2023-02-2','18:00:00','N.A',2,101010110),
+(11,'2023-02-21','10:00:00','N.A',2,101010114),
+(12,'2023-03-23','11:00:00','N.A',2,101010115),
+(13,'2023-02-13','17:00:00','N.A',2,101010127),
+(14,'2023-04-29','13:00:00','N.A',2,101010110),
+(15,'2023-05-21','17:00:00','N.A',1,10101017);
 
 DELETE FROM producto;
 insert into producto values (1,83000.0,'Producto1');
@@ -534,6 +540,7 @@ insert into factura_producto values (15,10);
 insert into factura_producto values (2,8);
 insert into factura_producto values (1,7);
 
+delete from producto_tiendaun;
 INSERT INTO producto_tiendaun VALUES 
 (1, 1),
 (1, 2),
@@ -557,106 +564,106 @@ INSERT INTO producto_tiendaun VALUES (1, 11);
 #------------------------------------------------------------------
 DELETE FROM incapacidad;
 INSERT INTO incapacidad (perID, incFecha, incEnfermedad, incDias, incVerificado, incAprobado) VALUES
-	(65, '2022-03-23', 'psicologica', 10, 1, 1),
-	(40, '2022-08-07', 'psicologica', 29, 1, 1),
-	(138, '2020-06-19', 'covid', 17, 1, 1),
-	(20, '2022-01-12', 'lesion', 14, 1, 1),
-	(96, '2021-10-31', 'covid', 21, 1, 1),
-	(194, '2021-08-10', 'gastrointestinal', 20, 1, 1),
-	(33, '2021-05-25', 'cirugia', 30, 1, 1),
-	(159, '2022-02-07', 'covid', 9, 1, 1),
-	(153, '2020-08-08', 'lesion', 26, 1, 1),
-	(75, '2020-12-06', 'psicologica', 4, 0, 1),
-	(65, '2022-06-25', 'psicologica', 1, 1, 1),
-	(171, '2020-02-04', 'covid', 14, 1, 1),
-	(188, '2020-10-10', 'psicologica', 2, 1, 1),
-	(119, '2020-04-12', 'psicologica', 16, 1, 1),
-	(163, '2021-03-04', 'psicologica', 23, 1, 1),
-	(37, '2021-01-07', 'lesion', 26, 1, 1),
-	(98, '2020-06-30', 'psicologica', 2, 1, 1),
-	(19, '2020-03-10', 'lesion', 6, 1, 1),
-	(164, '2021-01-23', 'lesion', 17, 1, 1),
-	(132, '2021-09-13', 'gastrointestinal', 21, 0, 1),
-	(60, '2021-10-19', 'covid', 16, 1, 1),
-	(130, '2020-04-28', 'psicologica', 25, 0, 1),
-	(70, '2021-05-05', 'psicologica', 26, 1, 1),
-	(146, '2022-04-16', 'cirugia', 28, 1, 1),
-	(191, '2021-12-15', 'covid', 19, 1, 1),
-	(156, '2021-05-06', 'psicologica', 25, 0, 1),
-	(40, '2022-08-17', 'covid', 24, 1, 1),
-	(80, '2022-01-02', 'covid', 28, 1, 1),
-	(72, '2021-02-20', 'lesion', 16, 1, 1),
-	(105, '2020-05-23', 'covid', 22, 1, 1),
-	(148, '2020-05-25', 'covid', 9, 1, 1),
-	(128, '2021-07-02', 'psicologica', 5, 1, 1),
-	(199, '2020-07-14', 'lesion', 2, 1, 1),
-	(35, '2022-02-09', 'covid', 9, 1, 1),
-	(123, '2020-12-26', 'psicologica', 30, 1, 1),
-	(133, '2023-01-03', 'gastrointestinal', 10, 1, 1),
-	(166, '2021-05-30', 'lesion', 23, 1, 1),
-	(145, '2020-02-28', 'covid', 28, 1, 1),
-	(150, '2022-09-25', 'lesion', 4, 1, 1),
-	(63, '2022-03-19', 'covid', 17, 1, 1),
-	(186, '2022-06-09', 'covid', 9, 1, 1),
-	(40, '2021-11-19', 'cirugia', 9, 1, 1),
-	(186, '2021-11-04', 'lesion', 20, 1, 1),
-	(59, '2022-06-16', 'covid', 3, 1, 1),
-	(47, '2020-03-20', 'cirugia', 5, 1, 1),
-	(117, '2020-11-03', 'covid', 12, 1, 1),
-	(43, '2022-02-28', 'lesion', 12, 1, 1),
-	(158, '2022-04-01', 'covid', 19, 1, 1),
-	(172, '2021-06-20', 'cirugia', 12, 1, 1),
-	(180, '2020-04-05', 'lesion', 19, 1, 1),
-	(35, '2020-03-22', 'lesion', 9, 1, 1),
-	(185, '2022-12-15', 'covid', 21, 1, 1),
-	(39, '2023-01-19', 'covid', 23, 1, 1),
-	(144, '2021-03-13', 'covid', 3, 1, 1),
-	(192, '2022-11-21', 'covid', 13, 1, 1),
-	(128, '2021-10-21', 'cirugia', 1, 1, 1),
-	(72, '2021-09-15', 'psicologica', 26, 1, 1),
-	(40, '2021-11-28', 'covid', 24, 1, 1),
-	(147, '2021-04-23', 'lesion', 24, 1, 1),
-	(34, '2023-01-15', 'covid', 30, 1, 1),
-	(63, '2020-10-01', 'psicologica', 22, 1, 1),
-	(16, '2021-03-18', 'lesion', 17, 1, 1),
-	(80, '2022-03-05', 'cirugia', 28, 1, 1),
-	(5, '2021-01-21', 'covid', 26, 1, 1),
-	(32, '2020-08-02', 'covid', 27, 1, 1),
-	(6, '2021-05-17', 'covid', 15, 1, 1),
-	(11, '2022-10-19', 'covid', 6, 1, 1),
-	(174, '2022-07-07', 'covid', 29, 1, 1),
-	(147, '2021-11-09', 'lesion', 11, 1, 1),
-	(180, '2020-02-17', 'lesion', 15, 1, 1),
-	(43, '2020-09-10', 'lesion', 20, 1, 1),
-	(81, '2022-04-25', 'lesion', 11, 1, 1),
-	(41, '2022-12-14', 'psicologica', 6, 1, 1),
-	(51, '2021-06-04', 'covid', 23, 1, 1),
-	(18, '2020-07-06', 'covid', 30, 1, 1),
-	(114, '2022-06-15', 'covid', 25, 1, 1),
-	(158, '2020-09-13', 'psicologica', 27, 1, 1),
-	(52, '2021-02-05', 'covid', 11, 1, 1),
-	(155, '2020-02-04', 'covid', 5, 1, 1),
-	(15, '2022-01-14', 'psicologica', 5, 1, 1),
-	(18, '2021-10-10', 'psicologica', 12, 1, 1),
-	(107, '2022-09-28', 'cirugia', 24, 1, 1),
-	(37, '2021-01-12', 'cirugia', 21, 1, 1),
-	(186, '2022-09-23', 'psicologica', 3, 1, 1),
-	(39, '2020-12-21', 'covid', 29, 1, 1),
-	(160, '2022-04-11', 'psicologica', 1, 1, 1),
-	(139, '2022-12-24', 'covid', 7, 1, 1),
-	(131, '2020-04-05', 'gastrointestinal', 29, 1, 1),
-	(25, '2021-05-07', 'lesion', 13, 1, 1),
-	(83, '2020-12-31', 'lesion', 15, 1, 1),
-	(192, '2021-11-06', 'psicologica', 30, 1, 1),
-	(147, '2022-03-22', 'covid', 18, 1, 1),
-	(116, '2022-07-03', 'covid', 29, 1, 1),
-	(128, '2022-08-27', 'psicologica', 22, 1, 1),
-	(74, '2022-05-28', 'gastrointestinal', 6, 1, 1),
-	(183, '2022-08-20', 'gastrointestinal', 27, 1, 1),
-	(43, '2021-01-05', 'covid', 22, 1, 1),
-	(99, '2020-11-13', 'psicologica', 1, 1, 1),
-	(97, '2022-11-03', 'psicologica', 8, 1, 1),
-	(11, '2021-09-30', 'covid', 17, 1, 1);
+(101010165, '2022-03-23', 'psicologica', 10, 1, 1),
+(101010140, '2022-08-07', 'psicologica', 29, 1, 1),
+(1010101138, '2020-06-19', 'covid', 17, 1, 1),
+(101010120, '2022-01-12', 'lesion', 14, 1, 1),
+(101010196, '2021-10-31', 'covid', 21, 1, 1),
+(1010101194, '2021-08-10', 'gastrointestinal', 20, 1, 1),
+(101010133, '2021-05-25', 'cirugia', 30, 1, 1),
+(1010101159, '2022-02-07', 'covid', 9, 1, 1),
+(1010101153, '2020-08-08', 'lesion', 26, 1, 1),
+(101010175, '2020-12-06', 'psicologica', 4, 0, 1),
+(101010165, '2022-06-25', 'psicologica', 1, 1, 1),
+(1010101171, '2020-02-04', 'covid', 14, 1, 1),
+(1010101188, '2020-10-10', 'psicologica', 2, 1, 1),
+(1010101119, '2020-04-12', 'psicologica', 16, 1, 1),
+(1010101163, '2021-03-04', 'psicologica', 23, 1, 1),
+(101010137, '2021-01-07', 'lesion', 26, 1, 1),
+(101010198, '2020-06-30', 'psicologica', 2, 1, 1),
+(101010119, '2020-03-10', 'lesion', 6, 1, 1),
+(1010101164, '2021-01-23', 'lesion', 17, 1, 1),
+(1010101132, '2021-09-13', 'gastrointestinal', 21, 0, 1),
+(101010160, '2021-10-19', 'covid', 16, 1, 1),
+(1010101130, '2020-04-28', 'psicologica', 25, 0, 1),
+(101010170, '2021-05-05', 'psicologica', 26, 1, 1),
+(1010101146, '2022-04-16', 'cirugia', 28, 1, 1),
+(1010101191, '2021-12-15', 'covid', 19, 1, 1),
+(1010101156, '2021-05-06', 'psicologica', 25, 0, 1),
+(101010140, '2022-08-17', 'covid', 24, 1, 1),
+(101010180, '2022-01-02', 'covid', 28, 1, 1),
+(101010172, '2021-02-20', 'lesion', 16, 1, 1),
+(1010101105, '2020-05-23', 'covid', 22, 1, 1),
+(1010101148, '2020-05-25', 'covid', 9, 1, 1),
+(1010101128, '2021-07-02', 'psicologica', 5, 1, 1),
+(1010101199, '2020-07-14', 'lesion', 2, 1, 1),
+(101010135, '2022-02-09', 'covid', 9, 1, 1),
+(1010101123, '2020-12-26', 'psicologica', 30, 1, 1),
+(1010101133, '2023-01-03', 'gastrointestinal', 10, 1, 1),
+(1010101166, '2021-05-30', 'lesion', 23, 1, 1),
+(1010101145, '2020-02-28', 'covid', 28, 1, 1),
+(1010101150, '2022-09-25', 'lesion', 4, 1, 1),
+(101010163, '2022-03-19', 'covid', 17, 1, 1),
+(1010101186, '2022-06-09', 'covid', 9, 1, 1),
+(101010140, '2021-11-19', 'cirugia', 9, 1, 1),
+(1010101186, '2021-11-04', 'lesion', 20, 1, 1),
+(101010159, '2022-06-16', 'covid', 3, 1, 1),
+(101010147, '2020-03-20', 'cirugia', 5, 1, 1),
+(1010101117, '2020-11-03', 'covid', 12, 1, 1),
+(101010143, '2022-02-28', 'lesion', 12, 1, 1),
+(1010101158, '2022-04-01', 'covid', 19, 1, 1),
+(1010101172, '2021-06-20', 'cirugia', 12, 1, 1),
+(1010101180, '2020-04-05', 'lesion', 19, 1, 1),
+(101010135, '2020-03-22', 'lesion', 9, 1, 1),
+(1010101185, '2022-12-15', 'covid', 21, 1, 1),
+(101010139, '2023-01-19', 'covid', 23, 1, 1),
+(1010101144, '2021-03-13', 'covid', 3, 1, 1),
+(1010101192, '2022-11-21', 'covid', 13, 1, 1),
+(1010101128, '2021-10-21', 'cirugia', 1, 1, 1),
+(101010172, '2021-09-15', 'psicologica', 26, 1, 1),
+(101010140, '2021-11-28', 'covid', 24, 1, 1),
+(1010101147, '2021-04-23', 'lesion', 24, 1, 1),
+(101010134, '2023-01-15', 'covid', 30, 1, 1),
+(101010163, '2020-10-01', 'psicologica', 22, 1, 1),
+(101010116, '2021-03-18', 'lesion', 17, 1, 1),
+(101010180, '2022-03-05', 'cirugia', 28, 1, 1),
+(10101015, '2021-01-21', 'covid', 26, 1, 1),
+(101010132, '2020-08-02', 'covid', 27, 1, 1),
+(10101016, '2021-05-17', 'covid', 15, 1, 1),
+(101010111, '2022-10-19', 'covid', 6, 1, 1),
+(1010101174, '2022-07-07', 'covid', 29, 1, 1),
+(1010101147, '2021-11-09', 'lesion', 11, 1, 1),
+(1010101180, '2020-02-17', 'lesion', 15, 1, 1),
+(101010143, '2020-09-10', 'lesion', 20, 1, 1),
+(101010181, '2022-04-25', 'lesion', 11, 1, 1),
+(101010141, '2022-12-14', 'psicologica', 6, 1, 1),
+(101010151, '2021-06-04', 'covid', 23, 1, 1),
+(101010118, '2020-07-06', 'covid', 30, 1, 1),
+(1010101114, '2022-06-15', 'covid', 25, 1, 1),
+(1010101158, '2020-09-13', 'psicologica', 27, 1, 1),
+(101010152, '2021-02-05', 'covid', 11, 1, 1),
+(1010101155, '2020-02-04', 'covid', 5, 1, 1),
+(101010115, '2022-01-14', 'psicologica', 5, 1, 1),
+(101010118, '2021-10-10', 'psicologica', 12, 1, 1),
+(1010101107, '2022-09-28', 'cirugia', 24, 1, 1),
+(101010137, '2021-01-12', 'cirugia', 21, 1, 1),
+(1010101186, '2022-09-23', 'psicologica', 3, 1, 1),
+(101010139, '2020-12-21', 'covid', 29, 1, 1),
+(1010101160, '2022-04-11', 'psicologica', 1, 1, 1),
+(1010101139, '2022-12-24', 'covid', 7, 1, 1),
+(1010101131, '2020-04-05', 'gastrointestinal', 29, 1, 1),
+(101010125, '2021-05-07', 'lesion', 13, 1, 1),
+(101010183, '2020-12-31', 'lesion', 15, 1, 1),
+(1010101192, '2021-11-06', 'psicologica', 30, 1, 1),
+(1010101147, '2022-03-22', 'covid', 18, 1, 1),
+(1010101116, '2022-07-03', 'covid', 29, 1, 1),
+(1010101128, '2022-08-27', 'psicologica', 22, 1, 1),
+(101010174, '2022-05-28', 'gastrointestinal', 6, 1, 1),
+(1010101183, '2022-08-20', 'gastrointestinal', 27, 1, 1),
+(101010143, '2021-01-05', 'covid', 22, 1, 1),
+(101010199, '2020-11-13', 'psicologica', 1, 1, 1),
+(101010197, '2022-11-03', 'psicologica', 8, 1, 1),
+(101010111, '2021-09-30', 'covid', 17, 1, 1);
 
 DELETE FROM ambulancia;
 INSERT INTO ambulancia VALUES 
@@ -664,374 +671,374 @@ INSERT INTO ambulancia VALUES
 
 DELETE FROM personalsalud;
 INSERT INTO personalsalud (perID, salProfesion, salEspecializacion, ambulanciaID) VALUES
-	(10, 'Enfermeria', 'Ninguna', 'ABC123'),
-    (20, 'Enfermeria', 'Jefe', 'HIJ789'),
-    (30, 'Medico', 'General', 'ABC123'),
-    (40, 'Medico', 'Odontologia', 'HIJ789'),
-    (50, 'Medico', 'Psicologia', 'HIJ789'),
-    (60, 'Medico', 'Optometra', 'ABC123'),
-    (70, 'Medico', 'Cardiologo', 'DEF456');
+(101010110, 'Enfermeria', 'Ninguna', 'ABC123'),
+(101010120, 'Enfermeria', 'Jefe', 'HIJ789'),
+(101010130, 'Medico', 'General', 'ABC123'),
+(101010140, 'Medico', 'Odontologia', 'HIJ789'),
+(101010150, 'Medico', 'Psicologia', 'HIJ789'),
+(101010160, 'Medico', 'Optometra', 'ABC123'),
+(101010170, 'Medico', 'Cardiologo', 'DEF456');
 
 DELETE FROM enfermedad;
 INSERT INTO enfermedad (perID, enfNombre, enfFechaInicio) VALUES
-	(7, 'obesidad', '2005-05-17'),
-	(8, 'obesidad', '2015-08-04'),
-	(9, 'tunel_carpo', '2011-09-01'),
-	(13, 'tunel_carpo', '2004-06-16'),
-	(17, 'obesidad', '2003-10-03'),
-	(18, 'asma', '1999-10-13'),
-	(20, 'dolor_lumbar', '2005-08-26'),
-	(22, 'obesidad', '2003-07-27'),
-	(24, 'cancer', '2010-09-06'),
-	(25, 'ansiedad', '2004-03-01'),
-	(26, 'obesidad', '2013-02-07'),
-	(27, 'hipertension', '2003-04-25'),
-	(31, 'ansiedad', '1999-05-02'),
-	(32, 'depresion', '2013-06-13'),
-	(33, 'tunel_carpo', '2014-03-16'),
-	(35, 'ansiedad', '2010-04-02'),
-	(42, 'dolor_lumbar', '2014-09-06'),
-	(43, 'asma', '2002-02-16'),
-	(46, 'hipertension', '2004-07-02'),
-	(49, 'asma', '1999-12-03'),
-	(50, 'diabetes', '2005-04-27'),
-	(53, 'cancer', '2013-12-18'),
-	(57, 'depresion', '2012-05-15'),
-	(58, 'depresion', '2003-09-10'),
-	(68, 'ansiedad', '2004-04-23'),
-	(70, 'diabetes', '2000-05-18'),
-	(73, 'dolor_lumbar', '2014-09-05'),
-	(74, 'depresion', '2010-09-27'),
-	(75, 'asma', '2002-08-09'),
-	(76, 'asma', '2013-08-22'),
-	(77, 'asma', '2009-06-17'),
-	(78, 'tunel_carpo', '2008-06-19'),
-	(79, 'dolor_lumbar', '2000-02-03'),
-	(80, 'cancer', '2009-12-19'),
-	(83, 'depresion', '2001-02-27'),
-	(85, 'migraña', '2009-04-24'),
-	(88, 'depresion', '2012-12-27'),
-	(91, 'depresion', '2002-12-20'),
-	(92, 'ansiedad', '2008-04-29'),
-	(94, 'dolor_lumbar', '2007-01-23'),
-	(99, 'migraña', '2000-12-13'),
-	(100, 'depresion', '2005-12-17'),
-	(101, 'asma', '2013-08-29'),
-	(102, 'cancer', '2004-10-03'),
-	(103, 'obesidad', '2003-06-26'),
-	(104, 'ansiedad', '2007-07-02'),
-	(105, 'hipertension', '2007-10-19'),
-	(110, 'cancer', '2005-09-09'),
-	(111, 'ansiedad', '2005-04-24'),
-	(112, 'ansiedad', '2010-08-04'),
-	(113, 'hipertension', '2009-01-08'),
-	(114, 'cancer', '2005-09-20'),
-	(115, 'depresion', '2008-09-11'),
-	(120, 'obesidad', '2007-04-16'),
-	(121, 'migraña', '2001-04-07'),
-	(124, 'diabetes', '2003-07-03'),
-	(125, 'obesidad', '2000-03-28'),
-	(127, 'obesidad', '2011-08-11'),
-	(128, 'hipertension', '2012-01-12'),
-	(129, 'tunel_carpo', '2000-11-05'),
-	(130, 'dolor_lumbar', '2002-11-12'),
-	(131, 'depresion', '2009-12-20'),
-	(133, 'diabetes', '2010-11-20'),
-	(135, 'tunel_carpo', '2008-06-19'),
-	(136, 'obesidad', '2009-11-29'),
-	(138, 'asma', '2007-12-02'),
-	(139, 'hipertension', '2002-06-06'),
-	(140, 'dolor_lumbar', '2008-10-18'),
-	(143, 'cancer', '2001-05-03'),
-	(144, 'cancer', '2013-12-16'),
-	(150, 'ansiedad', '2000-02-29'),
-	(152, 'cancer', '2014-07-16'),
-	(155, 'tunel_carpo', '2015-02-13'),
-	(156, 'depresion', '2009-06-15'),
-	(158, 'asma', '2002-11-25'),
-	(159, 'cancer', '2015-05-31'),
-	(160, 'migraña', '2006-07-18'),
-	(161, 'dolor_lumbar', '2005-09-03'),
-	(163, 'depresion', '2010-01-10'),
-	(164, 'diabetes', '2001-07-03'),
-	(165, 'asma', '2012-08-18'),
-	(171, 'diabetes', '2005-02-13'),
-	(172, 'tunel_carpo', '2004-03-21'),
-	(177, 'ansiedad', '2015-02-22'),
-	(178, 'diabetes', '2002-08-04'),
-	(179, 'depresion', '2015-05-22'),
-	(181, 'migraña', '2008-09-02'),
-	(182, 'asma', '2008-11-11'),
-	(184, 'hipertension', '1999-04-18'),
-	(186, 'hipertension', '2002-08-09'),
-	(188, 'hipertension', '2013-01-09'),
-	(190, 'hipertension', '2013-02-08'),
-	(194, 'depresion', '2007-11-04'),
-	(198, 'asma', '2008-10-14');
+(10101017, 'obesidad', '2005-05-17'),
+(10101018, 'obesidad', '2015-08-04'),
+(10101019, 'tunel_carpo', '2011-09-01'),
+(101010113, 'tunel_carpo', '2004-06-16'),
+(101010117, 'obesidad', '2003-10-03'),
+(101010118, 'asma', '1999-10-13'),
+(101010120, 'dolor_lumbar', '2005-08-26'),
+(101010122, 'obesidad', '2003-07-27'),
+(101010124, 'cancer', '2010-09-06'),
+(101010125, 'ansiedad', '2004-03-01'),
+(101010126, 'obesidad', '2013-02-07'),
+(101010127, 'hipertension', '2003-04-25'),
+(101010131, 'ansiedad', '1999-05-02'),
+(101010132, 'depresion', '2013-06-13'),
+(101010133, 'tunel_carpo', '2014-03-16'),
+(101010135, 'ansiedad', '2010-04-02'),
+(101010142, 'dolor_lumbar', '2014-09-06'),
+(101010143, 'asma', '2002-02-16'),
+(101010146, 'hipertension', '2004-07-02'),
+(101010149, 'asma', '1999-12-03'),
+(101010150, 'diabetes', '2005-04-27'),
+(101010153, 'cancer', '2013-12-18'),
+(101010157, 'depresion', '2012-05-15'),
+(101010158, 'depresion', '2003-09-10'),
+(101010168, 'ansiedad', '2004-04-23'),
+(101010170, 'diabetes', '2000-05-18'),
+(101010173, 'dolor_lumbar', '2014-09-05'),
+(101010174, 'depresion', '2010-09-27'),
+(101010175, 'asma', '2002-08-09'),
+(101010176, 'asma', '2013-08-22'),
+(101010177, 'asma', '2009-06-17'),
+(101010178, 'tunel_carpo', '2008-06-19'),
+(101010179, 'dolor_lumbar', '2000-02-03'),
+(101010180, 'cancer', '2009-12-19'),
+(101010183, 'depresion', '2001-02-27'),
+(101010185, 'migraña', '2009-04-24'),
+(101010188, 'depresion', '2012-12-27'),
+(101010191, 'depresion', '2002-12-20'),
+(101010192, 'ansiedad', '2008-04-29'),
+(101010194, 'dolor_lumbar', '2007-01-23'),
+(101010199, 'migraña', '2000-12-13'),
+(1010101100, 'depresion', '2005-12-17'),
+(1010101101, 'asma', '2013-08-29'),
+(1010101102, 'cancer', '2004-10-03'),
+(1010101103, 'obesidad', '2003-06-26'),
+(1010101104, 'ansiedad', '2007-07-02'),
+(1010101105, 'hipertension', '2007-10-19'),
+(1010101110, 'cancer', '2005-09-09'),
+(1010101111, 'ansiedad', '2005-04-24'),
+(1010101112, 'ansiedad', '2010-08-04'),
+(1010101113, 'hipertension', '2009-01-08'),
+(1010101114, 'cancer', '2005-09-20'),
+(1010101115, 'depresion', '2008-09-11'),
+(1010101120, 'obesidad', '2007-04-16'),
+(1010101121, 'migraña', '2001-04-07'),
+(1010101124, 'diabetes', '2003-07-03'),
+(1010101125, 'obesidad', '2000-03-28'),
+(1010101127, 'obesidad', '2011-08-11'),
+(1010101128, 'hipertension', '2012-01-12'),
+(1010101129, 'tunel_carpo', '2000-11-05'),
+(1010101130, 'dolor_lumbar', '2002-11-12'),
+(1010101131, 'depresion', '2009-12-20'),
+(1010101133, 'diabetes', '2010-11-20'),
+(1010101135, 'tunel_carpo', '2008-06-19'),
+(1010101136, 'obesidad', '2009-11-29'),
+(1010101138, 'asma', '2007-12-02'),
+(1010101139, 'hipertension', '2002-06-06'),
+(1010101140, 'dolor_lumbar', '2008-10-18'),
+(1010101143, 'cancer', '2001-05-03'),
+(1010101144, 'cancer', '2013-12-16'),
+(1010101150, 'ansiedad', '2000-02-29'),
+(1010101152, 'cancer', '2014-07-16'),
+(1010101155, 'tunel_carpo', '2015-02-13'),
+(1010101156, 'depresion', '2009-06-15'),
+(1010101158, 'asma', '2002-11-25'),
+(1010101159, 'cancer', '2015-05-31'),
+(1010101160, 'migraña', '2006-07-18'),
+(1010101161, 'dolor_lumbar', '2005-09-03'),
+(1010101163, 'depresion', '2010-01-10'),
+(1010101164, 'diabetes', '2001-07-03'),
+(1010101165, 'asma', '2012-08-18'),
+(1010101171, 'diabetes', '2005-02-13'),
+(1010101172, 'tunel_carpo', '2004-03-21'),
+(1010101177, 'ansiedad', '2015-02-22'),
+(1010101178, 'diabetes', '2002-08-04'),
+(1010101179, 'depresion', '2015-05-22'),
+(1010101181, 'migraña', '2008-09-02'),
+(1010101182, 'asma', '2008-11-11'),
+(1010101184, 'hipertension', '1999-04-18'),
+(1010101186, 'hipertension', '2002-08-09'),
+(1010101188, 'hipertension', '2013-01-09'),
+(1010101190, 'hipertension', '2013-02-08'),
+(1010101194, 'depresion', '2007-11-04'),
+(1010101198, 'asma', '2008-10-14');
 
 DELETE FROM discapacidad;
 INSERT INTO discapacidad (perID, disNombre, disVerificado, disAprobado) VALUES
-	(10, 'cegera', 1, 1),
-	(12, 'autismo', 0, 1),
-	(14, 'autismo', 1, 1),
-	(23, 'cegera', 1, 1),
-    (25, 'autismo', 0, 1),
-	(25, 'sordera', 1, 1),
-	(33, 'sordera', 1, 1),
-	(35, 'cegera', 1, 1),
-	(36, 'lesion medular', 1, 1),
-	(40, 'sordera', 0, 1),
-	(45, 'autismo', 1, 1),
-	(51, 'autismo', 1, 1),
-	(56, 'sordera', 1, 1),
-	(69, 'sordera', 1, 1),
-	(91, 'sordera', 0, 1),
-	(99, 'autismo', 1, 1),
-	(101, 'sordera', 1, 1),
-	(107, 'cegera', 0, 1),
-	(110, 'sordera', 1, 1),
-	(113, 'cegera', 0, 1),
-	(120, 'autismo', 1, 1),
-	(121, 'lesion medular', 1, 1),
-	(122, 'sordera', 1, 1),
-	(123, 'cegera', 1, 1),
-	(130, 'cegera', 0, 1),
-	(135, 'sordera', 0, 1),
-	(138, 'sordera', 0, 1),
-	(145, 'sordera', 1, 1),
-	(146, 'autismo', 0, 1),
-	(148, 'autismo', 0, 1),
-	(154, 'autismo', 1, 1),
-	(164, 'autismo', 1, 1),
-	(168, 'autismo', 1, 1),
-	(169, 'cegera', 0, 1),
-	(176, 'autismo', 1, 1),
-	(178, 'sordera', 1, 1),
-	(192, 'autismo', 0, 1),
-	(200, 'cegera', 0, 1);
+	(101010110, 'cegera', 1, 1),
+	(101010112, 'autismo', 0, 1),
+	(101010114, 'autismo', 1, 1),
+	(101010123, 'cegera', 1, 1),
+	(101010125, 'autismo', 0, 1),
+	(101010125, 'sordera', 1, 1),
+	(101010133, 'sordera', 1, 1),
+	(101010135, 'cegera', 1, 1),
+	(101010136, 'lesion medular', 1, 1),
+	(101010140, 'sordera', 0, 1),
+	(101010145, 'autismo', 1, 1),
+	(101010151, 'autismo', 1, 1),
+	(101010156, 'sordera', 1, 1),
+	(101010169, 'sordera', 1, 1),
+	(101010191, 'sordera', 0, 1),
+	(101010199, 'autismo', 1, 1),
+	(1010101101, 'sordera', 1, 1),
+	(1010101107, 'cegera', 0, 1),
+	(1010101110, 'sordera', 1, 1),
+	(1010101113, 'cegera', 0, 1),
+	(1010101120, 'autismo', 1, 1),
+	(1010101121, 'lesion medular', 1, 1),
+	(1010101122, 'sordera', 1, 1),
+	(1010101123, 'cegera', 1, 1),
+	(1010101130, 'cegera', 0, 1),
+	(1010101135, 'sordera', 0, 1),
+	(1010101138, 'sordera', 0, 1),
+	(1010101145, 'sordera', 1, 1),
+	(1010101146, 'autismo', 0, 1),
+	(1010101148, 'autismo', 0, 1),
+	(1010101154, 'autismo', 1, 1),
+	(1010101164, 'autismo', 1, 1),
+	(1010101168, 'autismo', 1, 1),
+	(1010101169, 'cegera', 0, 1),
+	(1010101176, 'autismo', 1, 1),
+	(1010101178, 'sordera', 1, 1),
+	(1010101192, 'autismo', 0, 1),
+	(1010101200, 'cegera', 0, 1);
 
 DELETE FROM citamedica;
 INSERT INTO citamedica (citID, doctorID, pacienteID, citFecha, citEspecialidad, citDiagnostico) VALUES
-	(1, 70, 159, '2000-08-15', 'Cardiologo', 'muerte'),
-	(2, 50, 169, '2006-05-29', 'Psicologia', 'sano'),
-	(3, 50, 58, '2006-06-01', 'Psicologia', 'sano'),
-	(4, 30, 30, '2006-02-21', 'General', 'salvacion'),
-	(5, 40, 172, '2011-03-26', 'Odontologia', 'salvacion'),
-	(6, 50, 139, '2008-08-21', 'Psicologia', 'sano'),
-	(7, 70, 15, '1999-06-03', 'Cardiologo', 'muerte'),
-	(8, 50, 37, '2014-03-16', 'Psicologia', 'mejorando'),
-	(9, 60, 56, '2014-05-05', 'Optometra', 'mejorando'),
-	(10, 70, 23, '1999-07-06', 'Cardiologo', 'mejorando'),
-	(11, 30, 173, '2006-02-27', 'General', 'muerte'),
-	(12, 50, 39, '2014-06-24', 'Psicologia', 'empeorando'),
-	(13, 60, 162, '2000-02-26', 'Optometra', 'muerte'),
-	(14, 40, 126, '2002-01-01', 'Odontologia', 'sano'),
-	(15, 50, 174, '2005-02-06', 'Psicologia', 'empeorando'),
-	(16, 40, 171, '2013-09-05', 'Odontologia', 'enfermo'),
-	(17, 30, 30, '2013-10-07', 'General', 'mejorando'),
-	(18, 60, 155, '2002-01-19', 'Optometra', 'muerte'),
-	(19, 60, 118, '2003-06-09', 'Optometra', 'muerte'),
-	(20, 60, 19, '2009-01-30', 'Optometra', 'salvacion'),
-	(21, 70, 43, '2011-12-23', 'Cardiologo', 'sano'),
-	(22, 40, 73, '2000-04-24', 'Odontologia', 'mejorando'),
-	(23, 30, 7, '2010-11-01', 'General', 'mejorando'),
-	(24, 50, 157, '2005-09-22', 'Psicologia', 'muerte'),
-	(25, 30, 42, '2000-08-30', 'General', 'sano'),
-	(26, 50, 178, '2013-12-01', 'Psicologia', 'mejorando'),
-	(27, 70, 123, '2011-02-06', 'Cardiologo', 'mejorando'),
-	(28, 70, 133, '2015-02-14', 'Cardiologo', 'enfermo'),
-	(29, 30, 55, '2007-02-04', 'General', 'mejorando'),
-	(30, 40, 69, '2004-03-16', 'Odontologia', 'muerte'),
-	(31, 40, 134, '2006-08-30', 'Odontologia', 'sano'),
-	(32, 60, 42, '2014-01-08', 'Optometra', 'sano'),
-	(33, 60, 59, '2006-01-18', 'Optometra', 'salvacion'),
-	(34, 30, 129, '2007-02-12', 'General', 'mejorando'),
-	(35, 30, 31, '2009-02-15', 'General', 'enfermo'),
-	(36, 60, 146, '2010-07-31', 'Optometra', 'mejorando'),
-	(37, 50, 24, '2014-03-25', 'Psicologia', 'empeorando'),
-	(38, 60, 67, '2002-09-27', 'Optometra', 'muerte'),
-	(39, 60, 137, '2015-12-04', 'Optometra', 'empeorando'),
-	(40, 40, 173, '2002-07-01', 'Odontologia', 'empeorando'),
-	(41, 70, 140, '2008-09-01', 'Cardiologo', 'mejorando'),
-	(42, 50, 69, '2015-07-08', 'Psicologia', 'sano'),
-	(43, 60, 9, '2007-02-23', 'Optometra', 'empeorando'),
-	(44, 70, 49, '2003-08-22', 'Cardiologo', 'muerte'),
-	(45, 40, 9, '2009-10-17', 'Odontologia', 'sano'),
-	(46, 30, 117, '2008-06-14', 'General', 'enfermo'),
-	(47, 50, 108, '2015-05-28', 'Psicologia', 'muerte'),
-	(48, 70, 87, '2011-08-06', 'Cardiologo', 'empeorando'),
-	(49, 30, 41, '2013-12-15', 'General', 'muerte'),
-	(50, 70, 33, '2013-06-25', 'Cardiologo', 'enfermo'),
-	(51, 70, 170, '2013-05-02', 'Cardiologo', 'muerte'),
-	(52, 70, 26, '2006-07-02', 'Cardiologo', 'sano'),
-	(53, 30, 154, '2001-02-13', 'General', 'enfermo'),
-	(54, 70, 120, '2015-01-19', 'Cardiologo', 'sano'),
-	(55, 30, 23, '2001-04-02', 'General', 'enfermo'),
-	(56, 30, 30, '2004-07-12', 'General', 'empeorando'),
-	(57, 50, 40, '2000-11-14', 'Psicologia', 'enfermo'),
-	(58, 30, 8, '2002-07-26', 'General', 'mejorando'),
-	(59, 50, 176, '2004-01-31', 'Psicologia', 'salvacion'),
-	(60, 40, 124, '2007-11-27', 'Odontologia', 'salvacion'),
-	(61, 60, 133, '2012-05-14', 'Optometra', 'muerte'),
-	(62, 30, 93, '2009-02-27', 'General', 'mejorando'),
-	(63, 70, 149, '2003-08-01', 'Cardiologo', 'muerte'),
-	(64, 40, 90, '2005-12-02', 'Odontologia', 'empeorando'),
-	(65, 70, 70, '2015-06-10', 'Cardiologo', 'sano'),
-	(66, 30, 61, '2006-06-19', 'General', 'salvacion'),
-	(67, 60, 179, '2000-02-13', 'Optometra', 'sano'),
-	(68, 40, 55, '2010-11-01', 'Odontologia', 'mejorando'),
-	(69, 50, 172, '2007-11-29', 'Psicologia', 'sano'),
-	(70, 70, 3, '1999-08-26', 'Cardiologo', 'muerte'),
-	(71, 70, 54, '2014-12-07', 'Cardiologo', 'sano'),
-	(72, 70, 192, '2002-05-18', 'Cardiologo', 'muerte'),
-	(73, 70, 5, '2003-04-06', 'Cardiologo', 'sano'),
-	(74, 30, 141, '2007-07-09', 'General', 'sano'),
-	(75, 50, 37, '2006-11-18', 'Psicologia', 'mejorando'),
-	(76, 30, 55, '2006-01-27', 'General', 'sano'),
-	(77, 70, 49, '2010-02-22', 'Cardiologo', 'mejorando'),
-	(78, 40, 144, '2006-06-28', 'Odontologia', 'sano'),
-	(79, 60, 20, '2006-07-28', 'Optometra', 'enfermo'),
-	(80, 30, 120, '2004-03-04', 'General', 'sano'),
-	(81, 60, 21, '2012-10-15', 'Optometra', 'enfermo'),
-	(82, 50, 111, '1999-12-30', 'Psicologia', 'enfermo'),
-	(83, 30, 31, '2015-03-03', 'General', 'mejorando'),
-	(84, 50, 72, '2011-12-08', 'Psicologia', 'salvacion'),
-	(85, 50, 181, '2008-06-23', 'Psicologia', 'muerte'),
-	(86, 30, 170, '2006-07-11', 'General', 'empeorando'),
-	(87, 30, 126, '2000-01-07', 'General', 'empeorando'),
-	(88, 70, 121, '2001-08-10', 'Cardiologo', 'mejorando'),
-	(89, 40, 92, '2008-08-25', 'Odontologia', 'mejorando'),
-	(90, 70, 160, '2008-03-02', 'Cardiologo', 'salvacion'),
-	(91, 70, 108, '2013-04-10', 'Cardiologo', 'empeorando'),
-	(92, 50, 19, '2000-01-08', 'Psicologia', 'muerte'),
-	(93, 60, 197, '2004-10-02', 'Optometra', 'sano'),
-	(94, 30, 168, '2015-01-08', 'General', 'enfermo'),
-	(95, 30, 40, '2009-08-05', 'General', 'sano'),
-	(96, 60, 39, '2001-01-16', 'Optometra', 'sano'),
-	(97, 40, 102, '1999-11-04', 'Odontologia', 'mejorando'),
-	(98, 30, 114, '2012-12-26', 'General', 'enfermo'),
-	(99, 30, 134, '2014-02-08', 'General', 'empeorando'),
-	(100, 40, 94, '2007-07-16', 'Odontologia', 'salvacion'),
-	(101, 50, 44, '2011-08-27', 'Psicologia', 'muerte'),
-	(102, 30, 77, '2007-03-09', 'General', 'salvacion'),
-	(103, 50, 170, '2008-01-14', 'Psicologia', 'enfermo'),
-	(104, 40, 173, '1999-10-08', 'Odontologia', 'mejorando'),
-	(105, 60, 81, '2001-02-04', 'Optometra', 'muerte'),
-	(106, 70, 56, '1999-01-30', 'Cardiologo', 'empeorando'),
-	(107, 70, 65, '2014-01-18', 'Cardiologo', 'empeorando'),
-	(108, 60, 142, '2005-01-07', 'Optometra', 'salvacion'),
-	(109, 70, 145, '2000-09-11', 'Cardiologo', 'sano'),
-	(110, 50, 183, '2010-07-09', 'Psicologia', 'mejorando'),
-	(111, 30, 57, '2009-06-12', 'General', 'mejorando'),
-	(112, 60, 113, '2010-06-18', 'Optometra', 'muerte'),
-	(113, 40, 124, '2005-04-18', 'Odontologia', 'salvacion'),
-	(114, 60, 68, '2009-05-21', 'Optometra', 'enfermo'),
-	(115, 40, 138, '1999-02-22', 'Odontologia', 'empeorando'),
-	(116, 50, 90, '2004-09-12', 'Psicologia', 'mejorando'),
-	(117, 70, 166, '2015-03-18', 'Cardiologo', 'sano'),
-	(118, 70, 44, '2005-04-11', 'Cardiologo', 'salvacion'),
-	(119, 40, 131, '2007-05-30', 'Odontologia', 'salvacion'),
-	(120, 30, 48, '2012-08-19', 'General', 'enfermo'),
-	(121, 30, 23, '2001-02-06', 'General', 'sano'),
-	(122, 60, 127, '2008-03-15', 'Optometra', 'salvacion'),
-	(123, 50, 2, '2006-09-21', 'Psicologia', 'salvacion'),
-	(124, 50, 10, '2005-05-27', 'Psicologia', 'salvacion'),
-	(125, 60, 174, '2006-07-08', 'Optometra', 'salvacion'),
-	(126, 60, 112, '2010-01-08', 'Optometra', 'muerte'),
-	(127, 70, 181, '2000-05-19', 'Cardiologo', 'muerte'),
-	(128, 30, 131, '2003-05-05', 'General', 'sano'),
-	(129, 40, 132, '2015-05-18', 'Odontologia', 'enfermo'),
-	(130, 60, 17, '2008-11-17', 'Optometra', 'empeorando'),
-	(131, 70, 107, '2009-10-11', 'Cardiologo', 'mejorando'),
-	(132, 50, 103, '2010-11-21', 'Psicologia', 'empeorando'),
-	(133, 50, 183, '2001-10-13', 'Psicologia', 'mejorando'),
-	(134, 40, 76, '2010-03-13', 'Odontologia', 'mejorando'),
-	(135, 60, 150, '2007-08-18', 'Optometra', 'sano'),
-	(136, 50, 178, '2003-08-14', 'Psicologia', 'sano'),
-	(137, 40, 155, '2015-09-06', 'Odontologia', 'empeorando'),
-	(138, 70, 15, '2004-03-10', 'Cardiologo', 'sano'),
-	(139, 50, 192, '2011-10-02', 'Psicologia', 'muerte'),
-	(140, 70, 59, '2003-01-16', 'Cardiologo', 'enfermo'),
-	(141, 70, 14, '2014-10-28', 'Cardiologo', 'mejorando'),
-	(142, 70, 35, '2006-10-10', 'Cardiologo', 'enfermo'),
-	(143, 40, 45, '2011-12-15', 'Odontologia', 'empeorando'),
-	(144, 50, 115, '2011-12-15', 'Psicologia', 'sano'),
-	(145, 50, 138, '2013-05-31', 'Psicologia', 'mejorando'),
-	(146, 70, 95, '2001-02-05', 'Cardiologo', 'salvacion'),
-	(147, 60, 139, '2011-11-02', 'Optometra', 'muerte'),
-	(148, 30, 60, '2008-01-17', 'General', 'enfermo'),
-	(149, 70, 45, '2015-01-25', 'Cardiologo', 'mejorando'),
-	(150, 50, 191, '2005-06-19', 'Psicologia', 'sano'),
-	(151, 60, 167, '2008-09-04', 'Optometra', 'muerte'),
-	(152, 30, 78, '2009-02-15', 'General', 'muerte'),
-	(153, 70, 141, '2010-10-13', 'Cardiologo', 'salvacion'),
-	(154, 50, 51, '2006-09-27', 'Psicologia', 'sano'),
-	(155, 50, 135, '2001-11-22', 'Psicologia', 'mejorando'),
-	(156, 50, 94, '2005-06-06', 'Psicologia', 'muerte'),
-	(157, 50, 89, '2002-02-23', 'Psicologia', 'salvacion'),
-	(158, 40, 112, '2014-09-20', 'Odontologia', 'sano'),
-	(159, 60, 110, '2009-08-29', 'Optometra', 'mejorando'),
-	(160, 30, 179, '2010-07-15', 'General', 'sano'),
-	(161, 50, 200, '2004-03-06', 'Psicologia', 'salvacion'),
-	(162, 50, 51, '2001-08-24', 'Psicologia', 'salvacion'),
-	(163, 60, 142, '2004-09-10', 'Optometra', 'salvacion'),
-	(164, 70, 12, '2009-10-16', 'Cardiologo', 'salvacion'),
-	(165, 50, 111, '2005-12-02', 'Psicologia', 'mejorando'),
-	(166, 30, 74, '2007-08-06', 'General', 'enfermo'),
-	(167, 40, 191, '2014-01-12', 'Odontologia', 'empeorando'),
-	(168, 40, 47, '2012-12-18', 'Odontologia', 'muerte'),
-	(169, 70, 66, '2007-12-12', 'Cardiologo', 'sano'),
-	(170, 60, 35, '2004-09-04', 'Optometra', 'sano'),
-	(171, 50, 5, '2012-02-11', 'Psicologia', 'empeorando'),
-	(172, 30, 131, '1999-12-06', 'General', 'enfermo'),
-	(173, 30, 80, '2013-04-13', 'General', 'mejorando'),
-	(174, 60, 35, '2007-12-27', 'Optometra', 'sano'),
-	(175, 70, 118, '2012-06-11', 'Cardiologo', 'empeorando'),
-	(176, 60, 25, '2000-05-29', 'Optometra', 'muerte'),
-	(177, 70, 194, '2012-07-20', 'Cardiologo', 'sano'),
-	(178, 60, 34, '2001-08-24', 'Optometra', 'muerte'),
-	(179, 60, 102, '2007-04-13', 'Optometra', 'enfermo'),
-	(180, 40, 53, '2015-07-09', 'Odontologia', 'enfermo'),
-	(181, 50, 145, '2011-01-01', 'Psicologia', 'sano'),
-	(182, 40, 17, '2013-05-24', 'Odontologia', 'empeorando'),
-	(183, 30, 37, '2004-04-01', 'General', 'empeorando'),
-	(184, 70, 27, '2000-09-27', 'Cardiologo', 'sano'),
-	(185, 70, 166, '2014-07-03', 'Cardiologo', 'sano'),
-	(186, 60, 141, '2003-11-17', 'Optometra', 'muerte'),
-	(187, 40, 17, '2009-06-09', 'Odontologia', 'sano'),
-	(188, 30, 17, '2004-12-05', 'General', 'salvacion'),
-	(189, 40, 131, '2003-08-16', 'Odontologia', 'muerte'),
-	(190, 30, 18, '2008-08-25', 'General', 'sano'),
-	(191, 40, 174, '2008-05-11', 'Odontologia', 'sano'),
-	(192, 70, 162, '2010-12-04', 'Cardiologo', 'sano'),
-	(193, 50, 138, '2013-04-17', 'Psicologia', 'enfermo'),
-	(194, 40, 31, '2000-06-18', 'Odontologia', 'enfermo'),
-	(195, 30, 132, '2002-11-29', 'General', 'muerte'),
-	(196, 60, 122, '2011-04-26', 'Optometra', 'sano'),
-	(197, 50, 83, '2005-03-21', 'Psicologia', 'muerte'),
-	(198, 30, 106, '1999-06-17', 'General', 'empeorando'),
-	(199, 50, 76, '2000-02-29', 'Psicologia', 'enfermo'),
-	(200, 60, 12, '2012-11-10', 'Optometra', 'salvacion');
+(1, 101010170, 1010101159, '2000-08-15', 'Cardiologo', 'muerte'),
+(2, 101010150, 1010101169, '2006-05-29', 'Psicologia', 'sano'),
+(3, 101010150, 101010158, '2006-06-01', 'Psicologia', 'sano'),
+(4, 101010130, 101010130, '2006-02-21', 'General', 'salvacion'),
+(5, 101010140, 1010101172, '2011-03-26', 'Odontologia', 'salvacion'),
+(6, 101010150, 1010101139, '2008-08-21', 'Psicologia', 'sano'),
+(7, 101010170, 101010115, '1999-06-03', 'Cardiologo', 'muerte'),
+(8, 101010150, 101010137, '2014-03-16', 'Psicologia', 'mejorando'),
+(9, 101010160, 101010156, '2014-05-05', 'Optometra', 'mejorando'),
+(10, 101010170, 101010123, '1999-07-06', 'Cardiologo', 'mejorando'),
+(11, 101010130, 1010101173, '2006-02-27', 'General', 'muerte'),
+(12, 101010150, 101010139, '2014-06-24', 'Psicologia', 'empeorando'),
+(13, 101010160, 1010101162, '2000-02-26', 'Optometra', 'muerte'),
+(14, 101010140, 1010101126, '2002-01-01', 'Odontologia', 'sano'),
+(15, 101010150, 1010101174, '2005-02-06', 'Psicologia', 'empeorando'),
+(16, 101010140, 1010101171, '2013-09-05', 'Odontologia', 'enfermo'),
+(17, 101010130, 101010130, '2013-10-07', 'General', 'mejorando'),
+(18, 101010160, 1010101155, '2002-01-19', 'Optometra', 'muerte'),
+(19, 101010160, 1010101118, '2003-06-09', 'Optometra', 'muerte'),
+(20, 101010160, 101010119, '2009-01-30', 'Optometra', 'salvacion'),
+(21, 101010170, 101010143, '2011-12-23', 'Cardiologo', 'sano'),
+(22, 101010140, 101010173, '2000-04-24', 'Odontologia', 'mejorando'),
+(23, 101010130, 10101017, '2010-11-01', 'General', 'mejorando'),
+(24, 101010150, 1010101157, '2005-09-22', 'Psicologia', 'muerte'),
+(25, 101010130, 101010142, '2000-08-30', 'General', 'sano'),
+(26, 101010150, 1010101178, '2013-12-01', 'Psicologia', 'mejorando'),
+(27, 101010170, 1010101123, '2011-02-06', 'Cardiologo', 'mejorando'),
+(28, 101010170, 1010101133, '2015-02-14', 'Cardiologo', 'enfermo'),
+(29, 101010130, 101010155, '2007-02-04', 'General', 'mejorando'),
+(30, 101010140, 101010169, '2004-03-16', 'Odontologia', 'muerte'),
+(31, 101010140, 1010101134, '2006-08-30', 'Odontologia', 'sano'),
+(32, 101010160, 101010142, '2014-01-08', 'Optometra', 'sano'),
+(33, 101010160, 101010159, '2006-01-18', 'Optometra', 'salvacion'),
+(34, 101010130, 1010101129, '2007-02-12', 'General', 'mejorando'),
+(35, 101010130, 101010131, '2009-02-15', 'General', 'enfermo'),
+(36, 101010160, 1010101146, '2010-07-31', 'Optometra', 'mejorando'),
+(37, 101010150, 101010124, '2014-03-25', 'Psicologia', 'empeorando'),
+(38, 101010160, 101010167, '2002-09-27', 'Optometra', 'muerte'),
+(39, 101010160, 1010101137, '2015-12-04', 'Optometra', 'empeorando'),
+(40, 101010140, 1010101173, '2002-07-01', 'Odontologia', 'empeorando'),
+(41, 101010170, 1010101140, '2008-09-01', 'Cardiologo', 'mejorando'),
+(42, 101010150, 101010169, '2015-07-08', 'Psicologia', 'sano'),
+(43, 101010160, 10101019, '2007-02-23', 'Optometra', 'empeorando'),
+(44, 101010170, 101010149, '2003-08-22', 'Cardiologo', 'muerte'),
+(45, 101010140, 10101019, '2009-10-17', 'Odontologia', 'sano'),
+(46, 101010130, 1010101117, '2008-06-14', 'General', 'enfermo'),
+(47, 101010150, 1010101108, '2015-05-28', 'Psicologia', 'muerte'),
+(48, 101010170, 101010187, '2011-08-06', 'Cardiologo', 'empeorando'),
+(49, 101010130, 101010141, '2013-12-15', 'General', 'muerte'),
+(50, 101010170, 101010133, '2013-06-25', 'Cardiologo', 'enfermo'),
+(51, 101010170, 1010101170, '2013-05-02', 'Cardiologo', 'muerte'),
+(52, 101010170, 101010126, '2006-07-02', 'Cardiologo', 'sano'),
+(53, 101010130, 1010101154, '2001-02-13', 'General', 'enfermo'),
+(54, 101010170, 1010101120, '2015-01-19', 'Cardiologo', 'sano'),
+(55, 101010130, 101010123, '2001-04-02', 'General', 'enfermo'),
+(56, 101010130, 101010130, '2004-07-12', 'General', 'empeorando'),
+(57, 101010150, 101010140, '2000-11-14', 'Psicologia', 'enfermo'),
+(58, 101010130, 10101018, '2002-07-26', 'General', 'mejorando'),
+(59, 101010150, 1010101176, '2004-01-31', 'Psicologia', 'salvacion'),
+(60, 101010140, 1010101124, '2007-11-27', 'Odontologia', 'salvacion'),
+(61, 101010160, 1010101133, '2012-05-14', 'Optometra', 'muerte'),
+(62, 101010130, 101010193, '2009-02-27', 'General', 'mejorando'),
+(63, 101010170, 1010101149, '2003-08-01', 'Cardiologo', 'muerte'),
+(64, 101010140, 101010190, '2005-12-02', 'Odontologia', 'empeorando'),
+(65, 101010170, 101010170, '2015-06-10', 'Cardiologo', 'sano'),
+(66, 101010130, 101010161, '2006-06-19', 'General', 'salvacion'),
+(67, 101010160, 1010101179, '2000-02-13', 'Optometra', 'sano'),
+(68, 101010140, 101010155, '2010-11-01', 'Odontologia', 'mejorando'),
+(69, 101010150, 1010101172, '2007-11-29', 'Psicologia', 'sano'),
+(70, 101010170, 10101013, '1999-08-26', 'Cardiologo', 'muerte'),
+(71, 101010170, 101010154, '2014-12-07', 'Cardiologo', 'sano'),
+(72, 101010170, 1010101192, '2002-05-18', 'Cardiologo', 'muerte'),
+(73, 101010170, 10101015, '2003-04-06', 'Cardiologo', 'sano'),
+(74, 101010130, 1010101141, '2007-07-09', 'General', 'sano'),
+(75, 101010150, 101010137, '2006-11-18', 'Psicologia', 'mejorando'),
+(76, 101010130, 101010155, '2006-01-27', 'General', 'sano'),
+(77, 101010170, 101010149, '2010-02-22', 'Cardiologo', 'mejorando'),
+(78, 101010140, 1010101144, '2006-06-28', 'Odontologia', 'sano'),
+(79, 101010160, 101010120, '2006-07-28', 'Optometra', 'enfermo'),
+(80, 101010130, 1010101120, '2004-03-04', 'General', 'sano'),
+(81, 101010160, 101010121, '2012-10-15', 'Optometra', 'enfermo'),
+(82, 101010150, 1010101111, '1999-12-30', 'Psicologia', 'enfermo'),
+(83, 101010130, 101010131, '2015-03-03', 'General', 'mejorando'),
+(84, 101010150, 101010172, '2011-12-08', 'Psicologia', 'salvacion'),
+(85, 101010150, 1010101181, '2008-06-23', 'Psicologia', 'muerte'),
+(86, 101010130, 1010101170, '2006-07-11', 'General', 'empeorando'),
+(87, 101010130, 1010101126, '2000-01-07', 'General', 'empeorando'),
+(88, 101010170, 1010101121, '2001-08-10', 'Cardiologo', 'mejorando'),
+(89, 101010140, 101010192, '2008-08-25', 'Odontologia', 'mejorando'),
+(90, 101010170, 1010101160, '2008-03-02', 'Cardiologo', 'salvacion'),
+(91, 101010170, 1010101108, '2013-04-10', 'Cardiologo', 'empeorando'),
+(92, 101010150, 101010119, '2000-01-08', 'Psicologia', 'muerte'),
+(93, 101010160, 1010101197, '2004-10-02', 'Optometra', 'sano'),
+(94, 101010130, 1010101168, '2015-01-08', 'General', 'enfermo'),
+(95, 101010130, 101010140, '2009-08-05', 'General', 'sano'),
+(96, 101010160, 101010139, '2001-01-16', 'Optometra', 'sano'),
+(97, 101010140, 1010101102, '1999-11-04', 'Odontologia', 'mejorando'),
+(98, 101010130, 1010101114, '2012-12-26', 'General', 'enfermo'),
+(99, 101010130, 1010101134, '2014-02-08', 'General', 'empeorando'),
+(100, 101010140, 101010194, '2007-07-16', 'Odontologia', 'salvacion'),
+(101, 101010150, 101010144, '2011-08-27', 'Psicologia', 'muerte'),
+(102, 101010130, 101010177, '2007-03-09', 'General', 'salvacion'),
+(103, 101010150, 1010101170, '2008-01-14', 'Psicologia', 'enfermo'),
+(104, 101010140, 1010101173, '1999-10-08', 'Odontologia', 'mejorando'),
+(105, 101010160, 101010181, '2001-02-04', 'Optometra', 'muerte'),
+(106, 101010170, 101010156, '1999-01-30', 'Cardiologo', 'empeorando'),
+(107, 101010170, 101010165, '2014-01-18', 'Cardiologo', 'empeorando'),
+(108, 101010160, 1010101142, '2005-01-07', 'Optometra', 'salvacion'),
+(109, 101010170, 1010101145, '2000-09-11', 'Cardiologo', 'sano'),
+(110, 101010150, 1010101183, '2010-07-09', 'Psicologia', 'mejorando'),
+(111, 101010130, 101010157, '2009-06-12', 'General', 'mejorando'),
+(112, 101010160, 1010101113, '2010-06-18', 'Optometra', 'muerte'),
+(113, 101010140, 1010101124, '2005-04-18', 'Odontologia', 'salvacion'),
+(114, 101010160, 101010168, '2009-05-21', 'Optometra', 'enfermo'),
+(115, 101010140, 1010101138, '1999-02-22', 'Odontologia', 'empeorando'),
+(116, 101010150, 101010190, '2004-09-12', 'Psicologia', 'mejorando'),
+(117, 101010170, 1010101166, '2015-03-18', 'Cardiologo', 'sano'),
+(118, 101010170, 101010144, '2005-04-11', 'Cardiologo', 'salvacion'),
+(119, 101010140, 1010101131, '2007-05-30', 'Odontologia', 'salvacion'),
+(120, 101010130, 101010148, '2012-08-19', 'General', 'enfermo'),
+(121, 101010130, 101010123, '2001-02-06', 'General', 'sano'),
+(122, 101010160, 1010101127, '2008-03-15', 'Optometra', 'salvacion'),
+(123, 101010150, 10101012, '2006-09-21', 'Psicologia', 'salvacion'),
+(124, 101010150, 101010110, '2005-05-27', 'Psicologia', 'salvacion'),
+(125, 101010160, 1010101174, '2006-07-08', 'Optometra', 'salvacion'),
+(126, 101010160, 1010101112, '2010-01-08', 'Optometra', 'muerte'),
+(127, 101010170, 1010101181, '2000-05-19', 'Cardiologo', 'muerte'),
+(128, 101010130, 1010101131, '2003-05-05', 'General', 'sano'),
+(129, 101010140, 1010101132, '2015-05-18', 'Odontologia', 'enfermo'),
+(130, 101010160, 101010117, '2008-11-17', 'Optometra', 'empeorando'),
+(131, 101010170, 1010101107, '2009-10-11', 'Cardiologo', 'mejorando'),
+(132, 101010150, 1010101103, '2010-11-21', 'Psicologia', 'empeorando'),
+(133, 101010150, 1010101183, '2001-10-13', 'Psicologia', 'mejorando'),
+(134, 101010140, 101010176, '2010-03-13', 'Odontologia', 'mejorando'),
+(135, 101010160, 1010101150, '2007-08-18', 'Optometra', 'sano'),
+(136, 101010150, 1010101178, '2003-08-14', 'Psicologia', 'sano'),
+(137, 101010140, 1010101155, '2015-09-06', 'Odontologia', 'empeorando'),
+(138, 101010170, 101010115, '2004-03-10', 'Cardiologo', 'sano'),
+(139, 101010150, 1010101192, '2011-10-02', 'Psicologia', 'muerte'),
+(140, 101010170, 101010159, '2003-01-16', 'Cardiologo', 'enfermo'),
+(141, 101010170, 101010114, '2014-10-28', 'Cardiologo', 'mejorando'),
+(142, 101010170, 101010135, '2006-10-10', 'Cardiologo', 'enfermo'),
+(143, 101010140, 101010145, '2011-12-15', 'Odontologia', 'empeorando'),
+(144, 101010150, 1010101115, '2011-12-15', 'Psicologia', 'sano'),
+(145, 101010150, 1010101138, '2013-05-31', 'Psicologia', 'mejorando'),
+(146, 101010170, 101010195, '2001-02-05', 'Cardiologo', 'salvacion'),
+(147, 101010160, 1010101139, '2011-11-02', 'Optometra', 'muerte'),
+(148, 101010130, 101010160, '2008-01-17', 'General', 'enfermo'),
+(149, 101010170, 101010145, '2015-01-25', 'Cardiologo', 'mejorando'),
+(150, 101010150, 1010101191, '2005-06-19', 'Psicologia', 'sano'),
+(151, 101010160, 1010101167, '2008-09-04', 'Optometra', 'muerte'),
+(152, 101010130, 101010178, '2009-02-15', 'General', 'muerte'),
+(153, 101010170, 1010101141, '2010-10-13', 'Cardiologo', 'salvacion'),
+(154, 101010150, 101010151, '2006-09-27', 'Psicologia', 'sano'),
+(155, 101010150, 1010101135, '2001-11-22', 'Psicologia', 'mejorando'),
+(156, 101010150, 101010194, '2005-06-06', 'Psicologia', 'muerte'),
+(157, 101010150, 101010189, '2002-02-23', 'Psicologia', 'salvacion'),
+(158, 101010140, 1010101112, '2014-09-20', 'Odontologia', 'sano'),
+(159, 101010160, 1010101110, '2009-08-29', 'Optometra', 'mejorando'),
+(160, 101010130, 1010101179, '2010-07-15', 'General', 'sano'),
+(161, 101010150, 1010101200, '2004-03-06', 'Psicologia', 'salvacion'),
+(162, 101010150, 101010151, '2001-08-24', 'Psicologia', 'salvacion'),
+(163, 101010160, 1010101142, '2004-09-10', 'Optometra', 'salvacion'),
+(164, 101010170, 101010112, '2009-10-16', 'Cardiologo', 'salvacion'),
+(165, 101010150, 1010101111, '2005-12-02', 'Psicologia', 'mejorando'),
+(166, 101010130, 101010174, '2007-08-06', 'General', 'enfermo'),
+(167, 101010140, 1010101191, '2014-01-12', 'Odontologia', 'empeorando'),
+(168, 101010140, 101010147, '2012-12-18', 'Odontologia', 'muerte'),
+(169, 101010170, 101010166, '2007-12-12', 'Cardiologo', 'sano'),
+(170, 101010160, 101010135, '2004-09-04', 'Optometra', 'sano'),
+(171, 101010150, 10101015, '2012-02-11', 'Psicologia', 'empeorando'),
+(172, 101010130, 1010101131, '1999-12-06', 'General', 'enfermo'),
+(173, 101010130, 101010180, '2013-04-13', 'General', 'mejorando'),
+(174, 101010160, 101010135, '2007-12-27', 'Optometra', 'sano'),
+(175, 101010170, 1010101118, '2012-06-11', 'Cardiologo', 'empeorando'),
+(176, 101010160, 101010125, '2000-05-29', 'Optometra', 'muerte'),
+(177, 101010170, 1010101194, '2012-07-20', 'Cardiologo', 'sano'),
+(178, 101010160, 101010134, '2001-08-24', 'Optometra', 'muerte'),
+(179, 101010160, 1010101102, '2007-04-13', 'Optometra', 'enfermo'),
+(180, 101010140, 101010153, '2015-07-09', 'Odontologia', 'enfermo'),
+(181, 101010150, 1010101145, '2011-01-01', 'Psicologia', 'sano'),
+(182, 101010140, 101010117, '2013-05-24', 'Odontologia', 'empeorando'),
+(183, 101010130, 101010137, '2004-04-01', 'General', 'empeorando'),
+(184, 101010170, 101010127, '2000-09-27', 'Cardiologo', 'sano'),
+(185, 101010170, 1010101166, '2014-07-03', 'Cardiologo', 'sano'),
+(186, 101010160, 1010101141, '2003-11-17', 'Optometra', 'muerte'),
+(187, 101010140, 101010117, '2009-06-09', 'Odontologia', 'sano'),
+(188, 101010130, 101010117, '2004-12-05', 'General', 'salvacion'),
+(189, 101010140, 1010101131, '2003-08-16', 'Odontologia', 'muerte'),
+(190, 101010130, 101010118, '2008-08-25', 'General', 'sano'),
+(191, 101010140, 1010101174, '2008-05-11', 'Odontologia', 'sano'),
+(192, 101010170, 1010101162, '2010-12-04', 'Cardiologo', 'sano'),
+(193, 101010150, 1010101138, '2013-04-17', 'Psicologia', 'enfermo'),
+(194, 101010140, 101010131, '2000-06-18', 'Odontologia', 'enfermo'),
+(195, 101010130, 1010101132, '2002-11-29', 'General', 'muerte'),
+(196, 101010160, 1010101122, '2011-04-26', 'Optometra', 'sano'),
+(197, 101010150, 101010183, '2005-03-21', 'Psicologia', 'muerte'),
+(198, 101010130, 1010101106, '1999-06-17', 'General', 'empeorando'),
+(199, 101010150, 101010176, '2000-02-29', 'Psicologia', 'enfermo'),
+(200, 101010160, 101010112, '2012-11-10', 'Optometra', 'salvacion');
 
 INSERT INTO citamedica (pacienteID, doctorID, citFecha, citEspecialidad) VALUES
-	(100, 30, '2023-05-28 11:10:10', 'General'),
-    (58, 30, '2024-10-29 11:10:30', 'General'),
-    (32, 30, '2024-09-29 00:11:00', 'General');
+	(1010101100, 101010130, '2023-05-28 11:10:10', 'General'),
+    (101010158, 101010130, '2024-10-29 11:10:30', 'General'),
+    (101010132, 101010130, '2024-09-29 00:11:00', 'General');
 
 INSERT INTO citamedica (doctorID, citFecha, citEspecialidad) VALUES
-	(60, '2024-11-10 00:10:00' , 'Optometra'),
-    (50, '2024-02-29 00:10:00', 'Psicologia'),
-    (30, '2024-06-17 00:10:00', 'General'),
-    (30, '2022-11-29 00:10:00', 'General');
+	(101010160, '2024-11-10 00:10:00' , 'Optometra'),
+    (101010150, '2024-02-29 00:10:00', 'Psicologia'),
+    (101010130, '2024-06-17 00:10:00', 'General'),
+    (101010130, '2022-11-29 00:10:00', 'General');
 
 DELETE FROM atencionensalud;
 INSERT INTO atencionensalud (perID, ateFecha, ateTipo, ateVerificado, ateAprobado) VALUES
-	(9, '2022-10-20 12:10:00', 'General', 1, 1),
-    (9, '2021-09-19 08:30:00', 'Odotologia', 0, 0),
-	(13, '2020-06-18 09:45:00','Cargiologia', 0, 0),
-	(16, '2022-06-17 10:10:00', 'Fisiatria', 1, 0),
-	(17, '2023-07-16 12:10:00', 'Fisioterapia', 0, 0),
-	(18, '2023-08-15 07:30:00', 'Optometria', 0, 0);
+	(10101019, '2022-10-20 12:10:00', 'General', 1, 1),
+    (10101019, '2021-09-19 08:30:00', 'Odotologia', 0, 0),
+	(101010113, '2020-06-18 09:45:00','Cargiologia', 0, 0),
+	(101010116, '2022-06-17 10:10:00', 'Fisiatria', 1, 0),
+	(101010117, '2023-07-16 12:10:00', 'Fisioterapia', 0, 0),
+	(101010118, '2023-08-15 07:30:00', 'Optometria', 0, 0);
 
 DELETE FROM medicamentos;
 INSERT INTO medicamentos (citID, medNombre, medCantidad, medIntervalos) VALUES 
@@ -1312,16 +1319,16 @@ INSERT INTO evaluacionfisica (citID, evaPeso, evaEstatura, evaRitmoCardiaco, eva
 
 DELETE FROM perfilriesgointegral;
 INSERT INTO perfilriesgointegral VALUES 
-	(10, '2020-10-06', 8, 5),
-    (12, '2021-11-04', 2, 2),
-    (15, '2022-12-08', 10, 9);
+	(101010110, '2020-10-06', 8, 5),
+    (101010112, '2021-11-04', 2, 2),
+    (101010115, '2022-12-08', 10, 9);
 
 #------------------------------------------------------------------
 # Cultura
 #------------------------------------------------------------------
 
 DELETE FROM cursocultural;
-insert into bienestar.cursocultural values
+insert into Bienestar.cursocultural values
 (1, "Salsa y merengue", "Propiciar un acercamiento a la danza - salsa a través del aprendizaje de una amplia variedad de estilos,
 ritmos y pasos de los subgéneros de la salsa y el merengue. Identificar y diferenciar los pasos para cada uno de los
 ritmos salseros como pachanga, mambo, boogaloo, son y chachachá, entre otros; y brindar herramientas de
@@ -1365,7 +1372,7 @@ rudimentos técnicos de la actuación, mediante la auto observación, el acondic
 juegos de improvisación.", "lunes de 4 a 6 p.m. y jueves de 4:30 a 6:30 p.m","Auditorio Colegio IPARM (lunes) y salón 18 del Colegio IPARM (jueves)",20,25,"Artes escénicas", 1,2);
 
 /*
-insert into bienestar.cursocultural values
+insert into Bienestar.cursocultural values
 (1, "Curso Cultural", "Salsa y merengue", "Propiciar un acercamiento a la danza - salsa a través del aprendizaje de una amplia variedad de estilos,
 ritmos y pasos de los subgéneros de la salsa y el merengue. Identificar y diferenciar los pasos para cada uno de los
 ritmos salseros como pachanga, mambo, boogaloo, son y chachachá, entre otros; y brindar herramientas de
@@ -1410,7 +1417,7 @@ juegos de improvisación.", "lunes de 4 a 6 p.m. y jueves de 4:30 a 6:30 p.m","A
 */
 
 DELETE FROM grupoartisticoinstitucional;
-insert into bienestar.grupoartisticoinstitucional values
+insert into Bienestar.grupoartisticoinstitucional values
 (1, "Mínimo 5 m fondo por 12 m de ancho","Teatro Experimental","Creación Experimental
 y Contemporánea","Mauricio Córdoba", "Amplificación para reproducir pistas, consola de sonido y micrófonos inalámbricos y/o de solapa, consola
 de luces pares y otras (condiciones ideales, según la
@@ -1429,41 +1436,44 @@ en madera con cámara de aire y/o linóleo","Expresión Talentos","Trabajo de in
  
 -- CARLOS:
 -- Insercion area de deportes:
-DELETE FROM Area;
-INSERT INTO Bienestar.Area 
-(areID, areNombre, 
-areTelefono, 
-areCorreoElectronico, areExtension, areEdificio, areDescripcion) values (17, "Actividad Fisica & Deporte",  3165000, "divrecd_bog@unal.edu.co", 17207,"No. 103 Polideportivo","Area encargada de la actividad deportiva en la UNAL.");
+DELETE FROM area;
+INSERT INTO Bienestar.area 
+	(areID, areNombre, areTelefono, areCorreoElectronico, areExtension, areEdificio, areDescripcion) values
+	(17, "Actividad Fisica & Deporte",  3165000, "divrecd_bog@unal.edu.co", 17207,"No. 103 Polideportivo","Area encargada de la actividad deportiva en la UNAL.");
 
 
-INSERT INTO Bienestar.Programa (progID, progNombre, Area_areID) values (1701, "Actividad ludico deportiva", 17);
-INSERT INTO Bienestar.Programa (progID, progNombre, Area_areID) values (1702, "Acondicionamiento físico e instruccion", 17);
-INSERT INTO Bienestar.Programa (progID, progNombre, Area_areID) values (1703, "Deporte de competencia", 17);
-INSERT INTO Bienestar.Programa (progID, progNombre, Area_areID) values (1704, "Deporte de alto rendimiento", 17);
-INSERT INTO Bienestar.Programa (progID, progNombre, Area_areID) values (1705, "Proyectos estratégicos", 17);
+INSERT INTO Bienestar.programa (progID, progNombre, Area_areID) values (1701, "Actividad ludico deportiva", 17);
+INSERT INTO Bienestar.programa (progID, progNombre, Area_areID) values (1702, "Acondicionamiento físico e instruccion", 17);
+INSERT INTO Bienestar.programa (progID, progNombre, Area_areID) values (1703, "Deporte de competencia", 17);
+INSERT INTO Bienestar.programa (progID, progNombre, Area_areID) values (1704, "Deporte de alto rendimiento", 17);
+INSERT INTO Bienestar.programa (progID, progNombre, Area_areID) values (1705, "Proyectos estratégicos", 17);
  
  -- Inserciones torneos internos:
 
-DELETE FROM TorneoInterno;
-INSERT INTO Bienestar.TorneoInterno (toridTorneoInterno, torPeriodo, torSedeFacultad, torDeporte, torNombreTorneo, torEstado, torModalidad, torRama, torNivel, torFechaInicio, torFechaFinalizacion, Programa_progID) VALUES (1011, '2022-1', 'Facultad de Ingeniería', 'Futbol', 'Copa Ingenieria', 1, 'Eliminacion directa', 'Masculino', 'Intermedio', '2022-06-01', '2022-06-30',1701);
-INSERT INTO Bienestar.TorneoInterno (toridTorneoInterno, torPeriodo, torSedeFacultad, torDeporte, torNombreTorneo, torEstado, torModalidad, torRama, torNivel, torFechaInicio, torFechaFinalizacion, Programa_progID) VALUES (1012, '2022-2', 'Facultad de Ciencias Humanas', 'Voleibol', 'Torneo de Voleibol Artes y Humanidades', 1, 'Todos contra todos', 'Femenino', 'Basico', '2022-09-01', '2022-09-30', 1701);
-INSERT INTO Bienestar.TorneoInterno (toridTorneoInterno, torPeriodo, torSedeFacultad, torDeporte, torNombreTorneo, torEstado, torModalidad, torRama, torNivel, torFechaInicio, torFechaFinalizacion, Programa_progID) VALUES (1013, '2022-1', 'Facultad de Ciencias', 'Baloncesto', 'Torneo de Baloncesto Física', 0, 'Eliminación directa', 'Masculino', 'Avanzado', '2022-07-01', '2022-07-31', 1701);
-INSERT INTO Bienestar.TorneoInterno (toridTorneoInterno, torPeriodo, torSedeFacultad, torDeporte, torNombreTorneo, torEstado, torModalidad, torRama, torNivel, torFechaInicio, torFechaFinalizacion, Programa_progID) VALUES (1014, '2023-1', 'Facultad de Salud', 'Futbol Sala', 'Liga de Fútbol Medicina', 1, 'Todos contra todos', 'Masculino', 'Intermedio', '2023-05-01', '2023-05-31', 1701);
-INSERT INTO Bienestar.TorneoInterno (toridTorneoInterno, torPeriodo, torSedeFacultad, torDeporte, torNombreTorneo, torEstado, torModalidad, torRama, torNivel, torFechaInicio, torFechaFinalizacion, Programa_progID) VALUES (1015, '2023-2', 'Facultad de Ciencias Económicas', 'Tenis de Mesa', 'Torneo de Tenis de Mesa Economia', 1, 'Eliminación directa', 'Mixto', 'Basico', '2023-10-01', '2023-10-03', 1701);
+DELETE FROM torneointerno;
+INSERT INTO Bienestar.torneointerno 
+	(toridTorneoInterno, torPeriodo, torSedeFacultad, torDeporte, torNombreTorneo, torEstado, torModalidad, torRama, torNivel, torFechaInicio, torFechaFinalizacion, Programa_progID) 
+	VALUES
+    (1011, '2022-1', 'Facultad de Ingeniería', 'Futbol', 'Copa Ingenieria', 1, 'Eliminacion directa', 'Masculino', 'Intermedio', '2022-06-01', '2022-06-30',1701),
+	(1012, '2022-2', 'Facultad de Ciencias Humanas', 'Voleibol', 'Torneo de Voleibol Artes y Humanidades', 1, 'Todos contra todos', 'Femenino', 'Basico', '2022-09-01', '2022-09-30', 1701),
+	(1013, '2022-1', 'Facultad de Ciencias', 'Baloncesto', 'Torneo de Baloncesto Física', 0, 'Eliminación directa', 'Masculino', 'Avanzado', '2022-07-01', '2022-07-31', 1701),
+	(1014, '2023-1', 'Facultad de Salud', 'Futbol Sala', 'Liga de Fútbol Medicina', 1, 'Todos contra todos', 'Masculino', 'Intermedio', '2023-05-01', '2023-05-31', 1701),
+	(1015, '2023-2', 'Facultad de Ciencias Económicas', 'Tenis de Mesa', 'Torneo de Tenis de Mesa Economia', 1, 'Eliminación directa', 'Mixto', 'Basico', '2023-10-01', '2023-10-03', 1701);
 
-INSERT INTO Bienestar.TorneoInterno VALUES (1016, '2022-1', 'Facultad de Ciencias', 'Fútbol', 'Torneo de Futbol de la Facultad de Ciencias', 1, 'Eliminación Simple', 'Masculino', 'Principiante', '2022-05-10', '2022-06-15', 1701);
-INSERT INTO Bienestar.TorneoInterno VALUES (1017, '2022-1', 'Facultad de Ingenieria', 'Voleibol', 'Torneo de Voleibol de la Facultad de Ingenieria', 1, 'Eliminación Simple', 'Femenino', 'Intermedio', '2022-06-01', '2022-07-10', 1701);
-INSERT INTO Bienestar.TorneoInterno VALUES (1018, '2022-2', 'Facultad de Medicina', 'Baloncesto', 'Torneo de Baloncesto de la Facultad de Medicina', 1, 'Liga', 'Masculino', 'Avanzado', '2022-09-01', '2022-11-10', 1701);
-INSERT INTO Bienestar.TorneoInterno VALUES (1019, '2022-2', 'Facultad de Ciencias Humanas', 'Ajedrez', 'Torneo de integracion ajedrez', 1, 'Eliminación Simple', 'Mixto', 'Principiante', '2022-10-01', '2022-10-15', 1701);
-INSERT INTO Bienestar.TorneoInterno VALUES (10110, '2023-1', 'Facultad de Ciencias', 'Tenis', 'Torneo de Tenis de la Facultad de Derecho', 0, NULL, 'Femenino', 'Intermedio', '2023-03-01', '2023-04-01', 1701);
+INSERT INTO Bienestar.torneointerno VALUES 
+(1016, '2022-1', 'Facultad de Ciencias', 'Fútbol', 'Torneo de Futbol de la Facultad de Ciencias', 1, 'Eliminación Simple', 'Masculino', 'Principiante', '2022-05-10', '2022-06-15', 1701),
+(1017, '2022-1', 'Facultad de Ingenieria', 'Voleibol', 'Torneo de Voleibol de la Facultad de Ingenieria', 1, 'Eliminación Simple', 'Femenino', 'Intermedio', '2022-06-01', '2022-07-10', 1701),
+(1018, '2022-2', 'Facultad de Medicina', 'Baloncesto', 'Torneo de Baloncesto de la Facultad de Medicina', 1, 'Liga', 'Masculino', 'Avanzado', '2022-09-01', '2022-11-10', 1701),
+(1019, '2022-2', 'Facultad de Ciencias Humanas', 'Ajedrez', 'Torneo de integracion ajedrez', 1, 'Eliminación Simple', 'Mixto', 'Principiante', '2022-10-01', '2022-10-15', 1701),
+(10110, '2023-1', 'Facultad de Ciencias', 'Tenis', 'Torneo de Tenis de la Facultad de Derecho', 0, NULL, 'Femenino', 'Intermedio', '2023-03-01', '2023-04-01', 1701);
 
 -- Inserciones convocatorias de area de deportes:
 
-#select * from Convocatoria;
+#select * from convocatoria;
 -- cursos libres
 
 
-INSERT INTO Bienestar.Convocatoria (conv_id, convNombre, convFechaApertura, convFechaCierre, convEstado, convPeriodo, Programa_progID)
+INSERT INTO Bienestar.convocatoria (conv_id, convNombre, convFechaApertura, convFechaCierre, convEstado, convPeriodo, Programa_progID)
 VALUES
 (201, 'Convocatoria Deporte 2021-1', '2021-01-01', '2021-01-31', 1, '2021-1', 1702),
 (202, 'Convocatoria Deporte 2021-2', '2021-06-01', '2021-06-30', 1, '2021-2', 1702),
@@ -1477,7 +1487,7 @@ VALUES
 (200, 'Convocatoria Deporte 2025-2', '2025-06-01', '2025-06-30', 1, '2025-2', 1702);
 
 -- selecciones deportivas
-INSERT INTO Bienestar.Convocatoria (conv_id, convNombre, convFechaApertura, convFechaCierre, convEstado, convPeriodo, Programa_progID) VALUES 
+INSERT INTO Bienestar.convocatoria (conv_id, convNombre, convFechaApertura, convFechaCierre, convEstado, convPeriodo, Programa_progID) VALUES 
 (210, 'Convocatoria Deporte 2022-2', '2022-07-01', '2022-07-31', 1, '2022-2', 1703),
 (211, 'Convocatoria Deporte 2023-1', '2023-01-01', '2023-01-31', 1, '2023-1', 1703),
 (212, 'Convocatoria Deporte 2023-2', '2023-07-01', '2023-07-31', 0, '2023-2', 1703),
@@ -1491,8 +1501,8 @@ INSERT INTO Bienestar.Convocatoria (conv_id, convNombre, convFechaApertura, conv
 
 
 -- Inserciones convocatorias cursos libres:
-DELETE FROM ConvocatoriaCursoLibre;
-INSERT INTO Bienestar.ConvocatoriaCursoLibre (Convocatoria_conv_id, curNombre, curTipoCurso, curCondicion)
+DELETE FROM convocatoriacursolibre;
+INSERT INTO Bienestar.convocatoriacursolibre (Convocatoria_conv_id, curNombre, curTipoCurso, curCondicion)
 VALUES
   (201, 'Fútbol', 'Deporte', 'Abierto'),
   (202, 'Tenis', 'Deporte', 'Abierto'),
@@ -1506,11 +1516,11 @@ VALUES
   (200, 'Judo', 'Fitness', 'Abierto');
 
 
-#select * from Convocatoria;
+#select * from convocatoria;
 
 -- Inserciones convocatorias selecciones deportivas:
-DELETE FROM ConvocatoriaSeleccion;
-INSERT INTO Bienestar.ConvocatoriaSeleccion (Convocatoria_conv_id, convDeporte, convLugar, convHora) VALUES 
+DELETE FROM convocatoriaseleccion;
+INSERT INTO Bienestar.convocatoriaseleccion (Convocatoria_conv_id, convDeporte, convLugar, convHora) VALUES 
 (210, 'Futbol', 'Estadio', '15:00:00'),
 (211,  'Baloncesto', 'Cancha 2', '10:00:00'),
 (212,  'Tenis', 'Cancha de tenis 3', '08:00:00'),
@@ -1523,8 +1533,7 @@ INSERT INTO Bienestar.ConvocatoriaSeleccion (Convocatoria_conv_id, convDeporte, 
 (219, 'Atletismo', 'Polideportivo', '09:00:00');
 
 
-insert into estudiante_toma_convocatoria values (9,210,'2023-03-15');
-insert into estudiante_toma_convocatoria values (9,210,'2023-03-15');
-insert into estudiante_toma_convocatoria values (13,217,'2023-04-15');
+insert into estudiante_toma_convocatoria values (10101019,210,'2023-03-15');
+insert into estudiante_toma_convocatoria values (101010113,217,'2023-04-15');
 
 SET FOREIGN_KEY_CHECKS=1;

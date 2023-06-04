@@ -48,7 +48,7 @@ CREATE UNIQUE INDEX Programa_Bienestar_idx ON Programa (progNombre);
 # de acuerdo al nombre que estas puedan tener. y finalmente, resulta útil indexar de acuerdo al id del programa pues de este modo podemos obtener las 
 # convocatorias de un programa en partícular si es lo que se desea. Cabe aclarar que este indice se establece como único, pues no es lógico que hallan
 # dos convocatorias identicas: es decir, con el mismo, nombre, programa, y periodo.
-CREATE UNIQUE INDEX Convocatoria_Bienestar_idx ON Convocatoria (Programa_progID, convNombre, convPeriodo);
+CREATE INDEX Convocatoria_Bienestar_idx ON Convocatoria (Programa_progID, convNombre, convPeriodo);
 
 # Este indice es útil pues permite consultar todos los torneos que se han realizado en la universidad, y permite conocer de manera detallada información puntual
 # que alguien interesado en participar pueda necesitar. Se escogen estos atributos ya que dentro de la tabla torneo interno existen muchos por los cuales un usuario

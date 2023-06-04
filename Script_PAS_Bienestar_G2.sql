@@ -209,12 +209,14 @@ create procedure pas_check_proyecto(in idProyecto int, in presupuestoDado int)
 begin
 	declare msg varchar (100);
     declare presProyecto int;
-    select proyPresupuesto into presProyecto from Proyecto where proyidProyecto = idProyecto;
+    select proyPresupuesto into presProyecto 
+		from proyecto where proyidProyecto = idProyecto;
     if (presProyecto > presupuestoDado) then
 		set msg = concat('Su proyecto no es viable, excede el presupuesto.');
 	else
 		set msg = concat('Su proyecto es viable, puede insertarse en la tabla de proyectos.');
 	end if;
+    select msg;
 end $$
 DELIMITER ;
 
@@ -224,9 +226,11 @@ drop procedure if exists pas_consultar_num_estudiantes;
 DELIMITER $$
 create procedure pas_consultar_num_estudiantes(in idArea int)
 begin
-	select count(distinct estID) from (Area join Programa on (areID = Area_areID)) join 
-    ((Estudiante join Estudiante_Toma_Convocatoria on (estID = idEst)) join Convocatoria using (conv_id))
-    on (progID = Programa_progID) where idArea = areID group by estFacultad;
+	select count(distinct estID) 
+		from (area join programa on (areID = Area_areID)) 
+        join ((estudiante join estudiante_toma_convocatoria on (estID = idEst)) 
+        join convocatoria using (conv_id)) on (progID = Programa_progID) 
+        where idArea = areID group by estFacultad;
 end $$
 DELIMITER ;
 
@@ -234,25 +238,25 @@ DELIMITER ;
 
 drop procedure if exists pas_agregar_convocatoria_cur_libre;
 DELIMITER $$
-create procedure pas_agregar_convocatoria_cur_libre(in idConv int, in nombreConv varchar(70), in fechaA DATE, in fechaC DATE, in edo tinyint, 
-													in idPrograma int, in papaConv double, in tipo VARCHAR(45), in condicion VARCHAR(45))
+create procedure pas_agregar_convocatoria_cur_libre
+	(in idConv int, in nombreConv varchar(70), in fechaA DATE, in fechaC DATE, in edo tinyint, in idPrograma int, in papaConv double, in tipo VARCHAR(45), in condicion VARCHAR(45))
 begin
-	insert into Convocatoria (conv_id, convNombre, convFechaApertura, convFechaCierre, convEstado, convPeriodo, Programa_progID, convPAPA)
-    values (idConv,nombreConv,fechaA,fechaC,edo,idPrograma,papaConv);
-    
-    insert into ConvocatoriaCursoLibre (Convocatoria_conv_id, curNombre, curTipoCurso, curCondicion) values (idConv, nombreConv, tipo, condicion);
+	insert into convocatoria (conv_id, convNombre, convFechaApertura, convFechaCierre, convEstado, convPeriodo, Programa_progID, convPAPA)
+		values (idConv,nombreConv,fechaA,fechaC,edo,idPrograma,papaConv);    
+    insert into convocatoriacursolibre (Convocatoria_conv_id, curNombre, curTipoCurso, curCondicion) 
+		values (idConv, nombreConv, tipo, condicion);
 end $$
 DELIMITER ;
   
 drop procedure if exists pas_agregar_convocatoria_seleccion;
 DELIMITER $$
-create procedure pas_agregar_convocatoria_cur_libre(in idConv int, in nombreConv varchar(70), in fechaA DATE, in fechaC DATE, in edo tinyint, 
-													in idPrograma int, in papaConv double, in deporte VARCHAR(45), in lugar VARCHAR(45), hora TIME)
+create procedure pas_agregar_convocatoria_seleccion
+	(in idConv int, in nombreConv varchar(70), in fechaA DATE, in fechaC DATE, in edo tinyint, in idPrograma int, in papaConv double, in deporte VARCHAR(45), in lugar VARCHAR(45), hora TIME)
 begin
-	insert into Convocatoria (conv_id, convNombre, convFechaApertura, convFechaCierre, convEstado, convPeriodo, Programa_progID, convPAPA)
-    values (idConv,nombreConv,fechaA,fechaC,edo,idPrograma,papaConv);
-    
-    insert into ConvocatoriaCursoLibre (Convocatoria_conv_id, convDeporte, convLugar, convHora) values (idConv, deporte, lugar, hora);
+	insert into convocatoria (conv_id, convNombre, convFechaApertura, convFechaCierre, convEstado, convPeriodo, Programa_progID, convPAPA)
+		values (idConv,nombreConv,fechaA,fechaC,edo,idPrograma,papaConv);
+    insert into convocatoriaseleccion (Convocatoria_conv_id, convDeporte, convLugar, convHora) 
+		values (idConv, deporte, lugar, hora);
 end $$
 DELIMITER ;
 
@@ -263,8 +267,8 @@ drop procedure if exists pas_actualizar_fecha_torneo;
 DELIMITER $$
 create procedure pas_actualizar_fecha_torneo (in idTorneo int, in nuevaFechaInicio date, in nuevaFechaFin date)
 begin
-	update TorneoInterno set torFechaInicio = nuevaFechaInicio where idTorneo = toridTorneoInterno;
-    update TorneoInterno set torFechaFinalizacion = nuevaFechaFin where idTorneo = toridTorneoInterno;
+	update torneointerno set torFechaInicio = nuevaFechaInicio where idTorneo = toridTorneoInterno;
+    update torneointerno set torFechaFinalizacion = nuevaFechaFin where idTorneo = toridTorneoInterno;
 end $$
 DELIMITER ;
 
@@ -275,7 +279,7 @@ drop procedure if exists pas_actualizar_hora_convSeleccion;
 DELIMITER $$
 create procedure pas_actualizar_hora_convSeleccion(in idConv int ,in nuevaHora time)
 begin
-	update ConvocatoriaSeleccion set convLugar = nuevaHora where idConv = Convocatoria_convid;
+	update convocatoriaseleccion set convLugar = nuevaHora where idConv = Convocatoria_convid;
 end $$
 DELIMITER ;
 
@@ -283,7 +287,7 @@ drop procedure if exists pas_actualizar_lugar_convSeleccion;
 DELIMITER $$
 create procedure pas_actualizar_lugar_convSeleccion(in idConv int ,in nuevoLugar varchar(50))
 begin
-	update ConvocatoriaSeleccion set convLugar = nuevoLugar where idConv = Convocatoria_convid;
+	update convocatoriaseleccion set convLugar = nuevoLugar where idConv = Convocatoria_convid;
 end $$
 DELIMITER ;
 
@@ -294,7 +298,7 @@ drop procedure if exists pas_actualizar_fecha_eventoTaller;
 DELIMITER $$
 create procedure pas_actualizar_fecha_eventoTaller (in idEveTa int, in nuevaFecha date)
 begin
-	update EventoTaller set evetaFecha = nuevaFecha where evetaidEventoTaller = idEveTa;
+	update eventotaller set evetaFecha = nuevaFecha where evetaidEventoTaller = idEveTa;
 end $$
 DELIMITER ;
 
@@ -302,16 +306,16 @@ drop procedure if exists pas_actualizar_lugar_eventoTaller;
 DELIMITER $$
 create procedure pas_actualizar_lugar_eventoTaller (in idEveTa int, in nuevoLugar date)
 begin
-	update EventoTaller set evetaLugar = nuevoLugar where evetaidEventoTaller = idEveTa;
+	update eventotaller set evetaLugar = nuevoLugar where evetaidEventoTaller = idEveTa;
 end $$
 DELIMITER ;
 
 drop procedure if exists pas_actualizar_hora_eventoTaller;
 DELIMITER $$
-create procedure pas_actualizar_lugar_eventoTaller (in idEveTa int, in nuevaHoraInicio datetime, in nuevaHoraFin datetime)
+create procedure pas_actualizar_hora_eventoTaller (in idEveTa int, in nuevaHoraInicio datetime, in nuevaHoraFin datetime)
 begin
-	update EventoTaller set evetaHoraInicio = nuevaHoraInicio where evetaidEventoTaller = idEveTa;
-    update EventoTaller set evetaHoraFin = nuevaHoraFin where evetaidEventoTaller = idEveTa;
+	update eventotaller set evetaHoraInicio = nuevaHoraInicio where evetaidEventoTaller = idEveTa;
+    update eventotaller set evetaHoraFin = nuevaHoraFin where evetaidEventoTaller = idEveTa;
 end $$
 DELIMITER ;
 
@@ -322,8 +326,8 @@ drop procedure if exists pas_actualizar_fechas_proyecto;
 DELIMITER $$
 create procedure pas_actualizar_fechas_proyecto(in idProyecto int, in nuevaFechaInicio date, in nuevaFechaFin date)
 begin
-	update Proyecto set proyFechaInicio = nuevaFechaInicio where idProyecto = proyIdProyecto;
-    update Proyecto set proyFechaFinalizacion = nuevaFechaFin where idProyecto = proyIdProyecto;
+	update proyecto set proyFechaInicio = nuevaFechaInicio where idProyecto = proyIdProyecto;
+    update proyecto set proyFechaFinalizacion = nuevaFechaFin where idProyecto = proyIdProyecto;
 end $$
 DELIMITER ;
 
@@ -331,9 +335,9 @@ DELIMITER ;
 
 drop procedure if exists pas_actualizar_ejecucion_proyecto;
 DELIMITER $$
-create procedure pas_actualizar_fechas_proyecto(in idProyecto int, in nuevaEjecucion decimal)
+create procedure pas_actualizar_ejecucion_proyecto(in idProyecto int, in nuevaEjecucion decimal)
 begin
-	update Proyecto set proyEjecucion = nuevaEjecucion where idProyecto = proyIdProyecto;
+	update proyecto set proyEjecucion = nuevaEjecucion where idProyecto = proyIdProyecto;
 end $$
 DELIMITER ;
 
@@ -342,12 +346,11 @@ DELIMITER ;
 drop procedure if exists pas_agregar_nuevo_torneo;
 DELIMITER $$
 create procedure pas_agregar_nuevo_torneo(in idTorneo int, in periodo varchar(10), in sedeFacultad varchar(60), in deporte varchar(35), in nombreTorneo varchar (90),
-										in estado TINYINT, in modalidad VARCHAR(45), in rama VARCHAR(45), in nivel VARCHAR(45), in FechaInicio DATE, in FechaFinalizacion DATE
-										, in idPrograma INT)
+	in estado TINYINT, in modalidad VARCHAR(45), in rama VARCHAR(45), in nivel VARCHAR(45), in FechaInicio DATE, in FechaFinalizacion DATE, in idPrograma INT)
 begin
-	insert into TorneoInterno (toridTorneoInterno, torPeriodo, torSedeFacultad, torDeporte, torNombreTorneo, torEstado, torModalidad, torRama, torNivel
-    , torFechaInicio, torFechaFinalizacion, Programa_progID) values (idTorneo, periodo, sedeFacultad, deporte, nombreTorneo, estado, modalidad, rama, nivel, FechaInicio,
-    FechaFinalizacion, idPrograma);
+	insert into torneointerno (toridTorneoInterno, torPeriodo, torSedeFacultad, torDeporte, torNombreTorneo, torEstado, torModalidad, torRama, torNivel
+		, torFechaInicio, torFechaFinalizacion, Programa_progID) 
+        values (idTorneo, periodo, sedeFacultad, deporte, nombreTorneo, estado, modalidad, rama, nivel, FechaInicio, FechaFinalizacion, idPrograma);
 end $$
 DELIMITER ;
 
@@ -358,11 +361,12 @@ DELIMITER ;
 drop procedure if exists pas_crear_nuevoProyecto;
 DELIMITER $$
 create procedure pas_crear_nuevoProyecto(in IdProyecto INT,in Nombre VARCHAR(60),in Ejecucion DECIMAL,in FechaInicio DATE, in FechaFinalizacion DATE,
-										Presupuesto VARCHAR(1000), in idPrograma int)
+	Presupuesto VARCHAR(1000), in idPrograma int)
 begin
-	insert into Proyecto (proyIdProyecto, proyNombre, proyEjecucion, proyFechaInicio, proyFechaFinalizacion, proyPresupuesto) values (
-    IdProyecto, Nombre,  Ejecucion, FechaInicio, FechaFinalizacion, Presupuesto);
-    insert into Programa_Tiene_Proyecto (Proyecto_proyIdProyecto, progID) values (proyIdProyecto, idPrograma);
+	insert into proyecto (proyIdProyecto, proyNombre, proyEjecucion, proyFechaInicio, proyFechaFinalizacion, proyPresupuesto) 
+		values (IdProyecto, Nombre,  Ejecucion, FechaInicio, FechaFinalizacion, Presupuesto);
+    insert into programa_tiene_proyecto (Proyecto_proyIdProyecto, progID) 
+		values (proyIdProyecto, idPrograma);
     
 end $$
 DELIMITER ;
@@ -373,13 +377,12 @@ DELIMITER ;
 drop procedure if exists pas_agendar_nuevoEventoTaller;
 DELIMITER $$
 create procedure pas_agendar_nuevoEventoTaller(in idEventoTaller1 INT, in Nombre VARCHAR(60), in TipoEventoTaller VARCHAR(45), in Descripcion LONGTEXT,
-					in HoraInicio DATETIME, in HoraFin DATETIME, in Fecha DATE, in Lugar VARCHAR(45), in idPrograma int)
+	in HoraInicio DATETIME, in HoraFin DATETIME, in Fecha DATE, in Lugar VARCHAR(45), in idPrograma int)
 begin
-	insert into EventoTaller (evetaidEventoTaller, evetaNombre, evetaTipoEventoTaller, eveDescripcion, evetaHoraInicio, evetaHoraFin,
-							  evetaFecha, evetaLugar) values (
-    idEventoTaller1, Nombre,  TipoEventoTaller, Descripcion, HoraInicio, HoraFin, Fecha, Lugar);
-    insert into Programa_Tiene_EventoTaller (idEventoTaller, progID) values (idEventoTaller1, idPrograma);
-    
+	insert into eventotaller (evetaidEventoTaller, evetaNombre, evetaTipoEventoTaller, eveDescripcion, evetaHoraInicio, evetaHoraFin,evetaFecha, evetaLugar) 
+		values (idEventoTaller1, Nombre,  TipoEventoTaller, Descripcion, HoraInicio, HoraFin, Fecha, Lugar);
+    insert into programa_tiene_eventotaller (idEventoTaller, progID) 
+		values (idEventoTaller1, idPrograma);
 end $$
 DELIMITER ;
 
@@ -448,7 +451,8 @@ drop procedure if exists pas_participar_convocatoria;
 DELIMITER $$
 create procedure pas_participar_convocatoria(in ccEstudiante int, in idConv int, in fechaInscripcion date)
 begin
-	insert into Estudiante_Toma_Convocatoria (idEst, conv_id, fecha_est_tm_conv) values (ccEstudiante, idConv, fechaInscripcion);
+	insert into estudiante_toma_convocatoria (idEst, conv_id, fecha_est_tm_conv) 
+		values (ccEstudiante, idConv, fechaInscripcion);
 end $$
 DELIMITER ;
 
@@ -462,8 +466,6 @@ create procedure sp_consultar_mis_convocatorias (in cedula int)
 	end $$
 DELIMITER ;
 
-
-
 #--------------------------------------------------------------------------------------------------------------------------------------------
 #                                  					Gestion y Fomento Socioeconomico
 #--------------------------------------------------------------------------------------------------------------------------------------------
@@ -474,12 +476,12 @@ drop procedure if exists sp_fallaalimentacion_est;
 DELIMITER $$
 CREATE PROCEDURE sp_fallaalimentacion_est(in id int)
 	BEGIN
-		SELECT fallAlID,fallAlcgaComida,fallAlLugar,fallAlFecha from 
-			fallaalimentacion where estID=id;
+		SELECT fallAlID,fallAlcgaComida,fallAlLugar,fallAlFecha 
+			from fallaalimentacion where estID=id;
 	END $$
 DELIMITER ;
 
-#call sp_fallaalimentacion_est(9)
+#call sp_fallaalimentacion_est(10101019)
 
 # 2. El estudiante puede consultar sus actividades de corresponsabilidad realizadas
 
@@ -487,12 +489,12 @@ drop procedure if exists sp_actividadcorresp_est;
 DELIMITER $$
 CREATE PROCEDURE sp_actividadcorresp_est(in id int)
 	BEGIN
-		SELECT actCorID,actCorActividad,actCorHoras from 
-			actividadcorresp where estID=id;
+		SELECT actCorID,actCorActividad,actCorHoras 
+			from actividadcorresp where estID=id;
 	END $$
 DELIMITER ;
 
-#call sp_actividadcorresp_est(18);
+#call sp_actividadcorresp_est(101010118);
 
 # 3. El estudiante puede consultar la cantidad de horas pendientes de corresponsabilidad
 
@@ -502,12 +504,13 @@ CREATE FUNCTION horas_corresponsabilidad_est(id_est int)
 		RETURNS int
         BEGIN
 			DECLARE horas INT default 0;
-            select horPendCorresp into horas from corresponsabilidad where idEst=id_est;
+            select horPendCorresp into horas 
+				from corresponsabilidad where idEst=id_est;
 		RETURN horas;
 	END $$
 DELIMITER ;
 
-#set @horas =  horas_corresponsabilidad_est(4);
+#set @horas =  horas_corresponsabilidad_est(10101014);
 #select @horas;
 
 
@@ -519,12 +522,13 @@ CREATE FUNCTION pbm_est(id_est int)
 		RETURNS int
         BEGIN
 			DECLARE pbm INT default 0;
-            select estPBM into pbm from estudiante where estID=id_est;
+            select estPBM into pbm 
+				from estudiante where estID=id_est;
 		RETURN pbm;
 	END $$
 DELIMITER ;
 
-#set @pbm =  pbm_est(10);
+#set @pbm =  pbm_est(101010110);
 #select @pbm;
 
 # 5. El estudiante solo desea visualizar las convocatorias a las que podría acceder según su PBM:
@@ -535,11 +539,12 @@ drop procedure if exists sp_convocatoriafomentoemprendimeinto_est;
 DELIMITER $$
 CREATE PROCEDURE sp_convocatoriafomentoemprendimeinto_est(in id_est int, in tema varchar(50))
 	BEGIN
-		select * from convocatoriafomentoemprendimeinto where LOCATE(LOWER(tema), LOWER(cgemTema)) > 0;
+		select * from convocatoriafomentoemprendimeinto 
+			where LOCATE(LOWER(tema), LOWER(cgemTema)) > 0;
 	END $$
 DELIMITER ;
 
-#call sp_convocatoriafomentoemprendimeinto_est(5,'tema2')
+#call sp_convocatoriafomentoemprendimeinto_est(10101015,'tema2')
 
 
 #5.2 La convocatoria de gestión alimentaria solo se puede acceder con PBM < 25
@@ -557,12 +562,12 @@ CREATE PROCEDURE sp_convocatoriagestionalimentaria_est(in id_est int, in comida 
 DELIMITER ;
 
 /*
-set @pbm =  pbm_est(10);
+set @pbm =  pbm_est(101010110);
 select @pbm;
-call sp_convocatoriagestionalimentaria_est(10,'Desayuno','Comedor central');
-set @pbm =  pbm_est(5);
+call sp_convocatoriagestionalimentaria_est(101010110,'Desayuno','Comedor central');
+set @pbm =  pbm_est(10101015);
 select @pbm;
-call sp_convocatoriagestionalimentaria_est(5,'Desayuno','Comedor central');
+call sp_convocatoriagestionalimentaria_est(10101015,'Desayuno','Comedor central');
 */
 
 
@@ -581,12 +586,12 @@ CREATE PROCEDURE sp_convocatoriagestionalojamiento_est(in id_est int, in localid
 DELIMITER ;
 
 /*
-set @pbm =  pbm_est(10);
+set @pbm =  pbm_est(101010110);
 select @pbm;
-call sp_convocatoriagestionalojamiento_est(10,'Usme','Residencia Universitaria');
-set @pbm =  pbm_est(5);
+call sp_convocatoriagestionalojamiento_est(101010110,'Usme','Residencia Universitaria');
+set @pbm =  pbm_est(10101015);
 select @pbm;
-call sp_convocatoriagestionalojamiento_est(5,'Usme','Residencia Universitaria');
+call sp_convocatoriagestionalojamiento_est(10101015,'Usme','Residencia Universitaria');
 */
 
 
@@ -605,12 +610,12 @@ CREATE PROCEDURE sp_convocatoriagestioneconomica_est(in id_est int)
 DELIMITER ;
 
 /*
-set @pbm =  pbm_est(10);
+set @pbm =  pbm_est(101010110);
 select @pbm;
-call sp_convocatoriagestioneconomica_est(10);
-set @pbm =  pbm_est(5);
+call sp_convocatoriagestioneconomica_est(101010110);
+set @pbm =  pbm_est(10101015);
 select @pbm;
-call sp_convocatoriagestioneconomica_est(5);
+call sp_convocatoriagestioneconomica_est(10101015);
 */
 
 
@@ -629,12 +634,12 @@ CREATE PROCEDURE sp_convocatoriagestiontransporte_est(in id_est int, in tipo enu
 DELIMITER ;
 
 /*
-set @pbm =  pbm_est(10);
+set @pbm =  pbm_est(101010110);
 select @pbm;
-call sp_convocatoriagestiontransporte_est(10, 'Transporte público masivo');
-set @pbm =  pbm_est(5);
+call sp_convocatoriagestiontransporte_est(101010110, 'Transporte público masivo');
+set @pbm =  pbm_est(10101015);
 select @pbm;
-call sp_convocatoriagestiontransporte_est(5, 'Transporte público masivo');
+call sp_convocatoriagestiontransporte_est(10101015, 'Transporte público masivo');
 */
 
 #6. Una persona/estudiante/secretario/director quiere consultar sus facturas con los detalles en la Tienda de bienestar U.
@@ -647,7 +652,7 @@ CREATE PROCEDURE sp_info_factura_per(in id_per int, in id_tienda int)
 	END $$
 DELIMITER ;
 
-#call sp_info_factura_per(14, 2)
+#call sp_info_factura_per(101010114, 2)
 
 #7. Una persona quiere consultar los productos en una tienda de bienestar U.
 
@@ -718,11 +723,11 @@ CREATE PROCEDURE sp_insertar_est_tm_conv_est(in id_est int, in id_conv int, in f
 DELIMITER ;
 
 /*
-call sp_insertar_est_tm_conv_est(9, 210 ,'2023-03-15');
-call sp_insertar_est_tm_conv_est(9, 211 ,'2023-03-15');
+call sp_insertar_est_tm_conv_est(10101019, 210 ,'2023-03-15');
+call sp_insertar_est_tm_conv_est(10101019, 211 ,'2023-03-15');
 
-call sp_insertar_est_tm_conv_est(13, 1 ,'2023-07-13');
-call sp_insertar_est_tm_conv_est(13, 2 ,'2023-07-13');
+call sp_insertar_est_tm_conv_est(101010113, 1 ,'2023-07-13');
+call sp_insertar_est_tm_conv_est(101010113, 2 ,'2023-07-13');
 select * from estudiante_toma_convocatoria;
 */
 
@@ -810,8 +815,10 @@ CREATE procedure insertar_empl_tienda_un(in id_emp int, in id_tienda int)
     END $$
 DELIMITER ;
 
-call insertar_empl_tienda_un(5,1);
+/*
+call insertar_empl_tienda_un(10101015,1);
 select * from empleado_tiendaun;
+*/
 
 #La dirección puede borrarlos
 
@@ -823,9 +830,10 @@ CREATE procedure borrar_empl_tienda_un(in id_emp int)
     END $$
 DELIMITER ;
 
-call borrar_empl_tienda_un(5);
+/*
+call borrar_empl_tienda_un(10101015);
 select * from empleado_tiendaun;
-
+*/
 
 # 14 La secretaría/dirección inserta productos en la tabla producto_tiendaun
 
@@ -837,8 +845,10 @@ CREATE procedure insertar_prod_tienda_un(in id_prod int, in id_tienda int)
     END $$
 DELIMITER ;
 
+/*
 call insertar_prod_tienda_un(15,2);
 select * from producto_tiendaun;
+*/
 
 #La dirección puede borrarlos
 
@@ -870,7 +880,7 @@ CREATE procedure insertar_factura(in id_factura int, in detalle varchar(100), in
 DELIMITER ;
 
 /*
-call insertar_factura(16, 'N.A', 1, 17);
+call insertar_factura(16, 'N.A', 1, 101010117);
 select * from factura;
 */
 
@@ -909,8 +919,10 @@ CREATE procedure insertar_falla_alimentacion_sec(in est int,in falla enum('Desay
     END $$
 DELIMITER ;
 
-call insertar_falla_alimentacion_sec(26, 'Almuerzo', 'Comedor central');
+/*
+call insertar_falla_alimentacion_sec(101010126, 'Almuerzo', 'Comedor central');
 select * from fallaalimentacion;
+*/
 
 # 18. Secretaria y dirección insertan actividades de corresponsabilidad con la fecha actual
 
@@ -923,11 +935,12 @@ CREATE procedure insertar_act_corresponsabilidad(in id_act int,in id_est int, in
 DELIMITER ;
 
 /*
-call insertar_act_corresponsabilidad(20,27, 'deportiva', 3);
+call insertar_act_corresponsabilidad(20,101010127, 'deportiva', 3);
 SELECT * from actividadcorresp;
 */
 
 # 19. Secretaria/dirección pueden insertar convocatorias económicas, pero también se insertan en convocatoria
+# Y
 #20. Dirección puede eliminar una convocatoria economica, pero esta también se elimina de convocatorias
 
 drop procedure if exists insertar_conv_alimento;
@@ -1106,7 +1119,7 @@ drop procedure if exists sp_consultar_convocatorias_programa;
 DELIMITER $$
 create procedure sp_consultar_convocatorias_deporte(in idPrograma int)
 	begin 
-		select * from Convocatoria where Programa_progID = id_Programa;
+		select * from convocatoria where Programa_progID = id_Programa;
 	end $$
 DELIMITER ;
 
@@ -1148,7 +1161,7 @@ drop procedure if exists sp_consultar_torneos_internos;
 DELIMITER $$
 create procedure sp_consultar_torneos_internos()
 	begin 
-		select * from TorneoInterno;
+		select * from torneointerno;
 	end $$
 DELIMITER ;
 
@@ -1157,7 +1170,7 @@ drop procedure if exists sp_consultar_convocatoria_cursos_libres;
 DELIMITER $$
 create procedure sp_consultar_convocatoria_cursos_libres()
 	begin 
-		select * from ConvocatoriaCursoLibre;
+		select * from convocatoriacursolibre;
 	end $$
 DELIMITER ;
 
@@ -1169,7 +1182,7 @@ drop procedure if exists sp_consultar_gestion_alimentaria;
 DELIMITER $$
 create procedure sp_consultar_gestion_alimentaria ()
 	begin
-		select * from ConvocatoriaGestionAlimentaria join Convocatoria on (conv_id);
+		select * from convocatoriagestionalimentaria join convocatoria on (conv_id);
 	end $$
 DELIMITER ;
 
@@ -1177,7 +1190,7 @@ drop procedure if exists sp_consultar_gestion_transporte;
 DELIMITER $$
 create procedure sp_consultar_gestion_transporte ()
 	begin
-		select * from ConvocatoriaGestionTransporte join Convocatoria on (conv_id);
+		select * from convocatoriagestiontransporte join convocatoria on (conv_id);
 	end $$
 DELIMITER ;
 
@@ -1185,7 +1198,7 @@ drop procedure if exists sp_consultar_gestion_alojamiento;
 DELIMITER $$
 create procedure sp_consultar_gestion_alojamiento()
 	begin
-		select * from ConvocatoriaGestionAlojamiento join Convocatoria on (conv_id);
+		select * from convocatoriagestionalojamiento join convocatoria on (conv_id);
 	end $$
 DELIMITER ;
 
@@ -1193,7 +1206,7 @@ drop procedure if exists sp_consultar_gestion_economica;
 DELIMITER $$
 create procedure sp_consultar_gestion_economica ()
 	begin
-		select * from ConvocatoriaGestionEconomica join Convocatoria on (conv_id);
+		select * from convocatoriagestioneconomica join convocatoria on (conv_id);
 	end $$
 DELIMITER ;
 
@@ -1201,6 +1214,6 @@ drop procedure if exists sp_consultar_gestion_emprendimiento;
 DELIMITER $$
 create procedure sp_consultar_gestion_emprendimiento ()
 	begin
-		select * from ConvocatoriaFomentoEmprendimeinto join Convocatoria on (conv_id);
+		select * from convocatoriafomentoemprendimeinto join convocatoria on (conv_id);
 	end $$
 DELIMITER ;

@@ -158,7 +158,7 @@ DELIMITER ;
 # Si una convocatoria tiene estado cerrada no se puede insertar.
 drop trigger if exists tr_check_convocatoria;
 DELIMITER $$
-create trigger tr_check_convocatoria before insert on Convocatoria 
+create trigger tr_check_convocatoria before insert on convocatoria 
 for each row
 	begin
 		declare msg varchar(225);
@@ -172,7 +172,7 @@ DELIMITER ;
 # Verificar si el programa que inserta nuevos torneos es el programa de deporte de competenecia, Ningún otro puede crear torneos deportivos
 drop trigger if exists tr_check_torneo;
 DELIMITER $$
-create trigger tr_check_torneo before insert on TorneoInterno for each row
+create trigger tr_check_torneo before insert on torneointerno for each row
 begin
 	declare msg varchar(225);
         if (new.Programa_progID != 1) then -- ids de programas a convenir
@@ -185,7 +185,7 @@ DELIMITER ;
 # No se pueden crear convocatorias a selecciones fuera del horario laboral.
 drop trigger if exists tr_check_hora_conv_seleccion;
 DELIMITER $$
-create trigger tr_check_hora_conv_seleccion before insert on ConvocatoriaSeleccion
+create trigger tr_check_hora_conv_seleccion before insert on convocatoriaseleccion
 for each row
 begin
 	declare msg varchar(225);
@@ -199,7 +199,7 @@ DELIMITER ;
 # No se puede participar en una convocatoria si el PAPA no cumple con el mínimo requerido.
 drop trigger if exists tr_check_PAPA;
 DELIMITER $$
-create trigger tr_check_PAPA before insert on Estudiante_Toma_Convocatoria for each row
+create trigger tr_check_PAPA before insert on estudiante_toma_convocatoria for each row
 begin #por terminar
 
 end $$
