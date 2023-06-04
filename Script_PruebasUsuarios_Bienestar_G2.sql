@@ -11,7 +11,7 @@ select * from convocatoriagestionalimentaria;
 update convocatoriagestionalimentaria set cgaComida = 'Cena' where cgaLugar = 'Comedor Central';
 
 select * from vw_info_estudiante;
-insert into estudiante (estID,carreID,estEdad,estFacultad,estPBM,estTipoAdmision,estEsEgresado) values (101010146,'36','17','Ingeniería','73','Regular','0');
+insert into estudiante (estID,carreID,estEdad,estPBM,estTipoAdmision,estEsEgresado) values (101010146,'36','17','73','Regular','0');
 update vw_info_estudiante set perDireccion='Dirección Modificada' where estID=10101014;
 select * from vw_info_estudiante;
 

@@ -1,0 +1,201 @@
+perID,perNombre,perApellido,perDireccion,perBarrio,perCiudad,perTipoVivienda,perLocalidad,perEmail,perEntidadSalud,perProcedencia,perSede,perFacultad
+10101011,"Ana José","Ramírez Mendoza","CL 120 s No. 81-31",Guayabal,Barranquilla,Apartaestudio,Otra,ARamírezM@unal.edu.co,"Sura EPS",N.E,Bogotá,Medicina
+10101012,"Gabriela Andrés","Pérez Núñez","KR 125 j No. 43-65","Las Acacias",Barranquilla,Apartaestudio,Engativá,GPérezN@unal.edu.co,Colmedica,N.E,Bogotá,Ciencias
+10101013,"Ricardo Felipe","Sánchez Gómez","TV 72 h No. 43-30","San Antonio",Cartagena,Finca,Usaquén,RSánchezG@unal.edu.co,Colmedica,N.E,Bogotá,"Ciencias Veterinarias y de Zootecnia"
+10101014,"Miguel Juan","García Romero","AK 117 a No. 48-12","Campo Valdés",Ibagué,Finca,Chapinero,MGarcíaR@unal.edu.co,"Nueva EPS",N.E,Bogotá,"Derecho, Ciencias Políticas y Sociales"
+10101015,"Laura Ricardo","Torres Gómez","CL 20 e No. 82-16","El Rodeo",Ibagué,Casa,"Puente Aranda",LTorresG@unal.edu.co,Famisanar,N.E,Bogotá,Psicología
+10101016,"Santiago Ernesto","Ramírez Fernández","AC 104 i No. 58-59","Loma de Los Bernal",Cali,Casa,Teusaquillo,SRamírezF@unal.edu.co,"Nueva EPS",N.E,Bogotá,"Ciencias Agrarias"
+10101017,"Jorge Diego","Álvarez Ruiz","TV 48 o No. 75-48","Santa Cruz",Cali,Apartaestudio,Suba,JÁlvarezR@unal.edu.co,Sanitas,N.E,Bogotá,Artes
+10101018,"Natalia Manuel","Ruiz Jiménez","KR 127 b No. 3-38","El Centro",Cúcuta,Apartaestudio,Teusaquillo,NRuizJ@unal.edu.co,"Nueva EPS",N.E,Bogotá,Psicología
+10101019,"Ricardo Andrés","Suárez Pérez","CL 123 f No. 2-85",Manila,Barranquilla,Apartaestudio,"Rafael Uribe Uribe",RSuárezP@unal.edu.co,Cafesalud,N.E,Bogotá,Ciencias
+101010110,"Andrés Ernesto","Rojas Martínez","KR 20 t No. 46-45","Las Acacias",Villavicencio,Apartaestudio,Teusaquillo,ARojasM@unal.edu.co,Famisanar,N.E,Bogotá,Ingeniería
+101010111,"Luis Carla","López Díaz","TV 112 b No. 3-81",Envigado,Bucaramanga,Apartaestudio,Bosa,LLópezD@unal.edu.co,Cafesalud,N.E,Bogotá,"Ciencias Económicas"
+101010112,"Isabel Pedro","López Morales","AK 172 o No. 41-63","El Lido",Cúcuta,Apartamento,"La Candelaria",ILópezM@unal.edu.co,"Sura EPS",N.E,Bogotá,"Ciencias Agrarias"
+101010113,"Diego Fernando","Romero Díaz","TV 132 q No. 88-99","El Rodeo",Soacha,Finca,Engativá,DRomeroD@unal.edu.co,Aliansalud,N.E,Bogotá,Ciencias
+101010114,"Manuel Andrea","Silva López","TV 146 t No. 29-4","Barrio Colombia",Cartagena,Casa,"Rafael Uribe Uribe",MSilvaL@unal.edu.co,Sanitas,N.E,Bogotá,"Derecho, Ciencias Políticas y Sociales"
+101010115,"Mónica María","Fernández Martínez","CL 141 p No. 48-86","La Floresta",Villavicencio,Casa,Bosa,MFernándezM@unal.edu.co,SaludTotal,N.E,Bogotá,Odontología
+101010116,"Raúl Santiago","Martínez Suárez","KR 36 g No. 5-66",Bello,Medellín,Apartaestudio,"Puente Aranda",RMartínezS@unal.edu.co,Colmedica,N.E,Bogotá,Odontología
+101010117,"Miguel Ricardo","Reyes Martínez","AC 23 i No. 19-80",Itagüí,Cartagena,Apartaestudio,"Barrios Unidos",MReyesM@unal.edu.co,Sanitas,N.E,Bogotá,"Ciencias Agrarias"
+101010118,"Raúl Andrea","Romero Torres","AC 63 r No. 57-23",Bello,Villavicencio,Casa,"San Cristóbal",RRomeroT@unal.edu.co,Famisanar,N.E,Bogotá,"Ciencias Económicas"
+101010119,"Ana Alejandro","Romero Ruiz","AK 160 b No. 42-32",Bello,Villavicencio,Apartaestudio,"Ciudad Bolívar",ARomeroR@unal.edu.co,Aliansalud,N.E,Bogotá,"Ciencias Económicas"
+101010120,"Carlos Pedro","Martínez Flores","TV 167 c No. 10-46","Barrio Colombia",Bogotá,Finca,Engativá,CMartínezF@unal.edu.co,Cafesalud,N.E,Bogotá,Psicología
+101010121,"Gabriela Andrés","Gómez López","AC 133 s No. 52-4","El Pinal",Barranquilla,Casa,"Rafael Uribe Uribe",GGómezL@unal.edu.co,"Coomeva EPS",N.E,Bogotá,Ingeniería
+101010122,"Mónica Andrés","Romero Rodríguez","KR 50 d No. 19-6","Laureano Gómez",Villavicencio,Finca,"Rafael Uribe Uribe",MRomeroR@unal.edu.co,Aliansalud,N.E,Bogotá,"Ciencias Agrarias"
+101010123,"Jorge Ana","Fernández Núñez","TV 174 s No. 22-36","El Popular",Cali,Apartaestudio,"Antonio Nariño",JFernándezN@unal.edu.co,"Sura EPS",N.E,Bogotá,Medicina
+101010124,"José Alejandro","Suárez Ramírez","CL 51 j No. 98-1","El Raizal",Medellín,Apartaestudio,"Antonio Nariño",JSuárezR@unal.edu.co,"EPS Familiar",N.E,Bogotá,Ingeniería
+101010125,"Carlos Mario","Rodríguez Hernández","CL 66 r No. 85-76","La Floresta",Soacha,Apartamento,Usme,CRodríguezH@unal.edu.co,"Coomeva EPS",N.E,Bogotá,Ingeniería
+101010126,"Roberto Mario","Ramírez Reyes","KR 71 g No. 13-60","San Diego",Medellín,Finca,"La Candelaria",RRamírezR@unal.edu.co,"Sura EPS",N.E,Bogotá,"Ciencias Económicas"
+101010127,"Isabel Isabel","García Cruz","KR 106 c No. 6-99",Belén,Cali,Casa,Usaquén,IGarcíaC@unal.edu.co,Compensar,N.E,Bogotá,Odontología
+101010128,"María Roberto","Romero Gómez","AC 54 f No. 84-9",Envigado,Soacha,Apartaestudio,"Rafael Uribe Uribe",MRomeroG@unal.edu.co,"EPS Familiar",N.E,Bogotá,Odontología
+101010129,"Carlos Luis","Martínez Cruz","KR 79 l No. 58-2","El Lido",Cúcuta,Apartaestudio,Suba,CMartínezC@unal.edu.co,Cafesalud,N.E,Bogotá,Psicología
+101010130,"Laura Miguel","Fernández Ramírez","AK 90 g No. 1-65",Bello,Ibagué,Finca,Bosa,LFernándezR@unal.edu.co,Cafesalud,N.E,Bogotá,"Ciencias Agrarias"
+101010131,"Lucía Laura","Castro Romero","TV 105 d No. 47-65",Belén,Bucaramanga,Apartaestudio,"Antonio Nariño",LCastroR@unal.edu.co,SaludTotal,N.E,Bogotá,Odontología
+101010132,"Andrés Gabriela","Álvarez González","KR 119 l No. 62-77","San Lucas",Soacha,Apartaestudio,Suba,AÁlvarezG@unal.edu.co,"Coomeva EPS",N.E,Bogotá,Psicología
+101010133,"María Isabel","Ruiz Álvarez","CL 82 s No. 63-2","La Avanzada",Cali,Finca,Bosa,MRuizÁ@unal.edu.co,SaludTotal,N.E,Bogotá,"Ciencias Agrarias"
+101010134,"Isabel Luis","Ortiz Jiménez","AK 76 e No. 36-44","El Lido",Bucaramanga,Finca,Tunjuelito,IOrtizJ@unal.edu.co,Aliansalud,N.E,Bogotá,Enfermería
+101010135,"Ricardo Santiago","López Hernández","TV 35 s No. 49-43","El Raizal",Medellín,Casa,Chapinero,RLópezH@unal.edu.co,Colmedica,N.E,Bogotá,Medicina
+101010136,"Pedro Gabriela","Gómez Flores","KR 16 h No. 47-16","El Popular",Ibagué,Apartamento,"Santa Fe",PGómezF@unal.edu.co,SaludTotal,N.E,Bogotá,Psicología
+101010137,"Roberto Lucía","Suárez Hernández","TV 171 a No. 78-2","El Rodeo",Bucaramanga,Apartaestudio,Usme,RSuárezH@unal.edu.co,Cafesalud,N.E,Bogotá,Psicología
+101010138,"Alejandro Felipe","Núñez González","KR 63 f No. 21-9","La Pradera",Soacha,Apartamento,"Ciudad Bolívar",ANúñezG@unal.edu.co,Famisanar,N.E,Bogotá,"Derecho, Ciencias Políticas y Sociales"
+101010139,"José Luis","Flores Chávez","AC 180 s No. 17-60","El Tesoro",Medellín,Apartamento,Chapinero,JFloresC@unal.edu.co,Famisanar,N.E,Bogotá,Odontología
+101010140,"Juan Diego","Pérez Mendoza","AK 90 h No. 53-39","La Candelaria",Ibagué,Apartaestudio,"La Candelaria",JPérezM@unal.edu.co,Famisanar,N.E,Bogotá,Medicina
+101010141,"José Manuel","Ortiz Hernández","AK 111 t No. 82-99","Santa Cruz",Ibagué,Apartamento,"Barrios Unidos",JOrtizH@unal.edu.co,"Sura EPS",N.E,Bogotá,"Ciencias Agrarias"
+101010142,"Roberto Alejandro","Vargas Ramírez","KR 160 h No. 98-76","El Poblado",Villavicencio,Apartaestudio,"Rafael Uribe Uribe",RVargasR@unal.edu.co,"Nueva EPS",N.E,Bogotá,Enfermería
+101010143,"Raúl Carla","Mendoza Fernández","AC 154 e No. 31-83","San Diego",Cali,Finca,"Ciudad Bolívar",RMendozaF@unal.edu.co,"Coomeva EPS",N.E,Bogotá,"Ciencias Veterinarias y de Zootecnia"
+101010144,"Diego José","Flores Hernández","KR 37 o No. 42-70","San Lucas",Cúcuta,Casa,Chapinero,DFloresH@unal.edu.co,"Sura EPS",N.E,Bogotá,"Ciencias Agrarias"
+101010145,"Carla Pedro","Castro Suárez","TV 44 r No. 4-43","San Joaquín",Cartagena,Apartamento,"Santa Fe",CCastroS@unal.edu.co,Colmedica,N.E,Bogotá,Ingeniería
+101010146,"Ana Lucía","Vargas García","CL 144 a No. 91-74","La América",Bucaramanga,Finca,Kennedy,AVargasG@unal.edu.co,"Sura EPS",N.E,Bogotá,"Ciencias Humanas"
+101010147,"Jorge Manuel","Gómez García","TV 180 g No. 81-41",Moravia,Cartagena,Casa,"Santa Fe",JGómezG@unal.edu.co,"Sura EPS",N.E,Bogotá,"Ciencias Humanas"
+101010148,"Andrés Alejandro","Ramírez Silva","CL 4 m No. 98-45","La Castellana",Medellín,Apartamento,"Barrios Unidos",ARamírezS@unal.edu.co,Famisanar,N.E,Bogotá,"Ciencias Veterinarias y de Zootecnia"
+101010149,"Jorge Luis","Chávez Flores","CL 23 k No. 45-91",Castilla,Cúcuta,Apartaestudio,Engativá,JChávezF@unal.edu.co,Aliansalud,N.E,Bogotá,Artes
+101010150,"Mónica Mónica","Pérez Morales","AK 171 b No. 40-47","La Mota",Cúcuta,Apartamento,Kennedy,MPérezM@unal.edu.co,Cafesalud,N.E,Bogotá,Enfermería
+101010151,"Andrea Ricardo","Silva Sánchez","AK 134 q No. 41-49",Aranjuez,Barranquilla,Casa,Fontibón,ASilvaS@unal.edu.co,"EPS Familiar",N.E,Bogotá,"Derecho, Ciencias Políticas y Sociales"
+101010152,"Diego Gabriela","Sánchez Mendoza","KR 68 l No. 21-70",Belén,Soacha,Apartamento,Teusaquillo,DSánchezM@unal.edu.co,"Coomeva EPS",N.E,Bogotá,"Ciencias Humanas"
+101010153,"Mario Manuel","González Vargas","CL 132 k No. 45-94","El Rodeo",Soacha,Finca,Usaquén,MGonzálezV@unal.edu.co,"Sura EPS",N.E,Bogotá,"Ciencias Agrarias"
+101010154,"Luis Raúl","Pérez Silva","TV 130 o No. 59-89","Las Acacias",Ibagué,Finca,Kennedy,LPérezS@unal.edu.co,"Sura EPS",N.E,Bogotá,"Ciencias Humanas"
+101010155,"Isabel Felipe","García González","KR 118 o No. 23-32","Laureano Gómez",Bogotá,Apartaestudio,Otra,IGarcíaG@unal.edu.co,Colmedica,N.E,Bogotá,"Ciencias Humanas"
+101010156,"Mónica Mónica","Jiménez Castro","AK 54 i No. 3-36",Envigado,Cali,Apartamento,Kennedy,MJiménezC@unal.edu.co,"Coomeva EPS",N.E,Bogotá,Artes
+101010157,"Ana Gabriela","Silva Mendoza","AC 145 k No. 77-33","La Castellana",Soacha,Apartamento,Usaquén,ASilvaM@unal.edu.co,Cafesalud,N.E,Bogotá,"Ciencias Humanas"
+101010158,"Natalia Mario","Díaz Pérez","AK 15 n No. 76-16",Aranjuez,Ibagué,Finca,"Santa Fe",NDíazP@unal.edu.co,Famisanar,N.E,Bogotá,"Ciencias Económicas"
+101010159,"Raúl Felipe","Pérez Cruz","AC 67 p No. 89-5",Envigado,Medellín,Finca,Usaquén,RPérezC@unal.edu.co,Famisanar,N.E,Bogotá,Medicina
+101010160,"Ana Gabriela","Flores López","AC 134 l No. 84-17","El Centro",Cúcuta,Apartaestudio,"Rafael Uribe Uribe",AFloresL@unal.edu.co,"EPS Familiar",N.E,Bogotá,"Ciencias Humanas"
+101010161,"Felipe Mario","González Chávez","KR 178 l No. 6-51","La Castellana",Cartagena,Finca,Usaquén,FGonzálezC@unal.edu.co,Colmedica,N.E,Bogotá,Ingeniería
+101010162,"Natalia Diego","Rojas Ortiz","AC 118 q No. 41-22","Laureano Gómez",Villavicencio,Finca,"San Cristóbal",NRojasO@unal.edu.co,"Sura EPS",N.E,Bogotá,"Ciencias Veterinarias y de Zootecnia"
+101010163,"Pedro Santiago","Pérez Mendoza","KR 134 k No. 7-2","San Lucas",Medellín,Finca,"San Cristóbal",PPérezM@unal.edu.co,Cafesalud,N.E,Bogotá,"Ciencias Económicas"
+101010164,"Jorge Ricardo","García Morales","AK 26 q No. 4-32","La América",Villavicencio,Casa,"Ciudad Bolívar",JGarcíaM@unal.edu.co,"Sura EPS",N.E,Bogotá,"Ciencias Económicas"
+101010165,"Roberto Andrés","Suárez Ramírez","AC 111 r No. 18-98",Guayabal,Bucaramanga,Apartaestudio,Chapinero,RSuárezR@unal.edu.co,"Nueva EPS",N.E,Bogotá,Psicología
+101010166,"María Jorge","Ruiz Díaz","CL 25 k No. 52-2","Los Colores",Cali,Apartaestudio,"San Cristóbal",MRuizD@unal.edu.co,"Sura EPS",N.E,Bogotá,Enfermería
+101010167,"Jorge Natalia","Rojas Mendoza","AK 130 k No. 49-31",Moravia,Cartagena,Apartaestudio,Suba,JRojasM@unal.edu.co,"Sura EPS",N.E,Bogotá,Ingeniería
+101010168,"Gustavo Manuel","Silva García","AC 86 j No. 2-55","El Pinal",Bogotá,Apartaestudio,Otra,GSilvaG@unal.edu.co,"Nueva EPS",N.E,Bogotá,Psicología
+101010169,"Laura Juan","Vargas Jiménez","AC 143 l No. 25-11",Laureles,Ibagué,Finca,Tunjuelito,LVargasJ@unal.edu.co,Colmedica,N.E,Bogotá,Ingeniería
+101010170,"Raúl Mónica","Rodríguez Ruiz","AC 128 c No. 8-14",Guayabal,Barranquilla,Casa,"La Candelaria",RRodríguezR@unal.edu.co,"Coomeva EPS",N.E,Bogotá,"Ciencias Veterinarias y de Zootecnia"
+101010171,"Laura Jorge","Díaz Rodríguez","TV 127 l No. 73-83","La Candelaria",Cali,Apartamento,"Ciudad Bolívar",LDíazR@unal.edu.co,SaludTotal,N.E,Bogotá,"Ciencias Económicas"
+101010172,"Roberto Santiago","Ruiz García","AK 51 i No. 96-57","San Antonio",Cúcuta,Casa,"San Cristóbal",RRuizG@unal.edu.co,Colmedica,N.E,Bogotá,Medicina
+101010173,"Gustavo Felipe","Hernández Vargas","KR 27 l No. 8-60","Cristo Rey",Villavicencio,Apartaestudio,Engativá,GHernándezV@unal.edu.co,SaludTotal,N.E,Bogotá,Psicología
+101010174,"Luis Carla","López Álvarez","KR 69 d No. 76-32","La Aguacatala",Villavicencio,Casa,"Ciudad Bolívar",LLópezÁ@unal.edu.co,Compensar,N.E,Bogotá,Medicina
+101010175,"Andrea José","García Suárez","CL 126 q No. 7-62",Estadio,Bucaramanga,Apartamento,"Los Mártires",AGarcíaS@unal.edu.co,SaludTotal,N.E,Bogotá,Psicología
+101010176,"Jorge Andrea","Flores Castro","CL 43 s No. 1-67",Aranjuez,Cartagena,Finca,"Antonio Nariño",JFloresC@unal.edu.co,"EPS Familiar",N.E,Bogotá,"Ciencias Económicas"
+101010177,"Jorge Andrea","Morales Fernández","KR 141 b No. 50-77","El Tesoro",Soacha,Finca,"Puente Aranda",JMoralesF@unal.edu.co,Sanitas,N.E,Bogotá,Ciencias
+101010178,"Alejandro Luis","Díaz Morales","AC 22 g No. 47-2","Barrio Colombia",Cúcuta,Apartamento,Suba,ADíazM@unal.edu.co,SaludTotal,N.E,Bogotá,"Ciencias Agrarias"
+101010179,"Andrea Natalia","Pérez Jiménez","CL 107 b No. 3-8","El Poblado",Villavicencio,Apartamento,Teusaquillo,APérezJ@unal.edu.co,Compensar,N.E,Bogotá,Psicología
+101010180,"María María","Rojas Fernández","AK 105 c No. 69-86","La Castellana",Barranquilla,Casa,Suba,MRojasF@unal.edu.co,Famisanar,N.E,Bogotá,Ciencias
+101010181,"Felipe Gabriela","Sánchez Martínez","TV 180 f No. 92-21",Estadio,Barranquilla,Apartamento,Engativá,FSánchezM@unal.edu.co,SaludTotal,N.E,Bogotá,Odontología
+101010182,"Alejandro Alejandro","Gómez Jiménez","AC 164 a No. 44-30","La América",Medellín,Casa,Engativá,AGómezJ@unal.edu.co,"Nueva EPS",N.E,Bogotá,"Ciencias Humanas"
+101010183,"Alejandro Roberto","Hernández Álvarez","KR 174 l No. 91-90",Bello,Medellín,Finca,Usme,AHernándezÁ@unal.edu.co,"EPS Familiar",N.E,Bogotá,"Derecho, Ciencias Políticas y Sociales"
+101010184,"Laura Carlos","Suárez Ruiz","TV 153 s No. 12-13","La Floresta",Bucaramanga,Apartaestudio,Chapinero,LSuárezR@unal.edu.co,Aliansalud,N.E,Bogotá,"Ciencias Veterinarias y de Zootecnia"
+101010185,"Andrés Ana","Núñez Morales","TV 173 k No. 43-69","Campo Valdés",Cartagena,Apartamento,Suba,ANúñezM@unal.edu.co,Aliansalud,N.E,Bogotá,Enfermería
+101010186,"Mónica Fernando","Hernández Silva","AK 91 o No. 1-86","El Poblado",Bucaramanga,Apartaestudio,Tunjuelito,MHernándezS@unal.edu.co,"Coomeva EPS",N.E,Bogotá,"Ciencias Veterinarias y de Zootecnia"
+101010187,"Fernando Natalia","Núñez Díaz","TV 67 i No. 38-9",Manrique,Cali,Apartaestudio,Kennedy,FNúñezD@unal.edu.co,Compensar,N.E,Bogotá,"Derecho, Ciencias Políticas y Sociales"
+101010188,"Natalia Ricardo","Sánchez Ramírez","AC 1 g No. 97-19","El Chagualo",Soacha,Apartamento,Kennedy,NSánchezR@unal.edu.co,Cafesalud,N.E,Bogotá,"Ciencias Humanas"
+101010189,"Miguel Luis","Torres Pérez","TV 121 a No. 56-33",Laureles,Medellín,Apartamento,Usaquén,MTorresP@unal.edu.co,"Nueva EPS",N.E,Bogotá,"Ciencias Agrarias"
+101010190,"Jorge Manuel","Ruiz Morales","AK 4 i No. 27-19","El Rodeo",Soacha,Apartamento,Otra,JRuizM@unal.edu.co,SaludTotal,N.E,Bogotá,"Ciencias Agrarias"
+101010191,"Miguel Roberto","Díaz García","CL 74 i No. 5-78","Laureano Gómez",Ibagué,Casa,Teusaquillo,MDíazG@unal.edu.co,Aliansalud,N.E,Bogotá,Enfermería
+101010192,"Luis Mario","Fernández Castro","CL 30 l No. 34-5",Itagüí,Bogotá,Apartaestudio,"La Candelaria",LFernándezC@unal.edu.co,Compensar,N.E,Bogotá,Psicología
+101010193,"Miguel Ernesto","Martínez Romero","KR 110 k No. 20-35","La Flora",Barranquilla,Casa,Suba,MMartínezR@unal.edu.co,Cafesalud,N.E,Bogotá,Artes
+101010194,"Isabel Lucía","Ramírez Castro","AC 104 p No. 92-76","La Pradera",Cúcuta,Apartaestudio,"San Cristóbal",IRamírezC@unal.edu.co,"Coomeva EPS",N.E,Bogotá,"Derecho, Ciencias Políticas y Sociales"
+101010195,"José Ricardo","Álvarez Pérez","KR 81 c No. 33-22",Itagüí,Soacha,Apartamento,"Antonio Nariño",JÁlvarezP@unal.edu.co,Sanitas,N.E,Bogotá,Ciencias
+101010196,"Ana Ernesto","Torres Hernández","CL 176 c No. 44-38",Itagüí,Cúcuta,Casa,Kennedy,ATorresH@unal.edu.co,"Nueva EPS",N.E,Bogotá,Medicina
+101010197,"Laura Alejandro","Álvarez Pérez","KR 114 k No. 30-70","San Lucas",Bogotá,Apartaestudio,"Barrios Unidos",LÁlvarezP@unal.edu.co,Sanitas,N.E,Bogotá,"Ciencias Veterinarias y de Zootecnia"
+101010198,"Santiago Manuel","Ramírez Sánchez","CL 64 r No. 89-42","San Lucas",Barranquilla,Apartamento,Tunjuelito,SRamírezS@unal.edu.co,Famisanar,N.E,Bogotá,Odontología
+101010199,"Gustavo Luis","Rojas Suárez","TV 88 r No. 73-81",Estadio,Villavicencio,Finca,"Santa Fe",GRojasS@unal.edu.co,Colmedica,N.E,Bogotá,"Ciencias Veterinarias y de Zootecnia"
+1010101100,"Fernando Laura","Suárez Suárez","AC 110 k No. 60-90","El Pinal",Soacha,Finca,Bosa,FSuárezS@unal.edu.co,"Sura EPS",N.E,Bogotá,Enfermería
+1010101101,"Roberto Luis","Sánchez Álvarez","CL 105 t No. 60-70","La Candelaria",Cartagena,Apartamento,"Ciudad Bolívar",RSánchezÁ@unal.edu.co,Compensar,N.E,Bogotá,"Ciencias Agrarias"
+1010101102,"Gabriela Ricardo","Morales Ortiz","CL 160 p No. 21-27","El Popular",Soacha,Apartamento,"Rafael Uribe Uribe",GMoralesO@unal.edu.co,Cafesalud,N.E,Bogotá,Artes
+1010101103,"Isabel Juan","Vargas Silva","TV 73 m No. 81-81",Robledo,Bogotá,Apartamento,Fontibón,IVargasS@unal.edu.co,Cafesalud,N.E,Bogotá,Odontología
+1010101104,"María Jorge","Ramírez Rodríguez","TV 41 n No. 50-14",Castilla,Cartagena,Casa,"La Candelaria",MRamírezR@unal.edu.co,"Coomeva EPS",N.E,Bogotá,"Ciencias Agrarias"
+1010101105,"Jorge Miguel","Fernández Hernández","AK 161 a No. 65-78","La Avanzada",Barranquilla,Apartamento,Bosa,JFernándezH@unal.edu.co,SaludTotal,N.E,Bogotá,Enfermería
+1010101106,"Manuel María","Álvarez Jiménez","AC 12 j No. 11-32",Manila,Bucaramanga,Casa,"Puente Aranda",MÁlvarezJ@unal.edu.co,Aliansalud,N.E,Bogotá,"Ciencias Humanas"
+1010101107,"Alejandro María","Castro Díaz","CL 61 t No. 68-73",Belén,Bogotá,Apartaestudio,"La Candelaria",ACastroD@unal.edu.co,SaludTotal,N.E,Bogotá,"Ciencias Humanas"
+1010101108,"Gustavo Lucía","Pérez Reyes","CL 49 d No. 3-35","El Raizal",Barranquilla,Casa,"Antonio Nariño",GPérezR@unal.edu.co,Colmedica,N.E,Bogotá,Ingeniería
+1010101109,"Alejandro Raúl","García González","AC 87 j No. 89-94","La Flora",Bogotá,Casa,"Los Mártires",AGarcíaG@unal.edu.co,"Nueva EPS",N.E,Bogotá,Ingeniería
+1010101110,"Raúl Ana","Torres Ramírez","AC 16 c No. 23-48","Doce de Octubre",Ibagué,Apartaestudio,"Puente Aranda",RTorresR@unal.edu.co,SaludTotal,N.E,Bogotá,Odontología
+1010101111,"Alejandro Carla","Suárez Núñez","KR 131 a No. 82-19","El Pinal",Cali,Casa,"Ciudad Bolívar",ASuárezN@unal.edu.co,SaludTotal,N.E,Bogotá,Artes
+1010101112,"Raúl Luis","Vargas Ramírez","AC 36 n No. 21-80",Manila,Cali,Apartaestudio,Usaquén,RVargasR@unal.edu.co,Compensar,N.E,Bogotá,Artes
+1010101113,"Mario Roberto","Díaz Jiménez","AK 58 j No. 67-73","San Diego",Cúcuta,Apartamento,"Ciudad Bolívar",MDíazJ@unal.edu.co,Colmedica,N.E,Bogotá,Enfermería
+1010101114,"Fernando Ernesto","Rojas Silva","KR 148 e No. 2-48","El Chagualo",Bucaramanga,Casa,Usaquén,FRojasS@unal.edu.co,Colmedica,N.E,Bogotá,"Ciencias Humanas"
+1010101115,"Gustavo Mónica","Martínez Suárez","KR 80 g No. 32-73","El Salado",Bucaramanga,Casa,"Antonio Nariño",GMartínezS@unal.edu.co,"EPS Familiar",N.E,Bogotá,Psicología
+1010101116,"Ricardo Mario","García Álvarez","AK 123 d No. 27-81","La América",Barranquilla,Apartaestudio,Teusaquillo,RGarcíaÁ@unal.edu.co,Famisanar,N.E,Bogotá,"Ciencias Humanas"
+1010101117,"Raúl Isabel","Hernández López","KR 61 p No. 10-79","La Castellana",Ibagué,Casa,"Los Mártires",RHernándezL@unal.edu.co,SaludTotal,N.E,Bogotá,"Ciencias Veterinarias y de Zootecnia"
+1010101118,"Carlos Raúl","Gómez Cruz","TV 59 e No. 98-19","Los Colores",Medellín,Apartaestudio,Tunjuelito,CGómezC@unal.edu.co,Colmedica,N.E,Bogotá,Ingeniería
+1010101119,"Alejandro Natalia","Silva Silva","CL 61 s No. 6-4","La Candelaria",Villavicencio,Apartamento,"Ciudad Bolívar",ASilvaS@unal.edu.co,Cafesalud,N.E,Bogotá,Ciencias
+1010101120,"Andrea Lucía","Rojas Romero","AC 55 l No. 86-25","Doce de Octubre",Barranquilla,Apartaestudio,Tunjuelito,ARojasR@unal.edu.co,SaludTotal,N.E,Bogotá,"Ciencias Agrarias"
+1010101121,"Ernesto Ernesto","García Hernández","AC 112 b No. 41-24",Itagüí,Ibagué,Finca,Tunjuelito,EGarcíaH@unal.edu.co,Cafesalud,N.E,Bogotá,"Ciencias Económicas"
+1010101122,"Alejandro Ricardo","García Ramírez","AK 159 i No. 15-54","La Estrella",Cartagena,Apartamento,"Rafael Uribe Uribe",AGarcíaR@unal.edu.co,"Nueva EPS",N.E,Bogotá,Ciencias
+1010101123,"Natalia María","Rodríguez Ramírez","TV 132 a No. 73-39","El Tesoro",Villavicencio,Apartaestudio,"Ciudad Bolívar",NRodríguezR@unal.edu.co,Famisanar,N.E,Bogotá,"Derecho, Ciencias Políticas y Sociales"
+1010101124,"Carla Andrea","Flores Chávez","AK 44 e No. 76-81","San Lucas",Bogotá,Casa,Suba,CFloresC@unal.edu.co,"Sura EPS",N.E,Bogotá,Medicina
+1010101125,"María Manuel","Pérez Díaz","AC 150 r No. 8-92","San Diego",Ibagué,Casa,"Rafael Uribe Uribe",MPérezD@unal.edu.co,Cafesalud,N.E,Bogotá,"Derecho, Ciencias Políticas y Sociales"
+1010101126,"José Fernando","Cruz Cruz","CL 29 h No. 54-99",Manila,Medellín,Apartamento,Usme,JCruzC@unal.edu.co,Colmedica,N.E,Bogotá,Enfermería
+1010101127,"Ernesto Laura","Silva Romero","CL 61 o No. 66-70",Manila,Villavicencio,Casa,Usme,ESilvaR@unal.edu.co,"Sura EPS",N.E,Bogotá,Medicina
+1010101128,"Mónica Ana","Gómez Romero","AK 131 n No. 58-50",Manrique,Ibagué,Casa,Usaquén,MGómezR@unal.edu.co,Cafesalud,N.E,Bogotá,"Ciencias Agrarias"
+1010101129,"Alejandro Manuel","García Reyes","AK 173 k No. 2-59",Envigado,Medellín,Apartaestudio,Teusaquillo,AGarcíaR@unal.edu.co,Aliansalud,N.E,Bogotá,"Ciencias Económicas"
+1010101130,"Roberto Miguel","Ortiz Díaz","AK 75 f No. 13-51","San Javier",Ibagué,Finca,Fontibón,ROrtizD@unal.edu.co,"EPS Familiar",N.E,Bogotá,Odontología
+1010101131,"Mario Manuel","González Cruz","KR 49 n No. 7-39","San Joaquín",Ibagué,Casa,"Los Mártires",MGonzálezC@unal.edu.co,"EPS Familiar",N.E,Bogotá,"Ciencias Económicas"
+1010101132,"Felipe Carla","Flores Ramírez","TV 107 a No. 45-24","La Avanzada",Bucaramanga,Finca,Bosa,FFloresR@unal.edu.co,"Sura EPS",N.E,Bogotá,Odontología
+1010101133,"Mónica Ricardo","Ramírez Silva","AK 19 m No. 50-84",Robledo,Barranquilla,Apartamento,Suba,MRamírezS@unal.edu.co,Sanitas,N.E,Bogotá,"Ciencias Humanas"
+1010101134,"Laura Lucía","Ortiz Cruz","TV 101 b No. 43-54","El Salado",Soacha,Apartaestudio,"Santa Fe",LOrtizC@unal.edu.co,"Coomeva EPS",N.E,Bogotá,"Ciencias Humanas"
+1010101135,"Isabel Santiago","Romero Flores","KR 58 e No. 29-49","Doce de Octubre",Cartagena,Apartaestudio,"San Cristóbal",IRomeroF@unal.edu.co,"Coomeva EPS",N.E,Bogotá,Ciencias
+1010101136,"Fernando Mario","Morales Ortiz","TV 106 f No. 98-85",Envigado,Medellín,Finca,"Rafael Uribe Uribe",FMoralesO@unal.edu.co,Aliansalud,N.E,Bogotá,Psicología
+1010101137,"Juan María","Reyes Cruz","CL 163 o No. 85-85",Robledo,Bogotá,Casa,"Los Mártires",JReyesC@unal.edu.co,Colmedica,N.E,Bogotá,Artes
+1010101138,"Juan Manuel","Fernández Ramírez","TV 53 h No. 86-50","El Centro",Ibagué,Finca,"Rafael Uribe Uribe",JFernándezR@unal.edu.co,Sanitas,N.E,Bogotá,Medicina
+1010101139,"María Raúl","Pérez Flores","AC 106 d No. 1-84","La Aguacatala",Villavicencio,Finca,Usaquén,MPérezF@unal.edu.co,Colmedica,N.E,Bogotá,Enfermería
+1010101140,"Gabriela Miguel","García Rojas","AC 165 q No. 44-5","Santa Cruz",Cali,Apartaestudio,"Ciudad Bolívar",GGarcíaR@unal.edu.co,Colmedica,N.E,Bogotá,Psicología
+1010101141,"Andrés Luis","Gómez Mendoza","TV 37 p No. 19-51","El Tesoro",Cali,Finca,"San Cristóbal",AGómezM@unal.edu.co,Cafesalud,N.E,Bogotá,"Ciencias Económicas"
+1010101142,"Diego Alejandro","Castro Martínez","CL 125 m No. 10-3","La Castellana",Cúcuta,Casa,Teusaquillo,DCastroM@unal.edu.co,"Nueva EPS",N.E,Bogotá,"Ciencias Agrarias"
+1010101143,"Juan Pedro","Mendoza Romero","TV 129 s No. 57-3","Laureano Gómez",Cali,Apartaestudio,"Antonio Nariño",JMendozaR@unal.edu.co,"Coomeva EPS",N.E,Bogotá,Odontología
+1010101144,"Andrés Alejandro","González Sánchez","KR 62 b No. 38-97","El Tesoro",Cartagena,Finca,"San Cristóbal",AGonzálezS@unal.edu.co,"Nueva EPS",N.E,Bogotá,"Ciencias Económicas"
+1010101145,"Ana Gabriela","López González","CL 149 s No. 14-93",Guayabal,Villavicencio,Apartaestudio,"Santa Fe",ALópezG@unal.edu.co,"Nueva EPS",N.E,Bogotá,"Derecho, Ciencias Políticas y Sociales"
+1010101146,"Andrea Andrea","Martínez Fernández","AC 129 o No. 84-6","Santa Cruz",Cali,Casa,"Rafael Uribe Uribe",AMartínezF@unal.edu.co,"Nueva EPS",N.E,Bogotá,Enfermería
+1010101147,"Gustavo Natalia","Suárez Núñez","AC 168 a No. 85-4",Itagüí,Barranquilla,Apartaestudio,"Rafael Uribe Uribe",GSuárezN@unal.edu.co,"Coomeva EPS",N.E,Bogotá,Psicología
+1010101148,"Ricardo Luis","Sánchez Torres","TV 149 r No. 42-56",Castilla,Ibagué,Apartaestudio,Kennedy,RSánchezT@unal.edu.co,SaludTotal,N.E,Bogotá,"Ciencias Veterinarias y de Zootecnia"
+1010101149,"Andrés Pedro","Mendoza Fernández","KR 137 o No. 87-32",Manila,Medellín,Apartamento,Bosa,AMendozaF@unal.edu.co,"Nueva EPS",N.E,Bogotá,Enfermería
+1010101150,"María María","Ramírez Morales","AK 47 l No. 4-7","La Flora",Cúcuta,Casa,Bosa,MRamírezM@unal.edu.co,"Coomeva EPS",N.E,Bogotá,Medicina
+1010101151,"José Andrea","Mendoza Díaz","CL 40 e No. 46-58","El Diamante",Cartagena,Apartamento,Usme,JMendozaD@unal.edu.co,"Nueva EPS",N.E,Bogotá,"Ciencias Agrarias"
+1010101152,"Ernesto Alejandro","González Núñez","CL 133 r No. 80-58",Castilla,Bucaramanga,Apartamento,Chapinero,EGonzálezN@unal.edu.co,"Sura EPS",N.E,Bogotá,Ciencias
+1010101153,"Alejandro Mónica","García Morales","CL 34 k No. 42-29","San Javier",Soacha,Finca,"Puente Aranda",AGarcíaM@unal.edu.co,Cafesalud,N.E,Bogotá,Odontología
+1010101154,"Gustavo Carla","Hernández Rojas","KR 79 l No. 79-58",Laureles,Medellín,Apartamento,Fontibón,GHernándezR@unal.edu.co,"Coomeva EPS",N.E,Bogotá,Ingeniería
+1010101155,"Jorge Fernando","Álvarez Morales","AC 161 m No. 54-13","La Candelaria",Medellín,Finca,Tunjuelito,JÁlvarezM@unal.edu.co,Compensar,N.E,Bogotá,Psicología
+1010101156,"Isabel Carlos","Suárez Castro","KR 149 k No. 28-25","Santa Cruz",Medellín,Apartamento,"La Candelaria",ISuárezC@unal.edu.co,Famisanar,N.E,Bogotá,"Derecho, Ciencias Políticas y Sociales"
+1010101157,"Manuel Andrés","Gómez Díaz","AK 157 l No. 49-25","El Pinal",Bucaramanga,Apartamento,"Rafael Uribe Uribe",MGómezD@unal.edu.co,Sanitas,N.E,Bogotá,Ciencias
+1010101158,"Ricardo Ernesto","Hernández Ruiz","TV 107 h No. 90-66","El Rodeo",Ibagué,Apartamento,Bosa,RHernándezR@unal.edu.co,"EPS Familiar",N.E,Bogotá,"Ciencias Humanas"
+1010101159,"Mónica Gabriela","Sánchez González","AK 173 r No. 73-15",Manrique,Ibagué,Apartaestudio,"Antonio Nariño",MSánchezG@unal.edu.co,Colmedica,N.E,Bogotá,Medicina
+1010101160,"José Gabriela","Gómez Ortiz","TV 88 a No. 12-20","La América",Cali,Apartaestudio,Tunjuelito,JGómezO@unal.edu.co,Colmedica,N.E,Bogotá,Ciencias
+1010101161,"Diego Natalia","González Núñez","KR 72 r No. 7-84",Belén,Villavicencio,Apartaestudio,"Puente Aranda",DGonzálezN@unal.edu.co,"Sura EPS",N.E,Bogotá,"Derecho, Ciencias Políticas y Sociales"
+1010101162,"Carla Juan","Rojas Sánchez","AC 37 r No. 92-36",Moravia,Cúcuta,Apartaestudio,Fontibón,CRojasS@unal.edu.co,"Coomeva EPS",N.E,Bogotá,Psicología
+1010101163,"Miguel Lucía","Fernández Flores","TV 132 s No. 7-19","Doce de Octubre",Cali,Finca,Otra,MFernándezF@unal.edu.co,Aliansalud,N.E,Bogotá,Psicología
+1010101164,"Alejandro Santiago","Rojas Pérez","AK 164 r No. 56-12","La Mota",Medellín,Finca,Teusaquillo,ARojasP@unal.edu.co,Aliansalud,N.E,Bogotá,"Ciencias Humanas"
+1010101165,"Gabriela Ernesto","Gómez Rojas","TV 42 t No. 93-1","San Javier",Cúcuta,Casa,Otra,GGómezR@unal.edu.co,Aliansalud,N.E,Bogotá,Odontología
+1010101166,"Alejandro Diego","Vargas Mendoza","AK 116 g No. 73-82","Las Acacias",Bogotá,Apartaestudio,Suba,AVargasM@unal.edu.co,Sanitas,N.E,Bogotá,Ingeniería
+1010101167,"Laura Laura","Romero Ramírez","AK 153 k No. 89-63","Laureano Gómez",Barranquilla,Casa,"San Cristóbal",LRomeroR@unal.edu.co,SaludTotal,N.E,Bogotá,Psicología
+1010101168,"Andrea Andrea","Álvarez Pérez","AK 174 e No. 57-42",Laureles,Ibagué,Apartaestudio,Fontibón,AÁlvarezP@unal.edu.co,"Nueva EPS",N.E,Bogotá,Artes
+1010101169,"Andrea Raúl","López Rodríguez","AK 166 t No. 15-45","La Avanzada",Soacha,Apartamento,Suba,ALópezR@unal.edu.co,Sanitas,N.E,Bogotá,Odontología
+1010101170,"Gustavo Fernando","López Álvarez","KR 36 q No. 96-65","Las Acacias",Villavicencio,Finca,"Barrios Unidos",GLópezÁ@unal.edu.co,"Sura EPS",N.E,Bogotá,Medicina
+1010101171,"Isabel Mónica","Romero Sánchez","TV 173 o No. 46-71","La Francia",Soacha,Apartamento,"La Candelaria",IRomeroS@unal.edu.co,"Nueva EPS",N.E,Bogotá,"Ciencias Agrarias"
+1010101172,"José Carla","Fernández Romero","TV 178 b No. 95-19",Robledo,Bucaramanga,Casa,Usme,JFernándezR@unal.edu.co,"Sura EPS",N.E,Bogotá,Ciencias
+1010101173,"Andrés Miguel","Torres Cruz","AK 49 b No. 25-84","El Raizal",Cartagena,Finca,Chapinero,ATorresC@unal.edu.co,SaludTotal,N.E,Bogotá,Enfermería
+1010101174,"José Natalia","Ruiz Torres","CL 178 n No. 41-49","Santa Cruz",Bucaramanga,Apartaestudio,Teusaquillo,JRuizT@unal.edu.co,SaludTotal,N.E,Bogotá,Ingeniería
+1010101175,"Andrés Miguel","Flores Núñez","CL 5 l No. 33-23","Cristo Rey",Cartagena,Apartaestudio,Chapinero,AFloresN@unal.edu.co,"EPS Familiar",N.E,Bogotá,Odontología
+1010101176,"Lucía Manuel","Mendoza Romero","AC 14 e No. 78-52","San Diego",Villavicencio,Finca,"Antonio Nariño",LMendozaR@unal.edu.co,"Nueva EPS",N.E,Bogotá,"Ciencias Humanas"
+1010101177,"Ernesto Alejandro","Gómez Rojas","KR 136 b No. 80-94","El Tesoro",Cali,Casa,"Antonio Nariño",EGómezR@unal.edu.co,"Nueva EPS",N.E,Bogotá,Ciencias
+1010101178,"Ana Fernando","Hernández Ortiz","KR 126 h No. 9-1","San Joaquín",Barranquilla,Casa,Teusaquillo,AHernándezO@unal.edu.co,"Sura EPS",N.E,Bogotá,Ciencias
+1010101179,"Ricardo Carlos","Núñez Díaz","CL 68 c No. 67-26","El Centro",Cúcuta,Apartaestudio,"Puente Aranda",RNúñezD@unal.edu.co,"EPS Familiar",N.E,Bogotá,Ciencias
+1010101180,"Isabel Luis","Pérez Martínez","AC 20 i No. 91-28","Santa Cruz",Cúcuta,Casa,Suba,IPérezM@unal.edu.co,Aliansalud,N.E,Bogotá,"Ciencias Humanas"
+1010101181,"Andrés Andrea","Vargas García","TV 48 o No. 21-11","Barrio Colombia",Barranquilla,Apartaestudio,Kennedy,AVargasG@unal.edu.co,"Sura EPS",N.E,Bogotá,"Ciencias Veterinarias y de Zootecnia"
+1010101182,"Carla Pedro","Fernández Ortiz","KR 171 m No. 41-97","Doce de Octubre",Bucaramanga,Apartamento,Usme,CFernándezO@unal.edu.co,Compensar,N.E,Bogotá,Medicina
+1010101183,"Santiago Juan","Fernández González","AK 38 o No. 23-58","El Popular",Bucaramanga,Casa,"Los Mártires",SFernándezG@unal.edu.co,"EPS Familiar",N.E,Bogotá,Ciencias
+1010101184,"Juan Mónica","Ramírez Álvarez","TV 32 e No. 42-75","El Diamante",Bucaramanga,Apartaestudio,"Antonio Nariño",JRamírezÁ@unal.edu.co,"Coomeva EPS",N.E,Bogotá,"Ciencias Veterinarias y de Zootecnia"
+1010101185,"José Diego","Torres Hernández","KR 43 q No. 55-2",Moravia,Villavicencio,Finca,Bosa,JTorresH@unal.edu.co,SaludTotal,N.E,Bogotá,Odontología
+1010101186,"Juan Carlos","García Sánchez","AC 85 a No. 47-58",Envigado,Bogotá,Casa,Kennedy,JGarcíaS@unal.edu.co,Famisanar,N.E,Bogotá,Artes
+1010101187,"Andrea Carlos","Cruz Pérez","AK 131 p No. 35-89","El Poblado",Cartagena,Finca,"Antonio Nariño",ACruzP@unal.edu.co,"Nueva EPS",N.E,Bogotá,"Ciencias Agrarias"
+1010101188,"Isabel Isabel","Suárez Álvarez","TV 105 i No. 11-97","El Popular",Cartagena,Apartamento,Chapinero,ISuárezÁ@unal.edu.co,Famisanar,N.E,Bogotá,Medicina
+1010101189,"Luis Andrés","Rodríguez Jiménez","AC 108 e No. 47-13","Loma de Los Bernal",Cúcuta,Apartaestudio,"Antonio Nariño",LRodríguezJ@unal.edu.co,Sanitas,N.E,Bogotá,"Ciencias Veterinarias y de Zootecnia"
+1010101190,"Carlos Miguel","Reyes Rodríguez","KR 5 g No. 98-10","El Popular",Cali,Apartaestudio,Usaquén,CReyesR@unal.edu.co,Cafesalud,N.E,Bogotá,Artes
+1010101191,"Santiago Mario","Chávez Vargas","KR 104 c No. 87-13","El Salado",Villavicencio,Apartamento,Usaquén,SChávezV@unal.edu.co,Famisanar,N.E,Bogotá,"Ciencias Humanas"
+1010101192,"Luis Ricardo","Hernández Martínez","AK 6 l No. 54-37",Aranjuez,Villavicencio,Finca,Bosa,LHernándezM@unal.edu.co,SaludTotal,N.E,Bogotá,"Derecho, Ciencias Políticas y Sociales"
+1010101193,"Juan Luis","Suárez Núñez","CL 48 m No. 83-19",Itagüí,Cúcuta,Apartamento,Tunjuelito,JSuárezN@unal.edu.co,"Nueva EPS",N.E,Bogotá,Ciencias
+1010101194,"Alejandro Fernando","Fernández Núñez","AK 36 p No. 86-93","La Estrella",Cali,Casa,Usme,AFernándezN@unal.edu.co,Compensar,N.E,Bogotá,Medicina
+1010101195,"Gabriela Alejandro","Mendoza Romero","AK 44 k No. 14-1",Laureles,Barranquilla,Apartamento,Usme,GMendozaR@unal.edu.co,"Sura EPS",N.E,Bogotá,"Ciencias Veterinarias y de Zootecnia"
+1010101196,"Alejandro Ernesto","Fernández Reyes","AC 107 n No. 57-25","La Estrella",Cúcuta,Casa,"Los Mártires",AFernándezR@unal.edu.co,Compensar,N.E,Bogotá,Medicina
+1010101197,"Ernesto Roberto","Gómez Chávez","AC 136 m No. 45-52","El Salado",Medellín,Casa,Tunjuelito,EGómezC@unal.edu.co,Colmedica,N.E,Bogotá,"Ciencias Económicas"
+1010101198,"Andrea Carlos","Álvarez González","CL 161 b No. 52-92",Manila,Villavicencio,Apartaestudio,Chapinero,AÁlvarezG@unal.edu.co,"Coomeva EPS",N.E,Bogotá,Medicina
+1010101199,"Ernesto Mario","Romero Gómez","TV 98 g No. 80-70","La Mota",Cartagena,Casa,"La Candelaria",ERomeroG@unal.edu.co,SaludTotal,N.E,Bogotá,"Derecho, Ciencias Políticas y Sociales"
+1010101200,"Raúl Luis","Ortiz Ruiz","CL 126 j No. 80-25","Doce de Octubre",Villavicencio,Casa,"Los Mártires",ROrtizR@unal.edu.co,Sanitas,N.E,Bogotá,Artes
