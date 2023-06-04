@@ -38,8 +38,8 @@ UPDATE personalsalud SET salEspecializacion = 'Jefe' WHERE perID = 10;
 SELECT * FROM personalsalud;
 
 SELECT * FROM discapacidad;
-UPDATE discapacidad SET disVerificado = 1 WHERE perID = 12;
-DELETE FROM discapacidad WHERE perID = 200;
+UPDATE discapacidad SET disVerificado = 1 WHERE perID = 101010112;
+DELETE FROM discapacidad WHERE perID = 1010101200;
 SELECT * FROM discapacidad;
 
 # --------------------------------------------- AREA DE DEPORTES ---------------------------------------------------
