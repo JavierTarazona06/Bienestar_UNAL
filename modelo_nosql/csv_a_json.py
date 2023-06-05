@@ -15,7 +15,7 @@ class reader:
         # Mostrar el contenido del DataFrame
         #print(self.dataframe)
 
-    def chanhe_file(self, ruta_csv:str) -> None:
+    def change_file(self, ruta_csv:str) -> None:
         # Ruta del archivo CSV
         #ruta_csv = "Datos_persona.csv"
 
