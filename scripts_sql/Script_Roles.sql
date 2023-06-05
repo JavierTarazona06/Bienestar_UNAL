@@ -12,37 +12,37 @@ CREATE ROLE IF NOT EXISTS 'direccion_cultural'@'localhost';
 #														Javier
 #--------------------------------------------------------------------------------------------------------
 
-grant update on bienestar.persona to 'estudiante'@'localhost';
-grant update on bienestar.estudiante to 'estudiante'@'localhost';
+grant update on Bienestar.persona to 'estudiante'@'localhost';
+grant update on Bienestar.estudiante to 'estudiante'@'localhost';
 
-grant select on bienestar.Carrera to 'estudiante'@'localhost';
-grant select on bienestar.Area to 'estudiante'@'localhost';
-grant select on bienestar.Programa to 'estudiante'@'localhost';
-grant select on bienestar.Programa_tiene_EventoTaller to 'estudiante'@'localhost';
-grant select on bienestar.EventoTaller to 'estudiante'@'localhost';
-grant select on bienestar.Programa_tiene_proyecto to 'estudiante'@'localhost';
-grant select on bienestar.Proyecto to 'estudiante'@'localhost';
-grant select on bienestar.Convocatoria to 'estudiante'@'localhost';
-grant select,insert on bienestar.Estudiante_toma_convocatoria to 'estudiante'@'localhost';
-grant select on bienestar.TiendaBienestar to 'estudiante'@'localhost';
-grant select on bienestar.empleado_tiendaUN to 'estudiante'@'localhost';
-grant select on bienestar.Producto to 'estudiante'@'localhost';
-grant select on bienestar.producto_tiendaUN to 'estudiante'@'localhost';
-grant select on bienestar.Factura to 'estudiante'@'localhost';
-grant select on bienestar.factura_producto to 'estudiante'@'localhost';
-grant select on bienestar.FallaAlimentacion to 'estudiante'@'localhost';
-grant select on bienestar.ActividadCorresp to 'estudiante'@'localhost';
-grant select on bienestar.Corresponsabilidad to 'estudiante'@'localhost';
+grant select on Bienestar.carrera to 'estudiante'@'localhost';
+grant select on Bienestar.area to 'estudiante'@'localhost';
+grant select on Bienestar.programa to 'estudiante'@'localhost';
+grant select on Bienestar.programa_tiene_eventotaller to 'estudiante'@'localhost';
+grant select on Bienestar.eventotaller to 'estudiante'@'localhost';
+grant select on Bienestar.programa_tiene_proyecto to 'estudiante'@'localhost';
+grant select on Bienestar.proyecto to 'estudiante'@'localhost';
+grant select on Bienestar.convocatoria to 'estudiante'@'localhost';
+grant select,insert on Bienestar.estudiante_toma_convocatoria to 'estudiante'@'localhost';
+grant select on Bienestar.tiendabienestar to 'estudiante'@'localhost';
+grant select on Bienestar.empleado_tiendaun to 'estudiante'@'localhost';
+grant select on Bienestar.producto to 'estudiante'@'localhost';
+grant select on Bienestar.producto_tiendaun to 'estudiante'@'localhost';
+grant select on Bienestar.factura to 'estudiante'@'localhost';
+grant select on Bienestar.factura_producto to 'estudiante'@'localhost';
+grant select on Bienestar.fallaalimentacion to 'estudiante'@'localhost';
+grant select on Bienestar.actividadcorresp to 'estudiante'@'localhost';
+grant select on Bienestar.corresponsabilidad to 'estudiante'@'localhost';
 
-grant select on bienestar.ConvocatoriaGestionAlimentaria to 'estudiante'@'localhost';
-grant select on bienestar.ConvocatoriaGestionTransporte to 'estudiante'@'localhost';
-grant select on bienestar.ConvocatoriaGestionEconomica to 'estudiante'@'localhost';
-grant select on bienestar.ConvocatoriaFomentoEmprendimeinto to 'estudiante'@'localhost';
-grant select on bienestar.ConvocatoriaGestionAlojamiento to 'estudiante'@'localhost';
+grant select on Bienestar.convocatoriagestionalimentaria to 'estudiante'@'localhost';
+grant select on Bienestar.convocatoriagestiontransporte to 'estudiante'@'localhost';
+grant select on Bienestar.convocatoriagestioneconomica to 'estudiante'@'localhost';
+grant select on Bienestar.convocatoriafomentoemprendimiento to 'estudiante'@'localhost';
+grant select on Bienestar.convocatoriagestionalojamiento to 'estudiante'@'localhost';
 
-grant select,update on bienestar.vw_info_estudiante to 'estudiante'@'localhost';
-grant select,insert on bienestar.vw_info_convocatoria_estudiante to 'estudiante'@'localhost';
-grant select on bienestar.vw_info_factura to 'estudiante'@'localhost';
+grant select,update on Bienestar.vw_info_estudiante to 'estudiante'@'localhost';
+grant select,insert on Bienestar.vw_info_convocatoria_estudiante to 'estudiante'@'localhost';
+grant select on Bienestar.vw_info_factura to 'estudiante'@'localhost';
 
 GRANT EXECUTE ON PROCEDURE sp_fallaalimentacion_est TO 'estudiante'@'localhost';
 GRANT EXECUTE ON PROCEDURE sp_actividadcorresp_est TO 'estudiante'@'localhost';
@@ -52,7 +52,7 @@ GRANT EXECUTE ON FUNCTION pbm_est TO 'estudiante'@'localhost';
 GRANT EXECUTE ON PROCEDURE sp_insertar_est_tm_conv_est TO 'estudiante'@'localhost';
 GRANT EXECUTE ON PROCEDURE programa_area_convocatoria TO 'estudiante'@'localhost';
 
-GRANT EXECUTE ON PROCEDURE sp_convocatoriafomentoemprendimeinto_est TO 'estudiante'@'localhost';
+GRANT EXECUTE ON PROCEDURE sp_convocatoriafomentoemprendimiento_est TO 'estudiante'@'localhost';
 GRANT EXECUTE ON PROCEDURE sp_convocatoriagestionalimentaria_est TO 'estudiante'@'localhost';
 GRANT EXECUTE ON PROCEDURE sp_convocatoriagestionalojamiento_est TO 'estudiante'@'localhost';
 GRANT EXECUTE ON PROCEDURE sp_convocatoriagestioneconomica_est TO 'estudiante'@'localhost';
@@ -63,23 +63,23 @@ GRANT EXECUTE ON PROCEDURE sp_productos_tienda TO 'estudiante'@'localhost';
 GRANT EXECUTE ON PROCEDURE sp_tiendas_ofrece_producto TO 'estudiante'@'localhost';
 #---------------
 
-grant update on bienestar.persona to 'no_estudiante'@'localhost';
+grant update on Bienestar.persona to 'no_estudiante'@'localhost';
 
-grant select on bienestar.Area to 'no_estudiante'@'localhost';
-grant select on bienestar.Programa to 'no_estudiante'@'localhost';
-grant select on bienestar.Programa_tiene_EventoTaller to 'no_estudiante'@'localhost';
-grant select on bienestar.EventoTaller to 'no_estudiante'@'localhost';
-grant select on bienestar.Programa_tiene_proyecto to 'no_estudiante'@'localhost';
-grant select on bienestar.Proyecto to 'no_estudiante'@'localhost';
-grant select on bienestar.Convocatoria to 'no_estudiante'@'localhost';
-grant select on bienestar.TiendaBienestar to 'no_estudiante'@'localhost';
-grant select on bienestar.empleado_tiendaUN to 'no_estudiante'@'localhost';
-grant select on bienestar.Producto to 'no_estudiante'@'localhost';
-grant select on bienestar.producto_tiendaUN to 'no_estudiante'@'localhost';
-grant select on bienestar.Factura to 'no_estudiante'@'localhost';
-grant select on bienestar.factura_producto to 'no_estudiante'@'localhost';
+grant select on Bienestar.area to 'no_estudiante'@'localhost';
+grant select on Bienestar.programa to 'no_estudiante'@'localhost';
+grant select on Bienestar.programa_tiene_eventotaller to 'no_estudiante'@'localhost';
+grant select on Bienestar.eventotaller to 'no_estudiante'@'localhost';
+grant select on Bienestar.programa_tiene_proyecto to 'no_estudiante'@'localhost';
+grant select on Bienestar.proyecto to 'no_estudiante'@'localhost';
+grant select on Bienestar.convocatoria to 'no_estudiante'@'localhost';
+grant select on Bienestar.tiendabienestar to 'no_estudiante'@'localhost';
+grant select on Bienestar.empleado_tiendaun to 'no_estudiante'@'localhost';
+grant select on Bienestar.producto to 'no_estudiante'@'localhost';
+grant select on Bienestar.producto_tiendaun to 'no_estudiante'@'localhost';
+grant select on Bienestar.factura to 'no_estudiante'@'localhost';
+grant select on Bienestar.factura_producto to 'no_estudiante'@'localhost';
 
-grant select on bienestar.vw_info_factura to 'no_estudiante'@'localhost';
+grant select on Bienestar.vw_info_factura to 'no_estudiante'@'localhost';
 
 GRANT EXECUTE ON PROCEDURE sp_info_factura_per TO 'no_estudiante'@'localhost';
 GRANT EXECUTE ON PROCEDURE sp_productos_tienda TO 'no_estudiante'@'localhost';
@@ -87,45 +87,45 @@ GRANT EXECUTE ON PROCEDURE sp_tiendas_ofrece_producto TO 'no_estudiante'@'localh
 
 #---------------
 
-grant select, insert, update on bienestar.Persona to 'secretaria'@'localhost';
-grant select, insert, update on bienestar.persona_cargo to 'secretaria'@'localhost';
-grant select, insert, update on bienestar.Cargo to 'secretaria'@'localhost';
-grant select, insert, update on bienestar.Estudiante to 'secretaria'@'localhost';
-grant select, insert, update on bienestar.Carrera to 'secretaria'@'localhost';
+grant select, insert, update on Bienestar.persona to 'secretaria'@'localhost';
+grant select, insert, update on Bienestar.persona_cargo to 'secretaria'@'localhost';
+grant select, insert, update on Bienestar.cargo to 'secretaria'@'localhost';
+grant select, insert, update on Bienestar.Estudiante to 'secretaria'@'localhost';
+grant select, insert, update on Bienestar.carrera to 'secretaria'@'localhost';
 
-grant select on bienestar.Area to 'secretaria'@'localhost';
-grant select on bienestar.Programa to 'secretaria'@'localhost';
+grant select on Bienestar.area to 'secretaria'@'localhost';
+grant select on Bienestar.programa to 'secretaria'@'localhost';
 
-grant select, insert, update on bienestar.Programa_tiene_EventoTaller to 'secretaria'@'localhost';
-grant select, insert, update on bienestar.EventoTaller to 'secretaria'@'localhost';
-grant select, insert, update on bienestar.Programa_tiene_proyecto to 'secretaria'@'localhost';
+grant select, insert, update on Bienestar.programa_tiene_EventoTaller to 'secretaria'@'localhost';
+grant select, insert, update on Bienestar.EventoTaller to 'secretaria'@'localhost';
+grant select, insert, update on Bienestar.programa_tiene_proyecto to 'secretaria'@'localhost';
 
-grant select on bienestar.Proyecto to 'secretaria'@'localhost';
+grant select on Bienestar.proyecto to 'secretaria'@'localhost';
 
-grant select, update on bienestar.Convocatoria to 'secretaria'@'localhost';
+grant select, update on Bienestar.convocatoria to 'secretaria'@'localhost';
 
-grant all on bienestar.Estudiante_toma_convocatoria to 'secretaria'@'localhost';
+grant all on Bienestar.Estudiante_toma_convocatoria to 'secretaria'@'localhost';
 
-grant select, update on bienestar.TiendaBienestar to 'secretaria'@'localhost';
-grant select, insert, update on bienestar.empleado_tiendaUN to 'secretaria'@'localhost';
-grant select, update on bienestar.Producto to 'secretaria'@'localhost';
+grant select, update on Bienestar.tiendabienestar to 'secretaria'@'localhost';
+grant select, insert, update on Bienestar.empleado_tiendaun to 'secretaria'@'localhost';
+grant select, update on Bienestar.producto to 'secretaria'@'localhost';
 
-grant select, insert, update on bienestar.producto_tiendaUN to 'secretaria'@'localhost';
-grant select, insert, update on bienestar.Factura to 'secretaria'@'localhost';
-grant select, insert, update on bienestar.factura_producto to 'secretaria'@'localhost';
+grant select, insert, update on Bienestar.producto_tiendaun to 'secretaria'@'localhost';
+grant select, insert, update on Bienestar.factura to 'secretaria'@'localhost';
+grant select, insert, update on Bienestar.factura_producto to 'secretaria'@'localhost';
 
-grant select, insert on bienestar.FallaAlimentacion to 'secretaria'@'localhost';
-grant select, insert on bienestar.ActividadCorresp to 'secretaria'@'localhost';
-grant select, insert, update on bienestar.Corresponsabilidad to 'secretaria'@'localhost';
-grant select, update on bienestar.ConvocatoriaGestionAlimentaria to 'secretaria'@'localhost';
-grant select, update on bienestar.ConvocatoriaGestionTransporte to 'secretaria'@'localhost';
-grant select, update on bienestar.ConvocatoriaGestionEconomica to 'secretaria'@'localhost';
-grant select, update on bienestar.ConvocatoriaFomentoEmprendimeinto to 'secretaria'@'localhost';
-grant select, update on bienestar.ConvocatoriaGestionAlojamiento to 'secretaria'@'localhost';
+grant select, insert on Bienestar.FallaAlimentacion to 'secretaria'@'localhost';
+grant select, insert on Bienestar.ActividadCorresp to 'secretaria'@'localhost';
+grant select, insert, update on Bienestar.corresponsabilidad to 'secretaria'@'localhost';
+grant select, update on Bienestar.convocatoriagestionalimentaria to 'secretaria'@'localhost';
+grant select, update on Bienestar.convocatoriagestiontransporte to 'secretaria'@'localhost';
+grant select, update on Bienestar.convocatoriagestioneconomica to 'secretaria'@'localhost';
+grant select, update on Bienestar.convocatoriafomentoemprendimiento to 'secretaria'@'localhost';
+grant select, update on Bienestar.convocatoriagestionalojamiento to 'secretaria'@'localhost';
 
-grant select, insert, update on bienestar.vw_info_estudiante to 'secretaria'@'localhost';
-grant select, update on bienestar.vw_info_convocatoria_estudiante to 'secretaria'@'localhost';
-grant select, insert, update on bienestar.vw_info_factura to 'secretaria'@'localhost';
+grant select, insert, update on Bienestar.vw_info_estudiante to 'secretaria'@'localhost';
+grant select, update on Bienestar.vw_info_convocatoria_estudiante to 'secretaria'@'localhost';
+grant select, insert, update on Bienestar.vw_info_factura to 'secretaria'@'localhost';
 
 GRANT EXECUTE ON PROCEDURE sp_insertar_est_tm_conv_est TO 'secretaria'@'localhost';
 GRANT EXECUTE ON PROCEDURE nombre_convocatorias_up TO 'secretaria'@'localhost';
@@ -149,38 +149,38 @@ GRANT EXECUTE ON PROCEDURE insertar_conv_transporte TO 'secretaria'@'localhost';
 
 #-----------------
 
-grant all on bienestar.Persona to 'direccion_economica'@'localhost';
-grant all on bienestar.persona_cargo to 'direccion_economica'@'localhost';
-grant all on bienestar.Cargo to 'direccion_economica'@'localhost';
-grant all on bienestar.Estudiante to 'direccion_economica'@'localhost';
-grant all on bienestar.Carrera to 'direccion_economica'@'localhost';
-grant all on bienestar.Area to 'direccion_economica'@'localhost';
-grant all on bienestar.Programa to 'direccion_economica'@'localhost';
-grant all on bienestar.Programa_tiene_EventoTaller to 'direccion_economica'@'localhost';
-grant all on bienestar.EventoTaller to 'direccion_economica'@'localhost';
-grant all on bienestar.Programa_tiene_proyecto to 'direccion_economica'@'localhost';
-grant all on bienestar.Proyecto to 'direccion_economica'@'localhost';
-grant all on bienestar.Convocatoria to 'direccion_economica'@'localhost';
-grant all on bienestar.Estudiante_toma_convocatoria to 'direccion_economica'@'localhost';
-grant all on bienestar.TiendaBienestar to 'direccion_economica'@'localhost';
-grant all on bienestar.empleado_tiendaUN to 'direccion_economica'@'localhost';
-grant all on bienestar.Producto to 'direccion_economica'@'localhost';
-grant all on bienestar.producto_tiendaUN to 'direccion_economica'@'localhost';
-grant all on bienestar.Factura to 'direccion_economica'@'localhost';
-grant all on bienestar.factura_producto to 'direccion_economica'@'localhost';
+grant all on Bienestar.persona to 'direccion_economica'@'localhost';
+grant all on Bienestar.persona_cargo to 'direccion_economica'@'localhost';
+grant all on Bienestar.cargo to 'direccion_economica'@'localhost';
+grant all on Bienestar.estudiante to 'direccion_economica'@'localhost';
+grant all on Bienestar.carrera to 'direccion_economica'@'localhost'; 
+grant all on Bienestar.area to 'direccion_economica'@'localhost'; 
+grant all on Bienestar.programa to 'direccion_economica'@'localhost'; 
+grant all on Bienestar.programa_tiene_eventotaller to 'direccion_economica'@'localhost'; 
+grant all on Bienestar.eventotaller to 'direccion_economica'@'localhost'; 
+grant all on Bienestar.programa_tiene_proyecto to 'direccion_economica'@'localhost';
+grant all on Bienestar.proyecto to 'direccion_economica'@'localhost';
+grant all on Bienestar.convocatoria to 'direccion_economica'@'localhost'; 
+grant all on Bienestar.estudiante_toma_convocatoria to 'direccion_economica'@'localhost';
+grant all on Bienestar.tiendabienestar to 'direccion_economica'@'localhost'; 
+grant all on Bienestar.empleado_tiendaun to 'direccion_economica'@'localhost'; -- *
+grant all on Bienestar.producto to 'direccion_economica'@'localhost';
+grant all on Bienestar.producto_tiendaun to 'direccion_economica'@'localhost';
+grant all on Bienestar.factura to 'direccion_economica'@'localhost';
+grant all on Bienestar.factura_producto to 'direccion_economica'@'localhost';
 
-grant select, insert, update on bienestar.FallaAlimentacion to 'direccion_economica'@'localhost';
-grant select, insert, update on bienestar.ActividadCorresp to 'direccion_economica'@'localhost';
-grant select, insert, update on bienestar.Corresponsabilidad to 'direccion_economica'@'localhost';
-grant all on bienestar.ConvocatoriaGestionAlimentaria to 'direccion_economica'@'localhost';
-grant all on bienestar.ConvocatoriaGestionTransporte to 'direccion_economica'@'localhost';
-grant all on bienestar.ConvocatoriaGestionEconomica to 'direccion_economica'@'localhost';
-grant all on bienestar.ConvocatoriaFomentoEmprendimeinto to 'direccion_economica'@'localhost';
-grant all on bienestar.ConvocatoriaGestionAlojamiento to 'direccion_economica'@'localhost';
+grant select, insert, update on Bienestar.fallaalimentacion to 'direccion_economica'@'localhost';
+grant select, insert, update on Bienestar.actividadCorresp to 'direccion_economica'@'localhost';
+grant select, insert, update on Bienestar.corresponsabilidad to 'direccion_economica'@'localhost';
+grant all on Bienestar.convocatoriagestionalimentaria to 'direccion_economica'@'localhost';
+grant all on Bienestar.convocatoriagestiontransporte to 'direccion_economica'@'localhost';
+grant all on Bienestar.convocatoriagestioneconomica to 'direccion_economica'@'localhost';
+grant all on Bienestar.convocatoriafomentoemprendimiento to 'direccion_economica'@'localhost';
+grant all on Bienestar.convocatoriagestionalojamiento to 'direccion_economica'@'localhost';
 
-grant all on bienestar.vw_info_estudiante to 'direccion_economica'@'localhost';
-grant all on bienestar.vw_info_convocatoria_estudiante to 'direccion_economica'@'localhost';
-grant all on bienestar.vw_info_factura to 'direccion_economica'@'localhost';
+grant all on Bienestar.vw_info_estudiante to 'direccion_economica'@'localhost';
+grant all on Bienestar.vw_info_convocatoria_estudiante to 'direccion_economica'@'localhost';
+grant all on Bienestar.vw_info_factura to 'direccion_economica'@'localhost';
 
 GRANT EXECUTE ON PROCEDURE sp_insertar_est_tm_conv_est TO 'direccion_economica'@'localhost';
 GRANT EXECUTE ON PROCEDURE nombre_convocatorias_up TO 'direccion_economica'@'localhost';
@@ -254,9 +254,9 @@ GRANT EXECUTE ON PROCEDURE pas_edit_perfilintegral TO 'direccion_salud'@'localho
 #--------------------------------------------------------------------------------------------------------
 
 #--------------------------------------------Permisos para estudiantes--------------------------------------------------------------
-grant select on Bienestar.TorneoInterno to 'estudiante'@'localhost';
-grant select on Bienestar.ConvocatoriaCursoLibre to 'estudiante'@'localhost';
-grant select on Bienestar.ConvocatoriaSeleccion to 'estudiante'@'localhost';
+grant select on Bienestar.torneointerno to 'estudiante'@'localhost';
+grant select on Bienestar.convocatoriacursolibre to 'estudiante'@'localhost';
+grant select on Bienestar.convocatoriaseleccion to 'estudiante'@'localhost';
 
 grant select on vw_info_curso_libre_convocatoria to 'estudiante'@'localhost';
 grant select on vw_info_seleccion_convocatoria to 'estudiante'@'localhost';
@@ -274,9 +274,9 @@ grant execute on procedure pas_estudiante_accede_conv to 'estudiante'@'localhost
 
 
 #------------------------------------------Permisos para no estudiantes-------------------------------------------------------------
-grant select on Bienestar.TorneoInterno to 'no_estudiante'@'localhost';
-grant select on Bienestar.ConvocatoriaCursoLibre to 'no_estudiante'@'localhost';
-grant select on Bienestar.ConvocatoriaSeleccion to 'no_estudiante'@'localhost';
+grant select on Bienestar.torneointerno to 'no_estudiante'@'localhost';
+grant select on Bienestar.convocatoriacursolibre to 'no_estudiante'@'localhost';
+grant select on Bienestar.convocatoriaseleccion to 'no_estudiante'@'localhost';
 
 grant select on vw_info_curso_libre_convocatoria to 'no_estudiante'@'localhost';
 grant select on vw_info_seleccion_convocatoria to 'no_estudiante'@'localhost';
@@ -289,10 +289,10 @@ grant execute on procedure pas_consultar_info_eventoTaller to 'no_estudiante'@'l
 grant execute on procedure pas_consultar_info_proyecto to 'no_estudiante'@'localhost';
 
 
-#-----------------------------------------Permisos para la secretaria de bienestar----------------------------------------------------
-grant all on Bienestar.TorneoInterno to 'secretaria'@'localhost';
-grant select, insert, update on Bienestar.ConvocatoriaCursoLibre to 'secretaria'@'localhost';
-grant select, insert, update on Bienestar.ConvocatoriaSeleccion to 'secretaria'@'localhost';
+#-----------------------------------------Permisos para la secretaria de Bienestar----------------------------------------------------
+grant all on Bienestar.torneointerno to 'secretaria'@'localhost';
+grant select, insert, update on Bienestar.convocatoriacursolibre to 'secretaria'@'localhost';
+grant select, insert, update on Bienestar.convocatoriaseleccion to 'secretaria'@'localhost';
 
 grant select, insert, update on vw_info_curso_libre_convocatoria to 'secretaria'@'localhost';
 grant select, insert, update on vw_info_seleccion_convocatoria to 'secretaria'@'localhost';
@@ -324,9 +324,9 @@ grant execute on procedure pas_estudiante_accede_conv to 'secretaria'@'localhost
 
 
 #------------------------------Permisos para la dirección de deporte-----------------------------------------
-grant all on Bienestar.TorneoInterno to 'direccion_deporte'@'localhost';
-grant all on Bienestar.ConvocatoriaCursoLibre to 'direccion_deporte'@'localhost';
-grant all on Bienestar.ConvocatoriaSeleccion to 'direccion_deporte'@'localhost';
+grant all on Bienestar.torneointerno to 'direccion_deporte'@'localhost';
+grant all on Bienestar.convocatoriacursolibre to 'direccion_deporte'@'localhost';
+grant all on Bienestar.convocatoriaseleccion to 'direccion_deporte'@'localhost';
 
 grant all on vw_info_curso_libre_convocatoria to 'direccion_deporte'@'localhost';
 grant all on vw_info_seleccion_convocatoriao to 'direccion_deporte'@'localhost';
