@@ -1,0 +1,234 @@
+[
+    {
+        "conv_id": 1,
+        "estID": 10101019,
+        "Programa_progID": 1,
+        "convNombre": "Fomento Económico Estudiantes",
+        "convFechaApertura": "2023-01-15",
+        "convFechaCierre": "2023-02-01"
+    },
+    {
+        "conv_id": 1,
+        "estID": 101010113,
+        "Programa_progID": 1,
+        "convNombre": "Fomento Económico Estudiantes",
+        "convFechaApertura": "2023-01-15",
+        "convFechaCierre": "2023-02-01"
+    },
+    {
+        "conv_id": 1,
+        "estID": 101010116,
+        "Programa_progID": 1,
+        "convNombre": "Fomento Económico Estudiantes",
+        "convFechaApertura": "2023-01-15",
+        "convFechaCierre": "2023-02-01"
+    },
+    {
+        "conv_id": 1,
+        "estID": 101010124,
+        "Programa_progID": 1,
+        "convNombre": "Fomento Económico Estudiantes",
+        "convFechaApertura": "2023-01-15",
+        "convFechaCierre": "2023-02-01"
+    },
+    {
+        "conv_id": 2,
+        "estID": 101010122,
+        "Programa_progID": 1,
+        "convNombre": "Fomento Económico Estudiantes Alimentación",
+        "convFechaApertura": "2023-01-15",
+        "convFechaCierre": "2023-02-01"
+    },
+    {
+        "conv_id": 3,
+        "estID": 101010114,
+        "Programa_progID": 1,
+        "convNombre": "Fomento Económico Estudiantes Alimentación",
+        "convFechaApertura": "2023-01-15",
+        "convFechaCierre": "2023-02-01"
+    },
+    {
+        "conv_id": 3,
+        "estID": 101010124,
+        "Programa_progID": 1,
+        "convNombre": "Fomento Económico Estudiantes Alimentación",
+        "convFechaApertura": "2023-01-15",
+        "convFechaCierre": "2023-02-01"
+    },
+    {
+        "conv_id": 5,
+        "estID": 10101016,
+        "Programa_progID": 1,
+        "convNombre": "Gestión Alojamiento",
+        "convFechaApertura": "2023-01-15",
+        "convFechaCierre": "2023-02-01"
+    },
+    {
+        "conv_id": 5,
+        "estID": 101010127,
+        "Programa_progID": 1,
+        "convNombre": "Gestión Alojamiento",
+        "convFechaApertura": "2023-01-15",
+        "convFechaCierre": "2023-02-01"
+    },
+    {
+        "conv_id": 7,
+        "estID": 10101014,
+        "Programa_progID": 1,
+        "convNombre": "Gestión Alojamiento",
+        "convFechaApertura": "2023-01-15",
+        "convFechaCierre": "2023-02-01"
+    },
+    {
+        "conv_id": 7,
+        "estID": 101010129,
+        "Programa_progID": 1,
+        "convNombre": "Gestión Alojamiento",
+        "convFechaApertura": "2023-01-15",
+        "convFechaCierre": "2023-02-01"
+    },
+    {
+        "conv_id": 8,
+        "estID": 10101012,
+        "Programa_progID": 1,
+        "convNombre": "Gestión Alojamiento",
+        "convFechaApertura": "2023-01-15",
+        "convFechaCierre": "2023-02-01"
+    },
+    {
+        "conv_id": 8,
+        "estID": 101010127,
+        "Programa_progID": 1,
+        "convNombre": "Gestión Alojamiento",
+        "convFechaApertura": "2023-01-15",
+        "convFechaCierre": "2023-02-01"
+    },
+    {
+        "conv_id": 9,
+        "estID": 101010130,
+        "Programa_progID": 1,
+        "convNombre": "Gestión Alojamiento",
+        "convFechaApertura": "2023-01-15",
+        "convFechaCierre": "2023-02-01"
+    },
+    {
+        "conv_id": 11,
+        "estID": 10101017,
+        "Programa_progID": 1,
+        "convNombre": "Gestión Alojamiento",
+        "convFechaApertura": "2023-01-15",
+        "convFechaCierre": "2023-02-01"
+    },
+    {
+        "conv_id": 12,
+        "estID": 101010124,
+        "Programa_progID": 1,
+        "convNombre": "Gestión Alojamiento",
+        "convFechaApertura": "2023-01-15",
+        "convFechaCierre": "2023-02-01"
+    },
+    {
+        "conv_id": 14,
+        "estID": 101010121,
+        "Programa_progID": 1,
+        "convNombre": "Gestión Alojamiento",
+        "convFechaApertura": "2023-01-15",
+        "convFechaCierre": "2023-02-01"
+    },
+    {
+        "conv_id": 14,
+        "estID": 101010126,
+        "Programa_progID": 1,
+        "convNombre": "Gestión Alojamiento",
+        "convFechaApertura": "2023-01-15",
+        "convFechaCierre": "2023-02-01"
+    },
+    {
+        "conv_id": 15,
+        "estID": 10101012,
+        "Programa_progID": 1,
+        "convNombre": "Gestión Alojamiento",
+        "convFechaApertura": "2023-01-15",
+        "convFechaCierre": "2023-02-01"
+    },
+    {
+        "conv_id": 15,
+        "estID": 101010127,
+        "Programa_progID": 1,
+        "convNombre": "Gestión Alojamiento",
+        "convFechaApertura": "2023-01-15",
+        "convFechaCierre": "2023-02-01"
+    },
+    {
+        "conv_id": 16,
+        "estID": 101010112,
+        "Programa_progID": 1,
+        "convNombre": "Fomento Económico Estudiantes",
+        "convFechaApertura": "2023-01-15",
+        "convFechaCierre": "2023-02-01"
+    },
+    {
+        "conv_id": 17,
+        "estID": 101010128,
+        "Programa_progID": 1,
+        "convNombre": "Fomento Emprendimiento Estudiantes",
+        "convFechaApertura": "2023-01-15",
+        "convFechaCierre": "2023-02-01"
+    },
+    {
+        "conv_id": 18,
+        "estID": 10101015,
+        "Programa_progID": 1,
+        "convNombre": "Fomento Emprendimiento Estudiantes",
+        "convFechaApertura": "2023-01-15",
+        "convFechaCierre": "2023-02-01"
+    },
+    {
+        "conv_id": 19,
+        "estID": 101010119,
+        "Programa_progID": 1,
+        "convNombre": "Fomento Emprendimiento Estudiantes",
+        "convFechaApertura": "2023-01-15",
+        "convFechaCierre": "2023-02-01"
+    },
+    {
+        "conv_id": 20,
+        "estID": 101010125,
+        "Programa_progID": 1,
+        "convNombre": "Gestión Transporte",
+        "convFechaApertura": "2023-01-15",
+        "convFechaCierre": "2023-02-01"
+    },
+    {
+        "conv_id": 21,
+        "estID": 10101013,
+        "Programa_progID": 1,
+        "convNombre": "Gestión Transporte",
+        "convFechaApertura": "2023-01-15",
+        "convFechaCierre": "2023-02-01"
+    },
+    {
+        "conv_id": 22,
+        "estID": 101010110,
+        "Programa_progID": 1,
+        "convNombre": "Gestión Transporte",
+        "convFechaApertura": "2023-01-15",
+        "convFechaCierre": "2023-02-01"
+    },
+    {
+        "conv_id": 210,
+        "estID": 10101019,
+        "Programa_progID": 1703,
+        "convNombre": "Convocatoria Deporte 2022-2",
+        "convFechaApertura": "2022-07-01",
+        "convFechaCierre": "2022-07-31"
+    },
+    {
+        "conv_id": 217,
+        "estID": 101010113,
+        "Programa_progID": 1703,
+        "convNombre": "Convocatoria Deporte 2026-1",
+        "convFechaApertura": "2026-01-01",
+        "convFechaCierre": "2026-01-31"
+    }
+]

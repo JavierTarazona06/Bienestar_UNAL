@@ -1,0 +1,202 @@
+[
+    {
+        "actCorID": 0,
+        "actCorActividad": "comunitaria",
+        "actCorHoras": 3,
+        "actCorFecha": "2023-02-01",
+        "estID": 101010118,
+        "estPBM": 84,
+        "carreID": 14,
+        "estPAPA": 4.9
+    },
+    {
+        "actCorID": 1,
+        "actCorActividad": "cultural",
+        "actCorHoras": 8,
+        "actCorFecha": "2023-03-01",
+        "estID": 101010127,
+        "estPBM": 74,
+        "carreID": 24,
+        "estPAPA": 2.9
+    },
+    {
+        "actCorID": 2,
+        "actCorActividad": "acompañamiento",
+        "actCorHoras": 6,
+        "actCorFecha": "2023-04-01",
+        "estID": 10101019,
+        "estPBM": 64,
+        "carreID": 38,
+        "estPAPA": 4.5
+    },
+    {
+        "actCorID": 3,
+        "actCorActividad": "académica",
+        "actCorHoras": 6,
+        "actCorFecha": "2023-05-01",
+        "estID": 101010124,
+        "estPBM": 18,
+        "carreID": 27,
+        "estPAPA": 3.5
+    },
+    {
+        "actCorID": 4,
+        "actCorActividad": "académica",
+        "actCorHoras": 5,
+        "actCorFecha": "2023-06-01",
+        "estID": 101010123,
+        "estPBM": 72,
+        "carreID": 6,
+        "estPAPA": 3.5
+    },
+    {
+        "actCorID": 5,
+        "actCorActividad": "cultural",
+        "actCorHoras": 3,
+        "actCorFecha": "2023-07-01",
+        "estID": 101010123,
+        "estPBM": 72,
+        "carreID": 6,
+        "estPAPA": 3.5
+    },
+    {
+        "actCorID": 6,
+        "actCorActividad": "académica",
+        "actCorHoras": 2,
+        "actCorFecha": "2023-08-01",
+        "estID": 10101015,
+        "estPBM": 73,
+        "carreID": 22,
+        "estPAPA": 4.5
+    },
+    {
+        "actCorID": 7,
+        "actCorActividad": "acompañamiento",
+        "actCorHoras": 5,
+        "actCorFecha": "2023-09-01",
+        "estID": 10101017,
+        "estPBM": 37,
+        "carreID": 13,
+        "estPAPA": 4.5
+    },
+    {
+        "actCorID": 8,
+        "actCorActividad": "otra",
+        "actCorHoras": 7,
+        "actCorFecha": "2023-10-01",
+        "estID": 101010126,
+        "estPBM": 92,
+        "carreID": 33,
+        "estPAPA": 3.5
+    },
+    {
+        "actCorID": 9,
+        "actCorActividad": "otra",
+        "actCorHoras": 3,
+        "actCorFecha": "2023-11-01",
+        "estID": 10101015,
+        "estPBM": 73,
+        "carreID": 22,
+        "estPAPA": 4.5
+    },
+    {
+        "actCorID": 10,
+        "actCorActividad": "comunitaria",
+        "actCorHoras": 2,
+        "actCorFecha": "2023-02-01",
+        "estID": 10101015,
+        "estPBM": 73,
+        "carreID": 22,
+        "estPAPA": 4.5
+    },
+    {
+        "actCorID": 11,
+        "actCorActividad": "desarrollo institucional",
+        "actCorHoras": 8,
+        "actCorFecha": "2023-03-01",
+        "estID": 101010130,
+        "estPBM": 96,
+        "carreID": 29,
+        "estPAPA": 2.9
+    },
+    {
+        "actCorID": 12,
+        "actCorActividad": "otra",
+        "actCorHoras": 3,
+        "actCorFecha": "2023-04-01",
+        "estID": 101010117,
+        "estPBM": 48,
+        "carreID": 25,
+        "estPAPA": 4.9
+    },
+    {
+        "actCorID": 13,
+        "actCorActividad": "desarrollo institucional",
+        "actCorHoras": 3,
+        "actCorFecha": "2023-05-01",
+        "estID": 10101012,
+        "estPBM": 50,
+        "carreID": 27,
+        "estPAPA": 4.5
+    },
+    {
+        "actCorID": 14,
+        "actCorActividad": "académica",
+        "actCorHoras": 6,
+        "actCorFecha": "2023-06-01",
+        "estID": 101010130,
+        "estPBM": 96,
+        "carreID": 29,
+        "estPAPA": 2.9
+    },
+    {
+        "actCorID": 15,
+        "actCorActividad": "comunitaria",
+        "actCorHoras": 3,
+        "actCorFecha": "2023-07-01",
+        "estID": 101010113,
+        "estPBM": 43,
+        "carreID": 37,
+        "estPAPA": 3.9
+    },
+    {
+        "actCorID": 16,
+        "actCorActividad": "deportiva",
+        "actCorHoras": 2,
+        "actCorFecha": "2023-08-01",
+        "estID": 101010126,
+        "estPBM": 92,
+        "carreID": 33,
+        "estPAPA": 3.5
+    },
+    {
+        "actCorID": 17,
+        "actCorActividad": "comunitaria",
+        "actCorHoras": 4,
+        "actCorFecha": "2023-09-01",
+        "estID": 101010125,
+        "estPBM": 22,
+        "carreID": 32,
+        "estPAPA": 3.5
+    },
+    {
+        "actCorID": 18,
+        "actCorActividad": "acompañamiento",
+        "actCorHoras": 3,
+        "actCorFecha": "2023-10-01",
+        "estID": 10101011,
+        "estPBM": 73,
+        "carreID": 36,
+        "estPAPA": 4.1
+    },
+    {
+        "actCorID": 19,
+        "actCorActividad": "acompañamiento",
+        "actCorHoras": 7,
+        "actCorFecha": "2023-11-01",
+        "estID": 101010124,
+        "estPBM": 18,
+        "carreID": 27,
+        "estPAPA": 3.5
+    }
+]

@@ -1,0 +1,23 @@
+[
+    {
+        "conv_id": 17,
+        "cgemCobertura": 961842,
+        "cgemNombreEmprend": "Empresa1",
+        "cgemTema": "Tema1",
+        "cgemDescripcion": "Descripción del emprendimiento"
+    },
+    {
+        "conv_id": 18,
+        "cgemCobertura": 2248620,
+        "cgemNombreEmprend": "Empresa2",
+        "cgemTema": "Tema2",
+        "cgemDescripcion": "Descripción del emprendimiento"
+    },
+    {
+        "conv_id": 19,
+        "cgemCobertura": 1036760,
+        "cgemNombreEmprend": "Empresa3",
+        "cgemTema": "Tema3",
+        "cgemDescripcion": "Descripción del emprendimiento"
+    }
+]

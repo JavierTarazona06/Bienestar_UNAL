@@ -1,0 +1,12 @@
+conv_id,cgalDireccionAlojamiento,cgalLocalidadAlojamiento,cgalCobertura,cgalTipoVivienda,cgalDescripcion,cgalCosto
+5,"AK 119 t No. 71-39",Usme,1213490,"Residencia Universitaria",N.A,3640460
+6,"KR 71 h No. 87-43","Barrios Unidos",2052040,Habitación,N.A,4104070
+7,"AK 16 i No. 41-39",Usme,292882,Apartamento,N.A,585764
+8,"KR 121 g No. 6-85","Antonio Nariño",526833,Hotel,N.A,1580500
+9,"AK 11 j No. 30-36",Teusaquillo,880454,otro,N.A,3521810
+10,"AK 4 d No. 42-60",Bosa,1954660,Hotel,N.A,3909320
+11,"TV 103 s No. 81-41",Engativá,1621720,Apartaestudio,N.A,3243450
+12,"AC 29 c No. 72-52",Bosa,610463,Habitación,N.A,1831390
+13,"KR 172 m No. 98-27",Chapinero,1016120,"Residencia Universitaria",N.A,3048360
+14,"TV 156 k No. 30-17",Fontibón,1948560,"Residencia Universitaria",N.A,3897130
+15,"TV 20 q No. 42-58","Ciudad Bolívar",2479520,"Vivienda familiar",N.A,4959040

@@ -1,0 +1,17 @@
+[
+    {
+        "conv_id": 2,
+        "cgaComida": "Cena",
+        "cgaLugar": "Comedor central"
+    },
+    {
+        "conv_id": 3,
+        "cgaComida": "Almuerzo",
+        "cgaLugar": "Matemáticas"
+    },
+    {
+        "conv_id": 4,
+        "cgaComida": "Cena",
+        "cgaLugar": "Biología"
+    }
+]

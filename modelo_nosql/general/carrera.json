@@ -1,0 +1,242 @@
+[
+    {
+        "carreID": 1,
+        "carreNombre": "Administración de Empresas (SNIES 19 )",
+        "carreCreditos": 149
+    },
+    {
+        "carreID": 2,
+        "carreNombre": "Antropología (SNIES 13 )",
+        "carreCreditos": 152
+    },
+    {
+        "carreID": 3,
+        "carreNombre": "Arquitectura (SNIES 30 )",
+        "carreCreditos": 172
+    },
+    {
+        "carreID": 4,
+        "carreNombre": "Artes Plásticas  (SNIES 2497 )*",
+        "carreCreditos": 188
+    },
+    {
+        "carreID": 5,
+        "carreNombre": "Biología (SNIES 31 )",
+        "carreCreditos": 156
+    },
+    {
+        "carreID": 6,
+        "carreNombre": "Ciencia Política (SNIES 3140 )",
+        "carreCreditos": 144
+    },
+    {
+        "carreID": 7,
+        "carreNombre": "Ciencias de la Computación (SNIES 106341)",
+        "carreCreditos": 172
+    },
+    {
+        "carreID": 8,
+        "carreNombre": "Cine y Televisión (SNIES 6 )*",
+        "carreCreditos": 172
+    },
+    {
+        "carreID": 9,
+        "carreNombre": "Contaduría Pública (SNIES 16895 )",
+        "carreCreditos": 141
+    },
+    {
+        "carreID": 10,
+        "carreNombre": "Derecho (SNIES 17 )",
+        "carreCreditos": 168
+    },
+    {
+        "carreID": 11,
+        "carreNombre": "Diseño Gráfico (SNIES 4 )",
+        "carreCreditos": 171
+    },
+    {
+        "carreID": 12,
+        "carreNombre": "Diseño Industrial (SNIES 5 )",
+        "carreCreditos": 147
+    },
+    {
+        "carreID": 13,
+        "carreNombre": "Economía (SNIES 18 )",
+        "carreCreditos": 167
+    },
+    {
+        "carreID": 14,
+        "carreNombre": "Enfermería (SNIES 7 )",
+        "carreCreditos": 154
+    },
+    {
+        "carreID": 15,
+        "carreNombre": "Español y Filología Clásica (SNIES 54036 )",
+        "carreCreditos": 180
+    },
+    {
+        "carreID": 16,
+        "carreNombre": "Estadística (SNIES 32 )",
+        "carreCreditos": 175
+    },
+    {
+        "carreID": 17,
+        "carreNombre": "Farmacia (SNIES 37 )",
+        "carreCreditos": 190
+    },
+    {
+        "carreID": 18,
+        "carreNombre": "Filología e Idiomas: Alemán (SNIES 23 )",
+        "carreCreditos": 153
+    },
+    {
+        "carreID": 19,
+        "carreNombre": "Filología e Idiomas: Francés (SNIES 23 )",
+        "carreCreditos": 146
+    },
+    {
+        "carreID": 20,
+        "carreNombre": "Filología e Idiomas: Inglés (SNIES 23 )",
+        "carreCreditos": 169
+    },
+    {
+        "carreID": 21,
+        "carreNombre": "Filosofía (SNIES 20 )",
+        "carreCreditos": 152
+    },
+    {
+        "carreID": 22,
+        "carreNombre": "Física (SNIES 33 )",
+        "carreCreditos": 165
+    },
+    {
+        "carreID": 23,
+        "carreNombre": "Fisioterapia (SNIES 8 )",
+        "carreCreditos": 148
+    },
+    {
+        "carreID": 24,
+        "carreNombre": "Geografía (SNIES 3103 )",
+        "carreCreditos": 178
+    },
+    {
+        "carreID": 25,
+        "carreNombre": "Geología (SNIES 34 )",
+        "carreCreditos": 160
+    },
+    {
+        "carreID": 26,
+        "carreNombre": "Ingeniería Agrícola (SNIES 24 )",
+        "carreCreditos": 188
+    },
+    {
+        "carreID": 27,
+        "carreNombre": "Ingeniería Agronómica (SNIES 1 )",
+        "carreCreditos": 162
+    },
+    {
+        "carreID": 28,
+        "carreNombre": "Ingeniería Civil (SNIES 25 )",
+        "carreCreditos": 137
+    },
+    {
+        "carreID": 29,
+        "carreNombre": "Ingeniería Sistemas (SNIES 16 )",
+        "carreCreditos": 168
+    },
+    {
+        "carreID": 30,
+        "carreNombre": "Ingeniería Eléctrica (SNIES 27 )",
+        "carreCreditos": 148
+    },
+    {
+        "carreID": 31,
+        "carreNombre": "Ingeniería Electrónica (SNIES 16941 )",
+        "carreCreditos": 159
+    },
+    {
+        "carreID": 32,
+        "carreNombre": "Ingeniería Industrial (SNIES 16940 )",
+        "carreCreditos": 145
+    },
+    {
+        "carreID": 33,
+        "carreNombre": "Ingeniería Mecánica (SNIES 28 )",
+        "carreCreditos": 158
+    },
+    {
+        "carreID": 34,
+        "carreNombre": "Ingeniería Mecatrónica (SNIES 16939 )",
+        "carreCreditos": 146
+    },
+    {
+        "carreID": 35,
+        "carreNombre": "Ingeniería Química (SNIES 29 )",
+        "carreCreditos": 143
+    },
+    {
+        "carreID": 36,
+        "carreNombre": "Lingüística (SNIES 16938 )",
+        "carreCreditos": 141
+    },
+    {
+        "carreID": 37,
+        "carreNombre": "Matemáticas (SNIES 35 )",
+        "carreCreditos": 181
+    },
+    {
+        "carreID": 38,
+        "carreNombre": "Medicina (SNIES 9 )",
+        "carreCreditos": 172
+    },
+    {
+        "carreID": 39,
+        "carreNombre": "Medicina Veterinaria (SNIES 2 )",
+        "carreCreditos": 176
+    },
+    {
+        "carreID": 40,
+        "carreNombre": "Música (SNIES 06 )",
+        "carreCreditos": 132
+    },
+    {
+        "carreID": 41,
+        "carreNombre": "Música Instrumental",
+        "carreCreditos": 149
+    },
+    {
+        "carreID": 42,
+        "carreNombre": "Nutrición y Dietética (SNIES 10 )",
+        "carreCreditos": 183
+    },
+    {
+        "carreID": 43,
+        "carreNombre": "Odontología (SNIES 11 )",
+        "carreCreditos": 180
+    },
+    {
+        "carreID": 44,
+        "carreNombre": "Psicología (SNIES 14 )",
+        "carreCreditos": 167
+    },
+    {
+        "carreID": 45,
+        "carreNombre": "Química (SNIES 36 )",
+        "carreCreditos": 179
+    },
+    {
+        "carreID": 46,
+        "carreNombre": "Sociología (SNIES 16 )",
+        "carreCreditos": 162
+    },
+    {
+        "carreID": 47,
+        "carreNombre": "Trabajo Social (SNIES 15 )",
+        "carreCreditos": 171
+    },
+    {
+        "carreID": 48,
+        "carreNombre": "Zootecnia (SNIES 3 )",
+        "carreCreditos": 174
+    }
+]

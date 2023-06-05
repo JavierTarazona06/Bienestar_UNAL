@@ -1,0 +1,65 @@
+[
+    {
+        "areID": 1,
+        "areNombre": "Salud",
+        "areTelefono": 5713165000,
+        "areCorreoElectronico": "areasalud_bog@unal.edu.co",
+        "areExtension": 21072,
+        "areEdificio": "CAN Bloque 3, Edificio 933",
+        "areDescripcion": "El Área de Salud promueve el mejoramiento permanente de las condiciones físicas, psíquicas, mentales, sociales y ambientales en las que se desarrolla la vida universitaria, mediante programas formativos, preventivos y correctivos que incidan en la calidad de vida y hábitos de vida saludable.\nProtegemos y promocionamos la salud integral de la comunidad universitaria a partir de la caracterización del riesgo individual y grupal, la prevención de la enfermedad, la gestión en salud y la atención de emergencias."
+    },
+    {
+        "areID": 2,
+        "areNombre": "Cultura",
+        "areTelefono": 5713165194,
+        "areCorreoElectronico": "culturabien_bog@unal.edu.co",
+        "areExtension": 17248,
+        "areEdificio": "Edificio No. 103\nPolideportivo Primer Piso / antiguas oficinas División de archivo",
+        "areDescripcion": "El Área de Cultura promueve en la comunidad universitaria el desarrollo de aptitudes estéticas y artísticas en su formación, expresión y divulgación, atendiendo la diversidad cultural de la misma.\nEstimulamos la formación y la proyección artística de la comunidad universitaria, en diversas expresiones modernas, contemporáneas, urbanas y representativas del folclor nacional, cultivando el respeto por el patrimonio\n cultural material e inmaterial, el reconocimiento de la diversidad y la creación e investigación de nuevas prácticas del saber."
+    },
+    {
+        "areID": 3,
+        "areNombre": "Actividad física y Deporte",
+        "areTelefono": 3165000,
+        "areCorreoElectronico": "divrecd_bog@unal.edu.co",
+        "areExtension": 17207,
+        "areEdificio": "Edificio No. 103 Polideportivo",
+        "areDescripcion": "El Área de Actividad Física y Deporte estimula la práctica de actividades de tipo recreativo, formativo y competitivo, en el marco del sano esparcimiento, la promoción de la salud, la utilización racional y formativa del tiempo libre y la implementación del deporte universitario.\nFomentamos la actividad física, el acondicionamiento físico dirigido y el rendimiento deportivo mediante la articulación de las actividades deportivas con la vida académica para apoyar la formación integral y afirmar el sentido de pertenencia hacia la Universidad."
+    },
+    {
+        "areID": 4,
+        "areNombre": "Acompañamiento integral",
+        "areTelefono": 3165000,
+        "areCorreoElectronico": "aaintegral@unal.edu.co",
+        "areExtension": 17171,
+        "areEdificio": "Ciudad Universitaria - Edificio 103 - Polideportivo Segundo piso",
+        "areDescripcion": "El Área de Acompañamiento Integral desarrolla acciones orientadas a los miembros de la comunidad para apoyar su paso por la Universidad, facilitar el conocimiento de sí mismo y de los demás; desarrollar el sentido de pertenencia,\n el compromiso individual, la construcción de un tejido social incluyente y el fortalecimiento de las relaciones humanas.\nUn equipo humano interdisciplinario que orienta el fortalecimiento del potencial de los miembros de la comunidad universitaria en los cambios y retos que le impone su tránsito por la institución."
+    },
+    {
+        "areID": 5,
+        "areNombre": "Gestión y fomento socieconómico",
+        "areTelefono": 3165000,
+        "areCorreoElectronico": "economicaagfse_bog@unal.edu.co",
+        "areExtension": 10652,
+        "areEdificio": "Unidad Camilo Torres Bloque B 7, Oficina: 201",
+        "areDescripcion": "El Área de Gestión y Fomento Socioeconómico promueve el mejoramiento de las condiciones socioeconómicas y el desarrollo personal y profesional de la comunidad estudiantil."
+    },
+    {
+        "areID": 6,
+        "areNombre": "Unidades especiales",
+        "areTelefono": 3165000,
+        "areCorreoElectronico": "obsdiscap_nal@unal.edu.co",
+        "areExtension": 10574,
+        "areEdificio": "Unidad Camilo Torres (Calle 44 No. 45 - 67), Bloque B, Módulo 8, Oficina 703",
+        "areDescripcion": "Los programas de Admisión Especial son creados por la Universidad Nacional de Colombia atendiendo a uno de sus fines misionales, el cual es proyectarse al territorio nacional y contribuir con la unidad nacional, la igualdad de oportunidades de acceso a la educación superior y la promoción del desarrollo de la comunidad académica nacional."
+    },
+    {
+        "areID": 17,
+        "areNombre": "Actividad Fisica & Deporte",
+        "areTelefono": 3165000,
+        "areCorreoElectronico": "divrecd_bog@unal.edu.co",
+        "areExtension": 17207,
+        "areEdificio": "No. 103 Polideportivo",
+        "areDescripcion": "Area encargada de la actividad deportiva en la UNAL."
+    }
+]
