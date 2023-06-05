@@ -334,7 +334,7 @@ CREATE TABLE IF NOT EXISTS Bienestar.programa (
   PRIMARY KEY (progID),
   CONSTRAINT fk_Programa_Area1
     FOREIGN KEY (Area_areID)
-    REFERENCES Bienestar.Area (areID)
+    REFERENCES Bienestar.area (areID)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -361,7 +361,7 @@ CREATE TABLE IF NOT EXISTS Bienestar.convocatoria (
   PRIMARY KEY (conv_id, Programa_progID),
   CONSTRAINT fk_Convocatoria_Programa1
     FOREIGN KEY (Programa_progID)
-    REFERENCES Bienestar.Programa (progID)
+    REFERENCES Bienestar.programa (progID)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -387,7 +387,7 @@ CREATE TABLE IF NOT EXISTS Bienestar.grupoartisticoinstitucional (
   PRIMARY KEY (GAI_id, progID),
   CONSTRAINT fk_GrupoArtisticoInstitucional_Programa1
     FOREIGN KEY (progID)
-    REFERENCES Bienestar.Programa (progID)
+    REFERENCES Bienestar.programa (progID)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -409,12 +409,12 @@ CREATE TABLE IF NOT EXISTS Bienestar.convocatoriagai (
   PRIMARY KEY (Convocatoria_conv_id, GrupoArtisticoInstitucional_GAI_id),
   CONSTRAINT fk_ConvGAI_Convocatoria1
     FOREIGN KEY (Convocatoria_conv_id)
-    REFERENCES Bienestar.Convocatoria (conv_id)
+    REFERENCES Bienestar.convocatoria (conv_id)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT fk_ConvocatoriaGAI_GrupoArtisticoInstitucional1
     FOREIGN KEY (GrupoArtisticoInstitucional_GAI_id)
-    REFERENCES Bienestar.GrupoArtisticoInstitucional (GAI_id)
+    REFERENCES Bienestar.grupoartisticoinstitucional (GAI_id)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -445,7 +445,7 @@ CREATE TABLE IF NOT EXISTS Bienestar.torneointerno (
   PRIMARY KEY (toridTorneoInterno, Programa_progID),
   CONSTRAINT fk_TorneoInterno_Programa1
     FOREIGN KEY (Programa_progID)
-    REFERENCES Bienestar.Programa (progID)
+    REFERENCES Bienestar.programa (progID)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -466,7 +466,7 @@ CREATE TABLE IF NOT EXISTS Bienestar.convocatoriacursolibre (
   PRIMARY KEY (Convocatoria_conv_id),
   CONSTRAINT fk_ConvocatoriaCursoLibre_Convocatoria1
     FOREIGN KEY (Convocatoria_conv_id)
-    REFERENCES Bienestar.Convocatoria (conv_id)
+    REFERENCES Bienestar.convocatoria (conv_id)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -485,7 +485,7 @@ CREATE TABLE IF NOT EXISTS Bienestar.convocatoriaseleccion (
   PRIMARY KEY (Convocatoria_conv_id),
   CONSTRAINT fk_ConvocatoriaSeleccion_Convocatoria1
     FOREIGN KEY (Convocatoria_conv_id)
-    REFERENCES Bienestar.Convocatoria (conv_id)
+    REFERENCES Bienestar.convocatoria (conv_id)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -578,12 +578,12 @@ CREATE TABLE IF NOT EXISTS Bienestar.estudiante (
   PRIMARY KEY (estID),
   CONSTRAINT fk_Estudiante_copy1_Persona_copy11
     FOREIGN KEY (estID)
-    REFERENCES Bienestar.Persona (perID)
+    REFERENCES Bienestar.persona (perID)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT fk_Estudiante_copy1_Carrera1
     FOREIGN KEY (carreID)
-    REFERENCES Bienestar.Carrera (carreID)
+    REFERENCES Bienestar.carrera (carreID)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -609,7 +609,7 @@ CREATE TABLE IF NOT EXISTS Bienestar.convocatoriagestionalojamiento (
   PRIMARY KEY (conv_id),
   CONSTRAINT fk_CvGesAlojamiento_Convocatoria1
     FOREIGN KEY (conv_id)
-    REFERENCES Bienestar.Convocatoria (conv_id)
+    REFERENCES Bienestar.convocatoria (conv_id)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -629,7 +629,7 @@ CREATE TABLE IF NOT EXISTS Bienestar.convocatoriagestiontransporte (
   PRIMARY KEY (conv_id),
   CONSTRAINT fk_ConvocatoriaGestionTransporte_Convocatoria1
     FOREIGN KEY (conv_id)
-    REFERENCES Bienestar.Convocatoria (conv_id)
+    REFERENCES Bienestar.convocatoria (conv_id)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -647,7 +647,7 @@ CREATE TABLE IF NOT EXISTS Bienestar.convocatoriagestionalimentaria (
   PRIMARY KEY (conv_id),
   CONSTRAINT fk_ConvocatoriaGestionAlimentaria_Convocatoria1
     FOREIGN KEY (conv_id)
-    REFERENCES Bienestar.Convocatoria (conv_id )
+    REFERENCES Bienestar.convocatoria (conv_id )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -664,7 +664,7 @@ CREATE TABLE IF NOT EXISTS Bienestar.corresponsabilidad (
   PRIMARY KEY (idEst, horPendCorresp),
   CONSTRAINT fk_Corresponsabilidad_Estudiante_copy11
     FOREIGN KEY (idEst)
-    REFERENCES Bienestar.Estudiante (estID)
+    REFERENCES Bienestar.estudiante (estID)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -686,7 +686,7 @@ CREATE TABLE IF NOT EXISTS Bienestar.actividadcorresp (
   PRIMARY KEY (actCorID),
   CONSTRAINT fk_ActividadCorresp_Estudiante1
     FOREIGN KEY (estID)
-    REFERENCES Bienestar.Estudiante (estID)
+    REFERENCES Bienestar.estudiante (estID)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -707,12 +707,12 @@ CREATE TABLE IF NOT EXISTS Bienestar.programa_tiene_proyecto (
   PRIMARY KEY (Proyecto_proyIdProyecto, progID),
   CONSTRAINT fk_Programa_has_Proyecto_Proyecto1
     FOREIGN KEY (Proyecto_proyIdProyecto)
-    REFERENCES Bienestar.Proyecto (proyIdProyecto)
+    REFERENCES Bienestar.proyecto (proyIdProyecto)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT fk_Programa_Tiene_Proyecto_Programa1
     FOREIGN KEY (progID)
-    REFERENCES Bienestar.Programa (progID)
+    REFERENCES Bienestar.programa (progID)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -733,12 +733,12 @@ CREATE TABLE IF NOT EXISTS Bienestar.programa_tiene_eventotaller (
   PRIMARY KEY (idEventoTaller, progID),
   CONSTRAINT fk_Programa_has_EventoTaller_EventoTaller1
     FOREIGN KEY (idEventoTaller)
-    REFERENCES Bienestar.EventoTaller (evetaidEventoTaller)
+    REFERENCES Bienestar.eventotaller (evetaidEventoTaller)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT fk_Programa_Tiene_EventoTaller_Programa1
     FOREIGN KEY (progID)
-    REFERENCES Bienestar.Programa (progID)
+    REFERENCES Bienestar.programa (progID)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
