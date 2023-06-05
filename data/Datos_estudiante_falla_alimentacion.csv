@@ -1,0 +1,28 @@
+fallAlID,fallAlcgaComida,fallAlLugar,fallAlFecha,estID,perNombre,perApellido,perEmail,perFacultad,carreID,carreNombre,estPBM,estPAPA
+1,Almuerzo,"Comedor central",2023-05-19,101010123,"Jorge Ana","Fernández Núñez",JFernándezN@unal.edu.co,"Derecho, Ciencias Políticas y Sociales",6,"Ciencia Política (SNIES 3140 )",72,3.5
+2,Desayuno,"Ciencias Económicas",2023-02-12,10101019,"Ricardo Andrés","Suárez Pérez",RSuárezP@unal.edu.co,Medicina,38,"Medicina (SNIES 9 )",64,4.5
+3,Desayuno,"Ciencias Económicas",2023-05-12,10101019,"Ricardo Andrés","Suárez Pérez",RSuárezP@unal.edu.co,Medicina,38,"Medicina (SNIES 9 )",64,4.5
+4,Almuerzo,Matemáticas,2023-02-25,10101012,"Gabriela Andrés","Pérez Núñez",GPérezN@unal.edu.co,Ingeniería,27,"Ingeniería Agronómica (SNIES 1 )",50,4.5
+5,Almuerzo,"Comedor central",2023-02-26,101010112,"Isabel Pedro","López Morales",ILópezM@unal.edu.co,Medicina,38,"Medicina (SNIES 9 )",79,3.9
+6,Cena,"Ciencias Económicas",2023-05-17,101010119,"Ana Alejandro","Romero Ruiz",ARomeroR@unal.edu.co,Ingeniería,34,"Ingeniería Mecatrónica (SNIES 16939 )",72,4.3
+7,Almuerzo,Biología,2023-03-16,10101017,"Jorge Diego","Álvarez Ruiz",JÁlvarezR@unal.edu.co,"Ciencias Económicas",13,"Economía (SNIES 18 )",37,4.5
+8,Desayuno,"Ciencias Humanas",2023-03-15,10101013,"Ricardo Felipe","Sánchez Gómez",RSánchezG@unal.edu.co,Ingeniería,26,"Ingeniería Agrícola (SNIES 24 )",76,4.4
+9,Desayuno,"Ciencias Humanas",2023-04-15,10101013,"Ricardo Felipe","Sánchez Gómez",RSánchezG@unal.edu.co,Ingeniería,26,"Ingeniería Agrícola (SNIES 24 )",76,4.4
+10,Desayuno,"Ciencias Humanas",2023-03-21,10101013,"Ricardo Felipe","Sánchez Gómez",RSánchezG@unal.edu.co,Ingeniería,26,"Ingeniería Agrícola (SNIES 24 )",76,4.4
+11,Almuerzo,otro,2023-06-18,101010129,"Carlos Luis","Martínez Cruz",CMartínezC@unal.edu.co,"Ciencias Humanas",20,"Filología e Idiomas: Inglés (SNIES 23 )",90,2.9
+12,Almuerzo,otro,2023-04-09,101010123,"Jorge Ana","Fernández Núñez",JFernándezN@unal.edu.co,"Derecho, Ciencias Políticas y Sociales",6,"Ciencia Política (SNIES 3140 )",72,3.5
+13,Desayuno,"Comedor central",2023-06-26,101010124,"José Alejandro","Suárez Ramírez",JSuárezR@unal.edu.co,"Ciencias Agrarias",27,"Ingeniería Agronómica (SNIES 1 )",18,3.5
+14,Cena,Biología,2023-03-29,101010128,"María Roberto","Romero Gómez",MRomeroG@unal.edu.co,Artes,40,"Música (SNIES 06 )",30,2.9
+15,Cena,Biología,2023-02-18,101010128,"María Roberto","Romero Gómez",MRomeroG@unal.edu.co,Artes,40,"Música (SNIES 06 )",30,2.9
+16,Cena,Biología,2023-01-29,101010128,"María Roberto","Romero Gómez",MRomeroG@unal.edu.co,Artes,40,"Música (SNIES 06 )",30,2.9
+17,Cena,Biología,2023-04-29,101010128,"María Roberto","Romero Gómez",MRomeroG@unal.edu.co,Artes,40,"Música (SNIES 06 )",30,2.9
+18,Cena,Biología,2023-05-29,101010128,"María Roberto","Romero Gómez",MRomeroG@unal.edu.co,Artes,40,"Música (SNIES 06 )",30,2.9
+19,Desayuno,Matemáticas,2023-06-02,10101013,"Ricardo Felipe","Sánchez Gómez",RSánchezG@unal.edu.co,Ingeniería,26,"Ingeniería Agrícola (SNIES 24 )",76,4.4
+20,Cena,"Ciencias Humanas",2023-02-14,101010120,"Carlos Pedro","Martínez Flores",CMartínezF@unal.edu.co,Psicología,44,"Psicología (SNIES 14 )",77,4.3
+21,Almuerzo,Agronomía,2023-06-20,101010114,"Manuel Andrea","Silva López",MSilvaL@unal.edu.co,Ingeniería,32,"Ingeniería Industrial (SNIES 16940 )",39,3.9
+22,Cena,Odontología,2023-02-27,101010111,"Luis Carla","López Díaz",LLópezD@unal.edu.co,Ingeniería,34,"Ingeniería Mecatrónica (SNIES 16939 )",24,4.5
+23,Almuerzo,"Ciencias Económicas",2023-02-28,101010114,"Manuel Andrea","Silva López",MSilvaL@unal.edu.co,Ingeniería,32,"Ingeniería Industrial (SNIES 16940 )",39,3.9
+24,Desayuno,Hemeroteca,2023-03-19,101010123,"Jorge Ana","Fernández Núñez",JFernándezN@unal.edu.co,"Derecho, Ciencias Políticas y Sociales",6,"Ciencia Política (SNIES 3140 )",72,3.5
+25,Desayuno,otro,2023-04-23,10101011,"Ana José","Ramírez Mendoza",ARamírezM@unal.edu.co,"Ciencias Humanas",36,"Lingüística (SNIES 16938 )",73,4.1
+26,Almuerzo,Odontología,2023-03-18,101010113,"Diego Fernando","Romero Díaz",DRomeroD@unal.edu.co,Ciencias,37,"Matemáticas (SNIES 35 )",43,3.9
+27,Almuerzo,"Ciencias Humanas",2023-06-17,101010123,"Jorge Ana","Fernández Núñez",JFernándezN@unal.edu.co,"Derecho, Ciencias Políticas y Sociales",6,"Ciencia Política (SNIES 3140 )",72,3.5

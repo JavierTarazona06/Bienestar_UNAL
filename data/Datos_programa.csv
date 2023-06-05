@@ -1,0 +1,6 @@
+progID,progNombre,progExtension,progCorreoElectronico,progTelefono,progEdificio,progOficina,areID,areNombre,areTelefono,areCorreoElectronico,areExtension,areEdificio,areDescripcion
+1701,"Actividad ludico deportiva",NULL,NULL,NULL,NULL,NULL,17,"Actividad Fisica & Deporte",3165000,divrecd_bog@unal.edu.co,17207,"No. 103 Polideportivo","Area encargada de la actividad deportiva en la UNAL."
+1702,"Acondicionamiento físico e instruccion",NULL,NULL,NULL,NULL,NULL,17,"Actividad Fisica & Deporte",3165000,divrecd_bog@unal.edu.co,17207,"No. 103 Polideportivo","Area encargada de la actividad deportiva en la UNAL."
+1703,"Deporte de competencia",NULL,NULL,NULL,NULL,NULL,17,"Actividad Fisica & Deporte",3165000,divrecd_bog@unal.edu.co,17207,"No. 103 Polideportivo","Area encargada de la actividad deportiva en la UNAL."
+1704,"Deporte de alto rendimiento",NULL,NULL,NULL,NULL,NULL,17,"Actividad Fisica & Deporte",3165000,divrecd_bog@unal.edu.co,17207,"No. 103 Polideportivo","Area encargada de la actividad deportiva en la UNAL."
+1705,"Proyectos estratégicos",NULL,NULL,NULL,NULL,NULL,17,"Actividad Fisica & Deporte",3165000,divrecd_bog@unal.edu.co,17207,"No. 103 Polideportivo","Area encargada de la actividad deportiva en la UNAL."

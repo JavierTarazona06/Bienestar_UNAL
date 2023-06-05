@@ -1,0 +1,43 @@
+conv_id,convNombre,convFechaApertura,convFechaCierre,convEstado,convPeriodo,Programa_progID,convPAPA,progID,progNombre,Area_areID,progExtension,progCorreoElectronico,progTelefono,progEdificio,progOficina
+1,"Fomento Económico Estudiantes",2023-01-15,2023-02-01,1,2023-1,1,35,1,"Fomento Económico Estudiantes",5,NULL,NULL,NULL,NULL,NULL
+2,"Fomento Económico Estudiantes Alimentación",2023-01-15,2023-02-01,1,2023-1,1,35,1,"Fomento Económico Estudiantes",5,NULL,NULL,NULL,NULL,NULL
+3,"Fomento Económico Estudiantes Alimentación",2023-01-15,2023-02-01,1,2023-1,1,35,1,"Fomento Económico Estudiantes",5,NULL,NULL,NULL,NULL,NULL
+4,"Fomento Económico Estudiantes Alimentación",2023-01-15,2023-02-01,1,2023-1,1,35,1,"Fomento Económico Estudiantes",5,NULL,NULL,NULL,NULL,NULL
+5,"Gestión Alojamiento",2023-01-15,2023-02-01,1,2023-1,1,35,1,"Fomento Económico Estudiantes",5,NULL,NULL,NULL,NULL,NULL
+6,"Gestión Alojamiento",2023-01-15,2023-02-01,1,2023-1,1,35,1,"Fomento Económico Estudiantes",5,NULL,NULL,NULL,NULL,NULL
+7,"Gestión Alojamiento",2023-01-15,2023-02-01,1,2023-1,1,35,1,"Fomento Económico Estudiantes",5,NULL,NULL,NULL,NULL,NULL
+8,"Gestión Alojamiento",2023-01-15,2023-02-01,1,2023-1,1,35,1,"Fomento Económico Estudiantes",5,NULL,NULL,NULL,NULL,NULL
+9,"Gestión Alojamiento",2023-01-15,2023-02-01,1,2023-1,1,35,1,"Fomento Económico Estudiantes",5,NULL,NULL,NULL,NULL,NULL
+10,"Gestión Alojamiento",2023-01-15,2023-02-01,1,2023-1,1,35,1,"Fomento Económico Estudiantes",5,NULL,NULL,NULL,NULL,NULL
+11,"Gestión Alojamiento",2023-01-15,2023-02-01,1,2023-1,1,35,1,"Fomento Económico Estudiantes",5,NULL,NULL,NULL,NULL,NULL
+12,"Gestión Alojamiento",2023-01-15,2023-02-01,1,2023-1,1,35,1,"Fomento Económico Estudiantes",5,NULL,NULL,NULL,NULL,NULL
+13,"Gestión Alojamiento",2023-01-15,2023-02-01,1,2023-1,1,35,1,"Fomento Económico Estudiantes",5,NULL,NULL,NULL,NULL,NULL
+14,"Gestión Alojamiento",2023-01-15,2023-02-01,1,2023-1,1,35,1,"Fomento Económico Estudiantes",5,NULL,NULL,NULL,NULL,NULL
+15,"Gestión Alojamiento",2023-01-15,2023-02-01,1,2023-1,1,35,1,"Fomento Económico Estudiantes",5,NULL,NULL,NULL,NULL,NULL
+16,"Fomento Económico Estudiantes",2023-01-15,2023-02-01,1,2023-1,1,35,1,"Fomento Económico Estudiantes",5,NULL,NULL,NULL,NULL,NULL
+17,"Fomento Emprendimiento Estudiantes",2023-01-15,2023-02-01,1,2023-1,1,35,1,"Fomento Económico Estudiantes",5,NULL,NULL,NULL,NULL,NULL
+18,"Fomento Emprendimiento Estudiantes",2023-01-15,2023-02-01,1,2023-1,1,35,1,"Fomento Económico Estudiantes",5,NULL,NULL,NULL,NULL,NULL
+19,"Fomento Emprendimiento Estudiantes",2023-01-15,2023-02-01,1,2023-1,1,35,1,"Fomento Económico Estudiantes",5,NULL,NULL,NULL,NULL,NULL
+20,"Gestión Transporte",2023-01-15,2023-02-01,1,2023-1,1,35,1,"Fomento Económico Estudiantes",5,NULL,NULL,NULL,NULL,NULL
+21,"Gestión Transporte",2023-01-15,2023-02-01,1,2023-1,1,35,1,"Fomento Económico Estudiantes",5,NULL,NULL,NULL,NULL,NULL
+22,"Gestión Transporte",2023-01-15,2023-02-01,1,2023-1,1,35,1,"Fomento Económico Estudiantes",5,NULL,NULL,NULL,NULL,NULL
+200,"Convocatoria Deporte 2025-2",2025-06-01,2025-06-30,1,2025-2,1702,3.5,1702,"Acondicionamiento físico e instruccion",17,NULL,NULL,NULL,NULL,NULL
+201,"Convocatoria Deporte 2021-1",2021-01-01,2021-01-31,1,2021-1,1702,3.5,1702,"Acondicionamiento físico e instruccion",17,NULL,NULL,NULL,NULL,NULL
+202,"Convocatoria Deporte 2021-2",2021-06-01,2021-06-30,1,2021-2,1702,3.5,1702,"Acondicionamiento físico e instruccion",17,NULL,NULL,NULL,NULL,NULL
+203,"Convocatoria Deporte 2022-1",2022-01-01,2022-01-31,1,2022-1,1702,3.5,1702,"Acondicionamiento físico e instruccion",17,NULL,NULL,NULL,NULL,NULL
+204,"Convocatoria Deporte 2022-2",2022-06-01,2022-06-30,1,2022-2,1702,3.5,1702,"Acondicionamiento físico e instruccion",17,NULL,NULL,NULL,NULL,NULL
+205,"Convocatoria Deporte 2023-1",2023-01-01,2023-01-31,1,2023-1,1702,3.5,1702,"Acondicionamiento físico e instruccion",17,NULL,NULL,NULL,NULL,NULL
+206,"Convocatoria Deporte 2023-2",2023-06-01,2023-06-30,1,2023-2,1702,3.5,1702,"Acondicionamiento físico e instruccion",17,NULL,NULL,NULL,NULL,NULL
+207,"Convocatoria Deporte 2024-1",2024-01-01,2024-01-31,1,2024-2,1702,3.5,1702,"Acondicionamiento físico e instruccion",17,NULL,NULL,NULL,NULL,NULL
+208,"Convocatoria Deporte 2024-2",2024-06-01,2024-06-30,1,2024-2,1702,3.5,1702,"Acondicionamiento físico e instruccion",17,NULL,NULL,NULL,NULL,NULL
+209,"Convocatoria Deporte 2025-1",2025-01-01,2025-01-31,1,2025-1,1702,3.5,1702,"Acondicionamiento físico e instruccion",17,NULL,NULL,NULL,NULL,NULL
+210,"Convocatoria Deporte 2022-2",2022-07-01,2022-07-31,1,2022-2,1703,3.5,1703,"Deporte de competencia",17,NULL,NULL,NULL,NULL,NULL
+211,"Convocatoria Deporte 2023-1",2023-01-01,2023-01-31,1,2023-1,1703,3.5,1703,"Deporte de competencia",17,NULL,NULL,NULL,NULL,NULL
+212,"Convocatoria Deporte 2023-2",2023-07-01,2023-07-31,0,2023-2,1703,3.5,1703,"Deporte de competencia",17,NULL,NULL,NULL,NULL,NULL
+213,"Convocatoria Deporte 2024-1",2024-01-01,2024-01-31,0,2024-1,1703,3.5,1703,"Deporte de competencia",17,NULL,NULL,NULL,NULL,NULL
+214,"Convocatoria Deporte 2024-2",2024-07-01,2024-07-31,0,2024-2,1703,3.5,1703,"Deporte de competencia",17,NULL,NULL,NULL,NULL,NULL
+215,"Convocatoria Deporte 2025-1",2025-01-01,2025-01-31,0,2025-1,1703,3.5,1703,"Deporte de competencia",17,NULL,NULL,NULL,NULL,NULL
+216,"Convocatoria Deporte 2025-2",2025-07-01,2025-07-31,0,2025-2,1703,3.5,1703,"Deporte de competencia",17,NULL,NULL,NULL,NULL,NULL
+217,"Convocatoria Deporte 2026-1",2026-01-01,2026-01-31,0,2026-1,1703,3.5,1703,"Deporte de competencia",17,NULL,NULL,NULL,NULL,NULL
+218,"Convocatoria Deporte 2026-2",2026-07-01,2026-07-31,0,2026-2,1703,3.5,1703,"Deporte de competencia",17,NULL,NULL,NULL,NULL,NULL
+219,"Convocatoria Deporte 2027-1",2027-01-01,2027-01-31,0,2027-1,1703,3.5,1703,"Deporte de competencia",17,NULL,NULL,NULL,NULL,NULL

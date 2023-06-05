@@ -1,0 +1,17 @@
+[
+    {
+        "conv_id": 20,
+        "cgtCobertura": 530147,
+        "cgtTipoTransporte": "Transporte público masivo"
+    },
+    {
+        "conv_id": 21,
+        "cgtCobertura": 600147,
+        "cgtTipoTransporte": "Transporte público masivo"
+    },
+    {
+        "conv_id": 22,
+        "cgtCobertura": 430147,
+        "cgtTipoTransporte": "otro"
+    }
+]

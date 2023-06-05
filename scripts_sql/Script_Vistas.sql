@@ -10,7 +10,13 @@ select estID,perNombre,perApellido,perEmail,estPBM,perFacultad,carreNombre,carre
     join carrera using (carreID);
 
 drop view if exists vw_info_estudiante;
-create view vw_info_estudiante as select * from estudiante join persona on (estID=perID) join carrera using (carreID);
+create view vw_info_estudiante as 
+	select estID,perNombre,perApellido,perEmail,perSede,perFacultad,carreID,carreNombre,carreCreditos,estEdad,estPBM,estPAPA,estTipoAdmision,estEsEgresado,perDireccion,perBarrio,perCiudad,
+		perTipoVivienda,perLocalidad,perEntidadSalud,perProcedencia,horPendCorresp
+    from estudiante
+	join persona on (perID=estID)
+    join carrera using (carreID)
+    left join corresponsabilidad on (estID=idEst);
 
 select estID,perNombre,perApellido,perEmail,estPBM,perFacultad,carreNombre,carreCreditos from vw_info_estudiante;
 select * from vw_info_estudiante;
@@ -52,8 +58,17 @@ create view vw_productos_tienda as select
     join tiendabienestar on tiendabienestar.tieID=producto_tiendaun.tieID;
 select * from vw_productos_tienda; 
 
-#------------------------------------------------------------------
-#------------------------------------------------------------------
+#Vista del estudiante y sus fallas de alimentación y corresponsabilidad
+
+select fallAlID,fallAlcgaComida,fallAlLugar,fallAlFecha,estID,perNombre,perApellido,perEmail,perFacultad,carreID,carreNombre,estPBM,estPAPA
+	from vw_info_estudiante
+    join fallaalimentacion using (estID);
+drop view if exists vw_estudiante_falla_alimentacion;
+create view vw_estudiante_falla_alimentacion as
+	select fallAlID,fallAlcgaComida,fallAlLugar,fallAlFecha,estID,perNombre,perApellido,perEmail,perFacultad,carreID,carreNombre,estPBM,estPAPA
+	from vw_info_estudiante
+    join fallaalimentacion using (estID);
+select * from vw_estudiante_falla_alimentacion;
 
 #--------------------------------------------------------------------------------------------------------------------------------------------
 #                                  									Valeria

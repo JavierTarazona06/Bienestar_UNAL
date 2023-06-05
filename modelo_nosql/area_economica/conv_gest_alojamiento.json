@@ -1,0 +1,101 @@
+[
+    {
+        "conv_id": 5,
+        "cgalDireccionAlojamiento": "AK 119 t No. 71-39",
+        "cgalLocalidadAlojamiento": "Usme",
+        "cgalCobertura": 1213490,
+        "cgalTipoVivienda": "Residencia Universitaria",
+        "cgalDescripcion": "N.A",
+        "cgalCosto": 3640460
+    },
+    {
+        "conv_id": 6,
+        "cgalDireccionAlojamiento": "KR 71 h No. 87-43",
+        "cgalLocalidadAlojamiento": "Barrios Unidos",
+        "cgalCobertura": 2052040,
+        "cgalTipoVivienda": "Habitación",
+        "cgalDescripcion": "N.A",
+        "cgalCosto": 4104070
+    },
+    {
+        "conv_id": 7,
+        "cgalDireccionAlojamiento": "AK 16 i No. 41-39",
+        "cgalLocalidadAlojamiento": "Usme",
+        "cgalCobertura": 292882,
+        "cgalTipoVivienda": "Apartamento",
+        "cgalDescripcion": "N.A",
+        "cgalCosto": 585764
+    },
+    {
+        "conv_id": 8,
+        "cgalDireccionAlojamiento": "KR 121 g No. 6-85",
+        "cgalLocalidadAlojamiento": "Antonio Nariño",
+        "cgalCobertura": 526833,
+        "cgalTipoVivienda": "Hotel",
+        "cgalDescripcion": "N.A",
+        "cgalCosto": 1580500
+    },
+    {
+        "conv_id": 9,
+        "cgalDireccionAlojamiento": "AK 11 j No. 30-36",
+        "cgalLocalidadAlojamiento": "Teusaquillo",
+        "cgalCobertura": 880454,
+        "cgalTipoVivienda": "otro",
+        "cgalDescripcion": "N.A",
+        "cgalCosto": 3521810
+    },
+    {
+        "conv_id": 10,
+        "cgalDireccionAlojamiento": "AK 4 d No. 42-60",
+        "cgalLocalidadAlojamiento": "Bosa",
+        "cgalCobertura": 1954660,
+        "cgalTipoVivienda": "Hotel",
+        "cgalDescripcion": "N.A",
+        "cgalCosto": 3909320
+    },
+    {
+        "conv_id": 11,
+        "cgalDireccionAlojamiento": "TV 103 s No. 81-41",
+        "cgalLocalidadAlojamiento": "Engativá",
+        "cgalCobertura": 1621720,
+        "cgalTipoVivienda": "Apartaestudio",
+        "cgalDescripcion": "N.A",
+        "cgalCosto": 3243450
+    },
+    {
+        "conv_id": 12,
+        "cgalDireccionAlojamiento": "AC 29 c No. 72-52",
+        "cgalLocalidadAlojamiento": "Bosa",
+        "cgalCobertura": 610463,
+        "cgalTipoVivienda": "Habitación",
+        "cgalDescripcion": "N.A",
+        "cgalCosto": 1831390
+    },
+    {
+        "conv_id": 13,
+        "cgalDireccionAlojamiento": "KR 172 m No. 98-27",
+        "cgalLocalidadAlojamiento": "Chapinero",
+        "cgalCobertura": 1016120,
+        "cgalTipoVivienda": "Residencia Universitaria",
+        "cgalDescripcion": "N.A",
+        "cgalCosto": 3048360
+    },
+    {
+        "conv_id": 14,
+        "cgalDireccionAlojamiento": "TV 156 k No. 30-17",
+        "cgalLocalidadAlojamiento": "Fontibón",
+        "cgalCobertura": 1948560,
+        "cgalTipoVivienda": "Residencia Universitaria",
+        "cgalDescripcion": "N.A",
+        "cgalCosto": 3897130
+    },
+    {
+        "conv_id": 15,
+        "cgalDireccionAlojamiento": "TV 20 q No. 42-58",
+        "cgalLocalidadAlojamiento": "Ciudad Bolívar",
+        "cgalCobertura": 2479520,
+        "cgalTipoVivienda": "Vivienda familiar",
+        "cgalDescripcion": "N.A",
+        "cgalCosto": 4959040
+    }
+]

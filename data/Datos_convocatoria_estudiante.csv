@@ -1,0 +1,30 @@
+conv_id,estID,Programa_progID,convNombre,convFechaApertura,convFechaCierre
+1,10101019,1,"Fomento Económico Estudiantes",2023-01-15,2023-02-01
+1,101010113,1,"Fomento Económico Estudiantes",2023-01-15,2023-02-01
+1,101010116,1,"Fomento Económico Estudiantes",2023-01-15,2023-02-01
+1,101010124,1,"Fomento Económico Estudiantes",2023-01-15,2023-02-01
+2,101010122,1,"Fomento Económico Estudiantes Alimentación",2023-01-15,2023-02-01
+3,101010114,1,"Fomento Económico Estudiantes Alimentación",2023-01-15,2023-02-01
+3,101010124,1,"Fomento Económico Estudiantes Alimentación",2023-01-15,2023-02-01
+5,10101016,1,"Gestión Alojamiento",2023-01-15,2023-02-01
+5,101010127,1,"Gestión Alojamiento",2023-01-15,2023-02-01
+7,10101014,1,"Gestión Alojamiento",2023-01-15,2023-02-01
+7,101010129,1,"Gestión Alojamiento",2023-01-15,2023-02-01
+8,10101012,1,"Gestión Alojamiento",2023-01-15,2023-02-01
+8,101010127,1,"Gestión Alojamiento",2023-01-15,2023-02-01
+9,101010130,1,"Gestión Alojamiento",2023-01-15,2023-02-01
+11,10101017,1,"Gestión Alojamiento",2023-01-15,2023-02-01
+12,101010124,1,"Gestión Alojamiento",2023-01-15,2023-02-01
+14,101010121,1,"Gestión Alojamiento",2023-01-15,2023-02-01
+14,101010126,1,"Gestión Alojamiento",2023-01-15,2023-02-01
+15,10101012,1,"Gestión Alojamiento",2023-01-15,2023-02-01
+15,101010127,1,"Gestión Alojamiento",2023-01-15,2023-02-01
+16,101010112,1,"Fomento Económico Estudiantes",2023-01-15,2023-02-01
+17,101010128,1,"Fomento Emprendimiento Estudiantes",2023-01-15,2023-02-01
+18,10101015,1,"Fomento Emprendimiento Estudiantes",2023-01-15,2023-02-01
+19,101010119,1,"Fomento Emprendimiento Estudiantes",2023-01-15,2023-02-01
+20,101010125,1,"Gestión Transporte",2023-01-15,2023-02-01
+21,10101013,1,"Gestión Transporte",2023-01-15,2023-02-01
+22,101010110,1,"Gestión Transporte",2023-01-15,2023-02-01
+210,10101019,1703,"Convocatoria Deporte 2022-2",2022-07-01,2022-07-31
+217,101010113,1703,"Convocatoria Deporte 2026-1",2026-01-01,2026-01-31
