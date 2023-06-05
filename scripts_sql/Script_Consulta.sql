@@ -84,46 +84,46 @@ select count(conv_id),AVG(cgalCobertura),avg(cgalCosto),cgalLocalidadAlojamiento
 
 # 5. Consultar la cantidad de estudiantes que se presentan a convocatorias de selecciones deportivas agrupados por deporte.
 select count(idEst) 
-	from Estudiante_Toma_Convocatoria 
-	join (Convocatoria 
-	join ConvocatoriaSeleccion on (conv_id = Convocatoria_conv_id)) 
+	from estudiante_toma_convocatoria 
+	join (convocatoria 
+	join convocatoriaseleccion on (conv_id = Convocatoria_conv_id)) 
 	using (conv_id) group by convDeporte;
 
 # 6. Consultar el promedio de horas de corresponsabilidad cumplidas por estudiantes que participaron en convocatorias de gestión alimentaria.
 select avg(horPendCorresp) 
-	from (Corresponsabilidad 
-	join (Estudiante_Toma_Convocatoria 
-	join (Convocatoria 
-	join ConvocatoriaGestionAlimentaria  using (conv_id)) 
+	from (corresponsabilidad 
+	join (estudiante_toma_convocatoria 
+	join (convocatoria 
+	join convocatoriagestionalimentaria  using (conv_id)) 
 	using (conv_id))
 	 using(idEst));
 
 # 7. Consultar la cantidad de estudiantes con fallas alimentarias que participaron en convocatorias a selecciones deportivas de fútbol o fútbol sala.
 
 select distinct estID,convLugar,convDeporte 
-	from FallaAlimentacion 
-	join Estudiante_Toma_Convocatoria on (estID=idEst) 
-	join Convocatoria using (conv_id) 
-	join ConvocatoriaSeleccion on (conv_id=Convocatoria_conv_id) 
+	from fallaalimentacion 
+	join estudiante_toma_convocatoria on (estID=idEst) 
+	join convocatoria using (conv_id) 
+	join convocatoriaseleccion on (conv_id=Convocatoria_conv_id) 
 	where lower(convDeporte)='futbol sala' or lower(convDeporte)='futbol';
 
 select count(estID),convDeporte
 	from 
 	(select distinct estID,convLugar,convDeporte 
-		from FallaAlimentacion 
-		join Estudiante_Toma_Convocatoria on (estID=idEst) 
-		join Convocatoria using (conv_id) 
-		join ConvocatoriaSeleccion on (conv_id=Convocatoria_conv_id) 
+		from fallaalimentacion 
+		join estudiante_toma_convocatoria on (estID=idEst) 
+		join convocatoria using (conv_id) 
+		join convocatoriaseleccion on (conv_id=Convocatoria_conv_id) 
 		where lower(convDeporte)='futbol sala' or lower(convDeporte)='futbol') as tb_nw 
 	group by convDeporte;
     
 select count(estID),convDeporte
 	from 
 	(select distinct estID,convLugar,convDeporte 
-		from FallaAlimentacion 
-		join Estudiante_Toma_Convocatoria on (estID=idEst) 
-		join Convocatoria using (conv_id) 
-		join ConvocatoriaSeleccion on (conv_id=Convocatoria_conv_id) 
+		from fallaalimentacion 
+		join estudiante_toma_convocatoria on (estID=idEst) 
+		join convocatoria using (conv_id) 
+		join convocatoriaseleccion on (conv_id=Convocatoria_conv_id) 
 		where lower(convDeporte)='futbol sala' or lower(convDeporte)='futbol') as tb_nw 
 	group by convDeporte 
     having count(estID)>2;
@@ -131,10 +131,10 @@ select count(estID),convDeporte
 select count(estID)
 	from 
 	(select distinct estID,convLugar,convDeporte 
-		from FallaAlimentacion 
-		join Estudiante_Toma_Convocatoria on (estID=idEst) 
-		join Convocatoria using (conv_id) 
-		join ConvocatoriaSeleccion on (conv_id=Convocatoria_conv_id) 
+		from fallaalimentacion 
+		join estudiante_toma_convocatoria on (estID=idEst) 
+		join convocatoria using (conv_id) 
+		join convocatoriaseleccion on (conv_id=Convocatoria_conv_id) 
 		where lower(convDeporte)='futbol sala' or lower(convDeporte)='futbol') as tb_nw;
 
 #----------------------------------------------------------------------
