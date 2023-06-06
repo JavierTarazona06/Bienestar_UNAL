@@ -1,0 +1,122 @@
+[
+    {
+        "conv_id": 210,
+        "progID": 1703,
+        "progNombre": "Deporte de competencia",
+        "convNombre": "Convocatoria Deporte 2022-2",
+        "convFechaApertura": "2022-07-01",
+        "convFechaCierre": "2022-07-31",
+        "convPeriodo": "2022-2",
+        "convDeporte": "Futbol",
+        "convLugar": "Estadio",
+        "convHora": "15:00:00"
+    },
+    {
+        "conv_id": 211,
+        "progID": 1703,
+        "progNombre": "Deporte de competencia",
+        "convNombre": "Convocatoria Deporte 2023-1",
+        "convFechaApertura": "2023-01-01",
+        "convFechaCierre": "2023-01-31",
+        "convPeriodo": "2023-1",
+        "convDeporte": "Baloncesto",
+        "convLugar": "Cancha 2",
+        "convHora": "10:00:00"
+    },
+    {
+        "conv_id": 212,
+        "progID": 1703,
+        "progNombre": "Deporte de competencia",
+        "convNombre": "Convocatoria Deporte 2023-2",
+        "convFechaApertura": "2023-07-01",
+        "convFechaCierre": "2023-07-31",
+        "convPeriodo": "2023-2",
+        "convDeporte": "Tenis",
+        "convLugar": "Cancha de tenis 3",
+        "convHora": "08:00:00"
+    },
+    {
+        "conv_id": 213,
+        "progID": 1703,
+        "progNombre": "Deporte de competencia",
+        "convNombre": "Convocatoria Deporte 2024-1",
+        "convFechaApertura": "2024-01-01",
+        "convFechaCierre": "2024-01-31",
+        "convPeriodo": "2024-1",
+        "convDeporte": "Voleibol",
+        "convLugar": "Cancha 1",
+        "convHora": "14:00:00"
+    },
+    {
+        "conv_id": 214,
+        "progID": 1703,
+        "progNombre": "Deporte de competencia",
+        "convNombre": "Convocatoria Deporte 2024-2",
+        "convFechaApertura": "2024-07-01",
+        "convFechaCierre": "2024-07-31",
+        "convPeriodo": "2024-2",
+        "convDeporte": "Tenis de mesa",
+        "convLugar": "Estadio",
+        "convHora": "16:00:00"
+    },
+    {
+        "conv_id": 215,
+        "progID": 1703,
+        "progNombre": "Deporte de competencia",
+        "convNombre": "Convocatoria Deporte 2025-1",
+        "convFechaApertura": "2025-01-01",
+        "convFechaCierre": "2025-01-31",
+        "convPeriodo": "2025-1",
+        "convDeporte": "Karate",
+        "convLugar": "Polideportivo",
+        "convHora": "07:00:00"
+    },
+    {
+        "conv_id": 216,
+        "progID": 1703,
+        "progNombre": "Deporte de competencia",
+        "convNombre": "Convocatoria Deporte 2025-2",
+        "convFechaApertura": "2025-07-01",
+        "convFechaCierre": "2025-07-31",
+        "convPeriodo": "2025-2",
+        "convDeporte": "Judo",
+        "convLugar": "Polideportivo",
+        "convHora": "18:00:00"
+    },
+    {
+        "conv_id": 217,
+        "progID": 1703,
+        "progNombre": "Deporte de competencia",
+        "convNombre": "Convocatoria Deporte 2026-1",
+        "convFechaApertura": "2026-01-01",
+        "convFechaCierre": "2026-01-31",
+        "convPeriodo": "2026-1",
+        "convDeporte": "Futbol Sala",
+        "convLugar": "Cancha 2",
+        "convHora": "11:00:00"
+    },
+    {
+        "conv_id": 218,
+        "progID": 1703,
+        "progNombre": "Deporte de competencia",
+        "convNombre": "Convocatoria Deporte 2026-2",
+        "convFechaApertura": "2026-07-01",
+        "convFechaCierre": "2026-07-31",
+        "convPeriodo": "2026-2",
+        "convDeporte": "Ciclismo",
+        "convLugar": "Anillo vial",
+        "convHora": "20:00:00"
+    },
+    {
+        "conv_id": 219,
+        "progID": 1703,
+        "progNombre": "Deporte de competencia",
+        "convNombre": "Convocatoria Deporte 2027-1",
+        "convFechaApertura": "2027-01-01",
+        "convFechaCierre": "2027-01-31",
+        "convPeriodo": "2027-1",
+        "convDeporte": "Atletismo",
+        "convLugar": "Polideportivo",
+        "convHora": "09:00:00"
+    }
+]

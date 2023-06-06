@@ -1,0 +1,131 @@
+[
+    {
+        "prodID": 1,
+        "prodPrecio": 83000,
+        "prodDetalle": "Producto1",
+        "tieID": 1,
+        "tieDireccion": "Ciudad Universitaria",
+        "tieCiudad": "Bogotá"
+    },
+    {
+        "prodID": 2,
+        "prodPrecio": 88000,
+        "prodDetalle": "Producto2",
+        "tieID": 1,
+        "tieDireccion": "Ciudad Universitaria",
+        "tieCiudad": "Bogotá"
+    },
+    {
+        "prodID": 7,
+        "prodPrecio": 113000,
+        "prodDetalle": "Producto7",
+        "tieID": 1,
+        "tieDireccion": "Ciudad Universitaria",
+        "tieCiudad": "Bogotá"
+    },
+    {
+        "prodID": 8,
+        "prodPrecio": 118000,
+        "prodDetalle": "Producto8",
+        "tieID": 1,
+        "tieDireccion": "Ciudad Universitaria",
+        "tieCiudad": "Bogotá"
+    },
+    {
+        "prodID": 9,
+        "prodPrecio": 123000,
+        "prodDetalle": "Producto9",
+        "tieID": 1,
+        "tieDireccion": "Ciudad Universitaria",
+        "tieCiudad": "Bogotá"
+    },
+    {
+        "prodID": 10,
+        "prodPrecio": 128000,
+        "prodDetalle": "Producto10",
+        "tieID": 1,
+        "tieDireccion": "Ciudad Universitaria",
+        "tieCiudad": "Bogotá"
+    },
+    {
+        "prodID": 11,
+        "prodPrecio": 133000,
+        "prodDetalle": "Producto11",
+        "tieDetalle":[
+            {
+                "tieID": 1,
+                "tieDireccion": "Ciudad Universitaria",
+                "tieCiudad": "Bogotá"
+            },
+            {
+                "tieID": 2,
+                "tieDireccion": "Feria del libro",
+                "tieCiudad": "Bogotá"
+            }
+        ]
+    },
+    {
+        "prodID": 15,
+        "prodPrecio": 153000,
+        "prodDetalle": "Producto15",
+        "tieID": 1,
+        "tieDireccion": "Ciudad Universitaria",
+        "tieCiudad": "Bogotá"
+    },
+    {
+        "prodID": 3,
+        "prodPrecio": 93000,
+        "prodDetalle": "Producto3",
+        "tieID": 2,
+        "tieDireccion": "Feria del libro",
+        "tieCiudad": "Bogotá"
+    },
+    {
+        "prodID": 4,
+        "prodPrecio": 98000,
+        "prodDetalle": "Producto4",
+        "tieID": 2,
+        "tieDireccion": "Feria del libro",
+        "tieCiudad": "Bogotá"
+    },
+    {
+        "prodID": 5,
+        "prodPrecio": 103000,
+        "prodDetalle": "Producto5",
+        "tieID": 2,
+        "tieDireccion": "Feria del libro",
+        "tieCiudad": "Bogotá"
+    },
+    {
+        "prodID": 6,
+        "prodPrecio": 108000,
+        "prodDetalle": "Producto6",
+        "tieID": 2,
+        "tieDireccion": "Feria del libro",
+        "tieCiudad": "Bogotá"
+    },
+    {
+        "prodID": 12,
+        "prodPrecio": 138000,
+        "prodDetalle": "Producto12",
+        "tieID": 2,
+        "tieDireccion": "Feria del libro",
+        "tieCiudad": "Bogotá"
+    },
+    {
+        "prodID": 13,
+        "prodPrecio": 143000,
+        "prodDetalle": "Producto13",
+        "tieID": 2,
+        "tieDireccion": "Feria del libro",
+        "tieCiudad": "Bogotá"
+    },
+    {
+        "prodID": 14,
+        "prodPrecio": 148000,
+        "prodDetalle": "Producto14",
+        "tieID": 2,
+        "tieDireccion": "Feria del libro",
+        "tieCiudad": "Bogotá"
+    }
+]

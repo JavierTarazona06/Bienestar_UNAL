@@ -1,0 +1,282 @@
+[
+    {
+        "factID": 1,
+        "factFecha": "2023-05-18",
+        "factHora": "13:00:00",
+        "factDetalle": "N.A",
+        "factProductos":[
+            {
+                "prodID": 8,
+                "prodPrecio": 118000,
+                "prodDetalle": "Producto8"
+            }
+        ],
+        "clienteID": 101010129,
+        "perNombre": "Carlos Luis",
+        "perApellido": "Martínez Cruz",
+        "perEmail": "CMartínezC@unal.edu.co",
+        "tieID": 1,
+        "tieDireccion": "Ciudad Universitaria",
+        "tieCiudad": "Bogotá"
+    },
+    {
+        "factID": 2,
+        "factFecha": "2023-04-15",
+        "factHora": "13:00:00",
+        "factDetalle": "N.A",
+        "factProductos":[
+            {
+                "prodID": 6,
+                "prodPrecio": 108000,
+                "prodDetalle": "Producto6"
+            }
+        ],
+        "clienteID": 10101013,
+        "perNombre": "Ricardo Felipe",
+        "perApellido": "Sánchez Gómez",
+        "perEmail": "RSánchezG@unal.edu.co",
+        "tieID": 1,
+        "tieDireccion": "Ciudad Universitaria",
+        "tieCiudad": "Bogotá"
+    },
+    {
+        "factID": 5,
+        "factFecha": "2023-03-21",
+        "factHora": "18:00:00",
+        "factDetalle": "N.A",
+        "factProductos":[
+            {
+                "prodID": 3,
+                "prodPrecio": 93000,
+                "prodDetalle": "Producto3"
+            },
+            {
+                "prodID": 4,
+                "prodPrecio": 98000,
+                "prodDetalle": "Producto4"
+            }
+        ],
+        "clienteID": 10101019,
+        "perNombre": "Ricardo Andrés",
+        "perApellido": "Suárez Pérez",
+        "perEmail": "RSuárezP@unal.edu.co",
+        "tieID": 1,
+        "tieDireccion": "Ciudad Universitaria",
+        "tieCiudad": "Bogotá"
+    },
+    {
+        "factID": 6,
+        "factFecha": "2023-01-06",
+        "factHora": "18:00:00",
+        "factDetalle": "N.A",
+        "factProductos":[
+            {
+                "prodID": 7,
+                "prodPrecio": 113000,
+                "prodDetalle": "Producto7"
+            }
+        ],
+        "clienteID": 10101012,
+        "perNombre": "Gabriela Andrés",
+        "perApellido": "Pérez Núñez",
+        "perEmail": "GPérezN@unal.edu.co",
+        "tieID": 1,
+        "tieDireccion": "Ciudad Universitaria",
+        "tieCiudad": "Bogotá"
+    },
+    {
+        "factID": 7,
+        "factFecha": "2023-06-01",
+        "factHora": "10:00:00",
+        "factDetalle": "N.A",
+        "factProductos":[
+            {
+                "prodID": 1,
+                "prodPrecio": 83000,
+                "prodDetalle": "Producto1"
+            },
+            {
+                "prodID": 6,
+                "prodPrecio": 108000,
+                "prodDetalle": "Producto6"
+            },
+            {
+                "prodID": 9,
+                "prodPrecio": 123000,
+                "prodDetalle": "Producto9"
+            },
+            {
+                "prodID": 13,
+                "prodPrecio": 143000,
+                "prodDetalle": "Producto13"
+            }
+        ],
+        "clienteID": 10101015,
+        "perNombre": "Laura Ricardo",
+        "perApellido": "Torres Gómez",
+        "perEmail": "LTorresG@unal.edu.co",
+        "tieID": 1,
+        "tieDireccion": "Ciudad Universitaria",
+        "tieCiudad": "Bogotá"
+    },
+    {
+        "factID": 8,
+        "factFecha": "2023-02-27",
+        "factHora": "11:00:00",
+        "factDetalle": "N.A",
+        "factProductos":[
+            {
+                "prodID": 2,
+                "prodPrecio": 88000,
+                "prodDetalle": "Producto2"
+            },
+            {
+                "prodID": 10,
+                "prodPrecio": 128000,
+                "prodDetalle": "Producto10"
+            }
+        ],
+        "clienteID": 10101013,
+        "perNombre": "Ricardo Felipe",
+        "perApellido": "Sánchez Gómez",
+        "perEmail": "RSánchezG@unal.edu.co",
+        "tieID": 1,
+        "tieDireccion": "Ciudad Universitaria",
+        "tieCiudad": "Bogotá"
+    },
+    {
+        "factID": 9,
+        "factFecha": "2023-04-10",
+        "factHora": "10:00:00",
+        "factDetalle": "N.A",
+        "factProductos":[
+            {
+                "prodID": 15,
+                "prodPrecio": 153000,
+                "prodDetalle": "Producto15"
+            }
+        ],
+        "clienteID": 10101016,
+        "perNombre": "Santiago Ernesto",
+        "perApellido": "Ramírez Fernández",
+        "perEmail": "SRamírezF@unal.edu.co",
+        "tieID": 2,
+        "tieDireccion": "Feria del libro",
+        "tieCiudad": "Bogotá"
+    },
+    {
+        "factID": 10,
+        "factFecha": "2023-02-02",
+        "factHora": "18:00:00",
+        "factDetalle": "N.A",
+        "factProductos":[
+            {
+                "prodID": 3,
+                "prodPrecio": 93000,
+                "prodDetalle": "Producto3"
+            },
+            {
+                "prodID": 13,
+                "prodPrecio": 143000,
+                "prodDetalle": "Producto13" 
+            },
+            {
+                "prodID": 15,
+                "prodPrecio": 153000,
+                "prodDetalle": "Producto15"
+            }
+        ],
+        "clienteID": 101010110,
+        "perNombre": "Andrés Ernesto",
+        "perApellido": "Rojas Martínez",
+        "perEmail": "ARojasM@unal.edu.co",
+        "tieID": 2,
+        "tieDireccion": "Feria del libro",
+        "tieCiudad": "Bogotá"
+    },
+    {
+        "factID": 11,
+        "factFecha": "2023-02-21",
+        "factHora": "10:00:00",
+        "factDetalle": "N.A",
+        "factProductos":[
+            {
+                "prodID": 6,
+                "prodPrecio": 108000,
+                "prodDetalle": "Producto6"
+            },
+            {
+                "prodID": 7,
+                "prodPrecio": 113000,
+                "prodDetalle": "Producto7"
+            }
+        ],
+        "clienteID": 101010114,
+        "perNombre": "Manuel Andrea",
+        "perApellido": "Silva López",
+        "perEmail": "MSilvaL@unal.edu.co",
+        "tieID": 2,
+        "tieDireccion": "Feria del libro",
+        "tieCiudad": "Bogotá"
+    },
+    {
+        "factID": 12,
+        "factFecha": "2023-03-23",
+        "factHora": "11:00:00",
+        "factDetalle": "N.A",
+        "factProductos":[
+            {
+                "prodID": 3,
+                "prodPrecio": 93000,
+                "prodDetalle": "Producto3"
+            }
+        ],
+        "clienteID": 101010115,
+        "perNombre": "Mónica María",
+        "perApellido": "Fernández Martínez",
+        "perEmail": "MFernándezM@unal.edu.co",
+        "tieID": 2,
+        "tieDireccion": "Feria del libro",
+        "tieCiudad": "Bogotá"
+    },
+    {
+        "factID": 13,
+        "factFecha": "2023-02-13",
+        "factHora": "17:00:00",
+        "factDetalle": "N.A",
+        "factProductos":[
+            {
+                "prodID": 4,
+                "prodPrecio": 98000,
+                "prodDetalle": "Producto4"
+            }
+        ],
+        "clienteID": 101010127,
+        "perNombre": "Isabel Isabel",
+        "perApellido": "García Cruz",
+        "perEmail": "IGarcíaC@unal.edu.co",
+        "tieID": 2,
+        "tieDireccion": "Feria del libro",
+        "tieCiudad": "Bogotá"
+    },
+    {
+        "factID": 14,
+        "factFecha": "2023-04-29",
+        "factHora": "13:00:00",
+        "factDetalle": "N.A",
+        "factProductos":[
+            {
+                "prodID": 4,
+                "prodPrecio": 98000,
+                "prodDetalle": "Producto4"
+            }
+        ],
+        "clienteID": 101010110,
+        "perNombre": "Andrés Ernesto",
+        "perApellido": "Rojas Martínez",
+        "perEmail": "ARojasM@unal.edu.co",
+        "tieID": 2,
+        "tieDireccion": "Feria del libro",
+        "tieCiudad": "Bogotá"
+    }
+]

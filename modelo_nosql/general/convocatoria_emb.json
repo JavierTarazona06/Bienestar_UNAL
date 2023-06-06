@@ -1,0 +1,978 @@
+[
+    {
+        "conv_id": 1,
+        "convNombre": "Fomento Económico Estudiantes",
+        "convFechaApertura": "2023-01-15",
+        "convFechaCierre": "2023-02-01",
+        "convEstado": 1,
+        "convPeriodo": "2023-1",
+        "Programa_progID": 1,
+        "convPAPA": 35.0,
+        "progDetalle":{
+            "progID": 1,
+            "progNombre": "Fomento Económico Estudiantes",
+            "Area_areID": 5,
+            "progExtension": "None",
+            "progCorreoElectronico": "None",
+            "progTelefono": "None",
+            "progEdificio": "None",
+            "progOficina": "None"
+        },
+        "convDetalle":{
+            "cgeCobertura": 250000
+        }
+    },
+    {
+        "conv_id": 2,
+        "convNombre": "Fomento Económico Estudiantes Alimentación",
+        "convFechaApertura": "2023-01-15",
+        "convFechaCierre": "2023-02-01",
+        "convEstado": 1,
+        "convPeriodo": "2023-1",
+        "Programa_progID": 1,
+        "convPAPA": 35.0,
+        "progDetalle":{
+            "progID": 1,
+            "progNombre": "Fomento Económico Estudiantes",
+            "Area_areID": 5,
+            "progExtension": "None",
+            "progCorreoElectronico": "None",
+            "progTelefono": "None",
+            "progEdificio": "None",
+            "progOficina": "None"
+        },
+        "convDetalle":{
+            "cgaComida": "Cena",
+            "cgaLugar": "Comedor central"
+        }
+    },
+    {
+        "conv_id": 3,
+        "convNombre": "Fomento Económico Estudiantes Alimentación",
+        "convFechaApertura": "2023-01-15",
+        "convFechaCierre": "2023-02-01",
+        "convEstado": 1,
+        "convPeriodo": "2023-1",
+        "Programa_progID": 1,
+        "convPAPA": 35.0,
+        "progDetalle":{
+            "progID": 1,
+            "progNombre": "Fomento Económico Estudiantes",
+            "Area_areID": 5,
+            "progExtension": "None",
+            "progCorreoElectronico": "None",
+            "progTelefono": "None",
+            "progEdificio": "None",
+            "progOficina": "None"
+        },
+        "convDetalle":{
+            "cgaComida": "Almuerzo",
+            "cgaLugar": "Matemáticas"
+        }
+    },
+    {
+        "conv_id": 4,
+        "convNombre": "Fomento Económico Estudiantes Alimentación",
+        "convFechaApertura": "2023-01-15",
+        "convFechaCierre": "2023-02-01",
+        "convEstado": 1,
+        "convPeriodo": "2023-1",
+        "Programa_progID": 1,
+        "convPAPA": 35.0,
+        "progDetalle":{
+            "progID": 1,
+            "progNombre": "Fomento Económico Estudiantes",
+            "Area_areID": 5,
+            "progExtension": "None",
+            "progCorreoElectronico": "None",
+            "progTelefono": "None",
+            "progEdificio": "None",
+            "progOficina": "None"
+        },
+        "convDetalle":{
+            "cgaComida": "Cena",
+            "cgaLugar": "Biología"
+        }
+    },
+    {
+        "conv_id": 5,
+        "convNombre": "Gestión Alojamiento",
+        "convFechaApertura": "2023-01-15",
+        "convFechaCierre": "2023-02-01",
+        "convEstado": 1,
+        "convPeriodo": "2023-1",
+        "Programa_progID": 1,
+        "convPAPA": 35.0,
+        "progDetalle":{
+            "progID": 1,
+            "progNombre": "Fomento Económico Estudiantes",
+            "Area_areID": 5,
+            "progExtension": "None",
+            "progCorreoElectronico": "None",
+            "progTelefono": "None",
+            "progEdificio": "None",
+            "progOficina": "None"
+        },
+        "convDetalle":{
+            "cgalDireccionAlojamiento": "AK 119 t No. 71-39",
+            "cgalLocalidadAlojamiento": "Usme",
+            "cgalCobertura": 1213490,
+            "cgalTipoVivienda": "Residencia Universitaria",
+            "cgalDescripcion": "N.A",
+            "cgalCosto": 3640460
+        }
+    },
+    {
+        "conv_id": 6,
+        "convNombre": "Gestión Alojamiento",
+        "convFechaApertura": "2023-01-15",
+        "convFechaCierre": "2023-02-01",
+        "convEstado": 1,
+        "convPeriodo": "2023-1",
+        "Programa_progID": 1,
+        "convPAPA": 35.0,
+        "progDetalle":{
+            "progID": 1,
+            "progNombre": "Fomento Económico Estudiantes",
+            "Area_areID": 5,
+            "progExtension": "None",
+            "progCorreoElectronico": "None",
+            "progTelefono": "None",
+            "progEdificio": "None",
+            "progOficina": "None"
+        },
+        "convDetalle":{
+            "cgalDireccionAlojamiento": "KR 71 h No. 87-43",
+            "cgalLocalidadAlojamiento": "Barrios Unidos",
+            "cgalCobertura": 2052040,
+            "cgalTipoVivienda": "Habitación",
+            "cgalDescripcion": "N.A",
+            "cgalCosto": 4104070
+        }
+    },
+    {
+        "conv_id": 7,
+        "convNombre": "Gestión Alojamiento",
+        "convFechaApertura": "2023-01-15",
+        "convFechaCierre": "2023-02-01",
+        "convEstado": 1,
+        "convPeriodo": "2023-1",
+        "Programa_progID": 1,
+        "convPAPA": 35.0,
+        "progDetalle":{
+            "progID": 1,
+            "progNombre": "Fomento Económico Estudiantes",
+            "Area_areID": 5,
+            "progExtension": "None",
+            "progCorreoElectronico": "None",
+            "progTelefono": "None",
+            "progEdificio": "None",
+            "progOficina": "None"
+        },
+        "convDetalle":{
+            "cgalDireccionAlojamiento": "AK 16 i No. 41-39",
+            "cgalLocalidadAlojamiento": "Usme",
+            "cgalCobertura": 292882,
+            "cgalTipoVivienda": "Apartamento",
+            "cgalDescripcion": "N.A",
+            "cgalCosto": 585764
+        }
+    },
+    {
+        "conv_id": 8,
+        "convNombre": "Gestión Alojamiento",
+        "convFechaApertura": "2023-01-15",
+        "convFechaCierre": "2023-02-01",
+        "convEstado": 1,
+        "convPeriodo": "2023-1",
+        "Programa_progID": 1,
+        "convPAPA": 35.0,
+        "progDetalle":{
+            "progID": 1,
+            "progNombre": "Fomento Económico Estudiantes",
+            "Area_areID": 5,
+            "progExtension": "None",
+            "progCorreoElectronico": "None",
+            "progTelefono": "None",
+            "progEdificio": "None",
+            "progOficina": "None"
+        },
+        "convDetalle":{
+            "cgalDireccionAlojamiento": "KR 121 g No. 6-85",
+            "cgalLocalidadAlojamiento": "Antonio Nariño",
+            "cgalCobertura": 526833,
+            "cgalTipoVivienda": "Hotel",
+            "cgalDescripcion": "N.A",
+            "cgalCosto": 1580500
+        }
+    },
+    {
+        "conv_id": 9,
+        "convNombre": "Gestión Alojamiento",
+        "convFechaApertura": "2023-01-15",
+        "convFechaCierre": "2023-02-01",
+        "convEstado": 1,
+        "convPeriodo": "2023-1",
+        "Programa_progID": 1,
+        "convPAPA": 35.0,
+        "progDetalle":{
+            "progID": 1,
+            "progNombre": "Fomento Económico Estudiantes",
+            "Area_areID": 5,
+            "progExtension": "None",
+            "progCorreoElectronico": "None",
+            "progTelefono": "None",
+            "progEdificio": "None",
+            "progOficina": "None"
+        },
+        "convDetalle":{
+            "cgalDireccionAlojamiento": "AK 11 j No. 30-36",
+            "cgalLocalidadAlojamiento": "Teusaquillo",
+            "cgalCobertura": 880454,
+            "cgalTipoVivienda": "otro",
+            "cgalDescripcion": "N.A",
+            "cgalCosto": 3521810
+        }
+    },
+    {
+        "conv_id": 10,
+        "convNombre": "Gestión Alojamiento",
+        "convFechaApertura": "2023-01-15",
+        "convFechaCierre": "2023-02-01",
+        "convEstado": 1,
+        "convPeriodo": "2023-1",
+        "Programa_progID": 1,
+        "convPAPA": 35.0,
+        "progDetalle":{
+            "progID": 1,
+            "progNombre": "Fomento Económico Estudiantes",
+            "Area_areID": 5,
+            "progExtension": "None",
+            "progCorreoElectronico": "None",
+            "progTelefono": "None",
+            "progEdificio": "None",
+            "progOficina": "None"
+        },
+        "convDetalle":{
+            "cgalDireccionAlojamiento": "AK 4 d No. 42-60",
+            "cgalLocalidadAlojamiento": "Bosa",
+            "cgalCobertura": 1954660,
+            "cgalTipoVivienda": "Hotel",
+            "cgalDescripcion": "N.A",
+            "cgalCosto": 3909320
+        }
+    },
+    {
+        "conv_id": 11,
+        "convNombre": "Gestión Alojamiento",
+        "convFechaApertura": "2023-01-15",
+        "convFechaCierre": "2023-02-01",
+        "convEstado": 1,
+        "convPeriodo": "2023-1",
+        "Programa_progID": 1,
+        "convPAPA": 35.0,
+        "progDetalle":{
+            "progID": 1,
+            "progNombre": "Fomento Económico Estudiantes",
+            "Area_areID": 5,
+            "progExtension": "None",
+            "progCorreoElectronico": "None",
+            "progTelefono": "None",
+            "progEdificio": "None",
+            "progOficina": "None"
+        },
+        "convDetalle":{
+            "cgalDireccionAlojamiento": "TV 103 s No. 81-41",
+            "cgalLocalidadAlojamiento": "Engativá",
+            "cgalCobertura": 1621720,
+            "cgalTipoVivienda": "Apartaestudio",
+            "cgalDescripcion": "N.A",
+            "cgalCosto": 3243450
+        }
+    },
+    {
+        "conv_id": 12,
+        "convNombre": "Gestión Alojamiento",
+        "convFechaApertura": "2023-01-15",
+        "convFechaCierre": "2023-02-01",
+        "convEstado": 1,
+        "convPeriodo": "2023-1",
+        "Programa_progID": 1,
+        "convPAPA": 35.0,
+        "progDetalle":{
+            "progID": 1,
+            "progNombre": "Fomento Económico Estudiantes",
+            "Area_areID": 5,
+            "progExtension": "None",
+            "progCorreoElectronico": "None",
+            "progTelefono": "None",
+            "progEdificio": "None",
+            "progOficina": "None"
+        },
+        "convDetalle":{
+            "cgalDireccionAlojamiento": "AC 29 c No. 72-52",
+            "cgalLocalidadAlojamiento": "Bosa",
+            "cgalCobertura": 610463,
+            "cgalTipoVivienda": "Habitación",
+            "cgalDescripcion": "N.A",
+            "cgalCosto": 1831390
+        }
+    },
+    {
+        "conv_id": 13,
+        "convNombre": "Gestión Alojamiento",
+        "convFechaApertura": "2023-01-15",
+        "convFechaCierre": "2023-02-01",
+        "convEstado": 1,
+        "convPeriodo": "2023-1",
+        "Programa_progID": 1,
+        "convPAPA": 35.0,
+        "progDetalle":{
+            "progID": 1,
+            "progNombre": "Fomento Económico Estudiantes",
+            "Area_areID": 5,
+            "progExtension": "None",
+            "progCorreoElectronico": "None",
+            "progTelefono": "None",
+            "progEdificio": "None",
+            "progOficina": "None"
+        },
+        "convDetalle":{
+            "cgalDireccionAlojamiento": "KR 172 m No. 98-27",
+            "cgalLocalidadAlojamiento": "Chapinero",
+            "cgalCobertura": 1016120,
+            "cgalTipoVivienda": "Residencia Universitaria",
+            "cgalDescripcion": "N.A",
+            "cgalCosto": 3048360
+        }
+    },
+    {
+        "conv_id": 14,
+        "convNombre": "Gestión Alojamiento",
+        "convFechaApertura": "2023-01-15",
+        "convFechaCierre": "2023-02-01",
+        "convEstado": 1,
+        "convPeriodo": "2023-1",
+        "Programa_progID": 1,
+        "convPAPA": 35.0,
+        "progDetalle":{
+            "progID": 1,
+            "progNombre": "Fomento Económico Estudiantes",
+            "Area_areID": 5,
+            "progExtension": "None",
+            "progCorreoElectronico": "None",
+            "progTelefono": "None",
+            "progEdificio": "None",
+            "progOficina": "None"
+        },
+        "convDetalle":{
+            "cgalDireccionAlojamiento": "TV 156 k No. 30-17",
+            "cgalLocalidadAlojamiento": "Fontibón",
+            "cgalCobertura": 1948560,
+            "cgalTipoVivienda": "Residencia Universitaria",
+            "cgalDescripcion": "N.A",
+            "cgalCosto": 3897130
+        }
+    },
+    {
+        "conv_id": 15,
+        "convNombre": "Gestión Alojamiento",
+        "convFechaApertura": "2023-01-15",
+        "convFechaCierre": "2023-02-01",
+        "convEstado": 1,
+        "convPeriodo": "2023-1",
+        "Programa_progID": 1,
+        "convPAPA": 35.0,
+        "progDetalle":{
+            "progID": 1,
+            "progNombre": "Fomento Económico Estudiantes",
+            "Area_areID": 5,
+            "progExtension": "None",
+            "progCorreoElectronico": "None",
+            "progTelefono": "None",
+            "progEdificio": "None",
+            "progOficina": "None"
+        },
+        "convDetalle":{
+            "cgalDireccionAlojamiento": "TV 20 q No. 42-58",
+            "cgalLocalidadAlojamiento": "Ciudad Bolívar",
+            "cgalCobertura": 2479520,
+            "cgalTipoVivienda": "Vivienda familiar",
+            "cgalDescripcion": "N.A",
+            "cgalCosto": 4959040
+        }
+    },
+    {
+        "conv_id": 16,
+        "convNombre": "Fomento Económico Estudiantes",
+        "convFechaApertura": "2023-01-15",
+        "convFechaCierre": "2023-02-01",
+        "convEstado": 1,
+        "convPeriodo": "2023-1",
+        "Programa_progID": 1,
+        "convPAPA": 35.0,
+        "progDetalle":{
+            "progID": 1,
+            "progNombre": "Fomento Económico Estudiantes",
+            "Area_areID": 5,
+            "progExtension": "None",
+            "progCorreoElectronico": "None",
+            "progTelefono": "None",
+            "progEdificio": "None",
+            "progOficina": "None"
+        },
+        "convDetalle":{
+            "cgeCobertura": 2000000
+        }
+    },
+    {
+        "conv_id": 17,
+        "convNombre": "Fomento Emprendimiento Estudiantes",
+        "convFechaApertura": "2023-01-15",
+        "convFechaCierre": "2023-02-01",
+        "convEstado": 1,
+        "convPeriodo": "2023-1",
+        "Programa_progID": 1,
+        "convPAPA": 35.0,
+        "progDetalle":{
+            "progID": 1,
+            "progNombre": "Fomento Económico Estudiantes",
+            "Area_areID": 5,
+            "progExtension": "None",
+            "progCorreoElectronico": "None",
+            "progTelefono": "None",
+            "progEdificio": "None",
+            "progOficina": "None"
+        },
+        "convDetalle":{
+            "cgemCobertura": 961842,
+            "cgemNombreEmprend": "Empresa1",
+            "cgemTema": "Tema1",
+            "cgemDescripcion": "Descripción del emprendimiento"
+        }
+    },
+    {
+        "conv_id": 18,
+        "convNombre": "Fomento Emprendimiento Estudiantes",
+        "convFechaApertura": "2023-01-15",
+        "convFechaCierre": "2023-02-01",
+        "convEstado": 1,
+        "convPeriodo": "2023-1",
+        "Programa_progID": 1,
+        "convPAPA": 35.0,
+        "progDetalle":{
+            "progID": 1,
+            "progNombre": "Fomento Económico Estudiantes",
+            "Area_areID": 5,
+            "progExtension": "None",
+            "progCorreoElectronico": "None",
+            "progTelefono": "None",
+            "progEdificio": "None",
+            "progOficina": "None"
+        },
+        "convDetalle":{
+            "cgemCobertura": 2248620,
+            "cgemNombreEmprend": "Empresa2",
+            "cgemTema": "Tema2",
+            "cgemDescripcion": "Descripción del emprendimiento"
+        }
+    },
+    {
+        "conv_id": 19,
+        "convNombre": "Fomento Emprendimiento Estudiantes",
+        "convFechaApertura": "2023-01-15",
+        "convFechaCierre": "2023-02-01",
+        "convEstado": 1,
+        "convPeriodo": "2023-1",
+        "Programa_progID": 1,
+        "convPAPA": 35.0,
+        "progDetalle":{
+            "progID": 1,
+            "progNombre": "Fomento Económico Estudiantes",
+            "Area_areID": 5,
+            "progExtension": "None",
+            "progCorreoElectronico": "None",
+            "progTelefono": "None",
+            "progEdificio": "None",
+            "progOficina": "None"
+        },
+        "convDetalle":{
+            "cgemCobertura": 1036760,
+            "cgemNombreEmprend": "Empresa3",
+            "cgemTema": "Tema3",
+            "cgemDescripcion": "Descripción del emprendimiento"
+        }
+    },
+    {
+        "conv_id": 20,
+        "convNombre": "Gestión Transporte",
+        "convFechaApertura": "2023-01-15",
+        "convFechaCierre": "2023-02-01",
+        "convEstado": 1,
+        "convPeriodo": "2023-1",
+        "Programa_progID": 1,
+        "convPAPA": 35.0,
+        "progDetalle":{
+            "progID": 1,
+            "progNombre": "Fomento Económico Estudiantes",
+            "Area_areID": 5,
+            "progExtension": "None",
+            "progCorreoElectronico": "None",
+            "progTelefono": "None",
+            "progEdificio": "None",
+            "progOficina": "None"
+        },
+        "convDetalle":{
+            "cgtCobertura": 530147,
+            "cgtTipoTransporte": "Transporte público masivo"
+        }
+    },
+    {
+        "conv_id": 21,
+        "convNombre": "Gestión Transporte",
+        "convFechaApertura": "2023-01-15",
+        "convFechaCierre": "2023-02-01",
+        "convEstado": 1,
+        "convPeriodo": "2023-1",
+        "Programa_progID": 1,
+        "convPAPA": 35.0,
+        "progDetalle":{
+            "progID": 1,
+            "progNombre": "Fomento Económico Estudiantes",
+            "Area_areID": 5,
+            "progExtension": "None",
+            "progCorreoElectronico": "None",
+            "progTelefono": "None",
+            "progEdificio": "None",
+            "progOficina": "None"
+        },
+        "convDetalle":{
+            "cgtCobertura": 600147,
+            "cgtTipoTransporte": "Transporte público masivo"
+        }
+    },
+    {
+        "conv_id": 22,
+        "convNombre": "Gestión Transporte",
+        "convFechaApertura": "2023-01-15",
+        "convFechaCierre": "2023-02-01",
+        "convEstado": 1,
+        "convPeriodo": "2023-1",
+        "Programa_progID": 1,
+        "convPAPA": 35.0,
+        "progDetalle":{
+            "progID": 1,
+            "progNombre": "Fomento Económico Estudiantes",
+            "Area_areID": 5,
+            "progExtension": "None",
+            "progCorreoElectronico": "None",
+            "progTelefono": "None",
+            "progEdificio": "None",
+            "progOficina": "None"
+        },
+        "convDetalle":{
+            "cgtCobertura": 430147,
+            "cgtTipoTransporte": "otro"
+        }
+    },
+    {
+        "conv_id": 200,
+        "convNombre": "Convocatoria Deporte 2025-2",
+        "convFechaApertura": "2025-06-01",
+        "convFechaCierre": "2025-06-30",
+        "convEstado": 1,
+        "convPeriodo": "2025-2",
+        "Programa_progID": 1702,
+        "convPAPA": 3.5,
+        "progDetalle": {
+            "progID": 1702,
+            "progNombre": "Acondicionamiento físico e instruccion",
+            "Area_areID": 17,
+            "progExtension": "None",
+            "progCorreoElectronico": "None",
+            "progTelefono": "None",
+            "progEdificio": "None",
+            "progOficina": "None"
+        }
+    },
+    {
+        "conv_id": 201,
+        "convNombre": "Convocatoria Deporte 2021-1",
+        "convFechaApertura": "2021-01-01",
+        "convFechaCierre": "2021-01-31",
+        "convEstado": 1,
+        "convPeriodo": "2021-1",
+        "Programa_progID": 1702,
+        "convPAPA": 3.5,
+        "progDetalle": {
+            "progID": 1702,
+            "progNombre": "Acondicionamiento físico e instruccion",
+            "Area_areID": 17,
+            "progExtension": "None",
+            "progCorreoElectronico": "None",
+            "progTelefono": "None",
+            "progEdificio": "None",
+            "progOficina": "None"
+        }
+    },
+    {
+        "conv_id": 202,
+        "convNombre": "Convocatoria Deporte 2021-2",
+        "convFechaApertura": "2021-06-01",
+        "convFechaCierre": "2021-06-30",
+        "convEstado": 1,
+        "convPeriodo": "2021-2",
+        "Programa_progID": 1702,
+        "convPAPA": 3.5,
+        "progDetalle": {
+            "progID": 1702,
+            "progNombre": "Acondicionamiento físico e instruccion",
+            "Area_areID": 17,
+            "progExtension": "None",
+            "progCorreoElectronico": "None",
+            "progTelefono": "None",
+            "progEdificio": "None",
+            "progOficina": "None"
+        }
+    },
+    {
+        "conv_id": 203,
+        "convNombre": "Convocatoria Deporte 2022-1",
+        "convFechaApertura": "2022-01-01",
+        "convFechaCierre": "2022-01-31",
+        "convEstado": 1,
+        "convPeriodo": "2022-1",
+        "Programa_progID": 1702,
+        "convPAPA": 3.5,
+        "progDetalle": {
+            "progID": 1702,
+            "progNombre": "Acondicionamiento físico e instruccion",
+            "Area_areID": 17,
+            "progExtension": "None",
+            "progCorreoElectronico": "None",
+            "progTelefono": "None",
+            "progEdificio": "None",
+            "progOficina": "None"
+        }
+    },
+    {
+        "conv_id": 204,
+        "convNombre": "Convocatoria Deporte 2022-2",
+        "convFechaApertura": "2022-06-01",
+        "convFechaCierre": "2022-06-30",
+        "convEstado": 1,
+        "convPeriodo": "2022-2",
+        "Programa_progID": 1702,
+        "convPAPA": 3.5,
+        "progDetalle": {
+            "progID": 1702,
+            "progNombre": "Acondicionamiento físico e instruccion",
+            "Area_areID": 17,
+            "progExtension": "None",
+            "progCorreoElectronico": "None",
+            "progTelefono": "None",
+            "progEdificio": "None",
+            "progOficina": "None"
+        }
+    },
+    {
+        "conv_id": 205,
+        "convNombre": "Convocatoria Deporte 2023-1",
+        "convFechaApertura": "2023-01-01",
+        "convFechaCierre": "2023-01-31",
+        "convEstado": 1,
+        "convPeriodo": "2023-1",
+        "Programa_progID": 1702,
+        "convPAPA": 3.5,
+        "progDetalle": {
+            "progID": 1702,
+            "progNombre": "Acondicionamiento físico e instruccion",
+            "Area_areID": 17,
+            "progExtension": "None",
+            "progCorreoElectronico": "None",
+            "progTelefono": "None",
+            "progEdificio": "None",
+            "progOficina": "None"
+        }
+    },
+    {
+        "conv_id": 206,
+        "convNombre": "Convocatoria Deporte 2023-2",
+        "convFechaApertura": "2023-06-01",
+        "convFechaCierre": "2023-06-30",
+        "convEstado": 1,
+        "convPeriodo": "2023-2",
+        "Programa_progID": 1702,
+        "convPAPA": 3.5,
+        "progDetalle": {
+            "progID": 1702,
+            "progNombre": "Acondicionamiento físico e instruccion",
+            "Area_areID": 17,
+            "progExtension": "None",
+            "progCorreoElectronico": "None",
+            "progTelefono": "None",
+            "progEdificio": "None",
+            "progOficina": "None"
+        }
+    },
+    {
+        "conv_id": 207,
+        "convNombre": "Convocatoria Deporte 2024-1",
+        "convFechaApertura": "2024-01-01",
+        "convFechaCierre": "2024-01-31",
+        "convEstado": 1,
+        "convPeriodo": "2024-2",
+        "Programa_progID": 1702,
+        "convPAPA": 3.5,
+        "progDetalle": {
+            "progID": 1702,
+            "progNombre": "Acondicionamiento físico e instruccion",
+            "Area_areID": 17,
+            "progExtension": "None",
+            "progCorreoElectronico": "None",
+            "progTelefono": "None",
+            "progEdificio": "None",
+            "progOficina": "None"
+        }
+    },
+    {
+        "conv_id": 208,
+        "convNombre": "Convocatoria Deporte 2024-2",
+        "convFechaApertura": "2024-06-01",
+        "convFechaCierre": "2024-06-30",
+        "convEstado": 1,
+        "convPeriodo": "2024-2",
+        "Programa_progID": 1702,
+        "convPAPA": 3.5,
+        "progDetalle": {
+            "progID": 1702,
+            "progNombre": "Acondicionamiento físico e instruccion",
+            "Area_areID": 17,
+            "progExtension": "None",
+            "progCorreoElectronico": "None",
+            "progTelefono": "None",
+            "progEdificio": "None",
+            "progOficina": "None"
+        }
+    },
+    {
+        "conv_id": 209,
+        "convNombre": "Convocatoria Deporte 2025-1",
+        "convFechaApertura": "2025-01-01",
+        "convFechaCierre": "2025-01-31",
+        "convEstado": 1,
+        "convPeriodo": "2025-1",
+        "Programa_progID": 1702,
+        "convPAPA": 3.5,
+        "progDetalle": {
+            "progID": 1702,
+            "progNombre": "Acondicionamiento físico e instruccion",
+            "Area_areID": 17,
+            "progExtension": "None",
+            "progCorreoElectronico": "None",
+            "progTelefono": "None",
+            "progEdificio": "None",
+            "progOficina": "None"
+        }
+    },
+    {
+        "conv_id": 210,
+        "convNombre": "Convocatoria Deporte 2022-2",
+        "convFechaApertura": "2022-07-01",
+        "convFechaCierre": "2022-07-31",
+        "convEstado": 1,
+        "convPeriodo": "2022-2",
+        "Programa_progID": 1703,
+        "convPAPA": 3.5,
+        "progDetalle": {
+            "progID": 1703,
+            "progNombre": "Deporte de competencia",
+            "Area_areID": 17,
+            "progExtension": "None",
+            "progCorreoElectronico": "None",
+            "progTelefono": "None",
+            "progEdificio": "None",
+            "progOficina": "None"
+        }
+    },
+    {
+        "conv_id": 211,
+        "convNombre": "Convocatoria Deporte 2023-1",
+        "convFechaApertura": "2023-01-01",
+        "convFechaCierre": "2023-01-31",
+        "convEstado": 1,
+        "convPeriodo": "2023-1",
+        "Programa_progID": 1703,
+        "convPAPA": 3.5,
+        "progDetalle": {
+            "progID": 1703,
+            "progNombre": "Deporte de competencia",
+            "Area_areID": 17,
+            "progExtension": "None",
+            "progCorreoElectronico": "None",
+            "progTelefono": "None",
+            "progEdificio": "None",
+            "progOficina": "None"
+        }
+    },
+    {
+        "conv_id": 212,
+        "convNombre": "Convocatoria Deporte 2023-2",
+        "convFechaApertura": "2023-07-01",
+        "convFechaCierre": "2023-07-31",
+        "convEstado": 0,
+        "convPeriodo": "2023-2",
+        "Programa_progID": 1703,
+        "convPAPA": 3.5,
+        "progDetalle": {
+            "progID": 1703,
+            "progNombre": "Deporte de competencia",
+            "Area_areID": 17,
+            "progExtension": "None",
+            "progCorreoElectronico": "None",
+            "progTelefono": "None",
+            "progEdificio": "None",
+            "progOficina": "None"
+        }
+    },
+    {
+        "conv_id": 213,
+        "convNombre": "Convocatoria Deporte 2024-1",
+        "convFechaApertura": "2024-01-01",
+        "convFechaCierre": "2024-01-31",
+        "convEstado": 0,
+        "convPeriodo": "2024-1",
+        "Programa_progID": 1703,
+        "convPAPA": 3.5,
+        "progDetalle": {
+            "progID": 1703,
+            "progNombre": "Deporte de competencia",
+            "Area_areID": 17,
+            "progExtension": "None",
+            "progCorreoElectronico": "None",
+            "progTelefono": "None",
+            "progEdificio": "None",
+            "progOficina": "None"
+        }
+    },
+    {
+        "conv_id": 214,
+        "convNombre": "Convocatoria Deporte 2024-2",
+        "convFechaApertura": "2024-07-01",
+        "convFechaCierre": "2024-07-31",
+        "convEstado": 0,
+        "convPeriodo": "2024-2",
+        "Programa_progID": 1703,
+        "convPAPA": 3.5,
+        "progDetalle": {
+            "progID": 1703,
+            "progNombre": "Deporte de competencia",
+            "Area_areID": 17,
+            "progExtension": "None",
+            "progCorreoElectronico": "None",
+            "progTelefono": "None",
+            "progEdificio": "None",
+            "progOficina": "None"
+        }
+    },
+    {
+        "conv_id": 215,
+        "convNombre": "Convocatoria Deporte 2025-1",
+        "convFechaApertura": "2025-01-01",
+        "convFechaCierre": "2025-01-31",
+        "convEstado": 0,
+        "convPeriodo": "2025-1",
+        "Programa_progID": 1703,
+        "convPAPA": 3.5,
+        "progDetalle": {
+            "progID": 1703,
+            "progNombre": "Deporte de competencia",
+            "Area_areID": 17,
+            "progExtension": "None",
+            "progCorreoElectronico": "None",
+            "progTelefono": "None",
+            "progEdificio": "None",
+            "progOficina": "None"
+        }
+    },
+    {
+        "conv_id": 216,
+        "convNombre": "Convocatoria Deporte 2025-2",
+        "convFechaApertura": "2025-07-01",
+        "convFechaCierre": "2025-07-31",
+        "convEstado": 0,
+        "convPeriodo": "2025-2",
+        "Programa_progID": 1703,
+        "convPAPA": 3.5,
+        "progDetalle": {
+            "progID": 1703,
+            "progNombre": "Deporte de competencia",
+            "Area_areID": 17,
+            "progExtension": "None",
+            "progCorreoElectronico": "None",
+            "progTelefono": "None",
+            "progEdificio": "None",
+            "progOficina": "None"
+        }
+    },
+    {
+        "conv_id": 217,
+        "convNombre": "Convocatoria Deporte 2026-1",
+        "convFechaApertura": "2026-01-01",
+        "convFechaCierre": "2026-01-31",
+        "convEstado": 0,
+        "convPeriodo": "2026-1",
+        "Programa_progID": 1703,
+        "convPAPA": 3.5,
+        "progDetalle": {
+            "progID": 1703,
+            "progNombre": "Deporte de competencia",
+            "Area_areID": 17,
+            "progExtension": "None",
+            "progCorreoElectronico": "None",
+            "progTelefono": "None",
+            "progEdificio": "None",
+            "progOficina": "None"
+        }
+    },
+    {
+        "conv_id": 218,
+        "convNombre": "Convocatoria Deporte 2026-2",
+        "convFechaApertura": "2026-07-01",
+        "convFechaCierre": "2026-07-31",
+        "convEstado": 0,
+        "convPeriodo": "2026-2",
+        "Programa_progID": 1703,
+        "convPAPA": 3.5,
+        "progDetalle": {
+            "progID": 1703,
+            "progNombre": "Deporte de competencia",
+            "Area_areID": 17,
+            "progExtension": "None",
+            "progCorreoElectronico": "None",
+            "progTelefono": "None",
+            "progEdificio": "None",
+            "progOficina": "None"
+        }
+    },
+    {
+        "conv_id": 219,
+        "convNombre": "Convocatoria Deporte 2027-1",
+        "convFechaApertura": "2027-01-01",
+        "convFechaCierre": "2027-01-31",
+        "convEstado": 0,
+        "convPeriodo": "2027-1",
+        "Programa_progID": 1703,
+        "convPAPA": 3.5,
+        "progDetalle": {
+            "progID": 1703,
+            "progNombre": "Deporte de competencia",
+            "Area_areID": 17,
+            "progExtension": "None",
+            "progCorreoElectronico": "None",
+            "progTelefono": "None",
+            "progEdificio": "None",
+            "progOficina": "None"
+        }
+    }
+]

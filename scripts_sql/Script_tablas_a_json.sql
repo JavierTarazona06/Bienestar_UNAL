@@ -41,3 +41,22 @@ select * from convocatoriagestionalojamiento;
 select * from convocatoriagestioneconomica;
 
 select * from convocatoriagestiontransporte;
+
+select * from vw_info_factura;
+
+select * from vw_productos_tienda;
+
+#--------------------------------------------------------------------------------------------------------------------
+													#Deporte
+#--------------------------------------------------------------------------------------------------------------------
+
+
+select * from vw_info_curso_libre_convocatoria;
+
+select * from vw_info_eventotaller;
+
+select * from vw_info_proyecto;
+
+select * from vw_info_seleccion_convocatoria;
+
+select * from torneointerno join programa on (progID=Programa_progID);
