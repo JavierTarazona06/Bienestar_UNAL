@@ -1,0 +1,14 @@
+[
+    {
+        "evetaidEventoTaller": 1,
+        "progID": 1702,
+        "evetaNombre": "La importancia del deporte",
+        "eveDescripcion": "Importancia del deporte",
+        "evetaTipoEventoTaller": "Charla",
+        "evetaHoraInicio": "08:00:00",
+        "evetaHoraFin": "10:00:00",
+        "evetaFecha": "2023-06-15",
+        "evetaLugar": "Plazoleta CyT",
+        "areID": 17
+    }
+]

@@ -1,0 +1,21 @@
+factID,factFecha,factHora,factDetalle,prodID,prodPrecio,prodDetalle,clienteID,perNombre,perApellido,perEmail,tieID,tieDireccion,tieCiudad
+1,2023-05-18,13:00:00,N.A,8,118000,Producto8,101010129,"Carlos Luis","Martínez Cruz",CMartínezC@unal.edu.co,1,"Ciudad Universitaria",Bogotá
+2,2023-04-15,13:00:00,N.A,6,108000,Producto6,10101013,"Ricardo Felipe","Sánchez Gómez",RSánchezG@unal.edu.co,1,"Ciudad Universitaria",Bogotá
+5,2023-03-21,18:00:00,N.A,3,93000,Producto3,10101019,"Ricardo Andrés","Suárez Pérez",RSuárezP@unal.edu.co,1,"Ciudad Universitaria",Bogotá
+5,2023-03-21,18:00:00,N.A,4,98000,Producto4,10101019,"Ricardo Andrés","Suárez Pérez",RSuárezP@unal.edu.co,1,"Ciudad Universitaria",Bogotá
+6,2023-01-06,18:00:00,N.A,7,113000,Producto7,10101012,"Gabriela Andrés","Pérez Núñez",GPérezN@unal.edu.co,1,"Ciudad Universitaria",Bogotá
+7,2023-06-01,10:00:00,N.A,1,83000,Producto1,10101015,"Laura Ricardo","Torres Gómez",LTorresG@unal.edu.co,1,"Ciudad Universitaria",Bogotá
+7,2023-06-01,10:00:00,N.A,6,108000,Producto6,10101015,"Laura Ricardo","Torres Gómez",LTorresG@unal.edu.co,1,"Ciudad Universitaria",Bogotá
+7,2023-06-01,10:00:00,N.A,9,123000,Producto9,10101015,"Laura Ricardo","Torres Gómez",LTorresG@unal.edu.co,1,"Ciudad Universitaria",Bogotá
+7,2023-06-01,10:00:00,N.A,13,143000,Producto13,10101015,"Laura Ricardo","Torres Gómez",LTorresG@unal.edu.co,1,"Ciudad Universitaria",Bogotá
+8,2023-02-27,11:00:00,N.A,2,88000,Producto2,10101013,"Ricardo Felipe","Sánchez Gómez",RSánchezG@unal.edu.co,1,"Ciudad Universitaria",Bogotá
+8,2023-02-27,11:00:00,N.A,10,128000,Producto10,10101013,"Ricardo Felipe","Sánchez Gómez",RSánchezG@unal.edu.co,1,"Ciudad Universitaria",Bogotá
+9,2023-04-10,10:00:00,N.A,15,153000,Producto15,10101016,"Santiago Ernesto","Ramírez Fernández",SRamírezF@unal.edu.co,2,"Feria del libro",Bogotá
+10,2023-02-02,18:00:00,N.A,3,93000,Producto3,101010110,"Andrés Ernesto","Rojas Martínez",ARojasM@unal.edu.co,2,"Feria del libro",Bogotá
+10,2023-02-02,18:00:00,N.A,13,143000,Producto13,101010110,"Andrés Ernesto","Rojas Martínez",ARojasM@unal.edu.co,2,"Feria del libro",Bogotá
+10,2023-02-02,18:00:00,N.A,15,153000,Producto15,101010110,"Andrés Ernesto","Rojas Martínez",ARojasM@unal.edu.co,2,"Feria del libro",Bogotá
+11,2023-02-21,10:00:00,N.A,6,108000,Producto6,101010114,"Manuel Andrea","Silva López",MSilvaL@unal.edu.co,2,"Feria del libro",Bogotá
+11,2023-02-21,10:00:00,N.A,7,113000,Producto7,101010114,"Manuel Andrea","Silva López",MSilvaL@unal.edu.co,2,"Feria del libro",Bogotá
+12,2023-03-23,11:00:00,N.A,3,93000,Producto3,101010115,"Mónica María","Fernández Martínez",MFernándezM@unal.edu.co,2,"Feria del libro",Bogotá
+13,2023-02-13,17:00:00,N.A,4,98000,Producto4,101010127,"Isabel Isabel","García Cruz",IGarcíaC@unal.edu.co,2,"Feria del libro",Bogotá
+14,2023-04-29,13:00:00,N.A,4,98000,Producto4,101010110,"Andrés Ernesto","Rojas Martínez",ARojasM@unal.edu.co,2,"Feria del libro",Bogotá

@@ -1,0 +1,11 @@
+conv_id,progID,progNombre,convNombre,convFechaApertura,convFechaCierre,convPeriodo,convDeporte,convLugar,convHora
+210,1703,"Deporte de competencia","Convocatoria Deporte 2022-2",2022-07-01,2022-07-31,2022-2,Futbol,Estadio,15:00:00
+211,1703,"Deporte de competencia","Convocatoria Deporte 2023-1",2023-01-01,2023-01-31,2023-1,Baloncesto,"Cancha 2",10:00:00
+212,1703,"Deporte de competencia","Convocatoria Deporte 2023-2",2023-07-01,2023-07-31,2023-2,Tenis,"Cancha de tenis 3",08:00:00
+213,1703,"Deporte de competencia","Convocatoria Deporte 2024-1",2024-01-01,2024-01-31,2024-1,Voleibol,"Cancha 1",14:00:00
+214,1703,"Deporte de competencia","Convocatoria Deporte 2024-2",2024-07-01,2024-07-31,2024-2,"Tenis de mesa",Estadio,16:00:00
+215,1703,"Deporte de competencia","Convocatoria Deporte 2025-1",2025-01-01,2025-01-31,2025-1,Karate,Polideportivo,07:00:00
+216,1703,"Deporte de competencia","Convocatoria Deporte 2025-2",2025-07-01,2025-07-31,2025-2,Judo,Polideportivo,18:00:00
+217,1703,"Deporte de competencia","Convocatoria Deporte 2026-1",2026-01-01,2026-01-31,2026-1,"Futbol Sala","Cancha 2",11:00:00
+218,1703,"Deporte de competencia","Convocatoria Deporte 2026-2",2026-07-01,2026-07-31,2026-2,Ciclismo,"Anillo vial",20:00:00
+219,1703,"Deporte de competencia","Convocatoria Deporte 2027-1",2027-01-01,2027-01-31,2027-1,Atletismo,Polideportivo,09:00:00

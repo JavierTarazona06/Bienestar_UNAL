@@ -51,5 +51,5 @@ class reader:
         print(resultado)
     
 
-read = reader("data\Datos_curso_libre.csv")
-read.to_json("modelo_nosql\\area_deporte\curso_libre.json")
+read = reader("data\Datos_producto.csv")
+read.to_json("modelo_nosql\\area_economica\\producto.json")

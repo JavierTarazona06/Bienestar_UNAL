@@ -1535,4 +1535,12 @@ INSERT INTO Bienestar.convocatoriaseleccion (Convocatoria_conv_id, convDeporte, 
 insert into estudiante_toma_convocatoria values (10101019,210,'2023-03-15');
 insert into estudiante_toma_convocatoria values (101010113,217,'2023-04-15');
 
+#Inserciones en evento_taller
+insert into eventotaller values (1,"La importancia del deporte","Charla","Importancia del deporte",'08:00:00','10:00:00',"2023-06-15","Plazoleta CyT");
+insert into programa_tiene_eventotaller values (1,1702);
+
+#Inserciones de proyectos
+insert into proyecto values (1,"Imersión deportiva",0.52,"2023-02-12","2023-06-18","10.000.000");
+insert into programa_tiene_proyecto values (1,1702);
+
 SET FOREIGN_KEY_CHECKS=1;

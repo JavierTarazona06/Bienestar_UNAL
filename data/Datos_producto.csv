@@ -1,0 +1,17 @@
+prodID,prodPrecio,prodDetalle,tieID,tieDireccion,tieCiudad
+1,83000,Producto1,1,"Ciudad Universitaria",Bogotá
+2,88000,Producto2,1,"Ciudad Universitaria",Bogotá
+7,113000,Producto7,1,"Ciudad Universitaria",Bogotá
+8,118000,Producto8,1,"Ciudad Universitaria",Bogotá
+9,123000,Producto9,1,"Ciudad Universitaria",Bogotá
+10,128000,Producto10,1,"Ciudad Universitaria",Bogotá
+11,133000,Producto11,1,"Ciudad Universitaria",Bogotá
+15,153000,Producto15,1,"Ciudad Universitaria",Bogotá
+3,93000,Producto3,2,"Feria del libro",Bogotá
+4,98000,Producto4,2,"Feria del libro",Bogotá
+5,103000,Producto5,2,"Feria del libro",Bogotá
+6,108000,Producto6,2,"Feria del libro",Bogotá
+11,133000,Producto11,2,"Feria del libro",Bogotá
+12,138000,Producto12,2,"Feria del libro",Bogotá
+13,143000,Producto13,2,"Feria del libro",Bogotá
+14,148000,Producto14,2,"Feria del libro",Bogotá

@@ -1,5 +1,6 @@
 [
     {
+        "Convocatoria_conv_id": 200,
         "progNombre": "Acondicionamiento físico e instruccion",
         "convNombre": "Convocatoria Deporte 2025-2",
         "curNombre": "Judo",
@@ -10,6 +11,7 @@
         "convPeriodo": "2025-2"
     },
     {
+        "Convocatoria_conv_id": 201,
         "progNombre": "Acondicionamiento físico e instruccion",
         "convNombre": "Convocatoria Deporte 2021-1",
         "curNombre": "Fútbol",
@@ -20,6 +22,7 @@
         "convPeriodo": "2021-1"
     },
     {
+        "Convocatoria_conv_id": 202,
         "progNombre": "Acondicionamiento físico e instruccion",
         "convNombre": "Convocatoria Deporte 2021-2",
         "curNombre": "Tenis",
@@ -30,6 +33,7 @@
         "convPeriodo": "2021-2"
     },
     {
+        "Convocatoria_conv_id": 203,
         "progNombre": "Acondicionamiento físico e instruccion",
         "convNombre": "Convocatoria Deporte 2022-1",
         "curNombre": "Natación",
@@ -40,6 +44,7 @@
         "convPeriodo": "2022-1"
     },
     {
+        "Convocatoria_conv_id": 204,
         "progNombre": "Acondicionamiento físico e instruccion",
         "convNombre": "Convocatoria Deporte 2022-2",
         "curNombre": "Vóley",
@@ -50,6 +55,7 @@
         "convPeriodo": "2022-2"
     },
     {
+        "Convocatoria_conv_id": 205,
         "progNombre": "Acondicionamiento físico e instruccion",
         "convNombre": "Convocatoria Deporte 2023-1",
         "curNombre": "Baloncesto",
@@ -60,6 +66,7 @@
         "convPeriodo": "2023-1"
     },
     {
+        "Convocatoria_conv_id": 206,
         "progNombre": "Acondicionamiento físico e instruccion",
         "convNombre": "Convocatoria Deporte 2023-2",
         "curNombre": "Karate",
@@ -70,6 +77,7 @@
         "convPeriodo": "2023-2"
     },
     {
+        "Convocatoria_conv_id": 207,
         "progNombre": "Acondicionamiento físico e instruccion",
         "convNombre": "Convocatoria Deporte 2024-1",
         "curNombre": "Pilates",
@@ -80,6 +88,7 @@
         "convPeriodo": "2024-2"
     },
     {
+        "Convocatoria_conv_id": 208,
         "progNombre": "Acondicionamiento físico e instruccion",
         "convNombre": "Convocatoria Deporte 2024-2",
         "curNombre": "Yoga",
@@ -90,6 +99,7 @@
         "convPeriodo": "2024-2"
     },
     {
+        "Convocatoria_conv_id": 209,
         "progNombre": "Acondicionamiento físico e instruccion",
         "convNombre": "Convocatoria Deporte 2025-1",
         "curNombre": "Entrenamiento Funcional",

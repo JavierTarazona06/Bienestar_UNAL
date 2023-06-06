@@ -501,8 +501,8 @@ CREATE TABLE IF NOT EXISTS Bienestar.eventotaller (
   evetaNombre VARCHAR(60) NOT NULL,
   evetaTipoEventoTaller VARCHAR(45) NOT NULL,
   eveDescripcion LONGTEXT NOT NULL,
-  evetaHoraInicio DATETIME NOT NULL,
-  evetaHoraFin DATETIME NOT NULL,
+  evetaHoraInicio TIME NOT NULL,
+  evetaHoraFin TIME NOT NULL,
   evetaFecha DATE NOT NULL,
   evetaLugar VARCHAR(45) NOT NULL,
   PRIMARY KEY (evetaidEventoTaller))

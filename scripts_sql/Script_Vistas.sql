@@ -159,13 +159,13 @@ select * from vw_info_gai_convocatoria;
 
 #Vista de convocatorias a selecciones deportivas.
 
-select progNombre, convNombre, convFechaApertura, convFechaCierre, convPeriodo, convDeporte, convLugar, convHora 
+select conv_id,progID,progNombre, convNombre, convFechaApertura, convFechaCierre, convPeriodo, convDeporte, convLugar, convHora 
 	from programa 
     join convocatoria on (Programa_progID = progID) 
     join convocatoriaseleccion on (Convocatoria_conv_id = conv_id);
 drop view if exists vw_info_seleccion_convocatoria;
 create view vw_info_seleccion_convocatoria 
-	as select progNombre, convNombre, convFechaApertura, convFechaCierre, convPeriodo, convDeporte, convLugar, convHora 
+	as select conv_id,progID,progNombre, convNombre, convFechaApertura, convFechaCierre, convPeriodo, convDeporte, convLugar, convHora 
     from programa 
     join convocatoria on (Programa_progID = progID) 
     join convocatoriaseleccion on (Convocatoria_conv_id = conv_id);
@@ -174,13 +174,13 @@ select * from vw_info_seleccion_convocatoria;
 
 #Vista de convocatorias a cursos libres de deportes.
 
-select progNombre, convNombre, curNombre, curTipoCurso, curCondicion, convFechaApertura, convFechaCierre, convPeriodo  
+select Convocatoria_conv_id,progNombre, convNombre, curNombre, curTipoCurso, curCondicion, convFechaApertura, convFechaCierre, convPeriodo  
 	from programa 
     join convocatoria on (Programa_progID = progID) 
     join convocatoriacursolibre on (Convocatoria_conv_id = conv_id);
 drop view if exists vw_info_curso_libre_convocatoria;
 create view vw_info_curso_libre_convocatoria 
-	as select progNombre, convNombre, curNombre, curTipoCurso, curCondicion, convFechaApertura, convFechaCierre, convPeriodo 
+	as select Convocatoria_conv_id,progNombre, convNombre, curNombre, curTipoCurso, curCondicion, convFechaApertura, convFechaCierre, convPeriodo 
 	from programa 
     join convocatoria on (Programa_progID = progID) 
     join convocatoriacursolibre on (Convocatoria_conv_id = conv_id);
@@ -225,12 +225,12 @@ create view vw_info_proyecto
 select * from vw_info_proyecto;
 
 #Vista de eventos y sus detalles.
-select evetaidEventoTaller, progID,evetaNombre,	eveDescripcion, evetaHoraInicio, evetaHoraFin, evetaFecha, evetaLugar, areID 
+select evetaidEventoTaller, progID,evetaNombre,	eveDescripcion,evetaTipoEventoTaller, evetaHoraInicio, evetaHoraFin, evetaFecha, evetaLugar, areID 
 	from ((eventotaller join programa_tiene_eventotaller on (evetaidEventoTaller = idEventoTaller)) 
     join programa using (progID)) 
     join area on (areID = Area_areID);
 drop view if exists vw_info_eventoTaller;
-create view vw_info_eventoTaller as select evetaidEventoTaller, progID,evetaNombre,	eveDescripcion, evetaHoraInicio, evetaHoraFin, evetaFecha, evetaLugar, areID 
+create view vw_info_eventoTaller as select evetaidEventoTaller, progID,evetaNombre,	eveDescripcion,evetaTipoEventoTaller, evetaHoraInicio, evetaHoraFin, evetaFecha, evetaLugar, areID 
 	from ((eventotaller join programa_tiene_eventotaller on (evetaidEventoTaller = idEventoTaller)) 
     join programa using (progID)) 
     join area on (areID = Area_areID);
