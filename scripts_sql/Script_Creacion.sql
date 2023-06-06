@@ -910,11 +910,11 @@ CREATE INDEX fk_FallaAlimentacion_Estudiante1_idx ON Bienestar.fallaalimentacion
 
 
 -- -----------------------------------------------------
--- Table Bienestar.ConvocatoriaFomentoEmprendimeinto
+-- Table Bienestar.ConvocatoriaFomentoEmprendimiento
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS Bienestar.convocatoriafomentoemprendimeinto ;
+DROP TABLE IF EXISTS Bienestar.convocatoriafomentoemprendimiento ;
 
-CREATE TABLE IF NOT EXISTS Bienestar.convocatoriafomentoemprendimeinto (
+CREATE TABLE IF NOT EXISTS Bienestar.convocatoriafomentoemprendimiento (
   conv_id INT NOT NULL,
   cgemCobertura FLOAT NOT NULL DEFAULT 0,
   cgemNombreEmprend VARCHAR(60) NOT NULL,
