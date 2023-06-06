@@ -40,8 +40,8 @@ db = client.bienestar
 #--------------------------------------
 
 # Obtener la colección en la que se realizará la inserción masiva
-collection = db.persona
-insert_to_mongo(collection,"modelo_nosql\general\persona.json")
+collection = db.persona #Nombre de la colección
+insert_to_mongo(collection,"modelo_nosql\general\persona.json") #Datos de la coleccion
 
 collection = db.estudiante
 insert_to_mongo(collection,"modelo_nosql\general\estudiante.json")
@@ -81,3 +81,6 @@ insert_to_mongo(collection,"modelo_nosql\\area_economica\\conv_gest_transporte.j
 
 collection = db.estudiante_falla_alimentacion
 insert_to_mongo(collection,"modelo_nosql\\area_economica\\estudiante_falla_alimentacion.json")
+
+collection = db.curso_libre
+insert_to_mongo(collection,"modelo_nosql\\area_deporte\curso_libre.json")
