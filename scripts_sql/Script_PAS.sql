@@ -484,7 +484,7 @@ CREATE PROCEDURE sp_fallaalimentacion_est(in id int)
 	END $$
 DELIMITER ;
 
-#call sp_fallaalimentacion_est(10101019);
+call sp_fallaalimentacion_est(10101019);
 
 # 2. El estudiante puede consultar sus actividades de corresponsabilidad realizadas
 
@@ -497,7 +497,7 @@ CREATE PROCEDURE sp_actividadcorresp_est(in id int)
 	END $$
 DELIMITER ;
 
-#call sp_actividadcorresp_est(101010118);
+call sp_actividadcorresp_est(101010118);
 
 # 3. El estudiante puede consultar la cantidad de horas pendientes de corresponsabilidad
 
@@ -513,8 +513,8 @@ CREATE FUNCTION horas_corresponsabilidad_est(id_est int)
 	END $$
 DELIMITER ;
 
-#set @horas =  horas_corresponsabilidad_est(10101014);
-#select @horas;
+set @horas =  horas_corresponsabilidad_est(10101014);
+select @horas;
 
 
 #4. El estudiante desea conocer su PBM
@@ -531,12 +531,22 @@ CREATE FUNCTION pbm_est(id_est int)
 	END $$
 DELIMITER ;
 
-#set @pbm =  pbm_est(101010110);
-#select @pbm;
+set @pbm =  pbm_est(101010110);
+select @pbm;
 
 # 5. El estudiante solo desea visualizar las convocatorias a las que podría acceder según su PBM:
 
-#5.1 La convocatoria fomento emprendimeinto la busca según tema
+#5.1 La convocatoria fomento emprendimiento la busca según tema
+
+drop procedure if exists sp_convocatoriafomentoemprendimiento;
+DELIMITER $$
+CREATE PROCEDURE sp_convocatoriafomentoemprendimiento(in id_est int)
+	BEGIN
+		select * from convocatoriafomentoemprendimiento;
+	END $$
+DELIMITER ;
+
+call sp_convocatoriafomentoemprendimiento(10101015);
 
 drop procedure if exists sp_convocatoriafomentoemprendimiento_est;
 DELIMITER $$
@@ -547,10 +557,49 @@ CREATE PROCEDURE sp_convocatoriafomentoemprendimiento_est(in id_est int, in tema
 	END $$
 DELIMITER ;
 
-#call sp_convocatoriafomentoemprendimeinto_est(10101015,'tema2');
+#call sp_convocatoriafomentoemprendimiento_est(10101015,'tema2');
 
+drop procedure if exists sp_convocatoriafomentoemprendimiento_nombre;
+DELIMITER $$
+CREATE PROCEDURE sp_convocatoriafomentoemprendimiento_nombre(in id_est int, in nombre varchar(50))
+	BEGIN
+		select * from convocatoriafomentoemprendimiento 
+			where LOCATE(LOWER(nombre), LOWER(cgemNombreEmprend)) > 0;
+	END $$
+DELIMITER ;
+
+call sp_convocatoriafomentoemprendimiento_nombre(10101015,'Empresa2');
 
 #5.2 La convocatoria de gestión alimentaria solo se puede acceder con PBM < 25
+
+drop procedure if exists sp_convocatoriagestionalimentaria;
+DELIMITER $$
+CREATE PROCEDURE sp_convocatoriagestionalimentaria(in id_est int)
+	BEGIN
+		if pbm_est(id_est)<26 then
+			select * from convocatoriagestionalimentaria;
+		else
+			SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'El PBM del estaudiante es mayor que 25: No tiene acceso de convocatorias de gestión alimentaria';
+        end if;
+	END $$
+DELIMITER ;
+
+call sp_convocatoriagestionalimentaria(101010110);
+
+
+drop procedure if exists sp_convocatoriagestionalimentaria_com;
+DELIMITER $$
+CREATE PROCEDURE sp_convocatoriagestionalimentaria_com(in id_est int, in comida enum('Desayuno','Almuerzo','Cena'))
+	BEGIN
+		if pbm_est(id_est)<26 then
+			select * from convocatoriagestionalimentaria where cgaComida=comida;
+		else
+			SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'El PBM del estaudiante es mayor que 25: No tiene acceso de convocatorias de gestión alimentaria';
+        end if;
+	END $$
+DELIMITER ;
+
+call sp_convocatoriagestionalimentaria_com(101010110,'Desayuno');
 
 drop procedure if exists sp_convocatoriagestionalimentaria_est;
 DELIMITER $$
@@ -575,6 +624,37 @@ call sp_convocatoriagestionalimentaria_est(10101015,'Desayuno','Comedor central'
 
 
 #5.3 La convocatoria de gestión alojamiento solo se puede acceder con PBM < 25
+
+
+drop procedure if exists sp_convocatoriagestionalojamiento;
+DELIMITER $$
+CREATE PROCEDURE sp_convocatoriagestionalojamiento(in id_est int)
+	BEGIN
+		if pbm_est(id_est)<26 then
+			select * from convocatoriagestionalojamiento;
+		else
+			SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'El PBM del estaudiante es mayor que 25: No tiene acceso de convocatorias de gestión alojamiento';
+        end if;
+	END $$
+DELIMITER ;
+
+call sp_convocatoriagestionalojamiento(101010110);
+
+
+drop procedure if exists sp_convocatoriagestionalojamiento_loc;
+DELIMITER $$
+CREATE PROCEDURE sp_convocatoriagestionalojamiento_loc(in id_est int, in localidad varchar(100))
+	BEGIN
+		if pbm_est(id_est)<26 then
+			select * from convocatoriagestionalojamiento where LOCATE(LOWER(localidad), LOWER(cgalLocalidadAlojamiento)) > 0;
+		else
+			SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'El PBM del estaudiante es mayor que 25: No tiene acceso de convocatorias de gestión alojamiento';
+        end if;
+	END $$
+DELIMITER ;
+
+call sp_convocatoriagestionalojamiento_loc(101010110,'Usme');
+
 
 drop procedure if exists sp_convocatoriagestionalojamiento_est;
 DELIMITER $$
@@ -622,6 +702,36 @@ call sp_convocatoriagestioneconomica_est(10101015);
 */
 
 
+drop procedure if exists sp_convocatoriagestioneconomica_mayor;
+DELIMITER $$
+CREATE PROCEDURE sp_convocatoriagestioneconomica_mayor(in id_est int, in filt float)
+	BEGIN
+		if pbm_est(id_est)<21 then
+			select * from convocatoriagestioneconomica where cgeCobertura>=filt order by cgeCobertura;
+		else
+			SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'El PBM del estaudiante es mayor que 20: No tiene acceso de convocatorias de gestión económica';
+        end if;
+	END $$
+DELIMITER ;
+
+call sp_convocatoriagestioneconomica_mayor(101010110, 500000);
+
+
+drop procedure if exists sp_convocatoriagestioneconomica_menor;
+DELIMITER $$
+CREATE PROCEDURE sp_convocatoriagestioneconomica_menor(in id_est int, in filt float)
+	BEGIN
+		if pbm_est(id_est)<21 then
+			select * from convocatoriagestioneconomica where cgeCobertura<filt order by cgeCobertura;
+		else
+			SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'El PBM del estaudiante es mayor que 20: No tiene acceso de convocatorias de gestión económica';
+        end if;
+	END $$
+DELIMITER ;
+
+call sp_convocatoriagestioneconomica_menor(101010110, 600000);
+
+
 #5.5 La convocatoria de gestión transporte solo se puede acceder con PBM < 15
 
 drop procedure if exists sp_convocatoriagestiontransporte_est;
@@ -644,6 +754,21 @@ set @pbm =  pbm_est(10101015);
 select @pbm;
 call sp_convocatoriagestiontransporte_est(10101015, 'Transporte público masivo');
 */
+
+drop procedure if exists sp_convocatoriagestiontransporte;
+DELIMITER $$
+CREATE PROCEDURE sp_convocatoriagestiontransporte(in id_est int)
+	BEGIN
+		if pbm_est(id_est)<16 then
+			select * from convocatoriagestiontransporte;
+		else
+			SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'El PBM del estaudiante es mayor que 15: No tiene acceso de convocatorias de gestión transporte';
+        end if;
+	END $$
+DELIMITER ;
+
+call sp_convocatoriagestiontransporte(101010110);
+
 
 #6. Una persona/estudiante/secretario/director quiere consultar sus facturas con los detalles en la Tienda de bienestar U.
 

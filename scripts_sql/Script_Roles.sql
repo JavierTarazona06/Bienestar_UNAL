@@ -58,6 +58,17 @@ grant execute on procedure sp_convocatoriagestionalojamiento_est to 'estudiante'
 grant execute on procedure sp_convocatoriagestioneconomica_est to 'estudiante'@'%';
 grant execute on procedure sp_convocatoriagestiontransporte_est to 'estudiante'@'%';
 
+grant execute on procedure sp_convocatoriafomentoemprendimiento to 'estudiante'@'%';
+grant execute on procedure sp_convocatoriafomentoemprendimiento_nombre to 'estudiante'@'%';
+grant execute on procedure sp_convocatoriagestionalimentaria to 'estudiante'@'%';
+grant execute on procedure sp_convocatoriagestionalimentaria_com to 'estudiante'@'%';
+grant execute on procedure sp_convocatoriagestionalojamiento to 'estudiante'@'%';
+grant execute on procedure sp_convocatoriagestionalojamiento_loc to 'estudiante'@'%';
+grant execute on procedure sp_convocatoriagestioneconomica_mayor to 'estudiante'@'%';
+grant execute on procedure sp_convocatoriagestioneconomica_menor to 'estudiante'@'%';
+grant execute on procedure sp_convocatoriagestiontransporte to 'estudiante'@'%';
+
+
 grant execute on procedure sp_info_factura_per to 'estudiante'@'%';
 grant execute on procedure sp_productos_tienda to 'estudiante'@'%';
 grant execute on procedure sp_tiendas_ofrece_producto to 'estudiante'@'%';
