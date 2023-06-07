@@ -776,11 +776,11 @@ drop procedure if exists sp_info_factura_per;
 DELIMITER $$
 CREATE PROCEDURE sp_info_factura_per(in id_per int, in id_tienda int)
 	BEGIN
-		select * from vw_info_factura where clienteID=id_per and tieID=id_tienda;
+		select factID, factFecha, factHora, factDetalle, prodID, prodPrecio, prodDetalle, clienteID, perApellido, perEmail, tieDireccion from vw_info_factura where clienteID=id_per and tieID=id_tienda;
 	END $$
 DELIMITER ;
 
-#call sp_info_factura_per(101010114, 2)
+call sp_info_factura_per(101010114, 2);
 
 #7. Una persona quiere consultar los productos en una tienda de bienestar U.
 
