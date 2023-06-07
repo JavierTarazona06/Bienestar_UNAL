@@ -131,24 +131,226 @@ DELIMITER ;
 #--------------------------------------------------------------------------------------------------------
 
 
-# 1.El secretario/dirección pueden insertar una convocatoria de gestión de alojamiento, pero si la cobertura es mayor al costo, no insertarla
-#Se realiza una función que devuelva un booleano en el caso de que la obra si se pueda insertar
+#1. Cuando se inserte una actividad de corresponsabilidad, restar las horas a la tabla de corresponsabilidad
+
+drop trigger if exists tr_insertar_act_corresp;
+DELIMITER $$
+create trigger tr_insertar_act_corresp after insert on actividadcorresp
+	for each row
+	begin
+	update corresponsabilidad set horPendCorresp=horPendCorresp-NEW.actCorHoras;
+    end $$
+DELIMITER ;
+
+start transaction;
+select * from actividadcorresp where estID=101010127;
+select * from corresponsabilidad where idEst=101010127;
+insert into actividadcorresp values (20, 101010127, 'deportiva', 6, '2023-03-15');
+select * from actividadcorresp where estID=101010127;
+select * from corresponsabilidad where idEst=101010127;
+rollback;
 
 
-#2 La dirección económica quiere eliminar convocatorias económicas, pero para hacerlo 
-#debe eliminar primero el registro de la  tabla de convocarorias
+#2. Cuando se inserte una factura, se reduce la dispobnibilidad
 
+drop trigger if exists tr_insertar_prod_fact;
+DELIMITER $$
+create trigger tr_insertar_prod_fact after insert on factura_producto
+	for each row
+	begin
+    declare tienda int;
+    select tieID into tienda from factura where factID=new.factID;
+	update producto_tiendaun set prodDisponibilidad=prodDisponibilidad-1 
+		where tieID=tienda and prodID=new.prodID;
+    end $$
+DELIMITER ;
 
-#3 Dirección: Al eliminar una factura, también se elimina las relaciones con prodID y factID
+start transaction;
+select * from factura_producto where factID=5;
+select * from producto_tiendaun where prodID=9;
+insert into factura_producto values (9,5);
+select * from factura_producto where factID=5;
+select * from producto_tiendaun where prodID=9;
+rollback;
 
+# Al eliminar una factura, también se elimina las relaciones con prodID y factID
 
-#4. Cuando se inserte una actividad de corresponsabilidad, restar las horas a la tabla de corresponsabilidad
+drop trigger if exists tr_eliminar_factura;
+DELIMITER $$
+create trigger tr_eliminar_factura before delete on factura
+	for each row
+	begin
+		delete from factura_producto where factID=old.factID;
+    end $$
+DELIMITER ;
 
+start transaction;
+select * from factura where clienteID=10101013;
+select * from factura_producto where factID in (select factID from factura where clienteID=10101013);
+delete from factura where clienteID=10101013;
+select * from factura where clienteID=10101013;
+select * from factura_producto where factID in (select factID from factura where clienteID=10101013);
+rollback;
 
-#5. Al insertar en conv. economicas, se inserta también la convocatoria a la tabla de convocatoria
+#3. Al insertar en conv. economicas, se inserta también la convocatoria a la tabla de convocatoria
+	#Al eliminar en conv. economicas, se elimina también la convocatoria a la tabla de convocatoria
 	/* Pruede usar para insertar la conv. en convocatoria
 	call insertar_conv_en_curso(23, 'Gestión Alojamiento', 1);*/
+    
+drop trigger if exists tr_insert_conv_alimento;
+DELIMITER $$
+create trigger tr_insert_conv_alimento before insert on convocatoriagestionalimentaria
+	for each row
+	begin
+	call insertar_conv_en_curso(NEW.conv_id, 'Fomento Económico Estudiantes Alimentación', 1, 3.5);
+    end $$
+DELIMITER ;
 
+drop trigger if exists tr_delete_conv_alimento;
+DELIMITER $$
+create trigger tr_delete_conv_alimento after delete on convocatoriagestionalimentaria
+	for each row
+	begin
+		delete from convocatoria where conv_id=OLD.conv_id;
+    end $$
+DELIMITER ;
+
+start transaction;
+insert into convocatoriagestionalimentaria values (23, 'Desayuno', 'Hemeroteca');
+select * from convocatoria;
+select * from convocatoriagestionalimentaria;
+delete from convocatoriagestionalimentaria where conv_id=23;
+select * from convocatoria;
+select * from convocatoriagestionalimentaria;
+rollback;
+
+#---------------------
+
+
+drop trigger if exists tr_insert_conv_emprendimiento;
+DELIMITER $$
+create trigger tr_insert_conv_emprendimiento before insert on convocatoriafomentoemprendimeinto
+	for each row
+	begin
+	call insertar_conv_en_curso(NEW.conv_id, 'Fomento Emprendimiento Estudiantes', 1, 3.5);
+    end $$
+DELIMITER ;
+
+drop trigger if exists tr_delete_conv_emprendimiento;
+DELIMITER $$
+create trigger tr_delete_conv_emprendimiento after delete on convocatoriafomentoemprendimeinto
+	for each row
+	begin
+		delete from convocatoria where conv_id=OLD.conv_id;
+    end $$
+DELIMITER ;
+
+start transaction;
+insert into convocatoriafomentoemprendimeinto values (23, 200000, 'El Nuevo', 'Tema Nuevo', 'Es un nuevo emp.');
+select * from convocatoria;
+select * from convocatoriafomentoemprendimeinto;
+delete from convocatoriafomentoemprendimeinto where conv_id=23;
+select * from convocatoria;
+select * from convocatoriafomentoemprendimeinto;
+rollback;
+
+#---------------------
+
+#Nota.El secretario/dirección pueden insertar una convocatoria de gestión de alojamiento, pero si la cobertura es mayor al costo, no insertarla
+#Se realiza una función que devuelva un booleano en el caso de que la obra si se pueda insertar
+
+drop trigger if exists tr_insert_conv_alojamiento;
+DELIMITER $$
+create trigger tr_insert_conv_alojamiento before insert on convocatoriagestionalojamiento
+	for each row
+	begin
+    if NEW.cgalCobertura > NEW.cgalCosto then 
+		SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'La cobertura de la gestión de alojamiento no puede ser mayor al costo del alojamiento';
+    else
+		call insertar_conv_en_curso(NEW.conv_id, 'Gestión Alojamiento', 1, 3.5);
+	end if;
+    end $$
+DELIMITER ;
+
+drop trigger if exists tr_delete_conv_alojamiento;
+DELIMITER $$
+create trigger tr_delete_conv_alojamiento after delete on convocatoriagestionalojamiento
+	for each row
+	begin
+		delete from convocatoria where conv_id=OLD.conv_id;
+    end $$
+DELIMITER ;
+
+start transaction;
+insert into convocatoriagestionalojamiento values (23, 'Cra 45 No 21-42', 'Teusaquillo', 500000, 'Habitación', 'Buena habitación', 600000);
+#insert into convocatoriagestionalojamiento values (23, 'Cra 45 No 21-42', 'Teusaquillo', 800000, 'Habitación', 'Buena habitación', 600000);
+select * from convocatoria;
+select * from convocatoriagestionalojamiento;
+delete from convocatoriagestionalojamiento where conv_id=23;
+select * from convocatoria;
+select * from convocatoriagestionalojamiento;
+rollback;
+
+#---------------------
+
+drop trigger if exists tr_insert_conv_economica;
+DELIMITER $$
+create trigger tr_insert_conv_economica before insert on convocatoriagestioneconomica
+	for each row
+	begin
+	call insertar_conv_en_curso(NEW.conv_id, 'Fomento Económico Estudiantes', 1, 3.5);
+    end $$
+DELIMITER ;
+
+drop trigger if exists tr_delete_conv_economica;
+DELIMITER $$
+create trigger tr_delete_conv_economica after delete on convocatoriagestioneconomica
+	for each row
+	begin
+		delete from convocatoria where conv_id=OLD.conv_id;
+    end $$
+DELIMITER ;
+
+start transaction;
+insert into convocatoriagestioneconomica values (23, 400000);
+select * from convocatoria;
+select * from convocatoriagestioneconomica;
+delete from convocatoriagestioneconomica where conv_id=23;
+select * from convocatoria;
+select * from convocatoriagestioneconomica;
+rollback;
+
+#---------------------
+
+
+drop trigger if exists tr_insert_conv_transporte;
+DELIMITER $$
+create trigger tr_insert_conv_transporte before insert on convocatoriagestiontransporte
+	for each row
+	begin
+	call insertar_conv_en_curso(NEW.conv_id, 'Gestión Transporte', 1, 3.5);
+    end $$
+DELIMITER ;
+
+drop trigger if exists tr_delete_conv_transporte;
+DELIMITER $$
+create trigger tr_delete_conv_transporte after delete on convocatoriagestiontransporte
+	for each row
+	begin
+		delete from convocatoria where conv_id=OLD.conv_id;
+    end $$
+DELIMITER ;
+
+start transaction;
+insert into convocatoriagestiontransporte values (23, 400000, 'Transporte público masivo');
+select * from convocatoria;
+select * from convocatoriagestiontransporte;
+delete from convocatoriagestiontransporte where conv_id=23;
+select * from convocatoria;
+select * from convocatoriagestiontransporte;
+rollback;
+
+#---------------------
 
 #--------------------------------------------------------------------------------------------------------
 #                                                     Actividad Fisica y Deporte

@@ -546,7 +546,7 @@ CREATE PROCEDURE sp_convocatoriafomentoemprendimeinto_est(in id_est int, in tema
 	END $$
 DELIMITER ;
 
-#call sp_convocatoriafomentoemprendimeinto_est(10101015,'tema2')
+#call sp_convocatoriafomentoemprendimeinto_est(10101015,'tema2');
 
 
 #5.2 La convocatoria de gestión alimentaria solo se puede acceder con PBM < 25
@@ -693,6 +693,7 @@ CREATE PROCEDURE sp_insertar_est_tm_conv_est(in id_est int, in id_conv int, in f
 	BEGIN
 		declare existe_conv int;
         declare msg char(250);
+		start transaction;
 		#Primer semstre
 		if CAST(Month(fecha) as unsigned)>0 and CAST(Month(fecha) as unsigned)<7 then
 			drop table if exists temp_table;
@@ -721,6 +722,7 @@ CREATE PROCEDURE sp_insertar_est_tm_conv_est(in id_est int, in id_conv int, in f
 				SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = msg;
 			end if;
 		end if;
+        commit;
 	END $$
 DELIMITER ;
 
@@ -757,6 +759,7 @@ CREATE procedure programa_area_convocatoria(in id_conv int)
 	BEGIN
 		declare verify_content int;
         declare msg varchar(250);
+        Start transaction;
         drop table if exists temp_table;
 		CREATE TEMPORARY TABLE temp_table as 
 			select conv_id,convNombre,progID,progNombre,areID,areNombre from convocatoria
@@ -773,6 +776,7 @@ CREATE procedure programa_area_convocatoria(in id_conv int)
             join area on area.areID=Area_areID 
             where conv_id=id_conv;
 		end if;
+        commit;
     END $$
 DELIMITER ;
 
@@ -788,24 +792,25 @@ select * from convocatoria;
 
 drop procedure if exists insertar_conv_en_curso;
 DELIMITER $$
-CREATE procedure insertar_conv_en_curso(in id_conv int, in nom_conv varchar(70), in id_programa int)
+CREATE procedure insertar_conv_en_curso(in id_conv int, in nom_conv varchar(70), in id_programa int, in papa double)
 	BEGIN
 		declare cur_date date;
         declare cur_month int;
         SELECT CURRENT_DATE() into cur_date;
         SELECT CAST(MONTH(CURRENT_DATE()) as unsigned) into cur_month;
         if cur_month<7 then
-			insert into convocatoria values (id_conv, nom_conv, CONCAT(YEAR(cur_date),'-02-01'), CONCAT(YEAR(cur_date),'-03-01'), 1, CONCAT(YEAR(cur_date),'-01'), id_programa);
+			insert into convocatoria values (id_conv, nom_conv, CONCAT(YEAR(cur_date),'-02-01'), CONCAT(YEAR(cur_date),'-03-01'), 1, CONCAT(YEAR(cur_date),'-01'), id_programa, papa);
 		else
-			insert into convocatoria values (id_conv, nom_conv, CONCAT(YEAR(cur_date),'-07-15'), CONCAT(YEAR(cur_date),'-08-30'), 1, CONCAT(YEAR(cur_date),'-02'), id_programa);
+			insert into convocatoria values (id_conv, nom_conv, CONCAT(YEAR(cur_date),'-07-15'), CONCAT(YEAR(cur_date),'-08-30'), 1, CONCAT(YEAR(cur_date),'-02'), id_programa, papa);
 		end if;
     END $$
 DELIMITER ;
 
-/*
-call insertar_conv_en_curso(23, 'Gestión Alojamiento', 1);
+start transaction;
+CALL insertar_conv_en_curso(23, 'Gestión Alojamiento', 1,3.5);
+select * from convocatoria;
 delete from convocatoria where conv_id=23;
-*/
+rollback;
 
 # 13 La secretaría/dirección inserta empleados en la tabla empleado_tiendaun
 
@@ -867,7 +872,7 @@ call borrar_prod_tienda_un(15);
 select * from producto_tiendaun;
 */
 
-# 15 La secretaria inserta facturas usando la fecha y hora actual
+# 15 El estudiante/secretaria inserta facturas usando la fecha y hora actual
 
 drop procedure if exists insertar_factura;
 DELIMITER $$
@@ -875,15 +880,43 @@ CREATE procedure insertar_factura(in id_factura int, in detalle varchar(100), in
 	BEGIN
 		declare cur_date date;
         declare cur_time time;
+        start transaction;
         SELECT CURRENT_DATE() into cur_date;
         SELECT CURTIME() into cur_time;
 		insert into factura values (id_factura, cur_date, cur_time, detalle, tieID, clienteID);
+        commit;
     END $$
 DELIMITER ;
 
 /*
 call insertar_factura(16, 'N.A', 1, 101010117);
 select * from factura;
+*/
+
+#15.1 Persona/Estudiante/Secretario/Direccion Insertar productos en factura
+
+
+select tieID from factura where factID=2;
+
+drop procedure if exists sp_insertar_prod_factura;
+DELIMITER $$
+CREATE procedure sp_insertar_prod_factura(in id_factura int, in id_prod int)
+	BEGIN
+		declare tienda int;
+        start transaction;
+		select tieID into tienda from factura where factID=id_factura;
+        insert into factura_producto values (id_prod,id_factura);
+        update producto_tiendaun set prodDisponibilidad=prodDisponibilidad-1 
+			where tieID=tienda and prodID=id_prod;
+        commit;
+    END $$
+DELIMITER ;
+
+/*
+select * from producto_tiendaun where prodID=9;
+call sp_insertar_prod_factura(2,9);
+select * from producto_tiendaun  where prodID=9;
+select * from factura_producto where factID=2;
 */
 
 #16. La dirección puede borrar facturas de cierto mes y año
@@ -896,8 +929,10 @@ drop procedure if exists eliminar_factura_tiempo;
 DELIMITER $$
 CREATE procedure eliminar_factura_tiempo(in mes int, in ano int)
 	BEGIN
+		start transaction;
 		delete from factura_producto where factID in (select factID from factura where CAST(MONTH(factFecha) as unsigned)=4 and CAST(YEAR(factFecha) as unsigned)=2023);
 		delete from factura where CAST(MONTH(factFecha) as unsigned)=mes and CAST(YEAR(factFecha) as unsigned)=ano;
+        commit;
     END $$
 DELIMITER ;
 
@@ -910,6 +945,54 @@ rollback;
 select factID from factura where CAST(MONTH(factFecha) as unsigned)=4 and CAST(YEAR(factFecha) as unsigned)=2023;
 select * from factura_producto where factID in (select factID from factura where CAST(MONTH(factFecha) as unsigned)=4 and CAST(YEAR(factFecha) as unsigned)=2023);
 */
+
+#16.1 Persona/Estudiante puede borrar sus facturas
+
+drop procedure if exists eliminar_factura_usuario;
+DELIMITER $$
+CREATE procedure eliminar_factura_usuario(in cliente_id int)
+	BEGIN
+		start transaction;
+		delete from factura_producto where factID in (select factID from factura where clienteID=cliente_id);
+		delete from factura where clienteID=cliente_id;
+        commit;
+    END $$
+DELIMITER ;
+
+start transaction;
+select * from factura where clienteID=10101013;
+select * from factura_producto where factID in (select factID from factura where clienteID=10101013);
+CALL eliminar_factura_usuario(10101013);
+select * from factura where clienteID=10101013;
+select * from factura_producto where factID in (select factID from factura where clienteID=10101013);
+rollback;
+
+drop procedure if exists eliminar_factura_usuario_tiempo;
+DELIMITER $$
+CREATE procedure eliminar_factura_usuario_tiempo(in cliente_id int, in mes int, in ano int)
+	BEGIN
+		start transaction;
+		delete from factura_producto 
+			where factID in 
+				(select factID from factura 
+					where CAST(MONTH(factFecha) as unsigned)=4 
+						and CAST(YEAR(factFecha) as unsigned)=2023 
+                        and clienteID=cliente_id);
+		delete from factura 
+			where CAST(MONTH(factFecha) as unsigned)=mes 
+            and CAST(YEAR(factFecha) as unsigned)=ano
+            and clienteID=cliente_id;
+		commit;
+    END $$
+DELIMITER ;
+
+start transaction;
+select * from factura where clienteID=10101013;
+select * from factura_producto where factID in (select factID from factura where clienteID=10101013);
+CALL eliminar_factura_usuario_tiempo(10101013,4,2023);
+select * from factura where clienteID=10101013;
+select * from factura_producto where factID in (select factID from factura where clienteID=10101013);
+rollback;
 
 #17. Secretaría inserta fallas de alimentación con la fecha actual
 
@@ -926,7 +1009,7 @@ call insertar_falla_alimentacion_sec(101010126, 'Almuerzo', 'Comedor central');
 select * from fallaalimentacion;
 */
 
-# 18. Secretaria y dirección insertan actividades de corresponsabilidad con la fecha actual
+# 18. Estudiante/Secretariaa/dirección insertan actividades de corresponsabilidad con la fecha actual
 
 drop procedure if exists insertar_act_corresponsabilidad;
 DELIMITER $$
@@ -949,8 +1032,10 @@ drop procedure if exists insertar_conv_alimento;
 DELIMITER $$
 CREATE procedure insertar_conv_alimento(in id_conv int, in comida enum('Desayuno','Almuerzo','Cena'), in lugar enum('Comedor central','Hemeroteca','Odontología','Agronomía','Biología','Ciencias Humanas','Ciencias Económicas','Matemáticas','otro'))
 	BEGIN
-		call insertar_conv_en_curso(id_conv, 'Fomento Económico Estudiantes Alimentación', 1);
+		start transaction;
+		call insertar_conv_en_curso(id_conv, 'Fomento Económico Estudiantes Alimentación', 1, 3.5);
 		insert into convocatoriagestionalimentaria values (id_conv, comida, lugar);
+        commit;
     END $$
 DELIMITER ;
 
@@ -964,8 +1049,10 @@ drop procedure if exists eliminar_conv_alimento;
 DELIMITER $$
 CREATE procedure eliminar_conv_alimento(in id_conv int)
 	BEGIN
+		start transaction;
 		delete from convocatoriagestionalimentaria where conv_id=id_conv;
 		delete from convocatoria where conv_id=id_conv;
+        commit;
     END $$
 DELIMITER ;
 
@@ -980,8 +1067,10 @@ drop procedure if exists insertar_conv_emprendimiento;
 DELIMITER $$
 CREATE procedure insertar_conv_emprendimiento(in id_conv int, in cobertura float, in nombre varchar(60), in tema varchar(50), in descr varchar(200))
 	BEGIN
-		call insertar_conv_en_curso(id_conv, 'Fomento Emprendimiento Estudiantes', 1);
+		start transaction;
+		call insertar_conv_en_curso(id_conv, 'Fomento Emprendimiento Estudiantes', 1, 3.5);
 		insert into convocatoriafomentoemprendimeinto values (id_conv, cobertura, nombre, tema, descr);
+        commit;
     END $$
 DELIMITER ;
 
@@ -995,8 +1084,10 @@ drop procedure if exists eliminar_conv_emprendimiento;
 DELIMITER $$
 CREATE procedure eliminar_conv_emprendimiento(in id_conv int)
 	BEGIN
+		start transaction;
 		delete from convocatoriafomentoemprendimeinto where conv_id=id_conv;
 		delete from convocatoria where conv_id=id_conv;
+        commit;
     END $$
 DELIMITER ;
 
@@ -1011,8 +1102,10 @@ drop procedure if exists insertar_conv_alojamiento;
 DELIMITER $$
 CREATE procedure insertar_conv_alojamiento(in id_conv int, in direccion varchar(100), in localidad varchar(100), in cobertura float, in tipo enum('Hotel','Casa','Apartamento','Vivienda familiar','Residencia Universitaria','Apartaestudio','Habitación','otro'), in descr varchar(200), in costo float)
 	BEGIN
-		call insertar_conv_en_curso(id_conv, 'Gestión Alojamiento', 1);
+		start transaction;
+		call insertar_conv_en_curso(id_conv, 'Gestión Alojamiento', 1, 3.5);
 		insert into convocatoriagestionalojamiento values (id_conv, direccion, localidad, cobertura, tipo, descr, costo);
+        commit;
     END $$
 DELIMITER ;
 
@@ -1026,8 +1119,10 @@ drop procedure if exists eliminar_conv_alojamiento;
 DELIMITER $$
 CREATE procedure eliminar_conv_alojamiento(in id_conv int)
 	BEGIN
+		start transaction;
 		delete from convocatoriagestionalojamiento where conv_id=id_conv;
 		delete from convocatoria where conv_id=id_conv;
+        commit;
     END $$
 DELIMITER ;
 
@@ -1042,8 +1137,10 @@ drop procedure if exists insertar_conv_economica;
 DELIMITER $$
 CREATE procedure insertar_conv_economica(in id_conv int, in cobertura float)
 	BEGIN
-		call insertar_conv_en_curso(id_conv, 'Fomento Económico Estudiantes', 1);
+		start transaction;
+		call insertar_conv_en_curso(id_conv, 'Fomento Económico Estudiantes', 1, 3.5);
 		insert into convocatoriagestioneconomica values (id_conv, cobertura);
+        commit;
     END $$
 DELIMITER ;
 
@@ -1057,8 +1154,10 @@ drop procedure if exists eliminar_conv_economica;
 DELIMITER $$
 CREATE procedure eliminar_conv_economica(in id_conv int)
 	BEGIN
+		start transaction;
 		delete from convocatoriagestioneconomica where conv_id=id_conv;
 		delete from convocatoria where conv_id=id_conv;
+        commit;
     END $$
 DELIMITER ;
 
@@ -1073,8 +1172,10 @@ drop procedure if exists insertar_conv_transporte;
 DELIMITER $$
 CREATE procedure insertar_conv_transporte(in id_conv int, in cobertura float, in tipo enum('Transporte público masivo','otro'))
 	BEGIN
-		call insertar_conv_en_curso(id_conv, 'Gestión Transporte', 1);
+		start transaction;
+		call insertar_conv_en_curso(id_conv, 'Gestión Transporte', 1, 3.5);
 		insert into convocatoriagestiontransporte values (id_conv, cobertura, tipo);
+        commit;
     END $$
 DELIMITER ;
 
@@ -1088,8 +1189,10 @@ drop procedure if exists eliminar_conv_transporte;
 DELIMITER $$
 CREATE procedure eliminar_conv_transporte(in id_conv int)
 	BEGIN
+		start transaction;
 		delete from convocatoriagestiontransporte where conv_id=id_conv;
 		delete from convocatoria where conv_id=id_conv;
+        commit;
     END $$
 DELIMITER ;
 
@@ -1107,9 +1210,9 @@ select * from convocatoriagestiontransporte;
 # Uso General:
 
 # ------------------------------- Un usuario necesita ver todas las convocatorias por área ----------------------------------------------
-drop procedure if exists sp_consultar_convocatorias_area;
+drop procedure if exists sp_consultar_programas_de_area;
 DELIMITER $$
-create procedure sp_consultar_programas_de_deportes(in idArea int)
+create procedure sp_consultar_programas_de_area(in idArea int)
 	begin 
 		select * from vw_info_convocatoria where areID = idArea;
 	end $$
@@ -1119,7 +1222,7 @@ DELIMITER ;
 # ------------------------------- Un estudiante necesita ver las convocatorias por programa de area de bienestar ----------------------------------------------
 drop procedure if exists sp_consultar_convocatorias_programa;
 DELIMITER $$
-create procedure sp_consultar_convocatorias_deporte(in idPrograma int)
+create procedure sp_consultar_convocatorias_programa(in idPrograma int)
 	begin 
 		select * from convocatoria where Programa_progID = id_Programa;
 	end $$
@@ -1136,7 +1239,7 @@ CREATE PROCEDURE pas_view_perfilriesgo(IN usuarioID INT)
 		SELECT * FROM vw_perfil_integral WHERE persona = usuarioID;
     END $$
 DELIMITER ;
-
+SELECT * FROM vw_perfil_integral;
 # -------------------------------------- Ver el estado de las incapacidades de un usuario ------------------------------------------------
 DROP PROCEDURE IF EXISTS pas_view_incapacidad;
 DELIMITER $$
