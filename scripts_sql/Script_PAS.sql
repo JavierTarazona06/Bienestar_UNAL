@@ -15,7 +15,7 @@ DROP PROCEDURE IF EXISTS pas_citas_agendadas;
 DELIMITER $$
 CREATE PROCEDURE pas_citas_agendadas(IN pacienteID INT)
 	BEGIN 
-		SELECT * FROM vw_citamedica_agendada WHERE paciente = pacienteID;
+		SELECT fecha, especialidad, doctor FROM vw_citamedica_agendada WHERE paciente = pacienteID;
     END $$
 DELIMITER ;
 
@@ -49,7 +49,8 @@ DROP PROCEDURE IF EXISTS pas_check_resultados;
 DELIMITER $$
 CREATE PROCEDURE pas_check_resultados(IN usuarioID INT)
 	BEGIN
-		SELECT * FROM vw_resultado_citamedica WHERE paciente = usuarioID;
+		SELECT fecha, especialidad, diagnostico, peso, estatura, ritmo_cardiaco, vision, medicamento, cantidad, intervalos, examen 
+        FROM vw_resultado_citamedica WHERE paciente = usuarioID;
     END $$
 DELIMITER ;
 
@@ -82,7 +83,7 @@ DROP PROCEDURE IF EXISTS pas_view_atencionsalud;
 DELIMITER $$
 CREATE PROCEDURE pas_view_atencionsalud(IN usuarioID INT)
 	BEGIN
-		SELECT * FROM vw_atencionsalud WHERE persona = usuarioID;
+		SELECT id, fecha, tipo, verificado, aprobado FROM vw_atencionsalud WHERE persona = usuarioID;
     END $$
 DELIMITER ;
 
@@ -1245,7 +1246,7 @@ DROP PROCEDURE IF EXISTS pas_view_incapacidad;
 DELIMITER $$
 CREATE PROCEDURE pas_view_incapacidad(IN usuarioID INT)
 	BEGIN
-		SELECT * FROM vw_incapacidad WHERE persona = usuarioID;
+		SELECT id, fecha, razon, dias, verificado, aprobado FROM vw_incapacidad WHERE persona = usuarioID;
     END $$
 DELIMITER ;
 
