@@ -1069,6 +1069,7 @@ DROP TABLE IF EXISTS Bienestar.producto_tiendaun ;
 CREATE TABLE IF NOT EXISTS Bienestar.producto_tiendaun (
   tieID INT NOT NULL,
   prodID INT UNSIGNED NOT NULL,
+  prodDisponibilidad INT UNSIGNED NOT NULL,
   PRIMARY KEY (tieID, prodID),
   CONSTRAINT fk_TiendaBienestar_copy1_has_Producto_copy1_TiendaBienestar_c1
     FOREIGN KEY (tieID)
