@@ -267,6 +267,7 @@ GRANT EXECUTE ON PROCEDURE pas_edit_perfilintegral TO 'direccion_salud'@'%';
 #--------------------------------------------------------------------------------------------------------
 
 #--------------------------------------------Permisos para estudiantes--------------------------------------------------------------
+
 grant select on Bienestar.TorneoInterno to 'estudiante'@'%';
 grant select on Bienestar.ConvocatoriaCursoLibre to 'estudiante'@'%';
 grant select on Bienestar.ConvocatoriaSeleccion to 'estudiante'@'%';
@@ -287,6 +288,7 @@ grant execute on procedure pas_estudiante_accede_conv to 'estudiante'@'%';
 
 
 #------------------------------------------Permisos para no estudiantes-------------------------------------------------------------
+
 grant select on Bienestar.TorneoInterno to 'no_estudiante'@'%';
 grant select on Bienestar.ConvocatoriaCursoLibre to 'no_estudiante'@'%';
 grant select on Bienestar.ConvocatoriaSeleccion to 'no_estudiante'@'%';

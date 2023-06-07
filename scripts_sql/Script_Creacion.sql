@@ -334,7 +334,7 @@ CREATE TABLE IF NOT EXISTS Bienestar.programa (
   PRIMARY KEY (progID),
   CONSTRAINT fk_Programa_Area1
     FOREIGN KEY (Area_areID)
-    REFERENCES Bienestar.Area (areID)
+    REFERENCES Bienestar.area (areID)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -361,7 +361,7 @@ CREATE TABLE IF NOT EXISTS Bienestar.convocatoria (
   PRIMARY KEY (conv_id, Programa_progID),
   CONSTRAINT fk_Convocatoria_Programa1
     FOREIGN KEY (Programa_progID)
-    REFERENCES Bienestar.Programa (progID)
+    REFERENCES Bienestar.programa (progID)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -387,7 +387,7 @@ CREATE TABLE IF NOT EXISTS Bienestar.grupoartisticoinstitucional (
   PRIMARY KEY (GAI_id, progID),
   CONSTRAINT fk_GrupoArtisticoInstitucional_Programa1
     FOREIGN KEY (progID)
-    REFERENCES Bienestar.Programa (progID)
+    REFERENCES Bienestar.programa (progID)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -409,12 +409,12 @@ CREATE TABLE IF NOT EXISTS Bienestar.convocatoriagai (
   PRIMARY KEY (Convocatoria_conv_id, GrupoArtisticoInstitucional_GAI_id),
   CONSTRAINT fk_ConvGAI_Convocatoria1
     FOREIGN KEY (Convocatoria_conv_id)
-    REFERENCES Bienestar.Convocatoria (conv_id)
+    REFERENCES Bienestar.convocatoria (conv_id)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT fk_ConvocatoriaGAI_GrupoArtisticoInstitucional1
     FOREIGN KEY (GrupoArtisticoInstitucional_GAI_id)
-    REFERENCES Bienestar.GrupoArtisticoInstitucional (GAI_id)
+    REFERENCES Bienestar.grupoartisticoinstitucional (GAI_id)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -445,7 +445,7 @@ CREATE TABLE IF NOT EXISTS Bienestar.torneointerno (
   PRIMARY KEY (toridTorneoInterno, Programa_progID),
   CONSTRAINT fk_TorneoInterno_Programa1
     FOREIGN KEY (Programa_progID)
-    REFERENCES Bienestar.Programa (progID)
+    REFERENCES Bienestar.programa (progID)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -466,7 +466,7 @@ CREATE TABLE IF NOT EXISTS Bienestar.convocatoriacursolibre (
   PRIMARY KEY (Convocatoria_conv_id),
   CONSTRAINT fk_ConvocatoriaCursoLibre_Convocatoria1
     FOREIGN KEY (Convocatoria_conv_id)
-    REFERENCES Bienestar.Convocatoria (conv_id)
+    REFERENCES Bienestar.convocatoria (conv_id)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -485,7 +485,7 @@ CREATE TABLE IF NOT EXISTS Bienestar.convocatoriaseleccion (
   PRIMARY KEY (Convocatoria_conv_id),
   CONSTRAINT fk_ConvocatoriaSeleccion_Convocatoria1
     FOREIGN KEY (Convocatoria_conv_id)
-    REFERENCES Bienestar.Convocatoria (conv_id)
+    REFERENCES Bienestar.convocatoria (conv_id)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -578,12 +578,12 @@ CREATE TABLE IF NOT EXISTS Bienestar.estudiante (
   PRIMARY KEY (estID),
   CONSTRAINT fk_Estudiante_copy1_Persona_copy11
     FOREIGN KEY (estID)
-    REFERENCES Bienestar.Persona (perID)
+    REFERENCES Bienestar.persona (perID)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT fk_Estudiante_copy1_Carrera1
     FOREIGN KEY (carreID)
-    REFERENCES Bienestar.Carrera (carreID)
+    REFERENCES Bienestar.carrera (carreID)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -609,7 +609,7 @@ CREATE TABLE IF NOT EXISTS Bienestar.convocatoriagestionalojamiento (
   PRIMARY KEY (conv_id),
   CONSTRAINT fk_CvGesAlojamiento_Convocatoria1
     FOREIGN KEY (conv_id)
-    REFERENCES Bienestar.Convocatoria (conv_id)
+    REFERENCES Bienestar.convocatoria (conv_id)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -629,7 +629,7 @@ CREATE TABLE IF NOT EXISTS Bienestar.convocatoriagestiontransporte (
   PRIMARY KEY (conv_id),
   CONSTRAINT fk_ConvocatoriaGestionTransporte_Convocatoria1
     FOREIGN KEY (conv_id)
-    REFERENCES Bienestar.Convocatoria (conv_id)
+    REFERENCES Bienestar.convocatoria (conv_id)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -647,7 +647,7 @@ CREATE TABLE IF NOT EXISTS Bienestar.convocatoriagestionalimentaria (
   PRIMARY KEY (conv_id),
   CONSTRAINT fk_ConvocatoriaGestionAlimentaria_Convocatoria1
     FOREIGN KEY (conv_id)
-    REFERENCES Bienestar.Convocatoria (conv_id )
+    REFERENCES Bienestar.convocatoria (conv_id )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -664,7 +664,7 @@ CREATE TABLE IF NOT EXISTS Bienestar.corresponsabilidad (
   PRIMARY KEY (idEst, horPendCorresp),
   CONSTRAINT fk_Corresponsabilidad_Estudiante_copy11
     FOREIGN KEY (idEst)
-    REFERENCES Bienestar.Estudiante (estID)
+    REFERENCES Bienestar.estudiante (estID)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -686,7 +686,7 @@ CREATE TABLE IF NOT EXISTS Bienestar.actividadcorresp (
   PRIMARY KEY (actCorID),
   CONSTRAINT fk_ActividadCorresp_Estudiante1
     FOREIGN KEY (estID)
-    REFERENCES Bienestar.Estudiante (estID)
+    REFERENCES Bienestar.estudiante (estID)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -707,12 +707,12 @@ CREATE TABLE IF NOT EXISTS Bienestar.programa_tiene_proyecto (
   PRIMARY KEY (Proyecto_proyIdProyecto, progID),
   CONSTRAINT fk_Programa_has_Proyecto_Proyecto1
     FOREIGN KEY (Proyecto_proyIdProyecto)
-    REFERENCES Bienestar.Proyecto (proyIdProyecto)
+    REFERENCES Bienestar.proyecto (proyIdProyecto)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT fk_Programa_Tiene_Proyecto_Programa1
     FOREIGN KEY (progID)
-    REFERENCES Bienestar.Programa (progID)
+    REFERENCES Bienestar.programa (progID)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -733,12 +733,12 @@ CREATE TABLE IF NOT EXISTS Bienestar.programa_tiene_eventotaller (
   PRIMARY KEY (idEventoTaller, progID),
   CONSTRAINT fk_Programa_has_EventoTaller_EventoTaller1
     FOREIGN KEY (idEventoTaller)
-    REFERENCES Bienestar.EventoTaller (evetaidEventoTaller)
+    REFERENCES Bienestar.eventotaller (evetaidEventoTaller)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT fk_Programa_Tiene_EventoTaller_Programa1
     FOREIGN KEY (progID)
-    REFERENCES Bienestar.Programa (progID)
+    REFERENCES Bienestar.programa (progID)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -751,9 +751,9 @@ CREATE INDEX fk_Programa_Tiene_EventoTaller_Programa1_idx ON Bienestar.programa_
 -- -----------------------------------------------------
 -- Table Bienestar.CursoCultural
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS Bienestar.CursoCultural ;
+DROP TABLE IF EXISTS Bienestar.cursocultural ;
 
-CREATE TABLE IF NOT EXISTS Bienestar.CursoCultural (
+CREATE TABLE IF NOT EXISTS Bienestar.cursocultural (
   curidCursoCultural INT NOT NULL,
   cucNombre VARCHAR(50) NOT NULL,
   cucObjetivo LONGTEXT NOT NULL,
@@ -767,20 +767,20 @@ CREATE TABLE IF NOT EXISTS Bienestar.CursoCultural (
   PRIMARY KEY (curidCursoCultural, Programa_progID),
   CONSTRAINT fk_CursoCultural_Programa1
     FOREIGN KEY (Programa_progID)
-    REFERENCES Bienestar.Programa (progID)
+    REFERENCES Bienestar.programa (progID)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-CREATE INDEX fk_CursoCultural_Programa1_idx ON Bienestar.CursoCultural (Programa_progID ASC) VISIBLE;
+CREATE INDEX fk_CursoCultural_Programa1_idx ON Bienestar.cursocultural (Programa_progID ASC) VISIBLE;
 
 
 -- -----------------------------------------------------
 -- Table Bienestar.Inscripcion
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS Bienestar.Inscripcion ;
+DROP TABLE IF EXISTS Bienestar.inscripcion ;
 
-CREATE TABLE IF NOT EXISTS Bienestar.Inscripcion (
+CREATE TABLE IF NOT EXISTS Bienestar.inscripcion (
   Inscripcion INT NOT NULL,
   insFechaLimite DATE NOT NULL,
   insValor DOUBLE NOT NULL,
@@ -792,68 +792,68 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table Bienestar.CursoCultural_has_Inscripcion
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS Bienestar.CursoCultural_has_Inscripcion ;
+DROP TABLE IF EXISTS Bienestar.cursocultural_has_inscripcion ;
 
-CREATE TABLE IF NOT EXISTS Bienestar.CursoCultural_has_Inscripcion (
+CREATE TABLE IF NOT EXISTS Bienestar.cursocultural_has_inscripcion (
   CursoCultural_curidCursoCultural INT NOT NULL,
   Inscripcion_Inscripcion INT NOT NULL,
   PRIMARY KEY (CursoCultural_curidCursoCultural, Inscripcion_Inscripcion),
   CONSTRAINT fk_CursoCultural_has_Inscripcion_CursoCultural1
     FOREIGN KEY (CursoCultural_curidCursoCultural)
-    REFERENCES Bienestar.CursoCultural (curidCursoCultural)
+    REFERENCES Bienestar.cursocultural (curidCursoCultural)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT fk_CursoCultural_has_Inscripcion_Inscripcion1
     FOREIGN KEY (Inscripcion_Inscripcion)
-    REFERENCES Bienestar.Inscripcion (Inscripcion)
+    REFERENCES Bienestar.inscripcion (Inscripcion)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-CREATE INDEX fk_CursoCultural_has_Inscripcion_Inscripcion1_idx ON Bienestar.CursoCultural_has_Inscripcion (Inscripcion_Inscripcion ASC) VISIBLE;
+CREATE INDEX fk_CursoCultural_has_Inscripcion_Inscripcion1_idx ON Bienestar.cursocultural_has_inscripcion (Inscripcion_Inscripcion ASC) VISIBLE;
 
-CREATE INDEX fk_CursoCultural_has_Inscripcion_CursoCultural1_idx ON Bienestar.CursoCultural_has_Inscripcion (CursoCultural_curidCursoCultural ASC) VISIBLE;
+CREATE INDEX fk_CursoCultural_has_Inscripcion_CursoCultural1_idx ON Bienestar.cursocultural_has_inscripcion (CursoCultural_curidCursoCultural ASC) VISIBLE;
 
 
 -- -----------------------------------------------------
 -- Table Bienestar.Estudiante_Toma_Convocatoria
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS Bienestar.Estudiante_Toma_Convocatoria ;
+DROP TABLE IF EXISTS Bienestar.estudiante_toma_convocatoria ;
 
-CREATE TABLE IF NOT EXISTS Bienestar.Estudiante_Toma_Convocatoria (
+CREATE TABLE IF NOT EXISTS Bienestar.estudiante_toma_convocatoria (
   idEst INT UNSIGNED NOT NULL,
   conv_id INT NOT NULL,
   fecha_est_tm_conv date not null,
   PRIMARY KEY (idEst, conv_id, fecha_est_tm_conv),
   CONSTRAINT fk_Estudiante_copy1_has_Convocatoria_Estudiante_copy11
     FOREIGN KEY (idEst)
-    REFERENCES Bienestar.Estudiante (estID)
+    REFERENCES Bienestar.estudiante (estID)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT fk_Estudiante_copy1_has_Convocatoria_Convocatoria1
     FOREIGN KEY (conv_id)
-    REFERENCES Bienestar.Convocatoria (conv_id)
+    REFERENCES Bienestar.convocatoria (conv_id)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 #CREATE INDEX fk_Estudiante_copy1_has_Convocatoria_Convocatoria1_idx ON Bienestar.Estudiante_Toma_Convocatoria (conv_id ASC) VISIBLE;
 
-CREATE INDEX fk_Estudiante_copy1_has_Convocatoria_Estudiante_copy11_idx ON Bienestar.Estudiante_Toma_Convocatoria (idEst ASC) VISIBLE;
+CREATE INDEX fk_Estudiante_copy1_has_Convocatoria_Estudiante_copy11_idx ON Bienestar.estudiante_toma_convocatoria (idEst ASC) VISIBLE;
 
 
 -- -----------------------------------------------------
 -- Table Bienestar.ConvocatoriaGestionEconomica
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS Bienestar.ConvocatoriaGestionEconomica ;
+DROP TABLE IF EXISTS Bienestar.convocatoriagestioneconomica ;
 
-CREATE TABLE IF NOT EXISTS Bienestar.ConvocatoriaGestionEconomica (
+CREATE TABLE IF NOT EXISTS Bienestar.convocatoriagestioneconomica (
   conv_id INT NOT NULL,
   cgeCobertura FLOAT NOT NULL DEFAULT 0,
   PRIMARY KEY (conv_id),
   CONSTRAINT fk_ConvocatoriaGestionTransporte_Convocatoria10
     FOREIGN KEY (conv_id)
-    REFERENCES Bienestar.Convocatoria (conv_id)
+    REFERENCES Bienestar.convocatoria (conv_id)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -870,12 +870,12 @@ CREATE TABLE IF NOT EXISTS Bienestar.persona_cargo (
   PRIMARY KEY (perID, carID),
   CONSTRAINT fk_Persona_copy1_has_Cargo_Persona_copy11
     FOREIGN KEY (perID)
-    REFERENCES Bienestar.Persona (perID)
+    REFERENCES Bienestar.persona (perID)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT fk_Persona_copy1_has_Cargo_Cargo1
     FOREIGN KEY (carID)
-    REFERENCES Bienestar.Cargo (carID)
+    REFERENCES Bienestar.cargo (carID)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -888,9 +888,9 @@ CREATE INDEX fk_Persona_copy1_has_Cargo_Persona_copy11_idx ON Bienestar.persona_
 -- -----------------------------------------------------
 -- Table Bienestar.FallaAlimentacion
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS Bienestar.FallaAlimentacion ;
+DROP TABLE IF EXISTS Bienestar.fallaalimentacion ;
 
-CREATE TABLE IF NOT EXISTS Bienestar.FallaAlimentacion (
+CREATE TABLE IF NOT EXISTS Bienestar.fallaalimentacion (
   fallAlID INT UNSIGNED NOT NULL AUTO_INCREMENT,
   estID INT UNSIGNED NOT NULL,
   fallAlcgaComida ENUM('Desayuno', 'Almuerzo', 'Cena') NOT NULL DEFAULT 'Almuerzo',
@@ -899,22 +899,22 @@ CREATE TABLE IF NOT EXISTS Bienestar.FallaAlimentacion (
   PRIMARY KEY (fallAlID),
   CONSTRAINT fk_FallaAlimentacion_Estudiante1
     FOREIGN KEY (estID)
-    REFERENCES Bienestar.Estudiante (estID)
+    REFERENCES Bienestar.estudiante (estID)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-CREATE UNIQUE INDEX fallAlID_UNIQUE ON Bienestar.FallaAlimentacion (fallAlID ASC) VISIBLE;
+CREATE UNIQUE INDEX fallAlID_UNIQUE ON Bienestar.fallaalimentacion (fallAlID ASC) VISIBLE;
 
-CREATE INDEX fk_FallaAlimentacion_Estudiante1_idx ON Bienestar.FallaAlimentacion (estID ASC) VISIBLE;
+CREATE INDEX fk_FallaAlimentacion_Estudiante1_idx ON Bienestar.fallaalimentacion (estID ASC) VISIBLE;
 
 
 -- -----------------------------------------------------
--- Table Bienestar.ConvocatoriaFomentoEmprendimeinto
+-- Table Bienestar.ConvocatoriaFomentoEmprendimiento
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS Bienestar.ConvocatoriaFomentoEmprendimeinto ;
+DROP TABLE IF EXISTS Bienestar.convocatoriafomentoemprendimiento ;
 
-CREATE TABLE IF NOT EXISTS Bienestar.ConvocatoriaFomentoEmprendimeinto (
+CREATE TABLE IF NOT EXISTS Bienestar.convocatoriafomentoemprendimiento (
   conv_id INT NOT NULL,
   cgemCobertura FLOAT NOT NULL DEFAULT 0,
   cgemNombreEmprend VARCHAR(60) NOT NULL,
@@ -923,7 +923,7 @@ CREATE TABLE IF NOT EXISTS Bienestar.ConvocatoriaFomentoEmprendimeinto (
   PRIMARY KEY (conv_id),
   CONSTRAINT fk_ConvocatoriaGestionTransporte_Convocatoria100
     FOREIGN KEY (conv_id)
-    REFERENCES Bienestar.Convocatoria (conv_id)
+    REFERENCES Bienestar.convocatoria (conv_id)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -932,9 +932,9 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table Bienestar.TiendaBienestar
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS Bienestar.TiendaBienestar ;
+DROP TABLE IF EXISTS Bienestar.tiendabienestar ;
 
-CREATE TABLE IF NOT EXISTS Bienestar.TiendaBienestar (
+CREATE TABLE IF NOT EXISTS Bienestar.tiendabienestar (
   tieID INT NOT NULL AUTO_INCREMENT,
   tieCiudad VARCHAR(45) NOT NULL DEFAULT 'Bogotá',
   tieDireccion VARCHAR(50) NOT NULL DEFAULT 'N.E',
@@ -945,19 +945,19 @@ CREATE TABLE IF NOT EXISTS Bienestar.TiendaBienestar (
   PRIMARY KEY (tieID),
   CONSTRAINT fk_TiendaBienestar_copy1_Persona_copy11
     FOREIGN KEY (directorID)
-    REFERENCES Bienestar.Persona (perID)
+    REFERENCES Bienestar.persona (perID)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT fk_TiendaBienestar_copy1_Persona_copy12
     FOREIGN KEY (jefeID)
-    REFERENCES Bienestar.Persona (perID)
+    REFERENCES Bienestar.persona (perID)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-CREATE UNIQUE INDEX tiendBienID_UNIQUE ON Bienestar.TiendaBienestar (tieID ASC) VISIBLE;
+CREATE UNIQUE INDEX tiendBienID_UNIQUE ON Bienestar.tiendabienestar (tieID ASC) VISIBLE;
 
-CREATE INDEX fk_TiendaBienestar_copy1_Persona_copy11_idx ON Bienestar.TiendaBienestar (directorID ASC) VISIBLE;
+CREATE INDEX fk_TiendaBienestar_copy1_Persona_copy11_idx ON Bienestar.tiendabienestar (directorID ASC) VISIBLE;
 
 CREATE INDEX fk_TiendaBienestar_copy1_Persona_copy12_idx ON Bienestar.TiendaBienestar (jefeID ASC) VISIBLE;
 
@@ -965,9 +965,9 @@ CREATE INDEX fk_TiendaBienestar_copy1_Persona_copy12_idx ON Bienestar.TiendaBien
 -- -----------------------------------------------------
 -- Table Bienestar.Factura
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS Bienestar.Factura ;
+DROP TABLE IF EXISTS Bienestar.factura ;
 
-CREATE TABLE IF NOT EXISTS Bienestar.Factura (
+CREATE TABLE IF NOT EXISTS Bienestar.factura (
   factID INT UNSIGNED NOT NULL AUTO_INCREMENT,
   factFecha DATE NOT NULL,
   factHora TIME NOT NULL DEFAULT '08:00:00',
@@ -977,62 +977,62 @@ CREATE TABLE IF NOT EXISTS Bienestar.Factura (
   PRIMARY KEY (factID),
   CONSTRAINT fk_Factura_copy1_TiendaBienestar_copy11
     FOREIGN KEY (tieID)
-    REFERENCES Bienestar.TiendaBienestar (tieID)
+    REFERENCES Bienestar.tiendabienestar (tieID)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT fk_Factura_copy1_Persona_copy11
     FOREIGN KEY (clienteID)
-    REFERENCES Bienestar.Persona (perID)
+    REFERENCES Bienestar.persona (perID)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-CREATE UNIQUE INDEX factID_UNIQUE ON Bienestar.Factura (factID ASC) VISIBLE;
+CREATE UNIQUE INDEX factID_UNIQUE ON Bienestar.factura (factID ASC) VISIBLE;
 
-CREATE INDEX fk_Factura_copy1_TiendaBienestar_copy11_idx ON Bienestar.Factura (tieID ASC) VISIBLE;
+CREATE INDEX fk_Factura_copy1_TiendaBienestar_copy11_idx ON Bienestar.factura (tieID ASC) VISIBLE;
 
-CREATE INDEX fk_Factura_copy1_Persona_copy11_idx ON Bienestar.Factura (clienteID ASC) VISIBLE;
+CREATE INDEX fk_Factura_copy1_Persona_copy11_idx ON Bienestar.factura (clienteID ASC) VISIBLE;
 
 
 -- -----------------------------------------------------
 -- Table Bienestar.Producto
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS Bienestar.Producto ;
+DROP TABLE IF EXISTS Bienestar.producto ;
 
-CREATE TABLE IF NOT EXISTS Bienestar.Producto (
+CREATE TABLE IF NOT EXISTS Bienestar.producto (
   prodID INT UNSIGNED NOT NULL AUTO_INCREMENT,
   prodPrecio DOUBLE NOT NULL DEFAULT 0,
   prodDetalle VARCHAR(100) NOT NULL DEFAULT 'Sin detalle',
   PRIMARY KEY (prodID))
 ENGINE = InnoDB;
 
-CREATE UNIQUE INDEX prodID_UNIQUE ON Bienestar.Producto (prodID ASC) VISIBLE;
+CREATE UNIQUE INDEX prodID_UNIQUE ON Bienestar.producto (prodID ASC) VISIBLE;
 
 
 -- -----------------------------------------------------
 -- Table Bienestar.empleado_tiendaUN
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS Bienestar.empleado_tiendaUN ;
+DROP TABLE IF EXISTS Bienestar.empleado_tiendaun ;
 
-CREATE TABLE IF NOT EXISTS Bienestar.empleado_tiendaUN (
+CREATE TABLE IF NOT EXISTS Bienestar.empleado_tiendaun (
   tieID INT NOT NULL,
   empleadoID INT UNSIGNED NOT NULL,
   PRIMARY KEY (tieID, empleadoID),
   CONSTRAINT fk_TiendaBienestar_copy1_has_Persona_copy1_TiendaBienestar_co1
     FOREIGN KEY (tieID)
-    REFERENCES Bienestar.TiendaBienestar (tieID)
+    REFERENCES Bienestar.tiendabienestar (tieID)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT fk_TiendaBienestar_copy1_has_Persona_copy1_Persona_copy11
     FOREIGN KEY (empleadoID)
-    REFERENCES Bienestar.Persona (perID)
+    REFERENCES Bienestar.persona (perID)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-CREATE INDEX fk_TiendaBienestar_copy1_has_Persona_copy1_Persona_copy11_idx ON Bienestar.empleado_tiendaUN (empleadoID ASC) VISIBLE;
+CREATE INDEX fk_TiendaBienestar_copy1_has_Persona_copy1_Persona_copy11_idx ON Bienestar.empleado_tiendaun (empleadoID ASC) VISIBLE;
 
-CREATE INDEX fk_TiendaBienestar_copy1_has_Persona_copy1_TiendaBienestar__idx ON Bienestar.empleado_tiendaUN (tieID ASC) VISIBLE;
+CREATE INDEX fk_TiendaBienestar_copy1_has_Persona_copy1_TiendaBienestar__idx ON Bienestar.empleado_tiendaun (tieID ASC) VISIBLE;
 
 
 -- -----------------------------------------------------
@@ -1046,12 +1046,12 @@ CREATE TABLE IF NOT EXISTS Bienestar.factura_producto (
   PRIMARY KEY (prodID, factID),
   CONSTRAINT fk_Producto_copy1_has_Factura_copy1_Producto_copy11
     FOREIGN KEY (prodID)
-    REFERENCES Bienestar.Producto (prodID)
+    REFERENCES Bienestar.producto (prodID)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT fk_Producto_copy1_has_Factura_copy1_Factura_copy11
     FOREIGN KEY (factID)
-    REFERENCES Bienestar.Factura (factID)
+    REFERENCES Bienestar.factura (factID)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -1064,62 +1064,62 @@ CREATE INDEX fk_Producto_copy1_has_Factura_copy1_Producto_copy11_idx ON Bienesta
 -- -----------------------------------------------------
 -- Table Bienestar.producto_tiendaUN
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS Bienestar.producto_tiendaUN ;
+DROP TABLE IF EXISTS Bienestar.producto_tiendaun ;
 
-CREATE TABLE IF NOT EXISTS Bienestar.producto_tiendaUN (
+CREATE TABLE IF NOT EXISTS Bienestar.producto_tiendaun (
   tieID INT NOT NULL,
   prodID INT UNSIGNED NOT NULL,
   prodDisponibilidad INT UNSIGNED NOT NULL,
   PRIMARY KEY (tieID, prodID),
   CONSTRAINT fk_TiendaBienestar_copy1_has_Producto_copy1_TiendaBienestar_c1
     FOREIGN KEY (tieID)
-    REFERENCES Bienestar.TiendaBienestar (tieID)
+    REFERENCES Bienestar.tiendabienestar (tieID)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT fk_TiendaBienestar_copy1_has_Producto_copy1_Producto_copy11
     FOREIGN KEY (prodID)
-    REFERENCES Bienestar.Producto (prodID)
+    REFERENCES Bienestar.producto (prodID)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-CREATE INDEX fk_TiendaBienestar_copy1_has_Producto_copy1_Producto_copy11_idx ON Bienestar.producto_tiendaUN (prodID ASC) VISIBLE;
+CREATE INDEX fk_TiendaBienestar_copy1_has_Producto_copy1_Producto_copy11_idx ON Bienestar.producto_tiendaun (prodID ASC) VISIBLE;
 
-CREATE INDEX fk_TiendaBienestar_copy1_has_Producto_copy1_TiendaBienestar_idx ON Bienestar.producto_tiendaUN (tieID ASC) VISIBLE;
+CREATE INDEX fk_TiendaBienestar_copy1_has_Producto_copy1_TiendaBienestar_idx ON Bienestar.producto_tiendaun (tieID ASC) VISIBLE;
 
 -- -----------------------------------------------------
 -- Table `Bienestar`.`Infante`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `Bienestar`.`Infante` ;
+DROP TABLE IF EXISTS `Bienestar`.`infante` ;
 
-CREATE TABLE IF NOT EXISTS `Bienestar`.`Infante` (
+CREATE TABLE IF NOT EXISTS `Bienestar`.`infante` (
   `idPadre_o_Madre` INT UNSIGNED NOT NULL,
   `IdInfante` INT UNSIGNED NOT NULL,
   `TipoDocumento` VARCHAR(45) NULL,
   PRIMARY KEY (`IdInfante`),
   CONSTRAINT `fk_Infante_Persona1`
     FOREIGN KEY (`idPadre_o_Madre`)
-    REFERENCES `Bienestar`.`Persona` (`perID`)
+    REFERENCES `Bienestar`.`persona` (`perID`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Infante_Persona2`
     FOREIGN KEY (`IdInfante`)
-    REFERENCES `Bienestar`.`Persona` (`perID`)
+    REFERENCES `Bienestar`.`persona` (`perID`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-CREATE INDEX `fk_Infante_Persona1_idx` ON `Bienestar`.`Infante` (`idPadre_o_Madre` ASC) VISIBLE;
+CREATE INDEX `fk_Infante_Persona1_idx` ON `Bienestar`.`infante` (`idPadre_o_Madre` ASC) VISIBLE;
 
-CREATE INDEX `fk_Infante_Persona2_idx` ON `Bienestar`.`Infante` (`IdInfante` ASC) VISIBLE;
+CREATE INDEX `fk_Infante_Persona2_idx` ON `Bienestar`.`infante` (`IdInfante` ASC) VISIBLE;
 
 
 -- -----------------------------------------------------
 -- Table `Bienestar`.`InscripciónJardinInfantil`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `Bienestar`.`InscripciónJardinInfantil` ;
+DROP TABLE IF EXISTS `Bienestar`.`inscripciónjardininfantil` ;
 
-CREATE TABLE IF NOT EXISTS `Bienestar`.`InscripciónJardinInfantil` (
+CREATE TABLE IF NOT EXISTS `Bienestar`.`inscripciónjardininfantil` (
   `Infante_IdInfante` INT UNSIGNED NOT NULL,
   `Sala` VARCHAR(45) NULL,
   `Fecha ingreso` VARCHAR(45) NULL,
@@ -1129,27 +1129,27 @@ CREATE TABLE IF NOT EXISTS `Bienestar`.`InscripciónJardinInfantil` (
   PRIMARY KEY (`Infante_IdInfante`, `Programa_progID`),
   CONSTRAINT `fk_InscripciónJardinInfantil_Infante1`
     FOREIGN KEY (`Infante_IdInfante`)
-    REFERENCES `Bienestar`.`Infante` (`IdInfante`)
+    REFERENCES `Bienestar`.`infante` (`IdInfante`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_InscripciónJardinInfantil_Programa1`
     FOREIGN KEY (`Programa_progID`)
-    REFERENCES `Bienestar`.`Programa` (`progID`)
+    REFERENCES `Bienestar`.`programa` (`progID`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-CREATE INDEX `fk_InscripciónJardinInfantil_Infante1_idx` ON `Bienestar`.`InscripciónJardinInfantil` (`Infante_IdInfante` ASC) VISIBLE;
+CREATE INDEX `fk_InscripciónJardinInfantil_Infante1_idx` ON `Bienestar`.`inscripciónjardininfantil` (`Infante_IdInfante` ASC) VISIBLE;
 
-CREATE INDEX `fk_InscripciónJardinInfantil_Programa1_idx` ON `Bienestar`.`InscripciónJardinInfantil` (`Programa_progID` ASC) VISIBLE;
+CREATE INDEX `fk_InscripciónJardinInfantil_Programa1_idx` ON `Bienestar`.`inscripciónjardininfantil` (`Programa_progID` ASC) VISIBLE;
 
 
 -- -----------------------------------------------------
 -- Table `Bienestar`.`InscripciónIPARM`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `Bienestar`.`InscripciónIPARM` ;
+DROP TABLE IF EXISTS `Bienestar`.`inscripcióniparm` ;
 
-CREATE TABLE IF NOT EXISTS `Bienestar`.`InscripciónIPARM` (
+CREATE TABLE IF NOT EXISTS `Bienestar`.`inscripcióniparm` (
   `Infante_IdInfante` INT UNSIGNED NOT NULL,
   `Programa_progID` INT UNSIGNED NOT NULL,
   `Grado` VARCHAR(45) NULL,
@@ -1159,27 +1159,27 @@ CREATE TABLE IF NOT EXISTS `Bienestar`.`InscripciónIPARM` (
   PRIMARY KEY (`Infante_IdInfante`, `Programa_progID`),
   CONSTRAINT `fk_InscripciónIPARM_Infante1`
     FOREIGN KEY (`Infante_IdInfante`)
-    REFERENCES `Bienestar`.`Infante` (`IdInfante`)
+    REFERENCES `Bienestar`.`infante` (`IdInfante`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_InscripciónIPARM_Programa1`
     FOREIGN KEY (`Programa_progID`)
-    REFERENCES `Bienestar`.`Programa` (`progID`)
+    REFERENCES `Bienestar`.`programa` (`progID`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-CREATE INDEX `fk_InscripciónIPARM_Infante1_idx` ON `Bienestar`.`InscripciónIPARM` (`Infante_IdInfante` ASC) VISIBLE;
+CREATE INDEX `fk_InscripciónIPARM_Infante1_idx` ON `Bienestar`.`inscripcióniparm` (`Infante_IdInfante` ASC) VISIBLE;
 
-CREATE INDEX `fk_InscripciónIPARM_Programa1_idx` ON `Bienestar`.`InscripciónIPARM` (`Programa_progID` ASC) VISIBLE;
+CREATE INDEX `fk_InscripciónIPARM_Programa1_idx` ON `Bienestar`.`inscripcióniparm` (`Programa_progID` ASC) VISIBLE;
 
 
 -- -----------------------------------------------------
 -- Table `Bienestar`.`ServicioCapellania`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `Bienestar`.`ServicioCapellania` ;
+DROP TABLE IF EXISTS `Bienestar`.`serviciocapellania` ;
 
-CREATE TABLE IF NOT EXISTS `Bienestar`.`ServicioCapellania` (
+CREATE TABLE IF NOT EXISTS `Bienestar`.`serviciocapellania` (
   `idServicioCapellania` INT NOT NULL,
   `Nombre` VARCHAR(45) NULL,
   `FechaInicio` DATE NULL,
@@ -1189,20 +1189,20 @@ CREATE TABLE IF NOT EXISTS `Bienestar`.`ServicioCapellania` (
   PRIMARY KEY (`idServicioCapellania`),
   CONSTRAINT `fk_ServicioCapellania_Programa1`
     FOREIGN KEY (`Programa_progID`)
-    REFERENCES `Bienestar`.`Programa` (`progID`)
+    REFERENCES `Bienestar`.`programa` (`progID`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-CREATE INDEX `fk_ServicioCapellania_Programa1_idx` ON `Bienestar`.`ServicioCapellania` (`Programa_progID` ASC) VISIBLE;
+CREATE INDEX `fk_ServicioCapellania_Programa1_idx` ON `Bienestar`.`serviciocapellania` (`Programa_progID` ASC) VISIBLE;
 
 
 -- -----------------------------------------------------
 -- Table `Bienestar`.`GrupoFormaciónEspiritual`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `Bienestar`.`GrupoFormaciónEspiritual` ;
+DROP TABLE IF EXISTS `Bienestar`.`grupoformaciónespiritual` ;
 
-CREATE TABLE IF NOT EXISTS `Bienestar`.`GrupoFormaciónEspiritual` (
+CREATE TABLE IF NOT EXISTS `Bienestar`.`grupoformaciónespiritual` (
   `idGrupoFormaciónEspiritual` INT NOT NULL,
   `Nombre` VARCHAR(45) NULL,
   `FechaInicio` DATE NULL,
@@ -1212,20 +1212,20 @@ CREATE TABLE IF NOT EXISTS `Bienestar`.`GrupoFormaciónEspiritual` (
   PRIMARY KEY (`idGrupoFormaciónEspiritual`),
   CONSTRAINT `fk_GrupoFormaciónEspiritual_Programa1`
     FOREIGN KEY (`Programa_progID`)
-    REFERENCES `Bienestar`.`Programa` (`progID`)
+    REFERENCES `Bienestar`.`programa` (`progID`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-CREATE INDEX `fk_GrupoFormaciónEspiritual_Programa1_idx` ON `Bienestar`.`GrupoFormaciónEspiritual` (`Programa_progID` ASC) VISIBLE;
+CREATE INDEX `fk_GrupoFormaciónEspiritual_Programa1_idx` ON `Bienestar`.`grupoformaciónespiritual` (`Programa_progID` ASC) VISIBLE;
 
 
 -- -----------------------------------------------------
 -- Table `Bienestar`.`VoluntariadoCapellania`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `Bienestar`.`VoluntariadoCapellania` ;
+DROP TABLE IF EXISTS `Bienestar`.`voluntariadocapellania` ;
 
-CREATE TABLE IF NOT EXISTS `Bienestar`.`VoluntariadoCapellania` (
+CREATE TABLE IF NOT EXISTS `Bienestar`.`voluntariadocapellania` (
   `idVoluntariadoCapellania` INT NOT NULL,
   `Nombre` VARCHAR(45) NULL,
   `FechaInicio` DATE NULL,
@@ -1235,19 +1235,19 @@ CREATE TABLE IF NOT EXISTS `Bienestar`.`VoluntariadoCapellania` (
   PRIMARY KEY (`idVoluntariadoCapellania`),
   CONSTRAINT `fk_VoluntariadoCapellania_Programa1`
     FOREIGN KEY (`Programa_progID`)
-    REFERENCES `Bienestar`.`Programa` (`progID`)
+    REFERENCES `Bienestar`.`programa` (`progID`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-CREATE INDEX `fk_VoluntariadoCapellania_Programa1_idx` ON `Bienestar`.`VoluntariadoCapellania` (`Programa_progID` ASC) VISIBLE;
+CREATE INDEX `fk_VoluntariadoCapellania_Programa1_idx` ON `Bienestar`.`voluntariadocapellania` (`Programa_progID` ASC) VISIBLE;
 
 -- -----------------------------------------------------
 -- Table `Bienestar`.`ActividadAI`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `Bienestar`.`ActividadAI` ;
+DROP TABLE IF EXISTS `Bienestar`.`actividadai` ;
 
-CREATE TABLE IF NOT EXISTS `Bienestar`.`ActividadAI` (
+CREATE TABLE IF NOT EXISTS `Bienestar`.`actividadai` (
   `actID` INT NOT NULL,
   `actNombre` VARCHAR(45) NOT NULL,
   `actTipo` VARCHAR(45) NOT NULL,
@@ -1258,46 +1258,46 @@ CREATE TABLE IF NOT EXISTS `Bienestar`.`ActividadAI` (
   PRIMARY KEY (`actID`),
   CONSTRAINT `fk_ActividadAI_Programa1`
     FOREIGN KEY (`ProgramaID`)
-    REFERENCES `Bienestar`.`Programa` (`progID`)
+    REFERENCES `Bienestar`.`programa` (`progID`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-CREATE INDEX `fk_ActividadAI_Programa1_idx` ON `Bienestar`.`ActividadAI` (`ProgramaID` ASC) VISIBLE;
+CREATE INDEX `fk_ActividadAI_Programa1_idx` ON `Bienestar`.`actividadai` (`ProgramaID` ASC) VISIBLE;
 
 
 -- -----------------------------------------------------
 -- Table `Bienestar`.`ParticipacionActividadAI`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `Bienestar`.`ParticipacionActividadAI` ;
+DROP TABLE IF EXISTS `Bienestar`.`participacionactividadai` ;
 
-CREATE TABLE IF NOT EXISTS `Bienestar`.`ParticipacionActividadAI` (
+CREATE TABLE IF NOT EXISTS `Bienestar`.`participacionactividadai` (
   `ActividadID` INT NOT NULL,
   `EstudianteID` INT UNSIGNED NOT NULL,
   PRIMARY KEY (`ActividadID`, `EstudianteID`),
   CONSTRAINT `fk_ActividadAI_has_Estudiante_ActividadAI1`
     FOREIGN KEY (`ActividadID`)
-    REFERENCES `Bienestar`.`ActividadAI` (`actID`)
+    REFERENCES `Bienestar`.`actividadai` (`actID`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_ActividadAI_has_Estudiante_Estudiante1`
     FOREIGN KEY (`EstudianteID`)
-    REFERENCES `Bienestar`.`Estudiante` (`estID`)
+    REFERENCES `Bienestar`.`estudiante` (`estID`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-CREATE INDEX `fk_ActividadAI_has_Estudiante_Estudiante1_idx` ON `Bienestar`.`ParticipacionActividadAI` (`EstudianteID` ASC) VISIBLE;
+CREATE INDEX `fk_ActividadAI_has_Estudiante_Estudiante1_idx` ON `Bienestar`.`participacionactividadai` (`EstudianteID` ASC) VISIBLE;
 
-CREATE INDEX `fk_ActividadAI_has_Estudiante_ActividadAI1_idx` ON `Bienestar`.`ParticipacionActividadAI` (`ActividadID` ASC) VISIBLE;
+CREATE INDEX `fk_ActividadAI_has_Estudiante_ActividadAI1_idx` ON `Bienestar`.`participacionactividadai` (`ActividadID` ASC) VISIBLE;
 
 
 -- -----------------------------------------------------
 -- Table `Bienestar`.`Asesoria`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `Bienestar`.`Asesoria` ;
+DROP TABLE IF EXISTS `Bienestar`.`asesoria` ;
 
-CREATE TABLE IF NOT EXISTS `Bienestar`.`Asesoria` (
+CREATE TABLE IF NOT EXISTS `Bienestar`.`asesoria` (
   `asID` INT NOT NULL,
   `asTipo` MEDIUMTEXT NOT NULL,
   `asArea` VARCHAR(45) NOT NULL,
@@ -1309,34 +1309,34 @@ CREATE TABLE IF NOT EXISTS `Bienestar`.`Asesoria` (
   PRIMARY KEY (`asID`, `ProgramaID`, `EstudianteID`, `AsesorID`),
   CONSTRAINT `fk_Asesoria_Programa1`
     FOREIGN KEY (`ProgramaID`)
-    REFERENCES `Bienestar`.`Programa` (`progID`)
+    REFERENCES `Bienestar`.`programa` (`progID`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Asesoria_Estudiante1`
     FOREIGN KEY (`EstudianteID`)
-    REFERENCES `Bienestar`.`Estudiante` (`estID`)
+    REFERENCES `Bienestar`.`estudiante` (`estID`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Asesoria_Persona1`
     FOREIGN KEY (`AsesorID`)
-    REFERENCES `Bienestar`.`Persona` (`perID`)
+    REFERENCES `Bienestar`.`persona` (`perID`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-CREATE INDEX `fk_Asesoria_Programa1_idx` ON `Bienestar`.`Asesoria` (`ProgramaID` ASC) VISIBLE;
+CREATE INDEX `fk_Asesoria_Programa1_idx` ON `Bienestar`.`asesoria` (`ProgramaID` ASC) VISIBLE;
 
-CREATE INDEX `fk_Asesoria_Estudiante1_idx` ON `Bienestar`.`Asesoria` (`EstudianteID` ASC) VISIBLE;
+CREATE INDEX `fk_Asesoria_Estudiante1_idx` ON `Bienestar`.`asesoria` (`EstudianteID` ASC) VISIBLE;
 
-CREATE INDEX `fk_Asesoria_Persona1_idx` ON `Bienestar`.`Asesoria` (`AsesorID` ASC) VISIBLE;
+CREATE INDEX `fk_Asesoria_Persona1_idx` ON `Bienestar`.`asesoria` (`AsesorID` ASC) VISIBLE;
 
 
 -- -----------------------------------------------------
 -- Table `Bienestar`.`ProyectoEstudiantil`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `Bienestar`.`ProyectoEstudiantil` ;
+DROP TABLE IF EXISTS `Bienestar`.`proyectoestudiantil` ;
 
-CREATE TABLE IF NOT EXISTS `Bienestar`.`ProyectoEstudiantil` (
+CREATE TABLE IF NOT EXISTS `Bienestar`.`proyectoestudiantil` (
   `peID` INT NOT NULL,
   `peNombre` VARCHAR(45) NOT NULL,
   `peDescripcion` LONGTEXT NOT NULL,
@@ -1350,9 +1350,9 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `Bienestar`.`GrupoProyectoEstudiantil`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `Bienestar`.`GrupoProyectoEstudiantil` ;
+DROP TABLE IF EXISTS `Bienestar`.`grupoproyectoestudiantil` ;
 
-CREATE TABLE IF NOT EXISTS `Bienestar`.`GrupoProyectoEstudiantil` (
+CREATE TABLE IF NOT EXISTS `Bienestar`.`grupoproyectoestudiantil` (
   `gpID` INT NOT NULL,
   `gpNombre` VARCHAR(45) NOT NULL,
   `gpLineadeAccion` VARCHAR(45) NOT NULL,
@@ -1360,46 +1360,46 @@ CREATE TABLE IF NOT EXISTS `Bienestar`.`GrupoProyectoEstudiantil` (
   PRIMARY KEY (`gpID`),
   CONSTRAINT `fk_GrupoProyectoEstudiantil_ProyectoEstudiantil1`
     FOREIGN KEY (`proyectoID`)
-    REFERENCES `Bienestar`.`ProyectoEstudiantil` (`peID`)
+    REFERENCES `Bienestar`.`proyectoestudiantil` (`peID`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-CREATE INDEX `fk_GrupoProyectoEstudiantil_ProyectoEstudiantil1_idx` ON `Bienestar`.`GrupoProyectoEstudiantil` (`proyectoID` ASC) VISIBLE;
+CREATE INDEX `fk_GrupoProyectoEstudiantil_ProyectoEstudiantil1_idx` ON `Bienestar`.`grupoproyectoestudiantil` (`proyectoID` ASC) VISIBLE;
 
 
 -- -----------------------------------------------------
 -- Table `Bienestar`.`IntegranteGPE`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `Bienestar`.`IntegranteGPE` ;
+DROP TABLE IF EXISTS `Bienestar`.`integrantegpe` ;
 
-CREATE TABLE IF NOT EXISTS `Bienestar`.`IntegranteGPE` (
+CREATE TABLE IF NOT EXISTS `Bienestar`.`integrantegpe` (
   `EstudianteID` INT UNSIGNED NOT NULL,
   `GrupoID` INT NOT NULL,
   PRIMARY KEY (`GrupoID`, `EstudianteID`),
   CONSTRAINT `fk_Estudiante_has_GrupoProyectoEstudiantil_Estudiante1`
     FOREIGN KEY (`EstudianteID`)
-    REFERENCES `Bienestar`.`Estudiante` (`estID`)
+    REFERENCES `Bienestar`.`estudiante` (`estID`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Estudiante_has_GrupoProyectoEstudiantil_GrupoProyectoEstud1`
     FOREIGN KEY (`GrupoID`)
-    REFERENCES `Bienestar`.`GrupoProyectoEstudiantil` (`gpID`)
+    REFERENCES `Bienestar`.`grupoproyectoestudiantil` (`gpID`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-CREATE INDEX `fk_Estudiante_has_GrupoProyectoEstudiantil_GrupoProyectoEst_idx` ON `Bienestar`.`IntegranteGPE` (`GrupoID` ASC) VISIBLE;
+CREATE INDEX `fk_Estudiante_has_GrupoProyectoEstudiantil_GrupoProyectoEst_idx` ON `Bienestar`.`integrantegpe` (`GrupoID` ASC) VISIBLE;
 
-CREATE INDEX `fk_Estudiante_has_GrupoProyectoEstudiantil_Estudiante1_idx` ON `Bienestar`.`IntegranteGPE` (`EstudianteID` ASC) VISIBLE;
+CREATE INDEX `fk_Estudiante_has_GrupoProyectoEstudiantil_Estudiante1_idx` ON `Bienestar`.`integrantegpe` (`EstudianteID` ASC) VISIBLE;
 
 
 -- -----------------------------------------------------
 -- Table `Bienestar`.`ApoyoGP`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `Bienestar`.`ApoyoGP` ;
+DROP TABLE IF EXISTS `Bienestar`.`apoyogp` ;
 
-CREATE TABLE IF NOT EXISTS `Bienestar`.`ApoyoGP` (
+CREATE TABLE IF NOT EXISTS `Bienestar`.`apoyogp` (
   `apID` INT NOT NULL,
   `apTipo` VARCHAR(45) NOT NULL,
   `apValor` INT NOT NULL,
@@ -1407,20 +1407,20 @@ CREATE TABLE IF NOT EXISTS `Bienestar`.`ApoyoGP` (
   PRIMARY KEY (`apID`),
   CONSTRAINT `fk_ApoyoGP_GrupoProyectoEstudiantil1`
     FOREIGN KEY (`GrupoID`)
-    REFERENCES `Bienestar`.`GrupoProyectoEstudiantil` (`gpID`)
+    REFERENCES `Bienestar`.`grupoproyectoestudiantil` (`gpID`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-CREATE INDEX `fk_ApoyoGP_GrupoProyectoEstudiantil1_idx` ON `Bienestar`.`ApoyoGP` (`GrupoID` ASC) VISIBLE;
+CREATE INDEX `fk_ApoyoGP_GrupoProyectoEstudiantil1_idx` ON `Bienestar`.`apoyogp` (`GrupoID` ASC) VISIBLE;
 
 
 -- -----------------------------------------------------
 -- Table `Bienestar`.`ConvocatoriaPromotorConvivencia`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `Bienestar`.`ConvocatoriaPromotorConvivencia` ;
+DROP TABLE IF EXISTS `Bienestar`.`convocatoriapromotorconvivencia` ;
 
-CREATE TABLE IF NOT EXISTS `Bienestar`.`ConvocatoriaPromotorConvivencia` (
+CREATE TABLE IF NOT EXISTS `Bienestar`.`convocatoriapromotorconvivencia` (
   `convID` INT NOT NULL,
   `pcEstimuloEconomico` INT NOT NULL,
   `pcHorasRequeridas` TINYINT NOT NULL,
@@ -1430,38 +1430,38 @@ CREATE TABLE IF NOT EXISTS `Bienestar`.`ConvocatoriaPromotorConvivencia` (
   PRIMARY KEY (`convID`),
   CONSTRAINT `fk_ConvocatoriaPromotorConvivencia_Convocatoria1`
     FOREIGN KEY (`convID`)
-    REFERENCES `Bienestar`.`Convocatoria` (`conv_id`)
+    REFERENCES `Bienestar`.`convocatoria` (`conv_id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-CREATE INDEX `fk_ConvocatoriaPromotorConvivencia_Convocatoria1_idx` ON `Bienestar`.`ConvocatoriaPromotorConvivencia` (`convID` ASC) VISIBLE;
+CREATE INDEX `fk_ConvocatoriaPromotorConvivencia_Convocatoria1_idx` ON `Bienestar`.`convocatoriapromotorconvivencia` (`convID` ASC) VISIBLE;
 
 
 -- -----------------------------------------------------
 -- Table `Bienestar`.`PromotorConvivencia`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `Bienestar`.`PromotorConvivencia` ;
+DROP TABLE IF EXISTS `Bienestar`.`promotorconvivencia` ;
 
-CREATE TABLE IF NOT EXISTS `Bienestar`.`PromotorConvivencia` (
+CREATE TABLE IF NOT EXISTS `Bienestar`.`promotorconvivencia` (
   `ConvocatoriaID` INT NOT NULL,
   `EstudianteID` INT UNSIGNED NOT NULL,
   PRIMARY KEY (`ConvocatoriaID`, `EstudianteID`),
   CONSTRAINT `fk_ConvocatoriaPromotorConvivencia_has_Estudiante_Convocatori1`
     FOREIGN KEY (`ConvocatoriaID`)
-    REFERENCES `Bienestar`.`ConvocatoriaPromotorConvivencia` (`convID`)
+    REFERENCES `Bienestar`.`convocatoriapromotorconvivencia` (`convID`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_ConvocatoriaPromotorConvivencia_has_Estudiante_Estudiante1`
     FOREIGN KEY (`EstudianteID`)
-    REFERENCES `Bienestar`.`Estudiante` (`estID`)
+    REFERENCES `Bienestar`.`estudiante` (`estID`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-CREATE INDEX `fk_ConvocatoriaPromotorConvivencia_has_Estudiante_Estudiant_idx` ON `Bienestar`.`PromotorConvivencia` (`EstudianteID` ASC) VISIBLE;
+CREATE INDEX `fk_ConvocatoriaPromotorConvivencia_has_Estudiante_Estudiant_idx` ON `Bienestar`.`promotorconvivencia` (`EstudianteID` ASC) VISIBLE;
 
-CREATE INDEX `fk_ConvocatoriaPromotorConvivencia_has_Estudiante_Convocato_idx` ON `Bienestar`.`PromotorConvivencia` (`ConvocatoriaID` ASC) VISIBLE;
+CREATE INDEX `fk_ConvocatoriaPromotorConvivencia_has_Estudiante_Convocato_idx` ON `Bienestar`.`promotorconvivencia` (`ConvocatoriaID` ASC) VISIBLE;
 
 
 SET SQL_MODE=@OLD_SQL_MODE;

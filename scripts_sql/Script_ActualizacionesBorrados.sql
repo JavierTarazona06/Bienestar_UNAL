@@ -43,24 +43,24 @@ DELETE FROM discapacidad WHERE perID = 1010101200;
 SELECT * FROM discapacidad;
 
 # --------------------------------------------- AREA DE DEPORTES ---------------------------------------------------
-select * from Convocatoria;
+select * from convocatoria;
 
-insert into Convocatoria (conv_id, convNombre, convFechaApertura, convFechaCierre, convEstado, convPeriodo, Programa_progID) 
+insert into convocatoria (conv_id, convNombre, convFechaApertura, convFechaCierre, convEstado, convPeriodo, Programa_progID) 
 values (222, 'Convocatoria Deporte 2021-1', '2021-01-01', '2021-01-31', 1, '2021-1', 1703);
-delete from Convocatoria where conv_id = 222;
+delete from convocatoria where conv_id = 222;
 
-select * from ConvocatoriaSeleccion;
-update ConvocatoriaSeleccion set convDeporte = 'Tiro con arco' where Convocatoria_conv_id = 211;
-delete from ConvocatoriaSeleccion where convDeporte = 'Tiro con arco';
+select * from convocatoriaseleccion;
+update convocatoriaseleccion set convDeporte = 'Tiro con arco' where Convocatoria_conv_id = 211;
+delete from convocatoriaseleccion where convDeporte = 'Tiro con arco';
 
-select * from ConvocatoriaSeleccion;
-update ConvocatoriaSeleccion set convDeporte = 'Ping pong' where Convocatoria_conv_id = 212;
-delete from ConvocatoriaSeleccion where convDeporte = 'Ping pong';
+select * from convocatoriaseleccion;
+update convocatoriaseleccion set convDeporte = 'Ping pong' where Convocatoria_conv_id = 212;
+delete from convocatoriaseleccion where convDeporte = 'Ping pong';
 
-select * from ConvocatoriaSeleccion;
-update ConvocatoriaSeleccion set convDeporte = 'Atletismo' where Convocatoria_conv_id = 213;
-delete from ConvocatoriaSeleccion where Convocatoria_conv_id = 213;
+select * from convocatoriaseleccion;
+update convocatoriaseleccion set convDeporte = 'Atletismo' where Convocatoria_conv_id = 213;
+delete from convocatoriaseleccion where Convocatoria_conv_id = 213;
 
-select * from ConvocatoriaSeleccion;
-update ConvocatoriaSeleccion set convDeporte = 'Taekwondo' where Convocatoria_conv_id = 214;
-delete from ConvocatoriaSeleccion where convDeporte = 'Atletismo';
+select * from convocatoriaseleccion;
+update convocatoriaseleccion set convDeporte = 'Taekwondo' where Convocatoria_conv_id = 214;
+delete from convocatoriaseleccion where convDeporte = 'Atletismo';

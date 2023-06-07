@@ -55,125 +55,35 @@ salud para que sean verificadas por el ara de salud.
     pas_view_perfilriesgo(usuarioID INT)
 
 #----------------------------------------------------------------------------------------------------------------------
-#	    				          Actividad Fisica y Deporte y PAS_interfaz
+#	    				          Actividad Fisica y Deporte
 #----------------------------------------------------------------------------------------------------------------------
 
-# Uso General:
-
-# ------------------------------- Un usuario necesita ver todas las convocatorias por área -----------------------------
-drop procedure if exists sp_consultar_convocatorias_area;
-DELIMITER $$
-create procedure sp_consultar_programas_de_deportes(in idArea int)
-	begin 
-		select * from vw_info_convocatoria where areID = idArea;
-	end $$
-DELIMITER ;
-
-
-# ------------------------------- Un estudiante necesita ver las convocatorias por programa de area de bienestar -------
-drop procedure if exists sp_consultar_convocatorias_programa;
-DELIMITER $$
-create procedure sp_consultar_convocatorias_deporte(in idPrograma int)
-	begin 
-		select * from Convocatoria where Programa_progID = id_Programa;
-	end $$
-DELIMITER ;
-
-
-# Salud
-
-# --------------------------------------------- Ver perfil de riesgo integral de un usuario ----------------------------
-DROP PROCEDURE IF EXISTS pas_view_perfilriesgo;
-DELIMITER $$
-CREATE PROCEDURE pas_view_perfilriesgo(IN usuarioID INT)
-	BEGIN
-		SELECT * FROM vw_perfil_integral WHERE persona = usuarioID;
-    END $$
-DELIMITER ;
-
-# -------------------------------------- Ver el estado de las incapacidades de un usuario ------------------------------
-DROP PROCEDURE IF EXISTS pas_view_incapacidad;
-DELIMITER $$
-CREATE PROCEDURE pas_view_incapacidad(IN usuarioID INT)
-	BEGIN
-		SELECT * FROM vw_incapacidad WHERE persona = usuarioID;
-    END $$
-DELIMITER ;
-
-# ------------------------------- Un usuario que necesita ver las citas medicas disponibles ----------------------------
-DROP PROCEDURE IF EXISTS pas_citas_disponibles;
-DELIMITER $$
-CREATE PROCEDURE pas_citas_disponibles()
-	BEGIN 
-		SELECT * FROM vw_citamedica_disponible;
-    END $$
-DELIMITER ;
-
-
+	
 # Actividad Física y Deporte
 
-# ------------------------------- Un usuario necesita ver los torneos internos disponibles ----------------------------
-drop procedure if exists sp_consultar_torneos_internos;
-DELIMITER $$
-create procedure sp_consultar_torneos_internos()
-	begin 
-		select * from TorneoInterno;
-	end $$
-DELIMITER ;
+# 1. Un usuario necesita ver los torneos internos disponibles
+	sp_consultar_torneos_internos()
+	
 
-# ------------------------------- Un usuario necesita ver los cursos libres de deportes disponibles -------------------
-drop procedure if exists sp_consultar_convocatoria_cursos_libres;
-DELIMITER $$
-create procedure sp_consultar_convocatoria_cursos_libres()
-	begin 
-		select * from ConvocatoriaCursoLibre;
-	end $$
-DELIMITER ;
+# 2. Un usuario necesita ver los cursos libres de deportes disponibles
+	sp_consultar_convocatoria_cursos_libres()
 
 
-# Gestión y Fomento Socioeconómico
+# 3. Se quiere consultar información acerca de eventos, talleres y proyectos disponbibles
+	# 3.1 pas_consultar_info_eventoTaller(in idEveTa int)
+	# 3.2 pas_consultar_info_proyecto(in idProy int)
 
-# ---------- Un usuario necesita ver información detallada de convocatorias de fomento, por tipo de apoyo.-------------
-drop procedure if exists sp_consultar_gestion_alimentaria;
-DELIMITER $$
-create procedure sp_consultar_gestion_alimentaria ()
-	begin
-		select * from ConvocatoriaGestionAlimentaria join Convocatoria on (conv_id);
-	end $$
-DELIMITER ;
+# 4. Un estudiante quiere participar en una convocatoria
+	pas_participar_convocatoria(in ccEstudiante int, in idConv int, in fechaInscripcion date)
 
-drop procedure if exists sp_consultar_gestion_transporte;
-DELIMITER $$
-create procedure sp_consultar_gestion_transporte ()
-	begin
-		select * from ConvocatoriaGestionTransporte join Convocatoria on (conv_id);
-	end $$
-DELIMITER ;
+# 5. Un estudiante quiere consultar las convocatorias en las que participa
+	sp_consultar_mis_convocatorias (in cedula int)
 
-drop procedure if exists sp_consultar_gestion_alojamiento;
-DELIMITER $$
-create procedure sp_consultar_gestion_alojamiento()
-	begin
-		select * from ConvocatoriaGestionAlojamiento join Convocatoria on (conv_id);
-	end $$
-DELIMITER ;
+# 6. Se quiere consultar información acerca de eventos, talleres y proyectos disponbibles para el área de deporte
+	pas_consultar_eventoTaller_programa (in idPrograma int) usar id's programas de deportes
 
-drop procedure if exists sp_consultar_gestion_economica;
-DELIMITER $$
-create procedure sp_consultar_gestion_economica ()
-	begin
-		select * from ConvocatoriaGestionEconomica join Convocatoria on (conv_id);
-	end $$
-DELIMITER ;
-
-drop procedure if exists sp_consultar_gestion_emprendimiento;
-DELIMITER $$
-create procedure sp_consultar_gestion_emprendimiento ()
-	begin
-		select * from ConvocatoriaFomentoEmprendimeinto join Convocatoria on (conv_id);
-	end $$
-DELIMITER ;
-
+# 7. Se requiere consultar las convocatorias que hay por programa de deporte.
+	sp_consultar_convocatorias_deporte(in idPrograma int) usar id's programas de deportes
 
 #----------------------------------------------------------------------------------------------------------------------
 #                                			Gestion y Fomento Socioeconomico

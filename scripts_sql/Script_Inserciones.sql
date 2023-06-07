@@ -1472,31 +1472,31 @@ INSERT INTO Bienestar.torneointerno VALUES
 -- cursos libres
 
 
-INSERT INTO Bienestar.convocatoria (conv_id, convNombre, convFechaApertura, convFechaCierre, convEstado, convPeriodo, Programa_progID)
+INSERT INTO Bienestar.convocatoria (conv_id, convNombre, convFechaApertura, convFechaCierre, convEstado, convPeriodo, Programa_progID, convPAPA)
 VALUES
-(201, 'Convocatoria Deporte 2021-1', '2021-01-01', '2021-01-31', 1, '2021-1', 1702),
-(202, 'Convocatoria Deporte 2021-2', '2021-06-01', '2021-06-30', 1, '2021-2', 1702),
-(203, 'Convocatoria Deporte 2022-1', '2022-01-01', '2022-01-31', 1, '2022-1', 1702),
-(204, 'Convocatoria Deporte 2022-2', '2022-06-01', '2022-06-30', 1, '2022-2', 1702),
-(205, 'Convocatoria Deporte 2023-1', '2023-01-01', '2023-01-31', 1, '2023-1', 1702),
-(206, 'Convocatoria Deporte 2023-2', '2023-06-01', '2023-06-30', 1, '2023-2', 1702),
-(207, 'Convocatoria Deporte 2024-1', '2024-01-01', '2024-01-31', 1, '2024-2', 1702),
-(208, 'Convocatoria Deporte 2024-2', '2024-06-01', '2024-06-30', 1, '2024-2', 1702),
-(209, 'Convocatoria Deporte 2025-1', '2025-01-01', '2025-01-31', 1, '2025-1', 1702),
-(200, 'Convocatoria Deporte 2025-2', '2025-06-01', '2025-06-30', 1, '2025-2', 1702);
+(201, 'Convocatoria Deporte 2021-1', '2021-01-01', '2021-01-31', 1, '2021-1', 1702, 3.5),
+(202, 'Convocatoria Deporte 2021-2', '2021-06-01', '2021-06-30', 1, '2021-2', 1702, 3.5),
+(203, 'Convocatoria Deporte 2022-1', '2022-01-01', '2022-01-31', 1, '2022-1', 1702, 3.7),
+(204, 'Convocatoria Deporte 2022-2', '2022-06-01', '2022-06-30', 1, '2022-2', 1702, 3.0),
+(205, 'Convocatoria Deporte 2023-1', '2023-01-01', '2023-01-31', 1, '2023-1', 1702, 3.0),
+(206, 'Convocatoria Deporte 2023-2', '2023-06-01', '2023-06-30', 1, '2023-2', 1702, 3.9),
+(207, 'Convocatoria Deporte 2024-1', '2024-01-01', '2024-01-31', 1, '2024-2', 1702, 3.8),
+(208, 'Convocatoria Deporte 2024-2', '2024-06-01', '2024-06-30', 1, '2024-2', 1702, 3.8),
+(209, 'Convocatoria Deporte 2025-1', '2025-01-01', '2025-01-31', 1, '2025-1', 1702, 3.1),
+(200, 'Convocatoria Deporte 2025-2', '2025-06-01', '2025-06-30', 1, '2025-2', 1702, 3.2);
 
 -- selecciones deportivas
-INSERT INTO Bienestar.convocatoria (conv_id, convNombre, convFechaApertura, convFechaCierre, convEstado, convPeriodo, Programa_progID) VALUES 
-(210, 'Convocatoria Deporte 2022-2', '2022-07-01', '2022-07-31', 1, '2022-2', 1703),
-(211, 'Convocatoria Deporte 2023-1', '2023-01-01', '2023-01-31', 1, '2023-1', 1703),
-(212, 'Convocatoria Deporte 2023-2', '2023-07-01', '2023-07-31', 0, '2023-2', 1703),
-(213, 'Convocatoria Deporte 2024-1', '2024-01-01', '2024-01-31', 0, '2024-1', 1703),
-(214, 'Convocatoria Deporte 2024-2', '2024-07-01', '2024-07-31', 0, '2024-2', 1703),
-(215, 'Convocatoria Deporte 2025-1', '2025-01-01', '2025-01-31', 0, '2025-1', 1703),
-(216, 'Convocatoria Deporte 2025-2', '2025-07-01', '2025-07-31', 0, '2025-2', 1703),
-(217, 'Convocatoria Deporte 2026-1', '2026-01-01', '2026-01-31', 0, '2026-1', 1703),
-(218, 'Convocatoria Deporte 2026-2', '2026-07-01', '2026-07-31', 0, '2026-2', 1703),
-(219, 'Convocatoria Deporte 2027-1', '2027-01-01', '2027-01-31', 0, '2027-1', 1703);
+INSERT INTO Bienestar.convocatoria (conv_id, convNombre, convFechaApertura, convFechaCierre, convEstado, convPeriodo, Programa_progID, convPAPA) VALUES 
+(210, 'Convocatoria Deporte 2022-2', '2022-07-01', '2022-07-31', 1, '2022-2', 1703, 3.5),
+(211, 'Convocatoria Deporte 2023-1', '2023-01-01', '2023-01-31', 1, '2023-1', 1703, 4.2),
+(212, 'Convocatoria Deporte 2023-2', '2023-07-01', '2023-07-31', 0, '2023-2', 1703, 4.3),
+(213, 'Convocatoria Deporte 2024-1', '2024-01-01', '2024-01-31', 0, '2024-1', 1703, 4.0),
+(214, 'Convocatoria Deporte 2024-2', '2024-07-01', '2024-07-31', 0, '2024-2', 1703, 3.9),
+(215, 'Convocatoria Deporte 2025-1', '2025-01-01', '2025-01-31', 0, '2025-1', 1703, 3.9),
+(216, 'Convocatoria Deporte 2025-2', '2025-07-01', '2025-07-31', 0, '2025-2', 1703, 3.3),
+(217, 'Convocatoria Deporte 2026-1', '2026-01-01', '2026-01-31', 0, '2026-1', 1703, 3.3),
+(218, 'Convocatoria Deporte 2026-2', '2026-07-01', '2026-07-31', 0, '2026-2', 1703, 4.5),
+(219, 'Convocatoria Deporte 2027-1', '2027-01-01', '2027-01-31', 0, '2027-1', 1703, 3.0);
 
 
 -- Inserciones convocatorias cursos libres:
