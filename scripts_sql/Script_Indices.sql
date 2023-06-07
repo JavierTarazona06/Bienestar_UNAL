@@ -5,7 +5,7 @@
 #--------------------------------------------------------------------------------------------------------------------------------------------
 #                                  									Valeria
 #--------------------------------------------------------------------------------------------------------------------------------------------
-USE bienestar;
+USE Bienestar;
 
 # El ID de todas las personas es unico y ayuda a buscar la informacion mas facilmente
 CREATE UNIQUE INDEX perID_UNIQUE ON persona (perID);
@@ -68,7 +68,7 @@ CREATE INDEX Convocatoria_seleccion_idx ON convocatoriaseleccion(convDeporte);
 /* En la práctica, van a haber muchas convocatorias económicas y cada una va a ser constantemente buscada por los estudiantes.
 Es por este motivo que se crea un indice para que dichas búsquedas sean más eficientes.*/
 
-CREATE UNIQUE INDEX indice_convocatoriafomentoemprendimeinto ON convocatoriafomentoemprendimeinto(conv_id);
+CREATE UNIQUE INDEX indice_convocatoriafomentoemprendimeinto ON convocatoriafomentoemprendimiento(conv_id);
 CREATE UNIQUE INDEX indice_convocatoriagestionalimentaria ON convocatoriagestionalimentaria(conv_id);
 CREATE UNIQUE INDEX indice_convocatoriagestionalojamiento ON convocatoriagestionalojamiento(conv_id);
 CREATE UNIQUE INDEX indice_convocatoriagestioneconomica ON convocatoriagestioneconomica(conv_id);

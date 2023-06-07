@@ -959,7 +959,7 @@ CREATE UNIQUE INDEX tiendBienID_UNIQUE ON Bienestar.tiendabienestar (tieID ASC) 
 
 CREATE INDEX fk_TiendaBienestar_copy1_Persona_copy11_idx ON Bienestar.tiendabienestar (directorID ASC) VISIBLE;
 
-CREATE INDEX fk_TiendaBienestar_copy1_Persona_copy12_idx ON Bienestar.TiendaBienestar (jefeID ASC) VISIBLE;
+CREATE INDEX fk_TiendaBienestar_copy1_Persona_copy12_idx ON Bienestar.tiendabienestar (jefeID ASC) VISIBLE;
 
 
 -- -----------------------------------------------------
