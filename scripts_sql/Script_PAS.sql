@@ -3,7 +3,7 @@
     implementando de acuerdo a los perfiles/roles. Se les debe asignar permisos de acuerdo a los roles
 */
 
-set global log_bin_trust_function_creators = 1;
+#set global log_bin_trust_function_creators = 1;
 
 #--------------------------------------------------------------------------------------------------------------------------------------------
 #                                  									Salud
@@ -484,7 +484,7 @@ CREATE PROCEDURE sp_fallaalimentacion_est(in id int)
 	END $$
 DELIMITER ;
 
-#call sp_fallaalimentacion_est(10101019)
+#call sp_fallaalimentacion_est(10101019);
 
 # 2. El estudiante puede consultar sus actividades de corresponsabilidad realizadas
 
@@ -538,11 +538,11 @@ DELIMITER ;
 
 #5.1 La convocatoria fomento emprendimeinto la busca según tema
 
-drop procedure if exists sp_convocatoriafomentoemprendimeinto_est;
+drop procedure if exists sp_convocatoriafomentoemprendimiento_est;
 DELIMITER $$
-CREATE PROCEDURE sp_convocatoriafomentoemprendimeinto_est(in id_est int, in tema varchar(50))
+CREATE PROCEDURE sp_convocatoriafomentoemprendimiento_est(in id_est int, in tema varchar(50))
 	BEGIN
-		select * from convocatoriafomentoemprendimeinto 
+		select * from convocatoriafomentoemprendimiento 
 			where LOCATE(LOWER(tema), LOWER(cgemTema)) > 0;
 	END $$
 DELIMITER ;

@@ -367,8 +367,8 @@ insert into convocatoriagestionalojamiento values (13,'KR 172 m No. 98-27','Chap
 insert into convocatoriagestionalojamiento values (14,'TV 156 k No. 30-17','Fontibón',1948563.0,'Residencia Universitaria','N.A',3897126);
 insert into convocatoriagestionalojamiento values (15,'TV 20 q No. 42-58','Ciudad Bolívar',2479522.0,'Vivienda familiar','N.A',4959044);
 
-DELETE FROM convocatoriafomentoemprendimeinto;
-INSERT INTO convocatoriafomentoemprendimeinto VALUES 
+DELETE FROM convocatoriafomentoemprendimiento;
+INSERT INTO convocatoriafomentoemprendimiento VALUES 
 (17, 961842, 'Empresa1', 'Tema1', 'Descripción del emprendimiento'),
 (18, 2248621, 'Empresa2', 'Tema2', 'Descripción del emprendimiento'),
 (19, 1036757, 'Empresa3', 'Tema3', 'Descripción del emprendimiento');

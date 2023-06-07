@@ -49,12 +49,13 @@ select * from vw_info_factura;
 
 #Vista de productos con la tienda a la que pertenecen
 
-select Producto.prodID,Producto.prodPrecio,Producto.prodDetalle,tiendabienestar.tieID,tiendabienestar.tieDireccion,tiendabienestar.tieCiudad from producto_tiendaun JOIN Producto ON producto_tiendaun.prodID = Producto.prodID  join tiendabienestar on tiendabienestar.tieID=producto_tiendaun.tieID;
+select producto.prodID,producto.prodPrecio,producto.prodDetalle,tiendabienestar.tieID,tiendabienestar.tieDireccion,tiendabienestar.tieCiudad from producto_tiendaun 
+	JOIN producto ON producto_tiendaun.prodID = producto.prodID  join tiendabienestar on tiendabienestar.tieID=producto_tiendaun.tieID;
 drop view if exists vw_productos_tienda;
 create view vw_productos_tienda as select 
-	Producto.prodID,Producto.prodPrecio,Producto.prodDetalle,tiendabienestar.tieID,
+	producto.prodID,producto.prodPrecio,producto.prodDetalle,tiendabienestar.tieID,
     tiendabienestar.tieDireccion,tiendabienestar.tieCiudad 
-    from producto_tiendaun JOIN Producto ON producto_tiendaun.prodID = Producto.prodID 
+    from producto_tiendaun JOIN producto ON producto_tiendaun.prodID = producto.prodID 
     join tiendabienestar on tiendabienestar.tieID=producto_tiendaun.tieID;
 select * from vw_productos_tienda; 
 

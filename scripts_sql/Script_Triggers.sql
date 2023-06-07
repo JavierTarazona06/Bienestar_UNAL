@@ -229,7 +229,7 @@ rollback;
 
 drop trigger if exists tr_insert_conv_emprendimiento;
 DELIMITER $$
-create trigger tr_insert_conv_emprendimiento before insert on convocatoriafomentoemprendimeinto
+create trigger tr_insert_conv_emprendimiento before insert on convocatoriafomentoemprendimiento
 	for each row
 	begin
 	call insertar_conv_en_curso(NEW.conv_id, 'Fomento Emprendimiento Estudiantes', 1, 3.5);
@@ -238,7 +238,7 @@ DELIMITER ;
 
 drop trigger if exists tr_delete_conv_emprendimiento;
 DELIMITER $$
-create trigger tr_delete_conv_emprendimiento after delete on convocatoriafomentoemprendimeinto
+create trigger tr_delete_conv_emprendimiento after delete on convocatoriafomentoemprendimiento
 	for each row
 	begin
 		delete from convocatoria where conv_id=OLD.conv_id;
@@ -246,12 +246,12 @@ create trigger tr_delete_conv_emprendimiento after delete on convocatoriafomento
 DELIMITER ;
 
 start transaction;
-insert into convocatoriafomentoemprendimeinto values (23, 200000, 'El Nuevo', 'Tema Nuevo', 'Es un nuevo emp.');
+insert into convocatoriafomentoemprendimiento values (23, 200000, 'El Nuevo', 'Tema Nuevo', 'Es un nuevo emp.');
 select * from convocatoria;
-select * from convocatoriafomentoemprendimeinto;
-delete from convocatoriafomentoemprendimeinto where conv_id=23;
+select * from convocatoriafomentoemprendimiento;
+delete from convocatoriafomentoemprendimiento where conv_id=23;
 select * from convocatoria;
-select * from convocatoriafomentoemprendimeinto;
+select * from convocatoriafomentoemprendimiento;
 rollback;
 
 #---------------------
