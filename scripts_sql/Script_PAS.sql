@@ -1051,11 +1051,11 @@ CREATE PROCEDURE sp_tiendas_ofrece_producto(in id_prod int)
 	END $$
 DELIMITER ;
 
-/*
+
 select * from vw_productos_tienda;
 call sp_tiendas_ofrece_producto(9); #1 resultado
 call sp_tiendas_ofrece_producto(11); #2 resultados
-*/
+
 
 # 9. Si el estudiante inserta una conv. en est_toma_conv, verificar que no ingrese
 #dos veces la misma en el mismo semestre
@@ -1099,14 +1099,14 @@ CREATE PROCEDURE sp_insertar_est_tm_conv_est(in id_est int, in id_conv int, in f
 	END $$
 DELIMITER ;
 
-/*
+
 call sp_insertar_est_tm_conv_est(10101019, 210 ,'2023-03-15');
 call sp_insertar_est_tm_conv_est(10101019, 211 ,'2023-03-15');
 
 call sp_insertar_est_tm_conv_est(101010113, 1 ,'2023-07-13');
 call sp_insertar_est_tm_conv_est(101010113, 2 ,'2023-07-13');
 select * from estudiante_toma_convocatoria;
-*/
+
 
 # 10. El secretario/dirección quieren actualizar el nombre las convoctarias
 
