@@ -1,98 +1,7 @@
 #--------------------------------------------------------------------------------------------------------
 #                                                     Salud
 #--------------------------------------------------------------------------------------------------------
-# 1. Verificar que la cita que el usuario va a eliminar no sea dentro de menos de las proximas 24 horas, si es asi, 
-# enviar un error
-DROP TRIGGER IF EXISTS tr_check_tiempo;
-DELIMITER $$
-CREATE TRIGGER tr_check_tiempo BEFORE UPDATE ON citamedica
-	FOR EACH ROW
-    BEGIN
-		DECLARE msg VARCHAR(200);
-		IF DATEDIFF(OLD.citFecha, CURRENT_DATE()) < 1 THEN
-			SET msg = CONCAT('La cita es dentro de las proximas 24 horas, no se puede');
-            SIGNAL sqlstate '15000' SET message_text = msg;
-        END IF;
-    END $$
-DELIMITER ;
-
-# 2. Verificar que la incapacidad a insertar por el usuario no ha sido ya añadida
-DROP TRIGGER IF EXISTS tr_check_duplicates;
-DELIMITER $$
-CREATE TRIGGER tr_check_duplicates BEFORE INSERT ON incapacidad
-	FOR EACH ROW
-	BEGIN
-		DECLARE duplicated INT;
-        DECLARE msg VARCHAR(200);
-		SELECT EXISTS (SELECT incID FROM incapacidad 
-            WHERE perID = NEW.perID AND incEnfermedad = NEW.incEnfermedad
-            AND incFecha = NEW.incFecha AND incDias = NEW.incDias) INTO duplicated;
-        
-        IF duplicated THEN
-			SET msg = CONCAT('La incapacidad ya existe');
-            SIGNAL sqlstate '15000' SET message_text = msg;
-		END IF;
-    END $$
-DELIMITER ;
-
-# 3. Verificar que la incapacidad a modificar por el usuario no haya sido ya verificada
-DROP TRIGGER IF EXISTS tr_check_verification;
-DELIMITER $$
-CREATE TRIGGER tr_check_verification BEFORE UPDATE ON incapacidad
-	FOR EACH ROW
-	BEGIN
-		DECLARE verificated BOOL;
-        DECLARE msg VARCHAR(200);
-		SELECT incVerificado INTO verificated FROM incapacidad 
-            WHERE perID = OLD.perID AND incEnfermedad = OLD.incEnfermedad
-            AND incFecha = OLD.incFecha AND incDias = OLD.incDias;
-        
-        IF verificated THEN
-			SET msg = CONCAT('La incapacidad ya ha sido verificada, no se puede modificar');
-            SIGNAL sqlstate '15000' SET message_text = msg;
-		END IF;
-    END $$
-DELIMITER ;
-
-# 4. Verificar que la atencion en salud a insertar por el usuario no ha sido ya añadida
-DROP TRIGGER IF EXISTS tr_check_duplicates_atsalud;
-DELIMITER $$
-CREATE TRIGGER tr_check_duplicates_atsalud BEFORE INSERT ON atencionensalud
-	FOR EACH ROW
-	BEGIN
-		DECLARE duplicated INT;
-        DECLARE msg VARCHAR(200);
-		SELECT EXISTS (SELECT antID FROM atencionensalud
-            WHERE perID = NEW.perID AND ateTipo = NEW.ateTipo
-            AND ateFecha = NEW.ateFecha) INTO duplicated;
-        
-        IF duplicated THEN
-			SET msg = CONCAT('La atencion en salud ya existe');
-            SIGNAL sqlstate '15000' SET message_text = msg;
-		END IF;
-    END $$
-DELIMITER ;
-
-# 5. Verificar que la atencion en salud a modificar no haya sido ya verificada
-DROP TRIGGER IF EXISTS tr_check_verification_atsalud;
-DELIMITER $$
-CREATE TRIGGER tr_check_verification_atsalud BEFORE UPDATE ON atencionensalud
-	FOR EACH ROW
-	BEGIN
-		DECLARE verificated BOOL;
-        DECLARE msg VARCHAR(200);
-		SELECT ateVerificado INTO verificated FROM atencionensalud
-            WHERE perID = OLD.perID AND ateTipo = OLD.ateTipo
-            AND ateFecha = OLD.ateFecha;
-        
-        IF verificated THEN
-			SET msg = CONCAT('La atencion en salud ya ha sido verificada, no se puede modificar');
-            SIGNAL sqlstate '15000' SET message_text = msg;
-		END IF;
-    END $$
-DELIMITER ;
-
-# 6. Verificar que el doctor a agendar no tenga citas medicas durante dicho turno
+# 1. Verificar que el doctor a agendar no tenga citas medicas durante dicho turno
 DROP TRIGGER IF EXISTS tr_check_doctor;
 DELIMITER $$
 CREATE TRIGGER tr_check_doctor BEFORE INSERT ON citamedica
@@ -100,6 +9,7 @@ CREATE TRIGGER tr_check_doctor BEFORE INSERT ON citamedica
     BEGIN
 		DECLARE has_appointment BOOl;
         DECLARE msg VARCHAR(200);
+        
         SELECT EXISTS (SELECT citID FROM citamedica 
         WHERE doctorID = NEW.doctorID AND citFecha = NEW.citFecha) 
         INTO has_appointment;
@@ -110,7 +20,7 @@ CREATE TRIGGER tr_check_doctor BEFORE INSERT ON citamedica
     END $$
 DELIMITER ;
 
-# 7. Verficar que no haya algun paciente con una cita medica la cual se piensa eliminar
+# 2. Verficar que no haya algun paciente con una cita medica la cual se piensa eliminar
 DROP TRIGGER IF EXISTS tr_check_paciente;
 DELIMITER $$
 CREATE TRIGGER tr_check_paciente BEFORE DELETE ON citamedica FOR EACH ROW

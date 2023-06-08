@@ -78,7 +78,7 @@ select * from vw_estudiante_falla_alimentacion;
 # Ver las citas medicas disponibles
 DROP VIEW IF EXISTS vw_citamedica_disponible;
 CREATE VIEW vw_citamedica_disponible AS
-	SELECT citFecha AS fecha, citEspecialidad AS especialidad, perNombre AS doctor, pacienteID AS paciente 
+	SELECT citFecha AS fecha, citEspecialidad AS especialidad, perNombre AS doctor 
 	FROM citamedica JOIN personalsalud ON (perID=doctorID) NATURAL JOIN persona
 	WHERE pacienteID IS NULL AND citFecha > CURRENT_DATE();
     

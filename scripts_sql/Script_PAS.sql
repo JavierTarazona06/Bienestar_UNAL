@@ -9,8 +9,16 @@
 #                                  									Salud
 #--------------------------------------------------------------------------------------------------------------------------------------------
 
+# 1. ------------------------------- Un usuario que necesita ver las citas medicas disponibles ----------------------------------------------
+DROP PROCEDURE IF EXISTS pas_citas_disponibles;
+DELIMITER $$
+CREATE PROCEDURE pas_citas_disponibles()
+	BEGIN 
+		SELECT * FROM vw_citamedica_disponible;
+    END $$
+DELIMITER ;
 
-# 1. ------------------------------- Un usuario que necesita ver sus citas medicas proximas -------------------------------------------------
+# 2. ------------------------------- Un usuario que necesita ver sus citas medicas proximas -------------------------------------------------
 DROP PROCEDURE IF EXISTS pas_citas_agendadas;
 DELIMITER $$
 CREATE PROCEDURE pas_citas_agendadas(IN pacienteID INT)
@@ -19,66 +27,121 @@ CREATE PROCEDURE pas_citas_agendadas(IN pacienteID INT)
     END $$
 DELIMITER ;
 
-
-# 2. -------------------------------------- Un usuario que necesita cancelar alguna cita ----------------------------------------------------
-
-# Eliminar la cita medica (en otras palabras, poner como NULL el paciente de dicha cita)
+# 3. -------------------------------------- Un usuario que necesita cancelar alguna cita ----------------------------------------------------
+# Eliminar la cita medica (en otras palabras, poner como NULL el paciente de dicha cita), revertir el cambio en caso de que la cita sea dentro
+# de menos de 24 horas
 DROP PROCEDURE IF EXISTS pas_delete_cita_medica;
 DELIMITER $$
 CREATE PROCEDURE pas_delete_cita_medica(IN usuarioID INT, IN fechaCita DATETIME, IN especialidadCita VARCHAR(45))
 	BEGIN
-		UPDATE citamedica SET pacienteID = NULL 
-			WHERE pacienteID = usuarioID AND fechaCita = citFecha AND especialidadCita = citEspecialidad;
+		DECLARE msg VARCHAR(100);
+        DECLARE fecha DATETIME;
+		START TRANSACTION;
+			SELECT citFecha INTO fecha FROM citamedica
+				WHERE pacienteID = usuarioID AND fechaCita = citFecha AND especialidadCita = citEspecialidad;
+			IF DATEDIFF(fecha, CURRENT_DATE()) < 1 THEN
+				SET msg = CONCAT('La cita es dentro de las proximas 24 horas, no se puede cancelar');
+				ROLLBACK;
+				SIGNAL sqlstate '15000' SET message_text = msg;
+			ELSE
+				UPDATE citamedica SET pacienteID = NULL 
+					WHERE pacienteID = usuarioID AND fechaCita = citFecha AND especialidadCita = citEspecialidad;
+				COMMIT;
+			END IF;
     END $$
 DELIMITER ;
 
-
-# 3. -------------------------------------- Un usuario que necesita agendar alguna cita ----------------------------------------------------
+# 4. -------------------------------------- Un usuario que necesita agendar alguna cita ----------------------------------------------------
+# Verificar que el usuario no tenga otra cita medica durante dicho tiempo antes de agendar la cita
 DROP PROCEDURE IF EXISTS pas_add_cita_medica;
 DELIMITER $$
 CREATE PROCEDURE pas_add_cita_medica(IN usuarioID INT, IN fechaCita DATETIME, IN especialidadCita VARCHAR(45))
 	BEGIN
-		UPDATE citamedica SET pacienteID = usuarioID 
-			WHERE fechaCita = citFecha AND especialidadCita = citEspecialidad;
+		DECLARE msg VARCHAR(100);
+		DECLARE ocupado BOOL;
+		START TRANSACTION;
+			SELECT EXISTS (SELECT citID FROM citamedica 
+				WHERE pacienteID = usuarioID AND citFecha = fechaCita ) INTO ocupado;
+			IF ocupado THEN
+				SET msg = CONCAT('Ya se tiene una cita durante dicha hora, no se puede agendar');
+				ROLLBACK;
+				SIGNAL sqlstate '15000' SET message_text = msg;
+			ELSE
+				UPDATE citamedica SET pacienteID = usuarioID 
+					WHERE fechaCita = citFecha AND especialidadCita = citEspecialidad;
+				COMMIT;
+			END IF;
     END $$
 DELIMITER ;
 
-
-# 4. ---------------------------------- Ver el resultado de cada cita medica de algun usuario -----------------------------------------------
+# 5. ---------------------------------- Ver el resultado de cada cita medica de algun usuario -----------------------------------------------
 DROP PROCEDURE IF EXISTS pas_check_resultados;
 DELIMITER $$
 CREATE PROCEDURE pas_check_resultados(IN usuarioID INT)
 	BEGIN
 		SELECT fecha, especialidad, diagnostico, peso, estatura, ritmo_cardiaco, vision, medicamento, cantidad, intervalos, examen 
-        FROM vw_resultado_citamedica WHERE paciente = usuarioID;
+			FROM vw_resultado_citamedica WHERE paciente = usuarioID;
     END $$
 DELIMITER ;
 
+# 6. -------------------------------------- Ver el estado de las incapacidades de un usuario ------------------------------------------------
+DROP PROCEDURE IF EXISTS pas_view_incapacidad;
+DELIMITER $$
+CREATE PROCEDURE pas_view_incapacidad(IN usuarioID INT)
+	BEGIN
+		SELECT id, fecha, razon, dias, verificado, aprobado FROM vw_incapacidad WHERE persona = usuarioID;
+    END $$
+DELIMITER ;
 
-# 5. --------------------------------------------- Añadir una incapacidad de un usuario -----------------------------------------------------
+# 7. --------------------------------------------- Añadir una incapacidad de un usuario -----------------------------------------------------
+# Verificar que la incapacidad no ha sido insertada antes
 DROP PROCEDURE IF EXISTS pas_add_incapacidad;
 DELIMITER $$
 CREATE PROCEDURE pas_add_incapacidad(
 	IN usuarioID INT, IN fecha DATETIME, IN enfermedad VARCHAR(45), IN dias TINYINT)
 	BEGIN
-		INSERT INTO incapacidad (perID, incFecha, incEnfermedad, incDias, incVerificado, incAprobado) 
-			VALUES (usuarioID, fecha, enfermedad, dias, 0, 0);
+		DECLARE duplicated BOOL;
+        DECLARE msg VARCHAR(200);
+		START TRANSACTION;
+			SELECT EXISTS (SELECT incID FROM incapacidad 
+				WHERE perID = usuarioID AND incEnfermedad = enfermedad AND incFecha = fecha AND incDias = dias) 
+                INTO duplicated;
+			IF duplicated THEN
+				SET msg = CONCAT('La incapacidad ya existe');
+                ROLLBACK;
+				SIGNAL sqlstate '15000' SET message_text = msg;
+			ELSE
+				INSERT INTO incapacidad (perID, incFecha, incEnfermedad, incDias, incVerificado, incAprobado) 
+					VALUES (usuarioID, fecha, enfermedad, dias, 0, 0);
+				COMMIT;
+			END IF;
     END $$
 DELIMITER ;
 
-# 6. --------------------------------------------- Modificar una incapacidad de un usuario --------------------------------------------------
-
+# 8. --------------------------------------------- Modificar una incapacidad de un usuario --------------------------------------------------
 DROP PROCEDURE IF EXISTS pas_edit_incapacidad;
 DELIMITER $$
 CREATE PROCEDURE pas_edit_incapacidad(
 	IN incapacidadID INT, IN fecha DATETIME, IN enfermedad VARCHAR(45), IN dias TINYINT)
 	BEGIN
-		UPDATE incapacidad SET incFecha = fecha, incEnfermedad = enfermedad, incDias = dias
-			WHERE incID = incapacidadID;
+		DECLARE verificated BOOL;
+        DECLARE msg VARCHAR(200);
+		START TRANSACTION;
+			SELECT incVerificado INTO verificated FROM incapacidad 
+				WHERE incID = incapacidadID;
+			IF verificated THEN
+				SET msg = CONCAT('La incapacidad ya ha sido verificada, no se puede modificar');
+                ROLLBACK;
+				SIGNAL sqlstate '15000' SET message_text = msg;
+			ELSE
+				UPDATE incapacidad SET incFecha = fecha, incEnfermedad = enfermedad, incDias = dias
+					WHERE incID = incapacidadID;
+				COMMIT;
+			END IF;
     END $$
 DELIMITER ;
 
-# 7. -------------------------------------- Ver el estado de las atenciones en salud de un usuario -----------------------------------------
+# 9. -------------------------------------- Ver el estado de las atenciones en salud de un usuario -----------------------------------------
 DROP PROCEDURE IF EXISTS pas_view_atencionsalud;
 DELIMITER $$
 CREATE PROCEDURE pas_view_atencionsalud(IN usuarioID INT)
@@ -87,30 +150,64 @@ CREATE PROCEDURE pas_view_atencionsalud(IN usuarioID INT)
     END $$
 DELIMITER ;
 
-# 8. --------------------------------------------- Añadir una atencion en salud de un usuario ---------------------------------------------
-
+# 10. --------------------------------------------- Añadir una atencion en salud de un usuario ---------------------------------------------
+# Verificar que la atencion no existe antes de agregarla
 DROP PROCEDURE IF EXISTS pas_add_atencionsalud;
 DELIMITER $$
 CREATE PROCEDURE pas_add_atencionsalud(
 	IN usuarioID INT, IN fecha DATETIME, IN tipo VARCHAR(45))
 	BEGIN
-		INSERT INTO atencionensalud (perID, ateFecha, ateTipo, ateVerificado, ateAprobado) 
-			VALUES (usuarioID, fecha, tipo, 0, 0);
+		DECLARE duplicated BOOL;
+        DECLARE msg VARCHAR(200);
+        START TRANSACTION;
+			SELECT EXISTS (SELECT antID FROM atencionensalud 
+				WHERE perID = usuarioID AND ateFecha = fecha AND ateTipo = tipo) 
+				INTO duplicated;
+			IF duplicated THEN
+				SET msg = CONCAT('La atencion en salud ya existe');
+                ROLLBACK;
+				SIGNAL sqlstate '15000' SET message_text = msg;
+			ELSE 
+				INSERT INTO atencionensalud (perID, ateFecha, ateTipo, ateVerificado, ateAprobado) 
+					VALUES (usuarioID, fecha, tipo, 0, 0);
+				COMMIT;
+			END IF;
     END $$
 DELIMITER ;
 
-# 9. --------------------------------------------- Modificar una atencion en salud de un usuario ------------------------------------------
+# 11. --------------------------------------------- Modificar una atencion en salud de un usuario ------------------------------------------
 DROP PROCEDURE IF EXISTS pas_edit_atencionsalud;
 DELIMITER $$
 CREATE PROCEDURE pas_edit_atencionsalud(
 	IN atencionsaludID INT, IN fecha DATETIME, IN tipo VARCHAR(45))
 	BEGIN
-		UPDATE atencionensalud SET ateFecha = fecha, ateTipo = tipo
-			WHERE antID = atencionsaludID;
+		DECLARE verificated BOOL;
+        DECLARE msg VARCHAR(200);
+        START TRANSACTION;
+			SELECT ateVerificado INTO verificated FROM atencionensalud
+				WHERE antID = atencionsaludID;
+			IF verificated THEN
+				SET msg = CONCAT('La atencion en salud ya ha sido verificada, no se puede modificar');
+                ROLLBACK;
+				SIGNAL sqlstate '15000' SET message_text = msg;	
+			ELSE
+				UPDATE atencionensalud SET ateFecha = fecha, ateTipo = tipo
+					WHERE antID = atencionsaludID;
+                COMMIT;
+			END IF;
     END $$
 DELIMITER ;
 
-# 10. ----------------------------------------------------- Crear una cita medica -----------------------------------------------------------
+# 12. --------------------------------------------- Ver perfil de riesgo integral de un usuario --------------------------------------------
+DROP PROCEDURE IF EXISTS pas_view_perfilriesgo;
+DELIMITER $$
+CREATE PROCEDURE pas_view_perfilriesgo(IN usuarioID INT)
+	BEGIN
+		SELECT fecha, puntaje_fisico, puntaje_psicologico FROM vw_perfil_integral WHERE persona = usuarioID;
+    END $$
+DELIMITER ;
+
+# 13. ----------------------------------------------------- Crear una cita medica -----------------------------------------------------------
 DROP PROCEDURE IF EXISTS pas_create_citamedica;
 DELIMITER $$
 CREATE PROCEDURE pas_create_citamedica(IN doctor INT, IN fecha DATETIME)
@@ -121,7 +218,7 @@ CREATE PROCEDURE pas_create_citamedica(IN doctor INT, IN fecha DATETIME)
     END $$
 DELIMITER ;
 
-# 11. ----------------------------------------------------- Eliminar una cita medica --------------------------------------------------------
+# 14. ----------------------------------------------------- Eliminar una cita medica --------------------------------------------------------
 DROP PROCEDURE IF EXISTS pas_remove_citamedica;
 DELIMITER $$
 CREATE PROCEDURE pas_remove_citamedica(IN cita INT)
@@ -130,7 +227,7 @@ CREATE PROCEDURE pas_remove_citamedica(IN cita INT)
     END $$
 DELIMITER ; 
 
-# 12. ----------------------------------------------- Aprobar o rechazar una incapacidad ----------------------------------------------------
+# 15. ----------------------------------------------- Aprobar o rechazar una incapacidad ----------------------------------------------------
 DROP PROCEDURE IF EXISTS pas_approve_incapacidad;
 DELIMITER $$
 CREATE PROCEDURE pas_approve_incapacidad(
@@ -141,7 +238,7 @@ CREATE PROCEDURE pas_approve_incapacidad(
     END $$
 DELIMITER ;
 
-# 13. -------------------------------------------- Aprobar o rechazar una atencion en salud -------------------------------------------------
+# 16. -------------------------------------------- Aprobar o rechazar una atencion en salud -------------------------------------------------
 DROP PROCEDURE IF EXISTS pas_approve_atencionsalud;
 DELIMITER $$
 CREATE PROCEDURE pas_approve_atencionsalud(
@@ -152,7 +249,7 @@ CREATE PROCEDURE pas_approve_atencionsalud(
     END $$
 DELIMITER ;
 
-# 14. ------------------------------------------- Agregar los resultados de una cita medica -------------------------------------------------
+# 17. ------------------------------------------- Agregar los resultados de una cita medica -------------------------------------------------
 DROP PROCEDURE IF EXISTS pas_update_resultados;
 DELIMITER $$
 CREATE PROCEDURE pas_update_resultados(
@@ -170,7 +267,7 @@ CREATE PROCEDURE pas_update_resultados(
     END $$
 DELIMITER ;
 
-# 15. -------------------------------------- Modificar el perfil de riesgo integral de un usuario -------------------------------------------
+# 18. -------------------------------------- Modificar el perfil de riesgo integral de un usuario -------------------------------------------
 DROP PROCEDURE IF EXISTS pas_edit_perfilintegral;
 DELIMITER $$
 CREATE PROCEDURE pas_edit_perfilintegral(IN persona INT, IN fisico INT, IN psicologico INT)
@@ -1353,37 +1450,6 @@ create procedure sp_consultar_convocatorias_programa(in idPrograma int)
 		select * from convocatoria where Programa_progID = id_Programa;
 	end $$
 DELIMITER ;
-
-
-# Salud
-
-# --------------------------------------------- Ver perfil de riesgo integral de un usuario --------------------------------------------
-DROP PROCEDURE IF EXISTS pas_view_perfilriesgo;
-DELIMITER $$
-CREATE PROCEDURE pas_view_perfilriesgo(IN usuarioID INT)
-	BEGIN
-		SELECT * FROM vw_perfil_integral WHERE persona = usuarioID;
-    END $$
-DELIMITER ;
-SELECT * FROM vw_perfil_integral;
-# -------------------------------------- Ver el estado de las incapacidades de un usuario ------------------------------------------------
-DROP PROCEDURE IF EXISTS pas_view_incapacidad;
-DELIMITER $$
-CREATE PROCEDURE pas_view_incapacidad(IN usuarioID INT)
-	BEGIN
-		SELECT id, fecha, razon, dias, verificado, aprobado FROM vw_incapacidad WHERE persona = usuarioID;
-    END $$
-DELIMITER ;
-
-# ------------------------------- Un usuario que necesita ver las citas medicas disponibles ----------------------------------------------
-DROP PROCEDURE IF EXISTS pas_citas_disponibles;
-DELIMITER $$
-CREATE PROCEDURE pas_citas_disponibles()
-	BEGIN 
-		SELECT * FROM vw_citamedica_disponible;
-    END $$
-DELIMITER ;
-
 
 # Actividad Física y Deporte
 
