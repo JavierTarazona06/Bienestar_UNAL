@@ -536,7 +536,38 @@ select @pbm;
 
 # 5. El estudiante solo desea visualizar las convocatorias a las que podría acceder según su PBM:
 
-#5.1 La convocatoria fomento emprendimiento la busca según tema
+#5.1 La convocatoria fomento emprendimiento la busca según tema y/o nombre
+
+
+drop procedure if exists sp_convocatoriafomentoemprendimiento_filtro;
+DELIMITER $$
+CREATE PROCEDURE sp_convocatoriafomentoemprendimiento_filtro(in nombre varchar(50), in tema varchar(50))
+	BEGIN
+		if nombre is null and tema is null then
+			select * from convocatoriafomentoemprendimiento;
+		else
+			if nombre is not null and tema is not null then
+				select * from convocatoriafomentoemprendimiento 
+					where LOCATE(LOWER(nombre), LOWER(cgemNombreEmprend)) > 0
+                    and LOCATE(LOWER(tema), LOWER(cgemTema)) > 0;
+            else
+				if nombre is null then
+					select * from convocatoriafomentoemprendimiento 
+						where LOCATE(LOWER(tema), LOWER(cgemTema)) > 0;
+                else
+					select * from convocatoriafomentoemprendimiento 
+						where LOCATE(LOWER(nombre), LOWER(cgemNombreEmprend)) > 0;
+                end if;
+            end if;
+        end if;
+	END $$
+DELIMITER ;
+
+call sp_convocatoriafomentoemprendimiento_filtro('Empresa2','tema2');
+call sp_convocatoriafomentoemprendimiento_filtro(null,'tema2');
+call sp_convocatoriafomentoemprendimiento_filtro('Empresa2',null);
+call sp_convocatoriafomentoemprendimiento_filtro(null,null);
+
 
 drop procedure if exists sp_convocatoriafomentoemprendimiento;
 DELIMITER $$
@@ -622,6 +653,34 @@ select @pbm;
 call sp_convocatoriagestionalimentaria_est(10101015,'Desayuno','Comedor central');
 */
 
+drop procedure if exists sp_convocatoriagestionalimentaria_filtro;
+DELIMITER $$
+CREATE PROCEDURE sp_convocatoriagestionalimentaria_filtro(in id_est int, in comida enum('Desayuno','Almuerzo','Cena'), in lugar enum('Comedor central','Hemeroteca','Odontología','Agronomía','Biología','Ciencias Humanas','Ciencias Económicas','Matemáticas','otro'))
+	BEGIN
+		if pbm_est(id_est)<26 then
+			if comida is null and lugar is null then
+				select * from convocatoriagestionalimentaria;
+            else
+				if comida is not null and lugar is not null then
+					select * from convocatoriagestionalimentaria where cgaComida=comida and cgaLugar=lugar;
+                else
+					if comida is null then
+						select * from convocatoriagestionalimentaria where cgaLugar=lugar;
+                    else
+						select * from convocatoriagestionalimentaria where cgaComida=comida;
+                    end if;
+                end if;
+            end if;
+		else
+			SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'El PBM del estaudiante es mayor que 25: No tiene acceso de convocatorias de gestión alimentaria';
+        end if;
+	END $$
+DELIMITER ;
+
+call sp_convocatoriagestionalimentaria_filtro(101010110,'Desayuno','Comedor central');
+call sp_convocatoriagestionalimentaria_filtro(101010110, null,'Comedor central');
+call sp_convocatoriagestionalimentaria_filtro(101010110,'Desayuno',null);
+call sp_convocatoriagestionalimentaria_filtro(101010110,null,null);
 
 #5.3 La convocatoria de gestión alojamiento solo se puede acceder con PBM < 25
 
@@ -677,6 +736,34 @@ select @pbm;
 call sp_convocatoriagestionalojamiento_est(10101015,'Usme','Residencia Universitaria');
 */
 
+drop procedure if exists sp_convocatoriagestionalojamiento_filtro;
+DELIMITER $$
+CREATE PROCEDURE sp_convocatoriagestionalojamiento_filtro(in id_est int, in localidad varchar(100), in tipo enum('Hotel','Casa','Apartamento','Vivienda familiar','Residencia Universitaria','Apartaestudio','Habitación','otro'))
+	BEGIN
+		if pbm_est(id_est)<26 then
+			if tipo is null and localidad is null then
+				select * from convocatoriagestionalojamiento;
+			else
+				if tipo is not null and localidad is not null then 
+					select * from convocatoriagestionalojamiento where LOCATE(LOWER(localidad), LOWER(cgalLocalidadAlojamiento)) > 0 and tipo=cgalTipoVivienda;
+                else
+					if tipo is null then
+						select * from convocatoriagestionalojamiento where LOCATE(LOWER(localidad), LOWER(cgalLocalidadAlojamiento)) > 0;
+                    else
+						select * from convocatoriagestionalojamiento where tipo=cgalTipoVivienda;
+                    end if;                
+                end if;            
+            end if;
+		else
+			SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'El PBM del estaudiante es mayor que 25: No tiene acceso de convocatorias de gestión alojamiento';
+        end if;
+	END $$
+DELIMITER ;
+
+call sp_convocatoriagestionalojamiento_filtro(101010110,'Usme','Residencia Universitaria');
+call sp_convocatoriagestionalojamiento_filtro(101010110,null,'Residencia Universitaria');
+call sp_convocatoriagestionalojamiento_filtro(101010110,'Usme',null);
+call sp_convocatoriagestionalojamiento_filtro(101010110,null,null);
 
 #5.4 La convocatoria de gestión economica solo se puede acceder con PBM < 20
 
@@ -732,7 +819,60 @@ DELIMITER ;
 call sp_convocatoriagestioneconomica_menor(101010110, 600000);
 
 
+drop procedure if exists sp_convocatoriagestioneconomica_filtro;
+DELIMITER $$
+CREATE PROCEDURE sp_convocatoriagestioneconomica_filtro(in id_est int, in filt_min float, in filt_max float)
+	BEGIN
+		if pbm_est(id_est)<21 then
+			if filt_min is null and filt_max is null then
+				select * from convocatoriagestioneconomica order by cgeCobertura;
+			else
+				if filt_min is not null and filt_max is not null then
+					select * from convocatoriagestioneconomica where 
+						cgeCobertura>=filt_min and 
+						cgeCobertura<=filt_max order by cgeCobertura;
+				else 
+					if filt_min is null then
+						select * from convocatoriagestioneconomica where 
+							cgeCobertura<=filt_max order by cgeCobertura;
+					else
+						select * from convocatoriagestioneconomica where 
+							cgeCobertura>=filt_min order by cgeCobertura;
+					end if;
+				end if;
+			end if;
+		else
+			SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'El PBM del estaudiante es mayor que 20: No tiene acceso de convocatorias de gestión económica';
+        end if;
+	END $$
+DELIMITER ;
+
+call sp_convocatoriagestioneconomica_filtro(101010110,500000,1200000);
+call sp_convocatoriagestioneconomica_filtro(101010110,700000,null);
+call sp_convocatoriagestioneconomica_filtro(101010110,null,800000);
+call sp_convocatoriagestioneconomica_filtro(101010110,null,null);
+
+
 #5.5 La convocatoria de gestión transporte solo se puede acceder con PBM < 15
+
+drop procedure if exists sp_convocatoriagestiontransporte_filtro;
+DELIMITER $$
+CREATE PROCEDURE sp_convocatoriagestiontransporte_filtro(in id_est int, in tipo enum('Transporte público masivo','otro'))
+	BEGIN
+		if pbm_est(id_est)<16 then
+			if tipo is null then
+				select * from convocatoriagestiontransporte order by cgtCobertura;
+			else
+				select * from convocatoriagestiontransporte where cgtTipoTransporte=tipo order by cgtCobertura;
+            end if;
+		else
+			SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'El PBM del estaudiante es mayor que 15: No tiene acceso de convocatorias de gestión transporte';
+        end if;
+	END $$
+DELIMITER ;
+
+call sp_convocatoriagestiontransporte_filtro(101010110, 'Transporte público masivo');
+call sp_convocatoriagestiontransporte_filtro(101010110, null);
 
 drop procedure if exists sp_convocatoriagestiontransporte_est;
 DELIMITER $$
@@ -776,11 +916,16 @@ drop procedure if exists sp_info_factura_per;
 DELIMITER $$
 CREATE PROCEDURE sp_info_factura_per(in id_per int, in id_tienda int)
 	BEGIN
-		select factID, factFecha, factHora, factDetalle, prodID, prodPrecio, prodDetalle, clienteID, perApellido, perEmail, tieDireccion from vw_info_factura where clienteID=id_per and tieID=id_tienda;
+		if id_tienda is null then
+			select factID, factFecha, factHora, factDetalle, prodID, prodPrecio, prodDetalle, clienteID, perApellido, perEmail, tieDireccion from vw_info_factura where clienteID=id_per;
+        else
+			select factID, factFecha, factHora, factDetalle, prodID, prodPrecio, prodDetalle, clienteID, perApellido, perEmail, tieDireccion from vw_info_factura where clienteID=id_per and tieID=id_tienda;
+		end if;
 	END $$
 DELIMITER ;
 
-call sp_info_factura_per(101010114, 2);
+call sp_info_factura_per(10101017, 2);
+call sp_info_factura_per(10101017, null);
 
 #7. Una persona quiere consultar los productos en una tienda de bienestar U.
 
@@ -788,11 +933,16 @@ drop procedure if exists sp_productos_tienda;
 DELIMITER $$
 CREATE PROCEDURE sp_productos_tienda(in id_tienda int)
 	BEGIN
-		select * from  vw_productos_tienda where tieID=id_tienda;
+		if id_tienda is null then
+			select * from  vw_productos_tienda;
+		else
+			select * from  vw_productos_tienda where tieID=id_tienda;
+        end if;
 	END $$
 DELIMITER ;
 
-#call sp_productos_tienda(1)
+call sp_productos_tienda(null);
+call sp_productos_tienda(1);
 
 # 8. Una persona queire conocer las tiendas donde se encuentra un producto
 

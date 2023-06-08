@@ -344,6 +344,7 @@ insert into convocatoria values
 (20,'Gestión Transporte','2023-01-15','2023-02-1',1,'2023-1',1,35),
 (21,'Gestión Transporte','2023-01-15','2023-02-1',1,'2023-1',1,35),
 (22,'Gestión Transporte','2023-01-15','2023-02-1',1,'2023-1',1,35);
+insert into convocatoria values (50,'Fomento Emprendimiento Estudiantes','2023-01-15','2023-02-1',1,'2023-1',1,35);
 
 DELETE FROM convocatoriagestioneconomica;
 insert into convocatoriagestioneconomica values (1,500000);
@@ -372,6 +373,9 @@ INSERT INTO convocatoriafomentoemprendimiento VALUES
 (17, 961842, 'Empresa1', 'Tema1', 'Descripción del emprendimiento'),
 (18, 2248621, 'Empresa2', 'Tema2', 'Descripción del emprendimiento'),
 (19, 1036757, 'Empresa3', 'Tema3', 'Descripción del emprendimiento');
+
+INSERT INTO convocatoriafomentoemprendimiento VALUES 
+(50, 961842, 'Empresa4', 'Tema2', 'Descripción del emprendimiento');
 
 DELETE FROM convocatoriagestiontransporte;
 INSERT INTO convocatoriagestiontransporte VALUES(20,530147,'Transporte público masivo'),
@@ -500,6 +504,7 @@ insert into factura values
 (13,'2023-02-13','17:00:00','N.A',2,101010127),
 (14,'2023-04-29','13:00:00','N.A',2,101010110),
 (15,'2023-05-21','17:00:00','N.A',1,10101017);
+insert into factura values (16,'2023-05-28','17:00:00','N.A',2,10101017);
 
 DELETE FROM producto;
 insert into producto values (1,83000.0,'Producto1');
@@ -539,6 +544,8 @@ insert into factura_producto values (13,10);
 insert into factura_producto values (15,10);
 insert into factura_producto values (2,8);
 insert into factura_producto values (1,7);
+insert into factura_producto values (9,15);
+insert into factura_producto values (13,16);
 
 delete from producto_tiendaun;
 INSERT INTO producto_tiendaun VALUES 

@@ -1,5 +1,5 @@
 #--------------------------------------------------------------------------------------------------------
-#                                                     Salud
+#                                                    Salud
 #--------------------------------------------------------------------------------------------------------
 # 1. Verificar que la cita que el usuario va a eliminar no sea dentro de menos de las proximas 24 horas, si es asi, 
 # enviar un error
