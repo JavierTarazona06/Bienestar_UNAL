@@ -50,6 +50,7 @@ grant execute on function horas_corresponsabilidad_est to 'estudiante'@'%';
 grant execute on procedure sp_horas_corresponsabilidad_est to 'estudiante'@'%';
 grant execute on function pbm_est to 'estudiante'@'%';
 grant execute on procedure sp_pbm_est to 'estudiante'@'%';
+grant execute on procedure sp_consultar_convocatorias_programa to 'estudiante'@'%';
 
 grant execute on procedure sp_insertar_est_tm_conv_est to 'estudiante'@'%';
 grant execute on procedure programa_area_convocatoria to 'estudiante'@'%';

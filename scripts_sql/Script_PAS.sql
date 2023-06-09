@@ -1693,9 +1693,11 @@ drop procedure if exists sp_consultar_convocatorias_programa;
 DELIMITER $$
 create procedure sp_consultar_convocatorias_programa(in idPrograma int)
 	begin 
-		select * from convocatoria where Programa_progID = id_Programa;
+		select * from convocatoria where Programa_progID = idPrograma;
 	end $$
 DELIMITER ;
+
+call sp_consultar_convocatorias_programa(1701);
 
 # Actividad Física y Deporte
 
