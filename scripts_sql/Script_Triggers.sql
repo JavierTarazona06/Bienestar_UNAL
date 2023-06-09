@@ -98,6 +98,7 @@ create trigger tr_eliminar_factura before delete on factura
     end $$
 DELIMITER ;
 
+/*
 start transaction;
 select * from factura where clienteID=10101013;
 select * from factura_producto where factID in (select factID from factura where clienteID=10101013);
@@ -105,6 +106,7 @@ delete from factura where clienteID=10101013;
 select * from factura where clienteID=10101013;
 select * from factura_producto where factID in (select factID from factura where clienteID=10101013);
 rollback;
+*/
 
 #3. Al insertar en conv. economicas, se inserta también la convocatoria a la tabla de convocatoria
 	#Al eliminar en conv. economicas, se elimina también la convocatoria a la tabla de convocatoria
@@ -326,7 +328,24 @@ DELIMITER ;
 drop trigger if exists tr_check_PAPA;
 DELIMITER $$
 create trigger tr_check_PAPA before insert on estudiante_toma_convocatoria for each row
-begin #por terminar
-
+begin
+	declare papa_est int;
+    declare papa_conv int;
+    declare msg varchar(225);
+    select estPAPA into papa_est from estudiante where estID=NEW.idEst;
+    select convPAPA into papa_conv from convocatoria where conv_id=NEW.conv_id;
+    if papa_est<papa_conv then
+		set msg = concat('El estudiante tiene un PAPA de ',papa_est,' menor al de la convocatoria ',papa_conv);
+		SIGNAL sqlstate '45000' set message_text = msg;
+    end if;
 end $$
 DELIMITER ;
+
+/*
+start transaction;
+insert into estudiante_toma_convocatoria values (101010118,219,'2023-05-24');
+select * from estudiante_toma_convocatoria;
+select * from convocatoria;
+select * from estudiante;
+rollback;
+*/

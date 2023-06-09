@@ -50,34 +50,34 @@ select estID,perNombre,perApellido,perEmail,estPBM,perFacultad,carreNombre,
 
 #Vista de facturas con sus productos y tienda:
 
-select factID,factFecha,factHora,factDetalle,prodID,prodPrecio,prodDetalle,clienteID,perNombre,perApellido,perEmail,tieID,tieDireccion,tieCiudad from factura join factura_producto using (factID) join producto using (prodID) join persona on (clienteID=perID) join tiendabienestar using (tieID);
+#select factID,factFecha,factHora,factDetalle,prodID,prodPrecio,prodDetalle,clienteID,perNombre,perApellido,perEmail,tieID,tieDireccion,tieCiudad from factura join factura_producto using (factID) join producto using (prodID) join persona on (clienteID=perID) join tiendabienestar using (tieID);
 drop view if exists vw_info_factura;
 create view vw_info_factura as select factID,factFecha,factHora,factDetalle,prodID,prodPrecio,prodDetalle,clienteID,perNombre,perApellido,perEmail,tieID,tieDireccion,tieCiudad from factura join factura_producto using (factID) join producto using (prodID) join persona on (clienteID=perID) join tiendabienestar using (tieID);
-select * from vw_info_factura;
+#select * from vw_info_factura;
 
 #Vista de productos con la tienda a la que pertenecen
 
-select producto.prodID,producto.prodPrecio,producto.prodDetalle,tiendabienestar.tieID,tiendabienestar.tieDireccion,tiendabienestar.tieCiudad from producto_tiendaun 
-	JOIN producto ON producto_tiendaun.prodID = producto.prodID  join tiendabienestar on tiendabienestar.tieID=producto_tiendaun.tieID;
+#select producto.prodID,producto.prodPrecio,producto.prodDetalle,tiendabienestar.tieID,tiendabienestar.tieDireccion,tiendabienestar.tieCiudad from producto_tiendaun 
+	#JOIN producto ON producto_tiendaun.prodID = producto.prodID  join tiendabienestar on tiendabienestar.tieID=producto_tiendaun.tieID;
 drop view if exists vw_productos_tienda;
 create view vw_productos_tienda as select 
 	producto.prodID,producto.prodPrecio,producto.prodDetalle,tiendabienestar.tieID,
     tiendabienestar.tieDireccion,tiendabienestar.tieCiudad 
     from producto_tiendaun JOIN producto ON producto_tiendaun.prodID = producto.prodID 
     join tiendabienestar on tiendabienestar.tieID=producto_tiendaun.tieID;
-select * from vw_productos_tienda; 
+#select * from vw_productos_tienda; 
 
 #Vista del estudiante y sus fallas de alimentación y corresponsabilidad
 
-select fallAlID,fallAlcgaComida,fallAlLugar,fallAlFecha,estID,perNombre,perApellido,perEmail,perFacultad,carreID,carreNombre,estPBM,estPAPA
-	from vw_info_estudiante
-    join fallaalimentacion using (estID);
+#select fallAlID,fallAlcgaComida,fallAlLugar,fallAlFecha,estID,perNombre,perApellido,perEmail,perFacultad,carreID,carreNombre,estPBM,estPAPA
+	#from vw_info_estudiante
+    #join fallaalimentacion using (estID);
 drop view if exists vw_estudiante_falla_alimentacion;
 create view vw_estudiante_falla_alimentacion as
 	select fallAlID,fallAlcgaComida,fallAlLugar,fallAlFecha,estID,perNombre,perApellido,perEmail,perFacultad,carreID,carreNombre,estPBM,estPAPA
 	from vw_info_estudiante
     join fallaalimentacion using (estID);
-select * from vw_estudiante_falla_alimentacion;
+#select * from vw_estudiante_falla_alimentacion;
 
 #--------------------------------------------------------------------------------------------------------------------------------------------
 #                                  									Valeria
@@ -154,96 +154,96 @@ CREATE VIEW vw_doctor_procedimiento AS
 
 #Vista de grupos artisticos institucionales y sus convocatorias.
 
-select gaiNombre, gaiDisciplina, convFechaApertura, convFechaApertura,convGaiEntrevista, convFechaCierre, convEstado, convPeriodo 
-	from grupoartisticoinstitucional join convocatoriagai on (GAI_id = GrupoArtisticoInstitucional_GAI_id) 
-    join convocatoria on (Convocatoria_conv_id = conv_id);
+#select gaiNombre, gaiDisciplina, convFechaApertura, convFechaApertura,convGaiEntrevista, convFechaCierre, convEstado, convPeriodo 
+	#from grupoartisticoinstitucional join convocatoriagai on (GAI_id = GrupoArtisticoInstitucional_GAI_id) 
+    #join convocatoria on (Convocatoria_conv_id = conv_id);
 drop view if exists vw_info_gai_convocatoria;
 create view vw_info_gai_convocatoria 
 	as select gaiNombre, gaiDisciplina convFechaApertura, convFechaCierre, convGaiEntrevista, convEstado, convPeriodo 
     from grupoartisticoinstitucional 
     join convocatoriagai on (GAI_id = GrupoArtisticoInstitucional_GAI_id) 
     join convocatoria on (Convocatoria_conv_id = conv_id);
-select * from vw_info_gai_convocatoria;
+#select * from vw_info_gai_convocatoria;
 
 
 #Vista de convocatorias a selecciones deportivas.
 
-select conv_id,progID,progNombre, convNombre, convFechaApertura, convFechaCierre, convPeriodo, convDeporte, convLugar, convHora 
-	from programa 
-    join convocatoria on (Programa_progID = progID) 
-    join convocatoriaseleccion on (Convocatoria_conv_id = conv_id);
+#select conv_id,progID,progNombre, convNombre, convFechaApertura, convFechaCierre, convPeriodo, convDeporte, convLugar, convHora 
+	#from programa 
+    #join convocatoria on (Programa_progID = progID) 
+    #join convocatoriaseleccion on (Convocatoria_conv_id = conv_id);
 drop view if exists vw_info_seleccion_convocatoria;
 create view vw_info_seleccion_convocatoria 
 	as select conv_id,progID,progNombre, convNombre, convFechaApertura, convFechaCierre, convPeriodo, convDeporte, convLugar, convHora 
     from programa 
     join convocatoria on (Programa_progID = progID) 
     join convocatoriaseleccion on (Convocatoria_conv_id = conv_id);
-select * from vw_info_seleccion_convocatoria;
+#select * from vw_info_seleccion_convocatoria;
 
 
 #Vista de convocatorias a cursos libres de deportes.
 
-select Convocatoria_conv_id,progNombre, convNombre, curNombre, curTipoCurso, curCondicion, convFechaApertura, convFechaCierre, convPeriodo  
-	from programa 
-    join convocatoria on (Programa_progID = progID) 
-    join convocatoriacursolibre on (Convocatoria_conv_id = conv_id);
+#select Convocatoria_conv_id,progNombre, convNombre, curNombre, curTipoCurso, curCondicion, convFechaApertura, convFechaCierre, convPeriodo  
+	#from programa 
+    #join convocatoria on (Programa_progID = progID) 
+    #join convocatoriacursolibre on (Convocatoria_conv_id = conv_id);
 drop view if exists vw_info_curso_libre_convocatoria;
 create view vw_info_curso_libre_convocatoria 
 	as select Convocatoria_conv_id,progNombre, convNombre, curNombre, curTipoCurso, curCondicion, convFechaApertura, convFechaCierre, convPeriodo 
 	from programa 
     join convocatoria on (Programa_progID = progID) 
     join convocatoriacursolibre on (Convocatoria_conv_id = conv_id);
-select * from vw_info_curso_libre_convocatoria;
+#select * from vw_info_curso_libre_convocatoria;
 
 #Vista de convocatorias, área, y programa al que pertenecen a la que pertenecen
 
-select conv_id, areID,progID, convNombre, progNombre, areNombre 
-	from (area join programa on (areID = Area_areID)) 
-    join convocatoria on (progID = Programa_progID);
+#select conv_id, areID,progID, convNombre, progNombre, areNombre 
+	#from (area join programa on (areID = Area_areID)) 
+    #join convocatoria on (progID = Programa_progID);
 drop view if exists vw_info_convocatoria;
 create view vw_info_convocatoria 
 	as select conv_id, progID, areID, convNombre, progNombre, areNombre  
     from (area join programa on (areID = Area_areID)) 
     join convocatoria on (progID = Programa_progID);
-select * from vw_info_convocatoria;
+#select * from vw_info_convocatoria;
 
 #Vista de estudiantes y sus convocatorias
 
-select conv_id, Programa_progID, convNombre, convFechaApertura, convFechaCierre, estID 
-	from (estudiante join estudiante_toma_convocatoria on (estID = idEst)) 
-    join convocatoria using (conv_id);
+#select conv_id, Programa_progID, convNombre, convFechaApertura, convFechaCierre, estID 
+	#from (estudiante join estudiante_toma_convocatoria on (estID = idEst)) 
+    #join convocatoria using (conv_id);
 drop view if exists vw_info_convocatoria_estudiante;
 create view vw_info_convocatoria_estudiante 
 	as select conv_id, estID,Programa_progID, convNombre, convFechaApertura, convFechaCierre 
     from (estudiante join estudiante_toma_convocatoria on (estID = idEst)) 
     join convocatoria using (conv_id);
-select * from vw_info_convocatoria_estudiante;
+#select * from vw_info_convocatoria_estudiante;
 
 #Vista de proyectos y sus detalles
 
-select proyIdProyecto, progID,proyNombre, proyEjecucion, proyPresupuesto, areID  
-	from ((proyecto join programa_tiene_proyecto on (proyIdProyecto = Proyecto_proyIdProyecto)) 
-    join programa using (progID)) 
-    join area on (areID = Area_areID);
+#select proyIdProyecto, progID,proyNombre, proyEjecucion, proyPresupuesto, areID  
+	#from ((proyecto join programa_tiene_proyecto on (proyIdProyecto = Proyecto_proyIdProyecto)) 
+    #join programa using (progID)) 
+    #join area on (areID = Area_areID);
 drop view if exists vw_info_proyecto;
 create view vw_info_proyecto 
 	as select proyIdProyecto, progID,proyNombre, proyEjecucion, proyPresupuesto, areID  
     from ((proyecto join programa_tiene_proyecto on (proyIdProyecto = Proyecto_proyIdProyecto)) 
     join programa using (progID)) 
     join area on (areID = Area_areID);
-select * from vw_info_proyecto;
+#select * from vw_info_proyecto;
 
 #Vista de eventos y sus detalles.
-select evetaidEventoTaller, progID,evetaNombre,	eveDescripcion,evetaTipoEventoTaller, evetaHoraInicio, evetaHoraFin, evetaFecha, evetaLugar, areID 
-	from ((eventotaller join programa_tiene_eventotaller on (evetaidEventoTaller = idEventoTaller)) 
-    join programa using (progID)) 
-    join area on (areID = Area_areID);
+#select evetaidEventoTaller, progID,evetaNombre,	eveDescripcion,evetaTipoEventoTaller, evetaHoraInicio, evetaHoraFin, evetaFecha, evetaLugar, areID 
+	#from ((eventotaller join programa_tiene_eventotaller on (evetaidEventoTaller = idEventoTaller)) 
+    #join programa using (progID)) 
+    #join area on (areID = Area_areID);
 drop view if exists vw_info_eventoTaller;
 create view vw_info_eventoTaller as select evetaidEventoTaller, progID,evetaNombre,	eveDescripcion,evetaTipoEventoTaller, evetaHoraInicio, evetaHoraFin, evetaFecha, evetaLugar, areID 
 	from ((eventotaller join programa_tiene_eventotaller on (evetaidEventoTaller = idEventoTaller)) 
     join programa using (progID)) 
     join area on (areID = Area_areID);
-select * from vw_info_eventoTaller;
+#select * from vw_info_eventoTaller;
 
 
 #------------------------------------------------------------------

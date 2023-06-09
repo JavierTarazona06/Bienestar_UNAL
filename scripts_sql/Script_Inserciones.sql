@@ -322,31 +322,31 @@ insert into programa (progID,progNombre,Area_areID) values
 
 DELETE FROM convocatoria;
 insert into convocatoria values 
-(1,'Fomento Económico Estudiantes','2023-01-15','2023-02-1',1,'2023-1',1,35),
-(2,'Fomento Económico Estudiantes Alimentación','2023-01-15','2023-02-1',1,'2023-1',1,35),
-(3,'Fomento Económico Estudiantes Alimentación','2023-01-15','2023-02-1',1,'2023-1',1,35),
-(4,'Fomento Económico Estudiantes Alimentación','2023-01-15','2023-02-1',1,'2023-1',1,35),
-(5,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1,35),
-(6,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1,35),
-(7,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1,35),
-(8,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1,35),
-(9,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1,35),
-(10,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1,35),
-(11,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1,35),
-(12,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1,35),
-(13,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1,35),
-(14,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1,35),
-(15,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1,35),
-(16,'Fomento Económico Estudiantes','2023-01-15','2023-02-1',1,'2023-1',1,35),
-(17,'Fomento Emprendimiento Estudiantes','2023-01-15','2023-02-1',1,'2023-1',1,35),
-(18,'Fomento Emprendimiento Estudiantes','2023-01-15','2023-02-1',1,'2023-1',1,35),
-(19,'Fomento Emprendimiento Estudiantes','2023-01-15','2023-02-1',1,'2023-1',1,35),
-(20,'Gestión Transporte','2023-01-15','2023-02-1',1,'2023-1',1,35),
-(21,'Gestión Transporte','2023-01-15','2023-02-1',1,'2023-1',1,35),
-(22,'Gestión Transporte','2023-01-15','2023-02-1',1,'2023-1',1,35);
-insert into convocatoria values (50,'Fomento Emprendimiento Estudiantes','2023-01-15','2023-02-1',1,'2023-1',1,35);
-insert into convocatoria values (60,'Fomento Económico Estudiantes Alimentación','2023-01-15','2023-02-1',1,'2023-1',1,35);
-insert into convocatoria values (55,'Fomento Económico Estudiantes Alimentación','2023-01-15','2023-02-1',1,'2023-1',1,35);
+(1,'Fomento Económico Estudiantes','2023-01-15','2023-02-1',1,'2023-1',1,3.5),
+(2,'Fomento Económico Estudiantes Alimentación','2023-01-15','2023-02-1',1,'2023-1',1,3.5),
+(3,'Fomento Económico Estudiantes Alimentación','2023-01-15','2023-02-1',1,'2023-1',1,3.5),
+(4,'Fomento Económico Estudiantes Alimentación','2023-01-15','2023-02-1',1,'2023-1',1,3.5),
+(5,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1,3.5),
+(6,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1,3.5),
+(7,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1,3.5),
+(8,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1,3.5),
+(9,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1,3.5),
+(10,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1,3.5),
+(11,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1,3.5),
+(12,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1,3.5),
+(13,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1,3.5),
+(14,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1,3.5),
+(15,'Gestión Alojamiento','2023-01-15','2023-02-1',1,'2023-1',1,3.5),
+(16,'Fomento Económico Estudiantes','2023-01-15','2023-02-1',1,'2023-1',1,3.5),
+(17,'Fomento Emprendimiento Estudiantes','2023-01-15','2023-02-1',1,'2023-1',1,3.5),
+(18,'Fomento Emprendimiento Estudiantes','2023-01-15','2023-02-1',1,'2023-1',1,3.5),
+(19,'Fomento Emprendimiento Estudiantes','2023-01-15','2023-02-1',1,'2023-1',1,3.5),
+(20,'Gestión Transporte','2023-01-15','2023-02-1',1,'2023-1',1,3.5),
+(21,'Gestión Transporte','2023-01-15','2023-02-1',1,'2023-1',1,3.5),
+(22,'Gestión Transporte','2023-01-15','2023-02-1',1,'2023-1',1,3.5);
+insert into convocatoria values (50,'Fomento Emprendimiento Estudiantes','2023-01-15','2023-02-1',1,'2023-1',1,3.5);
+insert into convocatoria values (60,'Fomento Económico Estudiantes Alimentación','2023-01-15','2023-02-1',1,'2023-1',1,3.5);
+insert into convocatoria values (55,'Fomento Económico Estudiantes Alimentación','2023-01-15','2023-02-1',1,'2023-1',1,3.5);
 
 DELETE FROM convocatoriagestioneconomica;
 insert into convocatoriagestioneconomica values (1,500000);

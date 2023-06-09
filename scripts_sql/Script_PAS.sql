@@ -796,10 +796,12 @@ CREATE PROCEDURE sp_convocatoriagestionalimentaria_filtro(in id_est int, in comi
 	END $$
 DELIMITER ;
 
+/*
 call sp_convocatoriagestionalimentaria_filtro(101010110,'Desayuno','Comedor central');
 call sp_convocatoriagestionalimentaria_filtro(101010110, null,'Comedor central');
 call sp_convocatoriagestionalimentaria_filtro(101010110,'Desayuno',null);
 call sp_convocatoriagestionalimentaria_filtro(101010110,null,null);
+*/
 
 #5.3 La convocatoria de gestión alojamiento solo se puede acceder con PBM < 25
 
@@ -816,7 +818,7 @@ CREATE PROCEDURE sp_convocatoriagestionalojamiento(in id_est int)
 	END $$
 DELIMITER ;
 
-call sp_convocatoriagestionalojamiento(101010110);
+#call sp_convocatoriagestionalojamiento(101010110);
 
 
 drop procedure if exists sp_convocatoriagestionalojamiento_loc;
@@ -831,7 +833,7 @@ CREATE PROCEDURE sp_convocatoriagestionalojamiento_loc(in id_est int, in localid
 	END $$
 DELIMITER ;
 
-call sp_convocatoriagestionalojamiento_loc(101010110,'Usme');
+#call sp_convocatoriagestionalojamiento_loc(101010110,'Usme');
 
 
 drop procedure if exists sp_convocatoriagestionalojamiento_est;
@@ -879,10 +881,12 @@ CREATE PROCEDURE sp_convocatoriagestionalojamiento_filtro(in id_est int, in loca
 	END $$
 DELIMITER ;
 
+/*
 call sp_convocatoriagestionalojamiento_filtro(101010110,'Usme','Residencia Universitaria');
 call sp_convocatoriagestionalojamiento_filtro(101010110,null,'Residencia Universitaria');
 call sp_convocatoriagestionalojamiento_filtro(101010110,'Usme',null);
 call sp_convocatoriagestionalojamiento_filtro(101010110,null,null);
+*/
 
 #5.4 La convocatoria de gestión economica solo se puede acceder con PBM < 20
 
@@ -920,7 +924,7 @@ CREATE PROCEDURE sp_convocatoriagestioneconomica_mayor(in id_est int, in filt fl
 	END $$
 DELIMITER ;
 
-call sp_convocatoriagestioneconomica_mayor(101010110, 500000);
+#call sp_convocatoriagestioneconomica_mayor(101010110, 500000);
 
 
 drop procedure if exists sp_convocatoriagestioneconomica_menor;
@@ -935,7 +939,7 @@ CREATE PROCEDURE sp_convocatoriagestioneconomica_menor(in id_est int, in filt fl
 	END $$
 DELIMITER ;
 
-call sp_convocatoriagestioneconomica_menor(101010110, 600000);
+#call sp_convocatoriagestioneconomica_menor(101010110, 600000);
 
 
 drop procedure if exists sp_convocatoriagestioneconomica_filtro;
@@ -966,11 +970,12 @@ CREATE PROCEDURE sp_convocatoriagestioneconomica_filtro(in id_est int, in filt_m
 	END $$
 DELIMITER ;
 
+/*
 call sp_convocatoriagestioneconomica_filtro(101010110,500000,1200000);
 call sp_convocatoriagestioneconomica_filtro(101010110,700000,null);
 call sp_convocatoriagestioneconomica_filtro(101010110,null,800000);
 call sp_convocatoriagestioneconomica_filtro(101010110,null,null);
-
+*/
 
 #5.5 La convocatoria de gestión transporte solo se puede acceder con PBM < 15
 
@@ -990,8 +995,10 @@ CREATE PROCEDURE sp_convocatoriagestiontransporte_filtro(in id_est int, in tipo 
 	END $$
 DELIMITER ;
 
+/*
 call sp_convocatoriagestiontransporte_filtro(101010110, 'Transporte público masivo');
 call sp_convocatoriagestiontransporte_filtro(101010110, null);
+*/
 
 drop procedure if exists sp_convocatoriagestiontransporte_est;
 DELIMITER $$
@@ -1026,7 +1033,7 @@ CREATE PROCEDURE sp_convocatoriagestiontransporte(in id_est int)
 	END $$
 DELIMITER ;
 
-call sp_convocatoriagestiontransporte(101010110);
+#call sp_convocatoriagestiontransporte(101010110);
 
 
 #6. Una persona/estudiante/secretario/director quiere consultar sus facturas con los detalles en la Tienda de bienestar U.
@@ -1058,10 +1065,12 @@ CREATE PROCEDURE sp_info_factura_per(in id_per int, in id_tienda int, in id_fact
 	END $$
 DELIMITER ;
 
+/*
 call sp_info_factura_per(10101017, 2, 16);
 call sp_info_factura_per(10101017, null, 16);
 call sp_info_factura_per(10101017, 1, null);
 call sp_info_factura_per(10101017, null, null);
+*/
 
 #7. Una persona quiere consultar los productos en una tienda de bienestar U.
 
@@ -1077,8 +1086,10 @@ CREATE PROCEDURE sp_productos_tienda(in id_tienda int)
 	END $$
 DELIMITER ;
 
+/*
 call sp_productos_tienda(null);
 call sp_productos_tienda(1);
+*/
 
 # 8. Una persona queire conocer las tiendas donde se encuentra un producto
 
@@ -1090,11 +1101,11 @@ CREATE PROCEDURE sp_tiendas_ofrece_producto(in id_prod int)
 	END $$
 DELIMITER ;
 
-
+/*
 select * from vw_productos_tienda;
 call sp_tiendas_ofrece_producto(9); #1 resultado
 call sp_tiendas_ofrece_producto(11); #2 resultados
-
+*/
 
 # 9. Si el estudiante inserta una conv. en est_toma_conv, verificar que no ingrese
 #dos veces la misma en el mismo semestre
@@ -1201,7 +1212,7 @@ select * from convocatoria;
 
 # 12. El secretario/dirección quieren insertar una convocatoria en el semestre en curso
 
-select * from convocatoria;
+#select * from convocatoria;
 
 drop procedure if exists insertar_conv_en_curso;
 DELIMITER $$
@@ -1218,13 +1229,13 @@ CREATE procedure insertar_conv_en_curso(in id_conv int, in nom_conv varchar(70),
 		end if;
     END $$
 DELIMITER ;
-
+/*
 start transaction;
 CALL insertar_conv_en_curso(23, 'Gestión Alojamiento', 1,3.5);
 select * from convocatoria;
 delete from convocatoria where conv_id=23;
 rollback;
-
+*/
 # 13 La secretaría/dirección inserta empleados en la tabla empleado_tiendaun
 
 drop procedure if exists insertar_empl_tienda_un;
@@ -1311,7 +1322,7 @@ delete from factura where factID=@fact_id;
 #15.1 Persona/Estudiante/Secretario/Direccion Insertar productos en factura
 
 
-select tieID from factura where factID=2;
+#select tieID from factura where factID=2;
 
 drop procedure if exists sp_insertar_prod_factura;
 DELIMITER $$
@@ -1368,9 +1379,9 @@ rollback;
 
 #16. La dirección puede borrar facturas de cierto mes y año
 
-select * from factura;
-select factID from factura where CAST(MONTH(factFecha) as unsigned)=4 and CAST(YEAR(factFecha) as unsigned)=2023;
-select * from factura_producto where factID in (select factID from factura where CAST(MONTH(factFecha) as unsigned)=4 and CAST(YEAR(factFecha) as unsigned)=2023);
+#select * from factura;
+#select factID from factura where CAST(MONTH(factFecha) as unsigned)=4 and CAST(YEAR(factFecha) as unsigned)=2023;
+#select * from factura_producto where factID in (select factID from factura where CAST(MONTH(factFecha) as unsigned)=4 and CAST(YEAR(factFecha) as unsigned)=2023);
 
 drop procedure if exists eliminar_factura_tiempo;
 DELIMITER $$
