@@ -203,7 +203,8 @@ DROP PROCEDURE IF EXISTS pas_view_perfilriesgo;
 DELIMITER $$
 CREATE PROCEDURE pas_view_perfilriesgo(IN usuarioID INT)
 	BEGIN
-		SELECT fecha, puntaje_fisico, puntaje_psicologico FROM vw_perfil_integral WHERE persona = usuarioID;
+		SELECT fecha, puntaje_fisico, puntaje_psicologico, disNombre AS discapacidad FROM vw_perfil_integral
+			LEFT JOIN discapacidad ON (persona = perID) WHERE persona = usuarioID;
     END $$
 DELIMITER ;
 
@@ -504,7 +505,6 @@ begin
 	select * from vw_info_proyecto where proyIdProyecto = idProy;
 end $$
 DELIMITER ;
-
 
 # 10. ---------------------------- Se quiere consultar información acerca de eventos, talleres y proyectos disponbibles por área ó programa-----------------------
 
@@ -1718,7 +1718,6 @@ create procedure sp_consultar_convocatoria_cursos_libres()
 		select * from convocatoriacursolibre;
 	end $$
 DELIMITER ;
-
 
 # Gestión y Fomento Socioeconómico
 
