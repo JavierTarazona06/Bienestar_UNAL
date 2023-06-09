@@ -678,7 +678,7 @@ CREATE INDEX fk_Corresponsabilidad_Estudiante_copy11_idx ON Bienestar.correspons
 DROP TABLE IF EXISTS Bienestar.actividadcorresp ;
 
 CREATE TABLE IF NOT EXISTS Bienestar.actividadcorresp (
-  actCorID INT UNSIGNED NOT NULL,
+  actCorID INT UNSIGNED NOT NULL auto_increment,
   estID INT UNSIGNED NOT NULL,
   actCorActividad ENUM('académica', 'deportiva', 'cultural', 'comunitaria', 'acompañamiento', 'desarrollo institucional', 'otra') NOT NULL DEFAULT 'académica',
   actCorHoras TINYINT NOT NULL,

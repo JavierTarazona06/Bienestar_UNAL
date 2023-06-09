@@ -613,6 +613,17 @@ DELIMITER ;
 set @horas =  horas_corresponsabilidad_est(10101014);
 select @horas;
 
+drop procedure if exists sp_horas_corresponsabilidad_est;
+DELIMITER $$
+CREATE PROCEDURE sp_horas_corresponsabilidad_est(in id_est int)
+	BEGIN
+		set @horas =  horas_corresponsabilidad_est(id_est);
+		select @horas;
+	END $$
+DELIMITER ;
+
+call sp_horas_corresponsabilidad_est(10101014);
+
 
 #4. El estudiante desea conocer su PBM
 
@@ -630,6 +641,17 @@ DELIMITER ;
 
 set @pbm =  pbm_est(101010110);
 select @pbm;
+
+drop procedure if exists sp_pbm_est;
+DELIMITER $$
+CREATE PROCEDURE sp_pbm_est(in id_est int)
+	BEGIN
+		set @pbm =  pbm_est(id_est);
+		select @pbm;
+	END $$
+DELIMITER ;
+
+call sp_pbm_est(101010110);
 
 # 5. El estudiante solo desea visualizar las convocatorias a las que podría acceder según su PBM:
 
@@ -1011,18 +1033,35 @@ call sp_convocatoriagestiontransporte(101010110);
 
 drop procedure if exists sp_info_factura_per;
 DELIMITER $$
-CREATE PROCEDURE sp_info_factura_per(in id_per int, in id_tienda int)
+CREATE PROCEDURE sp_info_factura_per(in id_per int, in id_tienda int, in id_factura int)
 	BEGIN
-		if id_tienda is null then
-			select factID, factFecha, factHora, factDetalle, prodID, prodPrecio, prodDetalle, clienteID, perApellido, perEmail, tieDireccion from vw_info_factura where clienteID=id_per;
+		if id_tienda is null and id_factura is null then
+			select factID, factFecha, factHora, factDetalle, prodID, prodPrecio, prodDetalle, clienteID, perApellido, perEmail, 
+				tieDireccion from vw_info_factura where clienteID=id_per;
         else
-			select factID, factFecha, factHora, factDetalle, prodID, prodPrecio, prodDetalle, clienteID, perApellido, perEmail, tieDireccion from vw_info_factura where clienteID=id_per and tieID=id_tienda;
+			if id_tienda is not null and id_factura is not null then
+				select factID, factFecha, factHora, factDetalle, prodID, prodPrecio, prodDetalle, clienteID, perApellido, 
+					perEmail, tieDireccion from vw_info_factura 
+					where clienteID=id_per and tieID=id_tienda and factID=id_factura;
+			else
+				if id_tienda is null then 
+					select factID, factFecha, factHora, factDetalle, prodID, prodPrecio, prodDetalle, clienteID, perApellido, 
+						perEmail, tieDireccion from vw_info_factura 
+						where clienteID=id_per and factID=id_factura;
+				else
+					select factID, factFecha, factHora, factDetalle, prodID, prodPrecio, prodDetalle, clienteID, perApellido, 
+						perEmail, tieDireccion from vw_info_factura 
+						where clienteID=id_per and tieID=id_tienda;
+				end if;
+			end if;
 		end if;
 	END $$
 DELIMITER ;
 
-call sp_info_factura_per(10101017, 2);
-call sp_info_factura_per(10101017, null);
+call sp_info_factura_per(10101017, 2, 16);
+call sp_info_factura_per(10101017, null, 16);
+call sp_info_factura_per(10101017, 1, null);
+call sp_info_factura_per(10101017, null, null);
 
 #7. Una persona quiere consultar los productos en una tienda de bienestar U.
 
@@ -1106,7 +1145,7 @@ call sp_insertar_est_tm_conv_est(10101019, 211 ,'2023-03-15');
 call sp_insertar_est_tm_conv_est(101010113, 1 ,'2023-07-13');
 call sp_insertar_est_tm_conv_est(101010113, 2 ,'2023-07-13');
 select * from estudiante_toma_convocatoria;
-
+#delete from estudiante_toma_convocatoria where conv_id=210 and MONTH(fecha_est_tm_conv)>6;
 
 # 10. El secretario/dirección quieren actualizar el nombre las convoctarias
 
@@ -1249,21 +1288,23 @@ select * from producto_tiendaun;
 
 drop procedure if exists insertar_factura;
 DELIMITER $$
-CREATE procedure insertar_factura(in id_factura int, in detalle varchar(100), in tieID int, in clienteID int)
+CREATE procedure insertar_factura(in detalle varchar(100), in tieID int, in clienteID int, out fact_id int)
 	BEGIN
 		declare cur_date date;
         declare cur_time time;
         start transaction;
         SELECT CURRENT_DATE() into cur_date;
         SELECT CURTIME() into cur_time;
-		insert into factura values (id_factura, cur_date, cur_time, detalle, tieID, clienteID);
+		insert into factura (factFecha,factHora,factDetalle,tieID,clienteID) values (cur_date, cur_time, detalle, tieID, clienteID);
+        select MAX(factID) into fact_id from factura;
         commit;
     END $$
 DELIMITER ;
 
 /*
-call insertar_factura(16, 'N.A', 1, 101010117);
+call insertar_factura('N.A', 1, 101010119, @fact_id);
 select * from factura;
+delete from factura where factID=@fact_id;
 */
 
 #15.1 Persona/Estudiante/Secretario/Direccion Insertar productos en factura
@@ -1284,7 +1325,7 @@ CREATE procedure sp_insertar_prod_factura(in id_factura int, in id_prod int)
         commit;
     END $$
 DELIMITER ;
-
+select * from factura;
 /*
 select * from producto_tiendaun where prodID=9;
 call sp_insertar_prod_factura(2,9);
@@ -1348,8 +1389,8 @@ CREATE procedure eliminar_factura_usuario_tiempo(in cliente_id int, in mes int, 
 		delete from factura_producto 
 			where factID in 
 				(select factID from factura 
-					where CAST(MONTH(factFecha) as unsigned)=4 
-						and CAST(YEAR(factFecha) as unsigned)=2023 
+					where CAST(MONTH(factFecha) as unsigned)=mes
+						and CAST(YEAR(factFecha) as unsigned)=ano 
                         and clienteID=cliente_id);
 		delete from factura 
 			where CAST(MONTH(factFecha) as unsigned)=mes 
@@ -1366,6 +1407,60 @@ CALL eliminar_factura_usuario_tiempo(10101013,4,2023);
 select * from factura where clienteID=10101013;
 select * from factura_producto where factID in (select factID from factura where clienteID=10101013);
 rollback;
+
+
+drop procedure if exists sp_eliminar_factura_usuario_tiempo;
+DELIMITER $$
+CREATE procedure sp_eliminar_factura_usuario_tiempo(in cliente_id int, in mes int, in ano int)
+	BEGIN
+		#start transaction;
+        if mes is null and ano is null then
+			delete from factura_producto where factID in (select factID from factura where clienteID=cliente_id);
+			delete from factura where clienteID=cliente_id;
+        else
+			if mes is not null and ano is not null then
+				delete from factura_producto 
+					where factID in (select factID from factura 
+						where CAST(MONTH(factFecha) as unsigned)=mes 
+						and CAST(YEAR(factFecha) as unsigned)=ano 
+						and clienteID=cliente_id);
+				delete from factura 
+					where CAST(MONTH(factFecha) as unsigned)=mes 
+					and CAST(YEAR(factFecha) as unsigned)=ano
+					and clienteID=cliente_id;
+            else
+				if mes is null then
+					delete from factura_producto 
+						where factID in 
+						(select factID from factura 
+							where CAST(YEAR(factFecha) as unsigned)=ano
+							and clienteID=cliente_id);
+					delete from factura 
+						where CAST(YEAR(factFecha) as unsigned)=ano
+						and clienteID=cliente_id;
+                else
+					delete from factura_producto 
+						where factID in (select factID from factura 
+							where CAST(MONTH(factFecha) as unsigned)=mes 
+							and clienteID=cliente_id);
+					delete from factura 
+						where CAST(MONTH(factFecha) as unsigned)=mes 
+						and clienteID=cliente_id;
+				end if;
+			end if;
+        end if;
+		#commit;
+    END $$
+DELIMITER ;
+
+start transaction;
+select * from factura where clienteID=10101013;
+select * from factura_producto where factID in (select factID from factura where clienteID=10101013);
+CALL sp_eliminar_factura_usuario_tiempo(10101013,4,2023);
+select * from factura where clienteID=10101013;
+select * from factura_producto where factID in (select factID from factura where clienteID=10101013);
+rollback;
+
 
 #17. Secretaría inserta fallas de alimentación con la fecha actual
 
@@ -1384,16 +1479,16 @@ select * from fallaalimentacion;
 
 # 18. Estudiante/Secretariaa/dirección insertan actividades de corresponsabilidad con la fecha actual
 
-drop procedure if exists insertar_act_corresponsabilidad;
+drop procedure if exists sp_insertar_act_corresponsabilidad;
 DELIMITER $$
-CREATE procedure insertar_act_corresponsabilidad(in id_act int,in id_est int, in act enum('académica','deportiva','cultural','comunitaria','acompañamiento','desarrollo institucional','otra'), in horas tinyint)
+CREATE procedure sp_insertar_act_corresponsabilidad(in id_est int, in act enum('académica','deportiva','cultural','comunitaria','acompañamiento','desarrollo institucional','otra'), in horas tinyint)
 	BEGIN
-		insert into actividadcorresp values (id_act, id_est, act, horas, CURRENT_DATE());
+		insert into actividadcorresp (estID,actCorActividad,actCorHoras,actCorFecha) values (id_est, act, horas, CURRENT_DATE());
     END $$
 DELIMITER ;
 
 /*
-call insertar_act_corresponsabilidad(20,101010127, 'deportiva', 3);
+call sp_insertar_act_corresponsabilidad(101010127, 'deportiva', 3);
 SELECT * from actividadcorresp;
 */
 

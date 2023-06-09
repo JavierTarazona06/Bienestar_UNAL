@@ -345,6 +345,8 @@ insert into convocatoria values
 (21,'Gestión Transporte','2023-01-15','2023-02-1',1,'2023-1',1,35),
 (22,'Gestión Transporte','2023-01-15','2023-02-1',1,'2023-1',1,35);
 insert into convocatoria values (50,'Fomento Emprendimiento Estudiantes','2023-01-15','2023-02-1',1,'2023-1',1,35);
+insert into convocatoria values (60,'Fomento Económico Estudiantes Alimentación','2023-01-15','2023-02-1',1,'2023-1',1,35);
+insert into convocatoria values (55,'Fomento Económico Estudiantes Alimentación','2023-01-15','2023-02-1',1,'2023-1',1,35);
 
 DELETE FROM convocatoriagestioneconomica;
 insert into convocatoriagestioneconomica values (1,500000);
@@ -354,6 +356,8 @@ DELETE FROM convocatoriagestionalimentaria;
 insert into convocatoriagestionalimentaria values (2,'Desayuno','Comedor central');
 insert into convocatoriagestionalimentaria values (3,'Almuerzo','Matemáticas');
 insert into convocatoriagestionalimentaria values (4,'Cena','Biología');
+insert into convocatoriagestionalimentaria values (60,'Almuerzo','Comedor central');
+insert into convocatoriagestionalimentaria values (55,'Desayuno','Matemáticas');
 
 DELETE FROM convocatoriagestionalojamiento;
 insert into convocatoriagestionalojamiento values (5,'AK 119 t No. 71-39','Usme',1213485.3333333333,'Residencia Universitaria','N.A',3640456);
@@ -488,9 +492,9 @@ insert into tiendabienestar values (1,'Bogotá','Ciudad Universitaria','08:00:00
 insert into tiendabienestar values (2,'Bogotá','Feria del libro','10:00:00','19:00:00',3,4);
 
 DELETE FROM factura;
+insert into factura values (1,'2023-05-18','13:00:00','N.A',1,101010129);
+insert into factura values (2,'2023-04-15','13:00:00','N.A',1,10101013);
 insert into factura values
-(1,'2023-05-18','13:00:00','N.A',1,101010129),
-(2,'2023-04-15','13:00:00','N.A',1,10101013),
 (3,'2023-05-11','15:00:00','N.A',2,101010111),
 (4,'2023-05-3','16:00:00','N.A',1,101010129),
 (5,'2023-03-21','18:00:00','N.A',1,10101019),

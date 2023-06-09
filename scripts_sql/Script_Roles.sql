@@ -47,7 +47,9 @@ grant select on Bienestar.vw_info_factura to 'estudiante'@'%';
 grant execute on procedure sp_fallaalimentacion_est to 'estudiante'@'%';
 grant execute on procedure sp_actividadcorresp_est to 'estudiante'@'%';
 grant execute on function horas_corresponsabilidad_est to 'estudiante'@'%';
+grant execute on procedure sp_horas_corresponsabilidad_est to 'estudiante'@'%';
 grant execute on function pbm_est to 'estudiante'@'%';
+grant execute on procedure sp_pbm_est to 'estudiante'@'%';
 
 grant execute on procedure sp_insertar_est_tm_conv_est to 'estudiante'@'%';
 grant execute on procedure programa_area_convocatoria to 'estudiante'@'%';
@@ -68,6 +70,11 @@ grant execute on procedure sp_convocatoriagestioneconomica_mayor to 'estudiante'
 grant execute on procedure sp_convocatoriagestioneconomica_menor to 'estudiante'@'%';
 grant execute on procedure sp_convocatoriagestiontransporte to 'estudiante'@'%';
 
+grant execute on procedure sp_convocatoriafomentoemprendimiento_filtro to 'estudiante'@'%';
+grant execute on procedure sp_convocatoriagestionalimentaria_filtro to 'estudiante'@'%';
+grant execute on procedure sp_convocatoriagestionalojamiento_filtro to 'estudiante'@'%';
+grant execute on procedure sp_convocatoriagestioneconomica_filtro to 'estudiante'@'%';
+grant execute on procedure sp_convocatoriagestiontransporte_filtro to 'estudiante'@'%';
 
 grant execute on procedure sp_info_factura_per to 'estudiante'@'%';
 grant execute on procedure sp_productos_tienda to 'estudiante'@'%';
@@ -75,6 +82,8 @@ grant execute on procedure sp_tiendas_ofrece_producto to 'estudiante'@'%';
 grant execute on procedure eliminar_factura_usuario_tiempo to 'estudiante'@'%';
 grant execute on procedure eliminar_factura_usuario to 'estudiante'@'%';
 grant execute on procedure sp_insertar_prod_factura to 'estudiante'@'%';
+grant execute on procedure insertar_factura to 'estudiante'@'%';
+grant execute on procedure sp_eliminar_factura_usuario_tiempo to 'estudiante'@'%';
 #---------------
 
 grant update on Bienestar.persona to 'no_estudiante'@'%';
@@ -101,6 +110,7 @@ grant execute on procedure sp_tiendas_ofrece_producto to 'no_estudiante'@'%';
 grant execute on procedure eliminar_factura_usuario_tiempo to 'no_estudiante'@'%';
 grant execute on procedure eliminar_factura_usuario to 'no_estudiante'@'%';
 grant execute on procedure sp_insertar_prod_factura to 'no_estudiante'@'%';
+grant execute on procedure sp_eliminar_factura_usuario_tiempo to 'no_estudiante'@'%';
 
 #---------------
 
@@ -160,12 +170,13 @@ grant execute on procedure eliminar_factura_usuario to 'secretaria'@'%';
 grant execute on procedure sp_insertar_prod_factura to 'secretaria'@'%';
 
 GRANT EXECUTE ON PROCEDURE insertar_falla_alimentacion_sec TO 'secretaria'@'%';
-GRANT EXECUTE ON PROCEDURE insertar_act_corresponsabilidad TO 'secretaria'@'%';
+GRANT EXECUTE ON PROCEDURE sp_insertar_act_corresponsabilidad TO 'secretaria'@'%';
 GRANT EXECUTE ON PROCEDURE insertar_conv_alimento TO 'secretaria'@'%';
 GRANT EXECUTE ON PROCEDURE insertar_conv_emprendimiento TO 'secretaria'@'%';
 GRANT EXECUTE ON PROCEDURE insertar_conv_alojamiento TO 'secretaria'@'%';
 GRANT EXECUTE ON PROCEDURE insertar_conv_economica TO 'secretaria'@'%';
 GRANT EXECUTE ON PROCEDURE insertar_conv_transporte TO 'secretaria'@'%';
+grant execute on procedure sp_eliminar_factura_usuario_tiempo to 'secretaria'@'%';
 
 #-----------------
 
@@ -219,7 +230,7 @@ GRANT EXECUTE ON PROCEDURE eliminar_factura_usuario TO 'direccion_economica'@'%'
 GRANT EXECUTE ON PROCEDURE sp_insertar_prod_factura TO 'direccion_economica'@'%';
 
 
-GRANT EXECUTE ON PROCEDURE insertar_act_corresponsabilidad TO 'direccion_economica'@'%';
+GRANT EXECUTE ON PROCEDURE sp_insertar_act_corresponsabilidad TO 'direccion_economica'@'%';
 GRANT EXECUTE ON PROCEDURE insertar_conv_alimento TO 'direccion_economica'@'%';
 GRANT EXECUTE ON PROCEDURE eliminar_conv_alimento TO 'direccion_economica'@'%';
 GRANT EXECUTE ON PROCEDURE insertar_conv_emprendimiento TO 'direccion_economica'@'%';
@@ -230,6 +241,7 @@ GRANT EXECUTE ON PROCEDURE insertar_conv_economica TO 'direccion_economica'@'%';
 GRANT EXECUTE ON PROCEDURE eliminar_conv_economica TO 'direccion_economica'@'%';
 GRANT EXECUTE ON PROCEDURE insertar_conv_transporte TO 'direccion_economica'@'%';
 GRANT EXECUTE ON PROCEDURE eliminar_conv_transporte TO 'direccion_economica'@'%';
+grant execute on procedure sp_eliminar_factura_usuario_tiempo to 'direccion_economica'@'%';
 
 #-------------------------------------------------------------------------------------------------------
 #													Valeria
