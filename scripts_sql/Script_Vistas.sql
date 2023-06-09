@@ -95,7 +95,7 @@ CREATE VIEW vw_citamedica_agendada AS
 DROP VIEW IF EXISTS vw_resultado_citamedica;
 CREATE VIEW vw_resultado_citamedica AS
 	SELECT citFecha AS fecha, citEspecialidad AS especialidad, 
-	citDiagnostico AS Diagnostico, evaPeso AS peso, evaEstatura AS estatura, evaRitmoCardiaco AS ritmo_cardiaco, evaVision AS vision,
+	citDiagnostico AS diagnostico, evaPeso AS peso, evaEstatura AS estatura, evaRitmoCardiaco AS ritmo_cardiaco, evaVision AS vision,
     medNombre AS medicamento, medCantidad AS cantidad, medIntervalos AS intervalos, ordExamen AS examen, pacienteID AS paciente
 	FROM citamedica JOIN evaluacionfisica USING (citID) 
     LEFT JOIN medicamentos USING (citID) 
