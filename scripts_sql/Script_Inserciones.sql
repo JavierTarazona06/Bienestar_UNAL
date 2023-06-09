@@ -447,27 +447,27 @@ insert into fallaalimentacion (estID,fallAlcgaComida,fallAlLugar,fallAlFecha) va
 (101010123,'Almuerzo','Ciencias Humanas','2023-06-17');
 
 DELETE FROM actividadcorresp;
-insert into actividadcorresp values 
-(0,101010118,'comunitaria',3,'2023-02-01'),
-(1,101010127,'cultural',8,'2023-03-01'),
-(2,10101019,'acompañamiento',6,'2023-04-01'),
-(3,101010124,'académica',6,'2023-05-01'),
-(4,101010123,'académica',5,'2023-06-01'),
-(5,101010123,'cultural',3,'2023-07-01'),
-(6,10101015,'académica',2,'2023-08-01'),
-(7,10101017,'acompañamiento',5,'2023-09-01'),
-(8,101010126,'otra',7,'2023-10-01'),
-(9,10101015,'otra',3,'2023-11-01'),
-(10,10101015,'comunitaria',2,'2023-02-01'),
-(11,101010130,'desarrollo institucional',8,'2023-03-01'),
-(12,101010117,'otra',3,'2023-04-01'),
-(13,10101012,'desarrollo institucional',3,'2023-05-01'),
-(14,101010130,'académica',6,'2023-06-01'),
-(15,101010113,'comunitaria',3,'2023-07-01'),
-(16,101010126,'deportiva',2,'2023-08-01'),
-(17,101010125,'comunitaria',4,'2023-09-01'),
-(18,10101011,'acompañamiento',3,'2023-10-01'),
-(19,101010124,'acompañamiento',7,'2023-11-01');
+insert into actividadcorresp (estID,actCorActividad,actCorHoras,actCorFecha) values 
+(101010118,'comunitaria',3,'2023-02-01'),
+(101010127,'cultural',8,'2023-03-01'),
+(10101019,'acompañamiento',6,'2023-04-01'),
+(101010124,'académica',6,'2023-05-01'),
+(101010123,'académica',5,'2023-06-01'),
+(101010123,'cultural',3,'2023-07-01'),
+(10101015,'académica',2,'2023-08-01'),
+(10101017,'acompañamiento',5,'2023-09-01'),
+(101010126,'otra',7,'2023-10-01'),
+(10101015,'otra',3,'2023-11-01'),
+(10101015,'comunitaria',2,'2023-02-01'),
+(101010130,'desarrollo institucional',8,'2023-03-01'),
+(101010117,'otra',3,'2023-04-01'),
+(10101012,'desarrollo institucional',3,'2023-05-01'),
+(101010130,'académica',6,'2023-06-01'),
+(101010113,'comunitaria',3,'2023-07-01'),
+(101010126,'deportiva',2,'2023-08-01'),
+(101010125,'comunitaria',4,'2023-09-01'),
+(10101011,'acompañamiento',3,'2023-10-01'),
+(101010124,'acompañamiento',7,'2023-11-01');
 
 delete from corresponsabilidad;
 INSERT INTO corresponsabilidad VALUES
