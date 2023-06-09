@@ -1704,7 +1704,7 @@ drop procedure if exists sp_consultar_torneos_internos;
 DELIMITER $$
 create procedure sp_consultar_torneos_internos()
 	begin 
-		select * from torneointerno;
+		select toridTorneoInterno, torDeporte, torNombreTorneo, torRama from torneointerno;
 	end $$
 DELIMITER ;
 

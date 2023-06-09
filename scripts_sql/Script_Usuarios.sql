@@ -3,6 +3,9 @@ use bienestar;
 drop user if exists 'juanEstudiante'@'%';
 create user 'juanEstudiante'@'%' 	
 	identified by 'root@1234' default role 'estudiante'@'%';
+    
+GRANT 'estudiante' to 'juanEstudiante'@'%';
+SET DEFAULT ROLE 'estudiante' to 'juanEstudiante'@'%';
 
 drop user if exists 'mariaPersona'@'%';
 create user 'mariaPersona'@'%' 

@@ -52,13 +52,15 @@ create trigger tr_insertar_act_corresp after insert on actividadcorresp
     end $$
 DELIMITER ;
 
+/*
 start transaction;
 select * from actividadcorresp where estID=101010127;
 select * from corresponsabilidad where idEst=101010127;
-insert into actividadcorresp values (20, 101010127, 'deportiva', 6, '2023-03-15');
+insert into actividadcorresp values (101010127, 'deportiva', 6, '2023-03-15');
 select * from actividadcorresp where estID=101010127;
 select * from corresponsabilidad where idEst=101010127;
 rollback;
+*/
 
 
 #2. Cuando se inserte una factura, se reduce la dispobnibilidad
@@ -75,6 +77,7 @@ create trigger tr_insertar_prod_fact after insert on factura_producto
     end $$
 DELIMITER ;
 
+/*
 start transaction;
 select * from factura_producto where factID=5;
 select * from producto_tiendaun where prodID=9;
@@ -82,6 +85,7 @@ insert into factura_producto values (9,5);
 select * from factura_producto where factID=5;
 select * from producto_tiendaun where prodID=9;
 rollback;
+*/
 
 # Al eliminar una factura, también se elimina las relaciones con prodID y factID
 
@@ -125,6 +129,7 @@ create trigger tr_delete_conv_alimento after delete on convocatoriagestionalimen
     end $$
 DELIMITER ;
 
+/*
 start transaction;
 insert into convocatoriagestionalimentaria values (23, 'Desayuno', 'Hemeroteca');
 select * from convocatoria;
@@ -133,6 +138,7 @@ delete from convocatoriagestionalimentaria where conv_id=23;
 select * from convocatoria;
 select * from convocatoriagestionalimentaria;
 rollback;
+*/
 
 #---------------------
 
@@ -155,6 +161,7 @@ create trigger tr_delete_conv_emprendimiento after delete on convocatoriafomento
     end $$
 DELIMITER ;
 
+/*
 start transaction;
 insert into convocatoriafomentoemprendimiento values (23, 200000, 'El Nuevo', 'Tema Nuevo', 'Es un nuevo emp.');
 select * from convocatoria;
@@ -163,6 +170,7 @@ delete from convocatoriafomentoemprendimiento where conv_id=23;
 select * from convocatoria;
 select * from convocatoriafomentoemprendimiento;
 rollback;
+*/
 
 #---------------------
 
@@ -191,6 +199,7 @@ create trigger tr_delete_conv_alojamiento after delete on convocatoriagestionalo
     end $$
 DELIMITER ;
 
+/*
 start transaction;
 insert into convocatoriagestionalojamiento values (23, 'Cra 45 No 21-42', 'Teusaquillo', 500000, 'Habitación', 'Buena habitación', 600000);
 #insert into convocatoriagestionalojamiento values (23, 'Cra 45 No 21-42', 'Teusaquillo', 800000, 'Habitación', 'Buena habitación', 600000);
@@ -200,6 +209,7 @@ delete from convocatoriagestionalojamiento where conv_id=23;
 select * from convocatoria;
 select * from convocatoriagestionalojamiento;
 rollback;
+*/
 
 #---------------------
 
@@ -221,6 +231,7 @@ create trigger tr_delete_conv_economica after delete on convocatoriagestionecono
     end $$
 DELIMITER ;
 
+/*
 start transaction;
 insert into convocatoriagestioneconomica values (23, 400000);
 select * from convocatoria;
@@ -229,6 +240,7 @@ delete from convocatoriagestioneconomica where conv_id=23;
 select * from convocatoria;
 select * from convocatoriagestioneconomica;
 rollback;
+*/
 
 #---------------------
 
@@ -251,6 +263,7 @@ create trigger tr_delete_conv_transporte after delete on convocatoriagestiontran
     end $$
 DELIMITER ;
 
+/*
 start transaction;
 insert into convocatoriagestiontransporte values (23, 400000, 'Transporte público masivo');
 select * from convocatoria;
@@ -259,6 +272,7 @@ delete from convocatoriagestiontransporte where conv_id=23;
 select * from convocatoria;
 select * from convocatoriagestiontransporte;
 rollback;
+*/
 
 #---------------------
 
