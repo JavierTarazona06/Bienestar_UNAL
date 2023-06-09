@@ -1326,12 +1326,44 @@ CREATE procedure sp_insertar_prod_factura(in id_factura int, in id_prod int)
         commit;
     END $$
 DELIMITER ;
-select * from factura;
+
 /*
+select * from factura;
 select * from producto_tiendaun where prodID=9;
 call sp_insertar_prod_factura(2,9);
 select * from producto_tiendaun  where prodID=9;
 select * from factura_producto where factID=2;
+*/
+
+drop procedure if exists sp_insertar_prod_factura_per;
+DELIMITER $$
+CREATE procedure sp_insertar_prod_factura_per(in id_user int, in id_factura int, in id_prod int)
+	BEGIN
+		declare tienda int;
+        declare cliente_id int;
+        start transaction;
+		select tieID into tienda from factura where factID=id_factura;
+        select clienteID into cliente_id from factura where factID=id_factura;
+        insert into factura_producto values (id_prod,id_factura);
+        update producto_tiendaun set prodDisponibilidad=prodDisponibilidad-1 
+			where tieID=tienda and prodID=id_prod;
+		if not cliente_id=id_user then
+			rollback;
+            SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'El usuario no es dueño de la factura';
+        else
+			commit;
+        end if;
+    END $$
+DELIMITER ;
+
+/*
+start transaction;
+select * from factura;
+select * from producto_tiendaun where prodID=9;
+call sp_insertar_prod_factura_per(10101013,2,9);
+select * from producto_tiendaun  where prodID=9;
+select * from factura_producto where factID=2;
+rollback;
 */
 
 #16. La dirección puede borrar facturas de cierto mes y año
@@ -1344,10 +1376,10 @@ drop procedure if exists eliminar_factura_tiempo;
 DELIMITER $$
 CREATE procedure eliminar_factura_tiempo(in mes int, in ano int)
 	BEGIN
-		start transaction;
+		#start transaction;
 		delete from factura_producto where factID in (select factID from factura where CAST(MONTH(factFecha) as unsigned)=4 and CAST(YEAR(factFecha) as unsigned)=2023);
 		delete from factura where CAST(MONTH(factFecha) as unsigned)=mes and CAST(YEAR(factFecha) as unsigned)=ano;
-        commit;
+        #commit;
     END $$
 DELIMITER ;
 
@@ -1367,13 +1399,12 @@ drop procedure if exists eliminar_factura_usuario;
 DELIMITER $$
 CREATE procedure eliminar_factura_usuario(in cliente_id int)
 	BEGIN
-		start transaction;
 		delete from factura_producto where factID in (select factID from factura where clienteID=cliente_id);
 		delete from factura where clienteID=cliente_id;
-        commit;
     END $$
 DELIMITER ;
 
+/*
 start transaction;
 select * from factura where clienteID=10101013;
 select * from factura_producto where factID in (select factID from factura where clienteID=10101013);
@@ -1381,12 +1412,12 @@ CALL eliminar_factura_usuario(10101013);
 select * from factura where clienteID=10101013;
 select * from factura_producto where factID in (select factID from factura where clienteID=10101013);
 rollback;
+*/
 
 drop procedure if exists eliminar_factura_usuario_tiempo;
 DELIMITER $$
 CREATE procedure eliminar_factura_usuario_tiempo(in cliente_id int, in mes int, in ano int)
 	BEGIN
-		start transaction;
 		delete from factura_producto 
 			where factID in 
 				(select factID from factura 
@@ -1397,10 +1428,10 @@ CREATE procedure eliminar_factura_usuario_tiempo(in cliente_id int, in mes int, 
 			where CAST(MONTH(factFecha) as unsigned)=mes 
             and CAST(YEAR(factFecha) as unsigned)=ano
             and clienteID=cliente_id;
-		commit;
     END $$
 DELIMITER ;
 
+/*
 start transaction;
 select * from factura where clienteID=10101013;
 select * from factura_producto where factID in (select factID from factura where clienteID=10101013);
@@ -1408,7 +1439,7 @@ CALL eliminar_factura_usuario_tiempo(10101013,4,2023);
 select * from factura where clienteID=10101013;
 select * from factura_producto where factID in (select factID from factura where clienteID=10101013);
 rollback;
-
+*/
 
 drop procedure if exists sp_eliminar_factura_usuario_tiempo;
 DELIMITER $$
@@ -1454,6 +1485,7 @@ CREATE procedure sp_eliminar_factura_usuario_tiempo(in cliente_id int, in mes in
     END $$
 DELIMITER ;
 
+/*
 start transaction;
 select * from factura where clienteID=10101013;
 select * from factura_producto where factID in (select factID from factura where clienteID=10101013);
@@ -1461,7 +1493,7 @@ CALL sp_eliminar_factura_usuario_tiempo(10101013,4,2023);
 select * from factura where clienteID=10101013;
 select * from factura_producto where factID in (select factID from factura where clienteID=10101013);
 rollback;
-
+*/
 
 #17. Secretaría inserta fallas de alimentación con la fecha actual
 

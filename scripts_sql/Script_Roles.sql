@@ -82,9 +82,9 @@ grant execute on procedure sp_productos_tienda to 'estudiante'@'%';
 grant execute on procedure sp_tiendas_ofrece_producto to 'estudiante'@'%';
 grant execute on procedure eliminar_factura_usuario_tiempo to 'estudiante'@'%';
 grant execute on procedure eliminar_factura_usuario to 'estudiante'@'%';
-grant execute on procedure sp_insertar_prod_factura to 'estudiante'@'%';
 grant execute on procedure insertar_factura to 'estudiante'@'%';
 grant execute on procedure sp_eliminar_factura_usuario_tiempo to 'estudiante'@'%';
+grant execute on procedure sp_insertar_prod_factura_per to 'estudiante'@'%';
 #---------------
 
 grant update on Bienestar.persona to 'no_estudiante'@'%';
@@ -110,8 +110,8 @@ grant execute on procedure sp_productos_tienda to 'no_estudiante'@'%';
 grant execute on procedure sp_tiendas_ofrece_producto to 'no_estudiante'@'%';
 grant execute on procedure eliminar_factura_usuario_tiempo to 'no_estudiante'@'%';
 grant execute on procedure eliminar_factura_usuario to 'no_estudiante'@'%';
-grant execute on procedure sp_insertar_prod_factura to 'no_estudiante'@'%';
 grant execute on procedure sp_eliminar_factura_usuario_tiempo to 'no_estudiante'@'%';
+grant execute on procedure sp_insertar_prod_factura_per to 'no_estudiante'@'%';
 
 #---------------
 

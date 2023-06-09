@@ -1043,7 +1043,6 @@ DROP TABLE IF EXISTS Bienestar.factura_producto ;
 CREATE TABLE IF NOT EXISTS Bienestar.factura_producto (
   prodID INT UNSIGNED NOT NULL,
   factID INT UNSIGNED NOT NULL,
-  PRIMARY KEY (prodID, factID),
   CONSTRAINT fk_Producto_copy1_has_Factura_copy1_Producto_copy11
     FOREIGN KEY (prodID)
     REFERENCES Bienestar.producto (prodID)
