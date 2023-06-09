@@ -581,7 +581,7 @@ CREATE PROCEDURE sp_fallaalimentacion_est(in id int)
 	END $$
 DELIMITER ;
 
-call sp_fallaalimentacion_est(10101019);
+#call sp_fallaalimentacion_est(10101019);
 
 # 2. El estudiante puede consultar sus actividades de corresponsabilidad realizadas
 
@@ -594,7 +594,7 @@ CREATE PROCEDURE sp_actividadcorresp_est(in id int)
 	END $$
 DELIMITER ;
 
-call sp_actividadcorresp_est(101010118);
+#call sp_actividadcorresp_est(101010118);
 
 # 3. El estudiante puede consultar la cantidad de horas pendientes de corresponsabilidad
 
@@ -610,8 +610,8 @@ CREATE FUNCTION horas_corresponsabilidad_est(id_est int)
 	END $$
 DELIMITER ;
 
-set @horas =  horas_corresponsabilidad_est(10101014);
-select @horas;
+#set @horas =  horas_corresponsabilidad_est(10101014);
+#select @horas;
 
 drop procedure if exists sp_horas_corresponsabilidad_est;
 DELIMITER $$
@@ -622,7 +622,7 @@ CREATE PROCEDURE sp_horas_corresponsabilidad_est(in id_est int)
 	END $$
 DELIMITER ;
 
-call sp_horas_corresponsabilidad_est(10101014);
+#call sp_horas_corresponsabilidad_est(10101014);
 
 
 #4. El estudiante desea conocer su PBM
@@ -639,8 +639,8 @@ CREATE FUNCTION pbm_est(id_est int)
 	END $$
 DELIMITER ;
 
-set @pbm =  pbm_est(101010110);
-select @pbm;
+#set @pbm =  pbm_est(101010110);
+#select @pbm;
 
 drop procedure if exists sp_pbm_est;
 DELIMITER $$
@@ -651,7 +651,7 @@ CREATE PROCEDURE sp_pbm_est(in id_est int)
 	END $$
 DELIMITER ;
 
-call sp_pbm_est(101010110);
+#call sp_pbm_est(101010110);
 
 # 5. El estudiante solo desea visualizar las convocatorias a las que podría acceder según su PBM:
 
@@ -681,12 +681,12 @@ CREATE PROCEDURE sp_convocatoriafomentoemprendimiento_filtro(in nombre varchar(5
         end if;
 	END $$
 DELIMITER ;
-
+/*
 call sp_convocatoriafomentoemprendimiento_filtro('Empresa2','tema2');
 call sp_convocatoriafomentoemprendimiento_filtro(null,'tema2');
 call sp_convocatoriafomentoemprendimiento_filtro('Empresa2',null);
 call sp_convocatoriafomentoemprendimiento_filtro(null,null);
-
+*/
 
 drop procedure if exists sp_convocatoriafomentoemprendimiento;
 DELIMITER $$
@@ -696,7 +696,7 @@ CREATE PROCEDURE sp_convocatoriafomentoemprendimiento(in id_est int)
 	END $$
 DELIMITER ;
 
-call sp_convocatoriafomentoemprendimiento(10101015);
+#call sp_convocatoriafomentoemprendimiento(10101015);
 
 drop procedure if exists sp_convocatoriafomentoemprendimiento_est;
 DELIMITER $$
@@ -718,7 +718,7 @@ CREATE PROCEDURE sp_convocatoriafomentoemprendimiento_nombre(in id_est int, in n
 	END $$
 DELIMITER ;
 
-call sp_convocatoriafomentoemprendimiento_nombre(10101015,'Empresa2');
+#call sp_convocatoriafomentoemprendimiento_nombre(10101015,'Empresa2');
 
 #5.2 La convocatoria de gestión alimentaria solo se puede acceder con PBM < 25
 
@@ -734,7 +734,7 @@ CREATE PROCEDURE sp_convocatoriagestionalimentaria(in id_est int)
 	END $$
 DELIMITER ;
 
-call sp_convocatoriagestionalimentaria(101010110);
+#call sp_convocatoriagestionalimentaria(101010110);
 
 
 drop procedure if exists sp_convocatoriagestionalimentaria_com;
@@ -749,7 +749,7 @@ CREATE PROCEDURE sp_convocatoriagestionalimentaria_com(in id_est int, in comida 
 	END $$
 DELIMITER ;
 
-call sp_convocatoriagestionalimentaria_com(101010110,'Desayuno');
+#call sp_convocatoriagestionalimentaria_com(101010110,'Desayuno');
 
 drop procedure if exists sp_convocatoriagestionalimentaria_est;
 DELIMITER $$
@@ -1138,7 +1138,7 @@ CREATE PROCEDURE sp_insertar_est_tm_conv_est(in id_est int, in id_conv int, in f
 	END $$
 DELIMITER ;
 
-
+/*
 call sp_insertar_est_tm_conv_est(10101019, 210 ,'2023-03-15');
 call sp_insertar_est_tm_conv_est(10101019, 211 ,'2023-03-15');
 
@@ -1146,6 +1146,7 @@ call sp_insertar_est_tm_conv_est(101010113, 1 ,'2023-07-13');
 call sp_insertar_est_tm_conv_est(101010113, 2 ,'2023-07-13');
 select * from estudiante_toma_convocatoria;
 #delete from estudiante_toma_convocatoria where conv_id=210 and MONTH(fecha_est_tm_conv)>6;
+*/
 
 # 10. El secretario/dirección quieren actualizar el nombre las convoctarias
 
