@@ -4,10 +4,12 @@
 
 #Vista de información completa de estudiantes:
 
+/*
 select estID,perNombre,perApellido,perEmail,estPBM,perFacultad,carreNombre,carreCreditos 
 	from estudiante
     join persona on (estID=perID) 
     join carrera using (carreID);
+*/
 
 drop view if exists vw_info_estudiante;
 create view vw_info_estudiante as 
@@ -18,16 +20,20 @@ create view vw_info_estudiante as
     join carrera using (carreID)
     left join corresponsabilidad on (estID=idEst);
 
+/*
 select estID,perNombre,perApellido,perEmail,estPBM,perFacultad,carreNombre,carreCreditos from vw_info_estudiante;
 select * from vw_info_estudiante;
+*/
 
 #Vista de estudiantes con sus convocatorias:
 
+/*
 select estID,perNombre,perApellido,perEmail,estPBM,perFacultad,carreNombre,carreCreditos,conv_id,convNombre 
 	from estudiante join persona on (estID=perID) 
     join carrera using (carreID) 
     left join estudiante_toma_convocatoria on (estID=idEst) 
     left join convocatoria using (conv_id);
+*/
 
 drop view if exists vw_info_convocatoria_estudiante;
 create view vw_info_convocatoria_estudiante as select * 
@@ -37,8 +43,10 @@ create view vw_info_convocatoria_estudiante as select *
     left join estudiante_toma_convocatoria on (estID=idEst) 
     left join convocatoria using (conv_id);
 
-select estID,perNombre,perApellido,perEmail,estPBM,perFacultad,carreNombre,carreCreditos,conv_id,convNombre from vw_info_convocatoria_estudiante;
-
+/*
+select estID,perNombre,perApellido,perEmail,estPBM,perFacultad,carreNombre,
+	carreCreditos,conv_id,convNombre from vw_info_convocatoria_estudiante;
+*/
 
 #Vista de facturas con sus productos y tienda:
 
