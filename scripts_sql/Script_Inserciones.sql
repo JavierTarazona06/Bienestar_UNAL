@@ -300,7 +300,7 @@ Polideportivo Primer Piso / antiguas oficinas División de archivo",
 "El Área de Cultura promueve en la comunidad universitaria el desarrollo de aptitudes estéticas y artísticas en su formación, expresión y divulgación, atendiendo la diversidad cultural de la misma.
 Estimulamos la formación y la proyección artística de la comunidad universitaria, en diversas expresiones modernas, contemporáneas, urbanas y representativas del folclor nacional, cultivando el respeto por el patrimonio
  cultural material e inmaterial, el reconocimiento de la diversidad y la creación e investigación de nuevas prácticas del saber."),
- (3,"Actividad física y Deporte",3165000, "divrecd_bog@unal.edu.co", 17207, "Edificio No. 103 Polideportivo",
+ (17,"Actividad física y Deporte",3165000, "divrecd_bog@unal.edu.co", 17207, "Edificio No. 103 Polideportivo",
  "El Área de Actividad Física y Deporte estimula la práctica de actividades de tipo recreativo, formativo y competitivo, en el marco del sano esparcimiento, la promoción de la salud, la utilización racional y formativa del tiempo libre y la implementación del deporte universitario.
 Fomentamos la actividad física, el acondicionamiento físico dirigido y el rendimiento deportivo mediante la articulación de las actividades deportivas con la vida académica para apoyar la formación integral y afirmar el sentido de pertenencia hacia la Universidad."),
 (4, "Acompañamiento integral", 3165000, "aaintegral@unal.edu.co", 17171, "Ciudad Universitaria - Edificio 103 - Polideportivo Segundo piso",
@@ -1447,9 +1447,9 @@ en madera con cámara de aire y/o linóleo","Expresión Talentos","Trabajo de in
  
 -- CARLOS:
 -- Insercion area de deportes:
-INSERT INTO Bienestar.area 
+/*INSERT INTO Bienestar.area 
 	(areID, areNombre, areTelefono, areCorreoElectronico, areExtension, areEdificio, areDescripcion) values
-	(17, "Actividad Fisica & Deporte",  3165000, "divrecd_bog@unal.edu.co", 17207,"No. 103 Polideportivo","Area encargada de la actividad deportiva en la UNAL.");
+	(17, "Actividad Fisica & Deporte",  3165000, "divrecd_bog@unal.edu.co", 17207,"No. 103 Polideportivo","Area encargada de la actividad deportiva en la UNAL.");*/
 
 
 INSERT INTO Bienestar.programa (progID, progNombre, Area_areID) values (1701, "Actividad ludico deportiva", 17);
