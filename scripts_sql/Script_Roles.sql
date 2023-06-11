@@ -310,6 +310,10 @@ grant execute on procedure pas_consultar_info_eventoTaller to 'estudiante'@'%';
 grant execute on procedure pas_consultar_info_proyecto to 'estudiante'@'%';
 grant execute on procedure pas_estudiante_accede_conv to 'estudiante'@'%';
 
+grant execute on procedure sp_consultar_torneos_internos to 'estudiante'@'%';
+grant execute on procedure sp_consultar_convocatoria_cursos_libres to 'estudiante'@'%';
+grant execute on procedure sp_consultar_convocatorias_programa to 'estudiante'@'%';
+
 
 #------------------------------------------Permisos para no estudiantes-------------------------------------------------------------
 
