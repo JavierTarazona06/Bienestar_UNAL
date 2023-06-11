@@ -83,7 +83,7 @@ salud para que sean verificadas por el ara de salud.
 	pas_consultar_eventoTaller_programa (in idPrograma int) usar id's programas de deportes
 
 # 7. Se requiere consultar las convocatorias que hay por programa de deporte.
-	sp_consultar_convocatorias_deporte(in idPrograma int) usar id's programas de deportes
+	sp_consultar_convocatorias_programa(in idPrograma int) usar id's programas de deportes
 
 #----------------------------------------------------------------------------------------------------------------------
 #                                			Gestion y Fomento Socioeconomico
