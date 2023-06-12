@@ -1,9 +1,5 @@
-use bienestar;
-
-drop user if exists 'juanEstudiante'@'%';
-create user 'juanEstudiante'@'%' 	
-	identified by 'root@1234' default role 'estudiante'@'%';
-    
+DROP USER IF EXISTS 'juanEstudiante'@'%';
+CREATE USER 'juanEstudiante'@'%' IDENTIFIED BY '1234';
 GRANT 'estudiante' to 'juanEstudiante'@'%';
 SET DEFAULT ROLE 'estudiante' to 'juanEstudiante'@'%';
 
