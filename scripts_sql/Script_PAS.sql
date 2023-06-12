@@ -39,7 +39,7 @@ CREATE PROCEDURE pas_delete_cita_medica(IN usuarioID INT, IN fechaCita DATETIME,
 		START TRANSACTION;
 			SELECT citFecha INTO fecha FROM citamedica
 				WHERE pacienteID = usuarioID AND fechaCita = citFecha AND especialidadCita = citEspecialidad;
-			IF DATEDIFF(fecha, CURRENT_DATE()) < 1 THEN
+			IF DATEDIFF(NOW(), fecha) < 24 THEN
 				SET msg = CONCAT('La cita es dentro de las proximas 24 horas, no se puede cancelar');
 				ROLLBACK;
 				SIGNAL sqlstate '15000' SET message_text = msg;
@@ -127,8 +127,7 @@ CREATE PROCEDURE pas_edit_incapacidad(
 		DECLARE verificated BOOL;
         DECLARE msg VARCHAR(200);
 		START TRANSACTION;
-			SELECT incVerificado INTO verificated FROM incapacidad 
-				WHERE incID = incapacidadID;
+			SELECT incVerificado INTO verificated FROM incapacidad WHERE incID = incapacidadID;
 			IF verificated THEN
 				SET msg = CONCAT('La incapacidad ya ha sido verificada, no se puede modificar');
                 ROLLBACK;
@@ -141,7 +140,27 @@ CREATE PROCEDURE pas_edit_incapacidad(
     END $$
 DELIMITER ;
 
-# 9. -------------------------------------- Ver el estado de las atenciones en salud de un usuario -----------------------------------------
+# 9. --------------------------------------------- Eliminar una incapacidad de un usuario --------------------------------------------------
+DROP PROCEDURE IF EXISTS pas_remove_incapacidad;
+DELIMITER $$
+CREATE PROCEDURE pas_remove_incapacidad(IN incapacidadID INT)
+	BEGIN
+		DECLARE verificated BOOL;
+        DECLARE msg VARCHAR(200);
+		START TRANSACTION;
+			SELECT incVerificado INTO verificated FROM incapacidad WHERE incID = incapacidadID;
+			IF verificated THEN
+				SET msg = CONCAT('La incapacidad ya ha sido verificada, no se puede eliminar');
+                ROLLBACK;
+				SIGNAL sqlstate '15000' SET message_text = msg;
+			ELSE
+				DELETE FROM incapacidad WHERE incID = incapacidadID;
+				COMMIT;
+			END IF;
+    END $$
+DELIMITER ;
+
+# 10. -------------------------------------- Ver el estado de las atenciones en salud de un usuario -----------------------------------------
 DROP PROCEDURE IF EXISTS pas_view_atencionsalud;
 DELIMITER $$
 CREATE PROCEDURE pas_view_atencionsalud(IN usuarioID INT)
@@ -150,7 +169,7 @@ CREATE PROCEDURE pas_view_atencionsalud(IN usuarioID INT)
     END $$
 DELIMITER ;
 
-# 10. --------------------------------------------- Añadir una atencion en salud de un usuario ---------------------------------------------
+# 11. --------------------------------------------- Añadir una atencion en salud de un usuario ---------------------------------------------
 # Verificar que la atencion no existe antes de agregarla
 DROP PROCEDURE IF EXISTS pas_add_atencionsalud;
 DELIMITER $$
@@ -175,7 +194,7 @@ CREATE PROCEDURE pas_add_atencionsalud(
     END $$
 DELIMITER ;
 
-# 11. --------------------------------------------- Modificar una atencion en salud de un usuario ------------------------------------------
+# 12. --------------------------------------------- Modificar una atencion en salud de un usuario ------------------------------------------
 DROP PROCEDURE IF EXISTS pas_edit_atencionsalud;
 DELIMITER $$
 CREATE PROCEDURE pas_edit_atencionsalud(
@@ -184,8 +203,7 @@ CREATE PROCEDURE pas_edit_atencionsalud(
 		DECLARE verificated BOOL;
         DECLARE msg VARCHAR(200);
         START TRANSACTION;
-			SELECT ateVerificado INTO verificated FROM atencionensalud
-				WHERE antID = atencionsaludID;
+			SELECT ateVerificado INTO verificated FROM atencionensalud WHERE antID = atencionsaludID;
 			IF verificated THEN
 				SET msg = CONCAT('La atencion en salud ya ha sido verificada, no se puede modificar');
                 ROLLBACK;
@@ -198,7 +216,27 @@ CREATE PROCEDURE pas_edit_atencionsalud(
     END $$
 DELIMITER ;
 
-# 12. --------------------------------------------- Ver perfil de riesgo integral de un usuario --------------------------------------------
+# 13. --------------------------------------------- Eliminar una atencion en salud de un usuario ------------------------------------------
+DROP PROCEDURE IF EXISTS pas_remove_atencionsalud;
+DELIMITER $$
+CREATE PROCEDURE pas_remove_atencionsalud(IN atencionsaludID INT)
+	BEGIN
+		DECLARE verificated BOOL;
+        DECLARE msg VARCHAR(200);
+        START TRANSACTION;
+			SELECT ateVerificado INTO verificated FROM atencionensalud WHERE antID = atencionsaludID;
+			IF verificated THEN
+				SET msg = CONCAT('La atencion en salud ya ha sido verificada, no se puede eliminar');
+                ROLLBACK;
+				SIGNAL sqlstate '15000' SET message_text = msg;	
+			ELSE
+				DELETE FROM atencionensalud WHERE antID = atencionsaludID;
+                COMMIT;
+			END IF;
+    END $$
+DELIMITER ;
+
+# 14. --------------------------------------------- Ver perfil de riesgo integral de un usuario --------------------------------------------
 DROP PROCEDURE IF EXISTS pas_view_perfilriesgo;
 DELIMITER $$
 CREATE PROCEDURE pas_view_perfilriesgo(IN usuarioID INT)
@@ -208,7 +246,7 @@ CREATE PROCEDURE pas_view_perfilriesgo(IN usuarioID INT)
     END $$
 DELIMITER ;
 
-# 13. ----------------------------------------------------- Crear una cita medica -----------------------------------------------------------
+# 15. ----------------------------------------------------- Crear una cita medica -----------------------------------------------------------
 DROP PROCEDURE IF EXISTS pas_create_citamedica;
 DELIMITER $$
 CREATE PROCEDURE pas_create_citamedica(IN doctor INT, IN fecha DATETIME)
@@ -219,7 +257,7 @@ CREATE PROCEDURE pas_create_citamedica(IN doctor INT, IN fecha DATETIME)
     END $$
 DELIMITER ;
 
-# 14. ----------------------------------------------------- Eliminar una cita medica --------------------------------------------------------
+# 16. ----------------------------------------------------- Eliminar una cita medica --------------------------------------------------------
 DROP PROCEDURE IF EXISTS pas_remove_citamedica;
 DELIMITER $$
 CREATE PROCEDURE pas_remove_citamedica(IN cita INT)
@@ -228,7 +266,7 @@ CREATE PROCEDURE pas_remove_citamedica(IN cita INT)
     END $$
 DELIMITER ; 
 
-# 15. ----------------------------------------------- Aprobar o rechazar una incapacidad ----------------------------------------------------
+# 17. ----------------------------------------------- Aprobar o rechazar una incapacidad ----------------------------------------------------
 DROP PROCEDURE IF EXISTS pas_approve_incapacidad;
 DELIMITER $$
 CREATE PROCEDURE pas_approve_incapacidad(
@@ -239,7 +277,7 @@ CREATE PROCEDURE pas_approve_incapacidad(
     END $$
 DELIMITER ;
 
-# 16. -------------------------------------------- Aprobar o rechazar una atencion en salud -------------------------------------------------
+# 18. -------------------------------------------- Aprobar o rechazar una atencion en salud -------------------------------------------------
 DROP PROCEDURE IF EXISTS pas_approve_atencionsalud;
 DELIMITER $$
 CREATE PROCEDURE pas_approve_atencionsalud(
@@ -250,7 +288,7 @@ CREATE PROCEDURE pas_approve_atencionsalud(
     END $$
 DELIMITER ;
 
-# 17. ------------------------------------------- Agregar los resultados de una cita medica -------------------------------------------------
+# 19. ------------------------------------------- Agregar los resultados de una cita medica -------------------------------------------------
 DROP PROCEDURE IF EXISTS pas_update_resultados;
 DELIMITER $$
 CREATE PROCEDURE pas_update_resultados(
@@ -268,7 +306,7 @@ CREATE PROCEDURE pas_update_resultados(
     END $$
 DELIMITER ;
 
-# 18. -------------------------------------- Modificar el perfil de riesgo integral de un usuario -------------------------------------------
+# 20. -------------------------------------- Modificar el perfil de riesgo integral de un usuario -------------------------------------------
 DROP PROCEDURE IF EXISTS pas_edit_perfilintegral;
 DELIMITER $$
 CREATE PROCEDURE pas_edit_perfilintegral(IN persona INT, IN fisico INT, IN psicologico INT)
@@ -1751,7 +1789,7 @@ create procedure sp_consultar_convocatorias_programa(in idPrograma int)
 	end $$
 DELIMITER ;
 
-call sp_consultar_convocatorias_programa(1701);
+# call sp_consultar_convocatorias_programa(1701);
 
 # Actividad Física y Deporte
 

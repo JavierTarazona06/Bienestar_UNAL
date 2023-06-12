@@ -228,7 +228,7 @@ DROP TABLE IF EXISTS Bienestar.evaluacionfisica ;
 CREATE TABLE IF NOT EXISTS Bienestar.evaluacionfisica (
   citID INT UNSIGNED NOT NULL,
   evaPeso TINYINT NOT NULL,
-  evaEstatura TINYINT NOT NULL,
+  evaEstatura TINYINT UNSIGNED NOT NULL,
   evaRitmoCardiaco TINYINT NOT NULL,
   evaVision TINYINT NOT NULL,
   PRIMARY KEY (citID),
