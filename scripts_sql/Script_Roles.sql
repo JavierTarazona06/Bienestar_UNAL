@@ -51,6 +51,7 @@ grant execute on procedure sp_horas_corresponsabilidad_est to 'estudiante'@'%';
 grant execute on function pbm_est to 'estudiante'@'%';
 grant execute on procedure sp_pbm_est to 'estudiante'@'%';
 grant execute on procedure sp_consultar_convocatorias_programa to 'estudiante'@'%';
+GRANT EXECUTE ON PROCEDURE sp_insertar_act_corresponsabilidad TO 'estudiante'@'%';
 
 grant execute on procedure sp_insertar_est_tm_conv_est to 'estudiante'@'%';
 grant execute on procedure programa_area_convocatoria to 'estudiante'@'%';
@@ -78,7 +79,7 @@ grant execute on procedure sp_convocatoriagestioneconomica_filtro to 'estudiante
 grant execute on procedure sp_convocatoriagestiontransporte_filtro to 'estudiante'@'%';
 
 grant execute on procedure sp_info_factura_per to 'estudiante'@'%';
-grant execute on procedure sp_productos_tienda to 'estudiante'@'%';
+grant execute on procedure sp_productos_tienda_nombre to 'estudiante'@'%';
 grant execute on procedure sp_tiendas_ofrece_producto to 'estudiante'@'%';
 grant execute on procedure eliminar_factura_usuario_tiempo to 'estudiante'@'%';
 grant execute on procedure eliminar_factura_usuario to 'estudiante'@'%';
@@ -106,7 +107,7 @@ grant select on Bienestar.factura_producto to 'no_estudiante'@'%';
 grant select on Bienestar.vw_info_factura to 'no_estudiante'@'%';
 
 grant execute on procedure sp_info_factura_per to 'no_estudiante'@'%';
-grant execute on procedure sp_productos_tienda to 'no_estudiante'@'%';
+grant execute on procedure sp_productos_tienda_nombre to 'no_estudiante'@'%';
 grant execute on procedure sp_tiendas_ofrece_producto to 'no_estudiante'@'%';
 grant execute on procedure eliminar_factura_usuario_tiempo to 'no_estudiante'@'%';
 grant execute on procedure eliminar_factura_usuario to 'no_estudiante'@'%';
@@ -164,7 +165,7 @@ grant execute on procedure insertar_empl_tienda_un to 'secretaria'@'%';
 grant execute on procedure sp_info_factura_per to 'secretaria'@'%';
 grant execute on procedure insertar_prod_tienda_un to 'secretaria'@'%';
 grant execute on procedure insertar_factura to 'secretaria'@'%';
-grant execute on procedure sp_productos_tienda to 'secretaria'@'%';
+grant execute on procedure sp_productos_tienda_nombre to 'secretaria'@'%';
 grant execute on procedure sp_tiendas_ofrece_producto to 'secretaria'@'%';
 grant execute on procedure eliminar_factura_usuario_tiempo to 'secretaria'@'%';
 grant execute on procedure eliminar_factura_usuario to 'secretaria'@'%';
@@ -224,7 +225,7 @@ GRANT EXECUTE ON PROCEDURE borrar_empl_tienda_un TO 'direccion_economica'@'%';
 GRANT EXECUTE ON PROCEDURE insertar_prod_tienda_un TO 'direccion_economica'@'%';
 GRANT EXECUTE ON PROCEDURE borrar_prod_tienda_un TO 'direccion_economica'@'%';
 GRANT EXECUTE ON PROCEDURE eliminar_factura_tiempo TO 'direccion_economica'@'%';
-GRANT EXECUTE ON PROCEDURE sp_productos_tienda TO 'direccion_economica'@'%';
+GRANT EXECUTE ON PROCEDURE sp_productos_tienda_nombre TO 'direccion_economica'@'%';
 GRANT EXECUTE ON PROCEDURE sp_tiendas_ofrece_producto TO 'direccion_economica'@'%';
 GRANT EXECUTE ON PROCEDURE eliminar_factura_usuario_tiempo TO 'direccion_economica'@'%';
 GRANT EXECUTE ON PROCEDURE eliminar_factura_usuario TO 'direccion_economica'@'%';

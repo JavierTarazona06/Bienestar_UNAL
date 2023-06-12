@@ -1074,21 +1074,32 @@ call sp_info_factura_per(10101017, null, null);
 
 #7. Una persona quiere consultar los productos en una tienda de bienestar U.
 
-drop procedure if exists sp_productos_tienda;
+drop procedure if exists sp_productos_tienda_nombre;
 DELIMITER $$
-CREATE PROCEDURE sp_productos_tienda(in id_tienda int)
+CREATE PROCEDURE sp_productos_tienda_nombre(in id_tienda int, in nombre varchar(100))
 	BEGIN
-		if id_tienda is null then
-			select * from  vw_productos_tienda;
+		if id_tienda is null and nombre is null then
+			select * from  vw_productos_tienda order by prodDetalle;
 		else
-			select * from  vw_productos_tienda where tieID=id_tienda;
+			if id_tienda is not null and nombre is not null then
+				select * from  vw_productos_tienda where tieID=id_tienda and LOCATE(LOWER(nombre), LOWER(prodDetalle)) > 0  order by prodDetalle;
+            else
+				if id_tienda is null then
+					select * from  vw_productos_tienda where LOCATE(LOWER(nombre), LOWER(prodDetalle)) > 0  order by prodDetalle;
+                else
+					select * from  vw_productos_tienda where tieID=id_tienda  order by prodDetalle;
+                end if;
+			end if;
         end if;
 	END $$
 DELIMITER ;
 
 /*
-call sp_productos_tienda(null);
-call sp_productos_tienda(1);
+select * from  vw_productos_tienda;
+call sp_productos_tienda_nombre(1, 'Producto1');
+call sp_productos_tienda_nombre(null, 'Producto1');
+call sp_productos_tienda_nombre(1, null);
+call sp_productos_tienda_nombre(null, null);
 */
 
 # 8. Una persona queire conocer las tiendas donde se encuentra un producto
