@@ -1489,6 +1489,9 @@ insert into estudiante_toma_convocatoria values (10101019,210,'2023-03-15');
 insert into estudiante_toma_convocatoria values (101010113,217,'2023-04-15');
 
 # PROYECTOS Y EVENTOS
+DELETE FROM proyecto;
+DELETE FROM eventotaller;
+DELETE FROM programa_tiene_eventotaller;
 insert into proyecto values (500, "Festival vitalizate", 9, "2023-02-01", "2023-06-21", "20.000.000");
 insert into eventotaller values (501, "Pildoras educativas", "Taller", "Autocuidado en el deporte",'10:00:00','11:00:00',"2023-04-10", "Polideportivo");
 insert into eventotaller values (502, "Siguiendo tu medida", "Evento", "Sensibilizacion de la importancia del deporte",'07:00:00','11:00:00',"2023-06-10", "Polideportivo");
