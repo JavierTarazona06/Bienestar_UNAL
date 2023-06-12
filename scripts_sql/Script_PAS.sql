@@ -98,7 +98,7 @@ DELIMITER ;
 DROP PROCEDURE IF EXISTS pas_add_incapacidad;
 DELIMITER $$
 CREATE PROCEDURE pas_add_incapacidad(
-	IN usuarioID INT, IN fecha DATETIME, IN enfermedad VARCHAR(45), IN dias TINYINT)
+	IN usuarioID INT, IN fecha DATE, IN enfermedad VARCHAR(45), IN dias TINYINT)
 	BEGIN
 		DECLARE duplicated BOOL;
         DECLARE msg VARCHAR(200);
