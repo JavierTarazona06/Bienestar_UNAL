@@ -662,7 +662,6 @@ DELIMITER ;
 
 #call sp_horas_corresponsabilidad_est(10101014);
 
-
 #4. El estudiante desea conocer su PBM
 
 drop function if exists pbm_est;
