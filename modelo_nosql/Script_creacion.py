@@ -117,3 +117,38 @@ insert_to_mongo(collection,"modelo_nosql\\area_deporte\seleccion_convocatoria.js
 
 collection = db.torneo_interno
 insert_to_mongo(collection,"modelo_nosql\\area_deporte\\torneo_interno.json")
+
+# Area salud
+collection = db.ambulancia
+insert_to_mongo(collection, "modelo_nosql\\area_salud\\ambulancia.json")
+
+collection = db.atencionsalud
+insert_to_mongo(collection, "modelo_nosql\\area_salud\\atencionsalud.json")
+
+collection = db.citamedica
+insert_to_mongo(collection, "modelo_nosql\\area_salud\\citamedica.json")
+
+collection = db.discapacidad
+insert_to_mongo(collection, "modelo_nosql\\area_salud\\discapacidad.json")
+
+collection = db.enfermedad
+insert_to_mongo(collection, "modelo_nosql\\area_salud\\enfermedad.json")
+
+collection = db.evaluacionfisica
+insert_to_mongo(collection, "modelo_nosql\\area_salud\\evaluacionfisica.json")
+
+collection = db.incapacidad
+insert_to_mongo(collection, "modelo_nosql\\area_salud\\incapacidadjson")
+
+collection = db.medicamentos
+insert_to_mongo(collection, "modelo_nosql\\area_salud\\medicamentos.json")
+
+collection = db.ordenmedica
+insert_to_mongo(collection, "modelo_nosql\\area_salud\\ordenmedica.json")
+
+collection = db.perfilriesgointegral
+insert_to_mongo(collection, "modelo_nosql\\area_salud\\perfilriesgointegral.json")
+
+collection = db.personalsalud
+insert_to_mongo(collection, "modelo_nosql\\area_salud\\personalsalud.json")
+

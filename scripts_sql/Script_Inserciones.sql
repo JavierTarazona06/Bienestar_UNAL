@@ -1488,12 +1488,58 @@ INSERT INTO Bienestar.convocatoriaseleccion (Convocatoria_conv_id, convDeporte, 
 insert into estudiante_toma_convocatoria values (10101019,210,'2023-03-15');
 insert into estudiante_toma_convocatoria values (101010113,217,'2023-04-15');
 
-#Inserciones en evento_taller
-insert into eventotaller values (1,"La importancia del deporte","Charla","Importancia del deporte",'08:00:00','10:00:00',"2023-06-15","Plazoleta CyT");
-insert into programa_tiene_eventotaller values (1,1702);
+# PROYECTOS Y EVENTOS
+DELETE FROM proyecto;
+DELETE FROM eventotaller;
+DELETE FROM programa_tiene_eventotaller;
+insert into proyecto values (500, "Festival vitalizate", 9, "2023-02-01", "2023-06-21", "20.000.000");
+insert into eventotaller values (501, "Pildoras educativas", "Taller", "Autocuidado en el deporte",'10:00:00','11:00:00',"2023-04-10", "Polideportivo");
+insert into eventotaller values (502, "Siguiendo tu medida", "Evento", "Sensibilizacion de la importancia del deporte",'07:00:00','11:00:00',"2023-06-10", "Polideportivo");
+insert into eventotaller values (503, "Caminata", "Evento", "Recorrido por la U", '09:00:00','11:00:00',"2023-06-21", "General");
 
-#Inserciones de proyectos
-insert into proyecto values (1,"Imersión deportiva",0.52,"2023-02-12","2023-06-18","10.000.000");
-insert into programa_tiene_proyecto values (1,1702);
+insert into programa_tiene_proyecto values     (500, 1701);
+insert into programa_tiene_proyecto values     (501, 1701);
+insert into programa_tiene_eventotaller values (502, 1701);
+insert into programa_tiene_eventotaller values (503, 1701);
+
+insert into proyecto values (504, "Inmersion deportiva", 6, "2023-02-01", "2023-06-16", "2.000.000");
+insert into proyecto values (505, "Acondicionamiento fisico", 2, "2022-06-10", "2023-06-10", "100.000.000");
+insert into eventotaller values (506, "Evaluacion acondicionamiento", "Evento", "Evaluar el fisico de los asistentes",'07:00:00','11:00:00',"2023-07-11", "Polideportivo");
+insert into eventotaller values (507, "Taller estiramiento", "Capacitacion", "Aprender a estirar", '09:00:00','11:00:00',"2023-04-21", "Polideportivo");
+
+insert into programa_tiene_proyecto values     (504, 1702);
+insert into programa_tiene_proyecto values     (505, 1702);
+insert into programa_tiene_eventotaller values (506, 1702);
+insert into programa_tiene_eventotaller values (507, 1702);
+
+insert into proyecto values (508, "Torneo futbolsal ingenieria", 9, "2023-02-01", "2023-06-16", "2.000.000");
+insert into proyecto values (509, "Torneo de karate do", 2, "2023-06-10", "2023-07-10", "1.000.000");
+insert into eventotaller values (510, "Historia del ajedrez", "Charla", "Saber mas su origen y mayores momentos",'09:00:00','10:00:00',"2023-07-11", "Polideportivo");
+insert into eventotaller values (511, "Taller de jugadas de ajedrez", "Taller", "Clase de ajedrez", '08:30:00','11:30:00',"2023-06-20", "Polideportivo");
+
+insert into programa_tiene_proyecto values     (508, 1703);
+insert into programa_tiene_proyecto values     (509, 1703);
+insert into programa_tiene_eventotaller values (510, 1703);
+insert into programa_tiene_eventotaller values (511, 1703);
+
+insert into proyecto values (512, "Torneo interfederaciones", 8, "2023-02-01", "2023-10-02", "100.000.000");
+insert into proyecto values (513, "Preparacion competencias de la Liga", 5, "2023-04-15", "2023-07-15", "50.000.000");
+insert into eventotaller values (514, "Ranking deportivo en Colombia", "Charla", "Conocer como funcionan las federaciones y ligas",'08:00:00','10:00:00',"2023-04-21", "Polideportivo");
+insert into eventotaller values (515, "Conmemoracion ganadores", "Evento", "Darle un regalo/premio a los ganadores", '10:30:00','11:00:00',"2023-05-25", "Plazoleta CyT");
+
+insert into programa_tiene_proyecto values     (512, 1704);
+insert into programa_tiene_proyecto values     (513, 1704);
+insert into programa_tiene_eventotaller values (514, 1704);
+insert into programa_tiene_eventotaller values (515, 1704);
+
+insert into proyecto values (516, "Torneo de egresados", 3, "2023-06-01", "2023-10-02", "16.000.000");
+insert into proyecto values (517, "Carrera atletica", 5, "2023-05-15", "2023-06-15", "5.000.000");
+insert into eventotaller values (518, "Dia de la mujer", "Celebracion", "Actividades en torno al dia de la mujer",'08:00:00','16:00:00',"2023-06-20", "Plaza Central");
+insert into eventotaller values (519, "Semana universitaria", "Evento", "Actividades ludicas para los estudiantes", '08:00:00','10:00:00',"2023-03-15", "Plazoleta CyT");
+
+insert into programa_tiene_proyecto values     (516, 1705);
+insert into programa_tiene_proyecto values     (517, 1705);
+insert into programa_tiene_eventotaller values (518, 1705);
+insert into programa_tiene_eventotaller values (519, 1705);
 
 SET FOREIGN_KEY_CHECKS=1;

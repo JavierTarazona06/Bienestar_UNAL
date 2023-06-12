@@ -1,0 +1,212 @@
+[
+    {
+        "ordID": 1,
+        "citID": 15,
+        "ordExamen": "endoscopia"
+    },
+    {
+        "ordID": 2,
+        "citID": 7,
+        "ordExamen": "laboratorio"
+    },
+    {
+        "ordID": 3,
+        "citID": 11,
+        "ordExamen": "tomografia"
+    },
+    {
+        "ordID": 4,
+        "citID": 1,
+        "ordExamen": "biopsia"
+    },
+    {
+        "ordID": 5,
+        "citID": 17,
+        "ordExamen": "endoscopia"
+    },
+    {
+        "ordID": 6,
+        "citID": 18,
+        "ordExamen": "laboratorio"
+    },
+    {
+        "ordID": 7,
+        "citID": 20,
+        "ordExamen": "biopsia"
+    },
+    {
+        "ordID": 8,
+        "citID": 31,
+        "ordExamen": "biopsia"
+    },
+    {
+        "ordID": 9,
+        "citID": 33,
+        "ordExamen": "biopsia"
+    },
+    {
+        "ordID": 10,
+        "citID": 38,
+        "ordExamen": "tomografia"
+    },
+    {
+        "ordID": 11,
+        "citID": 40,
+        "ordExamen": "biopsia"
+    },
+    {
+        "ordID": 12,
+        "citID": 43,
+        "ordExamen": "laboratorio"
+    },
+    {
+        "ordID": 13,
+        "citID": 46,
+        "ordExamen": "endoscopia"
+    },
+    {
+        "ordID": 14,
+        "citID": 47,
+        "ordExamen": "biopsia"
+    },
+    {
+        "ordID": 15,
+        "citID": 49,
+        "ordExamen": "ecografia"
+    },
+    {
+        "ordID": 16,
+        "citID": 3,
+        "ordExamen": "rayos_x"
+    },
+    {
+        "ordID": 17,
+        "citID": 65,
+        "ordExamen": "ecografia"
+    },
+    {
+        "ordID": 18,
+        "citID": 67,
+        "ordExamen": "tomografia"
+    },
+    {
+        "ordID": 19,
+        "citID": 4,
+        "ordExamen": "tomografia"
+    },
+    {
+        "ordID": 20,
+        "citID": 75,
+        "ordExamen": "laboratorio"
+    },
+    {
+        "ordID": 21,
+        "citID": 79,
+        "ordExamen": "ecografia"
+    },
+    {
+        "ordID": 22,
+        "citID": 87,
+        "ordExamen": "tomografia"
+    },
+    {
+        "ordID": 23,
+        "citID": 5,
+        "ordExamen": "tomografia"
+    },
+    {
+        "ordID": 24,
+        "citID": 101,
+        "ordExamen": "endoscopia"
+    },
+    {
+        "ordID": 25,
+        "citID": 102,
+        "ordExamen": "rayos_x"
+    },
+    {
+        "ordID": 26,
+        "citID": 109,
+        "ordExamen": "tomografia"
+    },
+    {
+        "ordID": 27,
+        "citID": 111,
+        "ordExamen": "ecografia"
+    },
+    {
+        "ordID": 28,
+        "citID": 136,
+        "ordExamen": "tomografia"
+    },
+    {
+        "ordID": 29,
+        "citID": 146,
+        "ordExamen": "tomografia"
+    },
+    {
+        "ordID": 30,
+        "citID": 148,
+        "ordExamen": "rayos_x"
+    },
+    {
+        "ordID": 31,
+        "citID": 149,
+        "ordExamen": "laboratorio"
+    },
+    {
+        "ordID": 32,
+        "citID": 150,
+        "ordExamen": "biopsia"
+    },
+    {
+        "ordID": 33,
+        "citID": 157,
+        "ordExamen": "ecografia"
+    },
+    {
+        "ordID": 34,
+        "citID": 159,
+        "ordExamen": "laboratorio"
+    },
+    {
+        "ordID": 35,
+        "citID": 166,
+        "ordExamen": "laboratorio"
+    },
+    {
+        "ordID": 36,
+        "citID": 171,
+        "ordExamen": "biopsia"
+    },
+    {
+        "ordID": 37,
+        "citID": 172,
+        "ordExamen": "ecografia"
+    },
+    {
+        "ordID": 38,
+        "citID": 177,
+        "ordExamen": "rayos_x"
+    },
+    {
+        "ordID": 39,
+        "citID": 193,
+        "ordExamen": "ecografia"
+    },
+    {
+        "ordID": 40,
+        "citID": 197,
+        "ordExamen": "endoscopia"
+    },
+    {
+        "ordID": 41,
+        "citID": 198,
+        "ordExamen": "endoscopia"
+    },
+    {
+        "ordID": 42,
+        "citID": 199,
+        "ordExamen": "biopsia"
+    }
+]

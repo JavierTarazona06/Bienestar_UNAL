@@ -1,0 +1,566 @@
+[
+    {
+        "enfID": 1,
+        "perID": 10101017,
+        "enfNombre": "obesidad",
+        "enfFechaInicio": "2005-05-17"
+    },
+    {
+        "enfID": 2,
+        "perID": 10101018,
+        "enfNombre": "obesidad",
+        "enfFechaInicio": "2015-08-04"
+    },
+    {
+        "enfID": 3,
+        "perID": 10101019,
+        "enfNombre": "tunel_carpo",
+        "enfFechaInicio": "2011-09-01"
+    },
+    {
+        "enfID": 4,
+        "perID": 101010113,
+        "enfNombre": "tunel_carpo",
+        "enfFechaInicio": "2004-06-16"
+    },
+    {
+        "enfID": 5,
+        "perID": 101010117,
+        "enfNombre": "obesidad",
+        "enfFechaInicio": "2003-10-03"
+    },
+    {
+        "enfID": 6,
+        "perID": 101010118,
+        "enfNombre": "asma",
+        "enfFechaInicio": "1999-10-13"
+    },
+    {
+        "enfID": 7,
+        "perID": 101010120,
+        "enfNombre": "dolor_lumbar",
+        "enfFechaInicio": "2005-08-26"
+    },
+    {
+        "enfID": 8,
+        "perID": 101010122,
+        "enfNombre": "obesidad",
+        "enfFechaInicio": "2003-07-27"
+    },
+    {
+        "enfID": 9,
+        "perID": 101010124,
+        "enfNombre": "cancer",
+        "enfFechaInicio": "2010-09-06"
+    },
+    {
+        "enfID": 10,
+        "perID": 101010125,
+        "enfNombre": "ansiedad",
+        "enfFechaInicio": "2004-03-01"
+    },
+    {
+        "enfID": 11,
+        "perID": 101010126,
+        "enfNombre": "obesidad",
+        "enfFechaInicio": "2013-02-07"
+    },
+    {
+        "enfID": 12,
+        "perID": 101010127,
+        "enfNombre": "hipertension",
+        "enfFechaInicio": "2003-04-25"
+    },
+    {
+        "enfID": 13,
+        "perID": 101010131,
+        "enfNombre": "ansiedad",
+        "enfFechaInicio": "1999-05-02"
+    },
+    {
+        "enfID": 14,
+        "perID": 101010132,
+        "enfNombre": "depresion",
+        "enfFechaInicio": "2013-06-13"
+    },
+    {
+        "enfID": 15,
+        "perID": 101010133,
+        "enfNombre": "tunel_carpo",
+        "enfFechaInicio": "2014-03-16"
+    },
+    {
+        "enfID": 16,
+        "perID": 101010135,
+        "enfNombre": "ansiedad",
+        "enfFechaInicio": "2010-04-02"
+    },
+    {
+        "enfID": 17,
+        "perID": 101010142,
+        "enfNombre": "dolor_lumbar",
+        "enfFechaInicio": "2014-09-06"
+    },
+    {
+        "enfID": 18,
+        "perID": 101010143,
+        "enfNombre": "asma",
+        "enfFechaInicio": "2002-02-16"
+    },
+    {
+        "enfID": 19,
+        "perID": 101010146,
+        "enfNombre": "hipertension",
+        "enfFechaInicio": "2004-07-02"
+    },
+    {
+        "enfID": 20,
+        "perID": 101010149,
+        "enfNombre": "asma",
+        "enfFechaInicio": "1999-12-03"
+    },
+    {
+        "enfID": 21,
+        "perID": 101010150,
+        "enfNombre": "diabetes",
+        "enfFechaInicio": "2005-04-27"
+    },
+    {
+        "enfID": 22,
+        "perID": 101010153,
+        "enfNombre": "cancer",
+        "enfFechaInicio": "2013-12-18"
+    },
+    {
+        "enfID": 23,
+        "perID": 101010157,
+        "enfNombre": "depresion",
+        "enfFechaInicio": "2012-05-15"
+    },
+    {
+        "enfID": 24,
+        "perID": 101010158,
+        "enfNombre": "depresion",
+        "enfFechaInicio": "2003-09-10"
+    },
+    {
+        "enfID": 25,
+        "perID": 101010168,
+        "enfNombre": "ansiedad",
+        "enfFechaInicio": "2004-04-23"
+    },
+    {
+        "enfID": 26,
+        "perID": 101010170,
+        "enfNombre": "diabetes",
+        "enfFechaInicio": "2000-05-18"
+    },
+    {
+        "enfID": 27,
+        "perID": 101010173,
+        "enfNombre": "dolor_lumbar",
+        "enfFechaInicio": "2014-09-05"
+    },
+    {
+        "enfID": 28,
+        "perID": 101010174,
+        "enfNombre": "depresion",
+        "enfFechaInicio": "2010-09-27"
+    },
+    {
+        "enfID": 29,
+        "perID": 101010175,
+        "enfNombre": "asma",
+        "enfFechaInicio": "2002-08-09"
+    },
+    {
+        "enfID": 30,
+        "perID": 101010176,
+        "enfNombre": "asma",
+        "enfFechaInicio": "2013-08-22"
+    },
+    {
+        "enfID": 31,
+        "perID": 101010177,
+        "enfNombre": "asma",
+        "enfFechaInicio": "2009-06-17"
+    },
+    {
+        "enfID": 32,
+        "perID": 101010178,
+        "enfNombre": "tunel_carpo",
+        "enfFechaInicio": "2008-06-19"
+    },
+    {
+        "enfID": 33,
+        "perID": 101010179,
+        "enfNombre": "dolor_lumbar",
+        "enfFechaInicio": "2000-02-03"
+    },
+    {
+        "enfID": 34,
+        "perID": 101010180,
+        "enfNombre": "cancer",
+        "enfFechaInicio": "2009-12-19"
+    },
+    {
+        "enfID": 35,
+        "perID": 101010183,
+        "enfNombre": "depresion",
+        "enfFechaInicio": "2001-02-27"
+    },
+    {
+        "enfID": 36,
+        "perID": 101010185,
+        "enfNombre": "migraña",
+        "enfFechaInicio": "2009-04-24"
+    },
+    {
+        "enfID": 37,
+        "perID": 101010188,
+        "enfNombre": "depresion",
+        "enfFechaInicio": "2012-12-27"
+    },
+    {
+        "enfID": 38,
+        "perID": 101010191,
+        "enfNombre": "depresion",
+        "enfFechaInicio": "2002-12-20"
+    },
+    {
+        "enfID": 39,
+        "perID": 101010192,
+        "enfNombre": "ansiedad",
+        "enfFechaInicio": "2008-04-29"
+    },
+    {
+        "enfID": 40,
+        "perID": 101010194,
+        "enfNombre": "dolor_lumbar",
+        "enfFechaInicio": "2007-01-23"
+    },
+    {
+        "enfID": 41,
+        "perID": 101010199,
+        "enfNombre": "migraña",
+        "enfFechaInicio": "2000-12-13"
+    },
+    {
+        "enfID": 42,
+        "perID": 1010101100,
+        "enfNombre": "depresion",
+        "enfFechaInicio": "2005-12-17"
+    },
+    {
+        "enfID": 43,
+        "perID": 1010101101,
+        "enfNombre": "asma",
+        "enfFechaInicio": "2013-08-29"
+    },
+    {
+        "enfID": 44,
+        "perID": 1010101102,
+        "enfNombre": "cancer",
+        "enfFechaInicio": "2004-10-03"
+    },
+    {
+        "enfID": 45,
+        "perID": 1010101103,
+        "enfNombre": "obesidad",
+        "enfFechaInicio": "2003-06-26"
+    },
+    {
+        "enfID": 46,
+        "perID": 1010101104,
+        "enfNombre": "ansiedad",
+        "enfFechaInicio": "2007-07-02"
+    },
+    {
+        "enfID": 47,
+        "perID": 1010101105,
+        "enfNombre": "hipertension",
+        "enfFechaInicio": "2007-10-19"
+    },
+    {
+        "enfID": 48,
+        "perID": 1010101110,
+        "enfNombre": "cancer",
+        "enfFechaInicio": "2005-09-09"
+    },
+    {
+        "enfID": 49,
+        "perID": 1010101111,
+        "enfNombre": "ansiedad",
+        "enfFechaInicio": "2005-04-24"
+    },
+    {
+        "enfID": 50,
+        "perID": 1010101112,
+        "enfNombre": "ansiedad",
+        "enfFechaInicio": "2010-08-04"
+    },
+    {
+        "enfID": 51,
+        "perID": 1010101113,
+        "enfNombre": "hipertension",
+        "enfFechaInicio": "2009-01-08"
+    },
+    {
+        "enfID": 52,
+        "perID": 1010101114,
+        "enfNombre": "cancer",
+        "enfFechaInicio": "2005-09-20"
+    },
+    {
+        "enfID": 53,
+        "perID": 1010101115,
+        "enfNombre": "depresion",
+        "enfFechaInicio": "2008-09-11"
+    },
+    {
+        "enfID": 54,
+        "perID": 1010101120,
+        "enfNombre": "obesidad",
+        "enfFechaInicio": "2007-04-16"
+    },
+    {
+        "enfID": 55,
+        "perID": 1010101121,
+        "enfNombre": "migraña",
+        "enfFechaInicio": "2001-04-07"
+    },
+    {
+        "enfID": 56,
+        "perID": 1010101124,
+        "enfNombre": "diabetes",
+        "enfFechaInicio": "2003-07-03"
+    },
+    {
+        "enfID": 57,
+        "perID": 1010101125,
+        "enfNombre": "obesidad",
+        "enfFechaInicio": "2000-03-28"
+    },
+    {
+        "enfID": 58,
+        "perID": 1010101127,
+        "enfNombre": "obesidad",
+        "enfFechaInicio": "2011-08-11"
+    },
+    {
+        "enfID": 59,
+        "perID": 1010101128,
+        "enfNombre": "hipertension",
+        "enfFechaInicio": "2012-01-12"
+    },
+    {
+        "enfID": 60,
+        "perID": 1010101129,
+        "enfNombre": "tunel_carpo",
+        "enfFechaInicio": "2000-11-05"
+    },
+    {
+        "enfID": 61,
+        "perID": 1010101130,
+        "enfNombre": "dolor_lumbar",
+        "enfFechaInicio": "2002-11-12"
+    },
+    {
+        "enfID": 62,
+        "perID": 1010101131,
+        "enfNombre": "depresion",
+        "enfFechaInicio": "2009-12-20"
+    },
+    {
+        "enfID": 63,
+        "perID": 1010101133,
+        "enfNombre": "diabetes",
+        "enfFechaInicio": "2010-11-20"
+    },
+    {
+        "enfID": 64,
+        "perID": 1010101135,
+        "enfNombre": "tunel_carpo",
+        "enfFechaInicio": "2008-06-19"
+    },
+    {
+        "enfID": 65,
+        "perID": 1010101136,
+        "enfNombre": "obesidad",
+        "enfFechaInicio": "2009-11-29"
+    },
+    {
+        "enfID": 66,
+        "perID": 1010101138,
+        "enfNombre": "asma",
+        "enfFechaInicio": "2007-12-02"
+    },
+    {
+        "enfID": 67,
+        "perID": 1010101139,
+        "enfNombre": "hipertension",
+        "enfFechaInicio": "2002-06-06"
+    },
+    {
+        "enfID": 68,
+        "perID": 1010101140,
+        "enfNombre": "dolor_lumbar",
+        "enfFechaInicio": "2008-10-18"
+    },
+    {
+        "enfID": 69,
+        "perID": 1010101143,
+        "enfNombre": "cancer",
+        "enfFechaInicio": "2001-05-03"
+    },
+    {
+        "enfID": 70,
+        "perID": 1010101144,
+        "enfNombre": "cancer",
+        "enfFechaInicio": "2013-12-16"
+    },
+    {
+        "enfID": 71,
+        "perID": 1010101150,
+        "enfNombre": "ansiedad",
+        "enfFechaInicio": "2000-02-29"
+    },
+    {
+        "enfID": 72,
+        "perID": 1010101152,
+        "enfNombre": "cancer",
+        "enfFechaInicio": "2014-07-16"
+    },
+    {
+        "enfID": 73,
+        "perID": 1010101155,
+        "enfNombre": "tunel_carpo",
+        "enfFechaInicio": "2015-02-13"
+    },
+    {
+        "enfID": 74,
+        "perID": 1010101156,
+        "enfNombre": "depresion",
+        "enfFechaInicio": "2009-06-15"
+    },
+    {
+        "enfID": 75,
+        "perID": 1010101158,
+        "enfNombre": "asma",
+        "enfFechaInicio": "2002-11-25"
+    },
+    {
+        "enfID": 76,
+        "perID": 1010101159,
+        "enfNombre": "cancer",
+        "enfFechaInicio": "2015-05-31"
+    },
+    {
+        "enfID": 77,
+        "perID": 1010101160,
+        "enfNombre": "migraña",
+        "enfFechaInicio": "2006-07-18"
+    },
+    {
+        "enfID": 78,
+        "perID": 1010101161,
+        "enfNombre": "dolor_lumbar",
+        "enfFechaInicio": "2005-09-03"
+    },
+    {
+        "enfID": 79,
+        "perID": 1010101163,
+        "enfNombre": "depresion",
+        "enfFechaInicio": "2010-01-10"
+    },
+    {
+        "enfID": 80,
+        "perID": 1010101164,
+        "enfNombre": "diabetes",
+        "enfFechaInicio": "2001-07-03"
+    },
+    {
+        "enfID": 81,
+        "perID": 1010101165,
+        "enfNombre": "asma",
+        "enfFechaInicio": "2012-08-18"
+    },
+    {
+        "enfID": 82,
+        "perID": 1010101171,
+        "enfNombre": "diabetes",
+        "enfFechaInicio": "2005-02-13"
+    },
+    {
+        "enfID": 83,
+        "perID": 1010101172,
+        "enfNombre": "tunel_carpo",
+        "enfFechaInicio": "2004-03-21"
+    },
+    {
+        "enfID": 84,
+        "perID": 1010101177,
+        "enfNombre": "ansiedad",
+        "enfFechaInicio": "2015-02-22"
+    },
+    {
+        "enfID": 85,
+        "perID": 1010101178,
+        "enfNombre": "diabetes",
+        "enfFechaInicio": "2002-08-04"
+    },
+    {
+        "enfID": 86,
+        "perID": 1010101179,
+        "enfNombre": "depresion",
+        "enfFechaInicio": "2015-05-22"
+    },
+    {
+        "enfID": 87,
+        "perID": 1010101181,
+        "enfNombre": "migraña",
+        "enfFechaInicio": "2008-09-02"
+    },
+    {
+        "enfID": 88,
+        "perID": 1010101182,
+        "enfNombre": "asma",
+        "enfFechaInicio": "2008-11-11"
+    },
+    {
+        "enfID": 89,
+        "perID": 1010101184,
+        "enfNombre": "hipertension",
+        "enfFechaInicio": "1999-04-18"
+    },
+    {
+        "enfID": 90,
+        "perID": 1010101186,
+        "enfNombre": "hipertension",
+        "enfFechaInicio": "2002-08-09"
+    },
+    {
+        "enfID": 91,
+        "perID": 1010101188,
+        "enfNombre": "hipertension",
+        "enfFechaInicio": "2013-01-09"
+    },
+    {
+        "enfID": 92,
+        "perID": 1010101190,
+        "enfNombre": "hipertension",
+        "enfFechaInicio": "2013-02-08"
+    },
+    {
+        "enfID": 93,
+        "perID": 1010101194,
+        "enfNombre": "depresion",
+        "enfFechaInicio": "2007-11-04"
+    },
+    {
+        "enfID": 94,
+        "perID": 1010101198,
+        "enfNombre": "asma",
+        "enfFechaInicio": "2008-10-14"
+    }
+]

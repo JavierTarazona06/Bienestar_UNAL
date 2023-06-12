@@ -1,0 +1,86 @@
+[
+    {
+        "perID": 101010111,
+        "ambulanciaID": NaN,
+        "salProfesion": "Medicina",
+        "salEspecializacion": "Anticoncepcion"
+    },
+    {
+        "perID": 101010112,
+        "ambulanciaID": "ABC123",
+        "salProfesion": "Medicina",
+        "salEspecializacion": "Psicologia"
+    },
+    {
+        "perID": 101010113,
+        "ambulanciaID": NaN,
+        "salProfesion": "Medicina",
+        "salEspecializacion": "Psicologia"
+    },
+    {
+        "perID": 101010114,
+        "ambulanciaID": NaN,
+        "salProfesion": "Medicina",
+        "salEspecializacion": "Vacunacion"
+    },
+    {
+        "perID": 101010115,
+        "ambulanciaID": NaN,
+        "salProfesion": "Medicina",
+        "salEspecializacion": "Nutrición"
+    },
+    {
+        "perID": 101010119,
+        "ambulanciaID": "ABC123",
+        "salProfesion": "Enfermeria",
+        "salEspecializacion": "Ninguna"
+    },
+    {
+        "perID": 101010120,
+        "ambulanciaID": "HIJ789",
+        "salProfesion": "Enfermeria",
+        "salEspecializacion": "Jefe"
+    },
+    {
+        "perID": 101010130,
+        "ambulanciaID": NaN,
+        "salProfesion": "Medicina",
+        "salEspecializacion": "Odontología"
+    },
+    {
+        "perID": 101010140,
+        "ambulanciaID": NaN,
+        "salProfesion": "Medicina",
+        "salEspecializacion": "Odontología"
+    },
+    {
+        "perID": 101010150,
+        "ambulanciaID": NaN,
+        "salProfesion": "Medicina",
+        "salEspecializacion": "Higiene oral"
+    },
+    {
+        "perID": 101010160,
+        "ambulanciaID": NaN,
+        "salProfesion": "Medicina",
+        "salEspecializacion": "Higiene oral"
+    },
+    {
+        "perID": 101010170,
+        "ambulanciaID": "ABC123",
+        "salProfesion": "Medicina",
+        "salEspecializacion": "Medicina general"
+    },
+    {
+        "perID": 101010180,
+        "ambulanciaID": "ABC123",
+        "salProfesion": "Medicina",
+        "salEspecializacion": "Medicina general"
+    },
+    {
+        "perID": 101010190,
+        "ambulanciaID": NaN,
+        "salProfesion": "Medicina",
+        "salEspecializacion": "Optometria"
+    }
+]

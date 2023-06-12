@@ -1,0 +1,177 @@
+[
+    {
+        "medID": 1,
+        "citID": 1,
+        "medNombre": "Noxpirin",
+        "medCantidad": 30,
+        "medIntervalos": 8
+    },
+    {
+        "medID": 2,
+        "citID": 9,
+        "medNombre": "acetaminofen",
+        "medCantidad": 15,
+        "medIntervalos": 10
+    },
+    {
+        "medID": 3,
+        "citID": 2,
+        "medNombre": "omeprazol",
+        "medCantidad": 23,
+        "medIntervalos": 2
+    },
+    {
+        "medID": 4,
+        "citID": 16,
+        "medNombre": "omeprazol",
+        "medCantidad": 13,
+        "medIntervalos": 2
+    },
+    {
+        "medID": 5,
+        "citID": 17,
+        "medNombre": "acetaminofen",
+        "medCantidad": 45,
+        "medIntervalos": 6
+    },
+    {
+        "medID": 6,
+        "citID": 18,
+        "medNombre": "Vick Vaporub",
+        "medCantidad": 26,
+        "medIntervalos": 6
+    },
+    {
+        "medID": 7,
+        "citID": 40,
+        "medNombre": "ibuprofeno",
+        "medCantidad": 42,
+        "medIntervalos": 8
+    },
+    {
+        "medID": 8,
+        "citID": 47,
+        "medNombre": "ibuprofeno",
+        "medCantidad": 27,
+        "medIntervalos": 5
+    },
+    {
+        "medID": 9,
+        "citID": 59,
+        "medNombre": "Noxpirin",
+        "medCantidad": 46,
+        "medIntervalos": 7
+    },
+    {
+        "medID": 10,
+        "citID": 4,
+        "medNombre": "acetaminofen",
+        "medCantidad": 9,
+        "medIntervalos": 5
+    },
+    {
+        "medID": 11,
+        "citID": 66,
+        "medNombre": "omeprazol",
+        "medCantidad": 39,
+        "medIntervalos": 2
+    },
+    {
+        "medID": 12,
+        "citID": 70,
+        "medNombre": "Noxpirin",
+        "medCantidad": 2,
+        "medIntervalos": 1
+    },
+    {
+        "medID": 13,
+        "citID": 78,
+        "medNombre": "Noxpirin",
+        "medCantidad": 2,
+        "medIntervalos": 3
+    },
+    {
+        "medID": 14,
+        "citID": 94,
+        "medNombre": "Vick Vaporub",
+        "medCantidad": 18,
+        "medIntervalos": 1
+    },
+    {
+        "medID": 15,
+        "citID": 106,
+        "medNombre": "acetaminofen",
+        "medCantidad": 48,
+        "medIntervalos": 1
+    },
+    {
+        "medID": 16,
+        "citID": 126,
+        "medNombre": "acetaminofen",
+        "medCantidad": 18,
+        "medIntervalos": 4
+    },
+    {
+        "medID": 17,
+        "citID": 130,
+        "medNombre": "Noxpirin",
+        "medCantidad": 6,
+        "medIntervalos": 3
+    },
+    {
+        "medID": 18,
+        "citID": 138,
+        "medNombre": "omeprazol",
+        "medCantidad": 19,
+        "medIntervalos": 3
+    },
+    {
+        "medID": 19,
+        "citID": 6,
+        "medNombre": "Vick Vaporub",
+        "medCantidad": 18,
+        "medIntervalos": 4
+    },
+    {
+        "medID": 20,
+        "citID": 148,
+        "medNombre": "ibuprofeno",
+        "medCantidad": 39,
+        "medIntervalos": 7
+    },
+    {
+        "medID": 21,
+        "citID": 150,
+        "medNombre": "omeprazol",
+        "medCantidad": 10,
+        "medIntervalos": 8
+    },
+    {
+        "medID": 22,
+        "citID": 151,
+        "medNombre": "acetaminofen",
+        "medCantidad": 9,
+        "medIntervalos": 4
+    },
+    {
+        "medID": 23,
+        "citID": 164,
+        "medNombre": "acetaminofen",
+        "medCantidad": 35,
+        "medIntervalos": 7
+    },
+    {
+        "medID": 24,
+        "citID": 193,
+        "medNombre": "Mieltertos",
+        "medCantidad": 44,
+        "medIntervalos": 4
+    },
+    {
+        "medID": 25,
+        "citID": 199,
+        "medNombre": "Vick Vaporub",
+        "medCantidad": 47,
+        "medIntervalos": 3
+    }
+]
