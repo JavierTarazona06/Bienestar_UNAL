@@ -1,0 +1,26 @@
+medID,citID,medNombre,medCantidad,medIntervalos
+1,1,Noxpirin,30,8
+2,9,acetaminofen,15,10
+3,2,omeprazol,23,2
+4,16,omeprazol,13,2
+5,17,acetaminofen,45,6
+6,18,Vick Vaporub,26,6
+7,40,ibuprofeno,42,8
+8,47,ibuprofeno,27,5
+9,59,Noxpirin,46,7
+10,4,acetaminofen,9,5
+11,66,omeprazol,39,2
+12,70,Noxpirin,2,1
+13,78,Noxpirin,2,3
+14,94,Vick Vaporub,18,1
+15,106,acetaminofen,48,1
+16,126,acetaminofen,18,4
+17,130,Noxpirin,6,3
+18,138,omeprazol,19,3
+19,6,Vick Vaporub,18,4
+20,148,ibuprofeno,39,7
+21,150,omeprazol,10,8
+22,151,acetaminofen,9,4
+23,164,acetaminofen,35,7
+24,193,Mieltertos,44,4
+25,199,Vick Vaporub,47,3

@@ -1,0 +1,956 @@
+[
+    {
+        "incID": 1,
+        "perID": 10101011,
+        "incFecha": "2022-12-25",
+        "incEnfermedad": "psicologica",
+        "incDias": 30,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 2,
+        "perID": 10101011,
+        "incFecha": "2022-05-15",
+        "incEnfermedad": "cirugia",
+        "incDias": 45,
+        "incVerificado": 1,
+        "incAprobado": 0
+    },
+    {
+        "incID": 3,
+        "perID": 10101011,
+        "incFecha": "2023-06-01",
+        "incEnfermedad": "psicologica",
+        "incDias": 10,
+        "incVerificado": 0,
+        "incAprobado": 0
+    },
+    {
+        "incID": 4,
+        "perID": 101010110,
+        "incFecha": "2022-12-25",
+        "incEnfermedad": "lesion columna",
+        "incDias": 26,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 5,
+        "perID": 101010110,
+        "incFecha": "2022-05-15",
+        "incEnfermedad": "psicologica",
+        "incDias": 5,
+        "incVerificado": 1,
+        "incAprobado": 0
+    },
+    {
+        "incID": 6,
+        "perID": 101010110,
+        "incFecha": "2023-06-01",
+        "incEnfermedad": "covid",
+        "incDias": 3,
+        "incVerificado": 0,
+        "incAprobado": 0
+    },
+    {
+        "incID": 7,
+        "perID": 101010165,
+        "incFecha": "2022-03-23",
+        "incEnfermedad": "psicologica",
+        "incDias": 10,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 8,
+        "perID": 101010140,
+        "incFecha": "2022-08-07",
+        "incEnfermedad": "psicologica",
+        "incDias": 29,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 9,
+        "perID": 1010101138,
+        "incFecha": "2020-06-19",
+        "incEnfermedad": "covid",
+        "incDias": 17,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 10,
+        "perID": 101010120,
+        "incFecha": "2022-01-12",
+        "incEnfermedad": "lesion",
+        "incDias": 14,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 11,
+        "perID": 101010196,
+        "incFecha": "2021-10-31",
+        "incEnfermedad": "covid",
+        "incDias": 21,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 12,
+        "perID": 1010101194,
+        "incFecha": "2021-08-10",
+        "incEnfermedad": "gastrointestinal",
+        "incDias": 20,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 13,
+        "perID": 101010133,
+        "incFecha": "2021-05-25",
+        "incEnfermedad": "cirugia",
+        "incDias": 30,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 14,
+        "perID": 1010101159,
+        "incFecha": "2022-02-07",
+        "incEnfermedad": "covid",
+        "incDias": 9,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 15,
+        "perID": 1010101153,
+        "incFecha": "2020-08-08",
+        "incEnfermedad": "lesion",
+        "incDias": 26,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 16,
+        "perID": 101010175,
+        "incFecha": "2020-12-06",
+        "incEnfermedad": "psicologica",
+        "incDias": 4,
+        "incVerificado": 0,
+        "incAprobado": 1
+    },
+    {
+        "incID": 17,
+        "perID": 101010165,
+        "incFecha": "2022-06-25",
+        "incEnfermedad": "psicologica",
+        "incDias": 1,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 18,
+        "perID": 1010101171,
+        "incFecha": "2020-02-04",
+        "incEnfermedad": "covid",
+        "incDias": 14,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 19,
+        "perID": 1010101188,
+        "incFecha": "2020-10-10",
+        "incEnfermedad": "psicologica",
+        "incDias": 2,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 20,
+        "perID": 1010101119,
+        "incFecha": "2020-04-12",
+        "incEnfermedad": "psicologica",
+        "incDias": 16,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 21,
+        "perID": 1010101163,
+        "incFecha": "2021-03-04",
+        "incEnfermedad": "psicologica",
+        "incDias": 23,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 22,
+        "perID": 101010137,
+        "incFecha": "2021-01-07",
+        "incEnfermedad": "lesion",
+        "incDias": 26,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 23,
+        "perID": 101010198,
+        "incFecha": "2020-06-30",
+        "incEnfermedad": "psicologica",
+        "incDias": 2,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 24,
+        "perID": 101010119,
+        "incFecha": "2020-03-10",
+        "incEnfermedad": "lesion",
+        "incDias": 6,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 25,
+        "perID": 1010101164,
+        "incFecha": "2021-01-23",
+        "incEnfermedad": "lesion",
+        "incDias": 17,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 26,
+        "perID": 1010101132,
+        "incFecha": "2021-09-13",
+        "incEnfermedad": "gastrointestinal",
+        "incDias": 21,
+        "incVerificado": 0,
+        "incAprobado": 1
+    },
+    {
+        "incID": 27,
+        "perID": 101010160,
+        "incFecha": "2021-10-19",
+        "incEnfermedad": "covid",
+        "incDias": 16,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 28,
+        "perID": 1010101130,
+        "incFecha": "2020-04-28",
+        "incEnfermedad": "psicologica",
+        "incDias": 25,
+        "incVerificado": 0,
+        "incAprobado": 1
+    },
+    {
+        "incID": 29,
+        "perID": 101010170,
+        "incFecha": "2021-05-05",
+        "incEnfermedad": "psicologica",
+        "incDias": 26,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 30,
+        "perID": 1010101146,
+        "incFecha": "2022-04-16",
+        "incEnfermedad": "cirugia",
+        "incDias": 28,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 31,
+        "perID": 1010101191,
+        "incFecha": "2021-12-15",
+        "incEnfermedad": "covid",
+        "incDias": 19,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 32,
+        "perID": 1010101156,
+        "incFecha": "2021-05-06",
+        "incEnfermedad": "psicologica",
+        "incDias": 25,
+        "incVerificado": 0,
+        "incAprobado": 1
+    },
+    {
+        "incID": 33,
+        "perID": 101010140,
+        "incFecha": "2022-08-17",
+        "incEnfermedad": "covid",
+        "incDias": 24,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 34,
+        "perID": 101010180,
+        "incFecha": "2022-01-02",
+        "incEnfermedad": "covid",
+        "incDias": 28,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 35,
+        "perID": 101010172,
+        "incFecha": "2021-02-20",
+        "incEnfermedad": "lesion",
+        "incDias": 16,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 36,
+        "perID": 1010101105,
+        "incFecha": "2020-05-23",
+        "incEnfermedad": "covid",
+        "incDias": 22,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 37,
+        "perID": 1010101148,
+        "incFecha": "2020-05-25",
+        "incEnfermedad": "covid",
+        "incDias": 9,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 38,
+        "perID": 1010101128,
+        "incFecha": "2021-07-02",
+        "incEnfermedad": "psicologica",
+        "incDias": 5,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 39,
+        "perID": 1010101199,
+        "incFecha": "2020-07-14",
+        "incEnfermedad": "lesion",
+        "incDias": 2,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 40,
+        "perID": 101010135,
+        "incFecha": "2022-02-09",
+        "incEnfermedad": "covid",
+        "incDias": 9,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 41,
+        "perID": 1010101123,
+        "incFecha": "2020-12-26",
+        "incEnfermedad": "psicologica",
+        "incDias": 30,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 42,
+        "perID": 1010101133,
+        "incFecha": "2023-01-03",
+        "incEnfermedad": "gastrointestinal",
+        "incDias": 10,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 43,
+        "perID": 1010101166,
+        "incFecha": "2021-05-30",
+        "incEnfermedad": "lesion",
+        "incDias": 23,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 44,
+        "perID": 1010101145,
+        "incFecha": "2020-02-28",
+        "incEnfermedad": "covid",
+        "incDias": 28,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 45,
+        "perID": 1010101150,
+        "incFecha": "2022-09-25",
+        "incEnfermedad": "lesion",
+        "incDias": 4,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 46,
+        "perID": 101010163,
+        "incFecha": "2022-03-19",
+        "incEnfermedad": "covid",
+        "incDias": 17,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 47,
+        "perID": 1010101186,
+        "incFecha": "2022-06-09",
+        "incEnfermedad": "covid",
+        "incDias": 9,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 48,
+        "perID": 101010140,
+        "incFecha": "2021-11-19",
+        "incEnfermedad": "cirugia",
+        "incDias": 9,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 49,
+        "perID": 1010101186,
+        "incFecha": "2021-11-04",
+        "incEnfermedad": "lesion",
+        "incDias": 20,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 50,
+        "perID": 101010159,
+        "incFecha": "2022-06-16",
+        "incEnfermedad": "covid",
+        "incDias": 3,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 51,
+        "perID": 101010147,
+        "incFecha": "2020-03-20",
+        "incEnfermedad": "cirugia",
+        "incDias": 5,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 52,
+        "perID": 1010101117,
+        "incFecha": "2020-11-03",
+        "incEnfermedad": "covid",
+        "incDias": 12,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 53,
+        "perID": 101010143,
+        "incFecha": "2022-02-28",
+        "incEnfermedad": "lesion",
+        "incDias": 12,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 54,
+        "perID": 1010101158,
+        "incFecha": "2022-04-01",
+        "incEnfermedad": "covid",
+        "incDias": 19,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 55,
+        "perID": 1010101172,
+        "incFecha": "2021-06-20",
+        "incEnfermedad": "cirugia",
+        "incDias": 12,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 56,
+        "perID": 1010101180,
+        "incFecha": "2020-04-05",
+        "incEnfermedad": "lesion",
+        "incDias": 19,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 57,
+        "perID": 101010135,
+        "incFecha": "2020-03-22",
+        "incEnfermedad": "lesion",
+        "incDias": 9,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 58,
+        "perID": 1010101185,
+        "incFecha": "2022-12-15",
+        "incEnfermedad": "covid",
+        "incDias": 21,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 59,
+        "perID": 101010139,
+        "incFecha": "2023-01-19",
+        "incEnfermedad": "covid",
+        "incDias": 23,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 60,
+        "perID": 1010101144,
+        "incFecha": "2021-03-13",
+        "incEnfermedad": "covid",
+        "incDias": 3,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 61,
+        "perID": 1010101192,
+        "incFecha": "2022-11-21",
+        "incEnfermedad": "covid",
+        "incDias": 13,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 62,
+        "perID": 1010101128,
+        "incFecha": "2021-10-21",
+        "incEnfermedad": "cirugia",
+        "incDias": 1,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 63,
+        "perID": 101010172,
+        "incFecha": "2021-09-15",
+        "incEnfermedad": "psicologica",
+        "incDias": 26,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 64,
+        "perID": 101010140,
+        "incFecha": "2021-11-28",
+        "incEnfermedad": "covid",
+        "incDias": 24,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 65,
+        "perID": 1010101147,
+        "incFecha": "2021-04-23",
+        "incEnfermedad": "lesion",
+        "incDias": 24,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 66,
+        "perID": 101010134,
+        "incFecha": "2023-01-15",
+        "incEnfermedad": "covid",
+        "incDias": 30,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 67,
+        "perID": 101010163,
+        "incFecha": "2020-10-01",
+        "incEnfermedad": "psicologica",
+        "incDias": 22,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 68,
+        "perID": 101010116,
+        "incFecha": "2021-03-18",
+        "incEnfermedad": "lesion",
+        "incDias": 17,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 69,
+        "perID": 101010180,
+        "incFecha": "2022-03-05",
+        "incEnfermedad": "cirugia",
+        "incDias": 28,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 70,
+        "perID": 10101015,
+        "incFecha": "2021-01-21",
+        "incEnfermedad": "covid",
+        "incDias": 26,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 71,
+        "perID": 101010132,
+        "incFecha": "2020-08-02",
+        "incEnfermedad": "covid",
+        "incDias": 27,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 72,
+        "perID": 10101016,
+        "incFecha": "2021-05-17",
+        "incEnfermedad": "covid",
+        "incDias": 15,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 73,
+        "perID": 101010111,
+        "incFecha": "2022-10-19",
+        "incEnfermedad": "covid",
+        "incDias": 6,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 74,
+        "perID": 1010101174,
+        "incFecha": "2022-07-07",
+        "incEnfermedad": "covid",
+        "incDias": 29,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 75,
+        "perID": 1010101147,
+        "incFecha": "2021-11-09",
+        "incEnfermedad": "lesion",
+        "incDias": 11,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 76,
+        "perID": 1010101180,
+        "incFecha": "2020-02-17",
+        "incEnfermedad": "lesion",
+        "incDias": 15,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 77,
+        "perID": 101010143,
+        "incFecha": "2020-09-10",
+        "incEnfermedad": "lesion",
+        "incDias": 20,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 78,
+        "perID": 101010181,
+        "incFecha": "2022-04-25",
+        "incEnfermedad": "lesion",
+        "incDias": 11,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 79,
+        "perID": 101010141,
+        "incFecha": "2022-12-14",
+        "incEnfermedad": "psicologica",
+        "incDias": 6,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 80,
+        "perID": 101010151,
+        "incFecha": "2021-06-04",
+        "incEnfermedad": "covid",
+        "incDias": 23,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 81,
+        "perID": 101010118,
+        "incFecha": "2020-07-06",
+        "incEnfermedad": "covid",
+        "incDias": 30,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 82,
+        "perID": 1010101114,
+        "incFecha": "2022-06-15",
+        "incEnfermedad": "covid",
+        "incDias": 25,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 83,
+        "perID": 1010101158,
+        "incFecha": "2020-09-13",
+        "incEnfermedad": "psicologica",
+        "incDias": 27,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 84,
+        "perID": 101010152,
+        "incFecha": "2021-02-05",
+        "incEnfermedad": "covid",
+        "incDias": 11,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 85,
+        "perID": 1010101155,
+        "incFecha": "2020-02-04",
+        "incEnfermedad": "covid",
+        "incDias": 5,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 86,
+        "perID": 101010115,
+        "incFecha": "2022-01-14",
+        "incEnfermedad": "psicologica",
+        "incDias": 5,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 87,
+        "perID": 101010118,
+        "incFecha": "2021-10-10",
+        "incEnfermedad": "psicologica",
+        "incDias": 12,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 88,
+        "perID": 1010101107,
+        "incFecha": "2022-09-28",
+        "incEnfermedad": "cirugia",
+        "incDias": 24,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 89,
+        "perID": 101010137,
+        "incFecha": "2021-01-12",
+        "incEnfermedad": "cirugia",
+        "incDias": 21,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 90,
+        "perID": 1010101186,
+        "incFecha": "2022-09-23",
+        "incEnfermedad": "psicologica",
+        "incDias": 3,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 91,
+        "perID": 101010139,
+        "incFecha": "2020-12-21",
+        "incEnfermedad": "covid",
+        "incDias": 29,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 92,
+        "perID": 1010101160,
+        "incFecha": "2022-04-11",
+        "incEnfermedad": "psicologica",
+        "incDias": 1,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 93,
+        "perID": 1010101139,
+        "incFecha": "2022-12-24",
+        "incEnfermedad": "covid",
+        "incDias": 7,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 94,
+        "perID": 1010101131,
+        "incFecha": "2020-04-05",
+        "incEnfermedad": "gastrointestinal",
+        "incDias": 29,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 95,
+        "perID": 101010125,
+        "incFecha": "2021-05-07",
+        "incEnfermedad": "lesion",
+        "incDias": 13,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 96,
+        "perID": 101010183,
+        "incFecha": "2020-12-31",
+        "incEnfermedad": "lesion",
+        "incDias": 15,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 97,
+        "perID": 1010101192,
+        "incFecha": "2021-11-06",
+        "incEnfermedad": "psicologica",
+        "incDias": 30,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 98,
+        "perID": 1010101147,
+        "incFecha": "2022-03-22",
+        "incEnfermedad": "covid",
+        "incDias": 18,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 99,
+        "perID": 1010101116,
+        "incFecha": "2022-07-03",
+        "incEnfermedad": "covid",
+        "incDias": 29,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 100,
+        "perID": 1010101128,
+        "incFecha": "2022-08-27",
+        "incEnfermedad": "psicologica",
+        "incDias": 22,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 101,
+        "perID": 101010174,
+        "incFecha": "2022-05-28",
+        "incEnfermedad": "gastrointestinal",
+        "incDias": 6,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 102,
+        "perID": 1010101183,
+        "incFecha": "2022-08-20",
+        "incEnfermedad": "gastrointestinal",
+        "incDias": 27,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 103,
+        "perID": 101010143,
+        "incFecha": "2021-01-05",
+        "incEnfermedad": "covid",
+        "incDias": 22,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 104,
+        "perID": 101010199,
+        "incFecha": "2020-11-13",
+        "incEnfermedad": "psicologica",
+        "incDias": 1,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 105,
+        "perID": 101010197,
+        "incFecha": "2022-11-03",
+        "incEnfermedad": "psicologica",
+        "incDias": 8,
+        "incVerificado": 1,
+        "incAprobado": 1
+    },
+    {
+        "incID": 106,
+        "perID": 101010111,
+        "incFecha": "2021-09-30",
+        "incEnfermedad": "covid",
+        "incDias": 17,
+        "incVerificado": 1,
+        "incAprobado": 1
+    }
+]

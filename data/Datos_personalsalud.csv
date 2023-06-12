@@ -1,0 +1,15 @@
+perID,ambulanciaID,salProfesion,salEspecializacion
+101010111,,Medicina,Anticoncepcion
+101010112,ABC123,Medicina,Psicologia
+101010113,,Medicina,Psicologia
+101010114,,Medicina,Vacunacion
+101010115,,Medicina,Nutrición
+101010119,ABC123,Enfermeria,Ninguna
+101010120,HIJ789,Enfermeria,Jefe
+101010130,,Medicina,Odontología
+101010140,,Medicina,Odontología
+101010150,,Medicina,Higiene oral
+101010160,,Medicina,Higiene oral
+101010170,ABC123,Medicina,Medicina general
+101010180,ABC123,Medicina,Medicina general
+101010190,,Medicina,Optometria

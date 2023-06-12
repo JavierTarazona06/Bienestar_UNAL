@@ -1,0 +1,275 @@
+[
+    {
+        "disID": 1,
+        "perID": 10101011,
+        "disNombre": "autismo",
+        "disVerificado": 1,
+        "disAprobado": 1
+    },
+    {
+        "disID": 2,
+        "perID": 101010110,
+        "disNombre": "cegera",
+        "disVerificado": 1,
+        "disAprobado": 0
+    },
+    {
+        "disID": 3,
+        "perID": 101010112,
+        "disNombre": "autismo",
+        "disVerificado": 0,
+        "disAprobado": 1
+    },
+    {
+        "disID": 4,
+        "perID": 101010114,
+        "disNombre": "autismo",
+        "disVerificado": 1,
+        "disAprobado": 1
+    },
+    {
+        "disID": 5,
+        "perID": 101010123,
+        "disNombre": "cegera",
+        "disVerificado": 1,
+        "disAprobado": 1
+    },
+    {
+        "disID": 6,
+        "perID": 101010125,
+        "disNombre": "autismo",
+        "disVerificado": 0,
+        "disAprobado": 1
+    },
+    {
+        "disID": 7,
+        "perID": 101010125,
+        "disNombre": "sordera",
+        "disVerificado": 1,
+        "disAprobado": 1
+    },
+    {
+        "disID": 8,
+        "perID": 101010133,
+        "disNombre": "sordera",
+        "disVerificado": 1,
+        "disAprobado": 1
+    },
+    {
+        "disID": 9,
+        "perID": 101010135,
+        "disNombre": "cegera",
+        "disVerificado": 1,
+        "disAprobado": 1
+    },
+    {
+        "disID": 10,
+        "perID": 101010136,
+        "disNombre": "lesion medular",
+        "disVerificado": 1,
+        "disAprobado": 1
+    },
+    {
+        "disID": 11,
+        "perID": 101010140,
+        "disNombre": "sordera",
+        "disVerificado": 0,
+        "disAprobado": 1
+    },
+    {
+        "disID": 12,
+        "perID": 101010145,
+        "disNombre": "autismo",
+        "disVerificado": 1,
+        "disAprobado": 1
+    },
+    {
+        "disID": 13,
+        "perID": 101010151,
+        "disNombre": "autismo",
+        "disVerificado": 1,
+        "disAprobado": 1
+    },
+    {
+        "disID": 14,
+        "perID": 101010156,
+        "disNombre": "sordera",
+        "disVerificado": 1,
+        "disAprobado": 1
+    },
+    {
+        "disID": 15,
+        "perID": 101010169,
+        "disNombre": "sordera",
+        "disVerificado": 1,
+        "disAprobado": 1
+    },
+    {
+        "disID": 16,
+        "perID": 101010191,
+        "disNombre": "sordera",
+        "disVerificado": 0,
+        "disAprobado": 1
+    },
+    {
+        "disID": 17,
+        "perID": 101010199,
+        "disNombre": "autismo",
+        "disVerificado": 1,
+        "disAprobado": 1
+    },
+    {
+        "disID": 18,
+        "perID": 1010101101,
+        "disNombre": "sordera",
+        "disVerificado": 1,
+        "disAprobado": 1
+    },
+    {
+        "disID": 19,
+        "perID": 1010101107,
+        "disNombre": "cegera",
+        "disVerificado": 0,
+        "disAprobado": 1
+    },
+    {
+        "disID": 20,
+        "perID": 1010101110,
+        "disNombre": "sordera",
+        "disVerificado": 1,
+        "disAprobado": 1
+    },
+    {
+        "disID": 21,
+        "perID": 1010101113,
+        "disNombre": "cegera",
+        "disVerificado": 0,
+        "disAprobado": 1
+    },
+    {
+        "disID": 22,
+        "perID": 1010101120,
+        "disNombre": "autismo",
+        "disVerificado": 1,
+        "disAprobado": 1
+    },
+    {
+        "disID": 23,
+        "perID": 1010101121,
+        "disNombre": "lesion medular",
+        "disVerificado": 1,
+        "disAprobado": 1
+    },
+    {
+        "disID": 24,
+        "perID": 1010101122,
+        "disNombre": "sordera",
+        "disVerificado": 1,
+        "disAprobado": 1
+    },
+    {
+        "disID": 25,
+        "perID": 1010101123,
+        "disNombre": "cegera",
+        "disVerificado": 1,
+        "disAprobado": 1
+    },
+    {
+        "disID": 26,
+        "perID": 1010101130,
+        "disNombre": "cegera",
+        "disVerificado": 0,
+        "disAprobado": 1
+    },
+    {
+        "disID": 27,
+        "perID": 1010101135,
+        "disNombre": "sordera",
+        "disVerificado": 0,
+        "disAprobado": 1
+    },
+    {
+        "disID": 28,
+        "perID": 1010101138,
+        "disNombre": "sordera",
+        "disVerificado": 0,
+        "disAprobado": 1
+    },
+    {
+        "disID": 29,
+        "perID": 1010101145,
+        "disNombre": "sordera",
+        "disVerificado": 1,
+        "disAprobado": 1
+    },
+    {
+        "disID": 30,
+        "perID": 1010101146,
+        "disNombre": "autismo",
+        "disVerificado": 0,
+        "disAprobado": 1
+    },
+    {
+        "disID": 31,
+        "perID": 1010101148,
+        "disNombre": "autismo",
+        "disVerificado": 0,
+        "disAprobado": 1
+    },
+    {
+        "disID": 32,
+        "perID": 1010101154,
+        "disNombre": "autismo",
+        "disVerificado": 1,
+        "disAprobado": 1
+    },
+    {
+        "disID": 33,
+        "perID": 1010101164,
+        "disNombre": "autismo",
+        "disVerificado": 1,
+        "disAprobado": 1
+    },
+    {
+        "disID": 34,
+        "perID": 1010101168,
+        "disNombre": "autismo",
+        "disVerificado": 1,
+        "disAprobado": 1
+    },
+    {
+        "disID": 35,
+        "perID": 1010101169,
+        "disNombre": "cegera",
+        "disVerificado": 0,
+        "disAprobado": 1
+    },
+    {
+        "disID": 36,
+        "perID": 1010101176,
+        "disNombre": "autismo",
+        "disVerificado": 1,
+        "disAprobado": 1
+    },
+    {
+        "disID": 37,
+        "perID": 1010101178,
+        "disNombre": "sordera",
+        "disVerificado": 1,
+        "disAprobado": 1
+    },
+    {
+        "disID": 38,
+        "perID": 1010101192,
+        "disNombre": "autismo",
+        "disVerificado": 0,
+        "disAprobado": 1
+    },
+    {
+        "disID": 39,
+        "perID": 1010101200,
+        "disNombre": "cegera",
+        "disVerificado": 0,
+        "disAprobado": 1
+    }
+]

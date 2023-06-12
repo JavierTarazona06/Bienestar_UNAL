@@ -1,0 +1,2218 @@
+[
+    {
+        "citID": 1,
+        "doctorID": 101010170,
+        "pacienteID": 10101011,
+        "citFecha": "2010-08-15 08:30:00",
+        "citEspecialidad": "Medicina general",
+        "citDiagnostico": "muerte"
+    },
+    {
+        "citID": 2,
+        "doctorID": 101010115,
+        "pacienteID": 10101011,
+        "citFecha": "2011-05-29 09:10:00",
+        "citEspecialidad": "Nutrición",
+        "citDiagnostico": "sano"
+    },
+    {
+        "citID": 3,
+        "doctorID": 101010111,
+        "pacienteID": 10101011,
+        "citFecha": "2006-06-01 11:10:00",
+        "citEspecialidad": "Anticoncepcion",
+        "citDiagnostico": "sano"
+    },
+    {
+        "citID": 4,
+        "doctorID": 101010170,
+        "pacienteID": 101010110,
+        "citFecha": "2006-02-21 08:20:00",
+        "citEspecialidad": "Medicina general",
+        "citDiagnostico": "salvacion"
+    },
+    {
+        "citID": 5,
+        "doctorID": 101010170,
+        "pacienteID": 101010110,
+        "citFecha": "2011-03-26 11:10:00",
+        "citEspecialidad": "Medicina general",
+        "citDiagnostico": "salvacion"
+    },
+    {
+        "citID": 6,
+        "doctorID": 101010190,
+        "pacienteID": 101010110,
+        "citFecha": "2008-08-21 09:20:00",
+        "citEspecialidad": "Optometria",
+        "citDiagnostico": "sano"
+    },
+    {
+        "citID": 7,
+        "doctorID": 101010170,
+        "pacienteID": 101010115,
+        "citFecha": "1999-06-03 00:00:00",
+        "citEspecialidad": "Cardiologo",
+        "citDiagnostico": "muerte"
+    },
+    {
+        "citID": 8,
+        "doctorID": 101010150,
+        "pacienteID": 101010137,
+        "citFecha": "2014-03-16 00:00:00",
+        "citEspecialidad": "Psicologia",
+        "citDiagnostico": "mejorando"
+    },
+    {
+        "citID": 9,
+        "doctorID": 101010160,
+        "pacienteID": 101010156,
+        "citFecha": "2014-05-05 00:00:00",
+        "citEspecialidad": "Optometra",
+        "citDiagnostico": "mejorando"
+    },
+    {
+        "citID": 10,
+        "doctorID": 101010170,
+        "pacienteID": 101010123,
+        "citFecha": "1999-07-06 00:00:00",
+        "citEspecialidad": "Cardiologo",
+        "citDiagnostico": "mejorando"
+    },
+    {
+        "citID": 11,
+        "doctorID": 101010130,
+        "pacienteID": 1010101173,
+        "citFecha": "2006-02-27 00:00:00",
+        "citEspecialidad": "General",
+        "citDiagnostico": "muerte"
+    },
+    {
+        "citID": 12,
+        "doctorID": 101010150,
+        "pacienteID": 101010139,
+        "citFecha": "2014-06-24 00:00:00",
+        "citEspecialidad": "Psicologia",
+        "citDiagnostico": "empeorando"
+    },
+    {
+        "citID": 13,
+        "doctorID": 101010160,
+        "pacienteID": 1010101162,
+        "citFecha": "2000-02-26 00:00:00",
+        "citEspecialidad": "Optometra",
+        "citDiagnostico": "muerte"
+    },
+    {
+        "citID": 14,
+        "doctorID": 101010140,
+        "pacienteID": 1010101126,
+        "citFecha": "2002-01-01 00:00:00",
+        "citEspecialidad": "Odontologia",
+        "citDiagnostico": "sano"
+    },
+    {
+        "citID": 15,
+        "doctorID": 101010150,
+        "pacienteID": 1010101174,
+        "citFecha": "2005-02-06 00:00:00",
+        "citEspecialidad": "Psicologia",
+        "citDiagnostico": "empeorando"
+    },
+    {
+        "citID": 16,
+        "doctorID": 101010140,
+        "pacienteID": 1010101171,
+        "citFecha": "2013-09-05 00:00:00",
+        "citEspecialidad": "Odontologia",
+        "citDiagnostico": "enfermo"
+    },
+    {
+        "citID": 17,
+        "doctorID": 101010130,
+        "pacienteID": 101010130,
+        "citFecha": "2013-10-07 00:00:00",
+        "citEspecialidad": "General",
+        "citDiagnostico": "mejorando"
+    },
+    {
+        "citID": 18,
+        "doctorID": 101010160,
+        "pacienteID": 1010101155,
+        "citFecha": "2002-01-19 00:00:00",
+        "citEspecialidad": "Optometra",
+        "citDiagnostico": "muerte"
+    },
+    {
+        "citID": 19,
+        "doctorID": 101010160,
+        "pacienteID": 1010101118,
+        "citFecha": "2003-06-09 00:00:00",
+        "citEspecialidad": "Optometra",
+        "citDiagnostico": "muerte"
+    },
+    {
+        "citID": 20,
+        "doctorID": 101010160,
+        "pacienteID": 101010119,
+        "citFecha": "2009-01-30 00:00:00",
+        "citEspecialidad": "Optometra",
+        "citDiagnostico": "salvacion"
+    },
+    {
+        "citID": 21,
+        "doctorID": 101010170,
+        "pacienteID": 101010143,
+        "citFecha": "2011-12-23 00:00:00",
+        "citEspecialidad": "Cardiologo",
+        "citDiagnostico": "sano"
+    },
+    {
+        "citID": 22,
+        "doctorID": 101010140,
+        "pacienteID": 101010173,
+        "citFecha": "2000-04-24 00:00:00",
+        "citEspecialidad": "Odontologia",
+        "citDiagnostico": "mejorando"
+    },
+    {
+        "citID": 23,
+        "doctorID": 101010130,
+        "pacienteID": 10101017,
+        "citFecha": "2010-11-01 00:00:00",
+        "citEspecialidad": "General",
+        "citDiagnostico": "mejorando"
+    },
+    {
+        "citID": 24,
+        "doctorID": 101010150,
+        "pacienteID": 1010101157,
+        "citFecha": "2005-09-22 00:00:00",
+        "citEspecialidad": "Psicologia",
+        "citDiagnostico": "muerte"
+    },
+    {
+        "citID": 25,
+        "doctorID": 101010130,
+        "pacienteID": 101010142,
+        "citFecha": "2000-08-30 00:00:00",
+        "citEspecialidad": "General",
+        "citDiagnostico": "sano"
+    },
+    {
+        "citID": 26,
+        "doctorID": 101010150,
+        "pacienteID": 1010101178,
+        "citFecha": "2013-12-01 00:00:00",
+        "citEspecialidad": "Psicologia",
+        "citDiagnostico": "mejorando"
+    },
+    {
+        "citID": 27,
+        "doctorID": 101010170,
+        "pacienteID": 1010101123,
+        "citFecha": "2011-02-06 00:00:00",
+        "citEspecialidad": "Cardiologo",
+        "citDiagnostico": "mejorando"
+    },
+    {
+        "citID": 28,
+        "doctorID": 101010170,
+        "pacienteID": 1010101133,
+        "citFecha": "2015-02-14 00:00:00",
+        "citEspecialidad": "Cardiologo",
+        "citDiagnostico": "enfermo"
+    },
+    {
+        "citID": 29,
+        "doctorID": 101010130,
+        "pacienteID": 101010155,
+        "citFecha": "2007-02-04 00:00:00",
+        "citEspecialidad": "General",
+        "citDiagnostico": "mejorando"
+    },
+    {
+        "citID": 30,
+        "doctorID": 101010140,
+        "pacienteID": 101010169,
+        "citFecha": "2004-03-16 00:00:00",
+        "citEspecialidad": "Odontologia",
+        "citDiagnostico": "muerte"
+    },
+    {
+        "citID": 31,
+        "doctorID": 101010140,
+        "pacienteID": 1010101134,
+        "citFecha": "2006-08-30 00:00:00",
+        "citEspecialidad": "Odontologia",
+        "citDiagnostico": "sano"
+    },
+    {
+        "citID": 32,
+        "doctorID": 101010160,
+        "pacienteID": 101010142,
+        "citFecha": "2014-01-08 00:00:00",
+        "citEspecialidad": "Optometra",
+        "citDiagnostico": "sano"
+    },
+    {
+        "citID": 33,
+        "doctorID": 101010160,
+        "pacienteID": 101010159,
+        "citFecha": "2006-01-18 00:00:00",
+        "citEspecialidad": "Optometra",
+        "citDiagnostico": "salvacion"
+    },
+    {
+        "citID": 34,
+        "doctorID": 101010130,
+        "pacienteID": 1010101129,
+        "citFecha": "2007-02-12 00:00:00",
+        "citEspecialidad": "General",
+        "citDiagnostico": "mejorando"
+    },
+    {
+        "citID": 35,
+        "doctorID": 101010130,
+        "pacienteID": 101010131,
+        "citFecha": "2009-02-15 00:00:00",
+        "citEspecialidad": "General",
+        "citDiagnostico": "enfermo"
+    },
+    {
+        "citID": 36,
+        "doctorID": 101010160,
+        "pacienteID": 1010101146,
+        "citFecha": "2010-07-31 00:00:00",
+        "citEspecialidad": "Optometra",
+        "citDiagnostico": "mejorando"
+    },
+    {
+        "citID": 37,
+        "doctorID": 101010150,
+        "pacienteID": 101010124,
+        "citFecha": "2014-03-25 00:00:00",
+        "citEspecialidad": "Psicologia",
+        "citDiagnostico": "empeorando"
+    },
+    {
+        "citID": 38,
+        "doctorID": 101010160,
+        "pacienteID": 101010167,
+        "citFecha": "2002-09-27 00:00:00",
+        "citEspecialidad": "Optometra",
+        "citDiagnostico": "muerte"
+    },
+    {
+        "citID": 39,
+        "doctorID": 101010160,
+        "pacienteID": 1010101137,
+        "citFecha": "2015-12-04 00:00:00",
+        "citEspecialidad": "Optometra",
+        "citDiagnostico": "empeorando"
+    },
+    {
+        "citID": 40,
+        "doctorID": 101010140,
+        "pacienteID": 1010101173,
+        "citFecha": "2002-07-01 00:00:00",
+        "citEspecialidad": "Odontologia",
+        "citDiagnostico": "empeorando"
+    },
+    {
+        "citID": 41,
+        "doctorID": 101010170,
+        "pacienteID": 1010101140,
+        "citFecha": "2008-09-01 00:00:00",
+        "citEspecialidad": "Cardiologo",
+        "citDiagnostico": "mejorando"
+    },
+    {
+        "citID": 42,
+        "doctorID": 101010150,
+        "pacienteID": 101010169,
+        "citFecha": "2015-07-08 00:00:00",
+        "citEspecialidad": "Psicologia",
+        "citDiagnostico": "sano"
+    },
+    {
+        "citID": 43,
+        "doctorID": 101010160,
+        "pacienteID": 10101019,
+        "citFecha": "2007-02-23 00:00:00",
+        "citEspecialidad": "Optometra",
+        "citDiagnostico": "empeorando"
+    },
+    {
+        "citID": 44,
+        "doctorID": 101010170,
+        "pacienteID": 101010149,
+        "citFecha": "2003-08-22 00:00:00",
+        "citEspecialidad": "Cardiologo",
+        "citDiagnostico": "muerte"
+    },
+    {
+        "citID": 45,
+        "doctorID": 101010140,
+        "pacienteID": 10101019,
+        "citFecha": "2009-10-17 00:00:00",
+        "citEspecialidad": "Odontologia",
+        "citDiagnostico": "sano"
+    },
+    {
+        "citID": 46,
+        "doctorID": 101010130,
+        "pacienteID": 1010101117,
+        "citFecha": "2008-06-14 00:00:00",
+        "citEspecialidad": "General",
+        "citDiagnostico": "enfermo"
+    },
+    {
+        "citID": 47,
+        "doctorID": 101010150,
+        "pacienteID": 1010101108,
+        "citFecha": "2015-05-28 00:00:00",
+        "citEspecialidad": "Psicologia",
+        "citDiagnostico": "muerte"
+    },
+    {
+        "citID": 48,
+        "doctorID": 101010170,
+        "pacienteID": 101010187,
+        "citFecha": "2011-08-06 00:00:00",
+        "citEspecialidad": "Cardiologo",
+        "citDiagnostico": "empeorando"
+    },
+    {
+        "citID": 49,
+        "doctorID": 101010130,
+        "pacienteID": 101010141,
+        "citFecha": "2013-12-15 00:00:00",
+        "citEspecialidad": "General",
+        "citDiagnostico": "muerte"
+    },
+    {
+        "citID": 50,
+        "doctorID": 101010170,
+        "pacienteID": 101010133,
+        "citFecha": "2013-06-25 00:00:00",
+        "citEspecialidad": "Cardiologo",
+        "citDiagnostico": "enfermo"
+    },
+    {
+        "citID": 51,
+        "doctorID": 101010170,
+        "pacienteID": 1010101170,
+        "citFecha": "2013-05-02 00:00:00",
+        "citEspecialidad": "Cardiologo",
+        "citDiagnostico": "muerte"
+    },
+    {
+        "citID": 52,
+        "doctorID": 101010170,
+        "pacienteID": 101010126,
+        "citFecha": "2006-07-02 00:00:00",
+        "citEspecialidad": "Cardiologo",
+        "citDiagnostico": "sano"
+    },
+    {
+        "citID": 53,
+        "doctorID": 101010130,
+        "pacienteID": 1010101154,
+        "citFecha": "2001-02-13 00:00:00",
+        "citEspecialidad": "General",
+        "citDiagnostico": "enfermo"
+    },
+    {
+        "citID": 54,
+        "doctorID": 101010170,
+        "pacienteID": 1010101120,
+        "citFecha": "2015-01-19 00:00:00",
+        "citEspecialidad": "Cardiologo",
+        "citDiagnostico": "sano"
+    },
+    {
+        "citID": 55,
+        "doctorID": 101010130,
+        "pacienteID": 101010123,
+        "citFecha": "2001-04-02 00:00:00",
+        "citEspecialidad": "General",
+        "citDiagnostico": "enfermo"
+    },
+    {
+        "citID": 56,
+        "doctorID": 101010130,
+        "pacienteID": 101010130,
+        "citFecha": "2004-07-12 00:00:00",
+        "citEspecialidad": "General",
+        "citDiagnostico": "empeorando"
+    },
+    {
+        "citID": 57,
+        "doctorID": 101010150,
+        "pacienteID": 101010140,
+        "citFecha": "2000-11-14 00:00:00",
+        "citEspecialidad": "Psicologia",
+        "citDiagnostico": "enfermo"
+    },
+    {
+        "citID": 58,
+        "doctorID": 101010130,
+        "pacienteID": 10101018,
+        "citFecha": "2002-07-26 00:00:00",
+        "citEspecialidad": "General",
+        "citDiagnostico": "mejorando"
+    },
+    {
+        "citID": 59,
+        "doctorID": 101010150,
+        "pacienteID": 1010101176,
+        "citFecha": "2004-01-31 00:00:00",
+        "citEspecialidad": "Psicologia",
+        "citDiagnostico": "salvacion"
+    },
+    {
+        "citID": 60,
+        "doctorID": 101010140,
+        "pacienteID": 1010101124,
+        "citFecha": "2007-11-27 00:00:00",
+        "citEspecialidad": "Odontologia",
+        "citDiagnostico": "salvacion"
+    },
+    {
+        "citID": 61,
+        "doctorID": 101010160,
+        "pacienteID": 1010101133,
+        "citFecha": "2012-05-14 00:00:00",
+        "citEspecialidad": "Optometra",
+        "citDiagnostico": "muerte"
+    },
+    {
+        "citID": 62,
+        "doctorID": 101010130,
+        "pacienteID": 101010193,
+        "citFecha": "2009-02-27 00:00:00",
+        "citEspecialidad": "General",
+        "citDiagnostico": "mejorando"
+    },
+    {
+        "citID": 63,
+        "doctorID": 101010170,
+        "pacienteID": 1010101149,
+        "citFecha": "2003-08-01 00:00:00",
+        "citEspecialidad": "Cardiologo",
+        "citDiagnostico": "muerte"
+    },
+    {
+        "citID": 64,
+        "doctorID": 101010140,
+        "pacienteID": 101010190,
+        "citFecha": "2005-12-02 00:00:00",
+        "citEspecialidad": "Odontologia",
+        "citDiagnostico": "empeorando"
+    },
+    {
+        "citID": 65,
+        "doctorID": 101010170,
+        "pacienteID": 101010170,
+        "citFecha": "2015-06-10 00:00:00",
+        "citEspecialidad": "Cardiologo",
+        "citDiagnostico": "sano"
+    },
+    {
+        "citID": 66,
+        "doctorID": 101010130,
+        "pacienteID": 101010161,
+        "citFecha": "2006-06-19 00:00:00",
+        "citEspecialidad": "General",
+        "citDiagnostico": "salvacion"
+    },
+    {
+        "citID": 67,
+        "doctorID": 101010160,
+        "pacienteID": 1010101179,
+        "citFecha": "2000-02-13 00:00:00",
+        "citEspecialidad": "Optometra",
+        "citDiagnostico": "sano"
+    },
+    {
+        "citID": 68,
+        "doctorID": 101010140,
+        "pacienteID": 101010155,
+        "citFecha": "2010-11-01 00:00:00",
+        "citEspecialidad": "Odontologia",
+        "citDiagnostico": "mejorando"
+    },
+    {
+        "citID": 69,
+        "doctorID": 101010150,
+        "pacienteID": 1010101172,
+        "citFecha": "2007-11-29 00:00:00",
+        "citEspecialidad": "Psicologia",
+        "citDiagnostico": "sano"
+    },
+    {
+        "citID": 70,
+        "doctorID": 101010170,
+        "pacienteID": 10101013,
+        "citFecha": "1999-08-26 00:00:00",
+        "citEspecialidad": "Cardiologo",
+        "citDiagnostico": "muerte"
+    },
+    {
+        "citID": 71,
+        "doctorID": 101010170,
+        "pacienteID": 101010154,
+        "citFecha": "2014-12-07 00:00:00",
+        "citEspecialidad": "Cardiologo",
+        "citDiagnostico": "sano"
+    },
+    {
+        "citID": 72,
+        "doctorID": 101010170,
+        "pacienteID": 1010101192,
+        "citFecha": "2002-05-18 00:00:00",
+        "citEspecialidad": "Cardiologo",
+        "citDiagnostico": "muerte"
+    },
+    {
+        "citID": 73,
+        "doctorID": 101010170,
+        "pacienteID": 10101015,
+        "citFecha": "2003-04-06 00:00:00",
+        "citEspecialidad": "Cardiologo",
+        "citDiagnostico": "sano"
+    },
+    {
+        "citID": 74,
+        "doctorID": 101010130,
+        "pacienteID": 1010101141,
+        "citFecha": "2007-07-09 00:00:00",
+        "citEspecialidad": "General",
+        "citDiagnostico": "sano"
+    },
+    {
+        "citID": 75,
+        "doctorID": 101010150,
+        "pacienteID": 101010137,
+        "citFecha": "2006-11-18 00:00:00",
+        "citEspecialidad": "Psicologia",
+        "citDiagnostico": "mejorando"
+    },
+    {
+        "citID": 76,
+        "doctorID": 101010130,
+        "pacienteID": 101010155,
+        "citFecha": "2006-01-27 00:00:00",
+        "citEspecialidad": "General",
+        "citDiagnostico": "sano"
+    },
+    {
+        "citID": 77,
+        "doctorID": 101010170,
+        "pacienteID": 101010149,
+        "citFecha": "2010-02-22 00:00:00",
+        "citEspecialidad": "Cardiologo",
+        "citDiagnostico": "mejorando"
+    },
+    {
+        "citID": 78,
+        "doctorID": 101010140,
+        "pacienteID": 1010101144,
+        "citFecha": "2006-06-28 00:00:00",
+        "citEspecialidad": "Odontologia",
+        "citDiagnostico": "sano"
+    },
+    {
+        "citID": 79,
+        "doctorID": 101010160,
+        "pacienteID": 101010120,
+        "citFecha": "2006-07-28 00:00:00",
+        "citEspecialidad": "Optometra",
+        "citDiagnostico": "enfermo"
+    },
+    {
+        "citID": 80,
+        "doctorID": 101010130,
+        "pacienteID": 1010101120,
+        "citFecha": "2004-03-04 00:00:00",
+        "citEspecialidad": "General",
+        "citDiagnostico": "sano"
+    },
+    {
+        "citID": 81,
+        "doctorID": 101010160,
+        "pacienteID": 101010121,
+        "citFecha": "2012-10-15 00:00:00",
+        "citEspecialidad": "Optometra",
+        "citDiagnostico": "enfermo"
+    },
+    {
+        "citID": 82,
+        "doctorID": 101010150,
+        "pacienteID": 1010101111,
+        "citFecha": "1999-12-30 00:00:00",
+        "citEspecialidad": "Psicologia",
+        "citDiagnostico": "enfermo"
+    },
+    {
+        "citID": 83,
+        "doctorID": 101010130,
+        "pacienteID": 101010131,
+        "citFecha": "2015-03-03 00:00:00",
+        "citEspecialidad": "General",
+        "citDiagnostico": "mejorando"
+    },
+    {
+        "citID": 84,
+        "doctorID": 101010150,
+        "pacienteID": 101010172,
+        "citFecha": "2011-12-08 00:00:00",
+        "citEspecialidad": "Psicologia",
+        "citDiagnostico": "salvacion"
+    },
+    {
+        "citID": 85,
+        "doctorID": 101010150,
+        "pacienteID": 1010101181,
+        "citFecha": "2008-06-23 00:00:00",
+        "citEspecialidad": "Psicologia",
+        "citDiagnostico": "muerte"
+    },
+    {
+        "citID": 86,
+        "doctorID": 101010130,
+        "pacienteID": 1010101170,
+        "citFecha": "2006-07-11 00:00:00",
+        "citEspecialidad": "General",
+        "citDiagnostico": "empeorando"
+    },
+    {
+        "citID": 87,
+        "doctorID": 101010130,
+        "pacienteID": 1010101126,
+        "citFecha": "2000-01-07 00:00:00",
+        "citEspecialidad": "General",
+        "citDiagnostico": "empeorando"
+    },
+    {
+        "citID": 88,
+        "doctorID": 101010170,
+        "pacienteID": 1010101121,
+        "citFecha": "2001-08-10 00:00:00",
+        "citEspecialidad": "Cardiologo",
+        "citDiagnostico": "mejorando"
+    },
+    {
+        "citID": 89,
+        "doctorID": 101010140,
+        "pacienteID": 101010192,
+        "citFecha": "2008-08-25 00:00:00",
+        "citEspecialidad": "Odontologia",
+        "citDiagnostico": "mejorando"
+    },
+    {
+        "citID": 90,
+        "doctorID": 101010170,
+        "pacienteID": 1010101160,
+        "citFecha": "2008-03-02 00:00:00",
+        "citEspecialidad": "Cardiologo",
+        "citDiagnostico": "salvacion"
+    },
+    {
+        "citID": 91,
+        "doctorID": 101010170,
+        "pacienteID": 1010101108,
+        "citFecha": "2013-04-10 00:00:00",
+        "citEspecialidad": "Cardiologo",
+        "citDiagnostico": "empeorando"
+    },
+    {
+        "citID": 92,
+        "doctorID": 101010150,
+        "pacienteID": 101010119,
+        "citFecha": "2000-01-08 00:00:00",
+        "citEspecialidad": "Psicologia",
+        "citDiagnostico": "muerte"
+    },
+    {
+        "citID": 93,
+        "doctorID": 101010160,
+        "pacienteID": 1010101197,
+        "citFecha": "2004-10-02 00:00:00",
+        "citEspecialidad": "Optometra",
+        "citDiagnostico": "sano"
+    },
+    {
+        "citID": 94,
+        "doctorID": 101010130,
+        "pacienteID": 1010101168,
+        "citFecha": "2015-01-08 00:00:00",
+        "citEspecialidad": "General",
+        "citDiagnostico": "enfermo"
+    },
+    {
+        "citID": 95,
+        "doctorID": 101010130,
+        "pacienteID": 101010140,
+        "citFecha": "2009-08-05 00:00:00",
+        "citEspecialidad": "General",
+        "citDiagnostico": "sano"
+    },
+    {
+        "citID": 96,
+        "doctorID": 101010160,
+        "pacienteID": 101010139,
+        "citFecha": "2001-01-16 00:00:00",
+        "citEspecialidad": "Optometra",
+        "citDiagnostico": "sano"
+    },
+    {
+        "citID": 97,
+        "doctorID": 101010140,
+        "pacienteID": 1010101102,
+        "citFecha": "1999-11-04 00:00:00",
+        "citEspecialidad": "Odontologia",
+        "citDiagnostico": "mejorando"
+    },
+    {
+        "citID": 98,
+        "doctorID": 101010130,
+        "pacienteID": 1010101114,
+        "citFecha": "2012-12-26 00:00:00",
+        "citEspecialidad": "General",
+        "citDiagnostico": "enfermo"
+    },
+    {
+        "citID": 99,
+        "doctorID": 101010130,
+        "pacienteID": 1010101134,
+        "citFecha": "2014-02-08 00:00:00",
+        "citEspecialidad": "General",
+        "citDiagnostico": "empeorando"
+    },
+    {
+        "citID": 100,
+        "doctorID": 101010140,
+        "pacienteID": 101010194,
+        "citFecha": "2007-07-16 00:00:00",
+        "citEspecialidad": "Odontologia",
+        "citDiagnostico": "salvacion"
+    },
+    {
+        "citID": 101,
+        "doctorID": 101010150,
+        "pacienteID": 101010144,
+        "citFecha": "2011-08-27 00:00:00",
+        "citEspecialidad": "Psicologia",
+        "citDiagnostico": "muerte"
+    },
+    {
+        "citID": 102,
+        "doctorID": 101010130,
+        "pacienteID": 101010177,
+        "citFecha": "2007-03-09 00:00:00",
+        "citEspecialidad": "General",
+        "citDiagnostico": "salvacion"
+    },
+    {
+        "citID": 103,
+        "doctorID": 101010150,
+        "pacienteID": 1010101170,
+        "citFecha": "2008-01-14 00:00:00",
+        "citEspecialidad": "Psicologia",
+        "citDiagnostico": "enfermo"
+    },
+    {
+        "citID": 104,
+        "doctorID": 101010140,
+        "pacienteID": 1010101173,
+        "citFecha": "1999-10-08 00:00:00",
+        "citEspecialidad": "Odontologia",
+        "citDiagnostico": "mejorando"
+    },
+    {
+        "citID": 105,
+        "doctorID": 101010160,
+        "pacienteID": 101010181,
+        "citFecha": "2001-02-04 00:00:00",
+        "citEspecialidad": "Optometra",
+        "citDiagnostico": "muerte"
+    },
+    {
+        "citID": 106,
+        "doctorID": 101010170,
+        "pacienteID": 101010156,
+        "citFecha": "1999-01-30 00:00:00",
+        "citEspecialidad": "Cardiologo",
+        "citDiagnostico": "empeorando"
+    },
+    {
+        "citID": 107,
+        "doctorID": 101010170,
+        "pacienteID": 101010165,
+        "citFecha": "2014-01-18 00:00:00",
+        "citEspecialidad": "Cardiologo",
+        "citDiagnostico": "empeorando"
+    },
+    {
+        "citID": 108,
+        "doctorID": 101010160,
+        "pacienteID": 1010101142,
+        "citFecha": "2005-01-07 00:00:00",
+        "citEspecialidad": "Optometra",
+        "citDiagnostico": "salvacion"
+    },
+    {
+        "citID": 109,
+        "doctorID": 101010170,
+        "pacienteID": 1010101145,
+        "citFecha": "2000-09-11 00:00:00",
+        "citEspecialidad": "Cardiologo",
+        "citDiagnostico": "sano"
+    },
+    {
+        "citID": 110,
+        "doctorID": 101010150,
+        "pacienteID": 1010101183,
+        "citFecha": "2010-07-09 00:00:00",
+        "citEspecialidad": "Psicologia",
+        "citDiagnostico": "mejorando"
+    },
+    {
+        "citID": 111,
+        "doctorID": 101010130,
+        "pacienteID": 101010157,
+        "citFecha": "2009-06-12 00:00:00",
+        "citEspecialidad": "General",
+        "citDiagnostico": "mejorando"
+    },
+    {
+        "citID": 112,
+        "doctorID": 101010160,
+        "pacienteID": 1010101113,
+        "citFecha": "2010-06-18 00:00:00",
+        "citEspecialidad": "Optometra",
+        "citDiagnostico": "muerte"
+    },
+    {
+        "citID": 113,
+        "doctorID": 101010140,
+        "pacienteID": 1010101124,
+        "citFecha": "2005-04-18 00:00:00",
+        "citEspecialidad": "Odontologia",
+        "citDiagnostico": "salvacion"
+    },
+    {
+        "citID": 114,
+        "doctorID": 101010160,
+        "pacienteID": 101010168,
+        "citFecha": "2009-05-21 00:00:00",
+        "citEspecialidad": "Optometra",
+        "citDiagnostico": "enfermo"
+    },
+    {
+        "citID": 115,
+        "doctorID": 101010140,
+        "pacienteID": 1010101138,
+        "citFecha": "1999-02-22 00:00:00",
+        "citEspecialidad": "Odontologia",
+        "citDiagnostico": "empeorando"
+    },
+    {
+        "citID": 116,
+        "doctorID": 101010150,
+        "pacienteID": 101010190,
+        "citFecha": "2004-09-12 00:00:00",
+        "citEspecialidad": "Psicologia",
+        "citDiagnostico": "mejorando"
+    },
+    {
+        "citID": 117,
+        "doctorID": 101010170,
+        "pacienteID": 1010101166,
+        "citFecha": "2015-03-18 00:00:00",
+        "citEspecialidad": "Cardiologo",
+        "citDiagnostico": "sano"
+    },
+    {
+        "citID": 118,
+        "doctorID": 101010170,
+        "pacienteID": 101010144,
+        "citFecha": "2005-04-11 00:00:00",
+        "citEspecialidad": "Cardiologo",
+        "citDiagnostico": "salvacion"
+    },
+    {
+        "citID": 119,
+        "doctorID": 101010140,
+        "pacienteID": 1010101131,
+        "citFecha": "2007-05-30 00:00:00",
+        "citEspecialidad": "Odontologia",
+        "citDiagnostico": "salvacion"
+    },
+    {
+        "citID": 120,
+        "doctorID": 101010130,
+        "pacienteID": 101010148,
+        "citFecha": "2012-08-19 00:00:00",
+        "citEspecialidad": "General",
+        "citDiagnostico": "enfermo"
+    },
+    {
+        "citID": 121,
+        "doctorID": 101010130,
+        "pacienteID": 101010123,
+        "citFecha": "2001-02-06 00:00:00",
+        "citEspecialidad": "General",
+        "citDiagnostico": "sano"
+    },
+    {
+        "citID": 122,
+        "doctorID": 101010160,
+        "pacienteID": 1010101127,
+        "citFecha": "2008-03-15 00:00:00",
+        "citEspecialidad": "Optometra",
+        "citDiagnostico": "salvacion"
+    },
+    {
+        "citID": 123,
+        "doctorID": 101010150,
+        "pacienteID": 10101012,
+        "citFecha": "2006-09-21 00:00:00",
+        "citEspecialidad": "Psicologia",
+        "citDiagnostico": "salvacion"
+    },
+    {
+        "citID": 124,
+        "doctorID": 101010150,
+        "pacienteID": 1010101127,
+        "citFecha": "2005-05-27 00:00:00",
+        "citEspecialidad": "Psicologia",
+        "citDiagnostico": "salvacion"
+    },
+    {
+        "citID": 125,
+        "doctorID": 101010160,
+        "pacienteID": 1010101174,
+        "citFecha": "2006-07-08 00:00:00",
+        "citEspecialidad": "Optometra",
+        "citDiagnostico": "salvacion"
+    },
+    {
+        "citID": 126,
+        "doctorID": 101010160,
+        "pacienteID": 1010101112,
+        "citFecha": "2010-01-08 00:00:00",
+        "citEspecialidad": "Optometra",
+        "citDiagnostico": "muerte"
+    },
+    {
+        "citID": 127,
+        "doctorID": 101010170,
+        "pacienteID": 1010101181,
+        "citFecha": "2000-05-19 00:00:00",
+        "citEspecialidad": "Cardiologo",
+        "citDiagnostico": "muerte"
+    },
+    {
+        "citID": 128,
+        "doctorID": 101010130,
+        "pacienteID": 1010101131,
+        "citFecha": "2003-05-05 00:00:00",
+        "citEspecialidad": "General",
+        "citDiagnostico": "sano"
+    },
+    {
+        "citID": 129,
+        "doctorID": 101010140,
+        "pacienteID": 1010101132,
+        "citFecha": "2015-05-18 00:00:00",
+        "citEspecialidad": "Odontologia",
+        "citDiagnostico": "enfermo"
+    },
+    {
+        "citID": 130,
+        "doctorID": 101010160,
+        "pacienteID": 101010117,
+        "citFecha": "2008-11-17 00:00:00",
+        "citEspecialidad": "Optometra",
+        "citDiagnostico": "empeorando"
+    },
+    {
+        "citID": 131,
+        "doctorID": 101010170,
+        "pacienteID": 1010101107,
+        "citFecha": "2009-10-11 00:00:00",
+        "citEspecialidad": "Cardiologo",
+        "citDiagnostico": "mejorando"
+    },
+    {
+        "citID": 132,
+        "doctorID": 101010150,
+        "pacienteID": 1010101103,
+        "citFecha": "2010-11-21 00:00:00",
+        "citEspecialidad": "Psicologia",
+        "citDiagnostico": "empeorando"
+    },
+    {
+        "citID": 133,
+        "doctorID": 101010150,
+        "pacienteID": 1010101183,
+        "citFecha": "2001-10-13 00:00:00",
+        "citEspecialidad": "Psicologia",
+        "citDiagnostico": "mejorando"
+    },
+    {
+        "citID": 134,
+        "doctorID": 101010140,
+        "pacienteID": 101010176,
+        "citFecha": "2010-03-13 00:00:00",
+        "citEspecialidad": "Odontologia",
+        "citDiagnostico": "mejorando"
+    },
+    {
+        "citID": 135,
+        "doctorID": 101010160,
+        "pacienteID": 1010101150,
+        "citFecha": "2007-08-18 00:00:00",
+        "citEspecialidad": "Optometra",
+        "citDiagnostico": "sano"
+    },
+    {
+        "citID": 136,
+        "doctorID": 101010150,
+        "pacienteID": 1010101178,
+        "citFecha": "2003-08-14 00:00:00",
+        "citEspecialidad": "Psicologia",
+        "citDiagnostico": "sano"
+    },
+    {
+        "citID": 137,
+        "doctorID": 101010140,
+        "pacienteID": 1010101155,
+        "citFecha": "2015-09-06 00:00:00",
+        "citEspecialidad": "Odontologia",
+        "citDiagnostico": "empeorando"
+    },
+    {
+        "citID": 138,
+        "doctorID": 101010170,
+        "pacienteID": 101010115,
+        "citFecha": "2004-03-10 00:00:00",
+        "citEspecialidad": "Cardiologo",
+        "citDiagnostico": "sano"
+    },
+    {
+        "citID": 139,
+        "doctorID": 101010150,
+        "pacienteID": 1010101192,
+        "citFecha": "2011-10-02 00:00:00",
+        "citEspecialidad": "Psicologia",
+        "citDiagnostico": "muerte"
+    },
+    {
+        "citID": 140,
+        "doctorID": 101010170,
+        "pacienteID": 101010159,
+        "citFecha": "2003-01-16 00:00:00",
+        "citEspecialidad": "Cardiologo",
+        "citDiagnostico": "enfermo"
+    },
+    {
+        "citID": 141,
+        "doctorID": 101010170,
+        "pacienteID": 101010114,
+        "citFecha": "2014-10-28 00:00:00",
+        "citEspecialidad": "Cardiologo",
+        "citDiagnostico": "mejorando"
+    },
+    {
+        "citID": 142,
+        "doctorID": 101010170,
+        "pacienteID": 101010135,
+        "citFecha": "2006-10-10 00:00:00",
+        "citEspecialidad": "Cardiologo",
+        "citDiagnostico": "enfermo"
+    },
+    {
+        "citID": 143,
+        "doctorID": 101010140,
+        "pacienteID": 101010145,
+        "citFecha": "2011-12-15 00:00:00",
+        "citEspecialidad": "Odontologia",
+        "citDiagnostico": "empeorando"
+    },
+    {
+        "citID": 144,
+        "doctorID": 101010150,
+        "pacienteID": 1010101115,
+        "citFecha": "2011-12-15 00:00:00",
+        "citEspecialidad": "Psicologia",
+        "citDiagnostico": "sano"
+    },
+    {
+        "citID": 145,
+        "doctorID": 101010150,
+        "pacienteID": 1010101138,
+        "citFecha": "2013-05-31 00:00:00",
+        "citEspecialidad": "Psicologia",
+        "citDiagnostico": "mejorando"
+    },
+    {
+        "citID": 146,
+        "doctorID": 101010170,
+        "pacienteID": 101010195,
+        "citFecha": "2001-02-05 00:00:00",
+        "citEspecialidad": "Cardiologo",
+        "citDiagnostico": "salvacion"
+    },
+    {
+        "citID": 147,
+        "doctorID": 101010160,
+        "pacienteID": 1010101139,
+        "citFecha": "2011-11-02 00:00:00",
+        "citEspecialidad": "Optometra",
+        "citDiagnostico": "muerte"
+    },
+    {
+        "citID": 148,
+        "doctorID": 101010130,
+        "pacienteID": 101010160,
+        "citFecha": "2008-01-17 00:00:00",
+        "citEspecialidad": "General",
+        "citDiagnostico": "enfermo"
+    },
+    {
+        "citID": 149,
+        "doctorID": 101010170,
+        "pacienteID": 101010145,
+        "citFecha": "2015-01-25 00:00:00",
+        "citEspecialidad": "Cardiologo",
+        "citDiagnostico": "mejorando"
+    },
+    {
+        "citID": 150,
+        "doctorID": 101010150,
+        "pacienteID": 1010101191,
+        "citFecha": "2005-06-19 00:00:00",
+        "citEspecialidad": "Psicologia",
+        "citDiagnostico": "sano"
+    },
+    {
+        "citID": 151,
+        "doctorID": 101010160,
+        "pacienteID": 1010101167,
+        "citFecha": "2008-09-04 00:00:00",
+        "citEspecialidad": "Optometra",
+        "citDiagnostico": "muerte"
+    },
+    {
+        "citID": 152,
+        "doctorID": 101010130,
+        "pacienteID": 101010178,
+        "citFecha": "2009-02-15 00:00:00",
+        "citEspecialidad": "General",
+        "citDiagnostico": "muerte"
+    },
+    {
+        "citID": 153,
+        "doctorID": 101010170,
+        "pacienteID": 1010101141,
+        "citFecha": "2010-10-13 00:00:00",
+        "citEspecialidad": "Cardiologo",
+        "citDiagnostico": "salvacion"
+    },
+    {
+        "citID": 154,
+        "doctorID": 101010150,
+        "pacienteID": 101010151,
+        "citFecha": "2006-09-27 00:00:00",
+        "citEspecialidad": "Psicologia",
+        "citDiagnostico": "sano"
+    },
+    {
+        "citID": 155,
+        "doctorID": 101010150,
+        "pacienteID": 1010101135,
+        "citFecha": "2001-11-22 00:00:00",
+        "citEspecialidad": "Psicologia",
+        "citDiagnostico": "mejorando"
+    },
+    {
+        "citID": 156,
+        "doctorID": 101010150,
+        "pacienteID": 101010194,
+        "citFecha": "2005-06-06 00:00:00",
+        "citEspecialidad": "Psicologia",
+        "citDiagnostico": "muerte"
+    },
+    {
+        "citID": 157,
+        "doctorID": 101010150,
+        "pacienteID": 101010189,
+        "citFecha": "2002-02-23 00:00:00",
+        "citEspecialidad": "Psicologia",
+        "citDiagnostico": "salvacion"
+    },
+    {
+        "citID": 158,
+        "doctorID": 101010140,
+        "pacienteID": 1010101112,
+        "citFecha": "2014-09-20 00:00:00",
+        "citEspecialidad": "Odontologia",
+        "citDiagnostico": "sano"
+    },
+    {
+        "citID": 159,
+        "doctorID": 101010160,
+        "pacienteID": 1010101110,
+        "citFecha": "2009-08-29 00:00:00",
+        "citEspecialidad": "Optometra",
+        "citDiagnostico": "mejorando"
+    },
+    {
+        "citID": 160,
+        "doctorID": 101010130,
+        "pacienteID": 1010101179,
+        "citFecha": "2010-07-15 00:00:00",
+        "citEspecialidad": "General",
+        "citDiagnostico": "sano"
+    },
+    {
+        "citID": 161,
+        "doctorID": 101010150,
+        "pacienteID": 1010101200,
+        "citFecha": "2004-03-06 00:00:00",
+        "citEspecialidad": "Psicologia",
+        "citDiagnostico": "salvacion"
+    },
+    {
+        "citID": 162,
+        "doctorID": 101010150,
+        "pacienteID": 101010151,
+        "citFecha": "2001-08-24 00:00:00",
+        "citEspecialidad": "Psicologia",
+        "citDiagnostico": "salvacion"
+    },
+    {
+        "citID": 163,
+        "doctorID": 101010160,
+        "pacienteID": 1010101142,
+        "citFecha": "2004-09-10 00:00:00",
+        "citEspecialidad": "Optometra",
+        "citDiagnostico": "salvacion"
+    },
+    {
+        "citID": 164,
+        "doctorID": 101010170,
+        "pacienteID": 101010112,
+        "citFecha": "2009-10-16 00:00:00",
+        "citEspecialidad": "Cardiologo",
+        "citDiagnostico": "salvacion"
+    },
+    {
+        "citID": 165,
+        "doctorID": 101010150,
+        "pacienteID": 1010101111,
+        "citFecha": "2005-12-02 00:00:00",
+        "citEspecialidad": "Psicologia",
+        "citDiagnostico": "mejorando"
+    },
+    {
+        "citID": 166,
+        "doctorID": 101010130,
+        "pacienteID": 101010174,
+        "citFecha": "2007-08-06 00:00:00",
+        "citEspecialidad": "General",
+        "citDiagnostico": "enfermo"
+    },
+    {
+        "citID": 167,
+        "doctorID": 101010140,
+        "pacienteID": 1010101191,
+        "citFecha": "2014-01-12 00:00:00",
+        "citEspecialidad": "Odontologia",
+        "citDiagnostico": "empeorando"
+    },
+    {
+        "citID": 168,
+        "doctorID": 101010140,
+        "pacienteID": 101010147,
+        "citFecha": "2012-12-18 00:00:00",
+        "citEspecialidad": "Odontologia",
+        "citDiagnostico": "muerte"
+    },
+    {
+        "citID": 169,
+        "doctorID": 101010170,
+        "pacienteID": 101010166,
+        "citFecha": "2007-12-12 00:00:00",
+        "citEspecialidad": "Cardiologo",
+        "citDiagnostico": "sano"
+    },
+    {
+        "citID": 170,
+        "doctorID": 101010160,
+        "pacienteID": 101010135,
+        "citFecha": "2004-09-04 00:00:00",
+        "citEspecialidad": "Optometra",
+        "citDiagnostico": "sano"
+    },
+    {
+        "citID": 171,
+        "doctorID": 101010150,
+        "pacienteID": 10101015,
+        "citFecha": "2012-02-11 00:00:00",
+        "citEspecialidad": "Psicologia",
+        "citDiagnostico": "empeorando"
+    },
+    {
+        "citID": 172,
+        "doctorID": 101010130,
+        "pacienteID": 1010101131,
+        "citFecha": "1999-12-06 00:00:00",
+        "citEspecialidad": "General",
+        "citDiagnostico": "enfermo"
+    },
+    {
+        "citID": 173,
+        "doctorID": 101010130,
+        "pacienteID": 101010180,
+        "citFecha": "2013-04-13 00:00:00",
+        "citEspecialidad": "General",
+        "citDiagnostico": "mejorando"
+    },
+    {
+        "citID": 174,
+        "doctorID": 101010160,
+        "pacienteID": 101010135,
+        "citFecha": "2007-12-27 00:00:00",
+        "citEspecialidad": "Optometra",
+        "citDiagnostico": "sano"
+    },
+    {
+        "citID": 175,
+        "doctorID": 101010170,
+        "pacienteID": 1010101118,
+        "citFecha": "2012-06-11 00:00:00",
+        "citEspecialidad": "Cardiologo",
+        "citDiagnostico": "empeorando"
+    },
+    {
+        "citID": 176,
+        "doctorID": 101010160,
+        "pacienteID": 101010125,
+        "citFecha": "2000-05-29 00:00:00",
+        "citEspecialidad": "Optometra",
+        "citDiagnostico": "muerte"
+    },
+    {
+        "citID": 177,
+        "doctorID": 101010170,
+        "pacienteID": 1010101194,
+        "citFecha": "2012-07-20 00:00:00",
+        "citEspecialidad": "Cardiologo",
+        "citDiagnostico": "sano"
+    },
+    {
+        "citID": 178,
+        "doctorID": 101010160,
+        "pacienteID": 101010134,
+        "citFecha": "2001-08-24 00:00:00",
+        "citEspecialidad": "Optometra",
+        "citDiagnostico": "muerte"
+    },
+    {
+        "citID": 179,
+        "doctorID": 101010160,
+        "pacienteID": 1010101102,
+        "citFecha": "2007-04-13 00:00:00",
+        "citEspecialidad": "Optometra",
+        "citDiagnostico": "enfermo"
+    },
+    {
+        "citID": 180,
+        "doctorID": 101010140,
+        "pacienteID": 101010153,
+        "citFecha": "2015-07-09 00:00:00",
+        "citEspecialidad": "Odontologia",
+        "citDiagnostico": "enfermo"
+    },
+    {
+        "citID": 181,
+        "doctorID": 101010150,
+        "pacienteID": 1010101145,
+        "citFecha": "2011-01-01 00:00:00",
+        "citEspecialidad": "Psicologia",
+        "citDiagnostico": "sano"
+    },
+    {
+        "citID": 182,
+        "doctorID": 101010140,
+        "pacienteID": 101010117,
+        "citFecha": "2013-05-24 00:00:00",
+        "citEspecialidad": "Odontologia",
+        "citDiagnostico": "empeorando"
+    },
+    {
+        "citID": 183,
+        "doctorID": 101010130,
+        "pacienteID": 101010137,
+        "citFecha": "2004-04-01 00:00:00",
+        "citEspecialidad": "General",
+        "citDiagnostico": "empeorando"
+    },
+    {
+        "citID": 184,
+        "doctorID": 101010170,
+        "pacienteID": 101010127,
+        "citFecha": "2000-09-27 00:00:00",
+        "citEspecialidad": "Cardiologo",
+        "citDiagnostico": "sano"
+    },
+    {
+        "citID": 185,
+        "doctorID": 101010170,
+        "pacienteID": 1010101166,
+        "citFecha": "2014-07-03 00:00:00",
+        "citEspecialidad": "Cardiologo",
+        "citDiagnostico": "sano"
+    },
+    {
+        "citID": 186,
+        "doctorID": 101010160,
+        "pacienteID": 1010101141,
+        "citFecha": "2003-11-17 00:00:00",
+        "citEspecialidad": "Optometra",
+        "citDiagnostico": "muerte"
+    },
+    {
+        "citID": 187,
+        "doctorID": 101010140,
+        "pacienteID": 101010117,
+        "citFecha": "2009-06-09 00:00:00",
+        "citEspecialidad": "Odontologia",
+        "citDiagnostico": "sano"
+    },
+    {
+        "citID": 188,
+        "doctorID": 101010130,
+        "pacienteID": 101010117,
+        "citFecha": "2004-12-05 00:00:00",
+        "citEspecialidad": "General",
+        "citDiagnostico": "salvacion"
+    },
+    {
+        "citID": 189,
+        "doctorID": 101010140,
+        "pacienteID": 1010101131,
+        "citFecha": "2003-08-16 00:00:00",
+        "citEspecialidad": "Odontologia",
+        "citDiagnostico": "muerte"
+    },
+    {
+        "citID": 190,
+        "doctorID": 101010130,
+        "pacienteID": 101010118,
+        "citFecha": "2008-08-25 00:00:00",
+        "citEspecialidad": "General",
+        "citDiagnostico": "sano"
+    },
+    {
+        "citID": 191,
+        "doctorID": 101010140,
+        "pacienteID": 1010101174,
+        "citFecha": "2008-05-11 00:00:00",
+        "citEspecialidad": "Odontologia",
+        "citDiagnostico": "sano"
+    },
+    {
+        "citID": 192,
+        "doctorID": 101010170,
+        "pacienteID": 1010101162,
+        "citFecha": "2010-12-04 00:00:00",
+        "citEspecialidad": "Cardiologo",
+        "citDiagnostico": "sano"
+    },
+    {
+        "citID": 193,
+        "doctorID": 101010150,
+        "pacienteID": 1010101138,
+        "citFecha": "2013-04-17 00:00:00",
+        "citEspecialidad": "Psicologia",
+        "citDiagnostico": "enfermo"
+    },
+    {
+        "citID": 194,
+        "doctorID": 101010140,
+        "pacienteID": 101010131,
+        "citFecha": "2000-06-18 00:00:00",
+        "citEspecialidad": "Odontologia",
+        "citDiagnostico": "enfermo"
+    },
+    {
+        "citID": 195,
+        "doctorID": 101010130,
+        "pacienteID": 1010101132,
+        "citFecha": "2002-11-29 00:00:00",
+        "citEspecialidad": "General",
+        "citDiagnostico": "muerte"
+    },
+    {
+        "citID": 196,
+        "doctorID": 101010160,
+        "pacienteID": 1010101122,
+        "citFecha": "2011-04-26 00:00:00",
+        "citEspecialidad": "Optometra",
+        "citDiagnostico": "sano"
+    },
+    {
+        "citID": 197,
+        "doctorID": 101010150,
+        "pacienteID": 101010183,
+        "citFecha": "2005-03-21 00:00:00",
+        "citEspecialidad": "Psicologia",
+        "citDiagnostico": "muerte"
+    },
+    {
+        "citID": 198,
+        "doctorID": 101010130,
+        "pacienteID": 1010101106,
+        "citFecha": "1999-06-17 00:00:00",
+        "citEspecialidad": "General",
+        "citDiagnostico": "empeorando"
+    },
+    {
+        "citID": 199,
+        "doctorID": 101010150,
+        "pacienteID": 101010176,
+        "citFecha": "2000-02-29 00:00:00",
+        "citEspecialidad": "Psicologia",
+        "citDiagnostico": "enfermo"
+    },
+    {
+        "citID": 200,
+        "doctorID": 101010160,
+        "pacienteID": 101010112,
+        "citFecha": "2012-11-10 00:00:00",
+        "citEspecialidad": "Optometra",
+        "citDiagnostico": "salvacion"
+    },
+    {
+        "citID": 201,
+        "doctorID": 101010150,
+        "pacienteID": 10101011,
+        "citFecha": "2023-06-12 09:00:00",
+        "citEspecialidad": "Higiene oral",
+        "citDiagnostico": null
+    },
+    {
+        "citID": 202,
+        "doctorID": 101010150,
+        "pacienteID": 10101011,
+        "citFecha": "2023-06-14 09:00:00",
+        "citEspecialidad": "Higiene oral",
+        "citDiagnostico": null
+    },
+    {
+        "citID": 203,
+        "doctorID": 101010170,
+        "pacienteID": 10101011,
+        "citFecha": "2023-06-16 08:30:00",
+        "citEspecialidad": "Medicina general",
+        "citDiagnostico": null
+    },
+    {
+        "citID": 204,
+        "doctorID": 101010170,
+        "pacienteID": 101010110,
+        "citFecha": "2023-06-14 08:30:00",
+        "citEspecialidad": "Medicina general",
+        "citDiagnostico": null
+    },
+    {
+        "citID": 205,
+        "doctorID": 101010112,
+        "pacienteID": 101010110,
+        "citFecha": "2023-06-16 10:30:00",
+        "citEspecialidad": "Psicologia",
+        "citDiagnostico": null
+    },
+    {
+        "citID": 206,
+        "doctorID": 101010130,
+        "pacienteID": null,
+        "citFecha": "2023-06-13 09:00:00",
+        "citEspecialidad": "Odontología",
+        "citDiagnostico": null
+    },
+    {
+        "citID": 207,
+        "doctorID": 101010130,
+        "pacienteID": null,
+        "citFecha": "2023-06-14 09:00:00",
+        "citEspecialidad": "Odontología",
+        "citDiagnostico": null
+    },
+    {
+        "citID": 208,
+        "doctorID": 101010130,
+        "pacienteID": null,
+        "citFecha": "2023-06-15 09:00:00",
+        "citEspecialidad": "Odontología",
+        "citDiagnostico": null
+    },
+    {
+        "citID": 209,
+        "doctorID": 101010130,
+        "pacienteID": null,
+        "citFecha": "2023-06-13 08:30:00",
+        "citEspecialidad": "Odontología",
+        "citDiagnostico": null
+    },
+    {
+        "citID": 210,
+        "doctorID": 101010130,
+        "pacienteID": null,
+        "citFecha": "2023-06-14 08:30:00",
+        "citEspecialidad": "Odontología",
+        "citDiagnostico": null
+    },
+    {
+        "citID": 211,
+        "doctorID": 101010130,
+        "pacienteID": null,
+        "citFecha": "2023-06-15 08:30:00",
+        "citEspecialidad": "Odontología",
+        "citDiagnostico": null
+    },
+    {
+        "citID": 212,
+        "doctorID": 101010140,
+        "pacienteID": null,
+        "citFecha": "2023-06-13 10:30:00",
+        "citEspecialidad": "Odontología",
+        "citDiagnostico": null
+    },
+    {
+        "citID": 213,
+        "doctorID": 101010140,
+        "pacienteID": null,
+        "citFecha": "2023-06-14 10:30:00",
+        "citEspecialidad": "Odontología",
+        "citDiagnostico": null
+    },
+    {
+        "citID": 214,
+        "doctorID": 101010140,
+        "pacienteID": null,
+        "citFecha": "2023-06-15 10:30:00",
+        "citEspecialidad": "Odontología",
+        "citDiagnostico": null
+    },
+    {
+        "citID": 215,
+        "doctorID": 101010140,
+        "pacienteID": null,
+        "citFecha": "2023-06-13 10:30:00",
+        "citEspecialidad": "Odontología",
+        "citDiagnostico": null
+    },
+    {
+        "citID": 216,
+        "doctorID": 101010140,
+        "pacienteID": null,
+        "citFecha": "2023-06-14 10:30:00",
+        "citEspecialidad": "Odontología",
+        "citDiagnostico": null
+    },
+    {
+        "citID": 217,
+        "doctorID": 101010140,
+        "pacienteID": null,
+        "citFecha": "2023-06-15 10:30:00",
+        "citEspecialidad": "Odontología",
+        "citDiagnostico": null
+    },
+    {
+        "citID": 218,
+        "doctorID": 101010150,
+        "pacienteID": null,
+        "citFecha": "2023-06-13 10:30:00",
+        "citEspecialidad": "Higiene oral",
+        "citDiagnostico": null
+    },
+    {
+        "citID": 219,
+        "doctorID": 101010150,
+        "pacienteID": null,
+        "citFecha": "2023-06-14 10:30:00",
+        "citEspecialidad": "Higiene oral",
+        "citDiagnostico": null
+    },
+    {
+        "citID": 220,
+        "doctorID": 101010150,
+        "pacienteID": null,
+        "citFecha": "2023-06-15 10:30:00",
+        "citEspecialidad": "Higiene oral",
+        "citDiagnostico": null
+    },
+    {
+        "citID": 221,
+        "doctorID": 101010150,
+        "pacienteID": null,
+        "citFecha": "2023-06-13 11:00:00",
+        "citEspecialidad": "Higiene oral",
+        "citDiagnostico": null
+    },
+    {
+        "citID": 222,
+        "doctorID": 101010150,
+        "pacienteID": null,
+        "citFecha": "2023-06-14 11:00:00",
+        "citEspecialidad": "Higiene oral",
+        "citDiagnostico": null
+    },
+    {
+        "citID": 223,
+        "doctorID": 101010150,
+        "pacienteID": null,
+        "citFecha": "2023-06-15 11:00:00",
+        "citEspecialidad": "Higiene oral",
+        "citDiagnostico": null
+    },
+    {
+        "citID": 224,
+        "doctorID": 101010160,
+        "pacienteID": null,
+        "citFecha": "2023-06-13 09:00:00",
+        "citEspecialidad": "Higiene oral",
+        "citDiagnostico": null
+    },
+    {
+        "citID": 225,
+        "doctorID": 101010160,
+        "pacienteID": null,
+        "citFecha": "2023-06-14 09:00:00",
+        "citEspecialidad": "Higiene oral",
+        "citDiagnostico": null
+    },
+    {
+        "citID": 226,
+        "doctorID": 101010160,
+        "pacienteID": null,
+        "citFecha": "2023-06-15 09:00:00",
+        "citEspecialidad": "Higiene oral",
+        "citDiagnostico": null
+    },
+    {
+        "citID": 227,
+        "doctorID": 101010160,
+        "pacienteID": null,
+        "citFecha": "2023-06-13 10:30:00",
+        "citEspecialidad": "Higiene oral",
+        "citDiagnostico": null
+    },
+    {
+        "citID": 228,
+        "doctorID": 101010160,
+        "pacienteID": null,
+        "citFecha": "2023-06-14 10:30:00",
+        "citEspecialidad": "Higiene oral",
+        "citDiagnostico": null
+    },
+    {
+        "citID": 229,
+        "doctorID": 101010160,
+        "pacienteID": null,
+        "citFecha": "2023-06-15 10:30:00",
+        "citEspecialidad": "Higiene oral",
+        "citDiagnostico": null
+    },
+    {
+        "citID": 230,
+        "doctorID": 101010170,
+        "pacienteID": null,
+        "citFecha": "2023-06-13 10:30:00",
+        "citEspecialidad": "Medicina general",
+        "citDiagnostico": null
+    },
+    {
+        "citID": 231,
+        "doctorID": 101010170,
+        "pacienteID": null,
+        "citFecha": "2023-06-14 10:30:00",
+        "citEspecialidad": "Medicina general",
+        "citDiagnostico": null
+    },
+    {
+        "citID": 232,
+        "doctorID": 101010170,
+        "pacienteID": null,
+        "citFecha": "2023-06-15 10:30:00",
+        "citEspecialidad": "Medicina general",
+        "citDiagnostico": null
+    },
+    {
+        "citID": 233,
+        "doctorID": 101010170,
+        "pacienteID": null,
+        "citFecha": "2023-06-13 09:00:00",
+        "citEspecialidad": "Medicina general",
+        "citDiagnostico": null
+    },
+    {
+        "citID": 234,
+        "doctorID": 101010170,
+        "pacienteID": null,
+        "citFecha": "2023-06-14 09:00:00",
+        "citEspecialidad": "Medicina general",
+        "citDiagnostico": null
+    },
+    {
+        "citID": 235,
+        "doctorID": 101010170,
+        "pacienteID": null,
+        "citFecha": "2023-06-15 09:00:00",
+        "citEspecialidad": "Medicina general",
+        "citDiagnostico": null
+    },
+    {
+        "citID": 236,
+        "doctorID": 101010180,
+        "pacienteID": null,
+        "citFecha": "2023-06-13 10:30:00",
+        "citEspecialidad": "Medicina general",
+        "citDiagnostico": null
+    },
+    {
+        "citID": 237,
+        "doctorID": 101010180,
+        "pacienteID": null,
+        "citFecha": "2023-06-14 10:30:00",
+        "citEspecialidad": "Medicina general",
+        "citDiagnostico": null
+    },
+    {
+        "citID": 238,
+        "doctorID": 101010180,
+        "pacienteID": null,
+        "citFecha": "2023-06-15 10:30:00",
+        "citEspecialidad": "Medicina general",
+        "citDiagnostico": null
+    },
+    {
+        "citID": 239,
+        "doctorID": 101010180,
+        "pacienteID": null,
+        "citFecha": "2023-06-13 11:00:00",
+        "citEspecialidad": "Medicina general",
+        "citDiagnostico": null
+    },
+    {
+        "citID": 240,
+        "doctorID": 101010180,
+        "pacienteID": null,
+        "citFecha": "2023-06-14 11:00:00",
+        "citEspecialidad": "Medicina general",
+        "citDiagnostico": null
+    },
+    {
+        "citID": 241,
+        "doctorID": 101010180,
+        "pacienteID": null,
+        "citFecha": "2023-06-15 11:00:00",
+        "citEspecialidad": "Medicina general",
+        "citDiagnostico": null
+    },
+    {
+        "citID": 242,
+        "doctorID": 101010190,
+        "pacienteID": null,
+        "citFecha": "2023-06-13 11:00:00",
+        "citEspecialidad": "Optometria",
+        "citDiagnostico": null
+    },
+    {
+        "citID": 243,
+        "doctorID": 101010190,
+        "pacienteID": null,
+        "citFecha": "2023-06-14 11:00:00",
+        "citEspecialidad": "Optometria",
+        "citDiagnostico": null
+    },
+    {
+        "citID": 244,
+        "doctorID": 101010190,
+        "pacienteID": null,
+        "citFecha": "2023-06-15 11:00:00",
+        "citEspecialidad": "Optometria",
+        "citDiagnostico": null
+    },
+    {
+        "citID": 245,
+        "doctorID": 101010190,
+        "pacienteID": null,
+        "citFecha": "2023-06-13 10:30:00",
+        "citEspecialidad": "Optometria",
+        "citDiagnostico": null
+    },
+    {
+        "citID": 246,
+        "doctorID": 101010190,
+        "pacienteID": null,
+        "citFecha": "2023-06-14 10:30:00",
+        "citEspecialidad": "Optometria",
+        "citDiagnostico": null
+    },
+    {
+        "citID": 247,
+        "doctorID": 101010190,
+        "pacienteID": null,
+        "citFecha": "2023-06-15 10:30:00",
+        "citEspecialidad": "Optometria",
+        "citDiagnostico": null
+    },
+    {
+        "citID": 248,
+        "doctorID": 101010111,
+        "pacienteID": null,
+        "citFecha": "2023-06-13 11:00:00",
+        "citEspecialidad": "Anticoncepcion",
+        "citDiagnostico": null
+    },
+    {
+        "citID": 249,
+        "doctorID": 101010111,
+        "pacienteID": null,
+        "citFecha": "2023-06-14 11:00:00",
+        "citEspecialidad": "Anticoncepcion",
+        "citDiagnostico": null
+    },
+    {
+        "citID": 250,
+        "doctorID": 101010111,
+        "pacienteID": null,
+        "citFecha": "2023-06-15 11:00:00",
+        "citEspecialidad": "Anticoncepcion",
+        "citDiagnostico": null
+    },
+    {
+        "citID": 251,
+        "doctorID": 101010111,
+        "pacienteID": null,
+        "citFecha": "2023-06-13 10:30:00",
+        "citEspecialidad": "Anticoncepcion",
+        "citDiagnostico": null
+    },
+    {
+        "citID": 252,
+        "doctorID": 101010111,
+        "pacienteID": null,
+        "citFecha": "2023-06-14 10:30:00",
+        "citEspecialidad": "Anticoncepcion",
+        "citDiagnostico": null
+    },
+    {
+        "citID": 253,
+        "doctorID": 101010111,
+        "pacienteID": null,
+        "citFecha": "2023-06-15 10:30:00",
+        "citEspecialidad": "Anticoncepcion",
+        "citDiagnostico": null
+    },
+    {
+        "citID": 254,
+        "doctorID": 101010112,
+        "pacienteID": null,
+        "citFecha": "2023-06-13 09:00:00",
+        "citEspecialidad": "Psicologia",
+        "citDiagnostico": null
+    },
+    {
+        "citID": 255,
+        "doctorID": 101010112,
+        "pacienteID": null,
+        "citFecha": "2023-06-14 09:00:00",
+        "citEspecialidad": "Psicologia",
+        "citDiagnostico": null
+    },
+    {
+        "citID": 256,
+        "doctorID": 101010112,
+        "pacienteID": null,
+        "citFecha": "2023-06-15 09:00:00",
+        "citEspecialidad": "Psicologia",
+        "citDiagnostico": null
+    },
+    {
+        "citID": 257,
+        "doctorID": 101010112,
+        "pacienteID": null,
+        "citFecha": "2023-06-13 10:30:00",
+        "citEspecialidad": "Psicologia",
+        "citDiagnostico": null
+    },
+    {
+        "citID": 258,
+        "doctorID": 101010112,
+        "pacienteID": null,
+        "citFecha": "2023-06-14 10:30:00",
+        "citEspecialidad": "Psicologia",
+        "citDiagnostico": null
+    },
+    {
+        "citID": 259,
+        "doctorID": 101010112,
+        "pacienteID": null,
+        "citFecha": "2023-06-15 10:30:00",
+        "citEspecialidad": "Psicologia",
+        "citDiagnostico": null
+    },
+    {
+        "citID": 260,
+        "doctorID": 101010113,
+        "pacienteID": null,
+        "citFecha": "2023-06-13 08:30:00",
+        "citEspecialidad": "Psicologia",
+        "citDiagnostico": null
+    },
+    {
+        "citID": 261,
+        "doctorID": 101010113,
+        "pacienteID": null,
+        "citFecha": "2023-06-14 08:30:00",
+        "citEspecialidad": "Psicologia",
+        "citDiagnostico": null
+    },
+    {
+        "citID": 262,
+        "doctorID": 101010113,
+        "pacienteID": null,
+        "citFecha": "2023-06-15 08:30:00",
+        "citEspecialidad": "Psicologia",
+        "citDiagnostico": null
+    },
+    {
+        "citID": 263,
+        "doctorID": 101010113,
+        "pacienteID": null,
+        "citFecha": "2023-06-13 08:30:00",
+        "citEspecialidad": "Psicologia",
+        "citDiagnostico": null
+    },
+    {
+        "citID": 264,
+        "doctorID": 101010113,
+        "pacienteID": null,
+        "citFecha": "2023-06-14 08:30:00",
+        "citEspecialidad": "Psicologia",
+        "citDiagnostico": null
+    },
+    {
+        "citID": 265,
+        "doctorID": 101010113,
+        "pacienteID": null,
+        "citFecha": "2023-06-15 08:30:00",
+        "citEspecialidad": "Psicologia",
+        "citDiagnostico": null
+    },
+    {
+        "citID": 266,
+        "doctorID": 101010114,
+        "pacienteID": null,
+        "citFecha": "2023-06-13 08:30:00",
+        "citEspecialidad": "Vacunacion",
+        "citDiagnostico": null
+    },
+    {
+        "citID": 267,
+        "doctorID": 101010114,
+        "pacienteID": null,
+        "citFecha": "2023-06-14 08:30:00",
+        "citEspecialidad": "Vacunacion",
+        "citDiagnostico": null
+    },
+    {
+        "citID": 268,
+        "doctorID": 101010114,
+        "pacienteID": null,
+        "citFecha": "2023-06-15 08:30:00",
+        "citEspecialidad": "Vacunacion",
+        "citDiagnostico": null
+    },
+    {
+        "citID": 269,
+        "doctorID": 101010114,
+        "pacienteID": null,
+        "citFecha": "2023-06-13 08:30:00",
+        "citEspecialidad": "Vacunacion",
+        "citDiagnostico": null
+    },
+    {
+        "citID": 270,
+        "doctorID": 101010114,
+        "pacienteID": null,
+        "citFecha": "2023-06-14 08:30:00",
+        "citEspecialidad": "Vacunacion",
+        "citDiagnostico": null
+    },
+    {
+        "citID": 271,
+        "doctorID": 101010114,
+        "pacienteID": null,
+        "citFecha": "2023-06-15 08:30:00",
+        "citEspecialidad": "Vacunacion",
+        "citDiagnostico": null
+    },
+    {
+        "citID": 272,
+        "doctorID": 101010115,
+        "pacienteID": null,
+        "citFecha": "2023-06-13 10:30:00",
+        "citEspecialidad": "Nutrición",
+        "citDiagnostico": null
+    },
+    {
+        "citID": 273,
+        "doctorID": 101010115,
+        "pacienteID": null,
+        "citFecha": "2023-06-14 10:30:00",
+        "citEspecialidad": "Nutrición",
+        "citDiagnostico": null
+    },
+    {
+        "citID": 274,
+        "doctorID": 101010115,
+        "pacienteID": null,
+        "citFecha": "2023-06-15 10:30:00",
+        "citEspecialidad": "Nutrición",
+        "citDiagnostico": null
+    },
+    {
+        "citID": 275,
+        "doctorID": 101010115,
+        "pacienteID": null,
+        "citFecha": "2023-06-13 10:30:00",
+        "citEspecialidad": "Nutrición",
+        "citDiagnostico": null
+    },
+    {
+        "citID": 276,
+        "doctorID": 101010115,
+        "pacienteID": null,
+        "citFecha": "2023-06-14 10:30:00",
+        "citEspecialidad": "Nutrición",
+        "citDiagnostico": null
+    },
+    {
+        "citID": 277,
+        "doctorID": 101010115,
+        "pacienteID": null,
+        "citFecha": "2023-06-15 10:30:00",
+        "citEspecialidad": "Nutrición",
+        "citDiagnostico": null
+    }
+]

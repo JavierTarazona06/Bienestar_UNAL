@@ -1,0 +1,352 @@
+[
+    {
+        "citID": 1,
+        "evaPeso": 59,
+        "evaEstatura": 170,
+        "evaRitmoCardiaco": 91,
+        "evaVision": 41
+    },
+    {
+        "citID": 2,
+        "evaPeso": 66,
+        "evaEstatura": 150,
+        "evaRitmoCardiaco": 52,
+        "evaVision": 17
+    },
+    {
+        "citID": 3,
+        "evaPeso": 65,
+        "evaEstatura": 170,
+        "evaRitmoCardiaco": 84,
+        "evaVision": 56
+    },
+    {
+        "citID": 4,
+        "evaPeso": 119,
+        "evaEstatura": 190,
+        "evaRitmoCardiaco": 126,
+        "evaVision": 96
+    },
+    {
+        "citID": 5,
+        "evaPeso": 85,
+        "evaEstatura": 200,
+        "evaRitmoCardiaco": 96,
+        "evaVision": 3
+    },
+    {
+        "citID": 6,
+        "evaPeso": 47,
+        "evaEstatura": 150,
+        "evaRitmoCardiaco": 40,
+        "evaVision": 43
+    },
+    {
+        "citID": 7,
+        "evaPeso": 79,
+        "evaEstatura": 160,
+        "evaRitmoCardiaco": 117,
+        "evaVision": 10
+    },
+    {
+        "citID": 8,
+        "evaPeso": 20,
+        "evaEstatura": 180,
+        "evaRitmoCardiaco": 100,
+        "evaVision": 33
+    },
+    {
+        "citID": 9,
+        "evaPeso": 60,
+        "evaEstatura": 180,
+        "evaRitmoCardiaco": 64,
+        "evaVision": 78
+    },
+    {
+        "citID": 10,
+        "evaPeso": 50,
+        "evaEstatura": 220,
+        "evaRitmoCardiaco": 51,
+        "evaVision": 47
+    },
+    {
+        "citID": 11,
+        "evaPeso": 90,
+        "evaEstatura": 180,
+        "evaRitmoCardiaco": 74,
+        "evaVision": 22
+    },
+    {
+        "citID": 12,
+        "evaPeso": 116,
+        "evaEstatura": 160,
+        "evaRitmoCardiaco": 85,
+        "evaVision": 44
+    },
+    {
+        "citID": 13,
+        "evaPeso": 97,
+        "evaEstatura": 180,
+        "evaRitmoCardiaco": 125,
+        "evaVision": 21
+    },
+    {
+        "citID": 14,
+        "evaPeso": 22,
+        "evaEstatura": 190,
+        "evaRitmoCardiaco": 60,
+        "evaVision": 45
+    },
+    {
+        "citID": 15,
+        "evaPeso": 41,
+        "evaEstatura": 180,
+        "evaRitmoCardiaco": 102,
+        "evaVision": 15
+    },
+    {
+        "citID": 16,
+        "evaPeso": 104,
+        "evaEstatura": 200,
+        "evaRitmoCardiaco": 56,
+        "evaVision": 14
+    },
+    {
+        "citID": 17,
+        "evaPeso": 96,
+        "evaEstatura": 180,
+        "evaRitmoCardiaco": 51,
+        "evaVision": 68
+    },
+    {
+        "citID": 18,
+        "evaPeso": 23,
+        "evaEstatura": 180,
+        "evaRitmoCardiaco": 116,
+        "evaVision": 37
+    },
+    {
+        "citID": 19,
+        "evaPeso": 30,
+        "evaEstatura": 200,
+        "evaRitmoCardiaco": 106,
+        "evaVision": 76
+    },
+    {
+        "citID": 20,
+        "evaPeso": 59,
+        "evaEstatura": 180,
+        "evaRitmoCardiaco": 103,
+        "evaVision": 43
+    },
+    {
+        "citID": 21,
+        "evaPeso": 101,
+        "evaEstatura": 170,
+        "evaRitmoCardiaco": 43,
+        "evaVision": 31
+    },
+    {
+        "citID": 22,
+        "evaPeso": 36,
+        "evaEstatura": 150,
+        "evaRitmoCardiaco": 124,
+        "evaVision": 37
+    },
+    {
+        "citID": 23,
+        "evaPeso": 60,
+        "evaEstatura": 210,
+        "evaRitmoCardiaco": 118,
+        "evaVision": 30
+    },
+    {
+        "citID": 24,
+        "evaPeso": 111,
+        "evaEstatura": 150,
+        "evaRitmoCardiaco": 117,
+        "evaVision": 26
+    },
+    {
+        "citID": 25,
+        "evaPeso": 64,
+        "evaEstatura": 160,
+        "evaRitmoCardiaco": 103,
+        "evaVision": 64
+    },
+    {
+        "citID": 26,
+        "evaPeso": 75,
+        "evaEstatura": 200,
+        "evaRitmoCardiaco": 74,
+        "evaVision": 45
+    },
+    {
+        "citID": 27,
+        "evaPeso": 64,
+        "evaEstatura": 200,
+        "evaRitmoCardiaco": 45,
+        "evaVision": 20
+    },
+    {
+        "citID": 28,
+        "evaPeso": 99,
+        "evaEstatura": 170,
+        "evaRitmoCardiaco": 106,
+        "evaVision": 43
+    },
+    {
+        "citID": 29,
+        "evaPeso": 101,
+        "evaEstatura": 210,
+        "evaRitmoCardiaco": 110,
+        "evaVision": 51
+    },
+    {
+        "citID": 30,
+        "evaPeso": 32,
+        "evaEstatura": 160,
+        "evaRitmoCardiaco": 93,
+        "evaVision": 68
+    },
+    {
+        "citID": 31,
+        "evaPeso": 50,
+        "evaEstatura": 160,
+        "evaRitmoCardiaco": 91,
+        "evaVision": 70
+    },
+    {
+        "citID": 32,
+        "evaPeso": 63,
+        "evaEstatura": 160,
+        "evaRitmoCardiaco": 55,
+        "evaVision": 60
+    },
+    {
+        "citID": 33,
+        "evaPeso": 106,
+        "evaEstatura": 160,
+        "evaRitmoCardiaco": 103,
+        "evaVision": 20
+    },
+    {
+        "citID": 34,
+        "evaPeso": 97,
+        "evaEstatura": 160,
+        "evaRitmoCardiaco": 73,
+        "evaVision": 22
+    },
+    {
+        "citID": 35,
+        "evaPeso": 60,
+        "evaEstatura": 150,
+        "evaRitmoCardiaco": 111,
+        "evaVision": 23
+    },
+    {
+        "citID": 36,
+        "evaPeso": 64,
+        "evaEstatura": 170,
+        "evaRitmoCardiaco": 75,
+        "evaVision": 8
+    },
+    {
+        "citID": 37,
+        "evaPeso": 112,
+        "evaEstatura": 200,
+        "evaRitmoCardiaco": 111,
+        "evaVision": 25
+    },
+    {
+        "citID": 38,
+        "evaPeso": 46,
+        "evaEstatura": 180,
+        "evaRitmoCardiaco": 90,
+        "evaVision": 30
+    },
+    {
+        "citID": 39,
+        "evaPeso": 78,
+        "evaEstatura": 150,
+        "evaRitmoCardiaco": 122,
+        "evaVision": 18
+    },
+    {
+        "citID": 40,
+        "evaPeso": 74,
+        "evaEstatura": 210,
+        "evaRitmoCardiaco": 66,
+        "evaVision": 60
+    },
+    {
+        "citID": 41,
+        "evaPeso": 24,
+        "evaEstatura": 190,
+        "evaRitmoCardiaco": 45,
+        "evaVision": 15
+    },
+    {
+        "citID": 42,
+        "evaPeso": 114,
+        "evaEstatura": 170,
+        "evaRitmoCardiaco": 68,
+        "evaVision": 64
+    },
+    {
+        "citID": 43,
+        "evaPeso": 93,
+        "evaEstatura": 200,
+        "evaRitmoCardiaco": 126,
+        "evaVision": 0
+    },
+    {
+        "citID": 44,
+        "evaPeso": 71,
+        "evaEstatura": 180,
+        "evaRitmoCardiaco": 68,
+        "evaVision": 0
+    },
+    {
+        "citID": 45,
+        "evaPeso": 94,
+        "evaEstatura": 180,
+        "evaRitmoCardiaco": 84,
+        "evaVision": 0
+    },
+    {
+        "citID": 46,
+        "evaPeso": 74,
+        "evaEstatura": 200,
+        "evaRitmoCardiaco": 79,
+        "evaVision": 1
+    },
+    {
+        "citID": 47,
+        "evaPeso": 77,
+        "evaEstatura": 180,
+        "evaRitmoCardiaco": 107,
+        "evaVision": 0
+    },
+    {
+        "citID": 48,
+        "evaPeso": 21,
+        "evaEstatura": 170,
+        "evaRitmoCardiaco": 75,
+        "evaVision": 1
+    },
+    {
+        "citID": 49,
+        "evaPeso": 89,
+        "evaEstatura": 220,
+        "evaRitmoCardiaco": 103,
+        "evaVision": 64
+    },
+    {
+        "citID": 50,
+        "evaPeso": 38,
+        "evaEstatura": 190,
+        "evaRitmoCardiaco": 83,
+        "evaVision": 16
+    }
+]
