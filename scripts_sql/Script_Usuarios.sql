@@ -3,13 +3,27 @@ CREATE USER 'juanEstudiante'@'%' IDENTIFIED BY '1234';
 GRANT 'estudiante' to 'juanEstudiante'@'%';
 SET DEFAULT ROLE 'estudiante' to 'juanEstudiante'@'%';
 
+DROP USER IF EXISTS 'mariaEstudiante'@'%';
+CREATE USER 'mariaEstudiante'@'%' IDENTIFIED BY '1234';
+GRANT 'estudiante' to 'mariaEstudiante'@'%';
+SET DEFAULT ROLE 'estudiante' to 'mariaEstudiante'@'%';
+
+DROP USER IF EXISTS 'jeisonSecretario'@'%';
+CREATE USER 'jeisonSecretario'@'%' IDENTIFIED BY '1234';
+GRANT 'secretaria' to 'jeisonSecretario'@'%';
+SET DEFAULT ROLE 'secretaria' to 'jeisonSecretario'@'%';
+
+/*
+show grants for 'admin';
+show grants for 'estudiante';
+show grants for 'juanEstudiante';
+show grants for 'mariaEstudiante';
+show grants for 'jeisonSecretario';
+*/
+
 drop user if exists 'mariaPersona'@'%';
 create user 'mariaPersona'@'%' 
 	identified by 'root@1234' default role 'no_estudiante'@'%';
-
-drop user if exists 'jeisonSecretario'@'%';
-create user 'jeisonSecretario'@'%' 
-	identified by 'root@1234' default role 'secretaria'@'%';
 
 drop user if exists 'elizabethGodDirEco'@'%';
 create user 'elizabethGodDirEco'@'%'
