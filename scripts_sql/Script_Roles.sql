@@ -77,6 +77,7 @@ grant execute on procedure sp_convocatoriagestionalimentaria_filtro to 'estudian
 grant execute on procedure sp_convocatoriagestionalojamiento_filtro to 'estudiante'@'%';
 grant execute on procedure sp_convocatoriagestioneconomica_filtro to 'estudiante'@'%';
 grant execute on procedure sp_convocatoriagestiontransporte_filtro to 'estudiante'@'%';
+grant execute on procedure sp_conv_inscritas_est to 'estudiante'@'%';
 
 grant execute on procedure sp_info_factura_per to 'estudiante'@'%';
 grant execute on procedure sp_productos_tienda_nombre to 'estudiante'@'%';

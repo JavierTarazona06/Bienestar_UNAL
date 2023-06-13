@@ -632,7 +632,7 @@ CREATE PROCEDURE sp_actividadcorresp_est(in id int)
 	END $$
 DELIMITER ;
 
-#call sp_actividadcorresp_est(101010118);
+#call sp_actividadcorresp_est(101010124);
 
 # 3. El estudiante puede consultar la cantidad de horas pendientes de corresponsabilidad
 
@@ -662,7 +662,6 @@ DELIMITER ;
 
 #call sp_horas_corresponsabilidad_est(10101014);
 
-
 #4. El estudiante desea conocer su PBM
 
 drop function if exists pbm_est;
@@ -670,7 +669,7 @@ DELIMITER $$
 CREATE FUNCTION pbm_est(id_est int)
 		RETURNS int
         BEGIN
-			DECLARE pbm INT default 0;
+			DECLARE pbm INT default 1000;
             select estPBM into pbm 
 				from estudiante where estID=id_est;
 		RETURN pbm;
@@ -829,7 +828,7 @@ CREATE PROCEDURE sp_convocatoriagestionalimentaria_filtro(in id_est int, in comi
                 end if;
             end if;
 		else
-			SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'El PBM del estaudiante es mayor que 25: No tiene acceso de convocatorias de gestión alimentaria';
+			SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'El PBM del estudiante es mayor que 25: No tiene acceso de convocatorias de gestión alimentaria';
         end if;
 	END $$
 DELIMITER ;
@@ -839,6 +838,8 @@ call sp_convocatoriagestionalimentaria_filtro(101010110,'Desayuno','Comedor cent
 call sp_convocatoriagestionalimentaria_filtro(101010110, null,'Comedor central');
 call sp_convocatoriagestionalimentaria_filtro(101010110,'Desayuno',null);
 call sp_convocatoriagestionalimentaria_filtro(101010110,null,null);
+call sp_convocatoriagestionalimentaria_filtro(10101012,null,null);
+call sp_convocatoriagestionalimentaria_filtro(0,null,null);
 */
 
 #5.3 La convocatoria de gestión alojamiento solo se puede acceder con PBM < 25
@@ -1207,6 +1208,18 @@ call sp_insertar_est_tm_conv_est(101010113, 2 ,'2023-07-13');
 select * from estudiante_toma_convocatoria;
 #delete from estudiante_toma_convocatoria where conv_id=210 and MONTH(fecha_est_tm_conv)>6;
 */
+
+#El estudiante quiere conocer las convocatorias a las que pertenece:
+
+drop procedure if exists sp_conv_inscritas_est;
+DELIMITER $$
+CREATE PROCEDURE sp_conv_inscritas_est(in id_est int)
+	BEGIN
+		select * from vw_info_convocatoria_estudiante where estID=id_est;
+	END $$
+DELIMITER ;
+
+#call sp_conv_inscritas_est(10101019);
 
 # 10. El secretario/dirección quieren actualizar el nombre las convoctarias
 
