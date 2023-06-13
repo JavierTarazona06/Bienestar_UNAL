@@ -1521,8 +1521,8 @@ CREATE procedure sp_eliminar_factura_usuario_tiempo(in cliente_id int, in mes in
         if id_fact is not null then
 			delete from factura_producto where factID=id_fact;
             delete from factura where factID=id_fact and clienteID=cliente_id;
-        end if;
-        if mes is null and ano is null then
+		else
+		if mes is null and ano is null then
 			delete from factura_producto where factID in (select factID from factura where clienteID=cliente_id);
 			delete from factura where clienteID=cliente_id;
         else
@@ -1556,6 +1556,7 @@ CREATE procedure sp_eliminar_factura_usuario_tiempo(in cliente_id int, in mes in
 						and clienteID=cliente_id;
 				end if;
 			end if;
+		end if;
         end if;
 		commit;
     END $$
