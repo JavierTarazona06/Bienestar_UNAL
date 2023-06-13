@@ -248,6 +248,7 @@ grant execute on procedure sp_eliminar_factura_usuario_tiempo to 'direccion_econ
 #-------------------------------------------------------------------------------------------------------
 #													Valeria
 #--------------------------------------------------------------------------------------------------------
+Use Bienestar;
 GRANT EXECUTE ON PROCEDURE pas_citas_disponibles TO 'estudiante'@'%';
 GRANT EXECUTE ON PROCEDURE pas_citas_agendadas TO 'estudiante'@'%';
 GRANT EXECUTE ON PROCEDURE pas_delete_cita_medica TO 'estudiante'@'%';
@@ -256,9 +257,11 @@ GRANT EXECUTE ON PROCEDURE pas_check_resultados TO 'estudiante'@'%';
 GRANT EXECUTE ON PROCEDURE pas_view_incapacidad TO 'estudiante'@'%';
 GRANT EXECUTE ON PROCEDURE pas_add_incapacidad TO 'estudiante'@'%';
 GRANT EXECUTE ON PROCEDURE pas_edit_incapacidad TO 'estudiante'@'%';
+GRANT EXECUTE ON PROCEDURE pas_remove_incapacidad TO 'estudiante'@'%';
 GRANT EXECUTE ON PROCEDURE pas_view_atencionsalud TO 'estudiante'@'%';
 GRANT EXECUTE ON PROCEDURE pas_add_atencionsalud TO 'estudiante'@'%';
 GRANT EXECUTE ON PROCEDURE pas_edit_atencionsalud TO 'estudiante'@'%';
+GRANT EXECUTE ON PROCEDURE pas_remove_atencionsalud TO 'estudiante'@'%';
 GRANT EXECUTE ON PROCEDURE pas_view_perfilriesgo TO 'estudiante'@'%';
 # -----------------------------------------------------------------------------
 GRANT EXECUTE ON PROCEDURE pas_citas_disponibles TO 'no_estudiante'@'%';
