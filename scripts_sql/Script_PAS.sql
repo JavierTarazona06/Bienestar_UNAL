@@ -1362,7 +1362,7 @@ select * from producto_tiendaun;
 
 drop procedure if exists insertar_factura;
 DELIMITER $$
-CREATE procedure insertar_factura(in detalle varchar(100), in tieID int, in clienteID int, out fact_id int)
+CREATE procedure insertar_factura(in detalle varchar(100), in tieID int, in clienteID int)
 	BEGIN
 		declare cur_date date;
         declare cur_time time;
@@ -1370,15 +1370,14 @@ CREATE procedure insertar_factura(in detalle varchar(100), in tieID int, in clie
         SELECT CURRENT_DATE() into cur_date;
         SELECT CURTIME() into cur_time;
 		insert into factura (factFecha,factHora,factDetalle,tieID,clienteID) values (cur_date, cur_time, detalle, tieID, clienteID);
-        select MAX(factID) into fact_id from factura;
         commit;
     END $$
 DELIMITER ;
 
 /*
-call insertar_factura('N.A', 1, 101010119, @fact_id);
+call insertar_factura('N.A', 1, 101010119);
 select * from factura;
-delete from factura where factID=@fact_id;
+delete from factura where factID=21;
 */
 
 #15.1 Persona/Estudiante/Secretario/Direccion Insertar productos en factura
@@ -1516,9 +1515,13 @@ rollback;
 
 drop procedure if exists sp_eliminar_factura_usuario_tiempo;
 DELIMITER $$
-CREATE procedure sp_eliminar_factura_usuario_tiempo(in cliente_id int, in mes int, in ano int)
+CREATE procedure sp_eliminar_factura_usuario_tiempo(in cliente_id int, in mes int, in ano int, in id_fact int)
 	BEGIN
 		#start transaction;
+        if factID is not null then
+			delete from factura_producto where factID=id_fact and clienteID=cliente_id;
+            delete from factura where factID=id_fact and clienteID=cliente_id;
+        end if;
         if mes is null and ano is null then
 			delete from factura_producto where factID in (select factID from factura where clienteID=cliente_id);
 			delete from factura where clienteID=cliente_id;
