@@ -122,8 +122,8 @@ insert_to_mongo(collection,"modelo_nosql\\area_deporte\\torneo_interno.json")
 collection = db.ambulancia
 insert_to_mongo(collection, "modelo_nosql\\area_salud\\ambulancia.json")
 
-collection = db.atencionsalud
-insert_to_mongo(collection, "modelo_nosql\\area_salud\\atencionsalud.json")
+collection = db.atencionensalud
+insert_to_mongo(collection, "modelo_nosql\\area_salud\\atencionensalud.json")
 
 collection = db.citamedica
 insert_to_mongo(collection, "modelo_nosql\\area_salud\\citamedica.json")
