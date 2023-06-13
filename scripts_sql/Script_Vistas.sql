@@ -66,7 +66,7 @@ create view vw_info_factura as select factID,factFecha,factHora,factDetalle,prod
 	#JOIN producto ON producto_tiendaun.prodID = producto.prodID  join tiendabienestar on tiendabienestar.tieID=producto_tiendaun.tieID;
 drop view if exists vw_productos_tienda;
 create view vw_productos_tienda as select 
-	producto.prodID,producto.prodPrecio,producto.prodDetalle,tiendabienestar.tieID,
+	producto.prodID,producto.prodPrecio,producto.prodDetalle,prodDisponibilidad,tiendabienestar.tieID,
     tiendabienestar.tieDireccion,tiendabienestar.tieCiudad 
     from producto_tiendaun JOIN producto ON producto_tiendaun.prodID = producto.prodID 
     join tiendabienestar on tiendabienestar.tieID=producto_tiendaun.tieID;
