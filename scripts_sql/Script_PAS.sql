@@ -1518,8 +1518,8 @@ DELIMITER $$
 CREATE procedure sp_eliminar_factura_usuario_tiempo(in cliente_id int, in mes int, in ano int, in id_fact int)
 	BEGIN
 		#start transaction;
-        if factID is not null then
-			delete from factura_producto where factID=id_fact and clienteID=cliente_id;
+        if id_fact is not null then
+			delete from factura_producto where factID=id_fact;
             delete from factura where factID=id_fact and clienteID=cliente_id;
         end if;
         if mes is null and ano is null then
