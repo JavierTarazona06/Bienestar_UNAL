@@ -138,7 +138,7 @@ collection = db.evaluacionfisica
 insert_to_mongo(collection, "modelo_nosql\\area_salud\\evaluacionfisica.json")
 
 collection = db.incapacidad
-insert_to_mongo(collection, "modelo_nosql\\area_salud\\incapacidadjson")
+insert_to_mongo(collection, "modelo_nosql\\area_salud\\incapacidad.json")
 
 collection = db.medicamentos
 insert_to_mongo(collection, "modelo_nosql\\area_salud\\medicamentos.json")
